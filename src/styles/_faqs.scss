@@ -1,0 +1,240 @@
+#faqs-page {
+
+  .rb {
+    height: 60px;
+  }
+  .rb-1 { background: red; }
+  .rb-2 { background: orange; }
+  .rb-3 { background: yellow; }
+  .rb-4 { background: yellowgreen; }
+  .rb-5 { background: green; }
+  .rb-6 { background: seagreen; }
+  .rb-7 { background: aquamarine; }
+  .rb-8 { background: aqua; }
+  .rb-9 { background: lightskyblue; }
+  .rb-10 { background: blue; }
+  .rb-11 { background: blueviolet; }
+  .rb-12 { background: violet; }
+
+  // HOURS: 2 init, 6/1: 4.5, 1230 -1
+  
+  // create gutter on every direct child on page.
+  // TODO: improve implementation
+  > * {
+    padding-right: calc((100vw - 1060px)/2);
+    padding-left: calc((100vw - 1060px)/2);
+  }
+
+  .hero {
+    background: #FDF5E9;
+    min-height: 100px;
+
+    .site-title-section {
+      .site-title {
+        // _figma_
+        font-size: 15px;
+        line-height: 15px;
+        /* or 100% */
+        color: #292D33;
+        mix-blend-mode: normal;
+        // _______
+      }
+
+      .menu-section {
+        // _figma_
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        /* or 150% */
+        color: #08131F;        
+        // _______
+
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .page-title-section {
+      border-left: 4px solid #E55934;
+      padding-left: 24px;
+      margin-top: auto;
+      margin-bottom: 8rem;
+
+      .title {
+        // _figma_
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 20px; // 77px; need to align border-left to text top
+        /* or 387% */
+        color: #08131F;
+        // _______
+
+        padding-bottom: 32px;
+      }
+
+      .subtitle {
+        // _figma_
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 65px;
+        /* or 108% */
+        letter-spacing: -2px;
+        color: #000000;
+        // _______
+      }
+    }
+
+    .header-image {
+      // overflow: hidden; // ?
+      img {
+        width: 515px;
+        height: 520px;
+        background-image: url("../images/faq-portrait.png");
+        background-size: 100%;
+      }
+    }
+  }
+
+  .side-menu {
+    // _figma_
+    font-size: 14px;
+    line-height: 32px; // 77px;
+    /* or 554% */
+    color: #08131F;
+    .jump {
+      font-size: 16px;
+      font-weight: 500;
+    }     
+    // _______
+
+    position: sticky;
+    top: 0;
+    height: 0;
+    padding-top: 6rem; // TODO - link to faq-section.pt
+  }
+
+  .faq-section {
+
+    &:not(.how-section) {
+      padding-top: 6rem;
+    }
+    padding-bottom: 6rem;
+
+    &:nth-of-type(2n + 1) {
+      background: #F7F7F7;
+    }
+
+    .question {
+      .question-body {
+        padding-top: 1.5rem;
+      }
+
+      &:not(:first-of-type) {
+        .question-text {
+          padding-top: 1.5rem;
+        }
+      }
+      &:not(:last-of-type) {
+        .question-body {
+          padding-bottom: 1.5rem;
+        }
+        .question-text {
+          padding-bottom: 1.5rem;
+          border-bottom: 1px solid black;
+        }
+      }
+      &.expanded {
+        div.question-text { // override the above for expanded
+          padding-bottom: 1.5rem;
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+
+    .title {
+      // _figma_
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 48px;
+      /* or 104% */
+      letter-spacing: -1px;
+      color: #08131F;
+      // _______
+    }
+
+    .question-text {
+      // _figma_
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      /* or 150% */
+      color: #000000;
+      // _______
+
+      &:hover {
+        color: #4A6F34;
+      }
+    }
+    .question-body {
+      // _figma_
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+      color: #757575;
+      mix-blend-mode: normal;
+      // _______
+    }
+  }
+
+  .methods-paper-section {
+    overflow: hidden;
+    .methods-paper {
+      background: #9DBAB7;
+
+      .row {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      .title {
+        // _figma_
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 65px;
+        /* or 108% */
+        letter-spacing: -2px;
+        color: #1B2021;
+        // _______
+      }
+
+      .description {
+
+        .text {
+          // _figma_
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 27px;
+          /* or 135% */
+          color: #3C4748;
+          mix-blend-mode: normal;
+          // _______
+        }
+
+        .link {
+          // _figma_
+          font-size: 16px;
+          line-height: 25px;
+          /* or 156% */
+          letter-spacing: 0.22px;  
+          color: #000000;
+          // _______
+
+          padding: 2.5rem 2rem 1rem 2rem;
+          border-bottom: solid black 1px;
+          display: inline-block;
+        }
+      }
+        
+    }
+  }
+}

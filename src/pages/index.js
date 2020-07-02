@@ -3,6 +3,7 @@ import { Row, Col, Container, ListGroup } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+// import "../fonts/Halyard Text Regular.ttf"
 
 const IndexPage = () => (
   <Layout pageInfo={{ pageName: "index" }}>

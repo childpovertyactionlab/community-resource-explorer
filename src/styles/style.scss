@@ -3,3 +3,14 @@
 
 @import "layout";
 @import "navbar";
+
+@import "faqs";
+
+@font-face {
+  font-family: "Halyard";
+  src: url("../fonts/Halyard Text Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: Halyard;
+}
