@@ -127,16 +127,16 @@
 
     position: sticky;
     top: 0;
+    transform: translate(0, 6rem);
     height: 0;
-    padding-top: 6rem; // TODO - link to faq-section.pt
+    // padding-top: 6rem; // TODO - link to faq-section.pt
   }
 
   .faq-section {
 
-    &:not(.how-section) {
-      padding-top: 6rem;
-    }
-    padding-bottom: 6rem;
+    // &:not(.how-section) {
+    // padding-top: 6rem;
+    // padding-bottom: 6rem;
 
     &.even {
       background: #F7F7F7;
@@ -170,6 +170,9 @@
     }
 
     .title {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
       // _figma_
       font-weight: 500;
       font-size: 46px;
@@ -180,6 +183,10 @@
       // _______
     }
 
+    .questions {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
     .question-text {
       // _figma_
       font-weight: normal;

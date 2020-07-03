@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
-import { Link, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
 
 const how = {
   id: 'how',
@@ -52,17 +52,12 @@ const sections = [how, purpose, methods, lorem1, lorem2]
 
 const Faqs = () => {
   const [expandedMap, setState] = useState({})
-  // scroll.scrollToBottom()
+
   const toggleExpansion = (uid, expand) => {
     setState({
       ...expandedMap,
       [uid]: expand
     })
-  }
-
-  const scrollH = () => {
-    console.log('hihi')
-    scroll.scrollMore(10)
   }
 
   const [hidden, setHidden] = useState(false)
@@ -109,24 +104,30 @@ const Faqs = () => {
 
       {/* <div className="faqs"> */}
         <div className="side-menu">
-          <div className="jump">Jump to</div>
+          <span className="jump">Jump to</span>
+          <br/ >
           {sections.map(s => (
-            <div><Link
+            <>
+            <Link
               activeClass="active"
               smooth={true}
               spy={true}
               to={s.id+'-title'}
+              offset={10}
               // containerId="faqs-page"
               className="menu-title"
             >
                 {s.title.join(' ')}
-            </Link></div>
+            </Link>
+            <br/>
+            </>
           ))}
             <Link
               activeClass="active"
               spy={true}
               smooth={true}
               to="methods"
+              offset={10}
               // containerId="faqs-page"
               className="menu-title"
             >
