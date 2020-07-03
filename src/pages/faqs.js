@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 const how = {
   id: 'how',
@@ -51,12 +52,17 @@ const sections = [how, purpose, methods, lorem1, lorem2]
 
 const Faqs = () => {
   const [expandedMap, setState] = useState({})
-
+  // scroll.scrollToBottom()
   const toggleExpansion = (uid, expand) => {
     setState({
       ...expandedMap,
       [uid]: expand
     })
+  }
+
+  const scrollH = () => {
+    console.log('hihi')
+    scroll.scrollMore(10)
   }
 
   const [hidden, setHidden] = useState(false)
@@ -105,20 +111,39 @@ const Faqs = () => {
         <div className="side-menu">
           <div className="jump">Jump to</div>
           {sections.map(s => (
-            <div className="menu-title">{s.title.join(' ')}</div>
+            <div><Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to={s.id+'-title'}
+              // containerId="faqs-page"
+              className="menu-title"
+            >
+                {s.title.join(' ')}
+            </Link></div>
           ))}
-          <div className="menu-title">Methods Paper</div>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              to="methods"
+              // containerId="faqs-page"
+              className="menu-title"
+            >
+              Methods Paper
+            </Link>
         </div>
       {sections.map((s, idx) => {
-        console.log(s.id, idx, !(idx%2))
         return (
-          <Row noGutters className={`faq-section ${s.id}-section ${(idx%2) ? 'even' : ''}`} key={s.id}>
+          <Row noGutters 
+            className={`faq-section ${s.id}-section ${(idx%2) ? 'even' : ''}`}
+            key={s.id}>
             <Col xs={3} className="gutter">
               {idx > 0 ? null : (
                 <div></div>
               )}
             </Col>
-            <Col xs={3} className="title">
+            <Col xs={3} className="title" id={`${s.id}-title`}>
               {/* line break between each text string of the title */}
               {s.title.map(t => <div key={t}>{t}</div>)}
             </Col>
@@ -130,7 +155,7 @@ const Faqs = () => {
                   let classes = 'question'
                   classes += expanded ? ' expanded' : ''
                   return (
-                    <div className={classes} key={uid}>
+                    <div className={classes} id={uid} key={uid}>
                       <div
                         className="question-text"
                         onClick={toggleExpansion.bind(this, uid, !expanded)}
@@ -158,7 +183,7 @@ const Faqs = () => {
 
       <Row noGutters className="methods-paper-section">
         {/* <Col xs={2} className="gutter"></Col> */}
-        <Col xs={{ offset: 2, span: 12}} className="methods-paper">
+        <Col xs={{ offset: 2, span: 11}} className="methods-paper" id="methods">
           <Row noGutters>
             <Col xs={{ offset: 1, span: 4}} className="title">
               <div>Methods</div><div>Paper</div>

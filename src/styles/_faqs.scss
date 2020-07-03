@@ -106,6 +106,14 @@
   }
 
   .side-menu {
+    z-index: 101;
+    a {
+      // display: block;
+      cursor: pointer;
+      &.active {
+        color: blue;
+      }
+    }
     // _figma_
     font-size: 14px;
     line-height: 32px; // 77px;
