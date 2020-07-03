@@ -1,3 +1,9 @@
+.svg-base {
+  // height: 100%;
+  background-size: 100%;
+  display: inline-block;
+}
+
 #faqs-page {
 
   // _for development__
@@ -40,6 +46,19 @@
     min-height: 100px;
 
     .site-title-section {
+      // height: 80px;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      
+      .site-logo {
+        width: 18px;
+        height: 28px;
+        background-image: url("../images/logomark.svg");
+        position: relative;
+        top: 7px;
+        margin-right: 5px;
+      }
+
       .site-title {
         // _figma_
         font-size: 15px;
@@ -61,6 +80,13 @@
 
         position: absolute;
         right: 0;
+
+        .menu-icon {
+          width: 20px;
+          height: 9px;
+          margin-right: 4px;
+          background-image: url("../images/menu-icon.svg");
+        }
       }
     }
 
@@ -111,7 +137,7 @@
       // display: block;
       cursor: pointer;
       &.active {
-        color: blue;
+        color: #4A6F34;
       }
     }
     // _figma_
@@ -198,6 +224,29 @@
 
       &:hover {
         color: #4A6F34;
+        
+        .expander-icon {
+          stroke: #4A6F34; // ?no worky
+        }
+      }
+
+      .text {
+        position: relative;
+        display: inline-block;
+        padding-right: 15px;
+        .expander-icon {
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          right: 0;
+          top: 9px;
+          background-image: url("../images/plus.svg");
+          &.expanded {
+            top: 15px;
+            height: 1px;
+            background-image: url("../images/minus.svg");
+          }
+        }
       }
     }
     .question-body {
@@ -257,6 +306,13 @@
           padding: 2.5rem 2rem 1rem 2rem;
           border-bottom: solid black 1px;
           display: inline-block;
+
+          .right-arrow {
+            width: 11px;
+            height: 8px;
+            margin-left: 8px;
+            background-image: url("../images/right-arrow.svg");
+          }
         }
       }
         

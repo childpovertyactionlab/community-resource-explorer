@@ -66,7 +66,7 @@ const Faqs = () => {
   return (
     <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
       <SEO title="FAQs" />
-      {/* <h1>FAQS</h1> */}
+
       {!hidden && <Row noGutters onClick={toggleHidden} className='rb text-center'>
         <Col xs={1} className='rb-1'><em>click</em><div><em>to hide</em></div></Col>
         <Col xs={1} className='rb-2'>these each</Col>
@@ -84,10 +84,12 @@ const Faqs = () => {
 
       <Row noGutters className='hero'>
         <Col xs={12} className="site-title-section">
+          <span className="site-logo svg-base"></span>
           <span className="site-title">
             Community Resource Explorer
           </span>
           <span className="menu-section">
+            <span className="menu-icon svg-base"></span>
             Menu
           </span>
         </Col>
@@ -102,7 +104,6 @@ const Faqs = () => {
         </Col>
       </Row>
 
-      {/* <div className="faqs"> */}
         <div className="side-menu">
           <span className="jump">Jump to</span>
           <br/ >
@@ -113,7 +114,7 @@ const Faqs = () => {
               smooth={true}
               spy={true}
               to={s.id+'-title'}
-              offset={10}
+              offset={0}
               // containerId="faqs-page"
               className="menu-title"
             >
@@ -127,7 +128,7 @@ const Faqs = () => {
               spy={true}
               smooth={true}
               to="methods"
-              offset={10}
+              offset={0}
               // containerId="faqs-page"
               className="menu-title"
             >
@@ -163,8 +164,12 @@ const Faqs = () => {
                         // aria-controls="example-collapse-text"
                         // aria-expanded={expanded}
                       >
-                        <span className="text">{q.text}</span>
-                        <span className="expander-icon"></span>
+                        <span className="text">{q.text}
+                          <span 
+                            className={`svg-base expander-icon ${expanded ? ' expanded' : ''}`}
+                            >
+                          </span>
+                        </span>
                       </div>
                       <Collapse in={expanded}>
                         <div className="question-body">
@@ -179,8 +184,6 @@ const Faqs = () => {
           </Row>
         )
       })}
-      {/* </div> */}
-
 
       <Row noGutters className="methods-paper-section">
         {/* <Col xs={2} className="gutter"></Col> */}
@@ -195,6 +198,7 @@ const Faqs = () => {
               </div>
               <div className="link">
                 Download paper
+                <span className="right-arrow svg-base"></span>
               </div>
             </Col>
           </Row>
