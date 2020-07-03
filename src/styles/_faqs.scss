@@ -1,7 +1,17 @@
 #faqs-page {
 
+  // _for development__
   .rb {
-    height: 60px;
+    height: 100px;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    * {   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   .rb-1 { background: red; }
   .rb-2 { background: orange; }
@@ -15,8 +25,7 @@
   .rb-10 { background: blue; }
   .rb-11 { background: blueviolet; }
   .rb-12 { background: violet; }
-
-  // HOURS: 2 init, 6/1: 4.5, 6/2: 5
+  // __________________
   
   // create gutter on every direct child on page.
   // TODO: improve implementation
@@ -120,7 +129,7 @@
     }
     padding-bottom: 6rem;
 
-    &:nth-of-type(2n + 1) {
+    &.even {
       background: #F7F7F7;
     }
 

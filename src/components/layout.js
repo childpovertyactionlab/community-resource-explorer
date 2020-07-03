@@ -28,12 +28,12 @@ const Layout = ({ children, pageInfo, id }) => (
       <>
         <Container fluid className="px-0 main">
 
-          {/* <Row noGutters className="justify-content-center">
+          {!id && <Row noGutters className="justify-content-center">
             <Col>
               <Header siteTitle={data.site.siteMetadata.title} />
             </Col>
-          </Row>
-          <Navbar pageInfo={pageInfo} /> */}
+          </Row>}
+          {!id && <Navbar pageInfo={pageInfo} />}
 
           <Row noGutters>
             <Col>

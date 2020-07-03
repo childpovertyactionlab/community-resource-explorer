@@ -110,8 +110,9 @@ const Faqs = () => {
           <div className="menu-title">Methods Paper</div>
         </div>
       {sections.map((s, idx) => {
+        console.log(s.id, idx, !(idx%2))
         return (
-          <Row noGutters className={`faq-section ${s.id}-section`} key={s.id}>
+          <Row noGutters className={`faq-section ${s.id}-section ${(idx%2) ? 'even' : ''}`} key={s.id}>
             <Col xs={3} className="gutter">
               {idx > 0 ? null : (
                 <div></div>
