@@ -2,9 +2,14 @@ import React, { useState } from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
+import { Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
 import { Link } from "react-scroll"
+import CustomLink from "../components/link"
+import Hero from "../components/hero"
+
+import minus from "../images/minus.svg"
+import plus from "../images/plus.svg"
 
 const how = {
   id: 'how',
@@ -82,80 +87,71 @@ const Faqs = () => {
         <Col xs={1} className='rb-12'>padding)</Col>
       </Row>}
 
-      <Row noGutters className='hero'>
-        <Col xs={12} className="site-title-section">
-          <span className="site-logo svg-base"></span>
-          <span className="site-title">
-            Community Resource Explorer
-          </span>
-          <span className="menu-section">
-            <span className="menu-icon svg-base"></span>
-            Menu
-          </span>
-        </Col>
-
-        <Col xs={8} className="page-title-section">
+      <Hero>
+        <div className="page-title-section">
           <div className="title">Frequently Asked Questions</div>
           <div className="subtitle">Have questions about our data or the explorer?</div>
-        </Col>
-        <Col className="header-image">
-          {/* <Image></Image> */}
-          <img href='/src/images/faq-portrait.png'></img>
-        </Col>
-      </Row>
-
-        <div className="side-menu">
-          <span className="jump">Jump to</span>
-          <br/ >
-          {sections.map(s => (
-            <>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to={s.id+'-title'}
-              offset={0}
-              // containerId="faqs-page"
-              className="menu-title"
-            >
-                {s.title.join(' ')}
-            </Link>
-            <br/>
-            </>
-          ))}
-            <Link
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              to="methods"
-              offset={0}
-              // containerId="faqs-page"
-              className="menu-title"
-            >
-              Methods Paper
-            </Link>
         </div>
+      </Hero>
+
+      <div className="side-menu">
+        <span className="jump">Jump to</span>
+        <br/ >
+        {sections.map(s => (
+          <>
+          <Link
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            to={s.id+'-title'}
+            offset={0}
+            // containerId="faqs-page"
+            className="menu-title"
+          >
+              {s.title.join(' ')}
+          </Link>
+          <br/>
+          </>
+        ))}
+          <Link
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            to="methods"
+            offset={0}
+            // containerId="faqs-page"
+            className="menu-title"
+          >
+            Methods Paper
+          </Link>
+      </div>
+
+      
       {sections.map((s, idx) => {
+        let classes = `faq-section ${s.id}-section`
+        if (idx % 2) { // even in *human* counting, odd in JS zero-based numbering
+          classes += ' even'
+        }
+        if (idx === 0) {
+          classes += ' first'
+        }
+        if (idx === sections.length-1) {
+          classes += ' last'
+        }
         return (
           <Row noGutters 
-            className={`faq-section ${s.id}-section ${(idx%2) ? 'even' : ''}`}
-            key={s.id}>
-            <Col xs={3} className="gutter">
-              {idx > 0 ? null : (
-                <div></div>
-              )}
-            </Col>
-            <Col xs={3} className="title" id={`${s.id}-title`}>
-              {/* line break between each text string of the title */}
-              {s.title.map(t => <div key={t}>{t}</div>)}
-            </Col>
-            <Col xs={5} className="questions">
+            className={classes}
+            key={s.id}
+          >
+
+            <Col xs={{span: 4, offset: 5}} className="questions" id={`${s.id}-title`}>
 
                 {s.questions.map((q, idx) => {
                   const uid = `${s.id}-${idx}`
                   const expanded = expandedMap[uid]
                   let classes = 'question'
                   classes += expanded ? ' expanded' : ''
+                  const icon = expanded ? minus : plus
                   return (
                     <div className={classes} id={uid} key={uid}>
                       <div
@@ -164,11 +160,9 @@ const Faqs = () => {
                         // aria-controls="example-collapse-text"
                         // aria-expanded={expanded}
                       >
-                        <span className="text">{q.text}
-                          <span 
-                            className={`svg-base expander-icon ${expanded ? ' expanded' : ''}`}
-                            >
-                          </span>
+                        <span className="text">
+                          {q.text}
+                          <img src={icon} className="svg-base expander-icon" />
                         </span>
                       </div>
                       <Collapse in={expanded}>
@@ -186,20 +180,17 @@ const Faqs = () => {
       })}
 
       <Row noGutters className="methods-paper-section">
-        {/* <Col xs={2} className="gutter"></Col> */}
-        <Col xs={{ offset: 2, span: 11}} className="methods-paper" id="methods">
+        <Col xs={{ offset: 2, span: 10}} className="methods-paper" id="methods">
           <Row noGutters>
             <Col xs={{ offset: 1, span: 4}} className="title">
-              <div>Methods</div><div>Paper</div>
+              <div>Methods</div>
+              <div>Paper</div>
             </Col>
             <Col xs={5} className="description">
               <div className="text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </div>
-              <div className="link">
-                Download paper
-                <span className="right-arrow svg-base"></span>
-              </div>
+              <CustomLink>Download paper</CustomLink>
             </Col>
           </Row>
         </Col>

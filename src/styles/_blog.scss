@@ -1,0 +1,94 @@
+#blog {
+  #page {
+    margin-top: 10 * $spacer;
+    margin-bottom: 9 * $spacer;
+  }
+
+  .hero {
+    .color-section {
+      background: #7768AE;
+
+      .site-title {
+        color: #FBFAFF;
+      }
+
+      .content {
+        margin-right: calc(100vw / 6); // two "columns"
+        max-width: 500px;
+
+        .headline {
+          // __figma_
+          font-weight: 500;
+          font-size: 50px;
+          line-height: 55px;
+          /* or 110% */
+          letter-spacing: -2px;
+          color: #D8CCFF;          
+          // ________
+          padding-bottom: 4 * $spacer;
+        }
+
+        .link {
+          color: #FBFAFF;
+          border-bottom-color: #FBFAFF;
+          svg { stroke: #FBFAFF; }
+        }
+      }
+    }
+    .image-section img {
+      background-image: url("../images/soccer.png");
+    }
+  }
+
+  .recent {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #08131F;
+
+    .custom-underline {
+      display: inline-block;
+      border-bottom: 4px solid #E55934;
+      padding-bottom: 4 * $spacer;
+      margin-bottom: 8 * $spacer;
+    }
+  }
+  
+  .post-section {
+    padding-bottom: 8 * $spacer; //r
+    .post-image img {
+      width: 100%;
+    }
+
+    .post-details {
+      padding-top: 4 * $spacer; //r
+      .post-title {
+        // __figma_
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -1px;
+        color: #08131F;
+      }
+      .post-contents {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #08131F;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        // ________
+        padding-top: 2 * $spacer; //r
+        padding-bottom: 4 * $spacer; //r
+      }
+    }
+  }
+
+  .load-more button {
+    // __figma_
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    padding: 11px 46px;
+    // ________
+  }
+}

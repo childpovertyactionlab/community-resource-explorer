@@ -1,0 +1,116 @@
+// $lg-padding-left: calc(100% / 7);
+
+// 
+$color-section-flex: 350px 10 7; // 10
+$image-section-flex: 250px 5 5;
+
+.hero {
+  position: relative;
+  display: flex;
+  padding-left: 0; //
+  padding-right: 0; //
+  
+  .color-section {
+    padding-left: calc(100vw / 12); // one "column"
+    flex: $color-section-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .branding { 
+      padding-top: 2 * $spacer;
+      .site-logo {
+        width: 18px;
+        height: 28px;
+        background-image: url("../images/logomark.svg");
+        position: relative;
+        top: 7px;
+        margin-right: 5px;
+      }
+      
+      .site-title {
+        // _figma_
+        font-size: 15px;
+        line-height: 15px;
+        /* or 100% */
+        color: #292D33;
+        mix-blend-mode: normal;
+        // _______
+      }
+    }
+
+    .content, .branding {
+      // TODO: why? (to line up with side-menu)
+      margin-left: 15px;
+    }
+    .content {
+
+      padding-bottom: 10 * $spacer;
+  
+      .page-title-section {
+        border-left: 4px solid #E55934;
+        padding-left: 3 * $spacer;;
+        
+        .title {
+          // _figma_
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 20px; // 77px; need to align border-left to text top
+          /* or 387% */
+          color: #08131F;
+          // _______
+          
+          padding-bottom: 4 * $spacer;;
+        }
+        
+        .subtitle {
+          // _figma_
+          font-weight: 500;
+          font-size: 60px;
+          line-height: 65px;
+          /* or 108% */
+          letter-spacing: -2px;
+          color: #000000;
+          // _______
+        }
+      }
+    }
+  }
+
+
+  .image-section {
+    flex: $image-section-flex;
+
+    .menu-section {
+      // _figma_
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      /* or 150% */
+      color: #08131F;        
+      // _______
+  
+      height: 10 * $spacer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .menu {
+        text-align: end;
+        padding-right: calc(100vw / 12);
+        .menu-icon {
+          width: 20px;
+          height: 9px;
+          margin-right: 4px;
+          background-image: url("../images/menu-icon.svg");
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      padding-top: 100%; // gives 1-1 aspect ratio
+      background-size: 100%;
+    }
+  }
+
+}

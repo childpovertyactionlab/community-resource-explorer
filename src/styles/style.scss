@@ -3,7 +3,10 @@
 
 @import "layout";
 @import "navbar";
+@import "hero";
+@import "link";
 
+@import "blog";
 @import "faqs";
 
 @font-face {
@@ -13,4 +16,20 @@
 
 * {
   font-family: Halyard;
+}
+
+.container-fluid.main {
+  // TODO: why? 
+  margin-left: -15px;
+  // overflow: hidden; // can't hide overflow! interferes with side-menu stickiness
+}
+
+.svg-base {
+  // height: 100%;
+  background-size: 100%;
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
 }

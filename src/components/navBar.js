@@ -20,6 +20,11 @@ const CustomNavbar = ({ pageInfo }) => {
                 FAQs
               </Nav.Link>
             </Link>
+            <Link to="/blog" className="link-no-style">
+              <Nav.Link as="span" eventKey="blog">
+                Blog
+              </Nav.Link>
+            </Link>
           </Nav>
           <Nav className="ml-auto">
             <Form inline onSubmit={e => e.preventDefault()}>

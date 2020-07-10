@@ -1,10 +1,23 @@
-.svg-base {
-  // height: 100%;
-  background-size: 100%;
-  display: inline-block;
-}
-
 #faqs-page {
+  // synced for now, could differentiate (or collapse to section-breath)
+  $inter-section-breath: 10 * $spacer;
+  $outer-section-breath: 12 * $spacer;
+  $method-breath: 11 * $spacer;
+  
+  // $q-section-top-breath: 8 * $spacer;
+  // $q-section-bottom-breath: $q-section-top-breath;
+  // $method-section-top-breath: $q-section-top-breath;
+  // $method-section-bottom-breath: $method-section-top-breath;
+  $q-breath: 3 * $spacer;
+  $q-after-breath: 6 * $spacer;
+
+  $q-text-color: #000000;
+  $q-text-hover-color: #4A6F34;
+
+
+  @mixin element-color($color) {
+    background-image: url('data:image/svg+xml;utf8,<svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="4.37114e-08" y1="0.5" x2="13" y2="0.500001" stroke="#{$color}"/></svg>');
+  }
 
   // _for development__
   .rb {
@@ -34,217 +47,133 @@
   .rb-12 { background: violet; }
   // __________________
   
-  // create gutter on every direct child on page.
-  // TODO: improve implementation
-  > * {
-    padding-right: calc((100vw - 1060px)/2);
-    padding-left: calc((100vw - 1060px)/2);
-  }
+
 
   .hero {
-    background: #FDF5E9;
-    min-height: 100px;
+    .color-section {
+      background: #FDF5E9;
 
-    .site-title-section {
-      // height: 80px;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      
-      .site-logo {
-        width: 18px;
-        height: 28px;
-        background-image: url("../images/logomark.svg");
-        position: relative;
-        top: 7px;
-        margin-right: 5px;
-      }
-
-      .site-title {
-        // _figma_
-        font-size: 15px;
-        line-height: 15px;
-        /* or 100% */
-        color: #292D33;
-        mix-blend-mode: normal;
-        // _______
-      }
-
-      .menu-section {
-        // _figma_
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 21px;
-        /* or 150% */
-        color: #08131F;        
-        // _______
-
-        position: absolute;
-        right: 0;
-
-        .menu-icon {
-          width: 20px;
-          height: 9px;
-          margin-right: 4px;
-          background-image: url("../images/menu-icon.svg");
-        }
+      .content {
+        margin-right: calc(100vw / 6); // two "columns"
+        max-width: 700px;
       }
     }
-
-    .page-title-section {
-      border-left: 4px solid #E55934;
-      padding-left: 24px;
-      margin-top: auto;
-      margin-bottom: 8rem;
-
-      .title {
-        // _figma_
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 20px; // 77px; need to align border-left to text top
-        /* or 387% */
-        color: #08131F;
-        // _______
-
-        padding-bottom: 32px;
-      }
-
-      .subtitle {
-        // _figma_
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 65px;
-        /* or 108% */
-        letter-spacing: -2px;
-        color: #000000;
-        // _______
-      }
-    }
-
-    .header-image {
-      // overflow: hidden; // ?
-      img {
-        width: 515px;
-        height: 520px;
-        background-image: url("../images/faq-portrait.png");
-        background-size: 100%;
-      }
+    .image-section img {
+      background-image: url("../images/faq-portrait.png");
     }
   }
 
   .side-menu {
+    padding-left: calc(100vw / 12);
     z-index: 101;
     a {
       // display: block;
       cursor: pointer;
       &.active {
-        color: #4A6F34;
+        color: $q-text-hover-color;
       }
-    }
-    // _figma_
-    font-size: 14px;
-    line-height: 32px; // 77px;
-    /* or 554% */
-    color: #08131F;
-    .jump {
-      font-size: 16px;
+      // _figma_ß
       font-weight: 500;
+      font-size: 44px;
+      line-height: 58px; // 77px;
+    }
+    /* or 109% */
+    letter-spacing: -1.5px;
+    // color: #08131F;
+    color: #181818;      
+    .jump {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      /* or 125% */
+      letter-spacing: -0.5px;
     }     
     // _______
 
     position: sticky;
     top: 0;
-    transform: translate(0, 6rem);
-    height: 0;
-    // padding-top: 6rem; // TODO - link to faq-section.pt
+    transform: translate(0, $outer-section-breath);
+    height: 0; // trick to keep it from forcing question sections down
   }
 
   .faq-section {
 
-    // &:not(.how-section) {
-    // padding-top: 6rem;
-    // padding-bottom: 6rem;
+    // __padding_
+    .questions {
+      padding-top: $inter-section-breath;
+      padding-bottom: $inter-section-breath;
+    }
+    &.first .questions {
+      padding-top: $outer-section-breath;
+    }
+    &.last .questions {
+      padding-bottom: $outer-section-breath;
+    }
 
     &.even {
       background: #F7F7F7;
     }
 
     .question {
+      max-width: 450px;
       .question-body {
-        padding-top: 1.5rem;
+        padding-top: $q-breath;
       }
 
       &:not(:first-of-type) {
         .question-text {
-          padding-top: 1.5rem;
+          padding-top: $q-breath;
         }
       }
       &:not(:last-of-type) {
         .question-body {
-          padding-bottom: 1.5rem;
+          padding-bottom: $q-after-breath;
         }
         .question-text {
-          padding-bottom: 1.5rem;
+          padding-bottom: $q-breath;
           border-bottom: 1px solid black;
         }
       }
       &.expanded {
         div.question-text { // override the above for expanded
-          padding-bottom: 1.5rem;
+          padding-bottom: $q-breath;
           border-bottom: 1px solid black;
         }
       }
     }
+    // __________
 
-    .title {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-
-      // _figma_
-      font-weight: 500;
-      font-size: 46px;
-      line-height: 48px;
-      /* or 104% */
-      letter-spacing: -1px;
-      color: #08131F;
-      // _______
-    }
-
-    .questions {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
     .question-text {
       // _figma_
       font-weight: normal;
       font-size: 18px;
       line-height: 27px;
       /* or 150% */
-      color: #000000;
+      color: $q-text-color;
       // _______
 
       &:hover {
-        color: #4A6F34;
-        
-        .expander-icon {
-          stroke: #4A6F34; // ?no worky
-        }
+        color: $q-text-hover-color;
+      }      
+      &:not(:hover) .expander-icon {
+        // can't set stroke of svg in img w/CSS, so it's set to hover color and we make it black when not hovered like so:
+        filter: brightness(0) grayscale(1);
+        // stroke: #4A6F34;
       }
 
       .text {
         position: relative;
         display: inline-block;
-        padding-right: 15px;
+        padding-right: 3 * $spacer;
         .expander-icon {
           width: 13px;
           height: 13px;
           position: absolute;
           right: 0;
           top: 9px;
-          background-image: url("../images/plus.svg");
           &.expanded {
             top: 15px;
             height: 1px;
-            background-image: url("../images/minus.svg");
           }
         }
       }
@@ -262,13 +191,13 @@
   }
 
   .methods-paper-section {
-    overflow: hidden;
+    // overflow: hidden;
     .methods-paper {
       background: #9DBAB7;
 
       .row {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: $method-breath;
+        padding-bottom: $method-breath;
       }
       .title {
         // _figma_
@@ -292,30 +221,10 @@
           color: #3C4748;
           mix-blend-mode: normal;
           // _______
-        }
 
-        .link {
-          // _figma_
-          font-size: 16px;
-          line-height: 25px;
-          /* or 156% */
-          letter-spacing: 0.22px;  
-          color: #000000;
-          // _______
-
-          padding: 2.5rem 2rem 1rem 2rem;
-          border-bottom: solid black 1px;
-          display: inline-block;
-
-          .right-arrow {
-            width: 11px;
-            height: 8px;
-            margin-left: 8px;
-            background-image: url("../images/right-arrow.svg");
-          }
+          padding-bottom: 8 * $spacer;
         }
       }
-        
     }
   }
 }
