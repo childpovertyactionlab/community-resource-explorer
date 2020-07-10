@@ -65,27 +65,9 @@ const Faqs = () => {
     })
   }
 
-  const [hidden, setHidden] = useState(false)
-  const toggleHidden = () => setHidden(!hidden)
-
   return (
     <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
       <SEO title="FAQs" />
-
-      {!hidden && <Row noGutters onClick={toggleHidden} className='rb text-center'>
-        <Col xs={1} className='rb-1'><em>click</em><div><em>to hide</em></div></Col>
-        <Col xs={1} className='rb-2'>these each</Col>
-        <Col xs={1} className='rb-3'>fill 1 col.</Col>
-        <Col xs={1} className='rb-4'>altogether</Col>
-        <Col xs={1} className='rb-5'>they can</Col>
-        <Col xs={1} className='rb-6'>grow to</Col>
-        <Col xs={1} className='rb-7'>[1060px]</Col>
-        <Col xs={1} className='rb-8'>(if wider,</Col>
-        <Col xs={1} className='rb-9'>the rest is</Col>
-        <Col xs={1} className='rb-10'>consumed</Col>
-        <Col xs={1} className='rb-11'>by side</Col>
-        <Col xs={1} className='rb-12'>padding)</Col>
-      </Row>}
 
       <Hero>
         <div className="page-title-section">
@@ -196,20 +178,7 @@ const Faqs = () => {
         </Col>
       </Row>
       {/* <Link to="/">Go back to the homepage</Link> */}
-      {!hidden && <Row noGutters className='rb'>
-        <Col xs={1} className='rb-1'></Col>
-        <Col xs={1} className='rb-2'></Col>
-        <Col xs={1} className='rb-3'></Col>
-        <Col xs={1} className='rb-4'></Col>
-        <Col xs={1} className='rb-5'></Col>
-        <Col xs={1} className='rb-6'></Col>
-        <Col xs={1} className='rb-7'></Col>
-        <Col xs={1} className='rb-8'></Col>
-        <Col xs={1} className='rb-9'></Col>
-        <Col xs={1} className='rb-10'></Col>
-        <Col xs={1} className='rb-11'></Col>
-        <Col xs={1} className='rb-12'></Col>
-      </Row>}
+
     </Layout>
   )
 }

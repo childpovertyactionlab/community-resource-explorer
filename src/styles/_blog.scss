@@ -61,7 +61,9 @@
     }
 
     .post-details {
-      padding-top: 4 * $spacer; //r
+      // padding-top: 4 * $spacer; //r
+      margin-top: auto;
+      margin-bottom: auto;
       .post-title {
         // __figma_
         font-weight: 500;

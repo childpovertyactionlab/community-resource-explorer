@@ -21,7 +21,8 @@
 .container-fluid.main {
   // TODO: why? 
   margin-left: -15px;
-  // overflow: hidden; // can't hide overflow! interferes with side-menu stickiness
+  // can't hide overflow! interferes with side-menu stickiness. side-menu => Portal??
+  // overflow: hidden; 
 }
 
 .svg-base {
