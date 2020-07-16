@@ -81,18 +81,18 @@ const Faqs = () => {
         <br/ >
         {sections.map(s => (
           <>
-          <Link
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            to={s.id+'-title'}
-            offset={0}
-            // containerId="faqs-page"
-            className="menu-title"
-          >
-              {s.title.join(' ')}
-          </Link>
-          <br/>
+            <Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to={s.id+'-title'}
+              offset={0}
+              // containerId="faqs-page"
+              className="menu-title"
+            >
+                {s.title.join(' ')}
+            </Link>
+            <br/>
           </>
         ))}
           <Link
@@ -126,7 +126,13 @@ const Faqs = () => {
             key={s.id}
           >
 
-            <Col xs={{span: 4, offset: 5}} className="questions" id={`${s.id}-title`}>
+            <Col
+              className="questions"
+              id={`${s.id}-title`}
+              xs={{span: 10, offset: 1}}
+              md={{span: 6, offset: 5}}
+              xl={{span: 4, offset: 5}}
+            >
 
                 {s.questions.map((q, idx) => {
                   const uid = `${s.id}-${idx}`

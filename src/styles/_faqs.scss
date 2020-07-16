@@ -1,52 +1,195 @@
 #faqs-page {
-  // synced for now, could differentiate (or collapse to section-breath)
-  $inter-section-breath: 10 * $spacer;
-  $outer-section-breath: 12 * $spacer;
-  $method-breath: 11 * $spacer;
-  
-  // $q-section-top-breath: 8 * $spacer;
-  // $q-section-bottom-breath: $q-section-top-breath;
-  // $method-section-top-breath: $q-section-top-breath;
-  // $method-section-bottom-breath: $method-section-top-breath;
   $q-breath: 3 * $spacer;
   $q-after-breath: 6 * $spacer;
 
   $q-text-color: #000000;
   $q-text-hover-color: #4A6F34;
 
+  // _______________RESPONSIVE SIZING_______________ //
+  $inter-section-breath-xs: 6 * $spacer;
+  $outer-section-breath-xs: 8 * $spacer;
+  $method-breath-xs: 7 * $spacer;
 
-  @mixin element-color($color) {
-    background-image: url('data:image/svg+xml;utf8,<svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="4.37114e-08" y1="0.5" x2="13" y2="0.500001" stroke="#{$color}"/></svg>');
-  }
+  
+  $inter-section-breath-md: 9 * $spacer;
+  $outer-section-breath-md: 10 * $spacer;
+  $method-breath-md: 9 * $spacer;
+  
 
-  // _for development__
-  .rb {
-    height: 75px;
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    font-weight: bold;
-    * {   
-      opacity: .8;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  $inter-section-breath-xl: 10 * $spacer;
+  $outer-section-breath-xl: 12 * $spacer;
+  $method-breath-xl: 11 * $spacer;
+
+
+  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
+  .side-menu {
+    .jump, a {
+      padding-bottom: 3 * $spacer;
+    }
+    .jump {
+      font-size: 16px;
+      // line-height: 25px;
+      letter-spacing: -0.5px;
+    }
+    a {
+      // _figma__
+      font-size: 26px;
+      // line-height: 30px;
+      letter-spacing: -1px;
+      // ________
     }
   }
-  .rb-1 { background: red; }
-  .rb-2 { background: orange; }
-  .rb-3 { background: yellow; }
-  .rb-4 { background: yellowgreen; }
-  .rb-5 { background: green; }
-  .rb-6 { background: seagreen; }
-  .rb-7 { background: aquamarine; }
-  .rb-8 { background: aqua; }
-  .rb-9 { background: lightskyblue; }
-  .rb-10 { background: blue; }
-  .rb-11 { background: blueviolet; }
-  .rb-12 { background: violet; }
-  // __________________
-  
+
+  .questions {
+    padding-top: $inter-section-breath-xs;
+    padding-bottom: $inter-section-breath-xs;
+  }
+  &.first .questions {
+    padding-top: $outer-section-breath-xs;
+  }
+  &.last .questions {
+    padding-bottom: $outer-section-breath-xs;
+  }
+
+  .question {
+    .question-text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .question-body {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  .methods-paper-section {
+    .row {
+      padding-top: $method-breath-xs;
+      padding-bottom: $method-breath-xs;
+    }
+    .description {
+      .text {
+        font-size: 18px;
+        line-height: 27px;
+        padding-bottom: 5 * $spacer;
+      }
+    }
+  }
+
+  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
+  @media screen and (min-width: $md-start) {
+    .side-menu {
+      padding-left: calc(100vw / 12); // one "column"
+      position: sticky;
+      top: 0;
+      transform: translate(0, $outer-section-breath-md);
+      height: 0; // trick to keep it from forcing question sections down
+      // .jump, a {
+      //   padding-bottom: 2 * $spacer;
+      // }
+      // .jump {
+      //   font-size: 16px;
+      //   // line-height: 25px;
+      //   letter-spacing: -0.5px;
+      // }
+      // a {
+      //   // _figma__
+      //   font-size: 26px;
+      //   // line-height: 30px;
+      //   letter-spacing: -1px;
+      //   // ________
+      // }
+    }
+    .questions {
+      padding-top: $inter-section-breath-md;
+      padding-bottom: $inter-section-breath-md;
+    }
+    &.first .questions {
+      padding-top: $outer-section-breath-md;
+    }
+    &.last .questions {
+      padding-bottom: $outer-section-breath-md;
+    }
+    
+    .question {
+      max-width: 450px;
+    }
+
+    .methods-paper-section {
+      .row {
+        padding-top: $method-breath-md;
+        padding-bottom: $method-breath-md;
+      }
+
+      .description {
+        .text {
+          padding-bottom: 6 * $spacer;
+        }
+      }
+    }
+
+  }
+
+  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
+  @media screen and (min-width: $xl-start) {
+    .side-menu {
+      transform: translate(0, $outer-section-breath-xl);
+
+      .jump, a {
+        padding-bottom: 3 * $spacer;
+      }
+      .jump {
+        font-size: 20px;
+        // line-height: 25px;
+        letter-spacing: -0.5px;
+      }
+      a {
+        font-size: 44px;
+        // line-height: 58px; // 77px;
+        letter-spacing: -1.5px;
+      }
+    }
+
+    .questions {
+      padding-top: $inter-section-breath-xl;
+      padding-bottom: $inter-section-breath-xl;
+    }
+    &.first .questions {
+      padding-top: $outer-section-breath-xl;
+    }
+    &.last .questions {
+      padding-bottom: $outer-section-breath-xl;
+    }
+
+    .question {
+      .question-text {
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .question-body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    
+    .methods-paper-section {
+      .row {
+        padding-top: $method-breath-xl;
+        padding-bottom: $method-breath-xl;
+      }
+
+      .description {
+        .text {
+          font-size: 20px;
+          line-height: 27px;
+          padding-bottom: 8 * $spacer;
+        }
+      }
+    }
+    
+  }
+
+  // _______________END RESPONSIVE SIZING_______________ //
 
 
   .hero {
@@ -64,7 +207,6 @@
   }
 
   .side-menu {
-    padding-left: calc(100vw / 12);
     z-index: 101;
     a {
       // display: block;
@@ -72,50 +214,24 @@
       &.active {
         color: $q-text-hover-color;
       }
-      // _figma_ß
+      // _figma_
       font-weight: 500;
-      font-size: 44px;
-      line-height: 58px; // 77px;
     }
-    /* or 109% */
-    letter-spacing: -1.5px;
     // color: #08131F;
     color: #181818;      
     .jump {
       font-weight: 500;
-      font-size: 20px;
-      line-height: 25px;
-      /* or 125% */
-      letter-spacing: -0.5px;
     }     
     // _______
-
-    position: sticky;
-    top: 0;
-    transform: translate(0, $outer-section-breath);
-    height: 0; // trick to keep it from forcing question sections down
   }
 
   .faq-section {
-
-    // __padding_
-    .questions {
-      padding-top: $inter-section-breath;
-      padding-bottom: $inter-section-breath;
-    }
-    &.first .questions {
-      padding-top: $outer-section-breath;
-    }
-    &.last .questions {
-      padding-bottom: $outer-section-breath;
-    }
 
     &.even {
       background: #F7F7F7;
     }
 
     .question {
-      max-width: 450px;
       .question-body {
         padding-top: $q-breath;
       }
@@ -146,9 +262,6 @@
     .question-text {
       // _figma_
       font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      /* or 150% */
       color: $q-text-color;
       // _______
 
@@ -163,7 +276,7 @@
 
       .text {
         position: relative;
-        display: inline-block;
+        display: block; // at least for sm to keep + right
         padding-right: 3 * $spacer;
         .expander-icon {
           width: 13px;
@@ -181,9 +294,6 @@
     .question-body {
       // _figma_
       font-weight: 300;
-      font-size: 16px;
-      line-height: 24px;
-      /* or 150% */
       color: #757575;
       mix-blend-mode: normal;
       // _______
@@ -195,10 +305,6 @@
     .methods-paper {
       background: #9DBAB7;
 
-      .row {
-        padding-top: $method-breath;
-        padding-bottom: $method-breath;
-      }
       .title {
         // _figma_
         font-weight: 500;
@@ -215,14 +321,10 @@
         .text {
           // _figma_
           font-weight: normal;
-          font-size: 20px;
-          line-height: 27px;
           /* or 135% */
           color: #3C4748;
           mix-blend-mode: normal;
           // _______
-
-          padding-bottom: 8 * $spacer;
         }
       }
     }
