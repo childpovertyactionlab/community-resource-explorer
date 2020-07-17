@@ -79,7 +79,7 @@ const Faqs = () => {
               smooth={true}
               spy={true}
               key={"side-menu-title-"+s.id}
-              to={s.id+'-title'}
+              to={s.id+'-section'}
               offset={0}
               // containerId="faqs-page"
             >
@@ -146,13 +146,19 @@ const Faqs = () => {
               key={s.id}
             >
 
-              <Col
+              <Col 
                 className="questions"
-                id={`${s.id}-title`}
+                id={`${s.id}-section`} // target for the side menu to scroll to
                 xs={{span: 10, offset: 1}}
                 md={{span: 6, offset: 5}}
                 xl={{span: 4, offset: 5}}
               >
+
+              <div
+                className="section-title" // visible only for mobile
+              >
+                {s.title}
+              </div>
 
                   {s.questions.map((q, idx) => {
                     const uid = `${s.id}-${idx}`
