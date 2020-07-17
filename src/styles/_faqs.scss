@@ -19,10 +19,40 @@
   $inter-section-breath-xl: 10 * $spacer;
   $outer-section-breath-xl: 12 * $spacer;
   $method-breath-xl: 11 * $spacer;
-
+  
 
   //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
+  .side-menu.normal {
+    display: none;
+  }
+  .side-menu.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .jump {
+      padding: 2 * $spacer 0;
+      width: 100%;
+      text-align: center;
+      background: white;
+      border-bottom: 1px solid #D7D7D7;
+    }
+
+    &:not(.active) .sections {
+      display: none;
+    }
+    .sections {
+      text-align: center;
+      border-bottom: 1px solid #D7D7D7;
+      background: white;
+      position: absolute;
+      top: 100%;
+      width: 110%;
+    }
+  }
   .side-menu {
+    // applies to both menus
+    position: sticky;
+    top: 0;
     .jump, a {
       padding-bottom: 3 * $spacer;
     }
@@ -78,10 +108,12 @@
 
   //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
   @media screen and (min-width: $md-start) {
-    .side-menu {
+    .side-menu.mobile {
+      display: none;
+    }
+    .side-menu.normal {
+      display: block;
       padding-left: calc(100vw / 12); // one "column"
-      position: sticky;
-      top: 0;
       transform: translate(0, $outer-section-breath-md);
       height: 0; // trick to keep it from forcing question sections down
       // .jump, a {

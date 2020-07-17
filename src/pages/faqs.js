@@ -65,6 +65,127 @@ const Faqs = () => {
     })
   }
 
+  const [mobileMenuActive, setMenuActive] = useState(false)
+  const toggleMenu = () => setMenuActive(!mobileMenuActive)
+
+  const getSideMenus = () => {
+    const sectionTitles = (
+      <>
+      {sections.map(s => (
+          <>
+            <div className="menu-title"><Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              key={"side-menu-title-"+s.id}
+              to={s.id+'-title'}
+              offset={0}
+              // containerId="faqs-page"
+            >
+                {s.title.join(' ')}
+            </Link></div>
+          </>
+        ))}
+        <Link
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          to="methods"
+          offset={0}
+          // containerId="faqs-page"
+          className="menu-title"
+        >
+          Methods Paper
+        </Link>
+      </>
+    )
+
+    let mobileClasses = "side-menu mobile"
+    if (mobileMenuActive) {
+      mobileClasses +=" active"
+    }
+
+    return (
+      <>
+        <div className="side-menu normal">
+          <span className="jump">Jump to</span>
+          <br/ >
+          {sectionTitles}
+        </div>
+        <div className={mobileClasses}>
+          <span onClick={toggleMenu} className="jump">Jump to</span>
+          <div className="sections">
+            {sectionTitles}
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  const getFAQSections = () => {
+    return (
+      <>
+        {sections.map((s, idx) => {
+          let classes = `faq-section ${s.id}-section`
+          if (idx % 2) { // even in *human* counting, odd in JS zero-based numbering
+            classes += ' even'
+          }
+          if (idx === 0) {
+            classes += ' first'
+          }
+          if (idx === sections.length-1) {
+            classes += ' last'
+          }
+          return (
+            <Row noGutters 
+              className={classes}
+              key={s.id}
+            >
+
+              <Col
+                className="questions"
+                id={`${s.id}-title`}
+                xs={{span: 10, offset: 1}}
+                md={{span: 6, offset: 5}}
+                xl={{span: 4, offset: 5}}
+              >
+
+                  {s.questions.map((q, idx) => {
+                    const uid = `${s.id}-${idx}`
+                    const expanded = expandedMap[uid]
+                    let classes = 'question'
+                    classes += expanded ? ' expanded' : ''
+                    const icon = expanded ? minus : plus
+                    return (
+                      <div className={classes} id={uid} key={uid}>
+                        <div
+                          className="question-text"
+                          onClick={toggleExpansion.bind(this, uid, !expanded)}
+                          // aria-controls="example-collapse-text"
+                          // aria-expanded={expanded}
+                        >
+                          <span className="text">
+                            {q.text}
+                            <img src={icon} className="svg-base expander-icon" />
+                          </span>
+                        </div>
+                        <Collapse in={expanded}>
+                          <div className="question-body">
+                            {q.body}
+                          </div>
+                        </Collapse>
+                      </div>
+                    )
+                  })}
+
+              </Col>
+            </Row>
+          )
+        })}
+      </>
+    )
+  }
+
   return (
     <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
       <SEO title="FAQs" />
@@ -76,96 +197,8 @@ const Faqs = () => {
         </div>
       </Hero>
 
-      <div className="side-menu">
-        <span className="jump">Jump to</span>
-        <br/ >
-        {sections.map(s => (
-          <>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to={s.id+'-title'}
-              offset={0}
-              // containerId="faqs-page"
-              className="menu-title"
-            >
-                {s.title.join(' ')}
-            </Link>
-            <br/>
-          </>
-        ))}
-          <Link
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            to="methods"
-            offset={0}
-            // containerId="faqs-page"
-            className="menu-title"
-          >
-            Methods Paper
-          </Link>
-      </div>
-
-      
-      {sections.map((s, idx) => {
-        let classes = `faq-section ${s.id}-section`
-        if (idx % 2) { // even in *human* counting, odd in JS zero-based numbering
-          classes += ' even'
-        }
-        if (idx === 0) {
-          classes += ' first'
-        }
-        if (idx === sections.length-1) {
-          classes += ' last'
-        }
-        return (
-          <Row noGutters 
-            className={classes}
-            key={s.id}
-          >
-
-            <Col
-              className="questions"
-              id={`${s.id}-title`}
-              xs={{span: 10, offset: 1}}
-              md={{span: 6, offset: 5}}
-              xl={{span: 4, offset: 5}}
-            >
-
-                {s.questions.map((q, idx) => {
-                  const uid = `${s.id}-${idx}`
-                  const expanded = expandedMap[uid]
-                  let classes = 'question'
-                  classes += expanded ? ' expanded' : ''
-                  const icon = expanded ? minus : plus
-                  return (
-                    <div className={classes} id={uid} key={uid}>
-                      <div
-                        className="question-text"
-                        onClick={toggleExpansion.bind(this, uid, !expanded)}
-                        // aria-controls="example-collapse-text"
-                        // aria-expanded={expanded}
-                      >
-                        <span className="text">
-                          {q.text}
-                          <img src={icon} className="svg-base expander-icon" />
-                        </span>
-                      </div>
-                      <Collapse in={expanded}>
-                        <div className="question-body">
-                          {q.body}
-                        </div>
-                      </Collapse>
-                    </div>
-                  )
-                })}
-              
-            </Col>
-          </Row>
-        )
-      })}
+      {getSideMenus()}
+      {getFAQSections()}
 
       <Row noGutters className="methods-paper-section">
         <Col xs={{ offset: 2, span: 10}} className="methods-paper" id="methods">
