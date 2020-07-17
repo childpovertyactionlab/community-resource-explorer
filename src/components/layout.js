@@ -27,18 +27,19 @@ const Layout = ({ children, pageInfo, id }) => (
     render={data => (
       <>
         <Container fluid className="px-0 main">
-
-          {!id && <Row noGutters className="justify-content-center">
-            <Col>
-              <Header siteTitle={data.site.siteMetadata.title} />
-            </Col>
-          </Row>}
+          {!id && (
+            <Row noGutters className="justify-content-center">
+              <Col>
+                <Header siteTitle={data.site.siteMetadata.title} />
+              </Col>
+            </Row>
+          )}
           {!id && <Navbar pageInfo={pageInfo} />}
 
           <Row noGutters>
             <Col>
               {/* <Container className="mt-5"> */}
-                <main id={id}>{children}</main>
+              <main id={id}>{children}</main>
               {/* </Container> */}
             </Col>
           </Row>
@@ -57,7 +58,6 @@ const Layout = ({ children, pageInfo, id }) => (
             </Col>
           </Row>
         </Container> */}
-        
       </>
     )}
   />

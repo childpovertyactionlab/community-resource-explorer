@@ -15,7 +15,7 @@ const Faqs = () => {
   const toggleExpansion = (uid, expand) => {
     setState({
       ...expandedMap,
-      [uid]: expand
+      [uid]: expand,
     })
   }
 
@@ -24,7 +24,12 @@ const Faqs = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: {extension: {eq: "png"}, relativeDirectory: {eq: "blogEntries"}}) {
+      allFile(
+        filter: {
+          extension: { eq: "png" }
+          relativeDirectory: { eq: "blogEntries" }
+        }
+      ) {
         edges {
           node {
             id
@@ -41,12 +46,14 @@ const Faqs = () => {
       <SEO title="Blog" />
 
       <Hero>
-        <div className="headline">How we’re informing policy and community understanding in Dallas</div>
+        <div className="headline">
+          How we’re informing policy and community understanding in Dallas
+        </div>
         <CustomLink>Read post</CustomLink>
       </Hero>
 
       <Row noGutters id="page">
-        <Col xs={{span: 11, offset: 1}} className='recent'>
+        <Col xs={{ span: 11, offset: 1 }} className="recent">
           <span className="custom-underline">Recent blog</span> posts
         </Col>
 
@@ -54,20 +61,27 @@ const Faqs = () => {
           // console.log(b)
           const src = b.node.publicURL
           return (
-            <Row noGutters className='post-section'>
-              <Col xs={{ span: 8, offset: 1 }}><Row>
-                <Col xs={6} className='post-image'>
-                  <figure>
-                    <img src={src} />
-                  </figure>
-                </Col>
-                <Col xs={6} className='post-details'>
-                  <div className='post-title'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                  <div className='post-contents'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tristique. Ac ipsum, egestas ligula duis ipsum pellentesque </div>
-                  <CustomLink>Read post</CustomLink>
-                </Col>
-
-              </Row></Col>
+            <Row noGutters className="post-section">
+              <Col xs={{ span: 8, offset: 1 }}>
+                <Row>
+                  <Col xs={6} className="post-image">
+                    <figure>
+                      <img src={src} />
+                    </figure>
+                  </Col>
+                  <Col xs={6} className="post-details">
+                    <div className="post-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <div className="post-contents">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Urna vitae nulla pretium, cras tellus, at morbi tristique.
+                      Ac ipsum, egestas ligula duis ipsum pellentesque{" "}
+                    </div>
+                    <CustomLink>Read post</CustomLink>
+                  </Col>
+                </Row>
+              </Col>
             </Row>
           )
         })}
@@ -75,7 +89,6 @@ const Faqs = () => {
         <Col xs={12} className="load-more text-center">
           <Button variant="outline-dark">Load more posts</Button>
         </Col>
-
       </Row>
     </Layout>
   )

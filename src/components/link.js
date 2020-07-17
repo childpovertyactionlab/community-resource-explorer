@@ -5,7 +5,7 @@ const Link = ({ children }) => {
   return (
     <div className="link">
       {children}
-      <InlineSvg type='right-arrow' classes='right-arrow'></InlineSvg>
+      <InlineSvg type="right-arrow" classes="right-arrow"></InlineSvg>
     </div>
   )
 }
