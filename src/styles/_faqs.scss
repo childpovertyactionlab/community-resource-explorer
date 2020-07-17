@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     .jump {
-      padding: 2 * $spacer 0;
+      padding: 1.5 * $spacer 0;
       width: 100%; //110%;
       text-align: center;
       background: white;
@@ -125,7 +125,7 @@
     .side-menu.normal {
       display: block;
       padding-left: calc(100vw / 12); // one "column"
-      transform: translate(0, $outer-section-breath-md);
+      transform: translate(0, $outer-section-breath-md + $q-breath);
       height: 0; // trick to keep it from forcing question sections down
     }
 
@@ -166,7 +166,7 @@
   //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
   @media screen and (min-width: $xl-start) {
     .side-menu {
-      transform: translate(0, $outer-section-breath-xl);
+      transform: translate(0, $outer-section-breath-xl + $q-breath);
 
       .jump, a {
         padding-bottom: 3 * $spacer;

@@ -14,7 +14,7 @@ import InlineSvg from "../components/inlineSvg"
 
 const how = {
   id: 'how',
-  title: ['How we', 'made it'], // break between lines
+  title: ['How we made it'], // break between lines
   questions: [
     {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -68,36 +68,44 @@ const Faqs = () => {
 
   const [mobileMenuActive, setMenuActive] = useState(false)
   const toggleMenu = () => setMenuActive(!mobileMenuActive)
+  const closeMenu = () => {
+    console.log('F')
+    setMenuActive(false)}
 
   const getSideMenus = () => {
     const sectionTitles = (
       <>
       {sections.map(s => (
           <>
-            <div className="menu-title"><Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              key={"side-menu-title-"+s.id}
-              to={s.id+'-section'}
-              offset={0}
-              // containerId="faqs-page"
-            >
-                {s.title.join(' ')}
-            </Link></div>
+            <div className="menu-title" key={"side-menu-title-"+s.id}>
+              <Link
+                onClick={closeMenu}
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to={s.id+'-section'}
+                offset={0}
+                // containerId="faqs-page"
+              >
+                  {s.title.join(' ')}
+              </Link>
+            </div>
             <br/>
           </>
         ))}
-        <div className="menu-title"><Link
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          to="methods"
-          offset={0}
-          // containerId="faqs-page"
-        >
-          Methods Paper
-        </Link></div>
+        <div className="menu-title">
+          <Link
+            onClick={closeMenu}
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            to="methods"
+            offset={0}
+            // containerId="faqs-page"
+          >
+            Methods Paper
+          </Link>
+        </div>
       </>
     )
 
@@ -157,7 +165,7 @@ const Faqs = () => {
               <div
                 className="section-title" // visible only for mobile
               >
-                {s.title}
+                {s.title.join(' ')}
               </div>
 
                   {s.questions.map((q, idx) => {
