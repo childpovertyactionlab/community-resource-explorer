@@ -31,7 +31,7 @@
     align-items: center;
     .jump {
       padding: 2 * $spacer 0;
-      width: 100%;
+      width: 110%;
       text-align: center;
       background: white;
       border-bottom: 1px solid #D7D7D7;
@@ -41,6 +41,7 @@
       display: none;
     }
     .sections {
+      padding-top: 2 * $spacer;
       text-align: center;
       border-bottom: 1px solid #D7D7D7;
       background: white;
@@ -53,7 +54,8 @@
     // applies to both menus
     position: sticky;
     top: 0;
-    .jump, a {
+    .jump, .menu-title {
+      display: inline-block;
       padding-bottom: 3 * $spacer;
     }
     .jump {
@@ -61,10 +63,10 @@
       // line-height: 25px;
       letter-spacing: -0.5px;
     }
-    a {
+    .menu-title {
       // _figma__
       font-size: 26px;
-      // line-height: 30px;
+      line-height: 1; // 30px;
       letter-spacing: -1px;
       // ________
     }

@@ -84,19 +84,19 @@ const Faqs = () => {
             >
                 {s.title.join(' ')}
             </Link></div>
+            <br/>
           </>
         ))}
-        <Link
+        <div className="menu-title"><Link
           activeClass="active"
           spy={true}
           smooth={true}
           to="methods"
           offset={0}
           // containerId="faqs-page"
-          className="menu-title"
         >
           Methods Paper
-        </Link>
+        </Link></div>
       </>
     )
 
