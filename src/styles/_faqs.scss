@@ -134,7 +134,7 @@
     }
     .side-menu.normal {
       display: block;
-      padding-left: calc(100vw / 12); // one "column"
+      padding-left: $column;
       transform: translate(0, $outer-section-breath-md + $q-breath);
       height: 0; // trick to keep it from forcing question sections down
     }
@@ -247,7 +247,7 @@
       background: #FDF5E9;
 
       .content {
-        margin-right: calc(100vw / 6); // two "columns"
+        margin-right: 2 * $column;
         max-width: 700px;
       }
     }

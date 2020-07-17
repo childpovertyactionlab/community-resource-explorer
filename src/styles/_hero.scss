@@ -10,7 +10,7 @@ $image-section-flex: 250px 5 5;
   padding-right: 0; //
   
   .color-section {
-    padding-left: calc(100vw / 12); // one "column"
+    padding-left: $column;
     flex: $color-section-flex;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ $image-section-flex: 250px 5 5;
       justify-content: center;
       .menu {
         text-align: end;
-        padding-right: calc(100vw / 12);
+        padding-right: $column;
         .menu-icon {
           width: 20px;
           height: 9px;

@@ -1,6 +1,11 @@
 $color-primary: #20232a;
 
+// space elements in increments of .8rem (8px)
 $spacer: .8rem;
+
+// inside Cols that don't take up the full screen width,
+// use $column to apply margins etc that are increments
+// of the screen-scoped columns (helps to mirror figma layout)
 $column: 8.333333vw; // 100/12
 
 $sm-start: 320px;
