@@ -10,6 +10,7 @@ import Hero from "../components/hero"
 
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
+import InlineSvg from "../components/inlineSvg"
 
 const how = {
   id: 'how',
@@ -113,7 +114,10 @@ const Faqs = () => {
           {sectionTitles}
         </div>
         <div className={mobileClasses}>
-          <span onClick={toggleMenu} className="jump">Jump to</span>
+          <span onClick={toggleMenu} className="jump">
+            Jump to
+            <InlineSvg type="down-chevron" />
+          </span>
           <div className="sections">
             {sectionTitles}
           </div>

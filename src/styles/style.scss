@@ -31,6 +31,15 @@
   display: inline-block;
 }
 
+.inline-svg {
+  display: inline-block;
+  &.down-chevron {
+    position: relative;
+    bottom: 3px;
+    left: 8px;
+  }
+}
+
 html {
   font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
 }
