@@ -3,7 +3,116 @@
 $color-section-flex: 350px 10 7; // 7
 $image-section-flex: 250px 5 5;
 
+// TODO: why? (to line up with side-menu)
+$extra-margin: 15px;
+
+$menu-height: 21px;
+$mobile-logo-height: 38px;
+
 .hero {
+
+  // _______________RESPONSIVE SIZING_______________ //
+
+  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
+  flex-direction: column-reverse; // so image section is on top
+  
+  .menu-section {
+    position: relative;
+    height: 8 * $spacer;
+  }
+
+  .site-logo-mobile {
+    width: 94px;
+    background-image: url("../images/logo-mobile.svg");
+    position: relative;
+    height: $mobile-logo-height;
+    top: calc(50% - (#{$mobile-logo-height}/2)); // center vertically
+    margin-left: calc(#{$column} + #{$extra-margin});
+  }
+
+  .color-section {
+    .content {
+      max-width: 300px;
+      padding-top: 6 * $spacer;
+      padding-bottom: 6 * $spacer;
+      // margin-right: 2.5 * $column;
+
+      .page-title-section {
+        padding-left: 2 * $spacer;;
+        .title {
+          font-size: 14px;
+          line-height: 1; // 77px; need to align border-left to text top
+          padding-bottom: 3 * $spacer;
+        }
+        
+        .subtitle {
+          font-size: 36px;
+          line-height: 40px
+        }
+      }
+    }
+    .branding {
+      display: none;
+    }
+  }
+  
+  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
+  @media screen and (min-width: $md-start) {
+    flex-direction: row; // so color section comes first
+
+    .site-logo-mobile {
+      display: none;
+    }
+
+    .image-section {
+      flex: $image-section-flex;
+    }
+    
+    .color-section {
+      flex: $color-section-flex;
+      .content {
+        padding-top: 0;
+        padding-bottom: 6 * $spacer;
+
+        .page-title-section {
+          .title {
+            font-size: 20px;
+          }
+        }
+      }  
+      .branding {
+        display: block;
+      }
+    }
+  }
+
+  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
+  @media screen and (min-width: $xl-start) {
+    .color-section {
+      .content {
+        padding-bottom: 10 * $spacer;
+        max-width: 520px;
+        
+        .page-title-section {
+          padding-left: 3 * $spacer;;
+          .subtitle {
+            font-size: 60px;
+            line-height: 65px
+          }
+          .title {
+            padding-bottom: 4 * $spacer;
+          }
+        }
+      }  
+      .branding {
+        display: block;
+      }
+    }
+  }
+
+  // _______________END RESPONSIVE SIZING_______________ //
+  
+
   position: relative;
   display: flex;
   padding-left: 0; //
@@ -11,7 +120,6 @@ $image-section-flex: 250px 5 5;
   
   .color-section {
     padding-left: $column;
-    flex: $color-section-flex;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,34 +147,24 @@ $image-section-flex: 250px 5 5;
     }
 
     .content, .branding {
-      // TODO: why? (to line up with side-menu)
-      margin-left: 15px;
+      margin-left: $extra-margin;
     }
     .content {
 
-      padding-bottom: 10 * $spacer;
-  
       .page-title-section {
         border-left: 4px solid #E55934;
-        padding-left: 3 * $spacer;;
         
         .title {
           // _figma_
           font-weight: 300;
-          font-size: 20px;
-          line-height: 20px; // 77px; need to align border-left to text top
           /* or 387% */
           color: #08131F;
-          // _______
-          
-          padding-bottom: 4 * $spacer;;
+          // _______          
         }
         
         .subtitle {
           // _figma_
           font-weight: 500;
-          font-size: 60px;
-          line-height: 65px;
           /* or 108% */
           letter-spacing: -2px;
           color: #000000;
@@ -78,24 +176,22 @@ $image-section-flex: 250px 5 5;
 
 
   .image-section {
-    flex: $image-section-flex;
-
     .menu-section {
       // _figma_
       font-weight: 300;
       font-size: 14px;
-      line-height: 21px;
+      line-height: $menu-height;
       /* or 150% */
       color: #08131F;        
       // _______
   
-      height: 10 * $spacer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
       .menu {
-        text-align: end;
-        padding-right: $column;
+        position: absolute;
+        right: $column;
+        top: calc(50% - (#{$menu-height}/2)); // center vertically
         .menu-icon {
           width: 20px;
           height: 9px;

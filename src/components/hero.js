@@ -17,6 +17,7 @@ const Hero = ({ children }) => {
 
         <div className="image-section">
           <div className="menu-section">
+            <span className="site-logo-mobile svg-base"></span>
             <span className="menu">
               <span className="menu-icon svg-base"></span>
               Menu
