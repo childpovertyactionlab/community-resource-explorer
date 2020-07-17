@@ -68,15 +68,13 @@ const Faqs = () => {
 
   const [mobileMenuActive, setMenuActive] = useState(false)
   const toggleMenu = () => setMenuActive(!mobileMenuActive)
-  const closeMenu = () => {
-    console.log('F')
-    setMenuActive(false)}
+  const closeMenu = () => setMenuActive(false)
 
   const getSideMenus = () => {
     const sectionTitles = (
       <>
-      {sections.map(s => (
-          <>
+      {sections.map(s => ( // TODO: fix key
+          <> 
             <div className="menu-title" key={"side-menu-title-"+s.id}>
               <Link
                 onClick={closeMenu}
@@ -87,13 +85,13 @@ const Faqs = () => {
                 offset={0}
                 // containerId="faqs-page"
               >
-                  {s.title.join(' ')}
+                {s.title.join(' ')}
               </Link>
             </div>
-            <br/>
+            <br />
           </>
         ))}
-        <div className="menu-title">
+        <div className="menu-title" key={"side-menu-title-methods-paper"}>
           <Link
             onClick={closeMenu}
             activeClass="active"
@@ -116,12 +114,12 @@ const Faqs = () => {
 
     return (
       <>
-        <div className="side-menu normal">
+        <div key="side-menu-normal" className="side-menu normal">
           <span className="jump">Jump to</span>
           <br/ >
           {sectionTitles}
         </div>
-        <div className={mobileClasses}>
+        <div key="side-menu-mobile" className={mobileClasses}>
           <span onClick={toggleMenu} className="jump">
             Jump to
             <InlineSvg type="down-chevron" />
