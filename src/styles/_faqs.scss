@@ -104,6 +104,16 @@
   }
 
   .methods-paper-section {
+    .methods-paper .content {
+      margin-left: $column;
+      margin-right: $column;
+    }
+
+    .section-title {
+      padding-top: 0;
+      padding-bottom: 6 * $spacer;
+    }
+
     .row {
       padding-top: $method-breath-xs;
       padding-bottom: $method-breath-xs;
@@ -206,6 +216,11 @@
     }
     
     .methods-paper-section {
+      .methods-paper .content {
+        margin-left: $column;
+        margin-right: 2 * $column;
+      }
+
       .row {
         padding-top: $method-breath-xl;
         padding-bottom: $method-breath-xl;

@@ -217,13 +217,23 @@ const Faqs = () => {
       {getFAQSections()}
 
       <Row noGutters className="methods-paper-section">
-        <Col xs={{ offset: 2, span: 10}} className="methods-paper" id="methods">
-          <Row noGutters>
-            <Col xs={{ offset: 1, span: 4}} className="title">
-              <div>Methods</div>
-              <div>Paper</div>
-            </Col>
-            <Col xs={5} className="description">
+        <Col
+          className="methods-paper"
+          id="methods"
+          xs={{ offset: 0, span: 12}}
+          md={{ offset: 5, span: 7}}
+        >
+          <Row className="content" noGutters>
+
+              <Col xs={12}
+                className="section-title" // visible only for mobile
+              >
+                Methods Paper
+              </Col>
+
+            <Col xs={12}
+              className="description"
+            >
               <div className="text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </div>
