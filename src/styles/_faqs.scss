@@ -31,7 +31,7 @@
     align-items: center;
     .jump {
       padding: 2 * $spacer 0;
-      width: 110%;
+      width: 100%; //110%;
       text-align: center;
       background: white;
       border-bottom: 1px solid #D7D7D7;
@@ -47,7 +47,7 @@
       background: white;
       position: absolute;
       top: 100%;
-      width: 110%;
+      width: 100%; //110%;
     }
   }
   .side-menu {
