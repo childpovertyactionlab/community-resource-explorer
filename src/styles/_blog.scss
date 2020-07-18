@@ -12,20 +12,9 @@
         color: #FBFAFF;
       }
 
-      .content {
-        margin-right: 2 * $column;
-        max-width: 500px;
-
+      .content { // just pass in colors - sizing managed by Hero.scss
         .headline {
-          // __figma_
-          font-weight: 500;
-          font-size: 50px;
-          line-height: 55px;
-          /* or 110% */
-          letter-spacing: -2px;
           color: #D8CCFF;          
-          // ________
-          padding-bottom: 4 * $spacer;
         }
 
         .link {

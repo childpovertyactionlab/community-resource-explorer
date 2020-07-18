@@ -49,7 +49,7 @@ const Faqs = () => {
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
-        <CustomLink>Read post</CustomLink>
+        <CustomLink underlined={false}>Read post</CustomLink>
       </Hero>
 
       <Row noGutters id="page">
