@@ -1,26 +1,129 @@
 #blog {
+
+  $background: #7768AE;
+  $lavendar: #D8CCFF;
+  $off-white: #FBFAFF;
+  
+  // _______________RESPONSIVE SIZING_______________ //
+
+  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
   #page {
-    margin-top: 10 * $spacer;
-    margin-bottom: 9 * $spacer;
+    margin-top: 8 * $spacer;
+    margin-bottom: 8 * $spacer;
   }
+
+  .recent {
+    font-size: 14px;
+
+    .custom-underline {
+      padding-bottom: 2 * $spacer;
+      margin-bottom: 4 * $spacer;
+    }
+  }
+
+  .post-section {
+    padding-bottom: 6 * $spacer;
+
+    .post-details {
+      .post-title {
+        padding-top: 3 * $spacer;
+        font-size: 24px;
+      }
+      .post-contents {
+        font-size: 15px;
+        padding-top: 3 * $spacer;
+        padding-bottom: 3 * $spacer;
+      }
+    }
+  }
+
+  .load-more button {
+    font-size: 14px;
+    letter-spacing: 0.22px;
+    padding: $spacer 4*$spacer;
+  }
+
+  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
+  @media screen and (min-width: $md-start) {
+    #page {
+      margin-top: 10 * $spacer;
+      margin-bottom: 10 * $spacer;
+    }
+
+    .recent {
+  
+      .custom-underline {
+        padding-bottom: 3 * $spacer;
+        margin-bottom: 5 * $spacer;
+      }
+    }
+
+    .post-section {
+      padding-bottom: 5 * $spacer;
+      
+      .post-details {
+        .post-title {
+          padding-top: 0;
+        }
+        .post-contents {
+          padding-bottom: 2 * $spacer;
+        }
+      }
+    }
+
+  }
+
+  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
+  @media screen and (min-width: $xl-start) {
+    .recent {
+      font-size: 18px;
+
+      .custom-underline {
+        padding-bottom: 4 * $spacer;
+        margin-bottom: 8 * $spacer;
+      }
+    }
+
+    .post-section {
+      padding-bottom: 8 * $spacer;
+    
+      .post-details {
+        .post-title {
+          font-size: 30px;
+        }
+        .post-contents {
+          font-size: 16px;
+          padding-bottom: 4 * $spacer;
+        }
+      }
+    }
+
+    .load-more button {
+      font-size: 16px;
+      padding: 1.5*$spacer 5*$spacer;
+    }
+    
+  }
+
+  // _______________END RESPONSIVE SIZING_______________ //
+
 
   .hero {
     .color-section {
-      background: #7768AE;
+      background: $background;
 
       .site-title {
-        color: #FBFAFF;
+        color: $off-white;
       }
 
       .content { // just pass in colors - sizing managed by Hero.scss
         .headline {
-          color: #D8CCFF;          
+          color: $lavendar;          
         }
 
         .link {
-          color: #FBFAFF;
-          border-bottom-color: #FBFAFF;
-          svg { stroke: #FBFAFF; }
+          color: $off-white;
+          svg { stroke: $off-white; }
         }
       }
     }
@@ -31,55 +134,45 @@
 
   .recent {
     font-weight: 300;
-    font-size: 18px;
-    line-height: 25px;
     color: #08131F;
 
     .custom-underline {
       display: inline-block;
       border-bottom: 4px solid #E55934;
-      padding-bottom: 4 * $spacer;
-      margin-bottom: 8 * $spacer;
     }
   }
   
   .post-section {
-    padding-bottom: 8 * $spacer; //r
-    .post-image img {
-      width: 100%;
+    .post-image {
+      margin-right: 2 * $gutter;
+      // center photo vertically when smaller than details
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     .post-details {
-      // padding-top: 4 * $spacer; //r
+      // center details vertically when smaller than photo
       margin-top: auto;
       margin-bottom: auto;
       .post-title {
         // __figma_
         font-weight: 500;
-        font-size: 30px;
-        line-height: 36px;
         letter-spacing: -1px;
         color: #08131F;
       }
       .post-contents {
         font-weight: 300;
-        font-size: 16px;
-        line-height: 24px;
         color: #08131F;
         mix-blend-mode: normal;
         opacity: 0.5;
         // ________
-        padding-top: 2 * $spacer; //r
-        padding-bottom: 4 * $spacer; //r
       }
     }
   }
 
-  .load-more button {
-    // __figma_
-    font-size: 16px;
-    letter-spacing: 0.22px;
-    padding: 11px 46px;
-    // ________
-  }
 }

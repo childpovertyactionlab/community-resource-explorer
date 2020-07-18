@@ -62,26 +62,35 @@ const Faqs = () => {
           const src = b.node.publicURL
           return (
             <Row noGutters className="post-section">
-              <Col xs={{ span: 8, offset: 1 }}>
-                <Row>
-                  <Col xs={6} className="post-image">
-                    <figure>
-                      <img src={src} />
-                    </figure>
-                  </Col>
-                  <Col xs={6} className="post-details">
-                    <div className="post-title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                    <div className="post-contents">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Urna vitae nulla pretium, cras tellus, at morbi tristique.
-                      Ac ipsum, egestas ligula duis ipsum pellentesque{" "}
-                    </div>
-                    <CustomLink>Read post</CustomLink>
-                  </Col>
-                </Row>
+
+              <Col
+                className="post-image"
+                xs={{ span: 10, offset: 1 }}
+                md={{ span: 4, offset: 1 }}
+              >
+                <figure><img src={src} /></figure>
               </Col>
+
+              <Col
+                className="post-details"
+                xs={{ span: 10, offset: 1 }}
+                md={{ span: 6, offset: 0 }}
+                xl={{ span: 4, offset: 0 }}
+              >
+                <div className="post-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+
+                <div className="post-contents">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Urna vitae nulla pretium, cras tellus, at morbi tristique.
+                  Ac ipsum, egestas ligula duis ipsum pellentesque{" "}
+                </div>
+
+                <CustomLink>Read post</CustomLink>
+
+              </Col>
+
             </Row>
           )
         })}

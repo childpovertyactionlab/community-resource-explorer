@@ -237,7 +237,8 @@ $mobile-logo-height: 38px;
 
     img {
       width: 100%;
-      padding-top: 100%; // gives 1-1 aspect ratio
+      // TODO: why? 100% should give 1:1 aspect ratio
+      padding-top: calc(100% - 33px);
       background-size: 100%;
     }
   }
