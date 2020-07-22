@@ -1,8 +1,9 @@
 import React from "react"
 
 import { Row, Col } from "react-bootstrap"
+import Menu from "./menu"
 
-const Hero = ({ children }) => {
+const Hero = ({ children, activePageId }) => {
   return (
     <Row>
       <Col xs={12} className="hero">
@@ -18,10 +19,7 @@ const Hero = ({ children }) => {
         <div className="image-section">
           <div className="menu-section">
             <span className="site-logo-mobile svg-base"></span>
-            <span className="menu">
-              <span className="menu-icon svg-base"></span>
-              Menu
-            </span>
+            <Menu activePageId={activePageId} />
           </div>
 
           <img />

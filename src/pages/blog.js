@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 // import { Link } from "react-scroll"
 import Hero from "../components/hero"
 import CustomLink from "../components/link"
+import { pages } from "../consts"
 
 const Faqs = () => {
   const [expandedMap, setState] = useState({})
@@ -45,7 +46,8 @@ const Faqs = () => {
     <Layout pageInfo={{ pageName: "blog" }} id="blog">
       <SEO title="Blog" />
 
-      <Hero>
+      {/* TODO: pages.BLOG.id */}
+      <Hero activePageId={null}>
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>

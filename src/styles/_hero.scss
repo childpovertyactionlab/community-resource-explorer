@@ -226,12 +226,6 @@ $mobile-logo-height: 38px;
         position: absolute;
         right: $column;
         top: calc(50% - (#{$menu-height}/2)); // center vertically
-        .menu-icon {
-          width: 20px;
-          height: 9px;
-          margin-right: 4px;
-          background-image: url("../images/menu-icon.svg");
-        }
       }
     }
 

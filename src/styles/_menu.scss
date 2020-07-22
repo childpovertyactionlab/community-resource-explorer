@@ -1,0 +1,116 @@
+.menu {
+
+  $top-buffer: 3.5 * $spacer;
+  $bottom-buffer: 6.5 * $spacer;
+
+  $color-1: #2C390B;
+  $color-2: #818967;
+  // $active-page-color: #818967;
+
+  // _______________RESPONSIVE SIZING_______________ //
+
+  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
+  
+  .menu-panel {
+
+    .close-menu {
+      font-size: 14px;
+    }
+    
+    .equipped .text, .menu-page-name {
+      font-size: 44px;
+      line-height: 48px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
+  @media screen and (min-width: $md-start) {
+
+  }
+
+  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
+  @media screen and (min-width: $xl-start) {
+
+  }
+
+  // _______________END RESPONSIVE SIZING_______________ //
+
+  z-index: 100;
+  
+  .menu-icon {
+    width: 20px;
+    height: 9px;
+    margin-right: 4px;
+    background-image: url("../images/menu-icon.svg");
+  }
+  
+  &:not(.open) {
+    .menu-panel {
+      display: none;
+    }
+  }
+
+  .menu-panel {
+    height: 600px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #EBEDE3;
+
+    .dallas-isd {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .text {
+        color: $dallas-red;
+        transform: rotate(-90deg);
+        // display: block;
+        white-space: nowrap;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      top: $top-buffer;
+      left: $column;
+
+      width: 32px;
+      height: 52px;
+      background-image: url("../images/menu-logo.svg");
+    }
+    .close-menu {
+      position: absolute;
+      top: $top-buffer + $spacer/2;
+      right: $column;
+      z-index: 2;
+
+      color: $color-1;
+      font-weight: 300;
+    }
+
+    .equipped .text {
+      position: absolute;
+      bottom: $bottom-buffer;
+      color: $color-2;
+      font-weight: 500;
+    }
+
+    .menu-page-names-container {
+      position: absolute;
+      bottom: $bottom-buffer;
+
+      .menu-page-name.active {
+        color: $color-2;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { Link } from "react-scroll"
 import CustomLink from "../components/link"
 import Hero from "../components/hero"
+import { pages } from "../consts"
 
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
@@ -202,7 +203,7 @@ const Faqs = () => {
     <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
       <SEO title="FAQs" />
 
-      <Hero>
+      <Hero activePageId={pages.FAQ.id}>
         <div className="page-title-section">
           <div className="title">Frequently Asked Questions</div>
           <div className="subtitle">
