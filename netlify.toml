@@ -1,5 +1,33 @@
 [[redirects]]
-from = "/*"
+from = "/"
   to = "https://dallasisd.resourceexplorer.org"
   status = 301
+  force=true
+[[redirects]]
+from = "/faqs"
+  to = "https://dallasisd.resourceexplorer.org/faqs"
+  status = 301
+  force=true   
+[[redirects]]
+from = "/explorer-in-action"
+  to = "https://dallasisd.resourceexplorer.org/explorer-in-action"
+  status = 301
   force=true  
+[[redirects]]  
+from = "/about"
+  to = "https://dallasisd.resourceexplorer.org/about"
+  status = 301
+  force=true  
+[[redirects]]  
+from = "/contact"
+  to = "https://dallasisd.resourceexplorer.org/contact"
+  status = 301
+  force=true 
+[[redirects]]  
+from = "/explorer"
+  to = "https://dallasisd.resourceexplorer.org/explorer"
+  status = 301
+  force=true          
+  
+
+
