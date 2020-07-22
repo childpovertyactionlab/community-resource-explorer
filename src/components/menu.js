@@ -47,14 +47,12 @@ const Menu = ({ activePageId }) => {
     )
   }
 
-  let classes = "menu"
-  if (menuOpen) {
-    classes += " open"
-  }
+  const classes = "menu-component" + 
+    (menuOpen ? " open" : "")
 
   return (
     <div className={classes}>
-      <span onClick={toggleMenuOpen}>
+      <span onClick={toggleMenuOpen} className="menu-icon-group">
         <span className="menu-icon svg-base"></span>
         Menu
       </span>

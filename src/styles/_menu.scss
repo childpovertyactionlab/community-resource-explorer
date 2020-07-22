@@ -1,4 +1,4 @@
-.menu {
+.menu-component {
 
   $top-buffer: 3.5 * $spacer;
   $bottom-buffer: 6.5 * $spacer;
@@ -37,7 +37,13 @@
   // _______________END RESPONSIVE SIZING_______________ //
 
   z-index: 100;
-  
+
+  .menu-icon-group {
+    cursor: pointer;
+    display: inline; // so below padding doesn't shift element
+    padding-top: 20px; // extends clickable area
+    padding-bottom: 20px; 
+  }
   .menu-icon {
     width: 20px;
     height: 9px;
@@ -47,11 +53,13 @@
   
   &:not(.open) {
     .menu-panel {
-      display: none;
+      transform: translate(0, -100%);
     }
   }
 
   .menu-panel {
+    // transform: translate(0, 0%);
+    transition: transform ease .7s;
     height: 600px;
     position: fixed;
     top: 0;
@@ -88,8 +96,11 @@
       background-image: url("../images/menu-logo.svg");
     }
     .close-menu {
+      cursor: pointer;
       position: absolute;
-      top: $top-buffer + $spacer/2;
+      top: $top-buffer;
+      padding-top: $spacer/2; // to align with logo
+      padding-bottom: $spacer/2; // and extend clickable area
       right: $column;
       z-index: 2;
 
