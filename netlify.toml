@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/*"
+  to = "https://dallasisd.resourceexplorer.org"
+  status = 301
+  force=true  
