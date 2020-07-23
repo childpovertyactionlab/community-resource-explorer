@@ -26,7 +26,7 @@ const Layout = ({ children, pageInfo, id }) => (
     `}
     render={data => (
       <>
-        <Container fluid className="px-0 main">
+        <Container fluid className="main">
           {!id && (
             <Row noGutters className="justify-content-center">
               <Col>

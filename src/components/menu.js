@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 import { Row, Col } from "react-bootstrap"
 import { menuPages } from "../consts"
+import { Link, navigate } from "gatsby"
 
 const Menu = ({ activePageId }) => {
 
@@ -30,7 +31,9 @@ const Menu = ({ activePageId }) => {
               const nameClasses = "menu-page-name" + 
                 ((page.id === activePageId) ? " active" : "")
               return (
-                <div className={nameClasses} key={page.id}>{page.name}</div>
+                <div onClick={() => navigate(page.path)} className={nameClasses} key={page.id}>
+                  {page.name}
+                </div>
               )
             })}
           </div>

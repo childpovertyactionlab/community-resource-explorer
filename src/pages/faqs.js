@@ -152,7 +152,7 @@ const Faqs = () => {
             classes += " last"
           }
           return (
-            <Row noGutters className={classes} key={s.id}>
+            <Row className={classes} key={s.id}>
               <Col
                 className="questions"
                 id={`${s.id}-section`} // target for the side menu to scroll to
