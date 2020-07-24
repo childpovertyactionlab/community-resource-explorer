@@ -199,7 +199,7 @@
     background: $why-background;
 
     // _jumping boy__
-    @include media-breakpoint-only(md) {
+    @include media-breakpoint-down(md) {
       // for md only, add white bg behind upper part of img
       $white-bg-proportion: .6; // <- tune 0-1 to control how far down img background color begins
       $cutoff: (2/3) * $jumper-width-md * $white-bg-proportion; // 2/3 ~ image aspect ratio

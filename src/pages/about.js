@@ -81,7 +81,7 @@ const about = () => {
 
           </div>
 
-          <Col
+          <Row><Col
             className="explorer-why"
             xs={{ offset: 0, span: 12 }}
             md={{ offset: 0, span: 10 }}
@@ -106,7 +106,7 @@ const about = () => {
               <CustomLink>Go to the explorer</CustomLink>
             </div>
 
-          </Col>
+          </Col></Row>
         </Col>
 
         <Col className="funder-wrapper md-down" xs={12}>
