@@ -1,16 +1,21 @@
 // todo standardize page id
 #about-page {
 
-  // _______________RESPONSIVE SIZING_______________ //
   .cpal-defined .text, .where-we-work .text {
     font-weight: 500;
     font-size: 20px;
+    @include media-breakpoint-up(lg) {
+      font-size: 50px;
+    }
     line-height: 25px;
     /* or 125% */
     letter-spacing: -1px;
     color: $very-dark-green;
   }
 
+
+  
+  // _______________RESPONSIVE SIZING_______________ //
   //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
   
   //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//

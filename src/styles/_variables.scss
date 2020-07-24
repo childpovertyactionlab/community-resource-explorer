@@ -19,3 +19,11 @@ $sm-start: 320px;
 $md-start: 768px;  //\\
 $lg-start: 992px;
 $xl-start: 1280px; //\\
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm-start,
+  md: $md-start,
+  lg: $lg-start,
+  xl: $xl-start,
+);
