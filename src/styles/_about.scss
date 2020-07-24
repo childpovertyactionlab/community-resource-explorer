@@ -126,5 +126,54 @@
 
   .explorer-why {
     background: $why-background;
+
+    .title {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: -1px;
+      @include media-breakpoint-up(md) {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -2px;
+
+        max-width: 3 * $column; // break into two lines
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 60px;
+        line-height: 65px;
+      }
+
+      margin-left: $column;
+      margin-bottom: 6 * $spacer;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 8 * $spacer;
+      }
+    }
+
+    .text-blocks {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 27px;
+
+      margin-left: $column;
+      margin-right: $column;
+      margin-bottom: 6 * $spacer;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 8 * $spacer;
+        margin-right: 2 * $column;
+      }
+    }
+
+    .custom-link {
+      margin-left: $column;
+    }
+    
   }
 }
