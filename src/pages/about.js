@@ -6,6 +6,20 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
+import number1 from "../images/number-1.svg"
+import number2 from "../images/number-2.svg"
+import number3 from "../images/number-3.svg"
+import number4 from "../images/number-4.svg"
+import number5 from "../images/number-5.svg"
+
+// TODO - add svgs for 5+ if more points desired
+const numberedPoints = [
+  { n: number1, p: 'Generating data insights to break big problems into small, actionable ones;'}, 
+  { n: number2, p: 'Facilitating cross-sector, collective action based on data insights;'}, 
+  { n: number3, p: 'Inspiring and mobilizing advocates;'}, 
+  { n: number4, p: 'Inspiring and mobilizing advocates;'}, 
+  { n: number5, p: 'Infusing innovation into the social sector.'}, 
+]
 
 const about = () => {
   return (
@@ -21,7 +35,7 @@ const about = () => {
         </div>
       </Hero>
 
-      <Row noGutters id="#page" className="">
+      <Row noGutters id="#page" className=""><Col>
         <Col
           className="cpal-defined"
           xs={{ offset: 1, span: 10 }}
@@ -31,14 +45,28 @@ const about = () => {
           <p className="title">Who we are</p>
           <p className="text">CPAL is a nonprofit organization that seeks systems-level change for the good of Dallas kids and their families. We do this by:</p>
         </Col>
-        <Col
+        <Row
           className="numbered-points"
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 5, span: 7 }}
-          xl={{ offset: 5, span: 7 }}
+          // xs={{ offset: 0, span: 12 }}
+          // md={{ offset: 0, span: 12 }}
+          // xl={{ offset: 0, span: 12 }}
         >
-          numbered-points
-        </Col>
+          {numberedPoints.map((numPoint, idx) => {
+            
+            return (
+              <Col
+                key={idx}
+                className={`numbered-point n-${idx+1}`}
+                xs={{ offset: 1, span: 8 }}
+                md={{ offset: 0, span: 4 }}
+                xl={{ offset: 0, span: 3 }}
+              >
+                <img className="number" src={numPoint.n} />
+                <p className="point">{numPoint.p}</p>
+              </Col>
+            )
+          })}
+        </Row>
         <Col
           className="where-we-work"
           xs={{ offset: 1, span: 10 }}
@@ -62,7 +90,7 @@ const about = () => {
             <CustomLink>Go to the explorer</CustomLink>
           </p>
         </Col>
-      </Row>
+      </Col></Row>
     </Layout>
   )
 }

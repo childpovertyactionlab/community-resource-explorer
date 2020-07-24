@@ -1,33 +1,59 @@
 // todo standardize page id
 #about-page {
+  $mid-gray: #757575;
 
-  .cpal-defined .text, .where-we-work .text {
-    font-weight: 500;
-    font-size: 20px;
-    @include media-breakpoint-up(lg) {
-      font-size: 50px;
-    }
-    line-height: 25px;
-    /* or 125% */
-    letter-spacing: -1px;
+  p {
     color: $very-dark-green;
   }
 
-
-  
-  // _______________RESPONSIVE SIZING_______________ //
-  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
-  
-  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
-  @media screen and (min-width: $md-start) {
-
+  .cpal-defined .title {
+    font-weight: 300;
+    font-size: 14.1799px;
+    line-height: 18px;
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
-  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
-  @media screen and (min-width: $xl-start) {
+  .cpal-defined .text, .where-we-work .text {
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-size: 20px;
+    line-height: 25px;
+    @include media-breakpoint-up(xl) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
-  // _______________END RESPONSIVE SIZING_______________ //
-  
-  
+  .numbered-points {
+    // display: flex;
+    @include media-breakpoint-up(md) {
+      // padding-left: $column;
+      // padding-right: 3 * $column;
+    }
+
+    .numbered-point {
+      display: flex;
+
+      @include media-breakpoint-up(md) {
+        &.n-2, &.n-4 {
+          margin-right: 3 * $column;
+        }
+      }
+
+      .point {
+        color: $mid-gray;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 22px;
+        @include media-breakpoint-up(xl) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
 }
