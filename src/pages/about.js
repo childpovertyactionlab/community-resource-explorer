@@ -35,7 +35,7 @@ const about = () => {
         </div>
       </Hero>
 
-      <Row noGutters id="#page" className=""><Col>
+      <Row noGutters id="page" className="">
         <Col
           className="cpal-defined"
           xs={{ offset: 1, span: 10 }}
@@ -45,28 +45,14 @@ const about = () => {
           <p className="title">Who we are</p>
           <p className="text">CPAL is a nonprofit organization that seeks systems-level change for the good of Dallas kids and their families. We do this by:</p>
         </Col>
-        <Row
-          className="numbered-points"
-          // xs={{ offset: 0, span: 12 }}
-          // md={{ offset: 0, span: 12 }}
-          // xl={{ offset: 0, span: 12 }}
-        >
-          {numberedPoints.map((numPoint, idx) => {
-            
-            return (
-              <Col
-                key={idx}
-                className={`numbered-point n-${idx+1}`}
-                xs={{ offset: 1, span: 8 }}
-                md={{ offset: 0, span: 4 }}
-                xl={{ offset: 0, span: 3 }}
-              >
-                <img className="number" src={numPoint.n} />
-                <p className="point">{numPoint.p}</p>
-              </Col>
-            )
-          })}
-        </Row>
+        <Col className="numbered-points" xs={12}>
+          {numberedPoints.map((numPoint, idx) => (
+            <div key={idx} className={`numbered-point n-${idx+1}`}>
+              <img className="number" src={numPoint.n} />
+              <p className="point">{numPoint.p}</p>
+            </div>
+          ))}
+        </Col>
         <Col
           className="where-we-work"
           xs={{ offset: 1, span: 10 }}
@@ -90,7 +76,7 @@ const about = () => {
             <CustomLink>Go to the explorer</CustomLink>
           </p>
         </Col>
-      </Col></Row>
+      </Row>
     </Layout>
   )
 }
