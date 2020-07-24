@@ -3,11 +3,12 @@ import React from "react"
 import { Col, Row, Collapse } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
+import HeroWide from "../components/heroWide"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
 import comerica from "../images/comerica.svg"
 import jumpImg from "../images/about-jump.png"
+import soccerImg from "../images/about-soccer.png"
 import number1 from "../images/number-1.svg"
 import number2 from "../images/number-2.svg"
 import number3 from "../images/number-3.svg"
@@ -29,14 +30,14 @@ const about = () => {
     <Layout pageInfo={{ pageName: "about" }} id="about-page">
       <SEO title="about" />
 
-      <Hero activePageId={pages.ABOUT.id}>
+      <HeroWide activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
         <div className="page-title-section">
           <div className="title">Our Mission</div>
           <div className="subtitle">
             The Child Poverty Action Lab exists to reduce child poverty in Dallas by half within a generation.
           </div>
         </div>
-      </Hero>
+      </HeroWide>
 
       <Row noGutters id="page" className="">
 

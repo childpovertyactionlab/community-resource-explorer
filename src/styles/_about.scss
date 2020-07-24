@@ -2,11 +2,18 @@
 #about-page {
   $mid-gray: #757575;
   $why-background: #EBEDE3;
+  $hero-color: #FFFBF3;
 
   $jumper-width-md: 6 * $column;
 
   p { // *?
     color: $very-dark-green;
+  }
+
+  .hero-wide {
+    .color-section {
+      background: $hero-color;
+    }
   }
 
   #page {
