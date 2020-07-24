@@ -3,6 +3,8 @@
   $mid-gray: #757575;
   $why-background: #EBEDE3;
 
+  $jumper-width-md: 6 * $column;
+
   p { // *?
     color: $very-dark-green;
   }
@@ -126,10 +128,18 @@
 
   .jumper-wrapper-xl {
     display: none;
+     img {
+        width: 100%;
+      }
+
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 12 * $spacer;
+    width: 50%;
+
     @include media-breakpoint-up(xl) {
       display: block;
-
-      position: absolute;
     }
   }
 
@@ -138,7 +148,10 @@
 
     // _jumping boy__
     @include media-breakpoint-only(md) {
-      background: linear-gradient(transparent 0, transparent 2 * $column, $why-background 2 * $column);
+      // for md only, add white bg behind upper part of img
+      $white-bg-proportion: .6; // <- tune 0-1 to control how far down img background color begins
+      $cutoff: (2/3) * $jumper-width-md * $white-bg-proportion; // 2/3 ~ image aspect ratio
+      background: linear-gradient(transparent 0, transparent $cutoff, $why-background $cutoff);
     }
     .jumper-wrapper {
       img {
@@ -149,16 +162,12 @@
       @include media-breakpoint-up(md) {
         margin-bottom: 9 * $spacer;
         margin-left: $column;
-        width: 6 * $column;
+        width: $jumper-width-md;
       }
       @include media-breakpoint-up(xl) {
+        // use .jumper-wrapper-xl
         display: none;
-        // position: absolute;
-        // height: 100%;
-        // width: 100%;
-        // top: 12 * $spacer;
-        // width: 6 * $column;
-        // left: 6 * $column;
+        background: $why-background;
       }
     }
     // ______________
@@ -191,11 +200,14 @@
         line-height: 40px;
         letter-spacing: -2px;
 
-        max-width: 3 * $column; // break into two lines
+        max-width: 225px; // break into two lines
       }
       @include media-breakpoint-up(xl) {
         font-size: 60px;
         line-height: 65px;
+
+        max-width: 350px; // break into two lines
+        margin-top: 14 * $spacer;
       }
 
       margin-bottom: 6 * $spacer;
