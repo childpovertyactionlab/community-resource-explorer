@@ -1,6 +1,15 @@
-.about {
+// todo standardize page id
+#about-page {
 
   // _______________RESPONSIVE SIZING_______________ //
+  .cpal-defined .text, .where-we-work .text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    /* or 125% */
+    letter-spacing: -1px;
+    color: $very-dark-green;
+  }
 
   //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
   

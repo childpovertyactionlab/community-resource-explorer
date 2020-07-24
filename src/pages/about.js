@@ -21,14 +21,15 @@ const about = () => {
         </div>
       </Hero>
 
-      <Row id="#page" className="">
+      <Row noGutters id="#page" className="">
         <Col
           className="cpal-defined"
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 5, span: 7 }}
-          xl={{ offset: 5, span: 7 }}
+          md={{ offset: 1, span: 7 }}
+          xl={{ offset: 1, span: 5 }}
         >
-          cpal-defined
+          <p className="title">Who we are</p>
+          <p className="text">CPAL is a nonprofit organization that seeks systems-level change for the good of Dallas kids and their families. We do this by:</p>
         </Col>
         <Col
           className="numbered-points"
@@ -40,11 +41,11 @@ const about = () => {
         </Col>
         <Col
           className="where-we-work"
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 5, span: 7 }}
-          xl={{ offset: 5, span: 7 }}
+          xs={{ offset: 1, span: 10 }}
+          md={{ offset: 1, span: 7 }}
+          xl={{ offset: 1, span: 5 }}
         >
-          where-we-work
+          <p className="text">We primarily work across six areas: service delivery, women’s health, housing, childcare, incarceration, and trauma prevention and care.</p>
         </Col>
         <Col
           className="explorer-why"
