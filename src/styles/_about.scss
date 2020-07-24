@@ -3,7 +3,7 @@
   $mid-gray: #757575;
   $why-background: #EBEDE3;
 
-  p {
+  * {
     color: $very-dark-green;
   }
 
@@ -127,6 +127,24 @@
   .explorer-why {
     background: $why-background;
 
+    margin-bottom: 8 * $spacer;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 7 * $spacer;
+    }
+    
+    .content {
+      margin-left: $column;
+      margin-right: $column;
+      padding-bottom: 8 * $spacer;
+      @include media-breakpoint-up(md) {
+        padding-bottom: 9 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: 2 * $column;
+        padding-bottom: 14 * $spacer;
+      }
+    }
+
     .title {
       font-weight: 500;
       font-size: 26px;
@@ -144,7 +162,6 @@
         line-height: 65px;
       }
 
-      margin-left: $column;
       margin-bottom: 6 * $spacer;
       @include media-breakpoint-up(md) {
         margin-bottom: 5 * $spacer;
@@ -159,15 +176,12 @@
       font-size: 18px;
       line-height: 27px;
 
-      margin-left: $column;
-      margin-right: $column;
       margin-bottom: 6 * $spacer;
       @include media-breakpoint-up(md) {
         margin-bottom: 5 * $spacer;
       }
       @include media-breakpoint-up(xl) {
         margin-bottom: 8 * $spacer;
-        margin-right: 2 * $column;
       }
     }
 
