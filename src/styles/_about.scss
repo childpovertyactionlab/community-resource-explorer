@@ -128,9 +128,9 @@
 
   .jumper-wrapper-xl {
     display: none;
-     img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
+    }
 
     position: absolute;
     z-index: 1;
@@ -140,6 +140,58 @@
 
     @include media-breakpoint-up(xl) {
       display: block;
+    }
+  }
+
+  .funder-wrapper {
+    &.xl {
+      position: relative;
+      display: none;
+      @include media-breakpoint-up(xl) {
+        display: block;
+      }
+    }
+    &.md-down {
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+
+    .funder {
+      &.xl {
+        position: absolute;
+        top: 21 * $spacer;
+        right: $column;
+      }
+
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 214px;
+        margin: auto;
+      }
+      .text {
+        margin: auto;
+        text-align: center;
+
+        font-size: 16px;
+        line-height: 25px;
+        width: 10 * $column;
+        margin-top: 3 * $spacer;
+        margin-bottom: 7 * $spacer;
+        
+        @include media-breakpoint-up(md) {
+          width: 6 * $column;
+          margin-top: 4 * $spacer;
+        }
+
+        @include media-breakpoint-up(xl) {
+          font-size: 18px;
+          line-height: 27px;
+          width: 3 * $column;
+        }
+      }
     }
   }
 
@@ -153,7 +205,7 @@
       $cutoff: (2/3) * $jumper-width-md * $white-bg-proportion; // 2/3 ~ image aspect ratio
       background: linear-gradient(transparent 0, transparent $cutoff, $why-background $cutoff);
     }
-    .jumper-wrapper {
+    .jumper-wrapper-md-down {
       img {
         width: 100%;
       }
@@ -207,7 +259,7 @@
         line-height: 65px;
 
         max-width: 350px; // break into two lines
-        margin-top: 14 * $spacer;
+        padding-top: 14 * $spacer; // other breakpoints have margin-bottom on the image
       }
 
       margin-bottom: 6 * $spacer;
@@ -232,9 +284,12 @@
         margin-bottom: 8 * $spacer;
       }
     }
+  }
 
-    .custom-link {
-      margin-left: $column;
+  .funder-wrapper-md-down {
+
+    @include media-breakpoint-up(xl) {
+      display: none;
     }
   }
 }

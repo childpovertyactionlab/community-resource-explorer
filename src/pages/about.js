@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
+import comerica from "../images/comerica.svg"
 import jumpImg from "../images/about-jump.png"
 import number1 from "../images/number-1.svg"
 import number2 from "../images/number-2.svg"
@@ -23,6 +24,7 @@ const numberedPoints = [
 ]
 
 const about = () => {
+
   return (
     <Layout pageInfo={{ pageName: "about" }} id="about-page">
       <SEO title="about" />
@@ -37,6 +39,7 @@ const about = () => {
       </Hero>
 
       <Row noGutters id="page" className="">
+
         <Col
           className="cpal-defined"
           xs={{ offset: 1, span: 10 }}
@@ -46,6 +49,7 @@ const about = () => {
           <p className="title">Who we are</p>
           <p className="text">CPAL is a nonprofit organization that seeks systems-level change for the good of Dallas kids and their families. We do this by:</p>
         </Col>
+
         <Col className="numbered-points" xs={12}>
           {numberedPoints.map((numPoint, idx) => (
             <div key={idx} className={`numbered-point n-${idx+1}`}>
@@ -54,6 +58,7 @@ const about = () => {
             </div>
           ))}
         </Col>
+
         <Col
           className="where-we-work"
           xs={{ offset: 1, span: 10 }}
@@ -66,16 +71,27 @@ const about = () => {
         <Col className="explorer-why-wrapper" xs={12}>
           <div className="jumper-wrapper-xl">
             <img src={jumpImg} />
+
+            <div className="funder-wrapper xl">
+              <div className="funder xl">
+                <img src={comerica} />
+                <p className="text">Comerica generously funded the development of the Community Resource Explorer</p>
+              </div>
+            </div>
+
           </div>
+
           <Col
             className="explorer-why"
             xs={{ offset: 0, span: 12 }}
             md={{ offset: 0, span: 10 }}
             xl={{ offset: 0, span: 7 }}
           >
-            <div className="jumper-wrapper">
+
+            <div className="jumper-wrapper-md-down">
               <img src={jumpImg} />
             </div>
+
             <div className="content">
               <p className="title">Why we built the explorer</p>
               <div className="text-blocks">
@@ -86,10 +102,20 @@ const about = () => {
                   The CRE is a diagnostic tool that illustrates how resources are allocated across five categories and 30+ indicators in neighborhoods around Dallas ISD schools. The intent of the tool is to help frontline institutions act on relevant, specific data so that investment decisions and resource allocation can have the greatest impact. Our hope is that the CRE can help right the wrongs of the past by bringing new programs and services, economic development opportunities, and public amenities to communities that have been under-resourced for far too long.
                 </p>
               </div>
+
               <CustomLink>Go to the explorer</CustomLink>
             </div>
+
           </Col>
         </Col>
+
+        <Col className="funder-wrapper md-down" xs={12}>
+          <div className="funder md-down">
+            <img src={comerica} />
+            <p className="text">Comerica generously funded the development of the Community Resource Explorer</p>
+          </div>
+        </Col>
+
       </Row>
     </Layout>
   )
