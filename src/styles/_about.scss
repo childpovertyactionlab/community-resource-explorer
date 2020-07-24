@@ -3,7 +3,7 @@
   $mid-gray: #757575;
   $why-background: #EBEDE3;
 
-  * {
+  p { // *?
     color: $very-dark-green;
   }
 
@@ -124,8 +124,44 @@
     }
   }
 
+  .jumper-wrapper-xl {
+    display: none;
+    @include media-breakpoint-up(xl) {
+      display: block;
+
+      position: absolute;
+    }
+  }
+
   .explorer-why {
     background: $why-background;
+
+    // _jumping boy__
+    @include media-breakpoint-only(md) {
+      background: linear-gradient(transparent 0, transparent 2 * $column, $why-background 2 * $column);
+    }
+    .jumper-wrapper {
+      img {
+        width: 100%;
+      }
+      
+      margin-bottom: 8 * $spacer;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 9 * $spacer;
+        margin-left: $column;
+        width: 6 * $column;
+      }
+      @include media-breakpoint-up(xl) {
+        display: none;
+        // position: absolute;
+        // height: 100%;
+        // width: 100%;
+        // top: 12 * $spacer;
+        // width: 6 * $column;
+        // left: 6 * $column;
+      }
+    }
+    // ______________
 
     margin-bottom: 8 * $spacer;
     @include media-breakpoint-up(md) {
@@ -188,6 +224,5 @@
     .custom-link {
       margin-left: $column;
     }
-    
   }
 }
