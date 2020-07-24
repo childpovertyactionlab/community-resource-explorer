@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
+import CustomLink from "../components/customLink"
 
 const about = () => {
   return (
@@ -53,14 +54,12 @@ const about = () => {
         >
           explorer-why
           <div className="title">Why we built the explorer</div>
-          <div className="text-blocks">
-            <div>
-              CPAL built the Community Resource Explorer to ensure that all Dallas neighborhoods are places of great opportunity for children and their families. Dallas neighborhoods are unique, each with their own stories to tell, people to celebrate, and places to love. Our neighborhoods are a tremendous asset to our city. However, some neighborhoods are well-appointed with resources, like grocery stores and doctor’s offices and park space, but many others are not. 
-            </div>
-            <div>
-              The CRE is a diagnostic tool that illustrates how resources are allocated across five categories and 30+ indicators in neighborhoods around Dallas ISD schools. The intent of the tool is to help frontline institutions act on relevant, specific data so that investment decisions and resource allocation can have the greatest impact. Our hope is that the CRE can help right the wrongs of the past by bringing new programs and services, economic development opportunities, and public amenities to communities that have been under-resourced for far too long.
-            </div>
-          </div>
+          <p className="text">
+            CPAL built the Community Resource Explorer to ensure that all Dallas neighborhoods are places of great opportunity for children and their families. Dallas neighborhoods are unique, each with their own stories to tell, people to celebrate, and places to love. Our neighborhoods are a tremendous asset to our city. However, some neighborhoods are well-appointed with resources, like grocery stores and doctor’s offices and park space, but many others are not. 
+            <br/>
+            The CRE is a diagnostic tool that illustrates how resources are allocated across five categories and 30+ indicators in neighborhoods around Dallas ISD schools. The intent of the tool is to help frontline institutions act on relevant, specific data so that investment decisions and resource allocation can have the greatest impact. Our hope is that the CRE can help right the wrongs of the past by bringing new programs and services, economic development opportunities, and public amenities to communities that have been under-resourced for far too long.
+            <CustomLink />
+          </p>
         </Col>
       </Row>
     </Layout>

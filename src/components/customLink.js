@@ -1,8 +1,8 @@
 import React from "react"
 import InlineSvg from "./inlineSvg"
 
-const Link = ({ children, underlined=true }) => {
-  let classes = "link "
+const CustomLink = ({ children, underlined=true }) => {
+  let classes = "custom-link "
   if (underlined) {
     classes += " underlined"
   }
@@ -15,4 +15,4 @@ const Link = ({ children, underlined=true }) => {
   )
 }
 
-export default Link
+export default CustomLink

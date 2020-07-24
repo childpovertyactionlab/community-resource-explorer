@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
 import { Link } from "react-scroll"
-import CustomLink from "../components/link"
+import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 

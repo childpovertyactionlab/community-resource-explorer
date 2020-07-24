@@ -7,7 +7,7 @@ import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
 // import { Link } from "react-scroll"
 import Hero from "../components/hero"
-import CustomLink from "../components/link"
+import CustomLink from "../components/customLink"
 import { pages } from "../consts"
 
 const Faqs = () => {
