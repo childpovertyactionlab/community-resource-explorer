@@ -53,3 +53,28 @@ figure, p {
 html {
   font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
 }
+
+// TODO find better home
+.dallas-isd {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .text {
+    text-align: center;
+    color: $dallas-red;
+    transform: rotate(-90deg); // translate?
+    // display: block;
+    white-space: nowrap;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 14px;
+    }
+  }
+}

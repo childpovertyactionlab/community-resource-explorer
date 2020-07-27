@@ -67,25 +67,6 @@
     left: 0;
     background: #EBEDE3;
 
-    .dallas-isd {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-      .text {
-        color: $dallas-red;
-        transform: rotate(-90deg);
-        // display: block;
-        white-space: nowrap;
-
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
-    }
-
     .logo {
       position: absolute;
       top: $top-buffer;

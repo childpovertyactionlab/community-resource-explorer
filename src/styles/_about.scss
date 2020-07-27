@@ -303,6 +303,10 @@
       font-size: 18px;
       line-height: 27px;
 
+      p:not(:last-of-type) {
+        padding-bottom: 4 * $spacer;
+      }
+
       margin-bottom: 6 * $spacer;
       @include media-breakpoint-up(md) {
         margin-bottom: 5 * $spacer;

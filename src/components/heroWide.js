@@ -23,11 +23,26 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
 
         <Row noGutters>
           <Col className="color-section" xs={12}>
-            <div className="content">{children}</div>
+              
+            <Row noGutters>
+              <Col
+                className="dallas-isd"
+                xs={2} md={1}
+              >
+                <span className="text">DALLAS ISD</span>
+              </Col>
+              <Col>
+                <div className="content">{children}</div>
+              </Col>
+            </Row>
 
-            <div className="image-section">
-              <img src={imgSrc}/>
-            </div>
+            <Row noGutters>
+              <Col xs={12}>
+                <div className="image-section">
+                  <img src={imgSrc}/>
+                </div>
+              </Col>
+            </Row>
 
           </Col>
         </Row>
