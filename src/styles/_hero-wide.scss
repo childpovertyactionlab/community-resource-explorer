@@ -99,14 +99,18 @@ $content-width-xl: $hero-wide-img-width-xl;
     .content {
       padding-top: 6 * $spacer;
       padding-bottom: 6 * $spacer;
-
+      
       padding-left: 2 * $column;
       width: 10 * $column;
       @include media-breakpoint-up(md) {
+        padding-top: 9 * $spacer;
+        padding-bottom: 8 * $spacer;
         padding-left: $column;
         width: $content-width-md;
       }
       @include media-breakpoint-up(xl) {
+        padding-top: 7 * $spacer;
+        padding-bottom: 10 * $spacer;
         width: $content-width-xl;
       }
 
@@ -119,12 +123,13 @@ $content-width-xl: $hero-wide-img-width-xl;
           font-weight: 300;
           color: #08131F;
           line-height: 1; // 77px; need to align border-left to text top
-          padding-bottom: 3 * $spacer;
+          padding-bottom: 2 * $spacer;
           
           @include media-breakpoint-up(md) {
-            font-size: 20px;
+            padding-bottom: 3 * $spacer;
           }
           @include media-breakpoint-up(xl) {
+            padding-bottom: 5 * $spacer;
             font-size: 20px;
           }
 
@@ -134,8 +139,17 @@ $content-width-xl: $hero-wide-img-width-xl;
           font-weight: 500;
           letter-spacing: -2px;
           color: #000000;
-          font-size: 36px;
-          line-height: 40px
+
+          font-size: 26px;
+          line-height: 30px;
+          @include media-breakpoint-up(md) {
+            font-size: 36px;
+            line-height: 40px
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 50px;
+            line-height: 55px
+          }
         }
       }
 
