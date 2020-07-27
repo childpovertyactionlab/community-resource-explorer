@@ -10,9 +10,9 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
         
         <Row noGutters>
           <Col className="menu-section" xs={12}>
-            <span className="site-logo-mobile svg-base"></span>
+            <span className="branding-mobile svg-base"></span>
 
-            <div className="branding">
+            <div className="branding-md-up">
               <span className="site-logo svg-base"></span>
               <span className="site-title">Community Resource Explorer</span>
             </div>
