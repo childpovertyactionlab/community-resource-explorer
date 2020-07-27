@@ -29,3 +29,6 @@ $grid-breakpoints: (
   // lg: $lg-start,
   xl: $xl-start,
 );
+
+$hero-wide-img-width-md: 9 * $column;
+$hero-wide-img-width-xl: 7 * $column;

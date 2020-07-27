@@ -14,6 +14,20 @@
   .hero-wide {
     .color-section {
       background: $hero-color;
+
+      @include media-breakpoint-up(md) {
+        // for md plus, add white bg behind lower part of img
+        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+        $cutoff: (1/2) * $hero-wide-img-width-md * $white-bg-proportion; // 1/2 ~ image aspect ratio
+        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      }
+      
+      @include media-breakpoint-up(xl) {
+        // same as above, different img width (so different $cutoff)
+        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+        $cutoff: (1/2) * $hero-wide-img-width-xl * $white-bg-proportion; // 1/2 ~ image aspect ratio
+        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      }
     }
     .menu-section {
       @include media-breakpoint-up(md) {
