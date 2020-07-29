@@ -42,8 +42,7 @@ const Menu = ({ activePageId }) => {
           className="equipped"
         >
           <div className="text">
-            <div>All Dallas neighborhoods</div>
-            <div>should be equipped to thrive.</div>
+            <div>All Dallas neighborhoods<br></br>should have what they need<br></br>to thrive.</div>
           </div>
         </Col>
       </Row>

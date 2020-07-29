@@ -94,12 +94,16 @@
 
   .question {
     .question-text {
+      cursor: pointer;
       font-size: 16px;
       line-height: 24px;
     }
     .question-body {
       font-size: 15px;
       line-height: 22px;
+      a {
+        color:rgb(212, 68, 28);
+      }
     }
   }
 
