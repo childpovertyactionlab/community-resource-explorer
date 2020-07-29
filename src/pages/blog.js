@@ -64,13 +64,14 @@ const Faqs = () => {
           const src = b.node.publicURL
           return (
             <Row noGutters className="post-section">
-
               <Col
                 className="post-image"
                 xs={{ span: 10, offset: 1 }}
                 md={{ span: 4, offset: 1 }}
               >
-                <figure><img src={src} /></figure>
+                <figure>
+                  <img src={src} />
+                </figure>
               </Col>
 
               <Col
@@ -84,15 +85,13 @@ const Faqs = () => {
                 </div>
 
                 <div className="post-contents">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Urna vitae nulla pretium, cras tellus, at morbi tristique.
-                  Ac ipsum, egestas ligula duis ipsum pellentesque{" "}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+                  vitae nulla pretium, cras tellus, at morbi tristique. Ac
+                  ipsum, egestas ligula duis ipsum pellentesque{" "}
                 </div>
 
                 <CustomLink>Read post</CustomLink>
-
               </Col>
-
             </Row>
           )
         })}

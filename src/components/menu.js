@@ -5,14 +5,11 @@ import { menuPages } from "../consts"
 import { Link, navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 
-
 const Menu = ({ activePageId }) => {
-
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenuOpen = () => setMenuOpen(!menuOpen)
 
   const getMenuPanel = () => {
-
     return (
       <Row noGutters className="menu-panel">
         <div className="logo"></div>
@@ -20,32 +17,28 @@ const Menu = ({ activePageId }) => {
           <InlineSvg type="x" />
           Close
         </div>
-        <Col
-          className="dallas-isd"
-          xs={1}
-        >
+        <Col className="dallas-isd" xs={1}>
           <span className="text">DALLAS ISD</span>
         </Col>
 
-        <Col
-          className="menu-page-names-col"
-          xs={5}
-        >
+        <Col className="menu-page-names-col" xs={5}>
           <div className="menu-page-names-container">
             {menuPages.map(page => {
-              const nameClasses = "menu-page-name" + 
-                ((page.id === activePageId) ? " active" : "")
+              const nameClasses =
+                "menu-page-name" + (page.id === activePageId ? " active" : "")
               return (
-                <div onClick={() => navigate(page.path)} className={nameClasses} key={page.id}>
+                <div
+                  onClick={() => navigate(page.path)}
+                  className={nameClasses}
+                  key={page.id}
+                >
                   {page.name}
                 </div>
               )
             })}
           </div>
         </Col>
-        <Col
-          className="equipped"
-        >
+        <Col className="equipped">
           <div className="text">
             <div>All Dallas neighborhoods</div>
             <div>should be equipped to thrive.</div>
@@ -55,8 +48,7 @@ const Menu = ({ activePageId }) => {
     )
   }
 
-  const classes = "menu-component" + 
-    (menuOpen ? " open" : "")
+  const classes = "menu-component" + (menuOpen ? " open" : "")
 
   return (
     <div className={classes}>

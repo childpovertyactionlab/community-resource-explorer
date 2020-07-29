@@ -25,8 +25,7 @@ const Faqs = () => {
           className=""
           xs={{ offset: 0, span: 12 }}
           md={{ offset: 5, span: 7 }}
-        >
-        </Col>
+        ></Col>
       </Row>
     </Layout>
   )

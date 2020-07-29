@@ -7,7 +7,6 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
   return (
     <Row noGutters>
       <Col xs={12} className="hero-wide">
-        
         <Row noGutters>
           <Col className="menu-section" xs={12}>
             <span className="branding-mobile svg-base"></span>
@@ -23,12 +22,8 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
 
         <Row>
           <Col className="color-section" xs={12}>
-              
             <Row noGutters>
-              <Col
-                className="dallas-isd"
-                xs={2} md={1}
-              >
+              <Col className="dallas-isd" xs={2} md={1}>
                 <span className="text">DALLAS ISD</span>
               </Col>
               <Col>
@@ -39,14 +34,12 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
             <Row noGutters>
               <Col xs={12}>
                 <div className="image-section">
-                  <img src={imgSrc}/>
+                  <img src={imgSrc} />
                 </div>
               </Col>
             </Row>
-
           </Col>
         </Row>
-        
       </Col>
     </Row>
   )
