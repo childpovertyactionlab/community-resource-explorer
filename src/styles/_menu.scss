@@ -60,7 +60,6 @@
   .menu-panel {
     // transform: translate(0, 0%);
     transition: transform ease .7s;
-    height: 600px;
     position: fixed;
     top: 0;
     right: 0;
@@ -86,19 +85,19 @@
       z-index: 2;
 
       color: $color-1;
-      font-weight: 300;
+      font-weight: $font-weight-light;
     }
 
     .equipped .text {
       position: absolute;
       bottom: $bottom-buffer;
       color: $color-2;
-      font-weight: 500;
+      font-weight: $font-weight-bold;
     }
 
     .menu-page-names-container {
-      position: absolute;
-      bottom: $bottom-buffer;
+      padding-top: 20 * $spacer;
+      padding-bottom: $bottom-buffer;
 
       .menu-page-name.active {
         color: $color-2;

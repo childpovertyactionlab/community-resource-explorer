@@ -21,7 +21,7 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
           </Col>
         </Row>
 
-        <Row noGutters>
+        <Row>
           <Col className="color-section" xs={12}>
               
             <Row noGutters>

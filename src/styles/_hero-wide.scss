@@ -11,7 +11,7 @@ $content-width-xl: $hero-wide-img-width-xl;
 
   .menu-section {
     // _figma_
-    font-weight: 300;
+    font-weight: $font-weight-light;
     font-size: 14px;
     line-height: $menu-height;
     color: #08131F;        
@@ -100,9 +100,10 @@ $content-width-xl: $hero-wide-img-width-xl;
       padding-top: 6 * $spacer;
       padding-bottom: 6 * $spacer;
       
-      // padding-left: 2 * $column;
       // width: 9 * $column;
       @include media-breakpoint-only(xs) {
+        // control larger widths with width rather than margin
+        // (as their widths translate to the background gradient) 
         margin-right: $column;
       }
       @include media-breakpoint-up(md) {
@@ -126,7 +127,7 @@ $content-width-xl: $hero-wide-img-width-xl;
 
         .title {
           font-size: 14px;
-          font-weight: 300;
+          font-weight: $font-weight-light;
           color: #08131F;
           line-height: 1; // 77px; need to align border-left to text top
           
@@ -142,7 +143,7 @@ $content-width-xl: $hero-wide-img-width-xl;
         }
         
         .subtitle {
-          font-weight: 500;
+          font-weight: $font-weight-bold;
           letter-spacing: -2px;
           color: #000000;
 

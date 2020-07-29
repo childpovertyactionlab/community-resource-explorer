@@ -73,7 +73,7 @@
   }
 
   .section-title {
-    font-weight: 500;
+    font-weight: $font-weight-bold;
     font-size: 26px;
     line-height: 1;
     letter-spacing: -1px;
@@ -265,12 +265,12 @@
         color: $q-text-hover-color;
       }
       // _figma_
-      font-weight: 500;
+      font-weight: $font-weight-bold;
     }
     // color: #08131F;
     color: #181818;      
     .jump {
-      font-weight: 500;
+      font-weight: $font-weight-bold;
     }     
     // _______
   }
@@ -337,7 +337,7 @@
     }
     .question-body {
       // _figma_
-      font-weight: 300;
+      font-weight: $font-weight-lighter;
       color: #757575;
       mix-blend-mode: normal;
       // _______
@@ -351,7 +351,7 @@
 
       .title {
         // _figma_
-        font-weight: 500;
+        font-weight: $font-weight-bold;
         font-size: 60px;
         line-height: 65px;
         /* or 108% */

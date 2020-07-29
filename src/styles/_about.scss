@@ -47,7 +47,7 @@
   }
 
   .cpal-defined .title {
-    font-weight: 300;
+    font-weight: $font-weight-light;
     font-size: 14px;
     line-height: 18px;
     @include media-breakpoint-up(xl) {
@@ -62,7 +62,7 @@
   }
 
   .cpal-defined .text, .where-we-work .text {
-    font-weight: 500;
+    font-weight: $font-weight-bold;
     letter-spacing: -1px;
     font-size: 20px;
     line-height: 25px;
@@ -142,7 +142,7 @@
       .point {
         padding: 0 $gutter;
         color: $mid-gray;
-        font-weight: 300;
+        font-weight: $font-weight-lighter;
         font-size: 15px;
         line-height: 22px;
         @include media-breakpoint-up(xl) {
@@ -270,7 +270,7 @@
     }
 
     .title {
-      font-weight: 500;
+      font-weight: $font-weight-bold;
       font-size: 26px;
       line-height: 30px;
       letter-spacing: -1px;
@@ -299,7 +299,7 @@
     }
 
     .text-blocks {
-      font-weight: 300;
+      font-weight: $font-weight-lighter;
       font-size: 18px;
       line-height: 27px;
 

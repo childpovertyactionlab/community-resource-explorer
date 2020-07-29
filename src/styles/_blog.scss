@@ -133,7 +133,7 @@
   }
 
   .recent {
-    font-weight: 300;
+    font-weight: $font-weight-light;
     color: #08131F;
 
     .custom-underline {
@@ -161,12 +161,12 @@
       margin-bottom: auto;
       .post-title {
         // __figma_
-        font-weight: 500;
+        font-weight: $font-weight-bold;
         letter-spacing: -1px;
         color: #08131F;
       }
       .post-contents {
-        font-weight: 300;
+        font-weight: $font-weight-light;
         color: #08131F;
         mix-blend-mode: normal;
         opacity: 0.5;

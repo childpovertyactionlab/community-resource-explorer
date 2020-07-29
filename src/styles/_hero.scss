@@ -116,7 +116,7 @@ $mobile-logo-height: 38px;
         padding-bottom: 10 * $spacer;
         
         .page-title-section {
-          padding-left: 3 * $spacer;;
+          padding-left: 3 * $spacer;
           .subtitle {
             max-width: 520px;
             font-size: 60px;
@@ -168,6 +168,7 @@ $mobile-logo-height: 38px;
       .site-title {
         // _figma_
         font-size: 15px;
+        font-weight: $font-weight-light;
         line-height: 15px;
         /* or 100% */
         color: #292D33;
@@ -186,7 +187,7 @@ $mobile-logo-height: 38px;
         
         .title {
           // _figma_
-          font-weight: 300;
+          font-weight: $font-weight-light;
           /* or 387% */
           color: #08131F;
           // _______          
@@ -194,7 +195,7 @@ $mobile-logo-height: 38px;
         
         .subtitle {
           // _figma_
-          font-weight: 500;
+          font-weight: $font-weight-bold;
           /* or 108% */
           letter-spacing: -2px;
           color: #000000;
@@ -203,7 +204,7 @@ $mobile-logo-height: 38px;
       }
 
       .headline {
-        font-weight: 500;
+        font-weight: $font-weight-bold;
       }
     }
   }
@@ -212,7 +213,7 @@ $mobile-logo-height: 38px;
   .image-section {
     .menu-section {
       // _figma_
-      font-weight: 300;
+      font-weight: $font-weight-light;
       font-size: 14px;
       line-height: $menu-height;
       /* or 150% */

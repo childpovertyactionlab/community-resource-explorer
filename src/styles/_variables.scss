@@ -30,5 +30,9 @@ $grid-breakpoints: (
   xl: $xl-start,
 );
 
+$font-weight-bold: 400; // 500? 
+$font-weight-light: 300;
+$font-weight-lighter: 200;
+
 $hero-wide-img-width-md: 9 * $column;
 $hero-wide-img-width-xl: 7 * $column;

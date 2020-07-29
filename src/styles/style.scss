@@ -2,6 +2,8 @@
 @import "breakpoints";
 @import "variables";
 
+// @import 'bootstrap/variables'; // ?
+
 @import "layout";
 @import "navbar";
 @import "hero";
@@ -15,12 +17,36 @@
 
 @font-face {
   font-family: "Halyard";
-  src: url("../fonts/Halyard Text Regular.ttf") format("truetype");
+    src: url("../fonts/Halyard Text Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Halyard";
+    src: url("../fonts/Halyard Text Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Halyard";
+    src: url("../fonts/Halyard Text ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Halyard";
+    src: url("../fonts/Halyard Text SemiBold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 * {
   font-family: Halyard;
 }
+html {
+  font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
+}
+
 
 //TODO: Move to _layout.scss?
 .container-fluid.main {
@@ -50,9 +76,6 @@ figure, p {
   }
 }
 
-html {
-  font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
-}
 
 // TODO find better home
 .dallas-isd {
@@ -67,7 +90,7 @@ html {
     // display: block;
     white-space: nowrap;
 
-    font-weight: 500;
+    font-weight: $font-weight-bold;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 2px;
