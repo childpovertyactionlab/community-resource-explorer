@@ -22,7 +22,7 @@ const Hero = ({ children, activePageId }) => {
             <Menu activePageId={activePageId} />
           </div>
 
-          <img />
+          <img className="hero-image" />
         </div>
       </Col>
     </Row>

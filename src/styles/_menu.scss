@@ -86,6 +86,12 @@
 
       color: $color-1;
       font-weight: $font-weight-light;
+
+      svg {
+        stroke: $color-1;
+        stroke-width: 0.7;
+        margin-right: .5 * $spacer;
+      }
     }
 
     .equipped .text {

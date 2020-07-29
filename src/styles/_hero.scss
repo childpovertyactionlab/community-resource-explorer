@@ -230,7 +230,7 @@ $mobile-logo-height: 38px;
       }
     }
 
-    img {
+    .hero-image {
       width: 100%;
       // TODO: why? 100% should give 1:1 aspect ratio
       padding-top: calc(100% - 33px);

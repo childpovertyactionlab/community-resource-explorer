@@ -3,6 +3,8 @@ import React, { useState } from "react"
 import { Row, Col } from "react-bootstrap"
 import { menuPages } from "../consts"
 import { Link, navigate } from "gatsby"
+import InlineSvg from "./inlineSvg"
+
 
 const Menu = ({ activePageId }) => {
 
@@ -14,7 +16,10 @@ const Menu = ({ activePageId }) => {
     return (
       <Row noGutters className="menu-panel">
         <div className="logo"></div>
-        <div className="close-menu" onClick={toggleMenuOpen}>Close</div>
+        <div className="close-menu" onClick={toggleMenuOpen}>
+          <InlineSvg type="x" />
+          Close
+        </div>
         <Col
           className="dallas-isd"
           xs={1}
