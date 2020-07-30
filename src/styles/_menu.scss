@@ -60,8 +60,7 @@
   .menu-panel {
     // transform: translate(0, 0%);
     transition: transform ease .7s;
-    //height: 600px;
-    height: auto;
+    height: 600px;
     position: fixed;
     top: 0;
     right: 0;
@@ -95,9 +94,6 @@
       bottom: $bottom-buffer;
       color: $color-2;
       font-weight: 500;
-    }
-    .menu-page-names-col {
-      padding-top: 510px;
     }
     .menu-page-names-container {
       position: absolute;
