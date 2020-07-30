@@ -5,9 +5,9 @@ import Menu from "./menu"
 
 const HeroWide = ({ children, activePageId, imgSrc }) => {
   return (
-    <Row noGutters>
+    <Row>
       <Col xs={12} className="hero-wide">
-        <Row noGutters>
+        <Row>
           <Col className="menu-section" xs={12}>
             <span className="branding-mobile svg-base"></span>
 
@@ -22,7 +22,7 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
 
         <Row>
           <Col className="color-section" xs={12}>
-            <Row noGutters>
+            <Row>
               <Col className="dallas-isd" xs={2} md={1}>
                 <span className="text">DALLAS ISD</span>
               </Col>
@@ -31,8 +31,8 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
               </Col>
             </Row>
 
-            <Row noGutters>
-              <Col xs={12}>
+            <Row>
+              <Col xs={12} className="p-0">
                 <div className="image-section">
                   <img src={imgSrc} />
                 </div>

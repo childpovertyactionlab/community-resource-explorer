@@ -1,0 +1,86 @@
+// todo standardize page id
+#isd-page {
+  $mid-gray: #757575;
+  $why-background: #EBEDE3;
+  $hero-color: #FFFBF3;
+  // $hero-color: #ffe7b8;
+
+  $mid-gray: #757575;
+  $light-quote-background: #FFFBF3;
+  $dark-quote-background: #EBEDE3;
+  $light-quote-border-color: #E94F37;
+  $dark-quote-border-color: #7768AE;
+
+
+  p {
+    // TODO top level style?
+    color: #2C390B;
+  }
+
+  #page {
+    margin-top: 8 * $spacer;
+    @include media-breakpoint-up(md) {
+      margin-top: 10 * $spacer;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 15 * $spacer;
+    }
+  }
+
+  .hero-wide {
+    .page-title-section {
+      border: none;
+      padding-left: 0;
+    }
+    
+    // TODO mixin
+    .color-section {
+      background: $hero-color;
+
+      @include media-breakpoint-up(md) {
+        // for md plus, add white bg behind lower part of img
+        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+        $cutoff: (1/2) * $hero-wide-img-width-md * $white-bg-proportion; // 1/2 ~ image aspect ratio
+        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      }
+      
+      @include media-breakpoint-up(xl) {
+        // same as above, different img width (so different $cutoff)
+        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+        $cutoff: (1/2) * $hero-wide-img-width-xl * $white-bg-proportion; // 1/2 ~ image aspect ratio
+        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      }
+    }
+    .menu-section {
+      @include media-breakpoint-up(md) {
+        background: $hero-color;
+      }
+    }
+  }
+
+  .quote {
+
+    padding: (11 * $spacer) $column;
+
+    &.light {
+      background: $light-quote-background;
+
+      .text {
+        border-top: 4px solid $light-quote-border-color;
+        border-bottom: 4px solid $light-quote-border-color;
+        padding-top: 6 * $spacer;
+        padding-bottom: 6 * $spacer;
+      }
+    }
+
+    &.dark {
+      background: $dark-quote-background;
+
+      .text {
+        padding-left: 3 * $spacer;
+        border-left: 4px solid $dark-quote-border-color;
+      }
+    }
+  }
+
+}

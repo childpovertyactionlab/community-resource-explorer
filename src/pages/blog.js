@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 // import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigateTo } from "gatsby"
 
 import Layout from "../components/layout"
 import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
@@ -51,7 +51,10 @@ const Faqs = () => {
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
-        <CustomLink underlined={false}>Read post</CustomLink>
+        <CustomLink
+          onClick={() => navigateTo(pages.ISD.path)}
+          underlined={false}
+        >Read post</CustomLink>
       </Hero>
 
       <Row noGutters id="page">

@@ -1,5 +1,3 @@
-
-
 const HOME = {
   id: 'home',
   path: '/home',
@@ -30,7 +28,17 @@ const CONTACT = {
   path: '/contact',
   name: 'Contact us',
 }
-const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT }
+
+// _________ non-menu pages ___
+// blog index?
+
+const ISD = {
+  id: 'isd',
+  path: '/isd',
+  name: 'ISD'
+}
+
+const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT, ISD }
 const menuPages = [ HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT ]
 
 export {
