@@ -108,7 +108,7 @@
   // _______________END RESPONSIVE SIZING_______________ //
 
 
-  .hero {
+  .hero-square {
     .color-section {
       background: $background;
 
@@ -144,6 +144,7 @@
   
   .post-section {
     .post-image {
+      // TODO responsivize on refactor (5spacer on xl)
       margin-right: 2 * $gutter;
       // center photo vertically when smaller than details
       display: flex;

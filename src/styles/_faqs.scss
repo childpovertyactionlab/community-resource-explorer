@@ -53,6 +53,7 @@
   .side-menu {
     // applies to both menus
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     .jump, .menu-title {
       display: inline-block;
@@ -246,7 +247,7 @@
   // _________________UNIVERSAL  STYLES_________________ //
 
 
-  .hero {
+  .hero-square {
     .color-section {
       background: #FDF5E9;
 

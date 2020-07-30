@@ -84,11 +84,11 @@ const isd = () => {
   const getSection = ({ title, paragraphs }) => {
 
     return (
-      <Col className="section" key={title} xs={12}>
+      <Col className="section p-0" key={title} xs={12}>
         <Row>
           <Col
             xs={{ offset: 1, span: 3 }}
-            className="title"
+            className="title p-0"
             >
             {title}
           </Col>
@@ -137,13 +137,13 @@ const isd = () => {
 
       <HeroWide activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">
-          <div className="subtitle">
+          <div className="subtitle px-0">
             How we’re informing policy and community understanding in Dallas
           </div>
         </div>
       </HeroWide>
 
-      <Row id="page">
+      <Row noGutters id="page">
         {content.map(el => {
           switch (el.type) {
             case 'section':

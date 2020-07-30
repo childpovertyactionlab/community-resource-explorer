@@ -135,6 +135,7 @@ const Faqs = () => {
   const toggleMenu = () => setMenuActive(!mobileMenuActive)
   const closeMenu = () => setMenuActive(false)
 
+  // if react-scroll doesn't fit the bill, see https://css-tricks.com/sticky-smooth-active-nav/
   // TODO: fix key in sections map
   const getSideMenus = () => {
     const sectionTitles = (

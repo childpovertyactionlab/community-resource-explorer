@@ -3,13 +3,10 @@
 $color-section-flex: 350px 10 7; // 7
 $image-section-flex: 250px 5 5;
 
-// TODO: why? (to line up with side-menu)
-$extra-margin: 15px;
-
 $menu-height: 21px;
 $mobile-logo-height: 38px;
 
-.hero {
+.hero-square {
 
   // _______________RESPONSIVE SIZING_______________ //
 
@@ -27,7 +24,7 @@ $mobile-logo-height: 38px;
     position: relative;
     height: $mobile-logo-height;
     top: calc(50% - (#{$mobile-logo-height}/2)); // center vertically
-    margin-left: calc(#{$column} + #{$extra-margin});
+    margin-left: $column;
   }
 
   .color-section {
@@ -177,9 +174,6 @@ $mobile-logo-height: 38px;
       }
     }
 
-    .content, .branding {
-      margin-left: $extra-margin;
-    }
     .content {
 
       .page-title-section {

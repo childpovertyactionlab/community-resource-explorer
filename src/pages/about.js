@@ -46,9 +46,9 @@ const about = () => {
         </div>
       </HeroWide>
 
-      <Row noGutters id="page" className="">
+      <Row id="page" className="">
         <Col
-          className="cpal-defined"
+          className="cpal-defined p-0"
           xs={{ offset: 1, span: 10 }}
           md={{ offset: 1, span: 7 }}
           xl={{ offset: 1, span: 5 }}
@@ -70,7 +70,7 @@ const about = () => {
         </Col>
 
         <Col
-          className="where-we-work"
+          className="where-we-work p-0"
           xs={{ offset: 1, span: 10 }}
           md={{ offset: 1, span: 7 }}
           xl={{ offset: 1, span: 5 }}

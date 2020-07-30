@@ -27,6 +27,7 @@ const Layout = ({ children, pageInfo, id }) => (
     render={data => (
       <>
         <Container fluid className="main">
+          {/* TODOxx: remove */}
           {!id && (
             <Row noGutters className="justify-content-center">
               <Col>
@@ -34,10 +35,11 @@ const Layout = ({ children, pageInfo, id }) => (
               </Col>
             </Row>
           )}
+          {/* TODOxx: remove */}
           {!id && <Navbar pageInfo={pageInfo} />}
 
           <Row noGutters>
-            <Col>
+            <Col className="p-0">
               {/* <Container className="mt-5"> */}
               <main id={id}>{children}</main>
               {/* </Container> */}

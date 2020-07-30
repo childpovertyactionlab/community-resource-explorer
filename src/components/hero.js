@@ -6,7 +6,7 @@ import Menu from "./menu"
 const Hero = ({ children, activePageId }) => {
   return (
     <Row>
-      <Col xs={12} className="hero p-0">
+      <Col xs={12} className="hero-square p-0">
         <div className="color-section">
           <div className="branding">
             <span className="site-logo svg-base"></span>

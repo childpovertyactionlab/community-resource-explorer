@@ -57,8 +57,8 @@ const Faqs = () => {
         >Read post</CustomLink>
       </Hero>
 
-      <Row noGutters id="page">
-        <Col xs={{ span: 11, offset: 1 }} className="recent">
+      <Row id="page">
+        <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
           <span className="custom-underline">Recent blog</span> posts
         </Col>
 
@@ -66,7 +66,7 @@ const Faqs = () => {
           // console.log(b)
           const src = b.node.publicURL
           return (
-            <Row noGutters className="post-section">
+            <Row className="post-section">
               <Col
                 className="post-image"
                 xs={{ span: 10, offset: 1 }}

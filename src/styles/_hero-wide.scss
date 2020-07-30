@@ -1,6 +1,3 @@
-// TODO: why? (to line up with side-menu)
-$extra-margin: 15px;
-
 $menu-height: 21px;
 $mobile-logo-height: 38px;
 
@@ -38,7 +35,7 @@ $content-width-xl: $hero-wide-img-width-xl;
     position: relative;
     height: $mobile-logo-height;
     top: calc(50% - (#{$mobile-logo-height}/2)); // center vertically
-    margin-left: calc(#{$column} + #{$extra-margin});
+    margin-left: $column;
 
     @include media-breakpoint-up(md) {
       display: none;

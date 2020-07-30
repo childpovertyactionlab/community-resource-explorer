@@ -8,7 +8,7 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
     <Row>
       <Col xs={12} className="hero-wide">
         <Row>
-          <Col className="menu-section" xs={12}>
+          <Col className="menu-section p-0" xs={12}>
             <span className="branding-mobile svg-base"></span>
 
             <div className="branding-md-up">
@@ -26,7 +26,7 @@ const HeroWide = ({ children, activePageId, imgSrc }) => {
               <Col className="dallas-isd" xs={2} md={1}>
                 <span className="text">DALLAS ISD</span>
               </Col>
-              <Col>
+              <Col className="p-0">
                 <div className="content">{children}</div>
               </Col>
             </Row>
