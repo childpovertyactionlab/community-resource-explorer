@@ -41,8 +41,8 @@
   .menu-icon-group {
     cursor: pointer;
     display: inline; // so below padding doesn't shift element
-    padding-top: 20px; // extends clickable area
-    padding-bottom: 20px; 
+    padding-top: $spacer; // extends clickable area
+    padding-bottom: $spacer; 
   }
   .menu-icon {
     width: 20px;
@@ -107,6 +107,7 @@
 
       .menu-page-name {
         cursor: pointer;
+        font-weight: $font-weight-bold;
         &.active {
           color: $color-2;
         }

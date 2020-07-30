@@ -5,7 +5,7 @@ const HOME = {
 }
 const EXPLORER = {
   id: 'explorer',
-  path: '/explorer',
+  path: 'https://hyperobjekt.github.io/cpal-components/demo/dist/',
   name: 'Explorer',
 }
 const ABOUT = {
@@ -15,7 +15,7 @@ const ABOUT = {
 }
 const ACTION = {
   id: 'action',
-  path: '/action',
+  path: '/in-action',
   name: 'Explorer in Action',
 }
 const FAQ = {

@@ -215,14 +215,14 @@ const Faqs = () => {
       {getSideMenus()}
       {getFAQSections()}
 
-      <Row noGutters className="methods-paper-section">
+      <Row className="methods-paper-section">
         <Col
           className="methods-paper"
           id="methods"
           xs={{ offset: 0, span: 12 }}
           md={{ offset: 5, span: 7 }}
         >
-          <Row className="content" noGutters>
+          <Row className="content">
             <Col
               xs={12}
               className="section-title" // visible only for mobile

@@ -43,11 +43,11 @@ const Faqs = () => {
   `)
 
   return (
-    <Layout pageInfo={{ pageName: "blog" }} id="blog">
-      <SEO title="Blog" />
+    <Layout pageInfo={{ pageName: "Explorer in Action" }} id="blog">
+      <SEO title="Explorer in Action" />
 
       {/* TODO: pages.BLOG.id */}
-      <Hero activePageId={null}>
+      <Hero activePageId={pages.ACTION.id}>
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
