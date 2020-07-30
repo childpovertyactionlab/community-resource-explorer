@@ -3,7 +3,7 @@ import React from "react"
 import { Col, Row, Collapse } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeroWide from "../components/heroWide"
+import Hero from "../components/hero"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
 import comerica from "../images/comerica.svg"
@@ -36,7 +36,7 @@ const about = () => {
     <Layout pageInfo={{ pageName: "about" }} id="about-page">
       <SEO title="about" />
 
-      <HeroWide activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
+      <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
         <div className="page-title-section">
           <div className="title">Our Mission</div>
           <div className="subtitle">
@@ -44,7 +44,7 @@ const about = () => {
             Dallas by half within a generation.
           </div>
         </div>
-      </HeroWide>
+      </Hero>
 
       <Row id="page" className="">
         <Col

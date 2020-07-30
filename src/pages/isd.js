@@ -3,7 +3,7 @@ import React from "react"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeroWide from "../components/heroWide"
+import Hero from "../components/hero"
 import { pages } from "../consts"
 import isdHero from "../images/isd-hero.png"
 
@@ -135,13 +135,13 @@ const isd = () => {
     <Layout pageInfo={{ pageName: "isd" }} id="isd-page">
       <SEO title="isd" />
 
-      <HeroWide activePageId={pages.ISD.id} imgSrc={isdHero}>
+      <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">
           <div className="subtitle px-0">
             How we’re informing policy and community understanding in Dallas
           </div>
         </div>
-      </HeroWide>
+      </Hero>
 
       <Row noGutters id="page">
         {content.map(el => {
