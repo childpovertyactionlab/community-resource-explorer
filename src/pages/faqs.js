@@ -13,6 +13,9 @@ import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
 
+// keep in sync with $sticky-header-height in _variables.scss
+const stickyHeaderHeight = 64;
+
 // Current as of 7/29, 2:53pm
 const how = {
   id: "how",
@@ -149,7 +152,7 @@ const Faqs = () => {
                 smooth={true}
                 spy={true}
                 to={s.id + "-section"}
-                offset={0}
+                offset={-stickyHeaderHeight}
                 // containerId="faqs-page"
               >
                 {s.title.join(" ")}
@@ -165,7 +168,7 @@ const Faqs = () => {
             spy={true}
             smooth={true}
             to="methods"
-            offset={0}
+            offset={-stickyHeaderHeight}
             // containerId="faqs-page"
           >
             Methods Paper
@@ -261,7 +264,7 @@ const Faqs = () => {
   }
 
   return (
-    <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
+    <Layout id="faqs-page" activePageId={pages.FAQ.id}>
       <SEO title="FAQs" />
 
       <Hero activePageId={pages.FAQ.id}>

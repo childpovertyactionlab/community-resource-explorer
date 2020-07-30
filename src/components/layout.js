@@ -12,8 +12,9 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
 import Navbar from "./navBar"
+import StickyHeader from "./stickyHeader"
 
-const Layout = ({ children, pageInfo, id }) => (
+const Layout = ({ children, pageInfo, activePageId, id }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -37,7 +38,7 @@ const Layout = ({ children, pageInfo, id }) => (
           )}
           {/* TODOxx: remove */}
           {!id && <Navbar pageInfo={pageInfo} />}
-
+          <StickyHeader activePageId={activePageId} />
           <Row noGutters>
             <Col className="p-0">
               {/* <Container className="mt-5"> */}

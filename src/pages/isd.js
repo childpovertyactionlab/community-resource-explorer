@@ -132,7 +132,7 @@ const isd = () => {
   }
   
   return (
-    <Layout pageInfo={{ pageName: "isd" }} id="isd-page">
+    <Layout id="isd-page" activePageId={pages.ISD.id}>
       <SEO title="isd" />
 
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>

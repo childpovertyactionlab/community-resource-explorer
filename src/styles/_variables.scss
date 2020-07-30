@@ -37,3 +37,5 @@ $font-weight-lighter: 200;
 
 $hero-wide-img-width-md: 9 * $column;
 $hero-wide-img-width-xl: 7 * $column;
+// keep in sync with stickyHeaderHeight in faqs.js
+$sticky-header-height: 64px;

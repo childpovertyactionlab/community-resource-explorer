@@ -69,7 +69,7 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
   }
 
   return (
-    <Row>
+    <Row id="hero">
       {getHero()}
     </Row>
   )

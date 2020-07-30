@@ -43,7 +43,7 @@ const Faqs = () => {
   `)
 
   return (
-    <Layout pageInfo={{ pageName: "Explorer in Action" }} id="blog">
+    <Layout id="blog" activePageId={pages.ACTION.id}>
       <SEO title="Explorer in Action" />
 
       {/* TODO: pages.BLOG.id */}

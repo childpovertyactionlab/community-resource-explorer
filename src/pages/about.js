@@ -33,7 +33,7 @@ const numberedPoints = [
 
 const about = () => {
   return (
-    <Layout pageInfo={{ pageName: "about" }} id="about-page">
+    <Layout id="about-page" activePageId={pages.ABOUT.id}>
       <SEO title="about" />
 
       <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>

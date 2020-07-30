@@ -1,0 +1,55 @@
+.sticky-header {
+  position: fixed;
+  transform: translate(0, -100%);
+  transition: transform ease .4s;
+  &.active {
+    transform: none;
+  }
+
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $sticky-header-height;
+  z-index: 10;
+  
+  background: white;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $column;
+
+    .menu-component {
+      margin-top: 17px;
+      font-size: 16px;
+      font-weight: $font-weight-light;
+    }
+
+    .branding {
+      
+      margin-top: 8px;
+
+      // mixin
+      .site-logo {
+        width: 18px;
+        height: 28px;
+        background-image: url("../images/menu-logo.svg");
+        position: relative;
+        top: 7px;
+        margin-right: 5px;
+      }
+      
+      .site-title {
+        // _figma_
+        font-size: 15px;
+        font-weight: $font-weight-light;
+        line-height: 15px;
+        /* or 100% */
+        color: #292D33;
+        mix-blend-mode: normal;
+        // _______
+      }
+    }
+  }
+}
