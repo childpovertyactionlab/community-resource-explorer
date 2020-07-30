@@ -99,7 +99,7 @@ const about = () => {
 
           <Row>
             <Col
-              className="explorer-why"
+              className="explorer-why p-0"
               xs={{ offset: 0, span: 12 }}
               md={{ offset: 0, span: 10 }}
               xl={{ offset: 0, span: 7 }}
