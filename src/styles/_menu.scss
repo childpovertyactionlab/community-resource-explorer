@@ -105,8 +105,11 @@
       padding-top: 20 * $spacer;
       padding-bottom: $bottom-buffer;
 
-      .menu-page-name.active {
-        color: $color-2;
+      .menu-page-name {
+        cursor: pointer;
+        &.active {
+          color: $color-2;
+        }
       }
     }
   }

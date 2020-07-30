@@ -41,6 +41,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Louize Display";
+    src: url("../fonts/LouizeDisplay.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Louize Display";
+    src: url("../fonts/LouizeDisplay-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Louize Display";
+    src: url("../fonts/LouizeDisplay-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
 * {
   font-family: Halyard;
 }
