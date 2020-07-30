@@ -7,14 +7,11 @@ import SEO from "../components/seo"
 import { Link } from "react-scroll"
 import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
-import { pages } from "../consts"
+import { pages, stickyHeaderHeight } from "../consts"
 
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
-
-// keep in sync with $sticky-header-height in _variables.scss
-const stickyHeaderHeight = 64;
 
 // Current as of 7/29, 2:53pm
 const how = {

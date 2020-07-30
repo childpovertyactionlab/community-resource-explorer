@@ -30,7 +30,6 @@ const CONTACT = {
 }
 
 // _________ non-menu pages ___
-// blog index?
 
 const ISD = {
   id: 'isd',
@@ -41,7 +40,11 @@ const ISD = {
 const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT, ISD }
 const menuPages = [ HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT ]
 
+// keep in sync with $sticky-header-height in _variables.scss
+const stickyHeaderHeight = 64;
+
 export {
   pages,
-  menuPages
+  menuPages,
+  stickyHeaderHeight
 }

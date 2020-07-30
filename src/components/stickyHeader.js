@@ -1,5 +1,6 @@
 import React from "react"
 import Menu from "./menu"
+import { stickyHeaderHeight } from "../consts"
 
 import _ from "lodash"
 
@@ -23,11 +24,11 @@ class stickyHeader extends React.Component {
     // TODO: will there ever be no hero? if so: show on 100?
     let minScroll = 100;
     if (hero) {
-      minScroll = hero.getBoundingClientRect().height
+      minScroll = hero.getBoundingClientRect().height - stickyHeaderHeight
     }
 
     const scrollOffset = window.scrollY
-    const active = scrollOffset > minScroll
+    const active = scrollOffset >= minScroll
 
     this.setState({ active })
   }
