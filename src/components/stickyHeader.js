@@ -14,6 +14,7 @@ class stickyHeader extends React.Component {
   }
 
   componentDidMount() {
+    // limit firing to every .25s to avoid perf hit
     window.addEventListener('scroll',
       _.throttle(this.updateStickiness, 250))
   }
@@ -35,7 +36,6 @@ class stickyHeader extends React.Component {
 
   render () {
     const classes = "sticky-header " + (this.state.active ? "active" : "")
-    console.log(this.state.active)
     return (
       <nav className={classes}>
         <div className="content">

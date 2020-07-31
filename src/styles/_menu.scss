@@ -7,10 +7,7 @@
   $color-2: #818967;
   // $active-page-color: #818967;
 
-  // _______________RESPONSIVE SIZING_______________ //
-
-  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
-  
+  z-index: 100;
   .menu-panel {
 
     .close-menu {
@@ -24,19 +21,10 @@
     }
   }
 
-  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
-  @media screen and (min-width: $md-start) {
-
+  .dallas-isd {
+    @include dallas-isd-styles;
+    color: peachpuff;
   }
-
-  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
-  @media screen and (min-width: $xl-start) {
-
-  }
-
-  // _______________END RESPONSIVE SIZING_______________ //
-
-  z-index: 100;
 
   .menu-icon-group {
     cursor: pointer;

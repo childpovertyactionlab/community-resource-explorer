@@ -1,7 +1,6 @@
 @import "breakpoints";
+@import "mixins";
 @import "variables";
-
-// @import 'bootstrap/variables'; // ?
 
 @import "layout";
 @import "navbar";
@@ -83,31 +82,5 @@ figure, p {
     position: relative;
     bottom: 3px;
     left: 7px;
-  }
-}
-
-
-// TODO find better home
-.dallas-isd {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  .text {
-    text-align: center;
-    color: $dallas-red;
-    transform: rotate(-90deg); // translate?
-    // display: block;
-    white-space: nowrap;
-
-    font-weight: $font-weight-bold;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    @include media-breakpoint-up(xl) {
-      font-size: 14px;
-    }
   }
 }

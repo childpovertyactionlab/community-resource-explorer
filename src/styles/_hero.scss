@@ -153,25 +153,7 @@ $mobile-logo-height: 38px;
     justify-content: space-between;
 
     .branding { 
-      .site-logo {
-        width: 18px;
-        height: 28px;
-        background-image: url("../images/logomark.svg");
-        position: relative;
-        top: 7px;
-        margin-right: 5px;
-      }
-      
-      .site-title {
-        // _figma_
-        font-size: 15px;
-        font-weight: $font-weight-light;
-        line-height: 15px;
-        /* or 100% */
-        color: #292D33;
-        mix-blend-mode: normal;
-        // _______
-      }
+      @include horizontal-branding-styles;
     }
 
     .content {
@@ -286,23 +268,7 @@ $content-width-xl: $hero-wide-img-width-xl;
     @include media-breakpoint-up(xl) {
       padding-top: 2 * $spacer;
     }
-    .site-logo {
-      width: 18px;
-      height: 28px;
-      background-image: url("../images/logomark.svg");
-      position: relative;
-      top: 7px;
-      margin-right: 5px;
-    }
-    
-    .site-title {
-      // _figma_
-      font-size: 15px;
-      line-height: 1;
-      color: #292D33;
-      mix-blend-mode: normal;
-      // _______
-    }
+    @include horizontal-branding-styles;
   }
 
   .image-section {
@@ -391,5 +357,12 @@ $content-width-xl: $hero-wide-img-width-xl;
         }
       }
     }
+  }
+}
+
+#hero {
+  // styles for BOTH hero types
+  .dallas-isd {
+    @include dallas-isd-styles;
   }
 }

@@ -27,29 +27,8 @@
     }
 
     .branding {
-      
+      @include horizontal-branding-styles;
       margin-top: 8px;
-
-      // mixin
-      .site-logo {
-        width: 18px;
-        height: 28px;
-        background-image: url("../images/menu-logo.svg");
-        position: relative;
-        top: 7px;
-        margin-right: 5px;
-      }
-      
-      .site-title {
-        // _figma_
-        font-size: 15px;
-        font-weight: $font-weight-light;
-        line-height: 15px;
-        /* or 100% */
-        color: #292D33;
-        mix-blend-mode: normal;
-        // _______
-      }
     }
   }
 }
