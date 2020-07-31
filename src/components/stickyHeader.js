@@ -10,23 +10,31 @@ class stickyHeader extends React.Component {
 
     this.state = { active: false }
 
-    this.updateStickiness = this.updateStickiness.bind(this)
+    this.unthrottledUpdateStickiness = this.unthrottledUpdateStickiness.bind(this)
+    this.updateStickiness = _.throttle(this.unthrottledUpdateStickiness, 250)
   }
 
   componentDidMount() {
-    // limit firing to every .25s to avoid perf hit
-    window.addEventListener('scroll',
-      _.throttle(this.updateStickiness, 250))
-  }
-
-  updateStickiness(e) {
     const hero = document.getElementById('hero')
 
-    // TODO: will there ever be no hero? if so: show on 100?
-    let minScroll = 100;
-    if (hero) {
-      minScroll = hero.getBoundingClientRect().height - stickyHeaderHeight
+    if (!hero) {
+      // pages w/o hero (e.g. "get-the-data") have header fixed to page-top & don't listen to scroll
+      this.setState({ active: true })
+      return
     }
+    
+    // limit firing to every .25s to avoid perf hit
+    window.addEventListener('scroll', this.updateStickiness)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.updateStickiness)
+  }
+
+  unthrottledUpdateStickiness(e) {
+    const hero = document.getElementById('hero')
+
+    const minScroll = hero.getBoundingClientRect().height - stickyHeaderHeight
 
     const scrollOffset = window.scrollY
     const active = scrollOffset >= minScroll
