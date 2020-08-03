@@ -2,7 +2,7 @@
 #about-page {
   $why-background: $green-white;
   $hero-color: $bridal-heath;
-
+  $number-gray: #4B4B4B;
   $jumper-width-md: 6 * $column;
 
   p { // *?
@@ -140,7 +140,8 @@
       .point {
         padding: 0 $gutter;
         color: $boulder;
-        font-weight: $font-weight-lighter;
+        color: $number-gray;
+        font-weight: $font-weight-light;
         font-size: 15px;
         line-height: 22px;
         @include media-breakpoint-up(xl) {
