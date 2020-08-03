@@ -9,6 +9,7 @@ import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
 import { pages, stickyHeaderHeight } from "../consts"
 
+import portrait from "../images/faq-portrait.png"
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
@@ -264,7 +265,7 @@ const Faqs = () => {
     <Layout id="faqs-page" activePageId={pages.FAQ.id}>
       <SEO title="FAQs" />
 
-      <Hero activePageId={pages.FAQ.id}>
+      <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
         <div className="page-title-section">
           <div className="title">Frequently Asked Questions</div>
           <div className="subtitle">

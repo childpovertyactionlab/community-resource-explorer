@@ -10,6 +10,8 @@ import Hero from "../components/hero"
 import CustomLink from "../components/customLink"
 import { pages } from "../consts"
 
+import soccer from "../images/soccer.png"
+
 const Faqs = () => {
   const [expandedMap, setState] = useState({})
 
@@ -47,7 +49,7 @@ const Faqs = () => {
       <SEO title="Explorer in Action" />
 
       {/* TODO: pages.BLOG.id */}
-      <Hero activePageId={pages.ACTION.id}>
+      <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
