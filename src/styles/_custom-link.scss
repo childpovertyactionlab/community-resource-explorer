@@ -1,21 +1,9 @@
 .custom-link {
-
-  // _______________RESPONSIVE SIZING_______________ //
-
-  //\\//\\//\\//\\/ MOBILE (and larger) /\\//\\//\//
   
   font-size: 14px;
-  //\\//\\//\\//\\/ TABLET (and larger) /\\//\\//\//
-  @media screen and (min-width: $md-start) {
-
-  }
-
-  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
-  @media screen and (min-width: $xl-start) {
+  @include media-breakpoint-up(xl) {
     font-size: 16px;
   }
-
-  // _______________END RESPONSIVE SIZING_______________ //
 
   cursor: pointer;
   
