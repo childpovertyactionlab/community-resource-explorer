@@ -1,6 +1,7 @@
 // todo standardize page id
 #isd-page {
   $mid-gray: #757575;
+  $dk-gray: #4B4B4B;
   $why-background: #EBEDE3;
   $hero-color: #FFFBF3;
   // $hero-color: #ffe7b8;
@@ -79,8 +80,8 @@
 
     .paragraphs {
       p {
-        font-weight: $font-weight-lighter;
-        color: $mid-gray;
+        font-weight: $font-weight-light;
+        color: $dk-gray;
         font-size: 16px;
         line-height: 24px;
         @include media-breakpoint-up(xl) {

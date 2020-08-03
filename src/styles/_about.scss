@@ -1,6 +1,7 @@
 // todo standardize page id
 #about-page {
   $mid-gray: #757575;
+  $number-gray: #4B4B4B;
   $why-background: #EBEDE3;
   $hero-color: #FFFBF3;
   // $hero-color: #ffe7b8;
@@ -141,8 +142,8 @@
       display: flex;
       .point {
         padding: 0 $gutter;
-        color: $mid-gray;
-        font-weight: $font-weight-lighter;
+        color: $number-gray;
+        font-weight: $font-weight-light;
         font-size: 15px;
         line-height: 22px;
         @include media-breakpoint-up(xl) {
