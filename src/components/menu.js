@@ -12,9 +12,9 @@ const Menu = ({ activePageId }) => {
 
   const getMenuPanel = () => {
     return (
-      <Row noGutters className="menu-panel">
+      <Row noGutters className="menu-panel" onWheel={closeMenu} onScroll={closeMenu}>
         <div className="logo"></div>
-        <div className="close-menu" onClick={toggleMenuOpen}>
+        <div className="close-menu" onClick={closeMenu}>
           <InlineSvg type="x" />
           Close
         </div>

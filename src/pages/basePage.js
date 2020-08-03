@@ -8,7 +8,7 @@ import { pages } from "../consts"
 
 const Faqs = () => {
   return (
-    <Layout pageInfo={{ pageName: "faqs" }} id="faqs-page">
+    <Layout id="faqs-page" activePageId={pages.FAQ.id}>
       <SEO title="FAQs" />
 
       <Hero activePageId={pages.FAQ.id}>

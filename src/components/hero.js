@@ -68,7 +68,7 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
             <Menu activePageId={activePageId} />
           </div>
 
-          <img className="hero-image" />
+          <img src={imgSrc} className="hero-image" />
         </div>
       </Col>
     )
