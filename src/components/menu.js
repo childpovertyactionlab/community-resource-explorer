@@ -2,12 +2,13 @@ import React, { useState } from "react"
 
 import { Row, Col } from "react-bootstrap"
 import { menuPages } from "../consts"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 
 const Menu = ({ activePageId }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenuOpen = () => setMenuOpen(!menuOpen)
+  const closeMenu = () => setMenuOpen(false)
 
   const getMenuPanel = () => {
     return (
@@ -26,9 +27,13 @@ const Menu = ({ activePageId }) => {
             {menuPages.map(page => {
               const nameClasses =
                 "menu-page-name" + (page.id === activePageId ? " active" : "")
+              const navigateToPage = () => {
+                closeMenu()
+                navigate(page.path)
+              }
               return (
                 <div
-                  onClick={() => navigate(page.path)}
+                  onClick={navigateToPage}
                   className={nameClasses}
                   key={page.id}
                 >
@@ -42,6 +47,8 @@ const Menu = ({ activePageId }) => {
           <div className="text">
             <div>All Dallas neighborhoods<br></br>should have what they need<br></br>to thrive.</div>
           </div>
+        </Col>
+        <Col className="mask" onClick={closeMenu} onWheel={closeMenu} onScroll={closeMenu}>
         </Col>
       </Row>
     )

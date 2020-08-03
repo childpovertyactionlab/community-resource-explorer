@@ -10,6 +10,16 @@
   z-index: 100;
   .menu-panel {
 
+    .mask {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: all;
+    }
+
     .close-menu {
       font-size: 14px;
     }
@@ -23,7 +33,6 @@
 
   .dallas-isd {
     @include dallas-isd-styles;
-    color: peachpuff;
   }
 
   .menu-icon-group {
