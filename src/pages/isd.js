@@ -84,16 +84,20 @@ const isd = () => {
   const getSection = ({ title, paragraphs }) => {
 
     return (
-      <Col className="section p-0" key={title} xs={12}>
+      <Col className="section " key={title} xs={12}>
         <Row>
           <Col
-            xs={{ offset: 1, span: 3 }}
+            xs={{ offset: 1, span: 10 }}
+            md={{ offset: 1, span: 3 }}
+            xl={{ offset: 1, span: 3 }}
             className="title p-0"
             >
             {title}
           </Col>
           <Col
-            xs={{ offset: 1, span: 4 }}
+            xs={{ offset: 1, span: 10 }}
+            md={{ offset: 1, span: 6 }}
+            xl={{ offset: 1, span: 4 }}
             className="paragraphs p-0"
             >
             {paragraphs.map((par, i) => {
@@ -118,7 +122,8 @@ const isd = () => {
     )
     return (
       <Col
-        xs={{ offset: 4 }}
+        xs={{ offset: 0, span: 12 }}
+        md={{ offset: 4, span: 8 }}
         className={"quote " + styleType}
         key={attribution}
       >
@@ -143,7 +148,7 @@ const isd = () => {
         </div>
       </Hero>
 
-      <Row noGutters id="page">
+      <Row id="page">
         {content.map(el => {
           switch (el.type) {
             case 'section':

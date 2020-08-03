@@ -103,7 +103,10 @@
     padding-top: 11 * $spacer;
     padding-bottom: 11 * $spacer;
     padding-left: $column;
-    padding-right: 2 * $column;
+    padding-right: $column;
+    @include media-breakpoint-up(xl) {
+      padding-right: 2 * $column;
+    }
 
     .text {
       font-family: Louize Display;
