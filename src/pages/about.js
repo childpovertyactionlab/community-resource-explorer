@@ -88,7 +88,7 @@ const about = () => {
 
             <div className="funder-wrapper xl">
               <div className="funder xl">
-                <img src={comerica} />
+                <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
                 <p className="text">
                   Comerica generously funded the development of the Community
                   Resource Explorer
@@ -143,7 +143,7 @@ const about = () => {
 
         <Col className="funder-wrapper md-down" xs={12}>
           <div className="funder md-down">
-            <img src={comerica} />
+            <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
             <p className="text">
               Comerica generously funded the development of the Community
               Resource Explorer

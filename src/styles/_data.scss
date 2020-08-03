@@ -45,8 +45,11 @@
       padding-bottom: 4 * $spacer;
     }
     p.citation {
-      margin-left: $column;
+     // margin-left: $column;
       font-weight: normal;
+      padding-left: 3.33333vw;
+      font-weight: normal;
+      border-left: 3px solid $very-dark-green;
     }
 
     margin-bottom: 6 * $spacer;

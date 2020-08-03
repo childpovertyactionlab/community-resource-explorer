@@ -48,8 +48,10 @@ class stickyHeader extends React.Component {
       <nav className={classes}>
         <div className="content">
           <div className="branding">
-            <span className="site-logo svg-base"></span>
-            <span className="site-title">Community Resource Explorer</span>
+            <a className="logo-link" href="/">
+              <span className="site-logo svg-base"></span>
+              <span className="site-title">Community Resource Explorer</span>
+            </a>  
           </div>
           <Menu activePageId={this.props.activePageId} />
         </div>
