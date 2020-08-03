@@ -97,7 +97,7 @@ const Data = () => {
             If you do, please cite or attribute our work in the following way: 
           </p>
           <p className='citation'>
-            Owen Wilson-Chavez, Michael Lopez, and Ashley Flores. Dallas ISD Community Resource Index. Child Poverty Action Lab, 2020. {`website url`}.
+            Owen Wilson-Chavez, Michael Lopez, and Ashley Flores. Dallas ISD Community Resource Index. Child Poverty Action Lab, 2020. {`https://dallasisd.resourceexplorer.org`}.
           </p>
         </Col>
       </Row>
