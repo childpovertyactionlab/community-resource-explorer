@@ -27,7 +27,7 @@ const numberedPoints = [
     p: "Facilitating cross-sector, collective action based on data insights;",
   },
   { n: number3, p: "Inspiring and mobilizing advocates;" },
-  { n: number4, p: "Inspiring and mobilizing advocates;" },
+  { n: number4, p: "Optimizing local, state, and federal resources;" },
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
 
