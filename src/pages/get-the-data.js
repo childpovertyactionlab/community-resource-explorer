@@ -78,12 +78,14 @@ const Data = () => {
 
       <Row noGutters className="">
         <Col
-          className="title"
+          className="title mx-md-auto"
           xs={{ offset: 1, span: 10 }}
+          md={{ offset: 0, span: 7 }}
         >Get the data</Col>
         <Col
-          className="text-blocks"
+          className="text-blocks mx-md-auto"
           xs={{ offset: 1, span: 10 }}
+          md={{ offset: 0, span: 7 }}
         >
           <p>
             The Community Resource Index was calculated primarily from publicly available data, either from state and federal agencies or local to the Dallas area. The CRI, and the Community Resource Explorer, is only one way that the data can support organizations working to improve our communities. We believe it is critical that we make the data we used to calculate the CRI available for use in additional capacities. You can download the data, R scripts, and ArcGIS tools CPAL created to calculate the CRI from the links below or by visiting our Github.
@@ -92,7 +94,7 @@ const Data = () => {
             To learn more about how the CRI was calculated, visit the Methodology or FAQ.
           </p>
           <p>
-            If you do, please cite or attribute our work in the following ways: 
+            If you do, please cite or attribute our work in the following way: 
           </p>
           <p className='citation'>
             Owen Wilson-Chavez, Michael Lopez, and Ashley Flores. Dallas ISD Community Resource Index. Child Poverty Action Lab, 2020. {`website url`}.
@@ -101,7 +103,9 @@ const Data = () => {
       </Row>
       <Row>
         <Col
+          className="mx-md-auto"
           xs={{ offset: 1, span: 10 }}
+          md={{ offset: 0, span: 10 }}
         >
           <Table striped bordered responsive="md">
             <thead>
