@@ -2,9 +2,6 @@
   $q-breath: 3 * $spacer;
   $q-after-breath: 6 * $spacer;
 
-  $q-text-color: #000000;
-  $q-text-hover-color: #4A6F34;
-
   // _______________RESPONSIVE SIZING_______________ //
   $inter-section-breath-xs: 6 * $spacer - $q-breath;
   $outer-section-breath-xs: 8 * $spacer - $q-breath;
@@ -33,8 +30,8 @@
       padding: 1.5 * $spacer 0;
       width: 100%; //110%;
       text-align: center;
-      background: white;
-      border-bottom: 1px solid #D7D7D7;
+      background: $white;
+      border-bottom: 1px solid $alto;
     }
 
     &:not(.active) .sections {
@@ -43,8 +40,8 @@
     .sections {
       padding-top: 2 * $spacer;
       text-align: center;
-      border-bottom: 1px solid #D7D7D7;
-      background: white;
+      border-bottom: 1px solid $alto;
+      background: $white;
       position: absolute;
       top: 100%;
       width: 100%; //110%;
@@ -249,7 +246,7 @@
 
   .hero-square {
     .color-section {
-      background: #FDF5E9;
+      background: $old-lace;
 
       .content {
         // margin-right: 2 * $column;
@@ -264,13 +261,12 @@
       // display: block;
       cursor: pointer;
       &.active {
-        color: $q-text-hover-color;
+        color: $chalet-green;
       }
       // _figma_
       font-weight: $font-weight-bold;
     }
-    // color: #08131F;
-    color: #181818;      
+    color: $cod-gray;      
     .jump {
       font-weight: $font-weight-bold;
     }     
@@ -280,7 +276,7 @@
   .faq-section {
 
     &.even {
-      background: #F7F7F7;
+      background: $alabaster;
     }
 
     .question {      
@@ -308,16 +304,14 @@
     .question-text {
       // _figma_
       font-weight: normal;
-      color: $q-text-color;
       // _______
 
       &:hover {
-        color: $q-text-hover-color;
+        color: $chalet-green;
       }      
       &:not(:hover) .expander-icon {
         // can't set stroke of svg in img w/CSS, so it's set to hover color and we make it black when not hovered like so:
         filter: brightness(0) grayscale(1);
-        // stroke: #4A6F34;
       }
 
       .text {
@@ -340,7 +334,7 @@
     .question-body {
       // _figma_
       font-weight: $font-weight-lighter;
-      color: #757575;
+      color:  $boulder;
       mix-blend-mode: normal;
       // _______
     }
@@ -349,7 +343,7 @@
   .methods-paper-section {
     // overflow: hidden;
     .methods-paper {
-      background: #9DBAB7;
+      background: $tower-gray;
 
       .title {
         // _figma_
@@ -358,7 +352,7 @@
         line-height: 65px;
         /* or 108% */
         letter-spacing: -2px;
-        color: #1B2021;
+        color: $shark;
         // _______
       }
 
@@ -368,7 +362,7 @@
           // _figma_
           font-weight: normal;
           /* or 135% */
-          color: #3C4748;
+          color: $cape-cod;
           mix-blend-mode: normal;
           // _______
         }

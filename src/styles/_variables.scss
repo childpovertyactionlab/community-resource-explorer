@@ -1,8 +1,31 @@
-$color-primary: #20232a;
+// _______________ COLORS _______________ //
+// name with http://chir.ag/projects/name-that-color/#D8CCFF
+$color-primary: #20232a; // comes with template
 
-$very-dark-green: #2C390B;
-$dallas-red: #D4441C;
+$white: #FFFFFF;
+$bridal-heath: #FFFBF3;
+$alabaster: #F7F7F7;
+$old-lace: #FDF5E9;
+$magnolia: #FBFAFF;
+$green-white: #EBEDE3;
+$alto: #D7D7D7;
+$boulder: #757575;
+$cape-cod: #3C4748;
+$cod-gray: #181818;
+$firefly: #08131F;
+$black: #000000;
 
+$tower-gray: #9DBAB7;
+$flax-smoke: #818967;
+$chalet-green: #4A6F34;
+$turtle-green: #2C390B;
+$shark: #292D33;
+$cinnabar: #E94F34;
+$orange-roughy: #D4441C; // consolidate with cinnabar?
+$fog: #D8CCFF;
+$deluge: #7768AE;
+
+// _______________ SPACING _______________ //
 // space elements in increments of .8rem (8px)
 $spacer: .8rem;
 
@@ -37,6 +60,4 @@ $font-weight-lighter: 200;
 
 $hero-wide-img-width-md: 9 * $column;
 $hero-wide-img-width-xl: 7 * $column;
-// keep in sync with stickyHeaderHeight in consts.js
-
-$sticky-header-height: 64px;
+$sticky-header-height: 64px; // keep in sync with stickyHeaderHeight in consts.js

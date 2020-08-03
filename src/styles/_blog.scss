@@ -1,8 +1,6 @@
 #blog {
 
-  $background: #7768AE;
-  $lavendar: #D8CCFF;
-  $off-white: #FBFAFF;
+  $relative-white: #FBFAFF;
   
   // _______________RESPONSIVE SIZING_______________ //
 
@@ -110,20 +108,20 @@
 
   .hero-square {
     .color-section {
-      background: $background;
+      background: $deluge;
 
       .site-title {
-        color: $off-white;
+        color: $relative-white;
       }
 
       .content { // just pass in colors - sizing managed by Hero.scss
         .headline {
-          color: $lavendar;          
+          color: $fog;          
         }
 
         .custom-link {
-          color: $off-white;
-          svg { stroke: $off-white; }
+          color: $relative-white;
+          svg { stroke: $relative-white; }
         }
       }
     }
@@ -131,11 +129,11 @@
 
   .recent {
     font-weight: $font-weight-light;
-    color: #08131F;
+    color: $firefly;
 
     .custom-underline {
       display: inline-block;
-      border-bottom: 4px solid #E55934;
+      border-bottom: 4px solid $cinnabar;
     }
   }
   
@@ -161,11 +159,11 @@
         // __figma_
         font-weight: $font-weight-bold;
         letter-spacing: -1px;
-        color: #08131F;
+        color: $firefly;
       }
       .post-contents {
         font-weight: $font-weight-light;
-        color: #08131F;
+        color: $firefly;
         mix-blend-mode: normal;
         opacity: 0.5;
         // ________

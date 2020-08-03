@@ -1,14 +1,12 @@
 // todo standardize page id
 #about-page {
-  $mid-gray: #757575;
-  $why-background: #EBEDE3;
-  $hero-color: #FFFBF3;
-  // $hero-color: #ffe7b8;
+  $why-background: $green-white;
+  $hero-color: $bridal-heath;
 
   $jumper-width-md: 6 * $column;
 
   p { // *?
-    color: $very-dark-green;
+    color: $turtle-green;
   }
 
   .hero-wide {
@@ -141,7 +139,7 @@
       display: flex;
       .point {
         padding: 0 $gutter;
-        color: $mid-gray;
+        color: $boulder;
         font-weight: $font-weight-lighter;
         font-size: 15px;
         line-height: 22px;

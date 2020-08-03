@@ -3,10 +3,6 @@
   $top-buffer: 3.5 * $spacer;
   $bottom-buffer: 6.5 * $spacer;
 
-  $color-1: #2C390B;
-  $color-2: #818967;
-  // $active-page-color: #818967;
-
   z-index: 100;
   .menu-panel {
 
@@ -61,7 +57,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background: #EBEDE3;
+    background: $green-white;
 
     .logo {
       position: absolute;
@@ -81,11 +77,11 @@
       right: $column;
       z-index: 2;
 
-      color: $color-1;
+      color: $turtle-green;
       font-weight: $font-weight-light;
 
       svg {
-        stroke: $color-1;
+        stroke: $turtle-green;
         stroke-width: 0.7;
         margin-right: .5 * $spacer;
       }
@@ -94,7 +90,7 @@
     .equipped .text {
       position: absolute;
       bottom: $bottom-buffer;
-      color: $color-2;
+      color: $flax-smoke;
       font-weight: $font-weight-bold;
     }
     .menu-page-names-container {
@@ -105,7 +101,7 @@
         cursor: pointer;
         font-weight: $font-weight-bold;
         &.active {
-          color: $color-2;
+          color: $flax-smoke;
         }
       }
     }

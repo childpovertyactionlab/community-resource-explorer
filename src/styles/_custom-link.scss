@@ -23,14 +23,14 @@
   line-height: 40px; //25px;
   /* or 156% */
   letter-spacing: 0.22px;  
-  color: #000000;
+  color: $black;
   // _______
   
   display: inline-block;
   
   &.underlined {
     padding: 0 2rem;
-    border-bottom: solid #000000 1px;
+    border-bottom: solid $black 1px;
   }
 
   .right-arrow {

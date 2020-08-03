@@ -1,20 +1,10 @@
 // todo standardize page id
 #isd-page {
-  $mid-gray: #757575;
-  $why-background: #EBEDE3;
-  $hero-color: #FFFBF3;
-  // $hero-color: #ffe7b8;
-
-  $mid-gray: #757575;
-  $light-quote-background: #FFFBF3;
-  $dark-quote-background: #EBEDE3;
-  $light-quote-border-color: #E94F37;
-  $dark-quote-border-color: #7768AE;
-
+  $hero-color: $bridal-heath;
 
   p {
     // TODO top level style?
-    color: #2C390B;
+    color: $turtle-green;
   }
 
   #page {
@@ -76,7 +66,7 @@
     .paragraphs {
       p {
         font-weight: $font-weight-lighter;
-        color: $mid-gray;
+        color: $boulder;
         font-size: 15px;
         line-height: 22px;
         @include media-breakpoint-up(xl) {
@@ -132,11 +122,11 @@
     }
 
     &.light {
-      background: $light-quote-background;
+      background: $bridal-heath;
 
       .text {
-        border-top: 4px solid $light-quote-border-color;
-        border-bottom: 4px solid $light-quote-border-color;
+        border-top: 4px solid $cinnabar;
+        border-bottom: 4px solid $cinnabar;
 
         padding-top: 4 * $spacer;
         padding-bottom: 4 * $spacer;
@@ -155,11 +145,11 @@
     }
 
     &.dark {
-      background: $dark-quote-background;
+      background: $green-white;
 
       .text {
         padding-left: 3 * $spacer;
-        border-left: 4px solid $dark-quote-border-color;
+        border-left: 4px solid $deluge;
 
         .attribution {
           padding-top: 3 * $spacer;
