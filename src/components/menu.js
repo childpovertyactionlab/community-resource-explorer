@@ -18,7 +18,7 @@ const Menu = ({ activePageId }) => {
           Close
         </div>
         <Col className="dallas-isd" xs={1}>
-          <span className="text">DALLAS ISD</span>
+          {/* <span className="text">DALLAS ISD</span> */}
         </Col>
 
         <Col className="menu-page-names-col" xs={5}>
