@@ -48,7 +48,7 @@ const Layout = ({ children, pageInfo, activePageId, id }) => (
           </Row>
         </Container>
 
-        {/* <Container fluid className="px-0">
+        <Container fluid className="px-0">
           <Row noGutters>
             <Col className="footer-col">
               <footer>
@@ -60,7 +60,7 @@ const Layout = ({ children, pageInfo, activePageId, id }) => (
               </footer>
             </Col>
           </Row>
-        </Container> */}
+        </Container>
       </>
     )}
   />

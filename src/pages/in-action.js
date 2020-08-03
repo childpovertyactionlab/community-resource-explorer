@@ -57,7 +57,7 @@ const Faqs = () => {
         >Read post</CustomLink>
       </Hero>
 
-      <Row id="page">
+      <Row id="page" noGutters>
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
           <span className="custom-underline">Recent blog</span> posts
         </Col>
@@ -68,7 +68,7 @@ const Faqs = () => {
           return (
             <Row className="post-section">
               <Col
-                className="post-image"
+                className="post-image p-0"
                 xs={{ span: 10, offset: 1 }}
                 md={{ span: 4, offset: 1 }}
               >
@@ -78,7 +78,7 @@ const Faqs = () => {
               </Col>
 
               <Col
-                className="post-details"
+                className="post-details p-0"
                 xs={{ span: 10, offset: 1 }}
                 md={{ span: 6, offset: 0 }}
                 xl={{ span: 4, offset: 0 }}
