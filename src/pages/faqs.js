@@ -53,7 +53,7 @@ const purpose = {
     {
       text: "Where did the data come from for the CRE?",
       body:
-        "Needs answer text.",
+        <p>Data featured in the CRE from from a variety of public sources, such as the U.S. Census Bureau, the Dallas Independent School District, and the Centers for Disease Control & Prevention. A few data points were acquired from third-party data vendors (spending on fresh fruits and vegetables) or collected by CPAL (e.g., supermarkets and grocery stores, community health clinics). To learn more about the data used for this project, visit the <a href="/get-the-data">Get the Data page</a>.</p>
     },
     {
       text: "How did you decide on these indicators?",
