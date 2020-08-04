@@ -21,7 +21,7 @@ const ACTION = {
 const FAQ = {
   id: 'faq',
   path: '/faqs',
-  name: 'FAQ&Methods',
+  name: 'FAQ & Methods',
 }
 const CONTACT = {
   id: 'contact',

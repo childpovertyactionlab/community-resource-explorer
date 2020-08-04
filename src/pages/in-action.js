@@ -50,6 +50,7 @@ const Faqs = () => {
 
       {/* TODO: pages.BLOG.id */}
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
+      <div className="title">The Explorer in Action</div>
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
