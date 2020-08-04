@@ -1,5 +1,6 @@
-
 #home-page {
+  $text-panel-buffer: .7 * $column;
+  $text-panel-buffer-sm: 1 * $column;
 
   #page {
     margin-top: 8 * $spacer;
@@ -27,7 +28,7 @@
   //   display: inline-block;
   // }
 
-  .caro-slide.active {
+  .caro-slide {
     display: flex;
 
     img {
@@ -35,16 +36,50 @@
     }
 
     .caro-text-panel {
+      position: relative;
       background: $deluge;
+      padding: $text-panel-buffer;
+
+      .controls {
+        
+        svg {
+          cursor: pointer;
+        }
+
+        .arrows {
+          stroke: $white;
+          position: absolute;
+          bottom: $text-panel-buffer;
+          right: $text-panel-buffer;
+
+          .right-arrow-md {
+            padding-left: 3 * $spacer;
+          }
+        }
+
+        .eclipses {
+          position: absolute;
+          bottom: $text-panel-buffer;
+          left: $text-panel-buffer;
+
+          .eclipse {
+            padding-right: 1 * $spacer;
+            circle {
+              fill: $fog;
+            }
+            &.active circle {
+              fill: $white;
+            }
+          }
+        }
+      }
 
       .statistics {
         position: relative;
-        margin-top: .7 * $column;
-        margin-left: .7 * $column;
-        
       }
       .statistic {
         margin-bottom: 3 * $spacer;
+        
         .number {
           font-size: 88px;
           @include media-breakpoint-up(xl) {
@@ -54,6 +89,7 @@
           color: $fog;
           font-family: "Morganite Bold";
         }
+
         .percent {
           font-size: 24px;
           padding-left: .5 * $spacer;
@@ -65,6 +101,7 @@
           font-family: "Morganite Bold";
           vertical-align: top;
         }
+
         .text {
           // so staistic texts align with each other, and wrap properly (not below number)
           position: absolute;
@@ -79,9 +116,8 @@
           color: $steel-gray;
           vertical-align: top;
 
-          margin-right: $column;
           @include media-breakpoint-up(xl) {
-            margin-right: 1.4 * $column;
+            margin-right: 2 * $text-panel-buffer;
           }
         }
       }
@@ -91,7 +127,18 @@
       flex-direction: column;
       
       .caro-text-panel {
-        flex-basis: calc(#{$column} * 5);
+        flex-basis: calc(#{$column} * 7);
+        padding: $text-panel-buffer-sm;
+        .controls {
+          .eclipses {
+            bottom: $text-panel-buffer-sm;
+            left: $text-panel-buffer-sm;
+          }
+          .arrows {
+            bottom: $text-panel-buffer-sm;
+            right: $text-panel-buffer-sm;
+          }
+        }
       }
     }
     

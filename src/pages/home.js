@@ -19,7 +19,7 @@ const items = [
     stat2text: 'profoundundity lies within',
   },
   { 
-    src: portrait,
+    src: goalie,
     alt: 's2',
     stat1num: 85,
     stat2num: 76,
@@ -35,7 +35,7 @@ const items = [
     stat2text: 'profoundundity lies within',
   },
   { 
-    src: portrait,
+    src: goalie,
     alt: 's4',
     stat1num: 85,
     stat2num: 76,
@@ -43,7 +43,7 @@ const items = [
     stat2text: 'profoundundity lies within',
   },
   { 
-    src: goalie,
+    src: portrait,
     alt: 's5',
     stat1num: 85,
     stat2num: 76,
