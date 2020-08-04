@@ -2,6 +2,10 @@
   $text-panel-buffer: .7 * $column;
   $text-panel-buffer-sm: 1 * $column;
 
+  img {
+    width: 100%;
+  }
+
   #page {
     margin-top: 8 * $spacer;
     margin-bottom: 8 * $spacer;
@@ -24,9 +28,9 @@
     }
   }
 
-  // .caro-slide-img, .caro-slide-text {
-  //   display: inline-block;
-  // }
+  .quote {
+    @include quote-styles;
+  }
 
   .caro-slide {
     display: flex;

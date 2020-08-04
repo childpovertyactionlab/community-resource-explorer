@@ -82,6 +82,8 @@
   }
 
   .quote {
+    @include quote-styles;
+
     margin-top: 6 * $spacer;
     margin-bottom: 6 * $spacer;
     padding-top: 7 * $spacer;
@@ -100,65 +102,6 @@
       padding-top: 11 * $spacer;
       padding-bottom: 11 * $spacer;
       padding-right: 2 * $column;
-    }
-
-    .text {
-      font-family: Louize Display;
-      font-weight: $font-weight-bold;
-      font-size: 26px;
-      line-height: 30px;
-      
-      @include media-breakpoint-up(xl) {
-        font-size: 30px;
-        line-height: 36px;
-      }
-    }
-
-    .attribution {
-      letter-spacing: 0.02em;
-      font-weight: $font-weight-lighter;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    &.light {
-      background: $bridal-heath;
-
-      .text {
-        border-top: 4px solid $cinnabar;
-        border-bottom: 4px solid $cinnabar;
-
-        padding-top: 4 * $spacer;
-        padding-bottom: 4 * $spacer;
-        margin-bottom: 2 * $spacer;
-        
-        @include media-breakpoint-up(md) {
-          padding-top: 5 * $spacer;
-          padding-bottom: 5 * $spacer;
-          margin-bottom: 3 * $spacer;
-        }
-        @include media-breakpoint-up(xl) {
-          padding-top: 6 * $spacer;
-          padding-bottom: 6 * $spacer;
-        }
-      }
-    }
-
-    &.dark {
-      background: $green-white;
-
-      .text {
-        padding-left: 3 * $spacer;
-        border-left: 4px solid $deluge;
-
-        .attribution {
-          padding-top: 3 * $spacer;
-          
-          @include media-breakpoint-up(xl) {
-            padding-top: 5 * $spacer;
-          }
-        }
-      }
     }
   }
 

@@ -6,10 +6,12 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 import goalie from "../images/goalie-blurred.png"
+import escapes from "../images/fire-escapes.png"
+import kids from "../images/kids-playing.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
 
-const items = [
+const caroItems = [
   { 
     src: goalie,
     alt: 's1',
@@ -52,6 +54,19 @@ const items = [
   },
 ]
 
+const q1 = {
+  text: `Affordable housing is one of [our] greatest needs. Other economic hardships stem from that. If my housing isn't affordable, everything else is less affordable.`,
+  attribution: "Pleasant Grove assistant principal",
+}
+const q2 = {
+  text: `There is no safe place for students just to be young people in the community.`,
+  attribution: "Dallas ISD Trustee",
+}
+const q3 = {
+  text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
+  attribution: "Pleasant Grove Resident",
+}
+
 const home = () => {
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
@@ -67,26 +82,61 @@ const home = () => {
       </Hero>
 
       <Row id="page">
+
+        <Col
+          className="p-0"
+          xs={{ offset: 2, span: 8 }}
+          // md={{ offset: 1, span: 5 }}
+          md={{ offset: 1, span: 3 }}
+        >
+          <img src={escapes} />
+        </Col>
+
+        <Col
+          xs={{ offset: 1, span: 10 }}
+          // md={{ offset: 1, span: 4 }}
+          md={{ offset: 1, span: 6 }}
+          className="quote light no-bg p-0"
+        >
+          <div className="text">
+            “{q1.text}”
+          </div>
+          <div className="attribution">
+            {q1.attribution}
+          </div>
+        </Col>
+
         <Col
           className="stat-section p-0"
           xs={{ offset: 0, span: 12 }}
         >
-          <CustomCarousel items={items} />
+          <CustomCarousel items={caroItems} />
         </Col>
+
+
         <Col
-          className=""
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 5, span: 7 }}
+          className="p-0"
+          xs={{ offset: 2, span: 8 }}
+          // md={{ offset: 1, span: 5 }}
+          md={{ offset: 1, span: 3 }}
         >
-          next
+          <img src={kids} />
         </Col>
+
         <Col
-          className=""
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 5, span: 7 }}
+          xs={{ offset: 1, span: 10 }}
+          // md={{ offset: 1, span: 4 }}
+          md={{ offset: 1, span: 6 }}
+          className="quote light no-bg p-0"
         >
-          section
+          <div className="text">
+            “{q1.text}”
+          </div>
+          <div className="attribution">
+            {q1.attribution}
+          </div>
         </Col>
+
       </Row>
     </Layout>
   )
