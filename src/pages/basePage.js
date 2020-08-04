@@ -20,7 +20,7 @@ const Faqs = () => {
         </div>
       </Hero>
 
-      <Row noGutters className="">
+      <Row id="page">
         <Col
           className=""
           xs={{ offset: 0, span: 12 }}

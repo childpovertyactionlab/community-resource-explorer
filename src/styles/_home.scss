@@ -3,17 +3,106 @@
 
   #page {
     margin-top: 8 * $spacer;
+    margin-bottom: 8 * $spacer;
     @include media-breakpoint-up(md) {
       margin-top: 10 * $spacer;
+      margin-bottom: 10 * $spacer;
     }
     @include media-breakpoint-up(xl) {
       margin-top: 15 * $spacer;
+      margin-bottom: 15 * $spacer;
     }
   }
 
   #hero {
     .color-section {
       background: $old-lace;
+    }
+    .emphasis {
+      color: $cinnabar;
+    }
+  }
+
+  // .caro-slide-img, .caro-slide-text {
+  //   display: inline-block;
+  // }
+
+  .caro-slide.active {
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+
+    .caro-text-panel {
+      background: $deluge;
+
+      .statistics {
+        position: relative;
+        margin-top: .7 * $column;
+        margin-left: .7 * $column;
+        
+      }
+      .statistic {
+        margin-bottom: 3 * $spacer;
+        .number {
+          font-size: 88px;
+          @include media-breakpoint-up(xl) {
+            font-size: 144px;
+          }
+          line-height: 1;
+          color: $fog;
+          font-family: "Morganite Bold";
+        }
+        .percent {
+          font-size: 24px;
+          padding-left: .5 * $spacer;
+          @include media-breakpoint-up(xl) {
+            font-size: 30px;
+            padding-left: 1 * $spacer;
+          }
+          color: $fog;
+          font-family: "Morganite Bold";
+          vertical-align: top;
+        }
+        .text {
+          // so staistic texts align with each other, and wrap properly (not below number)
+          position: absolute;
+          left: 8 * $spacer;
+          font-size: 16px;
+          @include media-breakpoint-up(xl) {
+          left: 14 * $spacer;
+            font-size: 20px;
+          }
+          line-height: 1.2;
+          font-weight: $font-weight-light;
+          color: $steel-gray;
+          vertical-align: top;
+
+          margin-right: $column;
+          @include media-breakpoint-up(xl) {
+            margin-right: 1.4 * $column;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      
+      .caro-text-panel {
+        flex-basis: calc(#{$column} * 5);
+      }
+    }
+    
+    @include media-breakpoint-up(md) {
+      .caro-img-panel {
+        flex-basis: calc(100vw * 6.5 / 12);
+      }
+      .caro-text-panel {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
     }
   }
 }
