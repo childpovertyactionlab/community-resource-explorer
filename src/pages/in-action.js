@@ -62,7 +62,7 @@ const Faqs = () => {
 
       <Row id="page" noGutters>
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
-          <span className="custom-underline">Recent blog</span> posts
+          <span className="custom-underline">More recent</span> posts
         </Col>
 
         {data.allFile.edges.map(b => {
