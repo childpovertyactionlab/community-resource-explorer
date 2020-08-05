@@ -36,6 +36,8 @@ const CustomCarousel = ({ items }) => {
     )
   }
 
+  const { stat1num, stat2num, stat1text, stat2text } = items[index]
+
   return (
     <Col
       className="p-0 custom-carousel"
@@ -43,67 +45,48 @@ const CustomCarousel = ({ items }) => {
       // md={{ offset: 5, span: 7 }}
     >
       <Carousel slide={true} indicators={false} controls={false} activeIndex={index}>
-
-        {items.map(({ src, alt, stat1num, stat2num, stat1text, stat2text, }, i) => (
+        {items.map(({ src, alt }, i) => (
           <Carousel.Item key={alt}>
-            <div className={"caro-slide slide-" + i}>
-              <div className="caro-img-panel">
-                <img
-                  src={src}
-                  alt={alt}
-                />
-              </div>
-              <div className="caro-text-panel">
-
-                <div className="statistics">
-                  <div className="statistic stat-1">
-                    <span className="number">{stat1num}</span>
-                    <span className="percent">%</span>
-                    <span className="text">{stat1text}</span>
-                  </div>
-
-                  <div className="statistic stat-2">
-                    <span className="number">{stat2num}</span>
-                    <span className="percent">%</span>
-                    <span className="text">{stat2text}</span>
-                  </div>
-                </div>
-              
-                <div className="controls">
-
-                  <div className="eclipses">
-                    {items.map((itm, idx) => {
-                      const classes = (index === idx) ? "active" : ""
-                      const onClick = setIndex.bind(this, idx)
-                      return <InlineSvg onClick={onClick} classes={classes} type="eclipse" />
-                    })}
-                  </div>
-
-                  <div className="arrows">
-                    <InlineSvg onClick={goBack} type="left-arrow-md" />
-                    <InlineSvg onClick={goForward} type="right-arrow-md" />
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
+            <img
+              src={src}
+              alt={alt}
+            />
           </Carousel.Item>
         ))}
-        {/* <div className="shadow2">mo-other stuff</div> */}
       </Carousel>
-    {/* <Col
-      className="p-0 caro-slide-text"
-      xs={6}
-      // md={{ offset: 5, span: 7 }}
-      >
-      <div>{items[index].stat1num}</div>
-      <div>{items[index].stat1text}</div>
-      <div>{items[index].stat2num}</div>
-      <div>{items[index].stat2text}</div>
-      <div onClick={goBack}>L</div>
-      <div onClick={goForward}>N</div>
-    </Col> */}
+
+      <div className="caro-text-panel">
+
+        <div className="statistics">
+          <div className="statistic stat-1">
+            <span className="number">{stat1num}</span>
+            <span className="percent">%</span>
+            <span className="text">{stat1text}</span>
+          </div>
+
+          <div className="statistic stat-2">
+            <span className="number">{stat2num}</span>
+            <span className="percent">%</span>
+            <span className="text">{stat2text}</span>
+          </div>
+        </div>
+
+        <div className="controls">
+          <div className="eclipses">
+            {items.map((itm, idx) => {
+              const classes = (index === idx) ? "active" : ""
+              const onClick = setIndex.bind(this, idx)
+              return <InlineSvg onClick={onClick} classes={classes} type="eclipse" />
+            })}
+          </div>
+
+          <div className="arrows">
+            <InlineSvg onClick={goBack} type="left-arrow-md" />
+            <InlineSvg onClick={goForward} type="right-arrow-md" />
+          </div>
+        </div>
+
+      </div>
     </Col>
   )
 }

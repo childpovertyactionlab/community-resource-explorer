@@ -111,7 +111,7 @@
     }
   }
 
-  .caro-slide {
+  .custom-carousel {
     display: flex;
 
     img {
@@ -206,6 +206,7 @@
       }
     }
 
+    // layout
     @include media-breakpoint-down(xs) {
       flex-direction: column;
       
@@ -226,7 +227,7 @@
     }
     
     @include media-breakpoint-up(md) {
-      .caro-img-panel {
+      .carousel.slide {
         flex-basis: calc(100vw * 6.5 / 12);
       }
       .caro-text-panel {

@@ -1,6 +1,6 @@
 const HOME = {
   id: 'home',
-  path: '/home',
+  path: '/',
   name: 'Home',
 }
 const EXPLORER = {
