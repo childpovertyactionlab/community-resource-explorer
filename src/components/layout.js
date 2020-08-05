@@ -7,14 +7,14 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
+import clsx from "clsx"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
 import Navbar from "./navBar"
 import StickyHeader from "./stickyHeader"
 
-const Layout = ({ children, pageInfo, activePageId, id }) => (
+const Layout = ({ children, pageInfo, activePageId, id, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,19 +25,20 @@ const Layout = ({ children, pageInfo, activePageId, id }) => (
         }
       }
     `}
+    // Setting aside to get dynamically-created schools pages to work.
+    // {!id && (
+    //   <Row noGutters className="justify-content-center">
+    //     <Col>
+    //       <Header siteTitle={data.site.siteMetadata.title} />
+    //     </Col>
+    //   </Row>
+    // )}
+    //
+    //{/* TODOxx: remove */}
+    // {!id && <Navbar pageInfo={pageInfo} />}
     render={data => (
       <>
-        <Container fluid className="main">
-          {/* TODOxx: remove */}
-          {!id && (
-            <Row noGutters className="justify-content-center">
-              <Col>
-                <Header siteTitle={data.site.siteMetadata.title} />
-              </Col>
-            </Row>
-          )}
-          {/* TODOxx: remove */}
-          {!id && <Navbar pageInfo={pageInfo} />}
+        <Container fluid className={clsx("main", props.className)}>
           <StickyHeader activePageId={activePageId} />
           <Row noGutters>
             <Col className="p-0">
