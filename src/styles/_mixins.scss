@@ -93,10 +93,12 @@
   &.dark {
     background: $green-white;
 
-    .text {
+    &:not(.no-border) .text {
       padding-left: 3 * $spacer;
       border-left: 4px solid $deluge;
+    }
 
+    .text {
       .attribution {
         padding-top: 3 * $spacer;
         

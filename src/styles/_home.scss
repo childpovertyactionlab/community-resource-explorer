@@ -32,6 +32,30 @@
     @include quote-styles;
   }
 
+    .quote-with-image { 
+      background: $bridal-heath;
+      // display: flex;
+
+      .quote {
+        background: $bridal-heath;
+        display: inline-block;
+        width: 6 * $column;
+        .text {
+          border-color: $cinnabar !important;
+        }
+      }
+
+      .image-wrapper {
+        display: inline-block;
+        width: 3 * $column;
+        img {
+          position: relative;
+          top: -3 * $spacer;
+          left: 1 * $column;
+        }
+      }
+    }
+
   .caro-slide {
     display: flex;
 

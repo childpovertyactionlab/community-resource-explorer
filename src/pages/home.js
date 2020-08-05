@@ -8,6 +8,7 @@ import { pages } from "../consts"
 import goalie from "../images/goalie-blurred.png"
 import escapes from "../images/fire-escapes.png"
 import kids from "../images/kids-playing.png"
+import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
 
@@ -113,12 +114,11 @@ const home = () => {
           <CustomCarousel items={caroItems} />
         </Col>
 
-
         <Col
           className="p-0"
-          xs={{ offset: 2, span: 8 }}
+          xs={{ offset: 1, span: 10 }}
           // md={{ offset: 1, span: 5 }}
-          md={{ offset: 1, span: 3 }}
+          md={{ offset: 5, span: 5 }}
         >
           <img src={kids} />
         </Col>
@@ -126,14 +126,38 @@ const home = () => {
         <Col
           xs={{ offset: 1, span: 10 }}
           // md={{ offset: 1, span: 4 }}
-          md={{ offset: 1, span: 6 }}
-          className="quote light no-bg p-0"
+          md={{ offset: 5, span: 5 }}
+          className="quote dark no-bg no-border p-0"
         >
           <div className="text">
-            “{q1.text}”
+            “{q2.text}”
+            <div className="attribution">
+              {q2.attribution}
+            </div>
           </div>
-          <div className="attribution">
-            {q1.attribution}
+        </Col>
+
+
+        <Col
+          xs={{ offset: 1, span: 9 }}
+          // md={{ offset: 1, span: 4 }}
+          // md={{ offset: 5, span: 5 }}
+          className="p-0"
+        >
+          <div className="quote-with-image">
+
+            <div className="quote dark">
+              <div className="text">
+                “{q3.text}”
+                <div className="attribution">
+                  {q3.attribution}
+                </div>
+              </div>
+            </div>
+
+            <div className="image-wrapper">
+              <img src={bank} />
+            </div>
           </div>
         </Col>
 
