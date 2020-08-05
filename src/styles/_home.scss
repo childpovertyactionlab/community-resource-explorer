@@ -52,7 +52,7 @@
       
       background: $bridal-heath;
       display: inline-block;
-      width: 6 * $column;
+      flex-basis: 5.5 * $column;
       .text {
         border-color: $cinnabar !important;
       }
@@ -60,13 +60,30 @@
 
     .image-wrapper {
       display: inline-block;
-      width: 3 * $column;
+
+      flex-basis: 4 * $column;
       img {
         position: relative;
-        top: -3 * $spacer;
+        top: calc((28 * #{$spacer}) - (2 * #{$column}));
         left: 1 * $column;
       }
     }
+
+    @include media-breakpoint-up(md) {
+    }
+    @include media-breakpoint-up(xl) {
+      // padding-right: calc(#{$column} / 12) !important;
+      .quote {
+        flex-basis: 6 * $column;
+      }
+      .image-wrapper {
+        flex-basis: 3 * $column;
+        img {
+          top: -5 * $spacer;
+        }
+      }
+    }
+
   }
 
   .cre-rect {

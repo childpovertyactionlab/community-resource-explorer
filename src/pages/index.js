@@ -165,8 +165,9 @@ const home = () => {
         </Col>
 
         <Col
-          xs={{ offset: 1, span: 9 }}
-          // md={{ offset: 1, span: 4 }}
+          xs={{ offset: 0, span: 12 }}
+          md={{ offset: 1, span: 10 }}
+          xl={{ offset: 1, span: 9 }}
           // md={{ offset: 5, span: 5 }}
           className="p-0"
         >
