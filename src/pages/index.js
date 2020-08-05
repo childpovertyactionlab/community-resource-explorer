@@ -87,7 +87,7 @@ const home = () => {
       <Row id="page">
 
         <Col
-          className="p-0"
+          className="p-0 image-by-quote"
           xs={{ offset: 2, span: 8 }}
           // md={{ offset: 1, span: 5 }}
           md={{ offset: 1, span: 3 }}
@@ -99,7 +99,7 @@ const home = () => {
           xs={{ offset: 1, span: 10 }}
           // md={{ offset: 1, span: 4 }}
           md={{ offset: 1, span: 6 }}
-          className="quote light no-bg p-0"
+          className="quote-by-image quote light no-bg p-0"
         >
           <div className="text">
             “{q1.text}”
@@ -117,19 +117,19 @@ const home = () => {
         </Col>
 
         <Col
-          className="p-0"
+          className="p-0 image-over-quote"
           xs={{ offset: 1, span: 10 }}
-          // md={{ offset: 1, span: 5 }}
-          md={{ offset: 5, span: 5 }}
+          md={{ offset: 4, span: 7 }}
+          xl={{ offset: 5, span: 5 }}
         >
           <img src={kids} />
         </Col>
 
         <Col
           xs={{ offset: 1, span: 10 }}
-          // md={{ offset: 1, span: 4 }}
-          md={{ offset: 5, span: 5 }}
-          className="quote dark no-bg no-border p-0"
+          md={{ offset: 4, span: 7 }}
+          xl={{ offset: 5, span: 5 }}
+          className="quote-under-image quote dark no-bg no-border p-0"
         >
           <div className="text">
             “{q2.text}”
@@ -146,7 +146,7 @@ const home = () => {
           className="cre-rect p-0"
         >
           <div className="bg-image">
-            <img src={mapRect} />
+            {/* <img src={mapRect} /> */}
           </div>
           <div className="content">
             <div className="text">

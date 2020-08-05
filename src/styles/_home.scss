@@ -23,12 +23,20 @@
     }
   }
 
+
   #hero {
     .color-section {
       background: $old-lace;
     }
     .emphasis {
       color: $cinnabar;
+    }
+  }
+
+
+  .image-by-quote {
+    @include media-breakpoint-only(xs) {
+      margin-bottom: 6 * $spacer;
     }
   }
 
@@ -106,10 +114,21 @@
 
   }
 
+  .image-over-quote {
+    margin-bottom: 4 * $spacer;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 5 * $spacer;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 6 * $spacer;
+    }
+  }
+
   .cre-rect {
     position: relative;
     .bg-image {
-
+      background-image: url("../images/map-rect.png");
+      background-size: contain;
     }
     .content {
       position: absolute;
@@ -127,20 +146,37 @@
         text-align: center;
 
         h1 {
-          font-size: 50px;
+          font-size: 26px;
+          @include media-breakpoint-up(md) {
+            font-size: 30px;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 50px;
+          }
           font-weight: $font-weight-bold;
         }
         .description {
-          font-size: 18px;
+          font-size: 16px;
+          margin: 2 * $spacer auto;
+          width: 8 * $column;
+          @include media-breakpoint-up(md) {
+            width: 6 * $column;
+            font-size: 18px;
+            margin: 3 * $spacer auto;
+          }
+          @include media-breakpoint-up(xl) {
+            width: 4 * $column;
+            margin: 5 * $spacer auto;
+            // font-size: 18px;
+          }
           font-weight: $font-weight-light;
           line-height: 1.5;
-          width: 4 * $column;
-          
-          margin: 5 * $spacer auto;
-
         }
         .go-to {
-          font-size: 16px;
+          font-size: 15px;
+          @include media-breakpoint-up(md) {
+            font-size: 16px;
+          }
           color: $cinnabar;
           stroke: $cinnabar;
         }
