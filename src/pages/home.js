@@ -21,7 +21,7 @@ const caroItems = [
     stat1num: 85,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
-    stat2text: 'profoundundity lies within',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
   },
   { 
     src: goalie,
@@ -29,7 +29,7 @@ const caroItems = [
     stat1num: 85,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
-    stat2text: 'profoundundity lies within',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
   },
   { 
     src: goalie,
@@ -37,7 +37,7 @@ const caroItems = [
     stat1num: 85,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
-    stat2text: 'profoundundity lies within',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
   },
   { 
     src: goalie,
@@ -45,7 +45,7 @@ const caroItems = [
     stat1num: 85,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
-    stat2text: 'profoundundity lies within',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
   },
   { 
     src: portrait,
@@ -53,7 +53,7 @@ const caroItems = [
     stat1num: 85,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
-    stat2text: 'profoundundity lies within',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
   },
 ]
 
