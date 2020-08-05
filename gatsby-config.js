@@ -1,9 +1,14 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   // pathPrefix: "/cpal-site",
   siteMetadata: {
     title: `Gatsby React Bootstrap Starter`,
     description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
     author: `Billy Jacoby`,
+    mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_KEY}`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +17,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/schools.json`,
+        typeName: `Schools`,
       },
     },
     `gatsby-plugin-sass`,
