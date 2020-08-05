@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
-import comerica from "../images/comerica.svg"
+import comerica from "../images/comericabank-logo.svg"
 import jumpImg from "../images/about-jump.png"
 import soccerImg from "../images/about-soccer.png"
 import number1 from "../images/number-1.svg"
@@ -27,7 +27,7 @@ const numberedPoints = [
     p: "Facilitating cross-sector, collective action based on data insights;",
   },
   { n: number3, p: "Inspiring and mobilizing advocates;" },
-  { n: number4, p: "Inspiring and mobilizing advocates;" },
+  { n: number4, p: "Optimizing local, state, and federal resources;" },
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
 

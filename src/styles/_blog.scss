@@ -47,7 +47,6 @@
       margin-top: 10 * $spacer;
       margin-bottom: 10 * $spacer;
     }
-
     .recent {
   
       .custom-underline {
@@ -81,7 +80,6 @@
         margin-bottom: 8 * $spacer;
       }
     }
-
     .post-section {
       padding-bottom: 8 * $spacer;
     
@@ -115,6 +113,23 @@
       }
 
       .content { // just pass in colors - sizing managed by Hero.scss
+        
+        .title {
+          font-size: 14px;
+          font-weight: $font-weight-light;
+          color: #fff;
+          line-height: 1; // 77px; need to align border-left to text top
+          
+          padding-bottom: 3 * $spacer;
+          @include media-breakpoint-up(md) {
+            padding-bottom: 3 * $spacer;
+          }
+          @include media-breakpoint-up(xl) {
+            padding-bottom: 4 * $spacer;
+            font-size: 20px;
+          }
+
+        }
         .headline {
           color: $fog;          
         }

@@ -50,6 +50,7 @@ const Faqs = () => {
 
       {/* TODO: pages.BLOG.id */}
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
+      <div className="title">The Explorer in Action</div>
         <div className="headline">
           How we’re informing policy and community understanding in Dallas
         </div>
@@ -61,7 +62,7 @@ const Faqs = () => {
 
       <Row id="page" noGutters>
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
-          <span className="custom-underline">Recent blog</span> posts
+          <span className="custom-underline">More recent</span> posts
         </Col>
 
         {data.allFile.edges.map(b => {
