@@ -76,7 +76,7 @@ const CustomCarousel = ({ items }) => {
             {items.map((itm, idx) => {
               const classes = (index === idx) ? "active" : ""
               const onClick = setIndex.bind(this, idx)
-              return <InlineSvg onClick={onClick} classes={classes} type="eclipse" />
+              return <InlineSvg key={idx} onClick={onClick} classes={classes} type="eclipse" />
             })}
           </div>
 

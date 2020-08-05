@@ -127,25 +127,39 @@
   .cre-rect {
     position: relative;
     .bg-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
       background-image: url("../images/map-rect.png");
       background-size: contain;
     }
     .content {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
       background:transparentize($green-white, .25);
 
       display: flex;
       flex-direction: column;
       justify-content: center;
 
+      padding-top: 8 * $spacer;
+      padding-bottom: 8 * $spacer;
+      @include media-breakpoint-up(md) {
+        padding-top: 10 * $spacer;
+        padding-bottom: 10 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-top: 12 * $spacer;
+        padding-bottom: 12 * $spacer;
+      }
+
       .text {
         text-align: center;
 
         h1 {
+          margin-left: 1 * $column;
+          margin-right: 1 * $column;
           font-size: 26px;
           @include media-breakpoint-up(md) {
             font-size: 30px;

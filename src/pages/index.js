@@ -6,54 +6,67 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg";
 import { pages } from "../consts"
-import goalie from "../images/goalie-blurred.png"
+import goalie from "../images/goalie.png"
 import escapes from "../images/fire-escapes.png"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
-import mapRect from "../images/map-rect.png"
+import couching from "../images/couching.png"
+import running from "../images/running.png"
+import hugging from "../images/hugging.png"
+import swinging from "../images/swinging.png"
+import reading from "../images/reading.png"
+// import mapRect from "../images/map-rect.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
 
 const caroItems = [
   { 
-    src: goalie,
+    src: couching,
     alt: 's1',
-    stat1num: 85,
+    stat1num: 81,
     stat2num: 76,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
     stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
   },
   { 
-    src: goalie,
+    src: running,
     alt: 's2',
-    stat1num: 85,
-    stat2num: 76,
+    stat1num: 82,
+    stat2num: 75,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
     stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
   },
   { 
-    src: goalie,
+    src: hugging,
     alt: 's3',
-    stat1num: 85,
-    stat2num: 76,
+    stat1num: 83,
+    stat2num: 74,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
     stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
   },
   { 
-    src: goalie,
+    src: swinging,
     alt: 's4',
-    stat1num: 85,
-    stat2num: 76,
+    stat1num: 84,
+    stat2num: 73,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
     stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
   },
   { 
-    src: portrait,
+    src: reading,
     alt: 's5',
     stat1num: 85,
-    stat2num: 76,
+    stat2num: 72,
     stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
     stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
+  },
+  { 
+    src: goalie,
+    alt: 's6',
+    stat1num: 85,
+    stat2num: 71,
+    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 6',
+    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 6',
   },
 ]
 
