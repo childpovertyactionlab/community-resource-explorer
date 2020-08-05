@@ -110,7 +110,7 @@ const home = () => {
         </Col>
 
         <Col
-          className="stat-section p-0"
+          className="carousel-section p-0"
           xs={{ offset: 0, span: 12 }}
         >
           <CustomCarousel items={caroItems} />

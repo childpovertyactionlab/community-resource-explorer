@@ -1,4 +1,8 @@
 #home-page {
+  $inter-spacer-xs: 8 * $spacer;
+  $inter-spacer-md: 11 * $spacer;
+  $inter-spacer-xl: 14 * $spacer;
+  
   $text-panel-buffer: .7 * $column;
   $text-panel-buffer-sm: 1 * $column;
 
@@ -6,16 +10,16 @@
     width: 100%;
   }
 
-  #page {
-    margin-top: 8 * $spacer;
-    margin-bottom: 8 * $spacer;
+  #page, .cre-rect, .carousel-section {
+    margin-top: $inter-spacer-xs;
+    margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
-      margin-top: 10 * $spacer;
-      margin-bottom: 10 * $spacer;
+      margin-top: $inter-spacer-md;
+      margin-bottom: $inter-spacer-md;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 15 * $spacer;
-      margin-bottom: 15 * $spacer;
+      margin-top: $inter-spacer-xl;
+      margin-bottom: $inter-spacer-xl;
     }
   }
 
@@ -26,12 +30,6 @@
     .emphasis {
       color: $cinnabar;
     }
-  }
-
-  // TODOxx replace
-  .cre-rect, .custom-carousel {
-    margin-top: 11 * $spacer;
-    margin-bottom: 11 * $spacer;
   }
 
   .quote {
