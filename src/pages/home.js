@@ -4,11 +4,13 @@ import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
+import InlineSvg from "../components/inlineSvg";
 import { pages } from "../consts"
 import goalie from "../images/goalie-blurred.png"
 import escapes from "../images/fire-escapes.png"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
+import mapRect from "../images/map-rect.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
 
@@ -137,6 +139,30 @@ const home = () => {
           </div>
         </Col>
 
+        <Col
+          xs={{ offset: 0, span: 12 }}
+          // md={{ offset: 1, span: 4 }}
+          // md={{ offset: 5, span: 5 }}
+          className="cre-rect p-0"
+        >
+          <div className="bg-image">
+            <img src={mapRect} />
+          </div>
+          <div className="content">
+            <div className="text">
+              <h1 className="">
+                Community Resource Explorer
+              </h1>
+              <p className="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
+              </p>
+              <p className="go-to">
+                Go to the explorer <InlineSvg type="right-arrow" />
+              </p>
+            </div>
+          </div>
+
+        </Col>
 
         <Col
           xs={{ offset: 1, span: 9 }}

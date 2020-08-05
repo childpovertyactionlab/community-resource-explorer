@@ -2,9 +2,9 @@ import React, { useState } from "react"
 
 import { Col, Row, Carousel } from "react-bootstrap"
 // import portrait from "../images
+import InlineSvg from "./inlineSvg";
 
 import _ from "lodash"
-import InlineSvg from "./inlineSvg";
 
 const CustomCarousel = ({ items }) => {
   const [index, setIndex] = useState(0);

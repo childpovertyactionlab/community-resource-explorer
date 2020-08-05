@@ -32,29 +32,71 @@
     @include quote-styles;
   }
 
-    .quote-with-image { 
+  .quote-with-image { 
+    background: $bridal-heath;
+    // display: flex;
+
+    .quote {
       background: $bridal-heath;
-      // display: flex;
-
-      .quote {
-        background: $bridal-heath;
-        display: inline-block;
-        width: 6 * $column;
-        .text {
-          border-color: $cinnabar !important;
-        }
+      display: inline-block;
+      width: 6 * $column;
+      .text {
+        border-color: $cinnabar !important;
       }
+    }
 
-      .image-wrapper {
-        display: inline-block;
-        width: 3 * $column;
-        img {
-          position: relative;
-          top: -3 * $spacer;
-          left: 1 * $column;
+    .image-wrapper {
+      display: inline-block;
+      width: 3 * $column;
+      img {
+        position: relative;
+        top: -3 * $spacer;
+        left: 1 * $column;
+      }
+    }
+  }
+
+  .cre-rect {
+    position: relative;
+    .bg-image {
+
+    }
+    .content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background:transparentize($green-white, .25);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .text {
+        text-align: center;
+
+        h1 {
+          font-size: 50px;
+          font-weight: $font-weight-bold;
+        }
+        .description {
+          font-size: 18px;
+          font-weight: $font-weight-light;
+          line-height: 1.5;
+          width: 4 * $column;
+          
+          margin: 5 * $spacer auto;
+
+        }
+        .go-to {
+          font-size: 16px;
+          color: $cinnabar;
+          stroke: $cinnabar;
         }
       }
     }
+  }
 
   .caro-slide {
     display: flex;
