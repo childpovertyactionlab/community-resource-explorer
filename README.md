@@ -21,3 +21,14 @@ GATSBY_MAPBOX_USER=[ADD USER HERE]
 3. Never commit your `.env` files to a git repository.
 
 For the map to work properly when built on Netlify, it will be necessary to add the Mapbox API token using the Netlify environment variables. 
+
+## Explorer Component
+
+The explorer requires the following API settings in your local `.env` file or in the Netlify build environment variables: 
+
+```
+MAPBOX_USER=[ADD USER HERE]
+MAPBOX_API_TOKEN=[ADD TOKEN HERE]
+```
+
+It accepts a `toggleMenu` prop that is a function, which toggles the parent site nav menu.

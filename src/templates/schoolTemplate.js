@@ -5,6 +5,7 @@ import circle from "@turf/circle"
 
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
+import Hero from "../components/hero"
 import SEO from "../components/seo"
 import MAP_STYLE from "./../data/map/cpalStyle"
 // import { pages } from "../consts"
@@ -51,9 +52,32 @@ const SchoolPage = ({ data, ...props }) => {
   // Insert into new json object.
   zoneJson.features.push(cir)
 
+  //   [School name]
+  // [School Address]
+  // [Feeder] / [trustee district]
+  //
+  // [Manually-entered commentary]
+  //
+  // Let us know more about your neighborhood (prompt)
+  //
+  //
+  // [School name] is in the [x] quintile of schools in our Community Resource Index, meaning it has [more/fewer] resources than [x]% of schools in Dallas. (The higher the quintile number, the more resources an area has.) See below for a full breakdown of its resources by category and measure.
+  //
+  // This school is in the top quintile for [measure 1], [measure 2], [measure 3], etc.
+  // This school is in the bottom quintile for [measure 1], [measure 2], [measure 3], etc.
+
   return (
     <Layout className="school-page" activePageId={school.SLN}>
       <SEO title={school.SCHOOLNAME} />
+      <Hero wide={true} activePageId={school.SLN}>
+        <div className="page-title-section">
+          <div className="title">{school.SCHOOLNAME}</div>
+          <div className="subtitle">
+            The Child Poverty Action Lab exists to reduce child poverty in
+            Dallas by half within a generation.
+          </div>
+        </div>
+      </Hero>
       <Row>
         <h2>{school.SCHOOLNAME}</h2>
       </Row>

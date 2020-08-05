@@ -26,8 +26,7 @@ const en_US = {
   SELECT_VIEW: `Select a view`,
   SELECT_ITEM_MAP: `Map view`,
   SELECT_ITEM_FEEDER: `Feeder view`,
-  UI_MAP_SR:
-    'Map of Dallas, with colors showing {metric} for {quintiles}.',
+  UI_MAP_SR: "Map of Dallas, with colors showing {metric} for {quintiles}.",
   UI_MAP_RESET: `Reset map`,
   UI_MAP_CAPTURE: `Screenshot map`,
   UI_MAP_CITY: `Dallas`,
@@ -144,5 +143,8 @@ const en_US = {
   UI_MAP_METRIC_DEM_POPM: `not available`,
   UI_MAP_METRIC_DEM_THH: `not available`,
   UI_MAP_METRIC_DEM_POPSE: `not available`,
+  SCHOOL_PROSE_FEEDER_GENERIC: `<p>This school is part of a community with many strengths and assets that might not be fully captured by quantitative data in the Community Resource Explorer (CRE). The CRE highlights what resources and amenities might be available to residents based on publicly available datasets. These datasets, while helpful, do not include important aspects of a neighborhood, such as the history of how it came to be, cultures of the residents, and trusted institutions/points of pride, like places of worship and neighborhood associations. Over time, we hope to add these types of qualitative assets to the school community profiles. Please help us to do so by sharing insight you have about your neighborhood <a href="/contact/" target="_blank">here</a>.</p>`,
+  SCHOOL_PROSE_FEEDER_LINCOLN: `<p>The Lincoln feeder pattern is located in South Dallas. The community is rich in history, tradition, and generational pride, exemplified by the second high school built for Black students in the late 1930s, Lincoln. South Dallas was home to some of the earliest Black professionals in Dallas, including Dr. Watts, Dr. Pinkston, and Pearl C. Anderson. Other points of pride and strength in the neighborhood are the churches, Black Greek Row, the South Dallas Cultural Center, Martin Luther King, Jr. Community Center, long-time childcare centers, and neighborhood associations, to name a few.</p>`,
+  SCHOOL_PROSE_FEEDER_SPRUCE: `<p>The Spruce feeder pattern is located in Pleasant Grove, southeast of Downtown Dallas. Pleasant Grove is a young community with an entrepreneurial spirit—Pleasant Grove is home to many small business owners and budding entrepreneurs. Churches are also important to the fabric of the community, as are the bazaars, local restaurants, and local institutions (like Eastfield College and the Southeast Dallas Chamber of Commerce). The Salvation Army on Elam, the branch libraries off Lake June Road, and the Great Trinity Forest are other local assets.</p>`,
 }
 export default en_US
