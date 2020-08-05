@@ -114,4 +114,26 @@
   }
 }
 
+@mixin quote-margin-padding-styles {
+  margin-top: 6 * $spacer;
+  margin-bottom: 6 * $spacer;
+  padding-top: 7 * $spacer;
+  padding-bottom: 7 * $spacer;
+  padding-left: $column;
+  padding-right: $column;
+  @include media-breakpoint-up(md) {
+    margin-top: 8 * $spacer;
+    margin-bottom: 8 * $spacer;
+    padding-top: 9 * $spacer;
+    padding-bottom: 9 * $spacer;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 10 * $spacer;
+    margin-bottom: 10 * $spacer;
+    padding-top: 11 * $spacer;
+    padding-bottom: 11 * $spacer;
+    padding-right: 2 * $column;
+  }
+}
+
 // ______________________________________
