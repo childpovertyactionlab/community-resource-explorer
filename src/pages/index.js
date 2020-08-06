@@ -15,9 +15,13 @@ import running from "../images/running.png"
 import hugging from "../images/hugging.png"
 import swinging from "../images/swinging.png"
 import reading from "../images/reading.png"
+import forest from "../images/forest-wide.png"
+import field from "../images/field-wide.png"
 // import mapRect from "../images/map-rect.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
+import { navigateTo } from "gatsby"
+import CustomLink from "../components/customLink"
 
 const caroItems = [
   { 
@@ -170,7 +174,7 @@ const home = () => {
               <p className="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
               </p>
-              <p className="go-to">
+              <p className="go-to" onClick={() => navigateTo(pages.EXPLORER.path)}>
                 Go to the explorer <InlineSvg type="right-arrow" />
               </p>
             </div>
@@ -200,6 +204,79 @@ const home = () => {
               <img src={bank} />
             </div>
           </div>
+        </Col>
+
+        <Col
+          xs={{ offset: 0, span: 12 }}
+          md={{ offset: 1, span: 10 }}
+          xl={{ offset: 1, span: 9 }}
+          className="p-0"
+        >
+            <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
+              <span className="custom-underline">Recent blog</span> posts
+            </Col>
+
+          <Row className="post-section">
+            <Col
+              className="post-image p-0"
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 4, offset: 1 }}
+            >
+              <figure>
+                <img src={forest} />
+              </figure>
+            </Col>
+
+            <Col
+              className="post-details p-0"
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 6, offset: 0 }}
+              xl={{ span: 4, offset: 0 }}
+            >
+              <div className="post-title">
+                How we’re informing policy and community understanding in Dallas.
+              </div>
+
+              <div className="post-contents">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+                vitae nulla pretium, cras tellus, at morbi tristique. Ac
+                  ipsum, egestas ligula duis ipsum pellentesque{" "}
+              </div>
+
+              <CustomLink>Read post</CustomLink>
+            </Col>
+          </Row>  
+          <Row className="post-section even">
+            <Col
+              className="post-image p-0"
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 4, offset: 1 }}
+            >
+              <figure>
+                <img src={field} />
+              </figure>
+            </Col>
+
+            <Col
+              className="post-details p-0"
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 6, offset: 0 }}
+              xl={{ span: 4, offset: 0 }}
+            >
+              <div className="post-title">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+
+              <div className="post-contents">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+                vitae nulla pretium, cras tellus, at morbi tristique. Ac
+                  ipsum, egestas ligula duis ipsum pellentesque{" "}
+              </div>
+
+              <CustomLink>Read post</CustomLink>
+            </Col>
+          </Row>  
+
         </Col>
 
       </Row>

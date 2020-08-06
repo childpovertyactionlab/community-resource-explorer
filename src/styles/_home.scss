@@ -244,6 +244,7 @@
           }
           color: $cinnabar;
           stroke: $cinnabar;
+          cursor: pointer;
         }
       }
     }
@@ -371,6 +372,16 @@
       .caro-text-panel {
         flex-basis: 0;
         flex-grow: 1;
+      }
+    }
+  }
+
+  .post-section {
+    @include blog-post-section-styles;
+
+    @include media-breakpoint-up(md) {
+      &.even {
+        flex-direction: row-reverse;
       }
     }
   }
