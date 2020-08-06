@@ -35,6 +35,8 @@
         padding: 1rem;
         width: 100%;
         h6 {
+          font-size: 1.4rem;
+          padding-bottom: 0.6rem;
         }
         @include media-breakpoint-up(md) {
           width: 49%;
@@ -55,7 +57,7 @@
       margin-top: 0px;
     }
     .n-i-scale-hash {
-      top: -3px;
+      top: -3px !important;
     }
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles:after {
       top: 6px;
