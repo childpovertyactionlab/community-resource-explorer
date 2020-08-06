@@ -376,13 +376,27 @@
     }
   }
 
+  .recent {
+    margin-top: $inter-spacer-xs;
+    @include media-breakpoint-up(md) {
+      margin-top: $inter-spacer-md;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: $inter-spacer-xl;
+    }
+  }
+  
   .post-section {
     @include blog-post-section-styles;
 
-    @include media-breakpoint-up(md) {
-      &.even {
-        flex-direction: row-reverse;
+    &.second {
+      @include media-breakpoint-up(md) {
+        margin-left: $gutter*2 !important;
       }
+    }
+    
+    .post-image {
+      margin: 0 !important;
     }
   }
 }

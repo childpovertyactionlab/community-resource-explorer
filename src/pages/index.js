@@ -206,77 +206,62 @@ const home = () => {
           </div>
         </Col>
 
+
+        <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
+          <span className="custom-underline">Recent blog</span> posts
+        </Col>
+
+        {/* TODOxx: pinned blog post here */}
+
         <Col
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 1, span: 10 }}
-          xl={{ offset: 1, span: 9 }}
-          className="p-0"
+          className="post-section p-0"
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 5, offset: 1 }}
         >
-            <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
-              <span className="custom-underline">Recent blog</span> posts
-            </Col>
-
-          <Row className="post-section">
-            <Col
-              className="post-image p-0"
-              xs={{ span: 10, offset: 1 }}
-              md={{ span: 4, offset: 1 }}
+          <figure
+            className="post-image p-0"
             >
-              <figure>
-                <img src={forest} />
-              </figure>
-            </Col>
+            <img src={forest} />
+          </figure>
 
-            <Col
-              className="post-details p-0"
-              xs={{ span: 10, offset: 1 }}
-              md={{ span: 6, offset: 0 }}
-              xl={{ span: 4, offset: 0 }}
+          <div className="post-details p-0">
+            <div className="post-title">
+              How we’re informing policy and community understanding in Dallas.
+            </div>
+
+            <div className="post-contents">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+              vitae nulla pretium, cras tellus, at morbi tristique. Ac
+                ipsum, egestas ligula duis ipsum pellentesque{" "}
+            </div>
+
+            <CustomLink>Read post</CustomLink>
+          </div>
+        </Col>
+        <Col
+          className="post-section second p-0"
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 5, offset: 0 }}
+        >
+          <figure
+            className="post-image p-0"
             >
-              <div className="post-title">
-                How we’re informing policy and community understanding in Dallas.
-              </div>
+            <img src={field} />
+          </figure>
 
-              <div className="post-contents">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-                vitae nulla pretium, cras tellus, at morbi tristique. Ac
-                  ipsum, egestas ligula duis ipsum pellentesque{" "}
-              </div>
+          <div className="post-details p-0">
+            <div className="post-title">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </div>
 
-              <CustomLink>Read post</CustomLink>
-            </Col>
-          </Row>  
-          <Row className="post-section even">
-            <Col
-              className="post-image p-0"
-              xs={{ span: 10, offset: 1 }}
-              md={{ span: 4, offset: 1 }}
-            >
-              <figure>
-                <img src={field} />
-              </figure>
-            </Col>
+            <div className="post-contents">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+              vitae nulla pretium, cras tellus, at morbi tristique. Ac
+                ipsum, egestas ligula duis ipsum pellentesque{" "}
+            </div>
 
-            <Col
-              className="post-details p-0"
-              xs={{ span: 10, offset: 1 }}
-              md={{ span: 6, offset: 0 }}
-              xl={{ span: 4, offset: 0 }}
-            >
-              <div className="post-title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-
-              <div className="post-contents">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-                vitae nulla pretium, cras tellus, at morbi tristique. Ac
-                  ipsum, egestas ligula duis ipsum pellentesque{" "}
-              </div>
-
-              <CustomLink>Read post</CustomLink>
-            </Col>
-          </Row>  
-
+            <CustomLink>Read post</CustomLink>
+          </div>
         </Col>
 
       </Row>

@@ -137,7 +137,7 @@
 }
 
 @mixin blog-post-section-styles {
-  padding-bottom: 6 * $spacer;
+  padding-bottom: 6 * $spacer !important;
 
   .post-image {
     // TODO responsivize on refactor (5spacer on xl)
