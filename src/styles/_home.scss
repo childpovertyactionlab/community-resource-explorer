@@ -27,9 +27,60 @@
   #hero {
     .color-section {
       background: $old-lace;
+
+      flex: 350px 7 7; // gives more vert space for text to take up 
     }
+
     .emphasis {
       color: $cinnabar;
+    }
+
+    .content {
+      padding-bottom: 5 * $spacer;
+      .page-title-section {
+        .subtitle {
+          max-width: unset;
+          margin-right: 2 * $column;
+          @include media-breakpoint-up(md) {
+            margin-right: .8 *  $column;
+            font-size: 30px;
+            line-height: 36px;
+          }
+          @include media-breakpoint-up(xl) {
+            margin-right: .8 * $column;
+            font-size: 50px;
+            line-height: 55px;
+            max-width: 560px;
+          }
+        }
+      }
+    }
+    .caption {
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: $font-weight-light;
+      
+      margin-right: 2 * $column;
+      margin-top: 2 * $spacer;
+      margin-bottom: 6 * $spacer;
+      @include media-breakpoint-up(md) {
+        margin-right: $column;
+        margin-top: 3 * $spacer;
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 16px;
+        margin-right: 2 * $column;
+        margin-top: 4 * $spacer;
+        margin-bottom: 10 * $spacer;
+      }
+    }
+
+    .down-arrow {
+      stroke: $cinnabar;
+      @include media-breakpoint-only(md) {
+        display: none;
+      }
     }
   }
 

@@ -95,6 +95,7 @@ const home = () => {
           </p>
         </div>
         <p className="caption">The Community Resource Explorer reveals where assets and needs exist so individuals and institutions can have the greatest impact.</p>
+        <InlineSvg type="down-arrow" />
       </Hero>
 
       <Row id="page">
