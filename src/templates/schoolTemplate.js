@@ -6,6 +6,7 @@ import i18n from "@pureartisan/simple-i18n"
 import { Col, Row } from "react-bootstrap"
 import clsx from "clsx"
 
+import { logger } from "./../utils/logger"
 import Layout from "../components/layout"
 import SchoolHero from "../components/SchoolHero"
 import NonInteractiveScale from "./../components/NonInteractiveScale"
@@ -85,10 +86,14 @@ const SchoolPage = ({ data, ...props }) => {
    * @param  {Number} index
    * @return Array
    */
-  const constructQuintiles = index => {
-    // console.log("constructQuintiles,", index)
+  const constructQuintiles = (index, high_is_good) => {
+    // logger("constructQuintiles, " + index + ", high_is_good = " + high_is_good)
     const quintiles = [0, 0, 0, 0, 0]
     quintiles[index] = 1
+    if (!high_is_good) {
+      // Reverse the quintile if high is not good.
+      quintiles.reverse()
+    }
     return quintiles
   }
 
@@ -104,9 +109,9 @@ const SchoolPage = ({ data, ...props }) => {
     return obj
   }
 
-  const getMetricCollection = id => {
+  const getMetricCollection = (id, level) => {
     return CPAL_METRICS.filter(el => {
-      return el.tab === id
+      return el.tab === id && el.tab_level === level
     }).sort((a, b) => {
       return a.tab_level - b.tab_level
     })
@@ -180,23 +185,25 @@ const SchoolPage = ({ data, ...props }) => {
             "metric-collection"
           )}
         >
-          <h4>
-            {i18n.translate("SCHOOL_PROSE_CRI_SCORE") +
-              ": " +
-              getRoundedValue(school.cri_weight, 0)}
-          </h4>
-          <NonInteractiveScale
-            className="metric-group"
-            metric="cri_weight"
-            quintiles={constructQuintiles(school.cri_weight_quintile)}
-            colors={CRI_COLORS}
-            showHash={true}
-            hashLeft={getRoundedValue(
-              getHashLeft(school.cri_weight, 0, 100),
-              0
-            )}
-            showMinMax={true}
-          />
+          <div className="metric-group">
+            <h4>
+              {i18n.translate("SCHOOL_PROSE_CRI_SCORE") +
+                ": " +
+                getRoundedValue(school.cri_weight, 0)}
+            </h4>
+            <NonInteractiveScale
+              className="metric-group"
+              metric="cri_weight"
+              quintiles={constructQuintiles(school.cri_weight_quintile, 1)}
+              colors={CRI_COLORS}
+              showHash={true}
+              hashLeft={getRoundedValue(
+                getHashLeft(school.cri_weight, 0, 100),
+                0
+              )}
+              showMinMax={true}
+            />
+          </div>
         </Col>
       </Row>
       <Row className="custom-feeder-prose">
@@ -207,16 +214,20 @@ const SchoolPage = ({ data, ...props }) => {
       {/** Iterate through other categories */}
       {categories.map(el => {
         return (
-          <Row className="row-metric-econ row-metric-group">
+          <Row
+            className={clsx("row-metric-" + el.id, "row-metric-group")}
+            key={"row_metric_" + el.id}
+          >
             <Col
               xs={{ span: 10, offset: 1 }}
               className={clsx(
                 "metric-collection-" + el.id,
-                "metric-collection"
+                "metric-collection",
+                "metric-collection-header"
               )}
             >
               <h5>{i18n.translate(el.title)}</h5>
-              {getMetricCollection(el.id).map(el => {
+              {getMetricCollection(el.id, 0).map(el => {
                 return (
                   <div
                     className="metric-group"
@@ -239,7 +250,55 @@ const SchoolPage = ({ data, ...props }) => {
                       key={"scale_" + el.id}
                       metric={el.id}
                       quintiles={constructQuintiles(
-                        school[el.id + "_quintile"]
+                        school[el.id + "_quintile"],
+                        el.high_is_good
+                      )}
+                      colors={el.colors}
+                      showHash={true}
+                      hashLeft={getHashLeft(
+                        school[el.id],
+                        el.range[0],
+                        el.range[1],
+                        el.high_is_good
+                      )}
+                      showMinMax={true}
+                    />
+                  </div>
+                )
+              })}
+            </Col>
+            <Col
+              xs={{ span: 10, offset: 1 }}
+              className={clsx(
+                "metric-collection-" + el.id,
+                "metric-collection"
+              )}
+            >
+              {getMetricCollection(el.id, 1).map(el => {
+                return (
+                  <div
+                    className="metric-group"
+                    id={"metric_" + el.id}
+                    key={"metric_" + el.id}
+                  >
+                    <h6>
+                      {i18n.translate(el.title) +
+                        ": " +
+                        getRoundedValue(
+                          school[el.id],
+                          el.decimals,
+                          false,
+                          el.is_currency ? el.is_currency : 0
+                        )}
+                    </h6>
+                    <NonInteractiveScale
+                      className={"scale-" + el.id}
+                      id={"scale_" + el.id}
+                      key={"scale_" + el.id}
+                      metric={el.id}
+                      quintiles={constructQuintiles(
+                        school[el.id + "_quintile"],
+                        el.high_is_good
                       )}
                       colors={el.colors}
                       showHash={true}

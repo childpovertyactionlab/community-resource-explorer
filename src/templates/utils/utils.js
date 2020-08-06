@@ -106,7 +106,6 @@ export const getRoundedValue = (
   padZeroes = false,
   isCurrency = false
 ) => {
-  // console.log('getRoundedValue()')
   const type = typeof value
   let fixed = null
   if (type === "string") {
@@ -121,14 +120,26 @@ export const getRoundedValue = (
     }
   } else {
     if (padZeroes) {
-      fixed = Number(value.toFixed(decimals)).toLocaleString()
+      fixed = Number(value.toFixed(decimals))
     } else {
-      fixed = Number(+value.toFixed(decimals)).toLocaleString()
+      fixed = Number(value.toFixed(decimals))
     }
   }
   if (!!isCurrency) {
     fixed = "$" + fixed
   }
+  if (value === 0.000273887120175821) {
+    console.log("getRoundedValue()", decimals)
+    console.log(
+      "this is it ===>" + value,
+      +" " +
+        type +
+        " " +
+        Number(value.toFixed(decimals) + " " + Number(+value.toFixed(decimals)))
+    )
+    console.log("fixed, ", fixed)
+  }
+
   return fixed
 }
 
