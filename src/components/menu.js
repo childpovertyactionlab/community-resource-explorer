@@ -30,7 +30,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
           {/* <span className="text">DALLAS ISD</span> */}
         </Col>
 
-        <Col className="menu-page-names-col" xs={5}>
+        <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
           <div className="menu-page-names-container">
             {menuPages.map(page => {
               const nameClasses =
@@ -51,10 +51,10 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
             })}
           </div>
         </Col>
-        <Col className="equipped">
-          <div className="text">
-            <div>All Dallas neighborhoods<br></br>should have what they need<br></br>to thrive.</div>
-          </div>
+        <Col className="equipped" xs={0} md={5} xl={{ offset: 1, span: 4 }}>
+          <p className="text">
+            All Dallas neighborhoods should have what they need to thrive.
+          </p>
         </Col>
         <Col className="mask" onClick={closeMenu} onWheel={closeMenu} onScroll={closeMenu}>
         </Col>
