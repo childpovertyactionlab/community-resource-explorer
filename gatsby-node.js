@@ -4,6 +4,21 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /mapbox-gl/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
+
 // You can delete this file if you're not using it
 // import schools from "../../content/data/schools.json"
 const { createFilePath } = require("gatsby-source-filesystem")

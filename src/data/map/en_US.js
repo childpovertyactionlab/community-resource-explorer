@@ -26,8 +26,7 @@ const en_US = {
   SELECT_VIEW: `Select a view`,
   SELECT_ITEM_MAP: `Map view`,
   SELECT_ITEM_FEEDER: `Feeder view`,
-  UI_MAP_SR:
-    'Map of Dallas, with colors showing {metric} for {quintiles}.',
+  UI_MAP_SR: "Map of Dallas, with colors showing {metric} for {quintiles}.",
   UI_MAP_RESET: `Reset map`,
   UI_MAP_CAPTURE: `Screenshot map`,
   UI_MAP_CITY: `Dallas`,
@@ -105,6 +104,8 @@ const en_US = {
   UI_MAP_METRIC_HEL_CLINCAP: `Number of clinics in buffer per 10000 population`,
   UI_MAP_METRIC_HEL_GROCCAP: `Number of grocery stores in buffer per 10000 population`,
   UI_MAP_METRIC_HEL_PRTOPU: `Not available`,
+  UI_MAP_METRIC_HEL_PERINS: `Percent of population that is insured`,
+  UI_MAP_METRIC_HEL_PERUNIN: `Percent of population that is uninsured`,
   UI_FEEDER_TITLE_FEEDER_CHART: `Dallas ISD School Feeder Patterns`,
   UI_FEEDER_TITLE_FEEDER_DESC: `<p>A feeder pattern is the sequence of schools a student attends as they advance from grade to grade, based on their residing address.</p><p>The first chart shows each feeder pattern’s average Community Resource Index on a scale from 0-100.</p><p>The second chart shows the distribution of campuses across the range of the Community Resource Index.</p><p>Hover and click within the charts to see more data about each feeder pattern and its schools. You can also use the search bar to find a school and highlight its feeder pattern and campus.</p>`,
   UI_FEEDER_TITLE_SCHOOLS_CHART: `Distribution of campuses across CRI`,
@@ -144,5 +145,10 @@ const en_US = {
   UI_MAP_METRIC_DEM_POPM: `not available`,
   UI_MAP_METRIC_DEM_THH: `not available`,
   UI_MAP_METRIC_DEM_POPSE: `not available`,
+  // Below this line not in explorer.
+  SCHOOL_PROSE_FEEDER_GENERIC: `<p>This school is part of a community with many strengths and assets that might not be fully captured by quantitative data in the Community Resource Explorer (CRE). The CRE highlights what resources and amenities might be available to residents based on publicly available datasets. These datasets, while helpful, do not include important aspects of a neighborhood, such as the history of how it came to be, cultures of the residents, and trusted institutions/points of pride, like places of worship and neighborhood associations. Over time, we hope to add these types of qualitative assets to the school community profiles. Please help us to do so by sharing insight you have about your neighborhood <a href="/contact/" target="_blank">here</a>.</p>`,
+  SCHOOL_PROSE_FEEDER_LINCOLN: `<p>The Lincoln feeder pattern is located in South Dallas. The community is rich in history, tradition, and generational pride, exemplified by the second high school built for Black students in the late 1930s, Lincoln. South Dallas was home to some of the earliest Black professionals in Dallas, including Dr. Watts, Dr. Pinkston, and Pearl C. Anderson. Other points of pride and strength in the neighborhood are the churches, Black Greek Row, the South Dallas Cultural Center, Martin Luther King, Jr. Community Center, long-time childcare centers, and neighborhood associations, to name a few.</p>`,
+  SCHOOL_PROSE_FEEDER_SPRUCE: `<p>The Spruce feeder pattern is located in Pleasant Grove, southeast of Downtown Dallas. Pleasant Grove is a young community with an entrepreneurial spirit—Pleasant Grove is home to many small business owners and budding entrepreneurs. Churches are also important to the fabric of the community, as are the bazaars, local restaurants, and local institutions (like Eastfield College and the Southeast Dallas Chamber of Commerce). The Salvation Army on Elam, the branch libraries off Lake June Road, and the Great Trinity Forest are other local assets.</p>`,
+  SCHOOL_PROSE_CRI_SCORE: `CRI Score`,
 }
 export default en_US

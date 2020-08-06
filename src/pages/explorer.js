@@ -6,25 +6,17 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
-// <Row noGutters className="">
-//   <Col
-//     className=""
-//     xs={{ offset: 0, span: 12 }}
-//     md={{ offset: 5, span: 7 }}
-//   ></Col>
-// </Row>
-//
-// <Layout id="faqs-page" activePageId={pages.EXPLORER.id}>
-//   <SEO title="Explorer" />
-//   <Explorer />
-// </Layout>
 
-const ExplorerPage = () => {
+const ExplorerPage = ({ ...props }) => {
   return (
-    <>
+    <Layout
+      disableFooter={true}
+      disableHeader={true}
+      activePageId={pages.EXPLORER.id}
+    >
       <SEO title="Explorer" />
-      <Explorer />
-    </>
+      <Explorer toggleMenu={props.toggleMenu} />
+    </Layout>
   )
 }
 
