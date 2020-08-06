@@ -17,7 +17,7 @@
 @import "isd";
 @import "school";
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap.scss";
 
 @font-face {
   font-family: "Halyard";
@@ -63,7 +63,7 @@
 }
 @font-face {
   font-family: "Morganite Bold";
-    src: url("../fonts/Morganite-Bold.ttf") format("truetype");
+  src: url("../fonts/Morganite-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
