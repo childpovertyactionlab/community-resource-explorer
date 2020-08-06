@@ -95,10 +95,10 @@ const home = () => {
       <Hero activePageId={pages.HOME.id} imgSrc={portrait}>
         <div className="page-title-section">
           <p className="subtitle">
-            All Dallas neighborhoods should have what they need to <span className="emphasis">thrive.</span>
+            All Dallas neighborhoods should have what they need to <span className="">thrive.</span>
           </p>
         </div>
-        <p className="caption">The Community Resource Explorer reveals where assets and needs exist so individuals and institutions can have the greatest impact.</p>
+        <p className="caption">The Community Resource Explorer is a data tool that reveals where <span className="p-emphasis">assets</span> and <span className="p-emphasis">needs</span> exist so individuals and institutions can have the greatest impact.</p>
         <InlineSvg type="down-arrow" />
       </Hero>
 

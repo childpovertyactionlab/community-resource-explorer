@@ -34,6 +34,10 @@
     .emphasis {
       color: $cinnabar;
     }
+    .p-emphasis {
+      color: $cinnabar;
+      font-weight: 400;
+    }
 
     .content {
       padding-bottom: 5 * $spacer;
@@ -56,7 +60,7 @@
       }
     }
     .caption {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
       font-weight: $font-weight-light;
       
@@ -69,7 +73,7 @@
         margin-bottom: 0;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 16px;
+        font-size: 18px;
         margin-right: 2 * $column;
         margin-top: 4 * $spacer;
         margin-bottom: 10 * $spacer;
