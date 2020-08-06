@@ -12,6 +12,7 @@ const DEBUG = false
 
 const SignUp = ({ location }) => {
 
+  // TODO: if !email, have alternate text to "Almost"
   const email = _.get(location, 'state.emailValue', '')
 
   return (
