@@ -160,18 +160,26 @@ const SchoolPage = ({ data, ...props }) => {
         </div>
       </SchoolHero>
       {/** Intro row */}
-      <Row>
+      <Row className="school-metadata">
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 1 }}>
           <h2>{school.SCHOOLNAME}</h2>
-          <h4>{school.ADDRESS}</h4>
           <h4>
+            {school.ADDRESS}
+            <br />
             {school.CITY}, TX {school.ZIP}
           </h4>
           <h3>
             {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
           </h3>
         </Col>
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 0 }}>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 5, offset: 0 }}
+          className={clsx(
+            "metric-collection-" + "cri_weight",
+            "metric-collection"
+          )}
+        >
           <h4>
             {i18n.translate("SCHOOL_PROSE_CRI_SCORE") +
               ": " +
@@ -196,6 +204,7 @@ const SchoolPage = ({ data, ...props }) => {
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
       </Row>
+      {/** Iterate through other categories */}
       {categories.map(el => {
         return (
           <Row className="row-metric-econ row-metric-group">
@@ -232,7 +241,7 @@ const SchoolPage = ({ data, ...props }) => {
                       quintiles={constructQuintiles(
                         school[el.id + "_quintile"]
                       )}
-                      colors={ECON_COLORS}
+                      colors={el.colors}
                       showHash={true}
                       hashLeft={getHashLeft(
                         school[el.id],
