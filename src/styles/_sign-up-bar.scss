@@ -1,6 +1,5 @@
 .sign-up-bar {
   background: $old-lace;
-  // min-height: 100px;
 
   .contents {
     display: flex;
@@ -10,13 +9,65 @@
     margin-left: auto;
     margin-right: auto;
 
+    padding-top: 5 * $spacer;
+    padding-bottom: 5 * $spacer;
+    
+    @include media-breakpoint-only(xs) {
+      flex-direction: column;
+      
+      .email-label {
+      }
+      .email-input-wrapper {
+        margin-top: 2 * $spacer;
+        margin-bottom: 3 * $spacer;
+        width: 225px;
+      }
+      .feedback {
+        bottom: -15px;
+      }
+    }
+    
+    @include media-breakpoint-up(md) {
+      padding-top: 8 * $spacer;
+      padding-bottom: 8 * $spacer;
+      .email-label {
+        flex-basis: 225px;
+        flex-grow: 2;
+        flex-shrink: 0;
+        max-width: 450px;
+        
+        margin-left: 5 * $spacer;
+        margin-right: 5 * $spacer;
+      }
+      .email-input-wrapper {
+        flex-basis: 150px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 250px;
+        
+        margin-right: 5 * $spacer;
+        
+      }
+      .custom-link {
+        
+        margin-right: 5 * $spacer;
+      }
+    }
+    
+    @include media-breakpoint-up(xl) {
+      padding-top: 11 * $spacer;
+      padding-bottom: 11 * $spacer;
+    }
+
     .email-label {
+      text-align: center;
       color: $cinnabar;
       font-size: 30px;
     }
+
     .email-input-wrapper {
       position: relative;
-      max-width: 250px;
+
       .email-input {
         width: 100%;
         background: transparent;
@@ -40,7 +91,8 @@
       font-weight: $font-weight-light;
     }
 
-    padding-top: 11 * $spacer;
-    padding-bottom: 11 * $spacer;
+    .no-break {
+      display: inline-block;
+    }
   }
 }

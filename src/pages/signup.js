@@ -8,7 +8,7 @@ import Hero from "../components/hero"
 import { pages } from "../consts"
 import _ from "lodash"
 
-const DEBUG = true
+const DEBUG = false
 
 const SignUp = ({ location }) => {
 
@@ -23,6 +23,8 @@ const SignUp = ({ location }) => {
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
+          md={{ offset: 2, span: 5 }}
+          xl={{ offset: 2, span: 4 }}
         >
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
             <h2>

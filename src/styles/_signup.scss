@@ -1,8 +1,13 @@
 #signup-page {
   margin-top: 14 * $spacer;
 
+  h2 {
+    margin-bottom: 3 * $spacer;
+  }
+
   p {
     font-size: 16px;
+    margin-bottom: 2 * $spacer;
   }
 
   .inline-submit {

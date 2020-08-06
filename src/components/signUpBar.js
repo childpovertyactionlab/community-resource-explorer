@@ -26,7 +26,7 @@ const SignUpBar = ({ }) => {
     <Row noGutters>
       <Col xs={12} className="sign-up-bar">
         <div className="contents">
-          <Form.Label className="email-label">Subscribe to our e-mail updates</Form.Label>
+          <Form.Label className="email-label">Subscribe to our <span className="no-break">e-mail</span> updates</Form.Label>
           <div className="email-input-wrapper">
             <Form.Control onChange={e => setEmailValue(e.target.value)} className="email-input" type="email" placeholder="Enter your e-mail address" />
           {!emailValid && <p className="feedback">
