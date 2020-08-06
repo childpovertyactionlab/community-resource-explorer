@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
 import CustomLink from "../components/customLink"
+import { navigate } from "gatsby"
+import { pages } from "../consts"
 
 const SignUpBar = ({ }) => {
   const [emailValue, setEmailValue] = useState("")
@@ -10,12 +12,14 @@ const SignUpBar = ({ }) => {
     console.log(emailValue)
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     const valid = emailRegex.test(emailValue)
-    console.log(valid)
+    console.log("email valid: ", valid)
+
     setEmailValid(valid)
     if (!valid) {
       return
     } else {
       console.log("GO!")
+      navigate(pages.SIGNUP.path, { state: { emailValue } })
     }
   }
   return (
@@ -26,7 +30,7 @@ const SignUpBar = ({ }) => {
           <div className="email-input-wrapper">
             <Form.Control onChange={e => setEmailValue(e.target.value)} className="email-input" type="email" placeholder="Enter your e-mail address" />
           {!emailValid && <p className="feedback">
-            Please provide a valid state.
+            Please provide a valid email.
           </p>}
           </div>
           <CustomLink onClick={submit} type="right-arrow-thin">Subscribe</CustomLink>

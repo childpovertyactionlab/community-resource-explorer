@@ -43,7 +43,13 @@ const DATA = {
   name: "Get the data",
 }
 
-const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT, ISD, DATA }
+const SIGNUP = {
+  id: "signup",
+  path: "/signup",
+  name: "Sign up",
+}
+
+const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT, ISD, DATA, SIGNUP }
 const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT]
 
 // keep in sync with $sticky-header-height in _variables.scss
