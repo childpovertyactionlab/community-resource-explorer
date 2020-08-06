@@ -1,0 +1,25 @@
+#signup-page {
+  margin-top: 14 * $spacer;
+
+  p {
+    font-size: 16px;
+  }
+
+  .inline-submit {
+    background: transparent;
+    border: none;
+    color: $cinnabar;
+    // font-weight: bold;
+    padding: 0;
+  }
+
+  label {
+    font-size: 14px;
+    margin-top: $spacer;
+    margin-right: $spacer;
+  }
+
+  .form-submit {
+    margin-top: 2 * $spacer;
+  }
+}
