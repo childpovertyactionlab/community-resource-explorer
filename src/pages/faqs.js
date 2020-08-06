@@ -27,7 +27,7 @@ const how = {
     {
       text: "Who built the CRE?",
       body:
-        "The Child Poverty Action Lab developed the concept for the CRE, with input and support from several other local organizations. CPAL was also responsible for initial data collection and analysis and will continue to maintain and upgrade the tool as needed. Hyperobjekt was the web developer that created the container site and elevated the user experience.",
+        "The Child Poverty Action Lab (CPAL) developed the concept for the CRE, with input and support from several other local organizations. CPAL was also responsible for initial data collection and analysis and will continue to maintain and upgrade the tool as needed. Hyperobjekt was the web developer that created the container site and elevated the user experience.",
     },
     {
       text: "Who should use the CRE?",
@@ -37,7 +37,7 @@ const how = {
     {
       text: "How was the CRE funded?",
       body:
-        "The CRE was funded with generous support from Comerica.",
+        "The CRE was funded with generous support from Comerica Bank.",
     },
   ],
 }
@@ -48,7 +48,12 @@ const purpose = {
     {
       text: "Which schools are included in the CRE?",
       body:
-        "The 196 neighborhood schools in Dallas ISD are currently included in the CRE. Magnet schools, transformation and innovation schools, and alternative schools are not included.",
+        "TThe 189 neighborhood schools in Dallas ISD are currently included in the CRE. Magnet schools, transformation and innovation schools, and alternative schools are not included.",
+    },
+    {
+      text: "What is the difference between the CRE and the CRI?",
+      body:
+        <p>The Community Resource Explorer (CRE) is this newly-built website to house neighborhood-level data related to resource allocation and quality of life in Dallas. The Community Resource Index (CRI) is a statistical approach that summarizes a collection of data -- in this case, neighborhood indicators -- into one value for comparison. Every school included in the Explorer has six different index values: one each for Economics, Education, Family, Community, and Health, and one overall index value that represents a combination of all five categories.</p>
     },
     {
       text: "Where did the data come from for the CRE?",
@@ -58,27 +63,32 @@ const purpose = {
     {
       text: "How did you decide on these indicators?",
       body:
-        <p>To determine what to include in the CRE, we looked for (1) indicators that have an impact on the quality of life for kids and their families, (2) indicators that have reliable, current data that can be mapped within a two-mile radius, and (3) indicators that can be acted upon by individuals and institutions. We also studied similar data projects, such as the <a target="_blank" href="https://dallascityhall.com/departments/office-of-equity/DCH%20Documents/equality-indicators-booklet-2019.pdf">Dallas Equity Indicators</a>, in consideration of what to cover in the CRE.</p>
+        <p> To determine which indicators to include, we looked for (1) indicators that have an impact on the quality of life for kids and their families, (2) indicators that have reliable, current data that can be mapped within a two-mile radius, and (3) indicators that can be acted upon by individuals and institutions. We also studied similar data projects, such as the <a target="_blank" href="https://dallascityhall.com/departments/office-of-equity/DCH%20Documents/equality-indicators-booklet-2019.pdf">Dallas Equity Indicators</a>, in consideration of what to cover in the CRE.</p>
     },
     {
       text: "How were data in the CRE calculated?",
       body:
-        "Needs answer text.",
+        <p>The CRI was calculated by aggregating or summarizing data related to five key categories (Community, Economics, Education, Family, and Health) for the geography within two miles of every neighborhood elementary, middle, and high school campus in Dallas ISD. Data related to each of the five categories were analyzed separately and combined into indices to help identify relative differences in resource allocation - i.e., where there are an abundance of resources and where there fewer resources that are related to student outcomes and community-level quality of life. The five scores were then combined into an overall CRI score. If you want to learn more about how we calculated the CRI, <mark>you can read the full methodology or visit the Methodology page here</mark>.</p>
     },
     {
       text: "Why is the data calculated within a two-mile radius of each school?",
       body:
-        "Needs answer text.",
+        "We used a two-mile area around each campus to calculate the Community Resource Index so that we could capture the broader dynamics of households and families living in each community. Many of the resources that we include serve relatively large geographies, such as city-operated libraries or recreation centers, and a large number of campuses would not have one of those features located within one mile, making the Index much harder to interpret. Similarly, if we had used a larger area, such as three or five miles, we would not be able to see the nuance/difference between campus communities since the geography of one campus community would overlap significantly with several others.",
     },
     {
       text: "How is this new version of the CRE different from earlier versions?",
       body:
-        "Needs answer text.",
+        <p>As we transitioned to the new version of the CRI, we made improvements to the underlying data and platform to make the tool easier to use and understand. We listened to advice from our peers and community members to add new data points, change the way we measure others, and remove some that we felt were not the best representation of our local communities. A few high-level changes to be aware of include:
+        <ul><li>We added new data, such as the percentage of households that have access to broadband services and the number of community health clinics within each two-mile area. Check the Data page to learn more about all of the data that is featured in the Community Resource Explorer.</li> 
+        <li>The calculations for each of the five subindices (Community, Economics, Education, Family, and Health) as well as the overall Community Resource Index were improved to help overcounting indicators that are highly related (such as percentage of low-wage jobs and median household income). We did this by using Principal Components Analysis to group and weight subsets of data for each subindex, as well as by removing indicators like doctor’s offices that made it harder to produce meaningful data for each two-mile area. We also adjusted for population density.</li>
+        <li>The Community Resource Explorer makes it easier to understand the data that drives the CRI. We worked to make an interface that is easier to navigate, that allows for more interaction with the different datasets, and that hopefully doesn’t have too many glitches.</li> 
+        <li>You can now export PDF reports that include the data for all elements of the CRI for any one campus community in Dallas ISD. To do so, click on a school within the Explorer to view its full report, then click “Export PDF” to download.</li></ul>
+        Learn more about the changes we made to the data and methodology here.</p>
     },
     {
       text: "The data for my neighborhood doesn’t match my personal experience. Why might that be?",
       body:
-        <div><p>The data associated with a particular neighborhood covers a two-mile radius (or four-mile diameter, with the school at the center), which is a pretty big geographic footprint. When people think of their neighborhood, they might think quite small - perhaps just the homes and school nearest to them. Other people might think quite large - perhaps all of Oak Cliff or East Dallas. How you imagine the boundary lines of your neighborhood will shape how you perceive the data.</p> <p>Additionally, schools that sit on the edge of Downtown Dallas/other major business hubs or on the edge of the Medical District/other major healthcare hubs will capture a volume of data that might far surpass what a resident notices and can access in his/her immediate vicinity. For example, the two-mile radius around a school in South Dallas/Fair Park will capture some parts of Downtown Dallas, including businesses and jobs that are not necessarily representative of what exists right in the neighborhood. Finally, the majority of data included in the CRE come from publicly-available databases. Sometimes, those databases might code certain data elements (like a health clinic) differently than we would. We are continuing to work to “clean” the data to ensure that it reflects the lived experiences of residents as closely as possible.</p></div>
+        <div><p>The data associated with a particular neighborhood covers a two-mile radius (or four-mile diameter, with the school at the center), which is a pretty big geographic footprint. When people think of their neighborhood, they might think quite small - perhaps just the homes and school nearest to them. Other people might think quite large - perhaps all of Oak Cliff or East Dallas. How you imagine the boundary lines of your neighborhood will shape how you perceive the data. Additionally, schools that sit on the edge of Downtown Dallas/other major business hubs or on the edge of the Medical District/other major healthcare hubs will capture a volume of data that might far surpass what a resident notices and can access in his/her immediate vicinity. For example, the two-mile radius around a school in South Dallas/Fair Park will capture some parts of Downtown Dallas, including businesses and jobs that are not necessarily representative of what exists right around the feeder pattern schools. Finally, the majority of data included in the CRE come from publicly-available databases. Sometimes, those databases might code certain data elements (like a health clinic) differently than we would. We are continuing to work to “clean” the data to ensure that it reflects the lived experiences of residents as closely as possible.</p></div>
     },
   ],
 }
@@ -94,7 +104,14 @@ const methods = {
     {
       text: "What is redlining?",
       body:
-        "Needs answer text.",
+        <p>Redlining was a practice by the Home Owners Loan Corporation in the 1930s that “arrayed neighborhoods by risk, determined by housing age and density as well as racial composition . . . Neighborhoods that contained black and brown populations were literally highlighted in red and residents were deemed less credit-worthy of a long-term, fixed rate mortgage” (<a href="https://www.localhousingsolutions.org/plan/addressing-neighborhood-disparities-overview/addressing-neighborhood-disparities/" target="_blank">NYU Furman Center</a>). In redlining maps, you’ll see four colors: 
+        <ul>
+          <li>Residential areas highlighted in red (labeled “hazardous”) were typically home to Black residents, older housing, and poorer households;</li>
+          <li>Areas in yellow (labeled “definitely declining”) were also usually home to majority people of color;</li>
+          <li>Areas in blue (labeled “still desirable”) were usually home to majority working-class white residents;</li>
+          <li>Areas in green (labeled “best”) were usually home to professional class white residents.</li>
+          </ul>
+          In short, the practice of redlining meant that people of color were denied homeownership opportunities. Neighborhoods that were redlined were also often excluded from economic development opportunities. The long-term impact of redlining is still very much felt today, as illustrated within the Community Resource Explorer.</p>,
     },
   ],
 }
