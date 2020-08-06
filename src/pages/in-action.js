@@ -29,7 +29,7 @@ const Faqs = () => {
     {
       allFile(
         filter: {
-          extension: { eq: "png" }
+          extension: { eq: "jpg" }
           relativeDirectory: { eq: "blogEntries" }
         }
       ) {
@@ -87,13 +87,12 @@ const Faqs = () => {
                 xl={{ span: 4, offset: 0 }}
               >
                 <div className="post-title">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                More than ever, Dallas students need reliable broadband. Here's how the CRE is helping.
                 </div>
 
                 <div className="post-contents">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-                  vitae nulla pretium, cras tellus, at morbi tristique. Ac
-                  ipsum, egestas ligula duis ipsum pellentesque{" "}
+                In 2020, access to the internet is a must-have utility. But despite the internet's apparent ubiquity, 42% of Dallas households lack fixed internet access, according to Census data.
+                {" "}
                 </div>
 
                 <CustomLink>Read post</CustomLink>
