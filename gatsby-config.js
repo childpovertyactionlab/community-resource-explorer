@@ -8,7 +8,7 @@ module.exports = {
     title: `Gatsby React Bootstrap Starter`,
     description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
     author: `Billy Jacoby`,
-    mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_KEY}`,
+    mapboxApiKey: `${process.env.MAPBOX_API_TOKEN}`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/schools.json`,
+        path: `./src/data/map/schools.json`,
         typeName: `Schools`,
       },
     },
