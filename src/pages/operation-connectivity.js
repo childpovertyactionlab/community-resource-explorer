@@ -39,7 +39,7 @@ const isd = () => {
   const getSection = ({ title, paragraphs }) => {
 
     return (
-      <Col className="section " key={title} xs={12}>
+      <Col className="section" key={title} xs={12}>
         <Row>
           <Col
             xs={{ offset: 1, span: 10 }}

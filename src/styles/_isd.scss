@@ -12,11 +12,14 @@
 
   #page {
     margin-top: 8 * $spacer;
+    margin-bottom: 8 * $spacer;
     @include media-breakpoint-up(md) {
       margin-top: 10 * $spacer;
+      margin-bottom: 10 * $spacer;
     }
     @include media-breakpoint-up(xl) {
       margin-top: 15 * $spacer;
+      margin-bottom: 15 * $spacer;
     }
   }
 
