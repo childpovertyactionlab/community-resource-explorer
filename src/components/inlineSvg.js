@@ -5,6 +5,15 @@ const InlineSvg = ({ type, onClick=_.noop, classes="" }) => {
   const getSvg = type => {
     switch (type) {
       // declare stroke color in CSS, as defining here cannot be overridden
+      case "right-arrow-thin":
+        return (
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="4.33958" x2="11.6598" y2="4.33958" stroke-width="0.666552" />
+            <path d="M7.31055 0V0C7.31055 2.39282 9.25031 4.33259 11.6431 4.33259V4.33259" stroke-width="0.666552" />
+            <path d="M7.31055 8.66602V8.66602C7.31055 6.27319 9.25031 4.33343 11.6431 4.33343V4.33343" stroke-width="0.666552" />
+          </svg>
+
+        )
       case "right-arrow":
         return (
           <svg

@@ -8,11 +8,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import clsx from "clsx"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Form, Button } from "react-bootstrap"
 
 import Header from "./header"
 import Navbar from "./navBar"
 import StickyHeader from "./stickyHeader"
+import SignUpBar from "./signUpBar"
 
 const Layout = ({ children, pageInfo, activePageId, id, ...props }) => (
   <StaticQuery
@@ -25,17 +26,7 @@ const Layout = ({ children, pageInfo, activePageId, id, ...props }) => (
         }
       }
     `}
-    // Setting aside to get dynamically-created schools pages to work.
-    // {!id && (
-    //   <Row noGutters className="justify-content-center">
-    //     <Col>
-    //       <Header siteTitle={data.site.siteMetadata.title} />
-    //     </Col>
-    //   </Row>
-    // )}
-    //
-    //{/* TODOxx: remove */}
-    // {!id && <Navbar pageInfo={pageInfo} />}
+ 
     render={data => (
       <>
         <Container fluid className={clsx("main", props.className)}>
@@ -43,25 +34,15 @@ const Layout = ({ children, pageInfo, activePageId, id, ...props }) => (
           <Row noGutters>
             <Col className="p-0">
               {/* <Container className="mt-5"> */}
-              <main id={id}>{children}</main>
+              <main id={id} className="main-contents">{children}</main>
               {/* </Container> */}
             </Col>
           </Row>
         </Container>
 
-        {/* <Container fluid className="px-0">
-          <Row noGutters>
-            <Col className="footer-col">
-              <footer>
-                <span>
-                  © {new Date().getFullYear()}, Built with
-                  {` `}
-                  <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </span>
-              </footer>
-            </Col>
-          </Row>
-        </Container> */}
+        <Container fluid className="px-0">
+          <SignUpBar />
+        </Container>
       </>
     )}
   />

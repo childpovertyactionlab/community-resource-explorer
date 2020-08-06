@@ -1,6 +1,9 @@
 div.main {
   min-height: 100vh;
   // padding-bottom: 60px; for footer?
+  main.main-contents {
+    height: unset;
+  }
 }
 
 div.full-height {

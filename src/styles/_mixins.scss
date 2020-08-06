@@ -137,6 +137,7 @@
 }
 
 @mixin blog-post-section-styles {
+  // TODO remove !important (clashes with p-0 in home)
   padding-bottom: 6 * $spacer !important;
 
   .post-image {
