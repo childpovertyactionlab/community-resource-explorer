@@ -1,9 +1,11 @@
 .menu-component {
-
   $top-buffer: 3.5 * $spacer;
   $bottom-buffer: 6.5 * $spacer;
-
-  z-index: 100;
+  
+  position: relative;
+  z-index: 5000; // for staying above Explorer
+  // z-index: 100;
+  
   .menu-panel {
 
     .mask {

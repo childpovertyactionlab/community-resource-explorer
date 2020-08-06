@@ -5,11 +5,19 @@ import { menuPages } from "../consts"
 import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 
-const Menu = ({ activePageId }) => {
-  const [menuOpen, setMenuOpen] = useState(false)
+const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
+
+  let [menuOpen, setMenuOpen] = useState(false)
+
+  if (controlled) {
+    // if the component is controlled (for Explorer), use the passed in handler and state. otherwise operate as normal
+    menuOpen = open
+    setMenuOpen = setMenuOpenHandler
+  }
+
   const toggleMenuOpen = () => setMenuOpen(!menuOpen)
   const closeMenu = () => setMenuOpen(false)
-
+    
   const getMenuPanel = () => {
     return (
       <Row noGutters className="menu-panel" onWheel={closeMenu} onScroll={closeMenu}>
@@ -54,15 +62,24 @@ const Menu = ({ activePageId }) => {
     )
   }
 
-  const classes = "menu-component" + (menuOpen ? " open" : "")
-
-  return (
-    <div className={classes}>
+  const getMenuButton = () => {
+    if (controlled) {
+      return
+    }
+    return (
       <span onClick={toggleMenuOpen} className="menu-icon-group">
         <span className="menu-icon svg-base"></span>
         Menu
       </span>
+    )
+  }
 
+  const classes = "menu-component" + (menuOpen ? " open" : "")
+
+  console.log(classes)
+  return (
+    <div className={classes}>
+      {getMenuButton()}
       {getMenuPanel()}
     </div>
   )

@@ -15,7 +15,7 @@ const SignUp = ({ location }) => {
   const email = _.get(location, 'state.emailValue', '')
 
   return (
-    <Layout id="signup-page" activePageId={pages.SIGNUP.id} disableSignup={true}>
+    <Layout id="signup-page" activePageId={pages.SIGNUP.id} disableFooter={true}>
       <Helmet>
         <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Helmet>
