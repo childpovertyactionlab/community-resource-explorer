@@ -77,7 +77,7 @@ const SchoolPage = ({ data, ...props }) => {
   // Strip first item from tabs for generating categories
   let categories = CPAL_FILTER_TABS.slice()
   categories.shift()
-  console.log("categories, ", categories)
+  // console.log("categories, ", categories)
 
   /**
    * Constructs a 5-item quintile array from
@@ -86,7 +86,7 @@ const SchoolPage = ({ data, ...props }) => {
    * @return Array
    */
   const constructQuintiles = index => {
-    console.log("constructQuintiles,", index)
+    // console.log("constructQuintiles,", index)
     const quintiles = [0, 0, 0, 0, 0]
     quintiles[index] = 1
     return quintiles
