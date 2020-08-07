@@ -178,11 +178,14 @@ const home = () => {
           </div>
           <div className="content">
             <div className="text">
+            <p className="description description-medium">
+                Learn more about Dallas ISD's assets and needs by using the
+              </p>
               <h1 className="">
                 Community Resource Explorer
               </h1>
               <p className="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
+                Get data on schools and their surrounding communities, download reports, and more.
               </p>
               <div className="go-to" onClick={() => navigate(pages.EXPLORER.path)}>
                 Go to the explorer <InlineSvg type="right-arrow" />

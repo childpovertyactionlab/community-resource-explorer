@@ -14,11 +14,11 @@
     margin-top: $inter-spacer-xs;
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
-      margin-top: $inter-spacer-md;
+      margin-top: 4rem;
       margin-bottom: $inter-spacer-md;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: $inter-spacer-xl;
+      margin-top: 5.6rem;
       margin-bottom: $inter-spacer-xl;
     }
   }
@@ -280,6 +280,9 @@
           }
           font-weight: $font-weight-light;
           line-height: 1.5;
+          &.description-medium {
+            font-weight: 400;
+          }
         }
         .go-to {
           font-size: 15px;
