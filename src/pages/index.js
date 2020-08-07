@@ -76,14 +76,17 @@ const caroItems = [
 ]
 
 const q1 = {
+  superhead: `Voices from the Community`,
   text: `Affordable housing is one of [our] greatest needs. Other economic hardships stem from that. If my housing isn't affordable, everything else is less affordable.`,
   attribution: "Pleasant Grove assistant principal",
 }
 const q2 = {
+  superhead: `Voices from the Community`,
   text: `There is no safe place for students just to be young people in the community.`,
   attribution: "Dallas ISD Trustee",
 }
 const q3 = {
+  superhead: `Voices from the Community`,
   text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
   attribution: "Pleasant Grove Resident",
 }
@@ -120,6 +123,9 @@ const home = () => {
           md={{ offset: 1, span: 6 }}
           className="quote-by-image quote light no-bg p-0"
         >
+          <div className="superheading">
+            {q1.superhead}
+          </div>
           <div className="text">
             “{q1.text}”
           </div>
@@ -150,6 +156,9 @@ const home = () => {
           xl={{ offset: 5, span: 5 }}
           className="quote-under-image quote dark no-bg no-border p-0"
         >
+          <div className="superheading">
+            {q1.superhead}
+          </div>
           <div className="text">
             “{q2.text}”
             <div className="attribution">
@@ -193,7 +202,11 @@ const home = () => {
           <div className="quote-with-image">
 
             <div className="quote dark">
+            
               <div className="text">
+              <div className="superheading">
+                {q1.superhead}
+              </div>
                 “{q3.text}”
                 <div className="attribution">
                   {q3.attribution}
