@@ -13,7 +13,9 @@
   }
   .row {
     &.school-metadata,
-    &.custom-feeder-prose {
+    &.custom-feeder-prose,
+    &.info-school-top,
+    &.info-school-bottom {
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
@@ -32,7 +34,9 @@
       }
     }
     &.custom-feeder-prose,
-    &.info-robotext {
+    &.info-robotext,
+    &.info-school-top,
+    &.info-school-bottom {
       font-weight: 300;
       font-size: 1.4rem;
     }

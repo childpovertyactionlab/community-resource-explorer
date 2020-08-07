@@ -119,6 +119,12 @@ const SchoolPage = ({ data, ...props }) => {
     })
   }
 
+  /**
+   * Gets quintile robotext about which quintile school is in.
+   * @param  String schoolname
+   * @param  Number quintile
+   * @return String
+   */
   const getQuintileRobotext = (schoolname, quintile) => {
     if (quintile === 4) {
       return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
@@ -128,6 +134,43 @@ const SchoolPage = ({ data, ...props }) => {
       return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
         schoolname: schoolname,
         quintile: getQuintileDesc(quintile).toLowerCase(),
+      })
+    }
+  }
+
+  /**
+   * Returns a string list of good or bad metrics for the school.
+   * @param  {[type]} sln [description]
+   * @return {[type]}     [description]
+   */
+  const getSchoolMetricList = topOrBottom => {
+    // console.log("getSchoolMetricList")
+    let metricArray = []
+    if (topOrBottom === "top") {
+      // console.log("top")
+      for (let i = 0; i < CPAL_METRICS.length; i++) {
+        // console.log("top, ", CPAL_METRICS[i].id)
+        if (metricArray.length >= 3) break
+        if (CPAL_METRICS[i].tab_level > 0) {
+          if (school[CPAL_METRICS[i].id + "_quintile"] === 4) {
+            metricArray.push(i18n.translate(CPAL_METRICS[i].title))
+          }
+        }
+      }
+      return i18n.translate("SCHOOL_PROSE_TOP", {
+        quintiles: metricArray.join("; ").toLowerCase(),
+      })
+    } else {
+      for (let i = 0; i < CPAL_METRICS.length; i++) {
+        if (metricArray.length >= 3) break
+        if (CPAL_METRICS[i].tab_level > 0) {
+          if (school[CPAL_METRICS[i].id + "_quintile"] === 0) {
+            metricArray.push(i18n.translate(CPAL_METRICS[i].title))
+          }
+        }
+      }
+      return i18n.translate("SCHOOL_PROSE_BOTTOM", {
+        quintiles: metricArray.join("; ").toLowerCase(),
       })
     }
   }
@@ -241,6 +284,34 @@ const SchoolPage = ({ data, ...props }) => {
               ),
             }}
           />
+        </Col>
+      </Row>
+      <Row className="info-school-top">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 7, offset: 1 }}
+          className="custom-feeder"
+        >
+          <p
+            className="school-prose-top"
+            dangerouslySetInnerHTML={{
+              __html: getSchoolMetricList("top"),
+            }}
+          ></p>
+        </Col>
+      </Row>
+      <Row className="info-school-bottom">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 7, offset: 1 }}
+          className="custom-feeder"
+        >
+          <p
+            className="school-prose-bottom"
+            dangerouslySetInnerHTML={{
+              __html: getSchoolMetricList("bottom"),
+            }}
+          ></p>
         </Col>
       </Row>
       {/** Iterate through other categories */}

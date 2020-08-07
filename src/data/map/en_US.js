@@ -152,5 +152,7 @@ const en_US = {
   SCHOOL_PROSE_CRI_SCORE: `CRI Score`,
   SCHOOL_PROSE_QUINTILE_BELOW_FIFTH: `{schoolname} is in the {quintile} quintile of schools in our Community Resource Index. (School communities in the 5th quintile are the most asset-rich.) See below for a full breakdown of its resources by category and measure.`,
   SCHOOL_PROSE_QUINTILE_FIFTH: `{schoolname} is in the fifth quintile of schools in our Community Resource Index. (School communities in this quintile are the most asset-rich.) See below for a full breakdown of its resources by category and measure.`,
+  SCHOOL_PROSE_TOP: `This school is in the top quintile for {quintiles}.`,
+  SCHOOL_PROSE_BOTTOM: `This school is in the bottom quintile for {quintiles}.`,
 }
 export default en_US
