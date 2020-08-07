@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   // pathPrefix: "/cpal-site",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
+    title: `Community Resource Explorer`,
     description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
     author: `Billy Jacoby`,
     mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_TOKEN}`,

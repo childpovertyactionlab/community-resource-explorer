@@ -1,7 +1,8 @@
 import React from "react"
 import InlineSvg from "./inlineSvg"
+import { navigate } from "gatsby"
 
-const CustomLink = ({ children, underlined = true, onClick, type ="right-arrow" }) => {
+const CustomLink = ({ children, onClick, linkTo, underlined = true, type ="right-arrow" }) => {
   let classes = "custom-link "
   if (underlined) {
     classes += " underlined"
@@ -10,6 +11,10 @@ const CustomLink = ({ children, underlined = true, onClick, type ="right-arrow" 
   const handleClick = () => {
     if (onClick) {
       onClick()
+    }
+
+    if (linkTo) {
+      navigate(linkTo)
     }
   }
 

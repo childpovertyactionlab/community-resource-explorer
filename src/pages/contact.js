@@ -18,11 +18,12 @@ const Contact = ({ location }) => {
 
   return (
     <Layout id="contact-page" activePageId={pages.CONTACT.id}>
+      <SEO title="Contact" />
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 2, span: 5 }}
-          xl={{ offset: 2, span: 4 }}
+          md={{ offset: 2, span: 8 }}
+          // xl={{ offset: 4, span: 4 }}
         >
           <h1>Contact us</h1>
           <Form onSubmit={onSubmit} name="cre-contact" method="POST" data-netlify="true">

@@ -74,7 +74,6 @@ const data = [
 const Data = () => {
   return (
     <Layout pageInfo={{ pageName: "data" }} id="data-page">
-      <SEO title="FAQs" />
 
       <Row noGutters className="">
         <Col

@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 
-const Faqs = () => {
+const Faq = () => {
   return (
-    <Layout id="faqs-page" activePageId={pages.FAQ.id}>
-      <SEO title="FAQs" />
+    <Layout id="faq-page" activePageId={pages.FAQ.id}>
+      <SEO title="FAQ" />
 
       <Hero activePageId={pages.FAQ.id}>
         <div className="page-title-section">
@@ -31,4 +31,4 @@ const Faqs = () => {
   )
 }
 
-export default Faqs
+export default Faq

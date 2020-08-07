@@ -15,12 +15,12 @@ const ABOUT = {
 }
 const ACTION = {
   id: "action",
-  path: "/in-action",
+  path: "/in-action/",
   name: "Explorer in Action",
 }
 const FAQ = {
   id: "faq",
-  path: "/faqs",
+  path: "/faq",
   name: "FAQ & Methods",
 }
 const CONTACT = {
@@ -33,8 +33,8 @@ const CONTACT = {
 
 const ISD = {
   id: "isd",
-  path: "/isd",
-  name: "ISD",
+  path: "/dallas-isd",
+  name: "Dallas ISD",
 }
 
 const DATA = {

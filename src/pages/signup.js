@@ -17,6 +17,7 @@ const SignUp = ({ location }) => {
 
   return (
     <Layout id="signup-page" activePageId={pages.SIGNUP.id} disableFooter={true}>
+      <SEO title="Sign up" />
       <Helmet>
         <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Helmet>
@@ -24,8 +25,8 @@ const SignUp = ({ location }) => {
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 2, span: 5 }}
-          xl={{ offset: 2, span: 4 }}
+          md={{ offset: 2, span: 8 }}
+          // xl={{ offset: 4, span: 4 }}
         >
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
             <h2>

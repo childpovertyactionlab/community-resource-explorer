@@ -20,7 +20,7 @@ import field from "../images/field-wide.png"
 // import mapRect from "../images/map-rect.png"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
-import { navigateTo } from "gatsby"
+import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 
 const caroItems = [
@@ -174,7 +174,7 @@ const home = () => {
               <p className="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
               </p>
-              <p className="go-to" onClick={() => navigateTo(pages.EXPLORER.path)}>
+              <p className="go-to" onClick={() => navigate(pages.EXPLORER.path)}>
                 Go to the explorer <InlineSvg type="right-arrow" />
               </p>
             </div>

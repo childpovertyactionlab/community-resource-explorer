@@ -138,7 +138,7 @@ const isd = () => {
   
   return (
     <Layout id="isd-page" activePageId={pages.ISD.id}>
-      <SEO title="isd" />
+      <SEO title="Dallas ISD" />
 
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">
