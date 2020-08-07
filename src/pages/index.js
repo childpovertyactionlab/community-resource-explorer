@@ -99,7 +99,7 @@ const home = () => {
             All Dallas neighborhoods should have what they need to <span className="">thrive.</span>
           </p>
         </div>
-        <p className="caption">The Community Resource Explorer is a data tool that reveals where <span className="p-emphasis">assets</span> and <span className="p-emphasis">needs</span> exist so individuals and institutions can have the greatest impact.</p>
+        <p className="caption">The Community Resource Explorer is <span className="p-emphasis">a data tool that reveals where assets and needs exist</span> so individuals and institutions can have the greatest impact.</p>
         <InlineSvg type="down-arrow" />
       </Hero>
 
