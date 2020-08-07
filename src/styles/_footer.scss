@@ -4,8 +4,16 @@
   // min-height: 300px;
 
   .content {
-    margin-top: 10 * $spacer;
-    margin-bottom: 8 * $spacer;
+    margin-top: 8 * $spacer;
+    margin-bottom: 7 * $spacer;
+    @include media-breakpoint-up(md) {
+    }
+    @include media-breakpoint-up(lg) {
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 10 * $spacer;
+      margin-bottom: 8 * $spacer;
+    }
   }
 
   .branding-row {
@@ -18,34 +26,72 @@
       // flex-shrink: 0;
       .motto {
         width: 5 * $column;
-        font-size: 33.75px;
-        line-height: 37px;
+
+        font-size: 20px;
+        
+        line-height: 1.1;
         font-weight: $font-weight-bold;
         letter-spacing: -0.9375px;
         color: #818967;
         display: inline-block;
         position: absolute;
+        
+        @include media-breakpoint-up(md) {
+          font-size: 26px;
+          width: 6 * $column;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 30px;
+          width: 5 * $column;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 33.75px;
+          width: 4.5 * $column;
+        }
       }
 
       .cre-logo {
-        display: inline-block;
-        width: 44px;
+        width: 34px;
         height: 72px;
+        
+        display: inline-block;
         background-image: url("../images/menu-logo.svg");
         background-size: 100%;
         background-repeat: no-repeat;
-
+        
         margin-right: 2 * $spacer;
+        
+        @include media-breakpoint-up(md) {
+        }
+        @include media-breakpoint-up(lg) {
+          width: 40px;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 44px;
+        }
       }
     }
 
     .cpal-logo {
-      display: inline-block;
-      width: 128px;
+      width: 88px;
       height: 104px;
+      
+      display: inline-block;
       background-image: url("../images/cpal-logo.svg");
       background-size: 100%;
       background-repeat: no-repeat;
+      
+      @include media-breakpoint-up(md) {
+        width: 96px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 116px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 128px;
+        position: relative;
+        top: 2 * $spacer; // on xl screens, drop into empty space
+      }
     }
   }
 
@@ -55,13 +101,43 @@
     line-height: 24px;
     color: #61664D;
 
-    margin-top: 12 * $spacer;
+    margin-top: 2 * $spacer;
     padding-bottom: 2.5 * $spacer;
     border-bottom: 0.5px solid #CFD2C0;
+    margin-bottom: 2.5 * $spacer;
+    
+    @include media-breakpoint-only(xs) {
+      text-align: center;
+    }
+    @include media-breakpoint-up(md) {
+      margin-top: 4 * $spacer;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 7 * $spacer;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 12 * $spacer;
+    }
 
     span {
       margin-right: 4 * $spacer;
       display: inline-block;
+    }
+  }
+
+  .footnotes-row {
+    font-weight: $font-weight-light;
+    font-size: 13px;
+    color: #61664D;
+
+    @include media-breakpoint-only(xs) {
+      text-align: center;
+    }
+    
+    span:not(:last-of-type) {
+      padding-right: $spacer;
+      border-right: .5px solid #CFD2C0;
+      margin-right: $spacer;
     }
   }
 }

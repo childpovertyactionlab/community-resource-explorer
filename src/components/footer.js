@@ -26,6 +26,11 @@ const Footer = () => {
             })}
             <img src={twitterIcon} />
           </div>
+
+          <div className="footnotes-row">
+            <span>Map made possible by Mapbox</span>
+            <span>Site by Hyperobjekt</span>
+          </div>
         </div>
       </Col>
     </Row>
