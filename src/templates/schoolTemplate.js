@@ -144,7 +144,7 @@ const SchoolPage = ({ data, ...props }) => {
    * @return {[type]}     [description]
    */
   const getSchoolMetricList = topOrBottom => {
-    console.log("getSchoolMetricList")
+    // console.log("getSchoolMetricList")
     let metricArray = []
     if (topOrBottom === "top") {
       // console.log("top")
