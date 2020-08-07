@@ -18,6 +18,7 @@ const ExplorerPage = () => {
       disableFooter={true}
       disableHeader={true}
       activePageId={pages.EXPLORER.id}
+      className="p-0"
     >
       <SEO title="Explorer" />
       <Menu
