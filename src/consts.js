@@ -23,6 +23,14 @@ const FAQ = {
   path: "/faq",
   name: "FAQ & Methods",
 }
+
+const DATA = {
+  id: "data",
+  path: "/get-the-data",
+  name: "Get the data",
+  footerOnly: true,
+}
+
 const CONTACT = {
   id: "contact",
   path: "/contact",
@@ -44,12 +52,6 @@ const OPERATION = {
   name: "Operation Connectivity",
 }
 
-const DATA = {
-  id: "data",
-  path: "/get-the-data",
-  name: "Get the data",
-}
-
 const SIGNUP = {
   id: "signup",
   path: "/signup",
@@ -57,7 +59,7 @@ const SIGNUP = {
 }
 
 const pages = { HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT, OPERATION, ISD, DATA, SIGNUP }
-const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, CONTACT]
+const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, DATA, CONTACT]
 
 // keep in sync with $sticky-header-height in _variables.scss
 const stickyHeaderHeight = 64

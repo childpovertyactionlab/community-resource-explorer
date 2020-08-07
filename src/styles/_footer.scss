@@ -1,0 +1,67 @@
+.footer {
+  background: #EBEDE3;
+
+  // min-height: 300px;
+
+  .content {
+    margin-top: 10 * $spacer;
+    margin-bottom: 8 * $spacer;
+  }
+
+  .branding-row {
+    display: flex;
+    justify-content: space-between;
+
+    .logo-wrapper {
+      // flex-basis: 5 * $column;
+      // flex-grow: 0;
+      // flex-shrink: 0;
+      .motto {
+        width: 5 * $column;
+        font-size: 33.75px;
+        line-height: 37px;
+        font-weight: $font-weight-bold;
+        letter-spacing: -0.9375px;
+        color: #818967;
+        display: inline-block;
+        position: absolute;
+      }
+
+      .cre-logo {
+        display: inline-block;
+        width: 44px;
+        height: 72px;
+        background-image: url("../images/menu-logo.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        margin-right: 2 * $spacer;
+      }
+    }
+
+    .cpal-logo {
+      display: inline-block;
+      width: 128px;
+      height: 104px;
+      background-image: url("../images/cpal-logo.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .pages-row {
+    font-weight: $font-weight-light;
+    font-size: 14px;
+    line-height: 24px;
+    color: #61664D;
+
+    margin-top: 12 * $spacer;
+    padding-bottom: 2.5 * $spacer;
+    border-bottom: 0.5px solid #CFD2C0;
+
+    span {
+      margin-right: 4 * $spacer;
+      display: inline-block;
+    }
+  }
+}

@@ -8,7 +8,7 @@ import Hero from "../components/hero"
 import { pages } from "../consts"
 import _ from "lodash"
 
-const DEBUG = true
+const DEBUG = false
 
 const SignUp = ({ location }) => {
 

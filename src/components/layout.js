@@ -14,6 +14,7 @@ import Header from "./header"
 import Navbar from "./navBar"
 import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
+import Footer from "./footer"
 
 const Layout = ({ children, pageInfo, activePageId, id, disableHeader, disableFooter, ...props }) => (
   <StaticQuery
@@ -42,6 +43,7 @@ const Layout = ({ children, pageInfo, activePageId, id, disableHeader, disableFo
 
         <Container fluid className="px-0">
           {!disableFooter && <SignUpBar />}
+          {!disableFooter && <Footer />}
         </Container>
       </>
     )}

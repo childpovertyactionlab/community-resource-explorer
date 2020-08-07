@@ -32,7 +32,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
 
         <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
           <div className="menu-page-names-container">
-            {menuPages.map(page => {
+            {menuPages.filter(p => !p.footerOnly).map(page => {
               const nameClasses =
                 "menu-page-name" + (page.id === activePageId ? " active" : "")
               const navigateToPage = () => {
