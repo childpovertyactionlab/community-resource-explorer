@@ -13,7 +13,7 @@ import NonInteractiveScale from "./../components/NonInteractiveScale"
 import SEO from "../components/seo"
 import MAP_STYLE from "./../data/map/cpalStyle"
 import en_US from "./../data/map/en_US"
-import { getRoundedValue, getHashLeft } from "./utils/utils"
+import { getRoundedValue, getHashLeft, getQuintileDesc } from "./utils/utils"
 import {
   CRI_COLORS,
   ECON_COLORS,
@@ -58,6 +58,7 @@ const SchoolPage = ({ data, ...props }) => {
     latitude: school.POINT_Y,
     longitude: school.POINT_X,
     zoom: 11,
+    preserveDrawingBuffer: true,
   }
   // Build the json for the school zone source
   const zoneJson = {
@@ -98,10 +99,11 @@ const SchoolPage = ({ data, ...props }) => {
   }
 
   const getCustomFeederProse = feeder => {
+    // console.log("getCustomFeederProse", feeder, String(feeder).toLowerCase)
     const obj = { __html: "" }
-    if (feeder.toLowerCase === "spruce") {
+    if (feeder.toLowerCase() === "spruce") {
       obj.__html = i18n.translate("SCHOOL_PROSE_FEEDER_SPRUCE")
-    } else if (feeder.toLowerCase === "lincoln") {
+    } else if (feeder.toLowerCase() === "lincoln") {
       obj.__html = i18n.translate("SCHOOL_PROSE_FEEDER_LINCOLN")
     } else {
       obj.__html = i18n.translate("SCHOOL_PROSE_FEEDER_GENERIC")
@@ -117,8 +119,18 @@ const SchoolPage = ({ data, ...props }) => {
     })
   }
 
-  // This school is in the top quintile for [measure 1], [measure 2], [measure 3], etc.
-  // This school is in the bottom quintile for [measure 1], [measure 2], [measure 3], etc.
+  const getQuintileRobotext = (schoolname, quintile) => {
+    if (quintile === 4) {
+      return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
+        schoolname: schoolname,
+      })
+    } else {
+      return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
+        schoolname: schoolname,
+        quintile: getQuintileDesc(quintile).toLowerCase(),
+      })
+    }
+  }
 
   return (
     <Layout
@@ -207,8 +219,28 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
       </Row>
       <Row className="custom-feeder-prose">
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 7, offset: 1 }}>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 7, offset: 1 }}
+          className="custom-feeder"
+        >
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
+        </Col>
+      </Row>
+      <Row className="info-robotext">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 7, offset: 1 }}
+          className="custom-feeder"
+        >
+          <div
+            dangerouslySetInnerHTML={{
+              __html: getQuintileRobotext(
+                school.SCHOOLNAME,
+                school.cri_weight_quintile
+              ),
+            }}
+          />
         </Col>
       </Row>
       {/** Iterate through other categories */}

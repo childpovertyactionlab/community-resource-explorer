@@ -26,14 +26,19 @@
         h4 {
           font-size: 2rem;
         }
+        .n-i-scale {
+          width: 92%;
+        }
       }
     }
-    &.custom-feeder-prose {
+    &.custom-feeder-prose,
+    &.info-robotext {
       font-weight: 300;
       font-size: 1.4rem;
     }
   }
   .row-metric-group {
+    page-break-inside: avoid;
     &:last-of-type {
       margin-bottom: 6rem;
     }
@@ -78,7 +83,7 @@
       margin-top: 0px;
     }
     .n-i-scale-hash {
-      top: -3px !important;
+      top: 1px !important;
     }
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles:after {
       top: 6px;
@@ -98,6 +103,26 @@
     * {
       -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
       color-adjust: exact !important; /*Firefox*/
+    }
+    .sticky-header {
+      display: none !important;
+    }
+    // Hide menu elements
+    .school-hero {
+      .menu-section,
+      .menu-component .menu-panel {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+      }
+    }
+    // Hide footer
+    .row {
+      .sign-up-bar.contents {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+      }
     }
   }
 }
