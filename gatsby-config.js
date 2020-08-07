@@ -6,8 +6,8 @@ module.exports = {
   // pathPrefix: "/cpal-site",
   siteMetadata: {
     title: `Community Resource Explorer`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
-    author: `Billy Jacoby`,
+    description: `All Dallas neighborhoods should have what they need to thrive.`,
+    author: `Child Poverty Action Lab`,
     mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_TOKEN}`,
   },
   plugins: [
