@@ -14,15 +14,25 @@
     margin-top: $inter-spacer-xs;
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
+      margin-top: 4rem;
       margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-md;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: $inter-spacer-xl;
+      margin-top: 5.6rem;
+      margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-xl;
     }
   }
 
+  .cre-rect {
+    @include media-breakpoint-up(md) {
+      margin-top: 4rem;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 5.6rem;
+    }
+  }
 
   #hero {
     .color-section {
@@ -41,6 +51,12 @@
 
     .content {
       padding-bottom: 5 * $spacer;
+      @include media-breakpoint-only(lg) {
+        padding-bottom: 10 * $spacer;
+        .caption {
+          margin-bottom: 2.4rem;
+        }
+      }
       .page-title-section {
         .subtitle {
           max-width: unset;
@@ -97,6 +113,40 @@
 
   .quote {
     @include quote-styles;
+  
+     
+        background: $bridal-heath;
+      &.light, &.dark {
+        .text {
+          border-top: 4px solid $cinnabar;
+          border-bottom: none !important;
+          padding-top: 4 * $spacer;
+          padding-bottom: 4 * $spacer;
+          margin-bottom: 0 * $spacer;
+          
+          @include media-breakpoint-up(md) {
+            padding-top: 4 * $spacer;
+            padding-bottom: 4 * $spacer;
+            margin-bottom: 0 * $spacer;
+          }
+          @include media-breakpoint-up(xl) {
+            padding-top: 4 * $spacer;
+            padding-bottom: 4 * $spacer;
+            margin-bottom: 0 * $spacer;
+          }
+        }
+      }
+    &.dark:not(.no-border) {
+      .superheading {
+        padding-bottom: 1.6rem;
+      }
+      .text {
+        border-top: none;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
   }
 
   .quote-with-image { 
@@ -240,6 +290,9 @@
           }
           font-weight: $font-weight-light;
           line-height: 1.5;
+          &.description-medium {
+            font-weight: 400;
+          }
         }
         .go-to {
           font-size: 15px;

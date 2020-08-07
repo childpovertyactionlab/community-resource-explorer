@@ -76,14 +76,17 @@ const caroItems = [
 ]
 
 const q1 = {
+  superhead: `Voices from the Community`,
   text: `Affordable housing is one of [our] greatest needs. Other economic hardships stem from that. If my housing isn't affordable, everything else is less affordable.`,
   attribution: "Pleasant Grove assistant principal",
 }
 const q2 = {
+  superhead: `Voices from the Community`,
   text: `There is no safe place for students just to be young people in the community.`,
   attribution: "Dallas ISD Trustee",
 }
 const q3 = {
+  superhead: `Voices from the Community`,
   text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
   attribution: "Pleasant Grove Resident",
 }
@@ -99,7 +102,7 @@ const home = () => {
             All Dallas neighborhoods should have what they need to <span className="">thrive.</span>
           </p>
         </div>
-        <p className="caption">The Community Resource Explorer is a data tool that reveals where <span className="p-emphasis">assets</span> and <span className="p-emphasis">needs</span> exist so individuals and institutions can have the greatest impact.</p>
+        <p className="caption">The Community Resource Explorer is <span className="p-emphasis">a data tool that reveals where assets and needs exist</span> so individuals and institutions can have the greatest impact.</p>
         <InlineSvg type="down-arrow" />
       </Hero>
 
@@ -120,6 +123,9 @@ const home = () => {
           md={{ offset: 1, span: 6 }}
           className="quote-by-image quote light no-bg p-0"
         >
+          <div className="superheading">
+            {q1.superhead}
+          </div>
           <div className="text">
             “{q1.text}”
           </div>
@@ -150,6 +156,9 @@ const home = () => {
           xl={{ offset: 5, span: 5 }}
           className="quote-under-image quote dark no-bg no-border p-0"
         >
+          <div className="superheading">
+            {q1.superhead}
+          </div>
           <div className="text">
             “{q2.text}”
             <div className="attribution">
@@ -169,11 +178,14 @@ const home = () => {
           </div>
           <div className="content">
             <div className="text">
+            <p className="description description-medium">
+                Learn more about Dallas ISD's assets and needs by using the
+              </p>
               <h1 className="">
                 Community Resource Explorer
               </h1>
               <p className="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
+                Get data on schools and their surrounding communities, download reports, and more.
               </p>
               <div className="go-to" onClick={() => navigate(pages.EXPLORER.path)}>
                 Go to the explorer <InlineSvg type="right-arrow" />
@@ -193,7 +205,11 @@ const home = () => {
           <div className="quote-with-image">
 
             <div className="quote dark">
+            
               <div className="text">
+              <div className="superheading">
+                {q1.superhead}
+              </div>
                 “{q3.text}”
                 <div className="attribution">
                   {q3.attribution}

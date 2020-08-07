@@ -128,17 +128,6 @@ export const getRoundedValue = (
   if (!!isCurrency) {
     fixed = "$" + fixed
   }
-  if (value === 0.000273887120175821) {
-    console.log("getRoundedValue()", decimals)
-    console.log(
-      "this is it ===>" + value,
-      +" " +
-        type +
-        " " +
-        Number(value.toFixed(decimals) + " " + Number(+value.toFixed(decimals)))
-    )
-    console.log("fixed, ", fixed)
-  }
 
   return fixed
 }

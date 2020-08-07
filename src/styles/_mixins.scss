@@ -33,6 +33,9 @@
     position: relative;
     top: 7px;
     margin-right: 5px;
+    margin-right: 8px;
+     // updating per A's request, may change back
+
   }
   
   .site-title {
@@ -43,11 +46,24 @@
     /* or 100% */
     color: $shark;
     mix-blend-mode: normal;
+    // updating per A's request, may change back
+    color: #484e56;
+    font-weight: 400;  
     // _______
   }
 }
 
 @mixin quote-styles {
+
+  .superheading {
+    font-family: Louize Display;
+    font-style: italic;
+    color: #E94F34;
+    font-size: 16px;
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
+  }
   .text {
     font-family: Louize Display;
     font-weight: $font-weight-bold;
