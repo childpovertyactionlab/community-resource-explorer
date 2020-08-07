@@ -15,10 +15,12 @@
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
       margin-top: 4rem;
+      margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-md;
     }
     @include media-breakpoint-up(xl) {
       margin-top: 5.6rem;
+      margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-xl;
     }
   }
