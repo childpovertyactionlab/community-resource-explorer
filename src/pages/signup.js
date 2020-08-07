@@ -39,7 +39,7 @@ const SignUp = ({ location }) => {
             </p>
 
             <input type="hidden" name="oid" value="00D1U00000110AJ" />
-            <input type="hidden" name="retURL" value="https://dallasisd.resourceexplorer.org/" />
+            <input type="hidden" name="retURL" value="https://dallasisd.resourceexplorer.org/thank-you" />
 
             {DEBUG && <>
               <input type="hidden" name="debug" value="1" />

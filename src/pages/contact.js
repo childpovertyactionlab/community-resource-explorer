@@ -12,8 +12,8 @@ import { navigate } from "gatsby"
 const Contact = ({ location }) => {
 
   const onSubmit = e => {
-    // console.log(e.currentTarget.form.checkValidity())
-    navigate(pages.HOME.path)
+    console.log(pages.THANKS.path)
+    navigate(pages.THANKS.path)
   }
 
   return (

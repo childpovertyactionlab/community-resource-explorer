@@ -70,7 +70,8 @@ const InAction = () => {
         </Col>
 
         {data.allFile.edges.map(b => {
-          console.log(b)
+          // console.log(b)
+          
           const src = b.node.publicURL
           return (
             <Row className="post-section">
