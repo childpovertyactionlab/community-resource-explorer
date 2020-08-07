@@ -1,18 +1,21 @@
 import React, { useState } from "react"
 // import { Link } from "gatsby"
-import { useStaticQuery, graphql, navigateTo } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
-import SEO from "../components/seo"
+import SEO from "../../components/seo"
 // import { Link } from "react-scroll"
-import Hero from "../components/hero"
-import CustomLink from "../components/customLink"
-import { pages } from "../consts"
+import Hero from "../../components/hero"
+import CustomLink from "../../components/customLink"
+import { pages } from "../../consts"
 
-import soccer from "../images/soccer.png"
+import soccer from "../../images/soccer.png"
 
-const Faqs = () => {
+// TODOcms activate when we have more posts than can be shown at once
+const SHOW_MORE_BUTTON = false
+
+const InAction = () => {
   const [expandedMap, setState] = useState({})
 
   const toggleExpansion = (uid, expand) => {
@@ -25,6 +28,7 @@ const Faqs = () => {
   const [hidden, setHidden] = useState(false)
   const toggleHidden = () => setHidden(!hidden)
 
+  // TODOcms update
   const data = useStaticQuery(graphql`
     {
       allFile(
@@ -55,7 +59,7 @@ const Faqs = () => {
           How we’re informing policy and community understanding in Dallas
         </div>
         <CustomLink
-          onClick={() => navigateTo(pages.ISD.path)}
+          linkTo={pages.ISD.path}
           underlined={false}
         >Read post</CustomLink>
       </Hero>
@@ -66,7 +70,7 @@ const Faqs = () => {
         </Col>
 
         {data.allFile.edges.map(b => {
-          // console.log(b)
+          console.log(b)
           const src = b.node.publicURL
           return (
             <Row className="post-section">
@@ -95,18 +99,18 @@ const Faqs = () => {
                 {" "}
                 </div>
 
-                <CustomLink>Read post</CustomLink>
+                <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
               </Col>
             </Row>
           )
         })}
 
-        <Col xs={12} className="load-more text-center">
+        {SHOW_MORE_BUTTON && <Col xs={12} className="load-more text-center">
           <Button variant="outline-dark">Load more posts</Button>
-        </Col>
+        </Col>}
       </Row>
     </Layout>
   )
 }
 
-export default Faqs
+export default InAction

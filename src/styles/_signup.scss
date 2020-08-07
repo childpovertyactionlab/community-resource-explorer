@@ -19,12 +19,17 @@
   }
 
   label {
-    font-size: 14px;
-    margin-top: $spacer;
-    margin-right: $spacer;
+    font-size: 16px;
+    margin-top: 1.5 * $spacer;
+
+    &.required::after {
+      content: "*";
+      padding-left: 2px;
+      color: $cinnabar;
+    }
   }
 
-  .form-submit {
-    margin-top: 2 * $spacer;
+  button {
+    margin-top: 1.5 * $spacer;
   }
 }

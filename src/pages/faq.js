@@ -139,7 +139,7 @@ const lorem1 = {
 
 const sections = [how, purpose, methods, lorem1]
 
-const Faqs = () => {
+const Faq = () => {
   const [expandedMap, setState] = useState({})
 
   const toggleExpansion = (uid, expand) => {
@@ -168,7 +168,7 @@ const Faqs = () => {
                 spy={true}
                 to={s.id + "-section"}
                 offset={-stickyHeaderHeight}
-                // containerId="faqs-page"
+                // containerId="faq-page"
               >
                 {s.title.join(" ")}
               </Link>
@@ -184,7 +184,7 @@ const Faqs = () => {
             smooth={true}
             to="methods"
             offset={-stickyHeaderHeight}
-            // containerId="faqs-page"
+            // containerId="faq-page"
           >
             Methods Paper
           </Link>
@@ -279,8 +279,8 @@ const Faqs = () => {
   }
 
   return (
-    <Layout id="faqs-page" activePageId={pages.FAQ.id}>
-      <SEO title="FAQs" />
+    <Layout id="faq-page" activePageId={pages.FAQ.id}>
+      <SEO title="FAQ" />
 
       <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
         <div className="page-title-section">
@@ -328,4 +328,4 @@ const Faqs = () => {
   )
 }
 
-export default Faqs
+export default Faq

@@ -34,7 +34,7 @@ const numberedPoints = [
 const about = () => {
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
-      <SEO title="about" />
+      <SEO title="About" />
 
       <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
         <div className="page-title-section">

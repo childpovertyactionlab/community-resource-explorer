@@ -1,0 +1,18 @@
+#contact-page {
+  margin-top: 14 * $spacer;
+
+  label {
+    font-size: 16px;
+    margin-top: 1.5 * $spacer;
+
+    &::after {
+      content: "*";
+      padding-left: 2px;
+      color: $cinnabar;
+    }
+  }
+
+  button {
+    margin-top: 1.5 * $spacer;
+  }
+}

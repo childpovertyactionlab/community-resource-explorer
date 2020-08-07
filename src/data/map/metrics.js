@@ -504,7 +504,7 @@ export const CPAL_METRICS = [
     tab: "edu",
     tab_level: 1,
     tooltip: 0,
-    decimals: 2,
+    decimals: 4,
   },
   {
     id: "fam_affcckids",
@@ -516,7 +516,7 @@ export const CPAL_METRICS = [
     tab: "fam",
     tab_level: 1,
     tooltip: 0,
-    decimals: 3,
+    decimals: 4,
   },
   {
     id: "fam_lcckids",

@@ -15,7 +15,7 @@ import Navbar from "./navBar"
 import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
 
-const Layout = ({ children, pageInfo, activePageId, id, disableSignup, ...props }) => (
+const Layout = ({ children, pageInfo, activePageId, id, disableHeader, disableFooter, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -30,7 +30,7 @@ const Layout = ({ children, pageInfo, activePageId, id, disableSignup, ...props 
     render={data => (
       <>
         <Container fluid className={clsx("main", props.className)}>
-          <StickyHeader activePageId={activePageId} />
+          {!disableHeader && <StickyHeader activePageId={activePageId} />}
           <Row noGutters>
             <Col className="p-0">
               {/* <Container className="mt-5"> */}
@@ -41,7 +41,7 @@ const Layout = ({ children, pageInfo, activePageId, id, disableSignup, ...props 
         </Container>
 
         <Container fluid className="px-0">
-          {!disableSignup && <SignUpBar />}
+          {!disableFooter && <SignUpBar />}
         </Container>
       </>
     )}

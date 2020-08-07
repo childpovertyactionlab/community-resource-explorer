@@ -1,11 +1,11 @@
 import React from "react"
 
 import { Col, Row } from "react-bootstrap"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import { pages } from "../consts"
-import isdHero from "../images/isd-hero.png"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import Hero from "../../components/hero"
+import { pages } from "../../consts"
+import isdHero from "../../images/isd-hero.png"
 
 const content = [
   {
@@ -138,7 +138,7 @@ const isd = () => {
   
   return (
     <Layout id="isd-page" activePageId={pages.ISD.id}>
-      <SEO title="isd" />
+      <SEO title="Dallas ISD" />
 
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">

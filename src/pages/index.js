@@ -18,9 +18,10 @@ import reading from "../images/reading.png"
 import forest from "../images/forest-wide.png"
 import field from "../images/field-wide.png"
 // import mapRect from "../images/map-rect.png"
+import computer from "../images/student-computer2.jpg"
 import portrait from "../images/child-portrait-3:4.png"
 import CustomCarousel from "../components/customCarousel"
-import { navigateTo } from "gatsby"
+import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 
 const caroItems = [
@@ -174,9 +175,9 @@ const home = () => {
               <p className="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vitae nulla pretium, cras tellus, at morbi tris
               </p>
-              <p className="go-to" onClick={() => navigateTo(pages.EXPLORER.path)}>
+              <div className="go-to" onClick={() => navigate(pages.EXPLORER.path)}>
                 Go to the explorer <InlineSvg type="right-arrow" />
-              </p>
+              </div>
             </div>
           </div>
 
@@ -211,7 +212,7 @@ const home = () => {
           <span className="custom-underline">Recent blog</span> posts
         </Col>
 
-        {/* TODOxx: pinned blog post here */}
+        {/* TODOcms: pinned blog post here, dynamically create below */}
 
         <Col
           className="post-section p-0"
@@ -235,7 +236,7 @@ const home = () => {
                 ipsum, egestas ligula duis ipsum pellentesque{" "}
             </div>
 
-            <CustomLink>Read post</CustomLink>
+            <CustomLink linkTo={pages.ISD.path}>Read post</CustomLink>
           </div>
         </Col>
         <Col
@@ -246,21 +247,20 @@ const home = () => {
           <figure
             className="post-image p-0"
             >
-            <img src={field} />
+            <img src={computer} />
           </figure>
 
           <div className="post-details p-0">
             <div className="post-title">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              More than ever, Dallas students need reliable broadband. Here's how the CRE is helping.
             </div>
 
             <div className="post-contents">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-              vitae nulla pretium, cras tellus, at morbi tristique. Ac
-                ipsum, egestas ligula duis ipsum pellentesque{" "}
+              In 2020, access to the internet is a must-have utility. But despite the internet's apparent ubiquity, 42% of Dallas households lack fixed internet access, according to Census data.
+              {" "}
             </div>
 
-            <CustomLink>Read post</CustomLink>
+            <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
           </div>
         </Col>
 

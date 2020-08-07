@@ -7,6 +7,8 @@ import Hero from "../components/hero"
 import { pages } from "../consts"
 import isdHero from "../images/student-computer2.jpg"
 
+// TODOcms collapse into isd template
+
 const content = [
   {
     type: "section",
@@ -93,7 +95,7 @@ const isd = () => {
   
   return (
     <Layout id="isd-page" activePageId={pages.ISD.id}>
-      <SEO title="isd" />
+      <SEO title="Operation Connectivity" />
 
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">

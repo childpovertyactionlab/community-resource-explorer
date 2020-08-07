@@ -5,11 +5,19 @@ import { menuPages } from "../consts"
 import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 
-const Menu = ({ activePageId }) => {
-  const [menuOpen, setMenuOpen] = useState(false)
+const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
+
+  let [menuOpen, setMenuOpen] = useState(false)
+
+  if (controlled) {
+    // if the component is controlled (for Explorer), use the passed in handler and state. otherwise operate as normal
+    menuOpen = open
+    setMenuOpen = setMenuOpenHandler
+  }
+
   const toggleMenuOpen = () => setMenuOpen(!menuOpen)
   const closeMenu = () => setMenuOpen(false)
-
+    
   const getMenuPanel = () => {
     return (
       <Row noGutters className="menu-panel" onWheel={closeMenu} onScroll={closeMenu}>
@@ -22,7 +30,7 @@ const Menu = ({ activePageId }) => {
           {/* <span className="text">DALLAS ISD</span> */}
         </Col>
 
-        <Col className="menu-page-names-col" xs={5}>
+        <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
           <div className="menu-page-names-container">
             {menuPages.map(page => {
               const nameClasses =
@@ -43,10 +51,10 @@ const Menu = ({ activePageId }) => {
             })}
           </div>
         </Col>
-        <Col className="equipped">
-          <div className="text">
-            <div>All Dallas neighborhoods<br></br>should have what they need<br></br>to thrive.</div>
-          </div>
+        <Col className="equipped" xs={0} md={5} xl={{ offset: 1, span: 4 }}>
+          <p className="text">
+            All Dallas neighborhoods should have what they need to thrive.
+          </p>
         </Col>
         <Col className="mask" onClick={closeMenu} onWheel={closeMenu} onScroll={closeMenu}>
         </Col>
@@ -54,15 +62,24 @@ const Menu = ({ activePageId }) => {
     )
   }
 
-  const classes = "menu-component" + (menuOpen ? " open" : "")
-
-  return (
-    <div className={classes}>
+  const getMenuButton = () => {
+    if (controlled) {
+      return
+    }
+    return (
       <span onClick={toggleMenuOpen} className="menu-icon-group">
         <span className="menu-icon svg-base"></span>
         Menu
       </span>
+    )
+  }
 
+  const classes = "menu-component" + (menuOpen ? " open" : "")
+
+  console.log(classes)
+  return (
+    <div className={classes}>
+      {getMenuButton()}
       {getMenuPanel()}
     </div>
   )

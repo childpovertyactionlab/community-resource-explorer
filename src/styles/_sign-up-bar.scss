@@ -5,9 +5,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1400px;
+
     margin-left: auto;
     margin-right: auto;
+    padding-left: $column;
+    padding-right: $column;
 
     padding-top: 5 * $spacer;
     padding-bottom: 5 * $spacer;
@@ -36,7 +39,6 @@
         flex-shrink: 0;
         max-width: 450px;
         
-        margin-left: 5 * $spacer;
         margin-right: 5 * $spacer;
       }
       .email-input-wrapper {
@@ -45,12 +47,11 @@
         flex-shrink: 0;
         max-width: 250px;
         
-        margin-right: 5 * $spacer;
+        margin-right: 2 * $spacer;
         
       }
       .custom-link {
         
-        margin-right: 5 * $spacer;
       }
     }
     
@@ -62,7 +63,10 @@
     .email-label {
       text-align: center;
       color: $cinnabar;
-      font-size: 30px;
+      font-size: 26px;
+      @include media-breakpoint-up(xl) {
+        font-size: 30px;
+      }
     }
 
     .email-input-wrapper {

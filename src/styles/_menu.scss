@@ -1,9 +1,11 @@
 .menu-component {
-
   $top-buffer: 3.5 * $spacer;
   $bottom-buffer: 6.5 * $spacer;
+  
+  position: relative;
+  z-index: 5000; // for staying above Explorer
+  // z-index: 100;
 
-  z-index: 100;
   .menu-panel {
 
     .mask {
@@ -87,11 +89,17 @@
       }
     }
 
-    .equipped .text {
-      position: absolute;
-      bottom: $bottom-buffer;
-      color: $flax-smoke;
-      font-weight: $font-weight-bold;
+    .equipped {
+      @include media-breakpoint-only(xs) {
+        display: none;  
+      }
+      
+      .text {
+        position: absolute;
+        bottom: $bottom-buffer;
+        color: $flax-smoke;
+        font-weight: $font-weight-bold;
+      }
     }
     .menu-page-names-container {
       padding-top: 20 * $spacer;
