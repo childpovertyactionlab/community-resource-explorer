@@ -101,7 +101,6 @@
     line-height: 24px;
     color: #61664D;
 
-    margin-top: 2 * $spacer;
     padding-bottom: 2.5 * $spacer;
     border-bottom: 0.5px solid #CFD2C0;
     margin-bottom: 2.5 * $spacer;
@@ -110,13 +109,13 @@
       text-align: center;
     }
     @include media-breakpoint-up(md) {
-      margin-top: 4 * $spacer;
+      margin-top: 2 * $spacer;
     }
     @include media-breakpoint-up(lg) {
-      margin-top: 7 * $spacer;
+      margin-top: 5 * $spacer;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 12 * $spacer;
+      margin-top: 8 * $spacer;
     }
 
     span {
