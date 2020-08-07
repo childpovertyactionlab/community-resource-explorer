@@ -9,7 +9,7 @@ import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
 import { pages, stickyHeaderHeight } from "../consts"
 
-import portrait from "../images/faq-portrait.png"
+import portrait from "../images/map-stylized2.jpg"
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
