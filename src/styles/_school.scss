@@ -3,6 +3,12 @@
     position: relative;
     .map-section {
       min-height: 300px;
+      cursor: default;
+      .map-parent {
+        & > div {
+          cursor: default !important;
+        }
+      }
     }
   }
   .row {
