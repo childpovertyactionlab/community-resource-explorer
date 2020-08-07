@@ -1,11 +1,11 @@
 import React from "react"
 
 import { Col, Row } from "react-bootstrap"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import { pages } from "../consts"
-import isdHero from "../images/isd-hero.png"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import Hero from "../../components/hero"
+import { pages } from "../../consts"
+import isdHero from "../../images/isd-hero.png"
 
 const content = [
   {

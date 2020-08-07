@@ -1,10 +1,8 @@
 import React from "react"
 
-import { Col, Row, Collapse, Table } from "react-bootstrap"
+import { Col, Row, Table } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
-import { pages } from "../consts"
 
 const headers = ['Dataset','Description','Geography','Link',]
 
@@ -74,7 +72,7 @@ const data = [
 const Data = () => {
   return (
     <Layout pageInfo={{ pageName: "data" }} id="data-page">
-
+      <SEO title="Get the data" />
       <Row noGutters className="">
         <Col
           className="title mx-md-auto"

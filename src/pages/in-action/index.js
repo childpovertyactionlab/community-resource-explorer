@@ -2,15 +2,15 @@ import React, { useState } from "react"
 // import { Link } from "gatsby"
 import { useStaticQuery, graphql, navigate } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { Accordion, Button, Card, Col, Row, Collapse } from "react-bootstrap"
-import SEO from "../components/seo"
+import SEO from "../../components/seo"
 // import { Link } from "react-scroll"
-import Hero from "../components/hero"
-import CustomLink from "../components/customLink"
-import { pages } from "../consts"
+import Hero from "../../components/hero"
+import CustomLink from "../../components/customLink"
+import { pages } from "../../consts"
 
-import soccer from "../images/soccer.png"
+import soccer from "../../images/soccer.png"
 
 // TODOcms activate when we have more posts than can be shown at once
 const SHOW_MORE_BUTTON = false
@@ -59,7 +59,7 @@ const InAction = () => {
           How we’re informing policy and community understanding in Dallas
         </div>
         <CustomLink
-          onClick={() => navigate(pages.ISD.path)}
+          linkTo={pages.ISD.path}
           underlined={false}
         >Read post</CustomLink>
       </Hero>
@@ -99,7 +99,7 @@ const InAction = () => {
                 {" "}
                 </div>
 
-                <CustomLink linkTo="/operation-connectivity">Read post</CustomLink>
+                <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
               </Col>
             </Row>
           )
