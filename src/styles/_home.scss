@@ -25,6 +25,14 @@
     }
   }
 
+  .cre-rect {
+    @include media-breakpoint-up(md) {
+      margin-top: 4rem;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 5.6rem;
+    }
+  }
 
   #hero {
     .color-section {
