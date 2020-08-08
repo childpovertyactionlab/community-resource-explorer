@@ -37,9 +37,9 @@ const caroItems = [
     src: running,
     alt: 's2',
     stat1num: 82,
-    stat2num: 75,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 2',
+    stat2num: 48,
+    stat1text: 'of DISD campus communities are more likely to have public health insurance than privately-offered plans.',
+    stat2text: "of DISD's communities have a life expectancy of less than the 72 years, the median expected age for the entire District.",
   },
   { 
     src: hugging,

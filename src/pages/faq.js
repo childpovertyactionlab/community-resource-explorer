@@ -286,7 +286,7 @@ const Faq = () => {
         <div className="page-title-section">
           <div className="title">Frequently Asked Questions</div>
           <div className="subtitle">
-            Have questions about our data or the explorer?
+            Have questions about our data or the Explorer?
           </div>
         </div>
       </Hero>

@@ -412,7 +412,7 @@
           vertical-align: top;
 
           @include media-breakpoint-up(xl) {
-            margin-right: 2 * $text-panel-buffer;
+            margin-right: 1 * $text-panel-buffer;
           }
         }
       }
