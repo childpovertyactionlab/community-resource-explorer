@@ -28,50 +28,38 @@ const caroItems = [
   { 
     src: couching,
     alt: 's1',
-    stat1num: 81,
-    stat2num: 76,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 1',
+    indexName: "Insights from the Education Index",
+    stat1num: 33,
+    stat2num: 20,
+    stat1text: "of DISD campus communities lack access to high-rate, quality early childhood education programs.",
+    stat2text: "of adults in 45% of DISD campus communities have completed at least a Bachelor's degree.",
   },
   { 
     src: running,
     alt: 's2',
+    indexName: "Insights from the Health Index",
     stat1num: 82,
     stat2num: 48,
     stat1text: 'of DISD campus communities are more likely to have public health insurance than privately-offered plans.',
     stat2text: "of DISD's communities have a life expectancy of less than the 72 years, the median expected age for the entire District.",
   },
   { 
-    src: hugging,
-    alt: 's3',
-    stat1num: 83,
-    stat2num: 74,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 3',
-  },
-  { 
     src: swinging,
     alt: 's4',
-    stat1num: 84,
-    stat2num: 73,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 4',
-  },
-  { 
-    src: reading,
-    alt: 's5',
-    stat1num: 85,
-    stat2num: 72,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 5',
+    indexName: "Insights from the Community Index",
+    stat1num: 35,
+    stat2num: 16,
+    stat1text: 'of Dallas schools have less than 1/10th of a square mile of parks nearby.',
+    stat2text: 'of campuses have more than 1 square mile of parks in their area.',
   },
   { 
     src: goalie,
-    alt: 's6',
-    stat1num: 85,
-    stat2num: 71,
-    stat1text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 6',
-    stat2text: 'Lorem ipsum dolor sit amet, consectetur adipiscing 6',
+    alt: 's5',
+    indexName: "Insights from the Economic Index",
+    stat1num: 28,
+    stat2num: 5,
+    stat1text: 'The median unemployment rate for youth between the ages of 16-24.',
+    stat2text: 'The unemployment rate for all adults in Dallas.',
   },
 ]
 
@@ -257,9 +245,7 @@ const home = ({ location }) => {
             </div>
 
             <div className="post-contents">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-              vitae nulla pretium, cras tellus, at morbi tristique. Ac
-                ipsum, egestas ligula duis ipsum pellentesque{" "}
+            Dallas ISD has courageously recognized that “intentional decisions . . .have led to racial and economic segregation that produced major inequities that persist to this day” and is determined to right the wrongs of the past.{" "}
             </div>
 
             <CustomLink linkTo={pages.ISD.path}>Read post</CustomLink>

@@ -36,7 +36,7 @@ const CustomCarousel = ({ items }) => {
     )
   }
 
-  const { stat1num, stat2num, stat1text, stat2text } = items[index]
+  const { indexName, stat1num, stat2num, stat1text, stat2text } = items[index]
 
   return (
     <Col
@@ -58,6 +58,7 @@ const CustomCarousel = ({ items }) => {
       <div className="caro-text-panel">
 
         <div className="statistics">
+          <div className="index-name">{indexName}</div>
           <div className="statistic stat-1">
             <span className="number">{stat1num}</span>
             <span className="percent">%</span>

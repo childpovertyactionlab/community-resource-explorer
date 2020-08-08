@@ -24,6 +24,18 @@
       margin-bottom: $inter-spacer-xl;
     }
   }
+  #page {
+    margin-bottom: 3.2rem;
+    @include media-breakpoint-up(md) {
+      margin-top: 4rem;
+      margin-top: $inter-spacer-md;
+      margin-bottom: 4rem;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 5.6rem;
+    }
+
+  }
 
   .cre-rect {
     @include media-breakpoint-up(md) {
@@ -371,6 +383,15 @@
 
       .statistics {
         position: relative;
+        .index-name {
+          font-weight: 400;
+          font-size: 18px;
+          color: #d8ccff;
+          margin-bottom: 2.4rem;
+          @include media-breakpoint-up(xl) {
+            font-size: 20px;
+          }
+        }
       }
       .statistic {
         margin-bottom: 3 * $spacer;
@@ -451,11 +472,14 @@
 
   .recent {
     margin-top: $inter-spacer-xs;
+    margin-top: 4.8rem;
     @include media-breakpoint-up(md) {
       margin-top: $inter-spacer-md;
+      margin-top: 7.2rem;
     }
     @include media-breakpoint-up(xl) {
       margin-top: $inter-spacer-xl;
+      margin-top: 9.6rem;
     }
   }
   
@@ -464,8 +488,9 @@
 
     .post-image {
       width: 100%;
-      height: 80%; // fiddle here to change aspect ratio
+      height: 320px; // fiddle here to change aspect ratio
       background-size: cover;
+      background-position: center top;
       &.forest {
         background-image: url("../images/forest-wide.png");
       }
@@ -482,7 +507,7 @@
     }
     
     .post-image {
-      margin: 0 !important;
+      margin: 0 0 1.6rem !important;
     }
   }
 }
