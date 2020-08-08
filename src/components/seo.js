@@ -59,10 +59,10 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           name: `twitter:card`,
           content: `summary`,
         },
-        // {
-        //   name: `twitter:creator`,
-        //   content: site.siteMetadata.author, // currently "Billy Jacoby"
-        // },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
         {
           name: `twitter:title`,
           content: title,
