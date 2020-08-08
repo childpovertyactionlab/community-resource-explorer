@@ -179,7 +179,7 @@ const home = () => {
           <div className="content">
             <div className="text">
             <p className="description description-medium">
-              Learn more about your community's assets and needs <br></br>by using the
+              Learn more about your community's <br></br>assets and needs by using the
               </p>
               <h1 className="">
                 Community Resource Explorer

@@ -285,7 +285,7 @@
           }
           @include media-breakpoint-up(xl) {
             width: 4 * $column;
-            margin: 5 * $spacer auto;
+            margin: 3 * $spacer auto;
             // font-size: 18px;
           }
           font-weight: $font-weight-light;
@@ -303,6 +303,7 @@
           button {
             color: $cinnabar;
             stroke: $cinnabar;
+            background: none;
             border: none;
             border-bottom: 1px solid $cinnabar;
             padding: 0 2rem .8rem;
