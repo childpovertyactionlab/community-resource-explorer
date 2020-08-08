@@ -279,9 +279,11 @@ const Faq = () => {
     )
   }
 
+  const { keywords, image, description } = pages.FAQ.meta
+
   return (
     <Layout id="faq-page" activePageId={pages.FAQ.id}>
-      <SEO title="FAQ" />
+      <SEO title="FAQ" keywords={keywords} image={image} description={description} />
 
       <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
         <div className="page-title-section">
