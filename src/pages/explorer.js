@@ -8,10 +8,13 @@ import Hero from "../components/hero"
 import { pages } from "../consts"
 import Menu from "../components/menu"
 
-const ExplorerPage = () => {
+const ExplorerPage = ({ location }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
+
+  const { keywords, image, description } = pages.EXPLORER.meta
+  const { name } = pages.EXPLORER
 
   return (
     <Layout
@@ -20,7 +23,13 @@ const ExplorerPage = () => {
       activePageId={pages.EXPLORER.id}
       className="p-0"
     >
-      <SEO title="Explorer" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Menu
         activePageId={pages.EXPLORER.id}
         controlled={true}

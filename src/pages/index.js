@@ -91,10 +91,20 @@ const q3 = {
   attribution: "Pleasant Grove Resident",
 }
 
-const home = () => {
+const home = ({ location }) => {
+
+  const { keywords, image, description } = pages.HOME.meta
+  const { name } = pages.HOME
+
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
-      <SEO title="Home" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero activePageId={pages.HOME.id} imgSrc={portrait}>
         <div className="page-title-section">

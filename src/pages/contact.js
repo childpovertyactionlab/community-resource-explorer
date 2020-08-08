@@ -16,9 +16,18 @@ const Contact = ({ location }) => {
     navigate(pages.THANKS.path)
   }
 
+  const { keywords, image, description } = pages.CONTACT.meta
+  const { name } = pages.CONTACT
+
   return (
     <Layout id="contact-page" activePageId={pages.CONTACT.id}>
-      <SEO title="Contact" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}

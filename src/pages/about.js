@@ -30,10 +30,19 @@ const numberedPoints = [
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
 
-const about = () => {
+const { keywords, image, description } = pages.ABOUT.meta
+const { name } = pages.ABOUT
+
+const about = ({ location }) => {
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
-      <SEO title="About" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
         <div className="page-title-section">

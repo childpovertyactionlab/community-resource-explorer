@@ -23,9 +23,18 @@ const ThankYou = ({ location }) => {
     }
   }, 950) // one New York second
 
+  const { keywords, image, description } = pages.THANKS.meta
+  const { name } = pages.THANKS
+
   return (
     <Layout id="thank-you-page" activePageId={pages.THANKS.path}>
-      <SEO title="Thank you" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}

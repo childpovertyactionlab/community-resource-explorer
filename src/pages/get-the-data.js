@@ -3,6 +3,7 @@ import React from "react"
 import { Col, Row, Table } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { pages } from "../consts"
 
 const headers = ['Dataset','Description','Geography','Link',]
 
@@ -69,10 +70,20 @@ const data = [
   },
 ]
 
-const Data = () => {
+const Data = ({ location }) => {
+
+  const { keywords, image, description } = pages.DATA.meta
+  const { name } = pages.DATA
+
   return (
-    <Layout pageInfo={{ pageName: "data" }} id="data-page">
-      <SEO title="Get the data" />
+    <Layout id="data-page">
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Row noGutters className="">
         <Col
           className="title mx-md-auto"

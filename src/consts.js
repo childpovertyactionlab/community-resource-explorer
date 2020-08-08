@@ -2,7 +2,7 @@ const HOME = {
   id: "home",
   path: "/",
   name: "Home",
-  meta: {
+  meta: { // if empty, will default to the values in gatsby-config.js
     description: '',
     image: '',
     keywords: [],

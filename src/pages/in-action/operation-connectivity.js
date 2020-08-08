@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Hero from "../../components/hero"
 import { pages } from "../../consts"
-import isdHero from "../../images/student-computer2.jpg"
+import opHero from "../../images/student-computer2.jpg"
 
 // TODOcms collapse into isd template
 
@@ -36,7 +36,7 @@ const content = [
 
 let quoteStyleTypes = ['light', 'dark']
 
-const isd = () => {
+const operation = ({ location }) => {
 
   const getSection = ({ title, paragraphs }) => {
 
@@ -92,12 +92,21 @@ const isd = () => {
       </Col>
     )
   }
-  
-  return (
-    <Layout id="isd-page" activePageId={pages.ISD.id}>
-      <SEO title="Operation Connectivity" />
 
-      <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
+  const { keywords, image, description } = pages.OPERATION.meta
+  const { name } = pages.OPERATION
+
+  return (
+    <Layout id="isd-page" activePageId={pages.OPERATION.id}>
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
+
+      <Hero wide={true} activePageId={pages.OPERATION.id} imgSrc={opHero}>
         <div className="page-title-section">
           <div className="subtitle px-0">
             More than ever, Dallas students need reliable broadband. Here's how the CRE is helping.
@@ -124,4 +133,4 @@ const isd = () => {
   )
 }
 
-export default isd
+export default operation

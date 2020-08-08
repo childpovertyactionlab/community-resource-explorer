@@ -15,7 +15,7 @@ import soccer from "../../images/soccer.png"
 // TODOcms activate when we have more posts than can be shown at once
 const SHOW_MORE_BUTTON = false
 
-const InAction = () => {
+const InAction = ({ location }) => {
   const [expandedMap, setState] = useState({})
 
   const toggleExpansion = (uid, expand) => {
@@ -48,9 +48,18 @@ const InAction = () => {
     }
   `)
 
+  const { keywords, image, description } = pages.ACTION.meta
+  const { name } = pages.ACTION
+
   return (
     <Layout id="blog" activePageId={pages.ACTION.id}>
-      <SEO title="Explorer in Action" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       {/* TODO: pages.BLOG.id */}
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>

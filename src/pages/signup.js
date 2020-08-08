@@ -15,9 +15,18 @@ const SignUp = ({ location }) => {
   // TODO: if !email, have alternate text to "Almost"
   const email = _.get(location, 'state.emailValue', '')
 
+  const { keywords, image, description } = pages.SIGNUP.meta
+  const { name } = pages.SIGNUP
+
   return (
     <Layout id="signup-page" activePageId={pages.SIGNUP.id} disableFooter={true}>
-      <SEO title="Sign up" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Helmet>
         <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Helmet>

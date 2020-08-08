@@ -79,7 +79,7 @@ const content = [
 
 let quoteStyleTypes = ['light', 'dark']
 
-const isd = () => {
+const isd = ({ location }) => {
 
   const getSection = ({ title, paragraphs }) => {
 
@@ -135,10 +135,19 @@ const isd = () => {
       </Col>
     )
   }
+
+  const { keywords, image, description } = pages.ISD.meta
+  const { name } = pages.ISD
   
   return (
     <Layout id="isd-page" activePageId={pages.ISD.id}>
-      <SEO title="Dallas ISD" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">

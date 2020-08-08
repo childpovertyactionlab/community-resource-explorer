@@ -139,7 +139,7 @@ const lorem1 = {
 
 const sections = [how, purpose, methods, lorem1]
 
-const Faq = () => {
+const Faq = ({ location }) => {
   const [expandedMap, setState] = useState({})
 
   const toggleExpansion = (uid, expand) => {
@@ -280,10 +280,17 @@ const Faq = () => {
   }
 
   const { keywords, image, description } = pages.FAQ.meta
+  const { name } = pages.FAQ
 
   return (
     <Layout id="faq-page" activePageId={pages.FAQ.id}>
-      <SEO title="FAQ" keywords={keywords} image={image} description={description} />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
         <div className="page-title-section">
