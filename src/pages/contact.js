@@ -11,10 +11,9 @@ import { navigate } from "gatsby"
 
 const Contact = ({ location }) => {
 
-  const onSubmit = e => {
-    console.log(pages.THANKS.path)
-    navigate(pages.THANKS.path)
-  }
+  // const onSubmit = e => {
+  //   navigate(pages.THANKS.path)
+  // }
 
   const { keywords, image, description } = pages.CONTACT.meta
   const { name } = pages.CONTACT
@@ -35,7 +34,7 @@ const Contact = ({ location }) => {
           // xl={{ offset: 4, span: 4 }}
         >
           <h1>Contact us</h1>
-          <Form onSubmit={onSubmit} name="cre-contact" method="POST" data-netlify="true">
+          <Form name="cre-contact" method="POST" data-netlify="true" action="/thank-you">
             <Form.Group controlId="formGroupName">
               <Form.Label name="name">Name</Form.Label>
               <Form.Control required type="name" placeholder="Enter name" />

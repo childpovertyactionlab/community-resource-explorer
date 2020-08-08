@@ -30,10 +30,10 @@ const numberedPoints = [
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
 
-const { keywords, image, description } = pages.ABOUT.meta
-const { name } = pages.ABOUT
 
 const about = ({ location }) => {
+  const { keywords, image, description } = pages.ABOUT.meta
+  const { name } = pages.ABOUT
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
       <SEO
