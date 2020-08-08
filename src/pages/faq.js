@@ -153,6 +153,7 @@ const Faq = () => {
   const toggleMenu = () => setMenuActive(!mobileMenuActive)
   const closeMenu = () => setMenuActive(false)
 
+  // returns 2 menus - one seen on mobile, another for tablet+
   // if react-scroll doesn't fit the bill, see https://css-tricks.com/sticky-smooth-active-nav/
   // TODO: fix key in sections map
   const getSideMenus = () => {
@@ -291,8 +292,14 @@ const Faq = () => {
         </div>
       </Hero>
 
-      {getSideMenus()}
-      {getFAQSections()}
+      <div>
+        {/* wrap side-menus in div w/o methods so that sticky side-menu stops scrolling when its *top* hits div's end
+        (necessary bc side-menu is height=0 and translated, so can't rely on scroll stopping when its *bottom* hits
+        a div's end. if there are still overflow problems, may need to remove height & translate styles, put it in its
+        own Col and offset top with padding) */}
+        {getSideMenus()}
+        {getFAQSections()}
+      </div>
 
       <Row className="methods-paper-section">
         <Col
