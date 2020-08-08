@@ -246,9 +246,9 @@ const home = ({ location }) => {
           md={{ span: 5, offset: 1 }}
         >
           <figure
-            className="post-image p-0"
+            className="post-image forest p-0"
             >
-            <img src={forest} />
+            {/* <img src={forest} /> */}
           </figure>
 
           <div className="post-details p-0">
@@ -271,9 +271,9 @@ const home = ({ location }) => {
           md={{ span: 5, offset: 0 }}
         >
           <figure
-            className="post-image p-0"
+            className="post-image computer p-0"
             >
-            <img src={computer} />
+            {/* <img src={computer} /> */}
           </figure>
 
           <div className="post-details p-0">
