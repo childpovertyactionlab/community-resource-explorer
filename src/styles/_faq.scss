@@ -51,7 +51,7 @@
     // applies to both menus
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: $sticky-header-height;
     .jump, .menu-title {
       display: inline-block;
       padding-bottom: 3 * $spacer;
