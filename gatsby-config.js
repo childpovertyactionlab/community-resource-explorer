@@ -8,6 +8,9 @@ module.exports = {
     title: `Community Resource Explorer`,
     description: `All Dallas neighborhoods should have what they need to thrive.`,
     author: `Child Poverty Action Lab`,
+    keywords: [],
+    image: '',
+    siteUrl: 'https://dallasisd.resourceexplorer.org',
     mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_TOKEN}`,
   },
   plugins: [

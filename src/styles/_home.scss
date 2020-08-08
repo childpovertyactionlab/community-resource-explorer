@@ -462,6 +462,19 @@
   .post-section {
     @include blog-post-section-styles;
 
+    .post-image {
+      width: 100%;
+      height: 80%; // fiddle here to change aspect ratio
+      background-size: cover;
+      &.forest {
+        background-image: url("../images/forest-wide.png");
+      }
+      &.computer {
+        background-image: url("../images/student-computer2.jpg");
+        background-position: bottom; // so laptop isn't cut off
+      }
+    }
+
     &.second {
       @include media-breakpoint-up(md) {
         margin-left: $gutter*2 !important;

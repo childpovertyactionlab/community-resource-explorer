@@ -22,7 +22,7 @@ const Footer = () => {
 
           <div className="pages-row">
             {menuPages.map(p => {
-              return <span onClick={() => navigate(p.path)}>{p.name}</span>
+              return <span key={p.id} onClick={() => navigate(p.path)}>{p.name}</span>
             })}
             <img src={twitterIcon} />
           </div>

@@ -11,14 +11,22 @@ import { navigate } from "gatsby"
 
 const Contact = ({ location }) => {
 
-  const onSubmit = e => {
-    // console.log(e.currentTarget.form.checkValidity())
-    navigate(pages.HOME.path)
-  }
+  // const onSubmit = e => {
+  //   navigate(pages.THANKS.path)
+  // }
+
+  const { keywords, image, description } = pages.CONTACT.meta
+  const { name } = pages.CONTACT
 
   return (
     <Layout id="contact-page" activePageId={pages.CONTACT.id}>
-      <SEO title="Contact" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
@@ -26,7 +34,7 @@ const Contact = ({ location }) => {
           // xl={{ offset: 4, span: 4 }}
         >
           <h1>Contact us</h1>
-          <Form onSubmit={onSubmit} name="cre-contact" method="POST" data-netlify="true">
+          <Form name="cre-contact" method="POST" data-netlify="true" action="/thank-you">
             <Form.Group controlId="formGroupName">
               <Form.Label name="name">Name</Form.Label>
               <Form.Control required type="name" placeholder="Enter name" />

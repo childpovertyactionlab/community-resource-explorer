@@ -9,16 +9,13 @@ const SignUpBar = ({ }) => {
   const [emailValid, setEmailValid] = useState(true)
   
   const submit = () => {
-    console.log(emailValue)
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     const valid = emailRegex.test(emailValue)
-    console.log("email valid: ", valid)
 
     setEmailValid(valid)
     if (!valid) {
       return
     } else {
-      console.log("GO!")
       navigate(pages.SIGNUP.path, { state: { emailValue } })
     }
   }

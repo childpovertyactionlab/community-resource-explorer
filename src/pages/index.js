@@ -91,10 +91,20 @@ const q3 = {
   attribution: "Pleasant Grove Resident",
 }
 
-const home = () => {
+const home = ({ location }) => {
+
+  const { keywords, image, description } = pages.HOME.meta
+  const { name } = pages.HOME
+
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
-      <SEO title="Home" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero activePageId={pages.HOME.id} imgSrc={portrait}>
         <div className="page-title-section">
@@ -236,9 +246,9 @@ const home = () => {
           md={{ span: 5, offset: 1 }}
         >
           <figure
-            className="post-image p-0"
+            className="post-image forest p-0"
             >
-            <img src={forest} />
+            {/* <img src={forest} /> */}
           </figure>
 
           <div className="post-details p-0">
@@ -261,9 +271,9 @@ const home = () => {
           md={{ span: 5, offset: 0 }}
         >
           <figure
-            className="post-image p-0"
+            className="post-image computer p-0"
             >
-            <img src={computer} />
+            {/* <img src={computer} /> */}
           </figure>
 
           <div className="post-details p-0">

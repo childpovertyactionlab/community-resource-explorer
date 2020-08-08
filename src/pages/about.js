@@ -15,7 +15,6 @@ import number3 from "../images/number-3.svg"
 import number4 from "../images/number-4.svg"
 import number5 from "../images/number-5.svg"
 
-// TODO - add svgs for 5+ if more points desired
 const numberedPoints = [
   {
     n: number1,
@@ -31,10 +30,19 @@ const numberedPoints = [
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
 
-const about = () => {
+
+const about = ({ location }) => {
+  const { keywords, image, description } = pages.ABOUT.meta
+  const { name } = pages.ABOUT
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
-      <SEO title="About" />
+      <SEO
+        url={location.href}
+        title={name}
+        keywords={keywords}
+        image={image}
+        description={description}
+      />
 
       <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
         <div className="page-title-section">
@@ -63,6 +71,7 @@ const about = () => {
         <Col className="numbered-points" xs={12}>
           {numberedPoints.map((numPoint, idx) => (
             <div key={idx} className={`numbered-point n-${idx + 1}`}>
+              {/* TODO - use Morganite Bold text rather than svgs */}
               <img className="number" src={numPoint.n} />
               <p className="point">{numPoint.p}</p>
             </div>

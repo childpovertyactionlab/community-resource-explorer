@@ -76,7 +76,6 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
 
   const classes = "menu-component" + (menuOpen ? " open" : "")
 
-  console.log(classes)
   return (
     <div className={classes}>
       {getMenuButton()}
