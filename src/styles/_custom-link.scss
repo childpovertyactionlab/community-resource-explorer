@@ -4,7 +4,14 @@
   @include media-breakpoint-up(xl) {
     font-size: 16px;
   }
-
+  .right-arrow svg {
+    transition: margin-left .3s ease;
+  }
+  &:hover {
+    .right-arrow svg {
+      margin-left: 14px;
+    }
+  }
   cursor: pointer;
   
   // _figma_

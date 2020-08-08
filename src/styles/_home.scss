@@ -285,7 +285,7 @@
           }
           @include media-breakpoint-up(xl) {
             width: 4 * $column;
-            margin: 5 * $spacer auto;
+            margin: 3 * $spacer auto;
             // font-size: 18px;
           }
           font-weight: $font-weight-light;
@@ -295,13 +295,29 @@
           }
         }
         .go-to {
-          font-size: 15px;
-          @include media-breakpoint-up(md) {
-            font-size: 16px;
-          }
-          color: $cinnabar;
-          stroke: $cinnabar;
+          font-size: 16px;
           cursor: pointer;
+          @include media-breakpoint-up(md) {
+            font-size: 22px;
+          }
+          button {
+            color: $cinnabar;
+            stroke: $cinnabar;
+            background: none;
+            border: none;
+            border-bottom: 1px solid $cinnabar;
+            padding: 0 2rem .8rem;
+            svg {
+              transition: margin-left .3s ease;
+            }
+            &:hover {
+              svg {
+                margin-left: 8px;
+              }
+            }
+          
+          }
+          
         }
       }
     }
