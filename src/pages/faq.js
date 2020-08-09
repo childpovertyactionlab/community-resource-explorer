@@ -17,9 +17,9 @@ import InlineSvg from "../components/inlineSvg"
 import _ from "lodash"
 
 // Current as of 7/29, 2:53pm
-const how = {
-  id: "how",
-  title: ["Background"], // break between lines
+const background = {
+  id: "background",
+  title: "Background",
   questions: [
     {
       text: "What is the Community Resource Explorer and why was it created?",
@@ -45,7 +45,7 @@ const how = {
 }
 const purpose = {
   id: "purpose",
-  title: ["About the Data"],
+  title: "About the Data",
   questions: [
     {
       text: "Which schools are included in the CRE?",
@@ -96,7 +96,7 @@ const purpose = {
 }
 const methods = {
   id: "methods",
-  title: ["Use of the CRE"],
+  title: "Use of the CRE",
   questions: [
     {
       text: "How is the CRE currently being used?",
@@ -117,9 +117,9 @@ const methods = {
     },
   ],
 }
-const lorem1 = {
-  id: "lorem1",
-  title: ["Next Steps"],
+const nextSteps = {
+  id: "next-steps",
+  title: "Next Steps",
   questions: [
     {
       text: "I have insight about my neighborhood that I would like to share. How can I do that?",
@@ -139,7 +139,7 @@ const lorem1 = {
   ],
 }
 
-const sections = [how, purpose, methods, lorem1]
+const sections = [background, purpose, methods, nextSteps]
 
 class Faq extends React.Component {
   constructor() {
@@ -156,10 +156,8 @@ class Faq extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.location)
     const hash = _.get(this.props, 'location.hash', null)
     const uid = hash.slice(1)
-    console.log(uid)
 
     if (uid) {
       this.toggleExpansion(uid, true)
@@ -181,7 +179,6 @@ class Faq extends React.Component {
         [uid]: expand
       }
     })
-    console.log(this.state.expandedMap)
   }
 
 
@@ -212,7 +209,7 @@ class Faq extends React.Component {
                 offset={-stickyHeaderHeight}
                 // containerId="faq-page"
               >
-                {s.title.join(" ")}
+                {s.title}
               </Link>
             </div>
             <br />
@@ -224,7 +221,7 @@ class Faq extends React.Component {
             activeClass="active"
             spy={true}
             smooth={true}
-            to="methods"
+            to="methods-paper"
             offset={-stickyHeaderHeight}
             // containerId="faq-page"
           >
@@ -284,11 +281,11 @@ class Faq extends React.Component {
                 <div
                   className="section-title" // visible only for mobile
                 >
-                  {s.title.join(" ")}
+                  {s.title}
                 </div>
 
                 {s.questions.map((q, idx) => {
-                  const uid = `${s.id}-${idx}`
+                  const uid = `${s.id}-${idx+1}` // add 1 so human-readable
                   const expanded = this.state.expandedMap[uid]
                   let classes = "question"
                   classes += expanded ? " expanded" : ""
@@ -355,30 +352,31 @@ class Faq extends React.Component {
         <Row className="methods-paper-section">
           <Col
             className="methods-paper"
-            id="methods"
             xs={{ offset: 0, span: 12 }}
             md={{ offset: 5, span: 7 }}
             >
-            <Row className="content">
-              <Col
-                xs={12}
-                className="section-title" // visible only for mobile
-                >
-                Methods Paper
-              </Col>
+            <Element name="methods-paper" id="methods-paper">
+              <Row className="content">
+                <Col
+                  xs={12}
+                  className="section-title" // visible only for mobile
+                  >
+                  Methods Paper
+                </Col>
 
-              <Col xs={12} className="description">
-                <div className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur.
-                </div>
-                <CustomLink>Download paper</CustomLink>
-              </Col>
-            </Row>
+                <Col xs={12} className="description">
+                  <div className="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur.
+                  </div>
+                  <CustomLink>Download paper</CustomLink>
+                </Col>
+              </Row>
+            </Element>
           </Col>
         </Row>
         {/* <Link to="/">Go back to the homepage</Link> */}
