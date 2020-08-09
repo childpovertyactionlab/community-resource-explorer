@@ -154,5 +154,6 @@ const en_US = {
   SCHOOL_PROSE_QUINTILE_FIFTH: `{schoolname} is in the fifth quintile of schools in our Community Resource Index. (School communities in this quintile are the most asset-rich.) See below for a full breakdown of its resources by category and measure.`,
   SCHOOL_PROSE_TOP: `This school is in the top quintile for {quintiles}.`,
   SCHOOL_PROSE_BOTTOM: `This school is in the bottom quintile for {quintiles}.`,
+  SCHOOL_BUTTON_PRINT: `PRINT PDF`,
 }
 export default en_US

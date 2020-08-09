@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 import StaticMap, { Marker, Source, Layer } from "react-map-gl"
 import circle from "@turf/circle"
 import i18n from "@pureartisan/simple-i18n"
-import { Col, Row } from "react-bootstrap"
+import { Col, Row, Button } from "react-bootstrap"
 import clsx from "clsx"
+import { FaPrint } from "react-icons/fa"
 
 import { logger } from "./../utils/logger"
 import Layout from "../components/layout"
@@ -175,6 +176,12 @@ const SchoolPage = ({ data, ...props }) => {
     }
   }
 
+  const printPage = () => {
+    if (window) {
+      window.print()
+    }
+  }
+
   return (
     <Layout
       className="school-page"
@@ -231,6 +238,17 @@ const SchoolPage = ({ data, ...props }) => {
           <h3>
             {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
           </h3>
+          <Button
+            aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
+            color="none"
+            onClick={printPage}
+            className="print-school-page"
+          >
+            <FaPrint /> {i18n.translate("SCHOOL_BUTTON_PRINT")}
+            <span className="sr-only">
+              {i18n.translate("SCHOOL_BUTTON_PRINT")}
+            </span>
+          </Button>
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
