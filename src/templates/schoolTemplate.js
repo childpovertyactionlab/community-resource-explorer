@@ -182,6 +182,11 @@ const SchoolPage = ({ data, ...props }) => {
     }
   }
 
+  const keywords = [
+    school.SCHOOLNAME,
+    i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder }),
+  ]
+
   return (
     <Layout
       className="school-page"
@@ -198,7 +203,7 @@ const SchoolPage = ({ data, ...props }) => {
           ", " +
           i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })
         }
-        keywords={""}
+        keywords={keywords}
         image={""}
         description={""}
       />
