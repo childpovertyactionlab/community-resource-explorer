@@ -1,4 +1,19 @@
 .school-page {
+  .btn.print-school-page {
+    clear: both;
+    border: solid 3px #e7e9ff;
+    line-height: 1;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0.5rem;
+    color: #737373;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin-top: 2rem;
+  }
   .school-hero {
     position: relative;
     .map-section {
