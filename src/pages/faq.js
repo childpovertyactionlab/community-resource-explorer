@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import { Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
-import { Link } from "react-scroll"
+import { Link, animateScroll, Element } from "react-scroll"
 import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
 import { pages, stickyHeaderHeight } from "../consts"
@@ -13,6 +13,8 @@ import portrait from "../images/map-stylized2.jpg"
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
+
+import _ from "lodash"
 
 // Current as of 7/29, 2:53pm
 const how = {
@@ -153,6 +155,25 @@ class Faq extends React.Component {
     this.closeMenu = this.closeMenu.bind(this)
   }
 
+  componentDidMount() {
+    console.log(this.props.location)
+    const hash = _.get(this.props, 'location.hash', null)
+    const uid = hash.slice(1)
+    console.log(uid)
+
+    if (uid) {
+      this.toggleExpansion(uid, true)
+
+      // wants hash (w/#) though docs don't include. doesn't seem to respond to extra options
+      animateScroll.scrollTo(hash, {
+        containerId: 'faq-page',
+        // duration: 1500,
+        // delay: 1000,
+        // offset: 50, // Scrolls to element + 50 pixels down the page
+      })
+    }
+  }
+
   toggleExpansion (uid, expand) {
     this.setState({
       expandedMap: {
@@ -160,6 +181,7 @@ class Faq extends React.Component {
         [uid]: expand
       }
     })
+    console.log(this.state.expandedMap)
   }
 
 
@@ -272,7 +294,7 @@ class Faq extends React.Component {
                   classes += expanded ? " expanded" : ""
                   const icon = expanded ? minus : plus
                   return (
-                    <div className={classes} id={uid} key={uid}>
+                    <Element name={uid} className={classes} id={uid} key={uid}>
                       <div
                         className="question-text"
                         onClick={this.toggleExpansion.bind(this, uid, !expanded)}
@@ -287,7 +309,7 @@ class Faq extends React.Component {
                       <Collapse in={expanded}>
                         <div className="question-body">{q.body}</div>
                       </Collapse>
-                    </div>
+                    </Element>
                   )
                 })}
               </Col>
@@ -321,7 +343,7 @@ class Faq extends React.Component {
           </div>
         </Hero>
 
-        <div>
+        <div id="q-wrapper">
           {/* wrap side-menus in div w/o methods so that sticky side-menu stops scrolling when its *top* hits div's end
           (necessary bc side-menu is height=0 and translated, so can't rely on scroll stopping when its *bottom* hits
           a div's end. if there are still overflow problems, may need to remove height & translate styles, put it in its
