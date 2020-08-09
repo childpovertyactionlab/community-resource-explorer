@@ -188,7 +188,20 @@ const SchoolPage = ({ data, ...props }) => {
       activePageId={school.SLN}
       disableFooter={false}
     >
-      <SEO title={school.SCHOOLNAME} />
+      {/* James, modify the SEO data here. */}
+      <SEO
+        url={props.location.href}
+        title={
+          data.site.siteMetadata.title +
+          ": " +
+          school.SCHOOLNAME +
+          ", " +
+          i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })
+        }
+        keywords={""}
+        image={""}
+        description={""}
+      />
       <SchoolHero wide={true}>
         <div
           className="map-parent"
