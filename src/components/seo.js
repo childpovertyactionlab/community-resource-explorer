@@ -25,11 +25,21 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaTitle = title || site.siteMetadata.title
-  const metaKeywords = keywords || site.siteMetadata.keywords
-  const metaImage = image || site.siteMetadata.image
-  const metaUrl = url || site.siteMetadata.siteUrl
+  const metaDescription =
+    description && description.length > 0
+      ? description
+      : site.siteMetadata.description
+  const metaTitle = title && title.length > 0 ? title : site.siteMetadata.title
+  let metaKeywords =
+    keywords && keywords.length > 0 ? keywords : site.siteMetadata.keywords
+  console.log("metaKeywords = ", metaKeywords)
+  const metaImage = image && image.length > 0 ? image : site.siteMetadata.image
+  const metaUrl = url && url.length > 0 ? url : site.siteMetadata.siteUrl
+
+  if (typeof metaKeywords === "string") {
+    console.log("mk is a string")
+    metaKeywords = metaKeywords.split(",")
+  }
 
   return (
     <Helmet
@@ -85,7 +95,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
       ]
         .concat(
-          metaKeywords.length > 0
+          metaKeywords && metaKeywords.length > 0
             ? {
                 name: `keywords`,
                 content: metaKeywords.join(`, `),
