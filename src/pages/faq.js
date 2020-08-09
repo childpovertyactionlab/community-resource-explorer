@@ -139,31 +139,50 @@ const lorem1 = {
 
 const sections = [how, purpose, methods, lorem1]
 
-const Faq = ({ location }) => {
-  const [expandedMap, setState] = useState({})
+class Faq extends React.Component {
+  constructor() {
+    super()
 
-  const toggleExpansion = (uid, expand) => {
-    setState({
-      ...expandedMap,
-      [uid]: expand,
+    this.state = {
+      expandedMap: {},
+      mobileMenuActive: false
+    }
+
+    this.toggleExpansion = this.toggleExpansion.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
+  }
+
+  toggleExpansion (uid, expand) {
+    this.setState({
+      expandedMap: {
+        ...this.state.expandedMap,
+        [uid]: expand
+      }
     })
   }
 
-  const [mobileMenuActive, setMenuActive] = useState(false)
-  const toggleMenu = () => setMenuActive(!mobileMenuActive)
-  const closeMenu = () => setMenuActive(false)
+
+  toggleMenu () {
+    this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
+  }
+
+  closeMenu () {
+    this.setState({ mobileMenuActive: false })
+  }
+
 
   // returns 2 menus - one seen on mobile, another for tablet+
   // if react-scroll doesn't fit the bill, see https://css-tricks.com/sticky-smooth-active-nav/
   // TODO: fix key in sections map
-  const getSideMenus = () => {
+  getSideMenus() {
     const sectionTitles = (
       <>
         {sections.map(s => (
           <>
             <div className="menu-title" key={"side-menu-title-" + s.id}>
               <Link
-                onClick={closeMenu}
+                onClick={this.closeMenu}
                 activeClass="active"
                 smooth={true}
                 spy={true}
@@ -179,7 +198,7 @@ const Faq = ({ location }) => {
         ))}
         <div className="menu-title" key={"side-menu-title-methods-paper"}>
           <Link
-            onClick={closeMenu}
+            onClick={this.closeMenu}
             activeClass="active"
             spy={true}
             smooth={true}
@@ -194,7 +213,7 @@ const Faq = ({ location }) => {
     )
 
     let mobileClasses = "side-menu mobile"
-    if (mobileMenuActive) {
+    if (this.state.mobileMenuActive) {
       mobileClasses += " active"
     }
 
@@ -206,7 +225,7 @@ const Faq = ({ location }) => {
           {sectionTitles}
         </div>
         <div key="side-menu-mobile" className={mobileClasses}>
-          <span onClick={toggleMenu} className="jump">
+          <span onClick={this.toggleMenu} className="jump">
             Jump to
             <InlineSvg type="down-chevron" />
           </span>
@@ -216,7 +235,7 @@ const Faq = ({ location }) => {
     )
   }
 
-  const getFAQSections = () => {
+  getFAQSections() {
     return (
       <>
         {sections.map((s, idx) => {
@@ -248,7 +267,7 @@ const Faq = ({ location }) => {
 
                 {s.questions.map((q, idx) => {
                   const uid = `${s.id}-${idx}`
-                  const expanded = expandedMap[uid]
+                  const expanded = this.state.expandedMap[uid]
                   let classes = "question"
                   classes += expanded ? " expanded" : ""
                   const icon = expanded ? minus : plus
@@ -256,7 +275,7 @@ const Faq = ({ location }) => {
                     <div className={classes} id={uid} key={uid}>
                       <div
                         className="question-text"
-                        onClick={toggleExpansion.bind(this, uid, !expanded)}
+                        onClick={this.toggleExpansion.bind(this, uid, !expanded)}
                         // aria-controls="example-collapse-text"
                         // aria-expanded={expanded}
                       >
@@ -279,69 +298,71 @@ const Faq = ({ location }) => {
     )
   }
 
-  const { keywords, image, description } = pages.FAQ.meta
-  const { name } = pages.FAQ
+  render() {
+    const { keywords, image, description } = pages.FAQ.meta
+    const { name } = pages.FAQ
 
-  return (
-    <Layout id="faq-page" activePageId={pages.FAQ.id}>
+    return (
+      <Layout id="faq-page" activePageId={pages.FAQ.id}>
       <SEO
-        url={location.href}
+        url={this.props.location.href}
         title={name}
         keywords={keywords}
         image={image}
         description={description}
-      />
+        />
 
-      <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
-        <div className="page-title-section">
-          <div className="title">Frequently Asked Questions</div>
-          <div className="subtitle">
-            Have questions about our data or the Explorer?
+        <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
+          <div className="page-title-section">
+            <div className="title">Frequently Asked Questions</div>
+            <div className="subtitle">
+              Have questions about our data or the Explorer?
+            </div>
           </div>
-        </div>
-      </Hero>
+        </Hero>
 
-      <div>
-        {/* wrap side-menus in div w/o methods so that sticky side-menu stops scrolling when its *top* hits div's end
-        (necessary bc side-menu is height=0 and translated, so can't rely on scroll stopping when its *bottom* hits
-        a div's end. if there are still overflow problems, may need to remove height & translate styles, put it in its
+        <div>
+          {/* wrap side-menus in div w/o methods so that sticky side-menu stops scrolling when its *top* hits div's end
+          (necessary bc side-menu is height=0 and translated, so can't rely on scroll stopping when its *bottom* hits
+          a div's end. if there are still overflow problems, may need to remove height & translate styles, put it in its
         own Col and offset top with padding) */}
-        {getSideMenus()}
-        {getFAQSections()}
-      </div>
+          {this.getSideMenus()}
+          {this.getFAQSections()}
+        </div>
 
-      <Row className="methods-paper-section">
-        <Col
-          className="methods-paper"
-          id="methods"
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 5, span: 7 }}
-        >
-          <Row className="content">
-            <Col
-              xs={12}
-              className="section-title" // visible only for mobile
+        <Row className="methods-paper-section">
+          <Col
+            className="methods-paper"
+            id="methods"
+            xs={{ offset: 0, span: 12 }}
+            md={{ offset: 5, span: 7 }}
             >
-              Methods Paper
-            </Col>
+            <Row className="content">
+              <Col
+                xs={12}
+                className="section-title" // visible only for mobile
+                >
+                Methods Paper
+              </Col>
 
-            <Col xs={12} className="description">
-              <div className="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-              </div>
-              <CustomLink>Download paper</CustomLink>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-      {/* <Link to="/">Go back to the homepage</Link> */}
-    </Layout>
-  )
+              <Col xs={12} className="description">
+                <div className="text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                  nulla pariatur.
+                </div>
+                <CustomLink>Download paper</CustomLink>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        {/* <Link to="/">Go back to the homepage</Link> */}
+      </Layout>
+    )
+  }
 }
 
 export default Faq
