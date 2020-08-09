@@ -43,8 +43,8 @@ const background = {
     },
   ],
 }
-const purpose = {
-  id: "purpose",
+const about = {
+  id: "about",
   title: "About the Data",
   questions: [
     {
@@ -94,8 +94,8 @@ const purpose = {
     },
   ],
 }
-const methods = {
-  id: "methods",
+const use = {
+  id: "use",
   title: "Use of the CRE",
   questions: [
     {
@@ -139,7 +139,7 @@ const nextSteps = {
   ],
 }
 
-const sections = [background, purpose, methods, nextSteps]
+const sections = [background, about, use, nextSteps]
 
 class Faq extends React.Component {
   constructor() {
@@ -152,7 +152,7 @@ class Faq extends React.Component {
 
     this.toggleExpansion = this.toggleExpansion.bind(this)
     this.toggleMenu = this.toggleMenu.bind(this)
-    this.closeMenu = this.closeMenu.bind(this)
+    this.handleCloseMenu = this.handleCloseMenu.bind(this)
   }
 
   componentDidMount() {
@@ -172,7 +172,16 @@ class Faq extends React.Component {
     }
   }
 
-  toggleExpansion (uid, expand) {
+  toggleExpansion (uid, expand, updateHash) {
+    if (updateHash) {
+      
+      const hash = expand ? ("#" + uid) : ""
+      // window.location.hash = hash
+      
+      // doesn't cause a "jump" where browser scrolls to #id
+      window.history.replaceState(null, null, this.props.location.pathname + hash);
+    }
+    
     this.setState({
       expandedMap: {
         ...this.state.expandedMap,
@@ -186,8 +195,13 @@ class Faq extends React.Component {
     this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
   }
 
-  closeMenu () {
+  // close menu
+  handleCloseMenu (uid) {
     this.setState({ mobileMenuActive: false })
+
+    setTimeout(() => {
+      this.toggleExpansion(uid, true, true)
+    }, 900)
   }
 
 
@@ -201,7 +215,7 @@ class Faq extends React.Component {
           <>
             <div className="menu-title" key={"side-menu-title-" + s.id}>
               <Link
-                onClick={this.closeMenu}
+                onClick={this.handleCloseMenu.bind(this, `${s.id}-1`)}
                 activeClass="active"
                 smooth={true}
                 spy={true}
@@ -217,7 +231,7 @@ class Faq extends React.Component {
         ))}
         <div className="menu-title" key={"side-menu-title-methods-paper"}>
           <Link
-            onClick={this.closeMenu}
+            onClick={this.handleCloseMenu.bind(this, `methods-paper`)}
             activeClass="active"
             spy={true}
             smooth={true}
@@ -294,7 +308,7 @@ class Faq extends React.Component {
                     <Element name={uid} className={classes} id={uid} key={uid}>
                       <div
                         className="question-text"
-                        onClick={this.toggleExpansion.bind(this, uid, !expanded)}
+                        onClick={this.toggleExpansion.bind(this, uid, !expanded, true)}
                         // aria-controls="example-collapse-text"
                         // aria-expanded={expanded}
                       >
@@ -340,7 +354,7 @@ class Faq extends React.Component {
           </div>
         </Hero>
 
-        <div id="q-wrapper">
+        <div>
           {/* wrap side-menus in div w/o methods so that sticky side-menu stops scrolling when its *top* hits div's end
           (necessary bc side-menu is height=0 and translated, so can't rely on scroll stopping when its *bottom* hits
           a div's end. if there are still overflow problems, may need to remove height & translate styles, put it in its
