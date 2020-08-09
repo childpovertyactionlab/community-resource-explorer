@@ -1,19 +1,30 @@
 .sign-up-bar {
-  background: $old-lace;
+  // background: $old-lace;
 
   .content {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    // align-items: center;
     max-width: 1400px;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $column;
-    padding-right: $column;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-left: $column;
+    margin-right: $column;
 
     padding-top: 5 * $spacer;
     padding-bottom: 5 * $spacer;
+    border-top: .5px solid #CFD2C0;
+  
+    .email-input-wrapper {
+      flex-basis: 150px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      max-width: 250px;
+      
+      margin-right: 2 * $spacer;
+      
+    }
     
     @include media-breakpoint-only(xs) {
       flex-direction: column;
@@ -21,12 +32,20 @@
       .email-label {
       }
       .email-input-wrapper {
-        margin-top: 2 * $spacer;
-        margin-bottom: 3 * $spacer;
-        width: 225px;
+        // margin-top: 2 * $spacer;
+        // margin-bottom: 3 * $spacer;
+        // width: 225px;
       }
       .feedback {
         bottom: -15px;
+      }
+
+      .funder-wrapper {
+
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4 * $spacer;
       }
     }
     
@@ -34,22 +53,14 @@
       padding-top: 8 * $spacer;
       padding-bottom: 8 * $spacer;
       .email-label {
-        flex-basis: 225px;
-        flex-grow: 2;
-        flex-shrink: 0;
-        max-width: 450px;
+        // flex-basis: 225px;
+        // flex-grow: 2;
+        // flex-shrink: 0;
+        // max-width: 450px;
         
-        margin-right: 5 * $spacer;
+        // margin-right: 5 * $spacer;
       }
-      .email-input-wrapper {
-        flex-basis: 150px;
-        flex-grow: 1;
-        flex-shrink: 0;
-        max-width: 250px;
-        
-        margin-right: 2 * $spacer;
-        
-      }
+
       .custom-link {
         
       }
@@ -63,12 +74,16 @@
     .email-label {
       text-align: center;
       color: $cinnabar;
-      font-size: 26px;
-      @include media-breakpoint-up(xl) {
-        font-size: 30px;
+      font-size: 20px;
+      @include media-breakpoint-up(lg) {
+        font-size: 24px;
       }
     }
 
+    .email-inputs-row {
+      display: flex;
+    }
+    
     .email-input-wrapper {
       position: relative;
 
@@ -98,5 +113,55 @@
     .no-break {
       display: inline-block;
     }
+
+    .subscribe-wrapper {
+      @include media-breakpoint-up(md){
+
+        flex-basis: 300px;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        padding-right: 4 * $spacer;
+      }
+    }
+
+    .funder-wrapper {
+
+      @include media-breakpoint-up(md) {
+        flex-basis: 250px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+      @include media-breakpoint-up(lg) {
+        flex-basis: 320px;
+      }
+
+      a {
+        padding-bottom: $spacer;
+        width: 140px;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        font-family: Louize Display;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        color: #2C390B;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+    
   }
 }

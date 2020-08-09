@@ -3,6 +3,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap"
 import CustomLink from "../components/customLink"
 import { navigate } from "gatsby"
 import { pages } from "../consts"
+import comerica from "../images/comericabank-logo.svg"
+
 
 const SignUpBar = ({ }) => {
   const [emailValue, setEmailValue] = useState("")
@@ -23,15 +25,33 @@ const SignUpBar = ({ }) => {
     <Row noGutters>
       <Col xs={12} className="sign-up-bar">
         <div className="content">
-          <Form.Label className="email-label">Subscribe to our <span className="no-break">e-mail</span> updates</Form.Label>
-          <div className="email-input-wrapper">
-            <Form.Control onChange={e => setEmailValue(e.target.value)} className="email-input" type="email" placeholder="Enter your e-mail address" />
-          {!emailValid && <p className="feedback">
-            Please provide a valid email.
-          </p>}
+         
+          <div className="subscribe-wrapper">
+            <Form.Label className="email-label">Subscribe to our <span className="no-break">e-mail</span> updates</Form.Label>
+
+            <div className="email-inputs-row">
+
+              <div className="email-input-wrapper">
+                <Form.Control type="email"
+                  onChange={e => setEmailValue(e.target.value)}
+                  className="email-input"
+                  placeholder="Enter your e-mail address"
+                />
+                {!emailValid && <p className="feedback">Please provide a valid email.</p>}
+              </div>
+
+              <CustomLink onClick={submit} type="right-arrow-thin">Subscribe</CustomLink>
+
+            </div>
           </div>
-          <CustomLink onClick={submit} type="right-arrow-thin">Subscribe</CustomLink>
+
+          <div className="funder-wrapper">
+            <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
+            <p className="text">Comerica generously funded the development of the Community Resource Explorer</p>
+          </div>
+          
         </div>
+
       </Col>
     </Row>
   )
