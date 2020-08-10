@@ -36,9 +36,8 @@ const ExplorerPage = ({ location }) => {
         controlled={true}
         open={menuOpen}
         setMenuOpenHandler={setMenuOpen}
-        gaTrackingHandler={trackCustomEvent}
       />
-      <Explorer toggleMenu={toggleMenu} />
+      <Explorer toggleMenu={toggleMenu} gaTrackingHandler={trackCustomEvent} />
     </Layout>
   )
 }
