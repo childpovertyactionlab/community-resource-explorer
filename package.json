@@ -9,7 +9,7 @@
     "@turf/circle": "^6.0.1",
     "bootstrap": "^4.3.1",
     "clsx": "^1.1.1",
-    "cpal-components": "^1.0.17",
+    "cpal-components": "^1.0.18",
     "gatsby": "^2.3.34",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-manifest": "^2.0.29",
