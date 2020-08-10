@@ -32,3 +32,11 @@ MAPBOX_API_TOKEN=[ADD TOKEN HERE]
 ```
 
 It accepts a `toggleMenu` prop that is a function, which toggles the parent site nav menu.
+
+## Google Analytics Tracking
+
+This site passes the Google Analytics Tracking ID in to the site during build. Provide it in your `.env.development` and in the Environment variables for the Netlify build: 
+
+```
+GATSBY_GA_TRACKING_ID=[id]
+```

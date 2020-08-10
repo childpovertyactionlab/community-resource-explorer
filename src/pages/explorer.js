@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Explorer from "cpal-components"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 import { Col, Row, Collapse } from "react-bootstrap"
 import Layout from "../components/layout"
@@ -35,6 +36,7 @@ const ExplorerPage = ({ location }) => {
         controlled={true}
         open={menuOpen}
         setMenuOpenHandler={setMenuOpen}
+        gaTrackingHandler={trackCustomEvent}
       />
       <Explorer toggleMenu={toggleMenu} />
     </Layout>
