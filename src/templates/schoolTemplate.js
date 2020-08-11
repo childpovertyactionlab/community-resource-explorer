@@ -44,7 +44,7 @@ export const query = graphql`
 `
 
 const SchoolPage = ({ data, ...props }) => {
-  console.log("SchoolPage, ", props)
+  // console.log("SchoolPage, ", props)
 
   // Initialize translantion plugin
   i18n.init({

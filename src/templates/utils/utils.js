@@ -297,6 +297,6 @@ export const getFeederAverage = (metric, schoolSet) => {
 }
 
 export const getPercent = (portion, total) => {
-  console.log("getPercent, ", (portion / total) * 100)
+  // console.log("getPercent, ", (portion / total) * 100)
   return (portion / total) * 100
 }
