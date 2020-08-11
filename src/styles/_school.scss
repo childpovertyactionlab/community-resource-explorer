@@ -30,7 +30,9 @@
     &.school-metadata,
     &.custom-feeder-prose,
     &.info-school-top,
-    &.info-school-bottom {
+    &.info-school-bottom,
+    &.info-robotext,
+    &.info-demographics {
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
@@ -51,7 +53,8 @@
     &.custom-feeder-prose,
     &.info-robotext,
     &.info-school-top,
-    &.info-school-bottom {
+    &.info-school-bottom,
+    &.info-demographics {
       font-weight: 300;
       font-size: 1.4rem;
     }
@@ -118,30 +121,30 @@
       top: 1px;
     }
   }
-  @media print {
-    * {
-      -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
-      color-adjust: exact !important; /*Firefox*/
-    }
-    .sticky-header {
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+    color-adjust: exact !important; /*Firefox*/
+  }
+  .sticky-header {
+    display: none !important;
+  }
+  // Hide menu elements
+  .school-hero {
+    .menu-section,
+    .menu-component .menu-panel {
       display: none !important;
+      height: 0 !important;
+      width: 0 !important;
     }
-    // Hide menu elements
-    .school-hero {
-      .menu-section,
-      .menu-component .menu-panel {
-        display: none !important;
-        height: 0 !important;
-        width: 0 !important;
-      }
-    }
-    // Hide footer
-    .row {
-      .sign-up-bar.contents {
-        display: none !important;
-        height: 0 !important;
-        width: 0 !important;
-      }
-    }
+  }
+  // Hide footer
+  .sign-up-bar,
+  .footer {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    visibility: hidden;
   }
 }

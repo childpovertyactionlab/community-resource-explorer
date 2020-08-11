@@ -16,38 +16,50 @@ import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
 import Footer from "./footer"
 
-const Layout = ({ children, pageInfo, activePageId, id, disableHeader, disableFooter, ...props }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({
+  children,
+  pageInfo,
+  activePageId,
+  id,
+  disableHeader,
+  disableFooter,
+  ...props
+}) => {
+  // console.log("layout loaded", props.location)
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
- 
-    render={data => (
-      <>
-        <Container fluid className={clsx("main", props.className)}>
-          {!disableHeader && <StickyHeader activePageId={activePageId} />}
-          <Row noGutters>
-            <Col className="p-0">
-              {/* <Container className="mt-5"> */}
-              <main id={id} className="main-contents">{children}</main>
-              {/* </Container> */}
-            </Col>
-          </Row>
-        </Container>
+      `}
+      render={data => (
+        <>
+          <Container fluid className={clsx("main", props.className)}>
+            {!disableHeader && <StickyHeader activePageId={activePageId} />}
+            <Row noGutters>
+              <Col className="p-0">
+                {/* <Container className="mt-5"> */}
+                <main id={id} className="main-contents">
+                  {children}
+                </main>
+                {/* </Container> */}
+              </Col>
+            </Row>
+          </Container>
 
-        <Container fluid className="px-0">
-          {!disableFooter && <SignUpBar />}
-          {!disableFooter && <Footer />}
-        </Container>
-      </>
-    )}
-  />
-)
+          <Container fluid className="px-0">
+            {!disableFooter && <SignUpBar />}
+            {!disableFooter && <Footer />}
+          </Container>
+        </>
+      )}
+    />
+  )
+}
 
 export default Layout

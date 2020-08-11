@@ -15,7 +15,12 @@ import NonInteractiveScale from "./../components/NonInteractiveScale"
 import SEO from "../components/seo"
 import MAP_STYLE from "./../data/map/cpalStyle"
 import en_US from "./../data/map/en_US"
-import { getRoundedValue, getHashLeft, getQuintileDesc } from "./utils/utils"
+import {
+  getRoundedValue,
+  getHashLeft,
+  getQuintileDesc,
+  getPercent,
+} from "./utils/utils"
 import {
   CRI_COLORS,
   ECON_COLORS,
@@ -39,10 +44,8 @@ export const query = graphql`
 `
 
 const SchoolPage = ({ data, ...props }) => {
-  // console.log('SchoolPage, ', props)
-  // console.log("pages, ", pages)
-  // console.log("data, ", data)
-  //
+  console.log("SchoolPage, ", props)
+
   // Initialize translantion plugin
   i18n.init({
     locale: "en_US",
@@ -282,10 +285,7 @@ const SchoolPage = ({ data, ...props }) => {
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 5, offset: 0 }}
-          className={clsx(
-            "metric-collection-" + "cri_weight",
-            "metric-collection"
-          )}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <div className="metric-group">
             <h4>
@@ -330,7 +330,38 @@ const SchoolPage = ({ data, ...props }) => {
                 school.cri_weight_quintile
               ),
             }}
-          />
+          ></div>
+        </Col>
+      </Row>
+      <Row className="info-demographics">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 7, offset: 1 }}
+          className="custom-feeder"
+        >
+          <p
+            className="school-prose-top"
+            dangerouslySetInnerHTML={{
+              __html: i18n.translate("SCHOOL_PROSE_RACE", {
+                black: getRoundedValue(
+                  getPercent(school.dem_popbl, school.dem_totp),
+                  1
+                ),
+                hispanic: getRoundedValue(
+                  getPercent(school.dem_pophi, school.dem_totp),
+                  1
+                ),
+                asian: getRoundedValue(
+                  getPercent(school.dem_popas, school.dem_totp),
+                  1
+                ),
+                white: getRoundedValue(
+                  getPercent(school.dem_popwh, school.dem_totp),
+                  1
+                ),
+              }),
+            }}
+          ></p>
         </Col>
       </Row>
       <Row className="info-school-top">
