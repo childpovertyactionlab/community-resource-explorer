@@ -104,9 +104,13 @@ export const getRoundedValue = (
   value,
   decimals,
   padZeroes = false,
-  isCurrency = false
+  isCurrency = false,
+  isPercent = false
 ) => {
   const type = typeof value
+  if (!!isPercent) {
+    value = value * 100
+  }
   let fixed = null
   if (type === "string") {
     if (padZeroes) {
@@ -120,13 +124,16 @@ export const getRoundedValue = (
     }
   } else {
     if (padZeroes) {
-      fixed = Number(value.toFixed(decimals))
+      fixed = Number(value.toFixed(decimals)).toLocaleString()
     } else {
-      fixed = Number(value.toFixed(decimals))
+      fixed = Number(value.toFixed(decimals)).toLocaleString()
     }
   }
   if (!!isCurrency) {
     fixed = "$" + fixed
+  }
+  if (!!isPercent) {
+    fixed = fixed + "%"
   }
 
   return fixed
@@ -152,19 +159,14 @@ export const getQuintile = (value, min, max, high_is_good = 1) => {
   switch (true) {
     case standardized >= 80:
       return high_is_good ? 4 : 0
-      break
     case standardized < 80 && standardized >= 60:
       return high_is_good ? 3 : 1
-      break
     case standardized < 60 && standardized >= 40:
       return 2
-      break
     case standardized < 40 && standardized >= 20:
       return high_is_good ? 1 : 3
-      break
     case standardized < 20 && standardized >= 0:
       return high_is_good ? 0 : 4
-      break
     default:
       return 0
   }
@@ -280,6 +282,9 @@ export const getQuintileDesc = quintile => {
     }
     case quintile === 4: {
       return "FIFTH"
+    }
+    default: {
+      return "FIRST"
     }
   }
 }

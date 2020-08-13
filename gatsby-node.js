@@ -127,6 +127,8 @@ exports.createPages = async ({ graphql, actions }) => {
             econ_pyr_quintile
             econ_ur
             econ_ur_quintile
+            econ_totjobs
+            econ_totjobs_quintile
             edi_index
             edi_weight
             edi_weight_quintile

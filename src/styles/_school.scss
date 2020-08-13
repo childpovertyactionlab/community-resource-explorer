@@ -73,6 +73,8 @@
         h6 {
           font-size: 1.4rem;
           padding-bottom: 0.6rem;
+          line-height: 1.9rem;
+          width: 85%;
         }
         @include media-breakpoint-up(md) {
           width: 49%;

@@ -77,13 +77,15 @@ const NonInteractiveScale = ({
                   metricData.range[0],
                   metricData.decimals,
                   false,
-                  !!metricData.is_currency
+                  !!metricData.is_currency,
+                  !!metricData.as_percent
                 )
               : getRoundedValue(
                   metricData.range[1],
                   metricData.decimals,
                   false,
-                  !!metricData.is_currency
+                  !!metricData.is_currency,
+                  !!metricData.as_percent
                 )}
           </div>
           <div className="n-i-scale-max">
@@ -92,13 +94,15 @@ const NonInteractiveScale = ({
                   metricData.range[1],
                   metricData.decimals,
                   false,
-                  !!metricData.is_currency
+                  !!metricData.is_currency,
+                  !!metricData.as_percent
                 )
               : getRoundedValue(
                   metricData.range[0],
                   metricData.decimals,
                   false,
-                  !!metricData.is_currency
+                  !!metricData.is_currency,
+                  !!metricData.as_percent
                 )}
           </div>
         </div>

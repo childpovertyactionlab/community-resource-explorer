@@ -120,7 +120,7 @@ const SchoolPage = ({ data, ...props }) => {
     return CPAL_METRICS.filter(el => {
       return el.tab === id && el.tab_level === level
     }).sort((a, b) => {
-      return a.tab_level - b.tab_level
+      return a.order - b.order
     })
   }
 
@@ -409,6 +409,11 @@ const SchoolPage = ({ data, ...props }) => {
             >
               <h5>{i18n.translate(el.title)}</h5>
               {getMetricCollection(el.id, 0).map(el => {
+                // console.log(
+                //   "in metric collection, element = ",
+                //   el,
+                //   school[el.id]
+                // )
                 return (
                   <div
                     className="metric-group"
@@ -456,6 +461,12 @@ const SchoolPage = ({ data, ...props }) => {
               )}
             >
               {getMetricCollection(el.id, 1).map(el => {
+                // Metric collection level 1, sub-metrics
+                // console.log(
+                //   "in secondary metric collection, el = ",
+                //   el,
+                //   school["econ_totjobs"]
+                // )
                 return (
                   <div
                     className="metric-group"
@@ -469,7 +480,8 @@ const SchoolPage = ({ data, ...props }) => {
                           school[el.id],
                           el.decimals,
                           false,
-                          el.is_currency ? el.is_currency : 0
+                          el.is_currency ? el.is_currency : 0,
+                          el.as_percent ? el.as_percent : 0
                         )}
                     </h6>
                     <NonInteractiveScale
