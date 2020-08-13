@@ -96,10 +96,10 @@ const SchoolPage = ({ data, ...props }) => {
     // logger("constructQuintiles, " + index + ", high_is_good = " + high_is_good)
     const quintiles = [0, 0, 0, 0, 0]
     quintiles[index] = 1
-    if (!high_is_good) {
-      // Reverse the quintile if high is not good.
-      quintiles.reverse()
-    }
+    // if (!high_is_good) {
+    //   // Reverse the quintile if high is not good.
+    //   quintiles.reverse()
+    // }
     return quintiles
   }
 

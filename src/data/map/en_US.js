@@ -78,7 +78,7 @@ const en_US = {
   UI_MAP_METRIC_ECON_PCTLWJOBS: `Jobs earning less than $1,500 a month (%)`,
   UI_MAP_METRIC_ECON_PCTMWJOBS: `Jobs earning between $1,500 and $3,333 a month (%)`,
   UI_MAP_METRIC_ECON_TOTJOBS: `Total jobs`,
-  UI_MAP_METRIC_ECON_PR: `Povery rate`,
+  UI_MAP_METRIC_ECON_PR: `Poverty rate`,
   UI_MAP_METRIC_ECON_PYR: `Youth (ages 16-24) unemployment rate (%)`,
   UI_MAP_METRIC_ECON_UR: `Unemployment rate`,
   UI_MAP_METRIC_EDU_OOSTKIDS: `Afterschool program seats, per 10,000 children under age 18`,

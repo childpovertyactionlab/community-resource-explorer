@@ -636,7 +636,7 @@ export const CPAL_METRICS = [
     id: "hel_le",
     title: "UI_MAP_METRIC_HEL_LE",
     abbrev: "",
-    range: [38.972, 82.499],
+    range: [69.41595684, 82.49920843],
     high_is_good: 1,
     colors: HEL_COLORS,
     tab: "hel",
