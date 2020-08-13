@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # The Basic-Auth header may not be available on all plans.
+    Basic-Auth = "cpal:access-resource-explorer hyperobjekt:universal-access"
