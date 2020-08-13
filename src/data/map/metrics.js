@@ -290,7 +290,7 @@ export const CPAL_METRICS = [
     tab: "comm",
     tab_level: 1,
     tooltip: 0,
-    decimals: 3,
+    decimals: 5,
     order: 11,
   },
   {
