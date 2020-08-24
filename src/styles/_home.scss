@@ -250,11 +250,13 @@
       left: 0;
       right: 0;
       z-index: -1;
-      background-image: url("../images/map-rect.png");
-      background-size: contain;
+      background-image: url("../images/map-screencap3.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position-y: bottom;
     }
     .content {
-      background:transparentize($green-white, .25);
+      //background:transparentize($green-white, .25);
 
       display: flex;
       flex-direction: column;
