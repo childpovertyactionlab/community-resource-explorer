@@ -36,7 +36,7 @@ const CustomCarousel = ({ items }) => {
     )
   }
 
-  const { indexName, stat1num, stat2num, stat1text, stat2text } = items[index]
+  const { indexName, character1, character2, stat1num, stat2num, stat1text, stat2text } = items[index]
 
   return (
     <Col
@@ -60,14 +60,16 @@ const CustomCarousel = ({ items }) => {
         <div className="statistics">
           <div className="index-name">{indexName}</div>
           <div className="statistic stat-1">
+            <span className="character1">{character1}</span>
             <span className="number">{stat1num}</span>
-            <span className="percent">%</span>
+            <span className="character2">{character2}</span>
             <span className="text">{stat1text}</span>
           </div>
 
           <div className="statistic stat-2">
+          <span className="character1">{character1}</span>
             <span className="number">{stat2num}</span>
-            <span className="percent">%</span>
+            <span className="character2">{character2}</span>
             <span className="text">{stat2text}</span>
           </div>
         </div>
