@@ -55,8 +55,8 @@ const caroItems = [
     character2: '',
     stat1num: 54,
     stat2num: 13,
-    stat1text: 'campus communities with more than one square mile of nearby park space.',
-    stat2text: 'campus communities with less than 1/10th square mile of nearby park space.',
+    stat1text: 'campus communities with more than one square mile of nearby park space',
+    stat2text: 'campus communities with less than 1/10th square mile of nearby park space',
   },
   { 
     src: goalie,
