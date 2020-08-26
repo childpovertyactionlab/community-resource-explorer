@@ -132,11 +132,11 @@ const SchoolPage = ({ data, ...props }) => {
    */
   const getQuintileRobotext = (schoolname, quintile) => {
     if (quintile === 4) {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
+      return i18n.translate("SCHOOL_PROSE_sd_FIFTH", {
         schoolname: schoolname,
       })
     } else {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
+      return i18n.translate("SCHOOL_PROSE_sd_BELOW_FIFTH", {
         schoolname: schoolname,
         quintile: getQuintileDesc(quintile).toLowerCase(),
       })
@@ -157,7 +157,7 @@ const SchoolPage = ({ data, ...props }) => {
         // console.log("top, ", CPAL_METRICS[i].id)
         if (metricArray.length >= 3) break
         if (CPAL_METRICS[i].tab_level > 0) {
-          if (school[CPAL_METRICS[i].id + "_quintile"] === 4) {
+          if (school[CPAL_METRICS[i].id + "_sd"] === 4) {
             metricArray.push(i18n.translate(CPAL_METRICS[i].title))
           }
         }
@@ -169,7 +169,7 @@ const SchoolPage = ({ data, ...props }) => {
       for (let i = 0; i < CPAL_METRICS.length; i++) {
         if (metricArray.length >= 3) break
         if (CPAL_METRICS[i].tab_level > 0) {
-          if (school[CPAL_METRICS[i].id + "_quintile"] === 0) {
+          if (school[CPAL_METRICS[i].id + "_sd"] === 0) {
             metricArray.push(i18n.translate(CPAL_METRICS[i].title))
           }
         }
@@ -296,7 +296,7 @@ const SchoolPage = ({ data, ...props }) => {
             <NonInteractiveScale
               className="metric-group"
               metric="cri_weight"
-              quintiles={constructQuintiles(school.cri_weight_quintile, 1)}
+              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
               colors={CRI_COLORS}
               showHash={true}
               hashLeft={getRoundedValue(
@@ -327,7 +327,7 @@ const SchoolPage = ({ data, ...props }) => {
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
                 school.SCHOOLNAME,
-                school.cri_weight_quintile
+                school.cri_weight_sd
               ),
             }}
           ></div>
@@ -436,7 +436,7 @@ const SchoolPage = ({ data, ...props }) => {
                       key={"scale_" + el.id}
                       metric={el.id}
                       quintiles={constructQuintiles(
-                        school[el.id + "_quintile"],
+                        school[el.id + "_sd"],
                         el.high_is_good
                       )}
                       colors={el.colors}
@@ -490,7 +490,7 @@ const SchoolPage = ({ data, ...props }) => {
                       key={"scale_" + el.id}
                       metric={el.id}
                       quintiles={constructQuintiles(
-                        school[el.id + "_quintile"],
+                        school[el.id + "_sd"],
                         el.high_is_good
                       )}
                       colors={el.colors}
