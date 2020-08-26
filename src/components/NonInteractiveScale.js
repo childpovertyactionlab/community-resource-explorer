@@ -14,10 +14,11 @@ const NonInteractiveScale = ({
 }) => {
   const metricData = getMetric(metric, CPAL_METRICS)
   // console.log(
-  //   'NonInteractiveScale, metricData.colors ',
-  //   metricData.colors,
-  //   'quintiles, ',
-  //   quintiles,
+  //   "NonInteractiveScale, metricData.colors ",
+  //   metric,
+  //   metricData,
+  //   "quintiles, ",
+  //   quintiles
   // )
   const styles = [
     {

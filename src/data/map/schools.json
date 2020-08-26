@@ -160,12 +160,12 @@
     "fi_weight": 86,
     "hi_weight": 60,
     "cri_weight": 71,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 2,
@@ -328,12 +328,12 @@
     "fi_weight": 6,
     "hi_weight": 29,
     "cri_weight": 35,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 3,
@@ -496,12 +496,12 @@
     "fi_weight": 21,
     "hi_weight": 17,
     "cri_weight": 30,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 4,
@@ -664,12 +664,12 @@
     "fi_weight": 49,
     "hi_weight": 34,
     "cri_weight": 39,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 5,
@@ -832,12 +832,12 @@
     "fi_weight": 79,
     "hi_weight": 30,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 6,
@@ -1000,12 +1000,12 @@
     "fi_weight": 72,
     "hi_weight": 22,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 7,
@@ -1168,12 +1168,12 @@
     "fi_weight": 91,
     "hi_weight": 43,
     "cri_weight": 51,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 8,
@@ -1336,12 +1336,12 @@
     "fi_weight": 80,
     "hi_weight": 63,
     "cri_weight": 72,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 9,
@@ -1504,12 +1504,12 @@
     "fi_weight": 74,
     "hi_weight": 32,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 10,
@@ -1672,12 +1672,12 @@
     "fi_weight": 73,
     "hi_weight": 28,
     "cri_weight": 41,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 11,
@@ -1840,12 +1840,12 @@
     "fi_weight": 83,
     "hi_weight": 34,
     "cri_weight": 46,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 12,
@@ -2008,12 +2008,12 @@
     "fi_weight": 85,
     "hi_weight": 32,
     "cri_weight": 43,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 13,
@@ -2176,12 +2176,12 @@
     "fi_weight": 90,
     "hi_weight": 32,
     "cri_weight": 39,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 14,
@@ -2344,12 +2344,12 @@
     "fi_weight": 96,
     "hi_weight": 42,
     "cri_weight": 48,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 15,
@@ -2512,12 +2512,12 @@
     "fi_weight": 47,
     "hi_weight": 3,
     "cri_weight": 7,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 16,
@@ -2680,12 +2680,12 @@
     "fi_weight": 70,
     "hi_weight": 25,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 17,
@@ -2848,12 +2848,12 @@
     "fi_weight": 81,
     "hi_weight": 28,
     "cri_weight": 40,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 18,
@@ -3016,12 +3016,12 @@
     "fi_weight": 91,
     "hi_weight": 32,
     "cri_weight": 42,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 19,
@@ -3184,12 +3184,12 @@
     "fi_weight": 71,
     "hi_weight": 65,
     "cri_weight": 68,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 20,
@@ -3352,12 +3352,12 @@
     "fi_weight": 99,
     "hi_weight": 46,
     "cri_weight": 70,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 21,
@@ -3520,12 +3520,12 @@
     "fi_weight": 5,
     "hi_weight": 30,
     "cri_weight": 37,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 22,
@@ -3688,12 +3688,12 @@
     "fi_weight": 50,
     "hi_weight": 15,
     "cri_weight": 33,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 23,
@@ -3856,12 +3856,12 @@
     "fi_weight": 59,
     "hi_weight": 16,
     "cri_weight": 41,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 24,
@@ -4024,12 +4024,12 @@
     "fi_weight": 0,
     "hi_weight": 7,
     "cri_weight": 12,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 25,
@@ -4192,12 +4192,12 @@
     "fi_weight": 28,
     "hi_weight": 32,
     "cri_weight": 44,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 26,
@@ -4360,12 +4360,12 @@
     "fi_weight": 31,
     "hi_weight": 17,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 27,
@@ -4528,12 +4528,12 @@
     "fi_weight": 39,
     "hi_weight": 18,
     "cri_weight": 29,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 28,
@@ -4696,12 +4696,12 @@
     "fi_weight": 26,
     "hi_weight": 28,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 29,
@@ -4864,12 +4864,12 @@
     "fi_weight": 40,
     "hi_weight": 19,
     "cri_weight": 30,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 30,
@@ -5032,12 +5032,12 @@
     "fi_weight": 66,
     "hi_weight": 13,
     "cri_weight": 24,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 31,
@@ -5200,12 +5200,12 @@
     "fi_weight": 62,
     "hi_weight": 12,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 32,
@@ -5368,12 +5368,12 @@
     "fi_weight": 68,
     "hi_weight": 15,
     "cri_weight": 28,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 33,
@@ -5536,12 +5536,12 @@
     "fi_weight": 82,
     "hi_weight": 31,
     "cri_weight": 39,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 34,
@@ -5704,12 +5704,12 @@
     "fi_weight": 80,
     "hi_weight": 32,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 35,
@@ -5872,12 +5872,12 @@
     "fi_weight": 85,
     "hi_weight": 31,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 36,
@@ -6040,12 +6040,12 @@
     "fi_weight": 79,
     "hi_weight": 21,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 37,
@@ -6208,12 +6208,12 @@
     "fi_weight": 68,
     "hi_weight": 16,
     "cri_weight": 26,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 38,
@@ -6376,12 +6376,12 @@
     "fi_weight": 87,
     "hi_weight": 26,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 39,
@@ -6544,12 +6544,12 @@
     "fi_weight": 19,
     "hi_weight": 21,
     "cri_weight": 28,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 40,
@@ -6712,12 +6712,12 @@
     "fi_weight": 52,
     "hi_weight": 6,
     "cri_weight": 14,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 41,
@@ -6880,12 +6880,12 @@
     "fi_weight": 21,
     "hi_weight": 10,
     "cri_weight": 13,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 42,
@@ -7048,12 +7048,12 @@
     "fi_weight": 79,
     "hi_weight": 27,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 43,
@@ -7216,12 +7216,12 @@
     "fi_weight": 63,
     "hi_weight": 16,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 44,
@@ -7384,12 +7384,12 @@
     "fi_weight": 58,
     "hi_weight": 23,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 45,
@@ -7552,12 +7552,12 @@
     "fi_weight": 86,
     "hi_weight": 23,
     "cri_weight": 35,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 46,
@@ -7720,12 +7720,12 @@
     "fi_weight": 93,
     "hi_weight": 96,
     "cri_weight": 99,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 47,
@@ -7888,12 +7888,12 @@
     "fi_weight": 92,
     "hi_weight": 73,
     "cri_weight": 80,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 48,
@@ -8056,12 +8056,12 @@
     "fi_weight": 87,
     "hi_weight": 46,
     "cri_weight": 56,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 49,
@@ -8224,12 +8224,12 @@
     "fi_weight": 87,
     "hi_weight": 81,
     "cri_weight": 82,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 50,
@@ -8392,12 +8392,12 @@
     "fi_weight": 86,
     "hi_weight": 64,
     "cri_weight": 74,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 51,
@@ -8560,12 +8560,12 @@
     "fi_weight": 89,
     "hi_weight": 63,
     "cri_weight": 67,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 52,
@@ -8728,12 +8728,12 @@
     "fi_weight": 100,
     "hi_weight": 33,
     "cri_weight": 49,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 53,
@@ -8896,12 +8896,12 @@
     "fi_weight": 79,
     "hi_weight": 39,
     "cri_weight": 51,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 54,
@@ -9064,12 +9064,12 @@
     "fi_weight": 82,
     "hi_weight": 69,
     "cri_weight": 77,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 55,
@@ -9232,12 +9232,12 @@
     "fi_weight": 78,
     "hi_weight": 67,
     "cri_weight": 72,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 56,
@@ -9400,12 +9400,12 @@
     "fi_weight": 83,
     "hi_weight": 37,
     "cri_weight": 46,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 57,
@@ -9568,12 +9568,12 @@
     "fi_weight": 86,
     "hi_weight": 33,
     "cri_weight": 44,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 58,
@@ -9736,12 +9736,12 @@
     "fi_weight": 89,
     "hi_weight": 46,
     "cri_weight": 54,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 59,
@@ -9904,12 +9904,12 @@
     "fi_weight": 63,
     "hi_weight": 35,
     "cri_weight": 46,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 60,
@@ -10072,12 +10072,12 @@
     "fi_weight": 65,
     "hi_weight": 36,
     "cri_weight": 46,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 61,
@@ -10240,12 +10240,12 @@
     "fi_weight": 75,
     "hi_weight": 32,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 62,
@@ -10408,12 +10408,12 @@
     "fi_weight": 73,
     "hi_weight": 29,
     "cri_weight": 41,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 63,
@@ -10576,12 +10576,12 @@
     "fi_weight": 82,
     "hi_weight": 32,
     "cri_weight": 48,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 64,
@@ -10744,12 +10744,12 @@
     "fi_weight": 88,
     "hi_weight": 33,
     "cri_weight": 49,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 65,
@@ -10912,12 +10912,12 @@
     "fi_weight": 47,
     "hi_weight": 23,
     "cri_weight": 37,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 66,
@@ -11080,12 +11080,12 @@
     "fi_weight": 82,
     "hi_weight": 32,
     "cri_weight": 44,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 67,
@@ -11248,12 +11248,12 @@
     "fi_weight": 89,
     "hi_weight": 32,
     "cri_weight": 43,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 68,
@@ -11416,12 +11416,12 @@
     "fi_weight": 75,
     "hi_weight": 29,
     "cri_weight": 41,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 69,
@@ -11584,12 +11584,12 @@
     "fi_weight": 73,
     "hi_weight": 29,
     "cri_weight": 43,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 70,
@@ -11752,12 +11752,12 @@
     "fi_weight": 89,
     "hi_weight": 32,
     "cri_weight": 44,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 71,
@@ -11920,12 +11920,12 @@
     "fi_weight": 85,
     "hi_weight": 32,
     "cri_weight": 44,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 72,
@@ -12088,12 +12088,12 @@
     "fi_weight": 77,
     "hi_weight": 31,
     "cri_weight": 42,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 73,
@@ -12256,12 +12256,12 @@
     "fi_weight": 81,
     "hi_weight": 30,
     "cri_weight": 41,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 74,
@@ -12424,12 +12424,12 @@
     "fi_weight": 83,
     "hi_weight": 34,
     "cri_weight": 45,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 75,
@@ -12592,12 +12592,12 @@
     "fi_weight": 90,
     "hi_weight": 33,
     "cri_weight": 46,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 76,
@@ -12760,12 +12760,12 @@
     "fi_weight": 79,
     "hi_weight": 33,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 77,
@@ -12928,12 +12928,12 @@
     "fi_weight": 92,
     "hi_weight": 32,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 78,
@@ -13096,12 +13096,12 @@
     "fi_weight": 83,
     "hi_weight": 32,
     "cri_weight": 42,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 79,
@@ -13264,12 +13264,12 @@
     "fi_weight": 86,
     "hi_weight": 33,
     "cri_weight": 44,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 80,
@@ -13432,12 +13432,12 @@
     "fi_weight": 81,
     "hi_weight": 35,
     "cri_weight": 47,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 81,
@@ -13600,12 +13600,12 @@
     "fi_weight": 88,
     "hi_weight": 32,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 82,
@@ -13768,12 +13768,12 @@
     "fi_weight": 83,
     "hi_weight": 34,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 83,
@@ -13936,12 +13936,12 @@
     "fi_weight": 83,
     "hi_weight": 33,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 84,
@@ -14104,12 +14104,12 @@
     "fi_weight": 80,
     "hi_weight": 67,
     "cri_weight": 78,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 85,
@@ -14272,12 +14272,12 @@
     "fi_weight": 90,
     "hi_weight": 31,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 86,
@@ -14440,12 +14440,12 @@
     "fi_weight": 88,
     "hi_weight": 30,
     "cri_weight": 39,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 87,
@@ -14608,12 +14608,12 @@
     "fi_weight": 91,
     "hi_weight": 48,
     "cri_weight": 59,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 88,
@@ -14776,12 +14776,12 @@
     "fi_weight": 97,
     "hi_weight": 52,
     "cri_weight": 62,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 89,
@@ -14944,12 +14944,12 @@
     "fi_weight": 84,
     "hi_weight": 30,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 90,
@@ -15112,12 +15112,12 @@
     "fi_weight": 92,
     "hi_weight": 35,
     "cri_weight": 42,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 91,
@@ -15280,12 +15280,12 @@
     "fi_weight": 92,
     "hi_weight": 33,
     "cri_weight": 41,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 92,
@@ -15448,12 +15448,12 @@
     "fi_weight": 53,
     "hi_weight": 2,
     "cri_weight": 6,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 93,
@@ -15616,12 +15616,12 @@
     "fi_weight": 81,
     "hi_weight": 27,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 94,
@@ -15784,12 +15784,12 @@
     "fi_weight": 69,
     "hi_weight": 15,
     "cri_weight": 28,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 95,
@@ -15952,12 +15952,12 @@
     "fi_weight": 56,
     "hi_weight": 30,
     "cri_weight": 41,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 96,
@@ -16120,12 +16120,12 @@
     "fi_weight": 52,
     "hi_weight": 20,
     "cri_weight": 31,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 97,
@@ -16288,12 +16288,12 @@
     "fi_weight": 55,
     "hi_weight": 12,
     "cri_weight": 26,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 98,
@@ -16456,12 +16456,12 @@
     "fi_weight": 54,
     "hi_weight": 29,
     "cri_weight": 33,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 99,
@@ -16624,12 +16624,12 @@
     "fi_weight": 56,
     "hi_weight": 21,
     "cri_weight": 30,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 100,
@@ -16792,12 +16792,12 @@
     "fi_weight": 75,
     "hi_weight": 23,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 101,
@@ -16960,12 +16960,12 @@
     "fi_weight": 51,
     "hi_weight": 30,
     "cri_weight": 42,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 102,
@@ -17128,12 +17128,12 @@
     "fi_weight": 59,
     "hi_weight": 30,
     "cri_weight": 42,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 103,
@@ -17296,12 +17296,12 @@
     "fi_weight": 91,
     "hi_weight": 32,
     "cri_weight": 44,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 104,
@@ -17464,12 +17464,12 @@
     "fi_weight": 64,
     "hi_weight": 32,
     "cri_weight": 43,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 105,
@@ -17632,12 +17632,12 @@
     "fi_weight": 80,
     "hi_weight": 3,
     "cri_weight": 10,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 106,
@@ -17800,12 +17800,12 @@
     "fi_weight": 83,
     "hi_weight": 12,
     "cri_weight": 28,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 107,
@@ -17968,12 +17968,12 @@
     "fi_weight": 31,
     "hi_weight": 0,
     "cri_weight": 0,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 108,
@@ -18136,12 +18136,12 @@
     "fi_weight": 78,
     "hi_weight": 66,
     "cri_weight": 72,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 109,
@@ -18304,12 +18304,12 @@
     "fi_weight": 8,
     "hi_weight": 28,
     "cri_weight": 34,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 110,
@@ -18472,12 +18472,12 @@
     "fi_weight": 28,
     "hi_weight": 32,
     "cri_weight": 43,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 111,
@@ -18640,12 +18640,12 @@
     "fi_weight": 33,
     "hi_weight": 17,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 112,
@@ -18808,12 +18808,12 @@
     "fi_weight": 54,
     "hi_weight": 28,
     "cri_weight": 34,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 113,
@@ -18976,12 +18976,12 @@
     "fi_weight": 94,
     "hi_weight": 75,
     "cri_weight": 75,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 114,
@@ -19144,12 +19144,12 @@
     "fi_weight": 89,
     "hi_weight": 43,
     "cri_weight": 51,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 115,
@@ -19312,12 +19312,12 @@
     "fi_weight": 77,
     "hi_weight": 30,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 116,
@@ -19480,12 +19480,12 @@
     "fi_weight": 79,
     "hi_weight": 31,
     "cri_weight": 43,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 117,
@@ -19648,12 +19648,12 @@
     "fi_weight": 80,
     "hi_weight": 33,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 118,
@@ -19816,12 +19816,12 @@
     "fi_weight": 87,
     "hi_weight": 31,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 119,
@@ -19984,12 +19984,12 @@
     "fi_weight": 69,
     "hi_weight": 25,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 120,
@@ -20152,12 +20152,12 @@
     "fi_weight": 45,
     "hi_weight": 30,
     "cri_weight": 42,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 121,
@@ -20320,12 +20320,12 @@
     "fi_weight": 89,
     "hi_weight": 9,
     "cri_weight": 23,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 122,
@@ -20488,12 +20488,12 @@
     "fi_weight": 93,
     "hi_weight": 39,
     "cri_weight": 52,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 123,
@@ -20656,12 +20656,12 @@
     "fi_weight": 81,
     "hi_weight": 90,
     "cri_weight": 94,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 124,
@@ -20824,12 +20824,12 @@
     "fi_weight": 76,
     "hi_weight": 61,
     "cri_weight": 75,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 125,
@@ -20992,12 +20992,12 @@
     "fi_weight": 97,
     "hi_weight": 55,
     "cri_weight": 65,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 126,
@@ -21160,12 +21160,12 @@
     "fi_weight": 80,
     "hi_weight": 23,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 127,
@@ -21328,12 +21328,12 @@
     "fi_weight": 67,
     "hi_weight": 15,
     "cri_weight": 29,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 128,
@@ -21496,12 +21496,12 @@
     "fi_weight": 82,
     "hi_weight": 22,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 129,
@@ -21664,12 +21664,12 @@
     "fi_weight": 70,
     "hi_weight": 29,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 130,
@@ -21832,12 +21832,12 @@
     "fi_weight": 55,
     "hi_weight": 21,
     "cri_weight": 30,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 2,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 2,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 131,
@@ -22000,12 +22000,12 @@
     "fi_weight": 97,
     "hi_weight": 72,
     "cri_weight": 73,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 132,
@@ -22168,12 +22168,12 @@
     "fi_weight": 81,
     "hi_weight": 34,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 133,
@@ -22336,12 +22336,12 @@
     "fi_weight": 65,
     "hi_weight": 9,
     "cri_weight": 20,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 134,
@@ -22504,12 +22504,12 @@
     "fi_weight": 76,
     "hi_weight": 4,
     "cri_weight": 13,
-    "ci_weight_quintile": 1,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 1,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 135,
@@ -22672,12 +22672,12 @@
     "fi_weight": 40,
     "hi_weight": 1,
     "cri_weight": 1,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 136,
@@ -22840,12 +22840,12 @@
     "fi_weight": 92,
     "hi_weight": 10,
     "cri_weight": 24,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 137,
@@ -23008,12 +23008,12 @@
     "fi_weight": 30,
     "hi_weight": 0,
     "cri_weight": 2,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 138,
@@ -23176,12 +23176,12 @@
     "fi_weight": 76,
     "hi_weight": 22,
     "cri_weight": 35,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 139,
@@ -23344,12 +23344,12 @@
     "fi_weight": 80,
     "hi_weight": 19,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 140,
@@ -23512,12 +23512,12 @@
     "fi_weight": 84,
     "hi_weight": 14,
     "cri_weight": 29,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 141,
@@ -23680,12 +23680,12 @@
     "fi_weight": 78,
     "hi_weight": 77,
     "cri_weight": 79,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 142,
@@ -23848,12 +23848,12 @@
     "fi_weight": 77,
     "hi_weight": 34,
     "cri_weight": 48,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 143,
@@ -24016,12 +24016,12 @@
     "fi_weight": 90,
     "hi_weight": 65,
     "cri_weight": 77,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 144,
@@ -24184,12 +24184,12 @@
     "fi_weight": 82,
     "hi_weight": 98,
     "cri_weight": 100,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 145,
@@ -24352,12 +24352,12 @@
     "fi_weight": 88,
     "hi_weight": 65,
     "cri_weight": 73,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 146,
@@ -24520,12 +24520,12 @@
     "fi_weight": 82,
     "hi_weight": 66,
     "cri_weight": 85,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 147,
@@ -24688,12 +24688,12 @@
     "fi_weight": 67,
     "hi_weight": 47,
     "cri_weight": 59,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 148,
@@ -24856,12 +24856,12 @@
     "fi_weight": 69,
     "hi_weight": 73,
     "cri_weight": 84,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 149,
@@ -25024,12 +25024,12 @@
     "fi_weight": 87,
     "hi_weight": 88,
     "cri_weight": 92,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 150,
@@ -25192,12 +25192,12 @@
     "fi_weight": 97,
     "hi_weight": 55,
     "cri_weight": 65,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 151,
@@ -25360,12 +25360,12 @@
     "fi_weight": 90,
     "hi_weight": 40,
     "cri_weight": 52,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 152,
@@ -25528,12 +25528,12 @@
     "fi_weight": 97,
     "hi_weight": 53,
     "cri_weight": 63,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 153,
@@ -25696,12 +25696,12 @@
     "fi_weight": 84,
     "hi_weight": 19,
     "cri_weight": 32,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 154,
@@ -25864,12 +25864,12 @@
     "fi_weight": 86,
     "hi_weight": 27,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 155,
@@ -26032,12 +26032,12 @@
     "fi_weight": 91,
     "hi_weight": 21,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 156,
@@ -26200,12 +26200,12 @@
     "fi_weight": 73,
     "hi_weight": 29,
     "cri_weight": 39,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 157,
@@ -26368,12 +26368,12 @@
     "fi_weight": 85,
     "hi_weight": 23,
     "cri_weight": 35,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 158,
@@ -26536,12 +26536,12 @@
     "fi_weight": 88,
     "hi_weight": 18,
     "cri_weight": 32,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 159,
@@ -26704,12 +26704,12 @@
     "fi_weight": 65,
     "hi_weight": 29,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 160,
@@ -26872,12 +26872,12 @@
     "fi_weight": 83,
     "hi_weight": 18,
     "cri_weight": 32,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 161,
@@ -27040,12 +27040,12 @@
     "fi_weight": 72,
     "hi_weight": 29,
     "cri_weight": 37,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 162,
@@ -27208,12 +27208,12 @@
     "fi_weight": 71,
     "hi_weight": 16,
     "cri_weight": 30,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 163,
@@ -27376,12 +27376,12 @@
     "fi_weight": 80,
     "hi_weight": 17,
     "cri_weight": 31,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 164,
@@ -27544,12 +27544,12 @@
     "fi_weight": 82,
     "hi_weight": 21,
     "cri_weight": 32,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 165,
@@ -27712,12 +27712,12 @@
     "fi_weight": 89,
     "hi_weight": 25,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 166,
@@ -27880,12 +27880,12 @@
     "fi_weight": 83,
     "hi_weight": 22,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 167,
@@ -28048,12 +28048,12 @@
     "fi_weight": 86,
     "hi_weight": 93,
     "cri_weight": 90,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 168,
@@ -28216,12 +28216,12 @@
     "fi_weight": 84,
     "hi_weight": 60,
     "cri_weight": 63,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 0,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 3
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 0,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 3
   },
   {
     "OBJECTID": 169,
@@ -28384,12 +28384,12 @@
     "fi_weight": 85,
     "hi_weight": 100,
     "cri_weight": 94,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 4,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 4,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 170,
@@ -28552,12 +28552,12 @@
     "fi_weight": 87,
     "hi_weight": 29,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 171,
@@ -28720,12 +28720,12 @@
     "fi_weight": 63,
     "hi_weight": 17,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 0,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 0,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 172,
@@ -28888,12 +28888,12 @@
     "fi_weight": 64,
     "hi_weight": 17,
     "cri_weight": 26,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 0,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 0,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 173,
@@ -29056,12 +29056,12 @@
     "fi_weight": 19,
     "hi_weight": 26,
     "cri_weight": 26,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 0,
-    "fi_weight_quintile": 0,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 0,
+    "fi_weight_sd": 0,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 174,
@@ -29224,12 +29224,12 @@
     "fi_weight": 90,
     "hi_weight": 38,
     "cri_weight": 48,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 175,
@@ -29392,12 +29392,12 @@
     "fi_weight": 90,
     "hi_weight": 79,
     "cri_weight": 84,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 3,
-    "edi_weight_quintile": 4,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 3,
+    "edi_weight_sd": 4,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 176,
@@ -29560,12 +29560,12 @@
     "fi_weight": 75,
     "hi_weight": 32,
     "cri_weight": 45,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 177,
@@ -29728,12 +29728,12 @@
     "fi_weight": 65,
     "hi_weight": 16,
     "cri_weight": 28,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 178,
@@ -29896,12 +29896,12 @@
     "fi_weight": 94,
     "hi_weight": 11,
     "cri_weight": 27,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 179,
@@ -30064,12 +30064,12 @@
     "fi_weight": 93,
     "hi_weight": 40,
     "cri_weight": 54,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 180,
@@ -30232,12 +30232,12 @@
     "fi_weight": 84,
     "hi_weight": 80,
     "cri_weight": 85,
-    "ci_weight_quintile": 4,
-    "eci_weight_quintile": 4,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 3,
-    "cri_weight_quintile": 4
+    "ci_weight_sd": 4,
+    "eci_weight_sd": 4,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 3,
+    "cri_weight_sd": 4
   },
   {
     "OBJECTID": 181,
@@ -30400,12 +30400,12 @@
     "fi_weight": 96,
     "hi_weight": 45,
     "cri_weight": 56,
-    "ci_weight_quintile": 3,
-    "eci_weight_quintile": 2,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 2,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 3,
+    "eci_weight_sd": 2,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 2,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 182,
@@ -30568,12 +30568,12 @@
     "fi_weight": 93,
     "hi_weight": 20,
     "cri_weight": 33,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 183,
@@ -30736,12 +30736,12 @@
     "fi_weight": 80,
     "hi_weight": 28,
     "cri_weight": 38,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 1,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 1,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 184,
@@ -30904,12 +30904,12 @@
     "fi_weight": 88,
     "hi_weight": 25,
     "cri_weight": 36,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   },
   {
     "OBJECTID": 185,
@@ -31072,12 +31072,12 @@
     "fi_weight": 34,
     "hi_weight": 7,
     "cri_weight": 10,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 186,
@@ -31240,12 +31240,12 @@
     "fi_weight": 84,
     "hi_weight": 34,
     "cri_weight": 41,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 2
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 2
   },
   {
     "OBJECTID": 187,
@@ -31408,12 +31408,12 @@
     "fi_weight": 29,
     "hi_weight": 1,
     "cri_weight": 0,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 1,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 1,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 188,
@@ -31576,12 +31576,12 @@
     "fi_weight": 72,
     "hi_weight": 2,
     "cri_weight": 7,
-    "ci_weight_quintile": 0,
-    "eci_weight_quintile": 0,
-    "edi_weight_quintile": 3,
-    "fi_weight_quintile": 3,
-    "hi_weight_quintile": 0,
-    "cri_weight_quintile": 0
+    "ci_weight_sd": 0,
+    "eci_weight_sd": 0,
+    "edi_weight_sd": 3,
+    "fi_weight_sd": 3,
+    "hi_weight_sd": 0,
+    "cri_weight_sd": 0
   },
   {
     "OBJECTID": 189,
@@ -31744,11 +31744,11 @@
     "fi_weight": 89,
     "hi_weight": 22,
     "cri_weight": 34,
-    "ci_weight_quintile": 2,
-    "eci_weight_quintile": 1,
-    "edi_weight_quintile": 2,
-    "fi_weight_quintile": 4,
-    "hi_weight_quintile": 1,
-    "cri_weight_quintile": 1
+    "ci_weight_sd": 2,
+    "eci_weight_sd": 1,
+    "edi_weight_sd": 2,
+    "fi_weight_sd": 4,
+    "hi_weight_sd": 1,
+    "cri_weight_sd": 1
   }
 ]

@@ -50,147 +50,147 @@ exports.createPages = async ({ graphql, actions }) => {
             ZIP
             ci_index
             ci_weight
-            ci_weight_quintile
+            ci_weight_sd
             comm_bbp
-            comm_bbp_quintile
+            comm_bbp_sd
             comm_bvp
-            comm_bvp_quintile
+            comm_bvp_sd
             comm_cctrcap
-            comm_cctrcap_quintile
+            comm_cctrcap_sd
             comm_evrate
-            comm_evrate_quintile
+            comm_evrate_sd
             comm_incarpct
-            comm_incarpct_quintile
+            comm_incarpct_sd
             comm_juvcrimecap
-            comm_juvcrimecap_quintile
+            comm_juvcrimecap_sd
             comm_libcap
-            comm_libcap_quintile
+            comm_libcap_sd
             comm_ltbvp
-            comm_ltbvp_quintile
+            comm_ltbvp_sd
             comm_ltrvp
-            comm_ltrvp_quintile
+            comm_ltrvp_sd
             comm_ocb
-            comm_ocb_quintile
+            comm_ocb_sd
             comm_ocbp
-            comm_ocbp_quintile
+            comm_ocbp_sd
             comm_parkcap
-            comm_parkcap_quintile
+            comm_parkcap_sd
             comm_rcb
-            comm_rcb_quintile
+            comm_rcb_sd
             comm_rcbp
-            comm_rcbp_quintile
+            comm_rcbp_sd
             comm_rvp
-            comm_rvp_quintile
+            comm_rvp_sd
             comm_u18bbp
-            comm_u18bbp_quintile
+            comm_u18bbp_sd
             cri_index
             cri_weight
-            cri_weight_quintile
+            cri_weight_sd
             dem_popas
-            dem_popas_quintile
+            dem_popas_sd
             dem_popbl
-            dem_popbl_quintile
+            dem_popbl_sd
             dem_popch
-            dem_popch_quintile
+            dem_popch_sd
             dem_popf
-            dem_popf_quintile
+            dem_popf_sd
             dem_pophi
-            dem_pophi_quintile
+            dem_pophi_sd
             dem_popm
-            dem_popm_quintile
+            dem_popm_sd
             dem_popse
-            dem_popse_quintile
+            dem_popse_sd
             dem_popwh
-            dem_popwh_quintile
+            dem_popwh_sd
             dem_thh
-            dem_thh_quintile
+            dem_thh_sd
             dem_totp
-            dem_totp_quintile
+            dem_totp_sd
             eci_index
             eci_weight
-            eci_weight_quintile
+            eci_weight_sd
             econ_cpr
-            econ_cpr_quintile
+            econ_cpr_sd
             econ_fincap
-            econ_fincap_quintile
+            econ_fincap_sd
             econ_medinc
-            econ_medinc_quintile
+            econ_medinc_sd
             econ_paydaycap
-            econ_paydaycap_quintile
+            econ_paydaycap_sd
             econ_pctlwjobs
-            econ_pctlwjobs_quintile
+            econ_pctlwjobs_sd
             econ_pctmwjobs
-            econ_pctmwjobs_quintile
+            econ_pctmwjobs_sd
             econ_pr
-            econ_pr_quintile
+            econ_pr_sd
             econ_pyr
-            econ_pyr_quintile
+            econ_pyr_sd
             econ_ur
-            econ_ur_quintile
+            econ_ur_sd
             econ_totjobs
-            econ_totjobs_quintile
+            econ_totjobs_sd
             edi_index
             edi_weight
-            edi_weight_quintile
+            edi_weight_sd
             edu_oostkids
-            edu_oostkids_quintile
+            edu_oostkids_sd
             edu_perbach
-            edu_perbach_quintile
+            edu_perbach_sd
             edu_perearlyed
-            edu_perearlyed_quintile
+            edu_perearlyed_sd
             edu_qeckids
-            edu_qeckids_quintile
+            edu_qeckids_sd
             fam_affcckids
-            fam_affcckids_quintile
+            fam_affcckids_sd
             fam_lcckids
-            fam_lcckids_quintile
+            fam_lcckids_sd
             fam_tphh
-            fam_tphh_quintile
+            fam_tphh_sd
             fam_tphhpct
-            fam_tphhpct_quintile
+            fam_tphhpct_sd
             fi_index
             fi_weight
-            fi_weight_quintile
+            fi_weight_sd
             hel_bphigh
-            hel_bphigh_quintile
+            hel_bphigh_sd
             hel_castthma
-            hel_castthma_quintile
+            hel_castthma_sd
             hel_checkup
-            hel_checkup_quintile
+            hel_checkup_sd
             hel_clincap
-            hel_clincap_quintile
+            hel_clincap_sd
             hel_fruitsveggies
-            hel_fruitsveggies_quintile
+            hel_fruitsveggies_sd
             hel_groccap
-            hel_groccap_quintile
+            hel_groccap_sd
             hel_le
-            hel_le_quintile
+            hel_le_sd
             hel_mhlth
-            hel_mhlth_quintile
+            hel_mhlth_sd
             hel_obesity
-            hel_obesity_quintile
+            hel_obesity_sd
             hel_perins
-            hel_perins_quintile
+            hel_perins_sd
             hel_perpri
-            hel_perpri_quintile
+            hel_perpri_sd
             hel_perpub
-            hel_perpub_quintile
+            hel_perpub_sd
             hel_perunin
-            hel_perunin_quintile
+            hel_perunin_sd
             hel_pharmacap
-            hel_pharmacap_quintile
+            hel_pharmacap_sd
             hel_phlth
-            hel_phlth_quintile
+            hel_phlth_sd
             hel_prtopu
-            hel_prtopu_quintile
+            hel_prtopu_sd
             hel_sleep
-            hel_sleep_quintile
+            hel_sleep_sd
             hel_stroke
-            hel_stroke_quintile
+            hel_stroke_sd
             hi_gen
             hi_index
             hi_weight
-            hi_weight_quintile
+            hi_weight_sd
           }
         }
       }
