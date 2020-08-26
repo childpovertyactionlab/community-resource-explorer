@@ -103,25 +103,56 @@
   }
   // General styling for the scale
   .metric-group {
+    .n-i-scale-parent {
+      .n-i-scale-linear {
+        .n-i-scale-line {
+          border-bottom: 1px dashed #465eb3;
+        }
+      }
+    }
     .n-i-scale .n-i-scale-minmax {
       margin-top: 0px;
     }
     .n-i-scale-hash {
-      top: 1px !important;
+      // top: 1px !important;
     }
-    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles:after {
-      top: 6px;
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
+      border: 1px solid #ccc;
+      height: 12px;
+      box-sizing: content-box;
+      margin-top: 1.5rem;
+      &:after {
+        display: none;
+      }
+      .n-i-scale-quintile {
+        height: 100%;
+        border-right: 1px solid #ccc;
+        width: 16.67%;
+        &.quintile-2 {
+          width: 33.33%;
+        }
+        &.quintile-4 {
+          border-right: none;
+        }
+        &.quintile-0:before,
+        &.quintile-4:after {
+          display: none;
+        }
+      }
     }
-    .n-i-scale
-      .n-i-scale-parent
-      .n-i-scale-quintiles
-      .n-i-scale-quintile.quintile-0:before,
-    .n-i-scale
-      .n-i-scale-parent
-      .n-i-scale-quintiles
-      .n-i-scale-quintile.quintile-4:after {
-      top: 1px;
-    }
+    // .n-i-scale .n-i-scale-parent .n-i-scale-quintiles:after {
+    //   top: 6px;
+    // }
+    // .n-i-scale
+    //   .n-i-scale-parent
+    //   .n-i-scale-quintiles
+    //   .n-i-scale-quintile.quintile-0:before,
+    // .n-i-scale
+    //   .n-i-scale-parent
+    //   .n-i-scale-quintiles
+    //   .n-i-scale-quintile.quintile-4:after {
+    //   top: 1px;
+    // }
   }
 }
 @media print {
