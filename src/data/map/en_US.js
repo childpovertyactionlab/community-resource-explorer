@@ -147,6 +147,16 @@ const en_US = {
   UI_MAP_METRIC_DEM_POPF: `Female population`,
   UI_MAP_METRIC_DEM_THH: `Total households`,
   UI_MAP_METRIC_DEM_POPSE: `Senior population (65 and over)`,
+  // Added 2020-08-26
+  UI_MAP_METRIC_DEM_PERWH: `Percent of White, Non-Hispanic Population in Buffer`,
+  UI_MAP_METRIC_DEM_PERAS: `Percent of Asian, Non-Hispanic Population in Buffer`,
+  UI_MAP_METRIC_DEM_PERBL: `Percent of Black, Non-Hispanic Population in Buffer`,
+  UI_MAP_METRIC_DEM_PERCH: `Percent of Child Population (Under 18) in Buffer`,
+  UI_MAP_METRIC_DEM_PERF: `Percent of Female Population, All Ages in Buffer`,
+  UI_MAP_METRIC_DEM_PERHI: `Percent of Hispanic Population, All Races in Buffer`,
+  UI_MAP_METRIC_DEM_PERM: `Percent of Male Population, All Ages in Buffer`,
+  UI_MAP_METRIC_DEM_PERSE: `Percent of Senior Population (65 and Over) in Buffer`,
+  // End added 2020-08-26
   // Below this line not in explorer.
   SCHOOL_PROSE_FEEDER_GENERIC: `<p>This school is part of a community with many strengths and assets that might not be fully captured by quantitative data in the Community Resource Explorer (CRE). The CRE highlights what resources and amenities might be available to residents based on publicly available datasets. These datasets, while helpful, do not include important aspects of a neighborhood, such as the history of how it came to be, cultures of the residents, and trusted institutions/points of pride, like places of worship and neighborhood associations. Over time, we hope to add these types of qualitative assets to the school community profiles. Please help us to do so by sharing insight you have about your neighborhood <a href="/contact/" target="_blank">here</a>.</p>`,
   SCHOOL_PROSE_FEEDER_LINCOLN: `<p>The Lincoln feeder pattern is located in South Dallas. The community is rich in history, tradition, and generational pride, exemplified by the second high school built for Black students in the late 1930s, Lincoln. South Dallas was home to some of the earliest Black professionals in Dallas, including Dr. Watts, Dr. Pinkston, and Pearl C. Anderson. Other points of pride and strength in the neighborhood are the churches, Black Greek Row, the South Dallas Cultural Center, Martin Luther King, Jr. Community Center, long-time childcare centers, and neighborhood associations, to name a few.</p><p><a href="/contact/" target="_blank">Let us know more about your neighborhood.</a></p>`,
