@@ -10,6 +10,8 @@ const NonInteractiveScale = ({
   colors,
   showHash,
   hashLeft,
+  showMean,
+  meanLeft,
   showMinMax,
 }) => {
   const metricData = getMetric(metric, CPAL_METRICS)
@@ -37,16 +39,73 @@ const NonInteractiveScale = ({
       backgroundColor: !!quintiles[4] ? colors[4] : "transparent",
     },
   ]
-  const hashStyles = { left: hashLeft + "%" }
+  // const hashStyles = { left: hashLeft + "%" }
+  // const hashStyles = { left: hashLeft + "%" }
+  const getLeftStyles = val => {
+    return { left: val + "%" }
+  }
   const minMaxStyle = {
     display: !!showMinMax ? "block" : "none",
   }
   return (
     <div className="n-i-scale" key={metric}>
       <div className="n-i-scale-parent">
-        {!!showHash ? (
-          <div className="n-i-scale-hash" style={hashStyles}></div>
-        ) : null}
+        <div className="n-i-scale-linear">
+          <div className="n-i-scale-line">
+            {!!showHash ? (
+              <div
+                className="n-i-scale-hash"
+                style={getLeftStyles(hashLeft)}
+              ></div>
+            ) : null}
+            {!!showMean ? (
+              <div
+                className="n-i-scale-mean"
+                style={getLeftStyles(meanLeft)}
+              ></div>
+            ) : null}
+          </div>
+          {!!showMinMax ? (
+            <div className="n-i-scale-minmax" style={minMaxStyle}>
+              <div className="n-i-scale-min">
+                {!!metricData.high_is_good
+                  ? getRoundedValue(
+                      metricData.range[0],
+                      metricData.decimals,
+                      false,
+                      !!metricData.is_currency,
+                      !!metricData.as_percent
+                    )
+                  : getRoundedValue(
+                      metricData.range[1],
+                      metricData.decimals,
+                      false,
+                      !!metricData.is_currency,
+                      !!metricData.as_percent
+                    )}
+              </div>
+              <div className="n-i-scale-max">
+                {!!metricData.high_is_good
+                  ? getRoundedValue(
+                      metricData.range[1],
+                      metricData.decimals,
+                      false,
+                      !!metricData.is_currency,
+                      !!metricData.as_percent
+                    )
+                  : getRoundedValue(
+                      metricData.range[0],
+                      metricData.decimals,
+                      false,
+                      !!metricData.is_currency,
+                      !!metricData.as_percent
+                    )}
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
         <div className="n-i-scale-quintiles metric-{metric} quintile-{quintile}">
           <div
             className="n-i-scale-quintile quintile-0"
@@ -70,46 +129,6 @@ const NonInteractiveScale = ({
           ></div>
         </div>
       </div>
-      {!!showMinMax ? (
-        <div className="n-i-scale-minmax" style={minMaxStyle}>
-          <div className="n-i-scale-min">
-            {!!metricData.high_is_good
-              ? getRoundedValue(
-                  metricData.range[0],
-                  metricData.decimals,
-                  false,
-                  !!metricData.is_currency,
-                  !!metricData.as_percent
-                )
-              : getRoundedValue(
-                  metricData.range[1],
-                  metricData.decimals,
-                  false,
-                  !!metricData.is_currency,
-                  !!metricData.as_percent
-                )}
-          </div>
-          <div className="n-i-scale-max">
-            {!!metricData.high_is_good
-              ? getRoundedValue(
-                  metricData.range[1],
-                  metricData.decimals,
-                  false,
-                  !!metricData.is_currency,
-                  !!metricData.as_percent
-                )
-              : getRoundedValue(
-                  metricData.range[0],
-                  metricData.decimals,
-                  false,
-                  !!metricData.is_currency,
-                  !!metricData.as_percent
-                )}
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
     </div>
   )
 }
