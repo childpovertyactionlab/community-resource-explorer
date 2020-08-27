@@ -234,7 +234,7 @@ const SchoolPage = ({ data, ...props }) => {
                   height: "10px",
                   borderRadius: "5px",
                   border: "1px solid #fff",
-                  backgroundColor: CRI_COLORS[0],
+                  backgroundColor: CRI_COLORS[school.ci_weight_sd],
                 }}
               ></div>
             </Marker>
@@ -243,7 +243,7 @@ const SchoolPage = ({ data, ...props }) => {
                 id="point"
                 type="fill"
                 paint={{
-                  "fill-color": CRI_COLORS[4],
+                  "fill-color": CRI_COLORS[2],
                   "fill-opacity": 0.2,
                 }}
               />
