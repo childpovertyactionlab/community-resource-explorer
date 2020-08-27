@@ -168,5 +168,6 @@ const en_US = {
   SCHOOL_PROSE_BOTTOM: `This school is in the bottom quintile for {quintiles}.`,
   SCHOOL_BUTTON_PRINT: `PRINT PDF`,
   SCHOOL_PROSE_RACE: `The racial makeup of this community is {black}% Black, {hispanic}% Hispanic, {asian}% Asian, and {white}% white.`,
+  SCHOOL_PROSE_DEMO_LABEL: `Racial and ethnic makeup of this community`,
 }
 export default en_US

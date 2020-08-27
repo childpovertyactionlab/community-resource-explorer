@@ -252,8 +252,8 @@ const SchoolPage = ({ data, ...props }) => {
         </div>
       </SchoolHero>
       {/** Intro row */}
-      <Row className="school-metadata">
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 1 }}>
+      <Row className="school-metadata custom-feeder-prose">
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <h2>{school.SCHOOLNAME}</h2>
           <h4>
             {school.ADDRESS}
@@ -277,7 +277,60 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 5, offset: 0 }}
+          md={{ span: 4, offset: 1 }}
+          className="custom-feeder"
+        >
+          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
+          <div className="demo-callout">
+            <div className="parent-label">
+              {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
+              <hr></hr>
+            </div>
+            <div className="demographics">
+              <div className="demo demo-bl">
+                <span className="percent">
+                  {getRoundedValue(
+                    getPercent(school.dem_popbl, school.dem_totp),
+                    1
+                  ) + "%"}
+                </span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPBL")}
+              </div>
+              <div className="demo demo-hi">
+                <span className="percent">
+                  {getRoundedValue(
+                    getPercent(school.dem_pophi, school.dem_totp),
+                    1
+                  ) + "%"}
+                </span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPHI")}
+              </div>
+              <div className="demo demo-as">
+                <span className="percent">
+                  {getRoundedValue(
+                    getPercent(school.dem_popas, school.dem_totp),
+                    1
+                  ) + "%"}
+                </span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPAS")}
+              </div>
+              <div className="demo demo-wh">
+                <span className="percent">
+                  {getRoundedValue(
+                    getPercent(school.dem_popwh, school.dem_totp),
+                    1
+                  ) + "%"}
+                </span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPWH")}
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
+      <Row className="custom-feeder-prose">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <div className="metric-group">
@@ -300,22 +353,7 @@ const SchoolPage = ({ data, ...props }) => {
             />
           </div>
         </Col>
-      </Row>
-      <Row className="custom-feeder-prose">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 7, offset: 1 }}
-          className="custom-feeder"
-        >
-          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
-        </Col>
-      </Row>
-      <Row className="info-robotext">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 7, offset: 1 }}
-          className="custom-feeder"
-        >
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <div
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
@@ -324,59 +362,12 @@ const SchoolPage = ({ data, ...props }) => {
               ),
             }}
           ></div>
-        </Col>
-      </Row>
-      <Row className="info-demographics">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 7, offset: 1 }}
-          className="custom-feeder"
-        >
-          <p
-            className="school-prose-top"
-            dangerouslySetInnerHTML={{
-              __html: i18n.translate("SCHOOL_PROSE_RACE", {
-                black: getRoundedValue(
-                  getPercent(school.dem_popbl, school.dem_totp),
-                  1
-                ),
-                hispanic: getRoundedValue(
-                  getPercent(school.dem_pophi, school.dem_totp),
-                  1
-                ),
-                asian: getRoundedValue(
-                  getPercent(school.dem_popas, school.dem_totp),
-                  1
-                ),
-                white: getRoundedValue(
-                  getPercent(school.dem_popwh, school.dem_totp),
-                  1
-                ),
-              }),
-            }}
-          ></p>
-        </Col>
-      </Row>
-      <Row className="info-school-top">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 7, offset: 1 }}
-          className="custom-feeder"
-        >
           <p
             className="school-prose-top"
             dangerouslySetInnerHTML={{
               __html: getSchoolMetricList("top"),
             }}
           ></p>
-        </Col>
-      </Row>
-      <Row className="info-school-bottom">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 7, offset: 1 }}
-          className="custom-feeder"
-        >
           <p
             className="school-prose-bottom"
             dangerouslySetInnerHTML={{
@@ -385,6 +376,7 @@ const SchoolPage = ({ data, ...props }) => {
           ></p>
         </Col>
       </Row>
+
       {/** Iterate through other categories */}
       {categories.map(el => {
         return (

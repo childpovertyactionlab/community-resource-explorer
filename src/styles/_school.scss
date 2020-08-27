@@ -49,6 +49,41 @@
           width: 92%;
         }
       }
+      .custom-feeder {
+        .demo-callout {
+          width: 100%;
+          display: flex;
+          background-color: #ebede3;
+          font-family: Halyard;
+          padding: 42px;
+          margin-top: 1.6rem;
+          .parent-label {
+            width: 40%;
+            font-size: 1.8rem;
+            padding-right: 1.6rem;
+            hr {
+              height: 4px;
+              width: 40%;
+              background-color: #e55934;
+              margin-left: 0;
+            }
+          }
+          .demographics {
+            width: 60%;
+            font-size: 1.6rem;
+            .percent {
+              margin-right: 0.4rem;
+              font-size: 1.9rem;
+              line-height: 2.9rem;
+              font-weight: 500;
+            }
+            span {
+              // display: block;
+              // width: 100%;
+            }
+          }
+        }
+      }
     }
     &.custom-feeder-prose,
     &.info-robotext,
@@ -56,7 +91,7 @@
     &.info-school-bottom,
     &.info-demographics {
       font-weight: 300;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
   .row-metric-group {
