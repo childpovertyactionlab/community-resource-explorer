@@ -10,8 +10,10 @@ const NonInteractiveScale = ({
   colors,
   showHash,
   hashLeft,
+  hashValue,
   showMean,
   meanLeft,
+  meanValue,
   showMinMax,
 }) => {
   const metricData = getMetric(metric, CPAL_METRICS)
@@ -52,17 +54,17 @@ const NonInteractiveScale = ({
       <div className="n-i-scale-parent">
         <div className="n-i-scale-linear">
           <div className="n-i-scale-line">
-            {!!showHash ? (
-              <div
-                className="n-i-scale-hash"
-                style={getLeftStyles(hashLeft)}
-              ></div>
-            ) : null}
             {!!showMean ? (
-              <div
-                className="n-i-scale-mean"
-                style={getLeftStyles(meanLeft)}
-              ></div>
+              <div className="n-i-scale-mean" style={getLeftStyles(meanLeft)}>
+                <div className="n-i-scale-mean-line"></div>
+                <div className="n-i-scale-mean-value">{meanValue}</div>
+              </div>
+            ) : null}
+            {!!showHash ? (
+              <div className="n-i-scale-hash" style={getLeftStyles(hashLeft)}>
+                <div className="n-i-scale-hash-value">{hashValue}</div>
+                <div className="n-i-scale-hash-dot"></div>
+              </div>
             ) : null}
           </div>
           {!!showMinMax ? (

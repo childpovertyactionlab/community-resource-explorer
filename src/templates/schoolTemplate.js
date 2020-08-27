@@ -20,6 +20,7 @@ import {
   getHashLeft,
   getQuintileDesc,
   getPercent,
+  getMetric,
 } from "./utils/utils"
 import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
@@ -334,11 +335,7 @@ const SchoolPage = ({ data, ...props }) => {
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <div className="metric-group">
-            <h4>
-              {i18n.translate("SCHOOL_PROSE_CRI_SCORE") +
-                ": " +
-                getRoundedValue(school.cri_weight, 0)}
-            </h4>
+            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
             <NonInteractiveScale
               className="metric-group"
               metric="cri_weight"
@@ -347,6 +344,17 @@ const SchoolPage = ({ data, ...props }) => {
               showHash={true}
               hashLeft={getRoundedValue(
                 getHashLeft(school.cri_weight, 0, 100),
+                0
+              )}
+              hashValue={school.cri_weight}
+              showMean={true}
+              meanLeft={getHashLeft(
+                getMetric("cri_weight", CPAL_METRICS).mean,
+                0,
+                100
+              )}
+              meanValue={getRoundedValue(
+                getMetric("cri_weight", CPAL_METRICS).mean,
                 0
               )}
               showMinMax={true}
@@ -405,16 +413,7 @@ const SchoolPage = ({ data, ...props }) => {
                     id={"metric_" + el.id}
                     key={"metric_" + el.id}
                   >
-                    <h6>
-                      {i18n.translate(el.title) +
-                        ": " +
-                        getRoundedValue(
-                          school[el.id],
-                          el.decimals,
-                          false,
-                          el.is_currency ? el.is_currency : 0
-                        )}
-                    </h6>
+                    <h6>{i18n.translate(el.title)}</h6>
                     <NonInteractiveScale
                       className={"scale-" + el.id}
                       id={"scale_" + el.id}
@@ -431,6 +430,25 @@ const SchoolPage = ({ data, ...props }) => {
                         el.range[0],
                         el.range[1],
                         el.high_is_good
+                      )}
+                      hashValue={getRoundedValue(
+                        school[el.id],
+                        el.decimals,
+                        false,
+                        el.is_currency ? el.is_currency : 0
+                      )}
+                      showMean={true}
+                      meanLeft={getHashLeft(
+                        el.mean,
+                        el.range[0],
+                        el.range[1],
+                        el.high_is_good
+                      )}
+                      meanValue={getRoundedValue(
+                        el.mean,
+                        el.decimals,
+                        false,
+                        el.is_currency ? el.is_currency : 0
                       )}
                       showMinMax={true}
                     />
@@ -458,17 +476,7 @@ const SchoolPage = ({ data, ...props }) => {
                     id={"metric_" + el.id}
                     key={"metric_" + el.id}
                   >
-                    <h6>
-                      {i18n.translate(el.title) +
-                        ": " +
-                        getRoundedValue(
-                          school[el.id],
-                          el.decimals,
-                          false,
-                          el.is_currency ? el.is_currency : 0,
-                          el.as_percent ? el.as_percent : 0
-                        )}
-                    </h6>
+                    <h6>{i18n.translate(el.title)}</h6>
                     <NonInteractiveScale
                       className={"scale-" + el.id}
                       id={"scale_" + el.id}
@@ -485,6 +493,27 @@ const SchoolPage = ({ data, ...props }) => {
                         el.range[0],
                         el.range[1],
                         el.high_is_good
+                      )}
+                      hashValue={getRoundedValue(
+                        school[el.id],
+                        el.decimals,
+                        false,
+                        el.is_currency ? el.is_currency : 0,
+                        el.as_percent ? el.as_percent : 0
+                      )}
+                      showMean={true}
+                      meanLeft={getHashLeft(
+                        el.mean,
+                        el.range[0],
+                        el.range[1],
+                        el.high_is_good
+                      )}
+                      meanValue={getRoundedValue(
+                        el.mean,
+                        el.decimals,
+                        false,
+                        el.is_currency ? el.is_currency : 0,
+                        el.as_percent ? el.as_percent : 0
                       )}
                       showMinMax={true}
                     />
