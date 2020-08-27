@@ -2,10 +2,8 @@ import React, { useState } from "react"
 import Explorer from "cpal-components"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
-import { Col, Row, Collapse } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
 import { pages } from "../consts"
 import Menu from "../components/menu"
 

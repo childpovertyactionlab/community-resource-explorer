@@ -8,7 +8,7 @@ import clsx from "clsx"
 import { FaPrint } from "react-icons/fa"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
-import { logger } from "./../utils/logger"
+// import { logger } from "./../utils/logger"
 import Layout from "../components/layout"
 import SchoolHero from "../components/SchoolHero"
 import NonInteractiveScale from "./../components/NonInteractiveScale"
@@ -21,14 +21,7 @@ import {
   getQuintileDesc,
   getPercent,
 } from "./utils/utils"
-import {
-  CRI_COLORS,
-  ECON_COLORS,
-  EDU_COLORS,
-  COMM_COLORS,
-  HEL_COLORS,
-  FAM_COLORS,
-} from "./../data/map/colors"
+import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
 // import { pages } from "../consts"
 
