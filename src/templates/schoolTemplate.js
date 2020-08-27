@@ -524,6 +524,30 @@ const SchoolPage = ({ data, ...props }) => {
           </Row>
         )
       })}
+      <Row className="row-print-only">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+          className="vcenter"
+        >
+          <span class="cpal-logo"></span>
+        </Col>
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
+          <div class="funder-wrapper">
+            <a
+              href="https://www.comerica.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/static/comericabank-logo-6af505e17d95250d2e0bfa0cb882cdcb.svg" />
+            </a>
+            <p class="text">
+              Comerica generously funded the development of the Community
+              Resource Explorer
+            </p>
+          </div>
+        </Col>
+      </Row>
     </Layout>
   )
 }

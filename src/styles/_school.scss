@@ -99,6 +99,50 @@
       }
     }
   }
+  .row-print-only {
+    page-break-inside: avoid;
+    visibility: hidden;
+    .vcenter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cpal-logo {
+      padding: 2rem 0;
+      width: 88px;
+      height: 104px;
+      display: block;
+      background-image: url("../images/cpal-logo.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .funder-wrapper {
+      padding: 4rem 0 2rem;
+      display: block;
+      a {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        font-family: "Louize Display";
+        font-style: italic;
+        font-weight: normal;
+        // font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        color: #2c390b;
+        font-size: 1.8rem;
+        width: 100%;
+      }
+    }
+  }
   .row-metric-group {
     page-break-inside: avoid;
     &:last-of-type {
@@ -275,5 +319,8 @@
     height: 0 !important;
     width: 0 !important;
     visibility: hidden;
+  }
+  .row-print-only {
+    visibility: visible !important;
   }
 }
