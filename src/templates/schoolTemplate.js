@@ -125,11 +125,11 @@ const SchoolPage = ({ data, ...props }) => {
    */
   const getQuintileRobotext = (schoolname, quintile) => {
     if (quintile === 4) {
-      return i18n.translate("SCHOOL_PROSE_sd_FIFTH", {
+      return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
         schoolname: schoolname,
       })
     } else {
-      return i18n.translate("SCHOOL_PROSE_sd_BELOW_FIFTH", {
+      return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
         schoolname: schoolname,
         quintile: getQuintileDesc(quintile).toLowerCase(),
       })
