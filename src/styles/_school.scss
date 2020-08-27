@@ -205,8 +205,9 @@
             width: 1px;
             background-color: #606b44;
           }
-          &:before {
+          &:after {
             right: 0;
+            z-index: 10; // Set just below z-index for dot.
           }
           .n-i-scale-mean {
             position: absolute;
@@ -229,6 +230,7 @@
           .n-i-scale-hash {
             background-color: transparent !important;
             top: -28px !important;
+            z-index: 11; // Set just above z-index for right hash.
             .n-i-scale-hash-value {
               width: 200px;
               text-align: center;

@@ -24,7 +24,7 @@ import {
 } from "./utils/utils"
 import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
-// import { pages } from "../consts"
+import comerica from "../images/comericabank-logo.svg"
 
 export const query = graphql`
   query SchoolPageQuery {
@@ -539,7 +539,7 @@ const SchoolPage = ({ data, ...props }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/static/comericabank-logo-6af505e17d95250d2e0bfa0cb882cdcb.svg" />
+              <img alt="Comerica" src={comerica} />
             </a>
             <p class="text">
               Comerica generously funded the development of the Community
