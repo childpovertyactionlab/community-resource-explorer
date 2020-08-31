@@ -261,6 +261,11 @@
     .n-i-scale-hash {
       top: 1px !important;
     }
+
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles:before {
+      display: none;
+    }
+
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
       border: 1px solid #ccc;
       height: 12px;
