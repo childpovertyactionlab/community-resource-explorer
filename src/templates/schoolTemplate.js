@@ -254,7 +254,7 @@ const SchoolPage = ({ data, ...props }) => {
       </SchoolHero>
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
+        <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 1 }}>
           <h2>{school.SCHOOLNAME}</h2>
           <h4>
             {school.ADDRESS}
@@ -275,14 +275,18 @@ const SchoolPage = ({ data, ...props }) => {
               {i18n.translate("SCHOOL_BUTTON_PRINT")}
             </span>
           </Button>
+
+                
+         
+
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
+          lg={{ span: 4, offset: 1 }}
           className="custom-feeder"
         >
-          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
-          <div className="demo-callout">
+           
+           <div className="demo-callout">
             <div className="parent-label">
               {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
               <hr></hr>
@@ -326,15 +330,21 @@ const SchoolPage = ({ data, ...props }) => {
               </div>
             </div>
           </div>
+
+          
+          
         </Col>
       </Row>
-      <Row className="custom-feeder-prose">
+
+      <Row className="metric-row">
+        
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-          <div className="metric-group">
+        
+        <div className="metric-group">
             <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
             <NonInteractiveScale
               className="metric-group"
@@ -360,6 +370,23 @@ const SchoolPage = ({ data, ...props }) => {
               showMinMax={true}
             />
           </div>
+        
+        </Col>
+        
+        
+        </Row>          
+
+
+      <Row className="custom-feeder-prose">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
+
+          
+
+          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <div
