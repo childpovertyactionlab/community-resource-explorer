@@ -1,16 +1,13 @@
 import React, { useState } from "react"
 
-import { Col, Row, Form, Button } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
-import Helmet from "react-helmet"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
 import { pages } from "../consts"
-import _ from "lodash"
 import { navigate } from "gatsby"
 
 const ThankYou = ({ location }) => {
-  const [secs, setSecs] = useState(5);
+  const [secs, setSecs] = useState(5)
 
   const int = setInterval(() => {
     if (secs > 0) {

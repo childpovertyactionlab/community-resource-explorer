@@ -1,18 +1,34 @@
 import React from "react"
 import _ from "lodash"
 
-const InlineSvg = ({ type, onClick=_.noop, classes="" }) => {
+const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
   const getSvg = type => {
     switch (type) {
       // declare stroke color in CSS, as defining here cannot be overridden
       case "right-arrow-thin":
         return (
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line y1="4.33958" x2="11.6598" y2="4.33958" strokeWidth="0.666552" />
-            <path d="M7.31055 0V0C7.31055 2.39282 9.25031 4.33259 11.6431 4.33259V4.33259" strokeWidth="0.666552" />
-            <path d="M7.31055 8.66602V8.66602C7.31055 6.27319 9.25031 4.33343 11.6431 4.33343V4.33343" strokeWidth="0.666552" />
+          <svg
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              y1="4.33958"
+              x2="11.6598"
+              y2="4.33958"
+              strokeWidth="0.666552"
+            />
+            <path
+              d="M7.31055 0V0C7.31055 2.39282 9.25031 4.33259 11.6431 4.33259V4.33259"
+              strokeWidth="0.666552"
+            />
+            <path
+              d="M7.31055 8.66602V8.66602C7.31055 6.27319 9.25031 4.33343 11.6431 4.33343V4.33343"
+              strokeWidth="0.666552"
+            />
           </svg>
-
         )
       case "right-arrow":
         return (
@@ -29,32 +45,91 @@ const InlineSvg = ({ type, onClick=_.noop, classes="" }) => {
         )
       case "right-arrow-md":
         return (
-          <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0.648437" y1="8.69194" x2="23.9991" y2="8.69194" strokeWidth="1.33488" />
-            <path d="M15.2896 0V0C15.2896 4.79202 19.1742 8.67671 23.9663 8.67671V8.67671" strokeWidth="1.33488" />
-            <path d="M15.2896 17.3545V17.3545C15.2896 12.5625 19.1742 8.67778 23.9663 8.67778V8.67778" strokeWidth="1.33488" />
+          <svg
+            width="24"
+            height="18"
+            viewBox="0 0 24 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="0.648437"
+              y1="8.69194"
+              x2="23.9991"
+              y2="8.69194"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M15.2896 0V0C15.2896 4.79202 19.1742 8.67671 23.9663 8.67671V8.67671"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M15.2896 17.3545V17.3545C15.2896 12.5625 19.1742 8.67778 23.9663 8.67778V8.67778"
+              strokeWidth="1.33488"
+            />
           </svg>
         )
       case "left-arrow-md":
         return (
-          <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="23.3516" y1="8.66353" x2="0.000913562" y2="8.66353" strokeWidth="1.33488" />
-            <path d="M8.71045 17.3555V17.3555C8.71045 12.5635 4.82575 8.67876 0.0337378 8.67876V8.67876" strokeWidth="1.33488" />
-            <path d="M8.71045 0.000976562V0.000976562C8.71045 4.79299 4.82575 8.67769 0.0337362 8.67769V8.67769" strokeWidth="1.33488" />
+          <svg
+            width="24"
+            height="18"
+            viewBox="0 0 24 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="23.3516"
+              y1="8.66353"
+              x2="0.000913562"
+              y2="8.66353"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M8.71045 17.3555V17.3555C8.71045 12.5635 4.82575 8.67876 0.0337378 8.67876V8.67876"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M8.71045 0.000976562V0.000976562C8.71045 4.79299 4.82575 8.67769 0.0337362 8.67769V8.67769"
+              strokeWidth="1.33488"
+            />
           </svg>
         )
       case "down-arrow":
         return (
-          <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="8.66304" y1="-7.95913e-09" x2="8.66304" y2="23.3506" strokeWidth="1.33488" />
-            <path d="M17.355 14.6416V14.6416C12.563 14.6416 8.67827 18.5263 8.67827 23.3183V23.3183" strokeWidth="1.33488" />
-            <path d="M0 14.6416V14.6416C4.79202 14.6416 8.67671 18.5263 8.67671 23.3183V23.3183" strokeWidth="1.33488" />
+          <svg
+            width="18"
+            height="24"
+            viewBox="0 0 18 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="8.66304"
+              y1="-7.95913e-09"
+              x2="8.66304"
+              y2="23.3506"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M17.355 14.6416V14.6416C12.563 14.6416 8.67827 18.5263 8.67827 23.3183V23.3183"
+              strokeWidth="1.33488"
+            />
+            <path
+              d="M0 14.6416V14.6416C4.79202 14.6416 8.67671 18.5263 8.67671 23.3183V23.3183"
+              strokeWidth="1.33488"
+            />
           </svg>
-
         )
       case "eclipse":
         return (
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <circle cx="5" cy="5" r="5" />
           </svg>
         )
@@ -113,7 +188,17 @@ const InlineSvg = ({ type, onClick=_.noop, classes="" }) => {
   }
 
   classes += " inline-svg " + type
-  return <div onClick={onClick} className={classes}>{getSvg(type)}</div>
+  return (
+    <div
+      onClick={onClick}
+      onKeyDown={onClick}
+      className={classes}
+      role="button"
+      tabindex="0"
+    >
+      {getSvg(type)}
+    </div>
+  )
 }
 
 export default InlineSvg
