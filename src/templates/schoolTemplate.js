@@ -18,7 +18,6 @@ import en_US from "./../data/map/en_US"
 import {
   getRoundedValue,
   getHashLeft,
-  getQuintileDesc,
   getPercent,
   getMetric,
 } from "./utils/utils"
