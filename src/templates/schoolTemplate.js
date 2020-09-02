@@ -125,16 +125,30 @@ const SchoolPage = ({ data, ...props }) => {
    * @return String
    */
   const getQuintileRobotext = (schoolname, quintile) => {
-    if (quintile === 4) {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
-        schoolname: schoolname,
-      })
-    } else {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
-        schoolname: schoolname,
-        quintile: getQuintileDesc(quintile).toLowerCase(),
-      })
+    let rankString = ""
+    switch (true) {
+      case quintile === 0:
+        rankString = "UI_SD_B_AVG"
+        break
+      case quintile === 1:
+        rankString = "UI_SD_SB_AVG"
+        break
+      case quintile === 2:
+        rankString = "UI_SD_AVG"
+        break
+      case quintile === 3:
+        rankString = "UI_SD_SA_AVG"
+        break
+      case quintile === 4:
+        rankString = "UI_SD_A_AVG"
+        break
+      default:
+        rankString = "UI_SD_AVG"
     }
+    return i18n.translate("SCHOOL_PROSE_AVG", {
+      schoolname: schoolname,
+      rank: i18n.translate(rankString),
+    })
   }
 
   /**
@@ -235,7 +249,7 @@ const SchoolPage = ({ data, ...props }) => {
                   height: "10px",
                   borderRadius: "5px",
                   border: "1px solid #fff",
-                  backgroundColor: CRI_COLORS[school.ci_weight_sd],
+                  backgroundColor: CRI_COLORS[school.cri_weight_sd],
                 }}
               ></div>
             </Marker>
@@ -275,18 +289,13 @@ const SchoolPage = ({ data, ...props }) => {
               {i18n.translate("SCHOOL_BUTTON_PRINT")}
             </span>
           </Button>
-
-                
-         
-
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 1 }}
           className="custom-feeder"
         >
-           
-           <div className="demo-callout">
+          <div className="demo-callout">
             <div className="parent-label">
               {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
               <hr></hr>
@@ -330,21 +339,16 @@ const SchoolPage = ({ data, ...props }) => {
               </div>
             </div>
           </div>
-
-          
-          
         </Col>
       </Row>
 
       <Row className="metric-row">
-        
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-        
-        <div className="metric-group">
+          <div className="metric-group">
             <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
             <NonInteractiveScale
               className="metric-group"
@@ -370,12 +374,8 @@ const SchoolPage = ({ data, ...props }) => {
               showMinMax={true}
             />
           </div>
-        
         </Col>
-        
-        
-        </Row>          
-
+      </Row>
 
       <Row className="custom-feeder-prose">
         <Col
@@ -383,13 +383,11 @@ const SchoolPage = ({ data, ...props }) => {
           md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-
-          
-
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <div
+            className="quintile-prose"
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
                 school.SCHOOLNAME,
