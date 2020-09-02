@@ -125,16 +125,30 @@ const SchoolPage = ({ data, ...props }) => {
    * @return String
    */
   const getQuintileRobotext = (schoolname, quintile) => {
-    if (quintile === 4) {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_FIFTH", {
-        schoolname: schoolname,
-      })
-    } else {
-      return i18n.translate("SCHOOL_PROSE_QUINTILE_BELOW_FIFTH", {
-        schoolname: schoolname,
-        quintile: getQuintileDesc(quintile).toLowerCase(),
-      })
+    let rankString = ""
+    switch (true) {
+      case quintile === 0:
+        rankString = "UI_SD_B_AVG"
+        break
+      case quintile === 1:
+        rankString = "UI_SD_SB_AVG"
+        break
+      case quintile === 2:
+        rankString = "UI_SD_AVG"
+        break
+      case quintile === 3:
+        rankString = "UI_SD_SA_AVG"
+        break
+      case quintile === 4:
+        rankString = "UI_SD_A_AVG"
+        break
+      default:
+        rankString = "UI_SD_AVG"
     }
+    return i18n.translate("SCHOOL_PROSE_AVG", {
+      schoolname: schoolname,
+      rank: i18n.translate(rankString),
+    })
   }
 
   /**
@@ -235,7 +249,7 @@ const SchoolPage = ({ data, ...props }) => {
                   height: "10px",
                   borderRadius: "5px",
                   border: "1px solid #fff",
-                  backgroundColor: CRI_COLORS[school.ci_weight_sd],
+                  backgroundColor: CRI_COLORS[school.cri_weight_sd],
                 }}
               ></div>
             </Marker>
@@ -254,7 +268,7 @@ const SchoolPage = ({ data, ...props }) => {
       </SchoolHero>
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
+        <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 1 }}>
           <h2>{school.SCHOOLNAME}</h2>
           <h4>
             {school.ADDRESS}
@@ -278,10 +292,9 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
+          lg={{ span: 4, offset: 1 }}
           className="custom-feeder"
         >
-          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
           <div className="demo-callout">
             <div className="parent-label">
               {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
@@ -328,7 +341,8 @@ const SchoolPage = ({ data, ...props }) => {
           </div>
         </Col>
       </Row>
-      <Row className="custom-feeder-prose">
+
+      <Row className="metric-row">
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 4, offset: 1 }}
@@ -361,8 +375,19 @@ const SchoolPage = ({ data, ...props }) => {
             />
           </div>
         </Col>
+      </Row>
+
+      <Row className="custom-feeder-prose">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
+          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
+        </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <div
+            className="quintile-prose"
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
                 school.SCHOOLNAME,
