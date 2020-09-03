@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
             title
             description
             author
+            facebookAppID
           }
         }
       }
@@ -70,6 +71,10 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `fb:app_id`,
+          content: site.siteMetadata.facebookAppID,
         },
         {
           name: `twitter:card`,
