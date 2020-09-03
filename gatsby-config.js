@@ -12,6 +12,7 @@ module.exports = {
     image: "",
     siteUrl: "https://dallasisd.resourceexplorer.org",
     mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_TOKEN}`,
+    facebookAppID: `747645499355447`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
