@@ -554,10 +554,10 @@ const SchoolPage = ({ data, ...props }) => {
           md={{ span: 4, offset: 1 }}
           className="vcenter"
         >
-          <span class="cpal-logo"></span>
+          <span className="cpal-logo"></span>
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
-          <div class="funder-wrapper">
+          <div className="funder-wrapper">
             <a
               href="https://www.comerica.com/"
               target="_blank"
@@ -565,7 +565,7 @@ const SchoolPage = ({ data, ...props }) => {
             >
               <img alt="Comerica" src={comerica} />
             </a>
-            <p class="text">
+            <p className="text">
               Comerica generously funded the development of the Community
               Resource Explorer
             </p>
