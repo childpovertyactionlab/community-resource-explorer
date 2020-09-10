@@ -13,6 +13,7 @@ import portrait from "../images/map-stylized2.jpg"
 import minus from "../images/minus.svg"
 import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
+import totalJobs from "../images/school-faq-example.jpg"
 
 import _ from "lodash"
 
@@ -50,7 +51,7 @@ const about = {
     {
       text: "Which schools are included in the CRE?",
       body:
-        "TThe 189 neighborhood schools in Dallas ISD are currently included in the CRE. Magnet schools, transformation and innovation schools, and alternative schools are not included.",
+        "The 189 neighborhood schools in Dallas ISD are currently included in the CRE. Magnet schools, transformation and innovation schools, and alternative schools are not included.",
     },
     {
       text: "What is the difference between the CRE and the CRI?",
@@ -76,6 +77,23 @@ const about = {
       text: "Why is the data calculated within a two-mile radius of each school?",
       body:
         "We used a two-mile area around each campus to calculate the Community Resource Index so that we could capture the broader dynamics of households and families living in each community. Many of the resources that we include serve relatively large geographies, such as city-operated libraries or recreation centers, and a large number of campuses would not have one of those features located within one mile, making the Index much harder to interpret. Similarly, if we had used a larger area, such as three or five miles, we would not be able to see the nuance/difference between campus communities since the geography of one campus community would overlap significantly with several others.",
+    },
+    {
+      text: "How is the data organized in the map view?",
+      body:
+        <p>The map view shows all 189 school communities included in the Explorer, color-coded to illustrate each community’s overall Community Resource Index (CRI) value -- communities in green have CRI values that are well above average, communities in purple/blue have CRI values that are well below average, and communities in aqua have CRI values that are about average. CRI values range from 0 to 100; values closer to 100 indicate more resources than values closer to 0. You can zoom in on the map to see a smaller geographic footprint. You can also turn on layers to see the historical redlining map, feeder pattern attendance boundaries, and the racial and ethnic demographics across the city.<br/><br/> In the map view, you can see data for each sub-index category (Economics, Education, Family, Community, Health) and individual indicators as well -- turn these on by clicking on the “Metrics” button on the left-hand side of the window. For each sub-index category and each indicator, the color-coding pattern is the same: communities in green always represent the above average condition, and communities in purple/blue always represent the below average condition. If you’re interested in analyzing a smaller subset of campuses, you can adjust the map display by selecting a category or indicator and selecting a piece of the distribution to display. For example, for Median Household Income, you can select the far right (dark green) square on the distribution, and only the campus communities with well above average Median Household Income will appear on the map.</p>,
+    },
+    {
+      text: "How is the data organized on the school profile? How should I interpret the visualizations of each indicator?",
+      body: 
+        <p>Each profile includes information about the school’s address and feeder pattern as well as the demographics, assets, and needs of the community surrounding the school. It’s important to keep in mind that the data reflect the geography of the two-mile radius around the school, not the school itself. For example, the racial and ethnic make-up of the community reflects all residents in the surrounding neighborhood, not just the students at the school.<br/>
+        <br/>Every profile also includes the community’s overall Community Resource Index (CRI) value, representing all the indicators taken together and illustrating how well-resourced the community is relative to the other campus communities, as well as five sub-index categories, one each for Economics, Education, Family, Community, and Health. Each category includes (1) an index value, representing all the indicators included in the category and illustrating how well-resourced the community is relative to the other campus communities in that particular category and (2) a series of indicators that provide both raw data about the community as well as where the community falls in the distribution of all communities on each indicator. For example, the sample indicator below, Total Jobs, tells us:"
+        <img src={totalJobs} />
+        <ul><li>The <b>range</b> of Total Jobs across all campus communities. The minimum (lowest) is 1,468. The maximum (highest) is 209,962.</li>
+        <li>The <b>mean</b>, or average, of Total Jobs across all campus communities. Marked by a tick mark (vertical line), the mean number of jobs is 27,096. For most indicators, the tick mark for the mean will be about halfway between the min and the max (i.e., near the centerpoint of the line). For some indicators, like Total Jobs, the tick mark might be further left or right, indicating skew in the data. In this case, Total Jobs skews left -- 209,962 is an outlier.</li>
+        <li>The <b>actual number</b> of Total Jobs for this particular school community. Marked by a red dot, the actual number of jobs within the two-mile radius around this school is 53,614.</li>
+        <li><b>Where this school community falls in the distribution</b> of all school communities in Total Jobs. This is represented by the rectangular bar beneath the thin line. Highlighted in light green, this school community is slightly above average in the number of jobs. If the bar were highlighted dark green on the far right end of the distribution, the school community would be well above average in the number of jobs. If the bar were highlighted aqua blue in the center of the distribution, the school community would be about average in the number of jobs. If the bar were highlighted light purple/blue to the left of center, the school community would be slightly below average. If the bar were highlighted dark purple/blue to the far left of center, the school community would be well below average. The distribution approximates a normal distribution, meaning a bell curve where most school communities fall in the center/about average and fewer are slightly or well above/below average.</li></ul>
+        </p>
     },
     {
       text: "How is this new version of the CRE different from earlier versions?",
