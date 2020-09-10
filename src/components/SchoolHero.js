@@ -26,16 +26,6 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
               <Menu activePageId={activePageId} />
             </Col>
           </Row>
-
-          <Row>
-            <Col
-              className="map-section"
-              xs={{ span: 10, offset: 1 }}
-              md={{ span: 12, offset: 0 }}
-            >
-              {children}
-            </Col>
-          </Row>
         </Col>
       )
     }

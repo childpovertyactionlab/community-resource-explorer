@@ -52,10 +52,10 @@ const SchoolPage = ({ data, ...props }) => {
   // Set up viewport for static map.
   const viewport = {
     width: "100%",
-    height: 300,
+    height: 411,
     latitude: school.POINT_Y,
     longitude: school.POINT_X,
-    zoom: 11,
+    zoom: 12,
     preserveDrawingBuffer: true,
   }
   // Build the json for the school zone source
@@ -228,43 +228,77 @@ const SchoolPage = ({ data, ...props }) => {
         image={""}
         description={""}
       />
-      <SchoolHero wide={true}>
-        <div
-          className="map-parent"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <StaticMap
-            {...viewport}
-            mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
-            mapStyle={defaultMapStyle}
+      <SchoolHero wide={true}></SchoolHero>
+      {/** Row with map and heading */}
+      <Row className="school-metadata custom-feeder-prose">
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 1 }}>
+          <h2>{school.SCHOOLNAME}</h2>
+          <h4>
+            {school.ADDRESS}
+            <br />
+            {school.CITY}, TX {school.ZIP}
+          </h4>
+          <h3>
+            {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
+          </h3>
+          <Button
+            aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
+            color="none"
+            onClick={printPage}
+            className="print-school-page"
           >
-            <Marker latitude={viewport.latitude} longitude={viewport.longitude}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "5px",
-                  border: "1px solid #fff",
-                  backgroundColor: CRI_COLORS[school.cri_weight_sd],
-                }}
-              ></div>
-            </Marker>
-            <Source id="my-data" type="geojson" data={zoneJson}>
-              <Layer
-                id="point"
-                type="fill"
-                paint={{
-                  "fill-color": CRI_COLORS[2],
-                  "fill-opacity": 0.2,
-                }}
-              />
-            </Source>
-          </StaticMap>
-        </div>
-      </SchoolHero>
+            <FaPrint /> {i18n.translate("SCHOOL_BUTTON_PRINT")}
+            <span className="sr-only">
+              {i18n.translate("SCHOOL_BUTTON_PRINT")}
+            </span>
+          </Button>
+        </Col>
+        <Col
+          className="map-section"
+          xs={{ span: 12, offset: 0 }}
+          md={{ span: 6, offset: 0 }}
+        >
+          <div
+            className="map-parent"
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <StaticMap
+              {...viewport}
+              mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
+              mapStyle={defaultMapStyle}
+            >
+              <Marker
+                latitude={viewport.latitude}
+                longitude={viewport.longitude}
+              >
+                <div
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #fff",
+                    backgroundColor: CRI_COLORS[school.cri_weight_sd],
+                  }}
+                ></div>
+              </Marker>
+              <Source id="my-data" type="geojson" data={zoneJson}>
+                <Layer
+                  id="point"
+                  type="fill"
+                  paint={{
+                    "fill-color": CRI_COLORS[2],
+                    "fill-opacity": 0.2,
+                  }}
+                />
+              </Source>
+            </StaticMap>
+          </div>
+        </Col>
+      </Row>
+
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
         <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 1 }}>
