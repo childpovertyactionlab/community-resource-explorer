@@ -269,6 +269,7 @@ const SchoolPage = ({ data, ...props }) => {
               {...viewport}
               mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
               mapStyle={defaultMapStyle}
+              aria-describedby="map_descriptor"
             >
               <Marker
                 latitude={viewport.latitude}
@@ -295,6 +296,7 @@ const SchoolPage = ({ data, ...props }) => {
                 />
               </Source>
             </StaticMap>
+            <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
           </div>
         </Col>
       </Row>

@@ -175,5 +175,7 @@ const en_US = {
   SCHOOL_BUTTON_PRINT: `PRINT PDF`,
   SCHOOL_PROSE_RACE: `The racial makeup of this community is {black}% Black, {hispanic}% Hispanic, {asian}% Asian, and {white}% white.`,
   SCHOOL_PROSE_DEMO_LABEL: `Racial and ethnic makeup of this community`,
+  SCHOOL_MAP_DESCRIPTOR: `The data on this page is representative of the 2-mile radius around the
+  school, as shown in the map above.`,
 }
 export default en_US
