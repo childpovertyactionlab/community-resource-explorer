@@ -92,7 +92,10 @@
           font-size: 2rem;
         }
         .n-i-scale {
-          width: 92%;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 92%;
+          }
         }
       }
 
@@ -127,6 +130,25 @@
             // display: block;
             // width: 100%;
           }
+        }
+      }
+
+      .link-mean-info-button {
+        margin: 4rem 0 2rem;
+        padding: 1rem;
+        background-color: #f8faf3;
+        color: #606b44;
+        font-style: italic;
+        max-width: 275px;
+        display: flex;
+        align-items: center;
+        &:hover {
+          text-decoration: none;
+        }
+        svg {
+          margin-right: 1rem;
+          width: 30px;
+          height: 30px;
         }
       }
     }
@@ -353,7 +375,10 @@
         margin-top: 0.5rem;
       }
       .n-i-scale-quintiles-legend-label {
-        margin-top: 2rem;
+        margin-top: 1rem;
+        @include media-breakpoint-up(md) {
+          margin-top: 2rem;
+        }
         font-style: italic;
         font-size: 1rem;
         @include media-breakpoint-up(lg) {
@@ -419,7 +444,10 @@
     }
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend-label {
       position: relative;
-      height: 5.5rem;
+      height: 4.5rem;
+      @include media-breakpoint-up(md) {
+        height: 5.5rem;
+      }
       .n-i-scale-quintile {
         width: 120px;
         margin-left: -60px;

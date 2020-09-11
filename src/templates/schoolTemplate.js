@@ -1,11 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import StaticMap, { Marker, Source, Layer } from "react-map-gl"
 import circle from "@turf/circle"
 import i18n from "@pureartisan/simple-i18n"
 import { Col, Row, Button } from "react-bootstrap"
 import clsx from "clsx"
-import { FaPrint } from "react-icons/fa"
+import { FaPrint, FaInfoCircle } from "react-icons/fa"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // import { logger } from "./../utils/logger"
@@ -354,6 +354,12 @@ const SchoolPage = ({ data, ...props }) => {
               showLegend={true}
             />
           </div>
+          <Link to="/faq/#about-8" className="link-mean-info-button">
+            <FaInfoCircle />
+            <span className="mean-info-button">
+              Why is the mean not always in the middle of the scale?
+            </span>
+          </Link>
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
