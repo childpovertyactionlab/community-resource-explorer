@@ -46,6 +46,35 @@
         }
       }
     }
+    &.school-metadata,
+    &.custom-feeder-prose {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      .school-intro {
+        margin-top: 6rem;
+        h2 {
+          margin-bottom: 4rem;
+        }
+        h4,
+        h3 {
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+        h3 {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    .map-descriptor {
+      p {
+        font-family: Halyard;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding: 0.7rem 0 0;
+      }
+    }
     &.school-metadata {
       margin-top: 3rem;
       h2 {
@@ -65,7 +94,7 @@
         // display: flex;
         // background-color: #ebede3;
         font-family: Halyard;
-        // padding: 42px;
+        padding: 56px 0 2rem;
         margin-top: 1.6rem;
         .parent-label {
           width: 60%;
