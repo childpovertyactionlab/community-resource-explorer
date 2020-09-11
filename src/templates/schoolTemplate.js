@@ -296,34 +296,50 @@ const SchoolPage = ({ data, ...props }) => {
                 />
               </Source>
             </StaticMap>
-            <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
           </div>
+        </Col>
+        <Col
+          className=""
+          xs={{ span: 6, offset: 0 }}
+          md={{ span: 3, offset: 6 }}
+        >
+          <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
         </Col>
       </Row>
 
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
-        <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 1 }}>
-          <h2>{school.SCHOOLNAME}</h2>
-          <h4>
-            {school.ADDRESS}
-            <br />
-            {school.CITY}, TX {school.ZIP}
-          </h4>
-          <h3>
-            {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
-          </h3>
-          <Button
-            aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
-            color="none"
-            onClick={printPage}
-            className="print-school-page"
-          >
-            <FaPrint /> {i18n.translate("SCHOOL_BUTTON_PRINT")}
-            <span className="sr-only">
-              {i18n.translate("SCHOOL_BUTTON_PRINT")}
-            </span>
-          </Button>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
+          <div className="metric-group">
+            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
+            <NonInteractiveScale
+              className="metric-group"
+              metric="cri_weight"
+              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
+              colors={CRI_COLORS}
+              showHash={true}
+              hashLeft={getRoundedValue(
+                getHashLeft(school.cri_weight, 0, 100),
+                0
+              )}
+              hashValue={school.cri_weight}
+              showMean={true}
+              meanLeft={getHashLeft(
+                getMetric("cri_weight", CPAL_METRICS).mean,
+                0,
+                100
+              )}
+              meanValue={getRoundedValue(
+                getMetric("cri_weight", CPAL_METRICS).mean,
+                0
+              )}
+              showMinMax={true}
+            />
+          </div>
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
@@ -336,6 +352,14 @@ const SchoolPage = ({ data, ...props }) => {
               <hr></hr>
             </div>
             <div className="demographics">
+              <div className="demo demo-bl">
+                <span className="percent">{school.dem_totp}</span>
+                {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
+              </div>
+              <div className="demo demo-bl">
+                <span className="percent">{school.dem_popch}</span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
+              </div>
               <div className="demo demo-bl">
                 <span className="percent">
                   {getRoundedValue(
@@ -373,41 +397,6 @@ const SchoolPage = ({ data, ...props }) => {
                 {i18n.translate("UI_MAP_METRIC_DEM_POPWH")}
               </div>
             </div>
-          </div>
-        </Col>
-      </Row>
-
-      <Row className="metric-row">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
-          className={clsx("metric-collection-cri_weight", "metric-collection")}
-        >
-          <div className="metric-group">
-            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
-            <NonInteractiveScale
-              className="metric-group"
-              metric="cri_weight"
-              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
-              colors={CRI_COLORS}
-              showHash={true}
-              hashLeft={getRoundedValue(
-                getHashLeft(school.cri_weight, 0, 100),
-                0
-              )}
-              hashValue={school.cri_weight}
-              showMean={true}
-              meanLeft={getHashLeft(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0,
-                100
-              )}
-              meanValue={getRoundedValue(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0
-              )}
-              showMinMax={true}
-            />
           </div>
         </Col>
       </Row>

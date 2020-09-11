@@ -59,16 +59,16 @@
           width: 92%;
         }
       }
-     
+
       .demo-callout {
         width: 100%;
-        display: flex;
-        background-color: #ebede3;
+        // display: flex;
+        // background-color: #ebede3;
         font-family: Halyard;
-        padding: 42px;
+        // padding: 42px;
         margin-top: 1.6rem;
         .parent-label {
-          width: 40%;
+          width: 60%;
           font-size: 1.8rem;
           padding-right: 1.6rem;
           hr {
@@ -79,7 +79,7 @@
           }
         }
         .demographics {
-          width: 60%;
+          // width: 60%;
           font-size: 1.6rem;
           .percent {
             margin-right: 0.4rem;
@@ -93,7 +93,6 @@
           }
         }
       }
-  
     }
     &.custom-feeder-prose,
     &.info-robotext,

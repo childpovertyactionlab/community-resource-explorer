@@ -143,7 +143,7 @@ const en_US = {
   UI_SD_AVG: `average`,
   UI_SD_SA_AVG: `slightly below average`,
   UI_SD_A_AVG: `above average`,
-  UI_MAP_METRIC_DEM_TOTP: `Total population`,
+  UI_MAP_METRIC_DEM_TOTP: `Total residents`,
   UI_MAP_METRIC_DEM_POPWH: `White, Non-Hispanic population`,
   UI_MAP_METRIC_DEM_POPBL: `Black, Non-Hispanic population`,
   UI_MAP_METRIC_DEM_POPAS: `Asian, Non-Hispanic population`,
@@ -152,6 +152,7 @@ const en_US = {
   UI_MAP_METRIC_DEM_POPF: `Female population`,
   UI_MAP_METRIC_DEM_THH: `Total households`,
   UI_MAP_METRIC_DEM_POPSE: `Senior population (65 and over)`,
+  UI_MAP_METRIC_DEM_POPCH: `Children under 18`,
   // Added 2020-08-26
   UI_MAP_METRIC_DEM_PERWH: `Percent of White, Non-Hispanic Population in Buffer`,
   UI_MAP_METRIC_DEM_PERAS: `Percent of Asian, Non-Hispanic Population in Buffer`,
@@ -174,7 +175,7 @@ const en_US = {
   SCHOOL_PROSE_BOTTOM: `This school is below average (meaning statistics are less favorable) for {quintiles}.`,
   SCHOOL_BUTTON_PRINT: `PRINT PDF`,
   SCHOOL_PROSE_RACE: `The racial makeup of this community is {black}% Black, {hispanic}% Hispanic, {asian}% Asian, and {white}% white.`,
-  SCHOOL_PROSE_DEMO_LABEL: `Racial and ethnic makeup of this community`,
+  SCHOOL_PROSE_DEMO_LABEL: `Residents in this campus community`,
   SCHOOL_MAP_DESCRIPTOR: `The data on this page is representative of the 2-mile radius around the
   school, as shown in the map above.`,
 }
