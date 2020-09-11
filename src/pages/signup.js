@@ -4,10 +4,10 @@ import { Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Helmet from "react-helmet"
 import SEO from "../components/seo"
-import { pages } from "../consts"
+import { pages, salesForceUrl } from "../consts"
 import _ from "lodash"
 
-const DEBUG = false
+const DEBUG = true
 
 const SignUp = ({ location }) => {
   // TODO: if !email, have alternate text to "Almost"
@@ -15,6 +15,11 @@ const SignUp = ({ location }) => {
 
   const { keywords, image, description } = pages.SIGNUP.meta
   const { name } = pages.SIGNUP
+
+  const onSubmit = e => {
+    console.log(e)
+    debugger
+  }
 
   return (
     <Layout
@@ -40,8 +45,9 @@ const SignUp = ({ location }) => {
           // xl={{ offset: 4, span: 4 }}
         >
           <Form
-            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+            action={salesForceUrl}
             method="POST"
+            onSubmit={onSubmit}
           >
             <h2>Almost done!</h2>
             <p>
@@ -60,7 +66,7 @@ const SignUp = ({ location }) => {
             <input
               type="hidden"
               name="retURL"
-              value="https://dallasisd.resourceexplorer.org/thank-you"
+              // value="https://dallasisd.resourceexplorer.org/thank-you"
             />
 
             {DEBUG && (

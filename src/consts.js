@@ -125,4 +125,6 @@ const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, DATA, CONTACT]
 // keep in sync with $sticky-header-height in _variables.scss
 const stickyHeaderHeight = 64
 
-export { pages, menuPages, stickyHeaderHeight }
+const salesForceUrl = "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+
+export { pages, menuPages, stickyHeaderHeight, salesForceUrl }
