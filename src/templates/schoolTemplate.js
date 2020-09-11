@@ -300,8 +300,8 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           className=""
-          xs={{ span: 6, offset: 0 }}
-          md={{ span: 6, offset: 6 }}
+          xs={{ span: 8, offset: 1 }}
+          md={{ span: 3, offset: 6 }}
         >
           <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
         </Col>

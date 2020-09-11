@@ -186,5 +186,7 @@ const en_US = {
   SCHOOL_SCALE_MEAN: `Mean`,
   SCHOOL_SCALE_COMM: `This community`,
   SCHOOL_SCALE_COMM_REL: `This community relative to average`,
+  SCHOOL_SCALE_MIN: `Min`,
+  SCHOOL_SCALE_MAX: `Max`,
 }
 export default en_US

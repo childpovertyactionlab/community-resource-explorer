@@ -369,8 +369,16 @@
         }
       }
     }
-    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend,
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend-label {
+      position: relative;
+      height: 5.5rem;
+      .n-i-scale-quintile {
+        width: 120px;
+        margin-left: -60px;
+        position: absolute;
+      }
+    }
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend {
       width: 100%;
       display: flex;
       .n-i-scale-quintile {
