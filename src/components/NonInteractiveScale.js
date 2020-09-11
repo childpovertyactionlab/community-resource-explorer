@@ -55,10 +55,10 @@ const NonInteractiveScale = ({
         legendLeft = "50%"
         break
       case !!quintiles[3]:
-        legendLeft = "58.34%"
+        legendLeft = "75.01%"
         break
       case !!quintiles[4]:
-        legendLeft = "75.01%"
+        legendLeft = "91.68%"
         break
       default:
         legendLeft = "8.34%"
