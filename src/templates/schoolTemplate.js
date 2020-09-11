@@ -232,9 +232,9 @@ const SchoolPage = ({ data, ...props }) => {
         image={""}
         description={""}
       />
-      <SchoolHero wide={true}></SchoolHero>
-      {/** Row with map and heading */}
-      <Row className="school-metadata custom-feeder-prose">
+      <SchoolHero wide={true} className="school-metadata custom-feeder-prose">
+        {/** Row with map and heading */}
+        {/**<Row className="school-metadata custom-feeder-prose"> */}
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 5, offset: 1 }}
@@ -249,10 +249,10 @@ const SchoolPage = ({ data, ...props }) => {
             {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
           </h4>
           {/**
-          <h3>
-            {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
-          </h3>
-          */}
+            <h3>
+              {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
+            </h3>
+            */}
           <Button
             aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
             color="none"
@@ -312,12 +312,13 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           className="map-descriptor"
-          xs={{ span: 8, offset: 1 }}
+          xs={{ span: 12, offset: 0 }}
           md={{ span: 3, offset: 6 }}
         >
           <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
         </Col>
-      </Row>
+        {/**</Row>*/}
+      </SchoolHero>
 
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">

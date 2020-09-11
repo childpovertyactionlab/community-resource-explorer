@@ -25,6 +25,7 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
 
               <Menu activePageId={activePageId} />
             </Col>
+            {children}
           </Row>
         </Col>
       )

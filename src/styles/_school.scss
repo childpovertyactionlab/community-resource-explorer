@@ -25,6 +25,41 @@
         }
       }
     }
+    .school-intro {
+      margin-top: 6rem;
+      h2 {
+        margin-bottom: 4rem;
+      }
+      h4,
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      h3 {
+        margin-bottom: 4rem;
+      }
+      .print-school-page {
+        margin-bottom: 4rem;
+      }
+    }
+    &.school-metadata,
+    &.custom-feeder-prose {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .map-descriptor {
+      p {
+        font-family: Halyard;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding: 0.7rem 1rem;
+        @include media-breakpoint-up(md) {
+          padding: 0.7rem 0 0;
+        }
+      }
+    }
   }
   .row {
     &.school-metadata,
@@ -46,35 +81,7 @@
         }
       }
     }
-    &.school-metadata,
-    &.custom-feeder-prose {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-      .school-intro {
-        margin-top: 6rem;
-        h2 {
-          margin-bottom: 4rem;
-        }
-        h4,
-        h3 {
-          font-size: 1.8rem;
-          font-weight: 400;
-        }
-        h3 {
-          margin-bottom: 3rem;
-        }
-      }
-    }
-    .map-descriptor {
-      p {
-        font-family: Halyard;
-        font-weight: 300;
-        font-style: italic;
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        padding: 0.7rem 0 0;
-      }
-    }
+
     &.school-metadata {
       margin-top: 3rem;
       h2 {
@@ -140,6 +147,7 @@
   .row-print-only {
     page-break-inside: avoid;
     visibility: hidden;
+    height: 8rem;
     .vcenter {
       display: flex;
       align-items: center;
@@ -330,7 +338,7 @@
           }
         }
         .n-i-scale-mean {
-          z-index: 3000;
+          z-index: 30;
           .n-i-scale-mean-legend {
             width: 100px;
             margin-left: -50px;
@@ -466,5 +474,6 @@
   }
   .row-print-only {
     visibility: visible !important;
+    height: auto !important;
   }
 }
