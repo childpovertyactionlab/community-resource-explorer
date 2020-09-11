@@ -34,40 +34,49 @@ import _ from "lodash"
 
 // NOTE: the keys in this object are used as classes to determine what displays (eg certain faqs, a form).
 // Update the class accordingly if the key name is changed.
-const selectOptions = {
+const conditionalOptions = {
   "none": {
-    text: ""
+    text: "",
+    content: "none"
   },
   "why-built": {
-    text: "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc."
+    text: "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.",
+    content: "why-built"
   },
   "how-data": {
-    text: "I have questions about the data: how it was calculated, where it came from, which schools are included, etc."
+    text: "I have questions about the data: how it was calculated, where it came from, which schools are included, etc.",
+    content: "how-data"
   },
   "my-experience": {
-    text: "The data does not match my personal experience"
+    text: "The data does not match my personal experience",
+    content: "my-experience"
   },
   "stay-informed": {
-    text: "I’d like to stay informed about the Resource Explorer"
+    text: "I’d like to stay informed about the Resource Explorer",
+    content: "stay-informed"
   },
   "share-insights": {
-    text: "I’d like to share insights about my neighborhood to help improve the Resource Explorer"
+    text: "I’d like to share insights about my neighborhood to help improve the Resource Explorer",
+    content: "share-insights"
   },
   "expand-cre": {
-    text: "I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?"
+    text: "I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?",
+    content: "expand-cre"
   },
   "bug-report": {
-    text: "I need help with using the website or something’s not working"
+    text: "I need help with using the website or something’s not working",
+    content: "bug-report"
   },
   "something-else": {
-    text: "Another reason"
+    text: "Another reason",
+    content: ''
   },
 }
 
 
 const Contact = ({ location }) => {
 
-  let [showClass, setShowClass] = useState("none")
+  let [conditionalOption, setConditionalOption] = useState("none")
 
   
   const onSubmit = e => {
@@ -110,11 +119,58 @@ const Contact = ({ location }) => {
 
   const updatePage = e => {
     console.log(e.target.value)
-    setShowClass(e.target.value)
+    setConditionalOption(e.target.value)
   }
 
   const { keywords, image, description } = pages.CONTACT.meta
   const { name } = pages.CONTACT
+
+  const cpalForm = (
+    <Form
+      id="contact-form"
+      name="cre-contact"
+      method="POST"
+      // data-netlify="true"
+      // action="/thank-you"
+      onSubmit={onSubmit}
+    >
+      <h1>Contact us</h1>
+      <Form.Group controlId="formGroupName">
+        <Form.Label name="name">Name</Form.Label>
+        <Form.Control required type="name" placeholder="Enter name" />
+      </Form.Group>
+
+      <Form.Group controlId="formGroupEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+          required
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+        />
+      </Form.Group>
+
+      <Form.Group controlId="formGroupSubject">
+        <Form.Label>Subject</Form.Label>
+        <Form.Control required name="subject" type="subject" />
+      </Form.Group>
+
+      <Form.Group controlId="formGroupMessage">
+        <Form.Label>Message</Form.Label>
+        <Form.Control
+          required
+          name="message"
+          type="message"
+          as="textarea"
+          rows="8"
+        />
+      </Form.Group>
+
+      <Button variant="primary" size="lg" type="submit">
+        Submit
+      </Button>
+    </Form>
+  )
 
   return (
     <Layout id="contact-page" activePageId={pages.CONTACT.id}>
@@ -125,7 +181,7 @@ const Contact = ({ location }) => {
         image={image}
         description={description}
       />
-      <Row id="page" class={showClass}>
+      <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
           md={{ offset: 2, span: 8 }}
@@ -133,84 +189,13 @@ const Contact = ({ location }) => {
         >
           <label htmlFor="why-contact">I am reaching out because:</label>
           <select name="why-contact" onChange={updatePage}>
-            {_.map(selectOptions, (v,k) => {
+            {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
             })}
           </select>
 
           <div className="conditional-content why-built-content">
-            "why-built"
-          </div>
-
-          <div className="conditional-content how-data-content">
-            "how-data"
-          </div>
-
-          <div className="conditional-content my-experience-content">
-            "my-experience"
-          </div>
-
-          <div className="conditional-content stay-informed-content">
-            "stay-informed"
-          </div>
-
-          <div className="conditional-content share-insights-content">
-            "share-insights"
-          </div>
-
-          <div className="conditional-content expand-cre-content">
-            "expand-cre"
-          </div>
-
-          <div className="conditional-content bug-report-content">
-            "bug-report"
-          </div>
-
-          <div className="conditional-content something-else-content">
-            <Form
-              id="contact-form"
-              name="cre-contact"
-              method="POST"
-              // data-netlify="true"
-              // action="/thank-you"
-              onSubmit={onSubmit}
-              >
-              <h1>Contact us</h1>
-              <Form.Group controlId="formGroupName">
-                <Form.Label name="name">Name</Form.Label>
-                <Form.Control required type="name" placeholder="Enter name" />
-              </Form.Group>
-
-              <Form.Group controlId="formGroupEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  required
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email address"
-                />
-              </Form.Group>
-
-              <Form.Group controlId="formGroupSubject">
-                <Form.Label>Subject</Form.Label>
-                <Form.Control required name="subject" type="subject" />
-              </Form.Group>
-
-              <Form.Group controlId="formGroupMessage">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  required
-                  name="message"
-                  type="message"
-                  as="textarea"
-                  rows="8"
-                />
-              </Form.Group>
-
-              <Button variant="primary" size="lg" type="submit">
-                Submit
-              </Button>
-            </Form>
+            {conditionalOption === "something-else" ? cpalForm : conditionalOptions[conditionalOption].content}
           </div>
           
         </Col>
