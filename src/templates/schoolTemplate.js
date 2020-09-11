@@ -1,11 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import StaticMap, { Marker, Source, Layer } from "react-map-gl"
 import circle from "@turf/circle"
 import i18n from "@pureartisan/simple-i18n"
 import { Col, Row, Button } from "react-bootstrap"
 import clsx from "clsx"
-import { FaPrint } from "react-icons/fa"
+import { FaPrint, FaInfoCircle } from "react-icons/fa"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // import { logger } from "./../utils/logger"
@@ -52,10 +52,10 @@ const SchoolPage = ({ data, ...props }) => {
   // Set up viewport for static map.
   const viewport = {
     width: "100%",
-    height: 300,
+    height: 411,
     latitude: school.POINT_Y,
     longitude: school.POINT_X,
-    zoom: 11,
+    zoom: 12,
     preserveDrawingBuffer: true,
   }
   // Build the json for the school zone source
@@ -169,6 +169,8 @@ const SchoolPage = ({ data, ...props }) => {
           }
         }
       }
+      // Stick an "and" before the last entry
+      metricArray[2] = "and " + metricArray[2]
       return i18n.translate("SCHOOL_PROSE_TOP", {
         quintiles: metricArray.join("; ").toLowerCase(),
       })
@@ -181,6 +183,8 @@ const SchoolPage = ({ data, ...props }) => {
           }
         }
       }
+      // Stick an "and" before the last entry
+      metricArray[2] = "and " + metricArray[2]
       return i18n.translate("SCHOOL_PROSE_BOTTOM", {
         quintiles: metricArray.join("; ").toLowerCase(),
       })
@@ -228,55 +232,27 @@ const SchoolPage = ({ data, ...props }) => {
         image={""}
         description={""}
       />
-      <SchoolHero wide={true}>
-        <div
-          className="map-parent"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
+      <SchoolHero wide={true} className="school-metadata custom-feeder-prose">
+        {/** Row with map and heading */}
+        {/**<Row className="school-metadata custom-feeder-prose"> */}
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 5, offset: 1 }}
+          className="school-intro"
         >
-          <StaticMap
-            {...viewport}
-            mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
-            mapStyle={defaultMapStyle}
-          >
-            <Marker latitude={viewport.latitude} longitude={viewport.longitude}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "5px",
-                  border: "1px solid #fff",
-                  backgroundColor: CRI_COLORS[school.cri_weight_sd],
-                }}
-              ></div>
-            </Marker>
-            <Source id="my-data" type="geojson" data={zoneJson}>
-              <Layer
-                id="point"
-                type="fill"
-                paint={{
-                  "fill-color": CRI_COLORS[2],
-                  "fill-opacity": 0.2,
-                }}
-              />
-            </Source>
-          </StaticMap>
-        </div>
-      </SchoolHero>
-      {/** Intro row */}
-      <Row className="school-metadata custom-feeder-prose">
-        <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 1 }}>
           <h2>{school.SCHOOLNAME}</h2>
           <h4>
             {school.ADDRESS}
             <br />
             {school.CITY}, TX {school.ZIP}
-          </h4>
-          <h3>
+            <br />
             {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
-          </h3>
+          </h4>
+          {/**
+            <h3>
+              {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
+            </h3>
+            */}
           <Button
             aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
             color="none"
@@ -290,6 +266,102 @@ const SchoolPage = ({ data, ...props }) => {
           </Button>
         </Col>
         <Col
+          className="map-section"
+          xs={{ span: 12, offset: 0 }}
+          md={{ span: 6, offset: 0 }}
+        >
+          <div
+            className="map-parent"
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <StaticMap
+              {...viewport}
+              mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
+              mapStyle={defaultMapStyle}
+              aria-describedby="map_descriptor"
+            >
+              <Marker
+                latitude={viewport.latitude}
+                longitude={viewport.longitude}
+              >
+                <div
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #fff",
+                    backgroundColor: CRI_COLORS[school.cri_weight_sd],
+                  }}
+                ></div>
+              </Marker>
+              <Source id="my-data" type="geojson" data={zoneJson}>
+                <Layer
+                  id="point"
+                  type="fill"
+                  paint={{
+                    "fill-color": CRI_COLORS[2],
+                    "fill-opacity": 0.2,
+                  }}
+                />
+              </Source>
+            </StaticMap>
+          </div>
+        </Col>
+        <Col
+          className="map-descriptor"
+          xs={{ span: 12, offset: 0 }}
+          md={{ span: 3, offset: 6 }}
+        >
+          <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
+        </Col>
+        {/**</Row>*/}
+      </SchoolHero>
+
+      {/** Intro row */}
+      <Row className="school-metadata custom-feeder-prose">
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
+          <div className="metric-group">
+            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
+            <NonInteractiveScale
+              className="metric-group"
+              metric="cri_weight"
+              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
+              colors={CRI_COLORS}
+              showHash={true}
+              hashLeft={getRoundedValue(
+                getHashLeft(school.cri_weight, 0, 100),
+                0
+              )}
+              hashValue={school.cri_weight}
+              showMean={true}
+              meanLeft={getHashLeft(
+                getMetric("cri_weight", CPAL_METRICS).mean,
+                0,
+                100
+              )}
+              meanValue={getRoundedValue(
+                getMetric("cri_weight", CPAL_METRICS).mean,
+                0
+              )}
+              showMinMax={true}
+              showLegend={true}
+            />
+          </div>
+          <Link to="/faq/#about-8" className="link-mean-info-button">
+            <FaInfoCircle />
+            <span className="mean-info-button">
+              Why is the mean not always in the middle of the scale?
+            </span>
+          </Link>
+        </Col>
+        <Col
           xs={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 1 }}
           className="custom-feeder"
@@ -300,6 +372,14 @@ const SchoolPage = ({ data, ...props }) => {
               <hr></hr>
             </div>
             <div className="demographics">
+              <div className="demo demo-bl">
+                <span className="percent">{school.dem_totp}</span>
+                {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
+              </div>
+              <div className="demo demo-bl">
+                <span className="percent">{school.dem_popch}</span>
+                {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
+              </div>
               <div className="demo demo-bl">
                 <span className="percent">
                   {getRoundedValue(
@@ -341,41 +421,6 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
       </Row>
 
-      <Row className="metric-row">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
-          className={clsx("metric-collection-cri_weight", "metric-collection")}
-        >
-          <div className="metric-group">
-            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
-            <NonInteractiveScale
-              className="metric-group"
-              metric="cri_weight"
-              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
-              colors={CRI_COLORS}
-              showHash={true}
-              hashLeft={getRoundedValue(
-                getHashLeft(school.cri_weight, 0, 100),
-                0
-              )}
-              hashValue={school.cri_weight}
-              showMean={true}
-              meanLeft={getHashLeft(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0,
-                100
-              )}
-              meanValue={getRoundedValue(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0
-              )}
-              showMinMax={true}
-            />
-          </div>
-        </Col>
-      </Row>
-
       <Row className="custom-feeder-prose">
         <Col
           xs={{ span: 10, offset: 1 }}
@@ -385,7 +430,7 @@ const SchoolPage = ({ data, ...props }) => {
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
-          <div
+          <p
             className="quintile-prose"
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
@@ -393,7 +438,7 @@ const SchoolPage = ({ data, ...props }) => {
                 school.cri_weight_sd
               ),
             }}
-          ></div>
+          ></p>
           <p
             className="school-prose-top"
             dangerouslySetInnerHTML={{
