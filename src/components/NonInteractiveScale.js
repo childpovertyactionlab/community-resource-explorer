@@ -1,4 +1,6 @@
 import React from "react"
+import clsx from "clsx"
+import i18n from "@pureartisan/simple-i18n"
 
 // import "./NonInteractiveScale.scss"
 import { getRoundedValue, getMetric } from "./../templates/utils/utils"
@@ -15,15 +17,9 @@ const NonInteractiveScale = ({
   meanLeft,
   meanValue,
   showMinMax,
+  showLegend = false,
 }) => {
   const metricData = getMetric(metric, CPAL_METRICS)
-  // console.log(
-  //   "NonInteractiveScale, metricData.colors ",
-  //   metric,
-  //   metricData,
-  //   "quintiles, ",
-  //   quintiles
-  // )
   const styles = [
     {
       backgroundColor: !!quintiles[0] ? colors[0] : "transparent",
@@ -41,8 +37,6 @@ const NonInteractiveScale = ({
       backgroundColor: !!quintiles[4] ? colors[4] : "transparent",
     },
   ]
-  // const hashStyles = { left: hashLeft + "%" }
-  // const hashStyles = { left: hashLeft + "%" }
   const getLeftStyles = val => {
     return { left: val + "%" }
   }
@@ -50,7 +44,10 @@ const NonInteractiveScale = ({
     display: !!showMinMax ? "block" : "none",
   }
   return (
-    <div className="n-i-scale" key={metric}>
+    <div
+      className={clsx("n-i-scale", showLegend ? "show-legend" : null)}
+      key={metric}
+    >
       <div className="n-i-scale-parent">
         <div className="n-i-scale-linear">
           <div className="n-i-scale-line">
@@ -58,10 +55,37 @@ const NonInteractiveScale = ({
               <div className="n-i-scale-mean" style={getLeftStyles(meanLeft)}>
                 <div className="n-i-scale-mean-line"></div>
                 <div className="n-i-scale-mean-value">{meanValue}</div>
+                {!!showLegend && (
+                  <div className="n-i-scale-mean-legend">
+                    {i18n.translate(`SCHOOL_SCALE_MEAN`)}
+                  </div>
+                )}
               </div>
             ) : null}
             {!!showHash ? (
               <div className="n-i-scale-hash" style={getLeftStyles(hashLeft)}>
+                {!!showLegend && (
+                  <div className="n-i-scale-hash-legend">
+                    <span>{i18n.translate("SCHOOL_SCALE_COMM")}</span>
+                    <svg
+                      width="5"
+                      height="14"
+                      viewBox="0 0 5 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 1L2.5 11"
+                        stroke="#606B44"
+                        stroke-width="0.5"
+                      />
+                      <path
+                        d="M2.5 13.5L0.334936 9.75H4.66506L2.5 13.5Z"
+                        fill="#606B44"
+                      />
+                    </svg>
+                  </div>
+                )}
                 <div className="n-i-scale-hash-value">{hashValue}</div>
                 <div className="n-i-scale-hash-dot"></div>
               </div>
@@ -108,28 +132,67 @@ const NonInteractiveScale = ({
             ""
           )}
         </div>
-        <div className="n-i-scale-quintiles metric-{metric} quintile-{quintile}">
-          <div
-            className="n-i-scale-quintile quintile-0"
-            style={styles[0]}
-          ></div>
-          <div
-            className="n-i-scale-quintile quintile-1"
-            style={styles[1]}
-          ></div>
-          <div
-            className="n-i-scale-quintile quintile-2"
-            style={styles[2]}
-          ></div>
-          <div
-            className="n-i-scale-quintile quintile-3"
-            style={styles[3]}
-          ></div>
-          <div
-            className="n-i-scale-quintile quintile-4"
-            style={styles[4]}
-          ></div>
+        {!!showLegend && (
+          <div className={`n-i-scale-quintiles-legend-label metric-${metric}`}>
+            {quintiles.map((el, i) => {
+              return (
+                <div className={clsx("n-i-scale-quintile", "quintile-" + i)}>
+                  {!!quintiles[i] && (
+                    <>
+                      <span>{i18n.translate(`SCHOOL_SCALE_COMM_REL`)}</span>
+                      <svg
+                        width="5"
+                        height="14"
+                        viewBox="0 0 5 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 1L2.5 11"
+                          stroke="#606B44"
+                          stroke-width="0.5"
+                        />
+                        <path
+                          d="M2.5 13.5L0.334936 9.75H4.66506L2.5 13.5Z"
+                          fill="#606B44"
+                        />
+                      </svg>
+                    </>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        )}
+        <div className={`n-i-scale-quintiles metric-${metric}`}>
+          {quintiles.map((el, i) => {
+            return (
+              <div
+                className={clsx("n-i-scale-quintile", "quintile-" + i)}
+                style={styles[i]}
+              ></div>
+            )
+          })}
         </div>
+        {!!showLegend && (
+          <div className={`n-i-scale-quintiles-legend metric-${metric}`}>
+            <div className="n-i-scale-quintile quintile-0">
+              {i18n.translate(`SCHOOL_SCALE_WBA`)}
+            </div>
+            <div className="n-i-scale-quintile quintile-1">
+              {i18n.translate(`SCHOOL_SCALE_BA`)}
+            </div>
+            <div className="n-i-scale-quintile quintile-2">
+              {i18n.translate(`SCHOOL_SCALE_A`)}
+            </div>
+            <div className="n-i-scale-quintile quintile-3">
+              {i18n.translate(`SCHOOL_SCALE_AA`)}
+            </div>
+            <div className="n-i-scale-quintile quintile-4">
+              {i18n.translate(`SCHOOL_SCALE_WAA`)}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

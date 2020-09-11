@@ -180,7 +180,10 @@
           // }
         }
         .n-i-scale {
-          width: 80%;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 80%;
+          }
         }
       }
       h5 {
@@ -277,6 +280,67 @@
       display: none;
     }
 
+    // Scale when legend is displayed.
+    .n-i-scale.show-legend {
+      margin-top: 8rem;
+      .n-i-scale-linear .n-i-scale-line {
+        .n-i-scale-hash {
+          top: -61px !important;
+          .n-i-scale-hash-legend {
+            width: 200px;
+            margin-left: -100px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-family: Halyard;
+            span,
+            svg {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+        .n-i-scale-mean {
+          z-index: 3000;
+          .n-i-scale-mean-legend {
+            width: 100px;
+            margin-left: -50px;
+            font-style: italic;
+            font-size: 1.3rem;
+            text-align: center;
+            font-family: Halyard;
+          }
+        }
+      }
+      .n-i-scale-parent .n-i-scale-quintiles {
+        margin-top: 0.5rem;
+      }
+      .n-i-scale-quintiles-legend-label {
+        margin-top: 2rem;
+        font-style: italic;
+        font-size: 1rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.3rem;
+        }
+        text-align: center;
+        font-family: Halyard;
+        span,
+        svg {
+          display: block;
+          width: 100%;
+        }
+      }
+      .n-i-scale-quintiles-legend {
+        font-style: italic;
+        font-size: 1rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.4rem;
+        }
+        text-align: center;
+        font-family: Halyard;
+      }
+    }
+
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
       border: 1px solid #ccc;
       height: 12px;
@@ -289,6 +353,31 @@
         height: 100%;
         border-right: 1px solid #ccc;
         width: 16.665%;
+        &:after,
+        &:before {
+          display: none;
+        }
+        &.quintile-2 {
+          width: 33.33%;
+        }
+        &.quintile-4 {
+          border-right: none;
+        }
+        &.quintile-0:before,
+        &.quintile-4:after {
+          display: none;
+        }
+      }
+    }
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend,
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend-label {
+      width: 100%;
+      display: flex;
+      .n-i-scale-quintile {
+        height: 100%;
+        // border-right: 1px solid #ccc;
+        width: 16.665%;
+        text-align: center;
         &:after,
         &:before {
           display: none;

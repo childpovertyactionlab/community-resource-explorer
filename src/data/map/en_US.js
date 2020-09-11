@@ -178,5 +178,13 @@ const en_US = {
   SCHOOL_PROSE_DEMO_LABEL: `Residents in this campus community`,
   SCHOOL_MAP_DESCRIPTOR: `The data on this page is representative of the 2-mile radius around the
   school, as shown in the map above.`,
+  SCHOOL_SCALE_WBA: `well below average`,
+  SCHOOL_SCALE_BA: `slightly below average`,
+  SCHOOL_SCALE_A: `average`,
+  SCHOOL_SCALE_AA: `slightly above average`,
+  SCHOOL_SCALE_WAA: `well above average`,
+  SCHOOL_SCALE_MEAN: `Mean`,
+  SCHOOL_SCALE_COMM: `This community`,
+  SCHOOL_SCALE_COMM_REL: `This community relative to average`,
 }
 export default en_US
