@@ -169,6 +169,8 @@ const SchoolPage = ({ data, ...props }) => {
           }
         }
       }
+      // Stick an "and" before the last entry
+      metricArray[2] = "and " + metricArray[2]
       return i18n.translate("SCHOOL_PROSE_TOP", {
         quintiles: metricArray.join("; ").toLowerCase(),
       })
@@ -181,6 +183,8 @@ const SchoolPage = ({ data, ...props }) => {
           }
         }
       }
+      // Stick an "and" before the last entry
+      metricArray[2] = "and " + metricArray[2]
       return i18n.translate("SCHOOL_PROSE_BOTTOM", {
         quintiles: metricArray.join("; ").toLowerCase(),
       })
@@ -411,7 +415,7 @@ const SchoolPage = ({ data, ...props }) => {
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
-          <div
+          <p
             className="quintile-prose"
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
@@ -419,7 +423,7 @@ const SchoolPage = ({ data, ...props }) => {
                 school.cri_weight_sd
               ),
             }}
-          ></div>
+          ></p>
           <p
             className="school-prose-top"
             dangerouslySetInnerHTML={{
