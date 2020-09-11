@@ -101,7 +101,7 @@ const NonInteractiveScale = ({
                       <path
                         d="M2.5 1L2.5 11"
                         stroke="#606B44"
-                        stroke-width="0.5"
+                        strokeWidth="0.5"
                       />
                       <path
                         d="M2.5 13.5L0.334936 9.75H4.66506L2.5 13.5Z"
@@ -118,7 +118,7 @@ const NonInteractiveScale = ({
           {!!showMinMax ? (
             <div className="n-i-scale-minmax" style={minMaxStyle}>
               <div className="n-i-scale-min">
-                <span>
+                <span className="num">
                   {!!metricData.high_is_good
                     ? getRoundedValue(
                         metricData.range[0],
@@ -136,11 +136,13 @@ const NonInteractiveScale = ({
                       )}
                 </span>
                 {!!showLegend && (
-                  <span>{i18n.translate(`SCHOOL_SCALE_MIN`)}</span>
+                  <span className="legend-label">
+                    {i18n.translate(`SCHOOL_SCALE_MIN`)}
+                  </span>
                 )}
               </div>
               <div className="n-i-scale-max">
-                <span>
+                <span className="num">
                   {!!metricData.high_is_good
                     ? getRoundedValue(
                         metricData.range[1],
@@ -158,7 +160,9 @@ const NonInteractiveScale = ({
                       )}
                 </span>
                 {!!showLegend && (
-                  <span>{i18n.translate(`SCHOOL_SCALE_MAX`)}</span>
+                  <span className="legend-label">
+                    {i18n.translate(`SCHOOL_SCALE_MAX`)}
+                  </span>
                 )}
               </div>
             </div>
@@ -180,7 +184,7 @@ const NonInteractiveScale = ({
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M2.5 1L2.5 11" stroke="#606B44" stroke-width="0.5" />
+                <path d="M2.5 1L2.5 11" stroke="#606B44" strokeWidth="0.5" />
                 <path
                   d="M2.5 13.5L0.334936 9.75H4.66506L2.5 13.5Z"
                   fill="#606B44"

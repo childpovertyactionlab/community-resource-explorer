@@ -376,6 +376,17 @@
         text-align: center;
         font-family: Halyard;
       }
+      .n-i-scale-minmax {
+        span {
+          width: 100%;
+          display: block;
+          &.legend-label {
+            font-family: Halyard;
+            font-size: 1.3rem;
+            font-style: italic;
+          }
+        }
+      }
     }
 
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
