@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-// import { Link } from "gatsby"
+import React from "react"
 
 import Layout from "../components/layout"
 import { Col, Row, Collapse } from "react-bootstrap"
@@ -34,13 +33,17 @@ const background = {
     },
     {
       text: "Who should use the CRE?",
-      body:
-        <p>The CRE is for use by <i>individuals</i>, like residents of a neighborhood included in the CRE, and also <i>institutions</i>, like nonprofits, public agencies, and neighborhood associations.</p>
+      body: (
+        <p>
+          The CRE is for use by <i>individuals</i>, like residents of a
+          neighborhood included in the CRE, and also <i>institutions</i>, like
+          nonprofits, public agencies, and neighborhood associations.
+        </p>
+      ),
     },
     {
       text: "How was the CRE funded?",
-      body:
-        "The CRE was funded with generous support from Comerica Bank.",
+      body: "The CRE was funded with generous support from Comerica Bank.",
     },
   ],
 }
@@ -55,26 +58,82 @@ const about = {
     },
     {
       text: "What is the difference between the CRE and the CRI?",
-      body:
-        <p>The Community Resource Explorer (CRE) is this newly-built website to house neighborhood-level data related to resource allocation and quality of life in Dallas. The Community Resource Index (CRI) is a statistical approach that summarizes a collection of data -- in this case, neighborhood indicators -- into one value for comparison. Every school included in the Explorer has six different index values: one each for Economics, Education, Family, Community, and Health, and one overall index value that represents a combination of all five categories.</p>
+      body: (
+        <p>
+          The Community Resource Explorer (CRE) is this newly-built website to
+          house neighborhood-level data related to resource allocation and
+          quality of life in Dallas. The Community Resource Index (CRI) is a
+          statistical approach that summarizes a collection of data -- in this
+          case, neighborhood indicators -- into one value for comparison. Every
+          school included in the Explorer has six different index values: one
+          each for Economics, Education, Family, Community, and Health, and one
+          overall index value that represents a combination of all five
+          categories.
+        </p>
+      ),
     },
     {
       text: "Where did the data come from for the CRE?",
-      body:
-        <p>Data featured in the CRE from from a variety of public sources, such as the U.S. Census Bureau, the Dallas Independent School District, and the Centers for Disease Control & Prevention. A few data points were acquired from third-party data vendors (spending on fresh fruits and vegetables) or collected by CPAL (e.g., supermarkets and grocery stores, community health clinics). To learn more about the data used for this project, visit the <a href="/get-the-data">Get the Data page</a>.</p>
+      body: (
+        <p>
+          Data featured in the CRE from from a variety of public sources, such
+          as the U.S. Census Bureau, the Dallas Independent School District, and
+          the Centers for Disease Control & Prevention. A few data points were
+          acquired from third-party data vendors (spending on fresh fruits and
+          vegetables) or collected by CPAL (e.g., supermarkets and grocery
+          stores, community health clinics). To learn more about the data used
+          for this project, visit the{" "}
+          <a href="/get-the-data">Get the Data page</a>.
+        </p>
+      ),
     },
     {
       text: "How did you decide on these indicators?",
-      body:
-        <p> To determine which indicators to include, we looked for (1) indicators that have an impact on the quality of life for kids and their families, (2) indicators that have reliable, current data that can be mapped within a two-mile radius, and (3) indicators that can be acted upon by individuals and institutions. We also studied similar data projects, such as the <a target="_blank" href="https://dallascityhall.com/departments/office-of-equity/DCH%20Documents/equality-indicators-booklet-2019.pdf">Dallas Equity Indicators</a>, in consideration of what to cover in the CRE.</p>
+      body: (
+        <p>
+          {" "}
+          To determine which indicators to include, we looked for (1) indicators
+          that have an impact on the quality of life for kids and their
+          families, (2) indicators that have reliable, current data that can be
+          mapped within a two-mile radius, and (3) indicators that can be acted
+          upon by individuals and institutions. We also studied similar data
+          projects, such as the{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://dallascityhall.com/departments/office-of-equity/DCH%20Documents/equality-indicators-booklet-2019.pdf"
+          >
+            Dallas Equity Indicators
+          </a>
+          , in consideration of what to cover in the CRE.
+        </p>
+      ),
     },
     {
       text: "How were data in the CRE calculated?",
-      body:
-        <p>The CRI was calculated by aggregating or summarizing data related to five key categories (Community, Economics, Education, Family, and Health) for the geography within two miles of every neighborhood elementary, middle, and high school campus in Dallas ISD. Data related to each of the five categories were analyzed separately and combined into indices to help identify relative differences in resource allocation - i.e., where there are an abundance of resources and where there fewer resources that are related to student outcomes and community-level quality of life. The five scores were then combined into an overall CRI score. If you want to learn more about how we calculated the CRI, <mark>you can read the full methodology or visit the Methodology page here</mark>.</p>
+      body: (
+        <p>
+          The CRI was calculated by aggregating or summarizing data related to
+          five key categories (Community, Economics, Education, Family, and
+          Health) for the geography within two miles of every neighborhood
+          elementary, middle, and high school campus in Dallas ISD. Data related
+          to each of the five categories were analyzed separately and combined
+          into indices to help identify relative differences in resource
+          allocation - i.e., where there are an abundance of resources and where
+          there fewer resources that are related to student outcomes and
+          community-level quality of life. The five scores were then combined
+          into an overall CRI score. If you want to learn more about how we
+          calculated the CRI,{" "}
+          <mark>
+            you can read the full methodology or visit the Methodology page here
+          </mark>
+          .
+        </p>
+      ),
     },
     {
-      text: "Why is the data calculated within a two-mile radius of each school?",
+      text:
+        "Why is the data calculated within a two-mile radius of each school?",
       body:
         "We used a two-mile area around each campus to calculate the Community Resource Index so that we could capture the broader dynamics of households and families living in each community. Many of the resources that we include serve relatively large geographies, such as city-operated libraries or recreation centers, and a large number of campuses would not have one of those features located within one mile, making the Index much harder to interpret. Similarly, if we had used a larger area, such as three or five miles, we would not be able to see the nuance/difference between campus communities since the geography of one campus community would overlap significantly with several others.",
     },
@@ -106,9 +165,35 @@ const about = {
         Learn more about the changes we made to the data and methodology here.</p>
     },
     {
-      text: "The data for my neighborhood doesn’t match my personal experience. Why might that be?",
-      body:
-        <div><p>The data associated with a particular neighborhood covers a two-mile radius (or four-mile diameter, with the school at the center), which is a pretty big geographic footprint. When people think of their neighborhood, they might think quite small - perhaps just the homes and school nearest to them. Other people might think quite large - perhaps all of Oak Cliff or East Dallas. How you imagine the boundary lines of your neighborhood will shape how you perceive the data. Additionally, schools that sit on the edge of Downtown Dallas/other major business hubs or on the edge of the Medical District/other major healthcare hubs will capture a volume of data that might far surpass what a resident notices and can access in his/her immediate vicinity. For example, the two-mile radius around a school in South Dallas/Fair Park will capture some parts of Downtown Dallas, including businesses and jobs that are not necessarily representative of what exists right around the feeder pattern schools. Finally, the majority of data included in the CRE come from publicly-available databases. Sometimes, those databases might code certain data elements (like a health clinic) differently than we would. We are continuing to work to “clean” the data to ensure that it reflects the lived experiences of residents as closely as possible.</p></div>
+      text:
+        "The data for my neighborhood doesn’t match my personal experience. Why might that be?",
+      body: (
+        <div>
+          <p>
+            The data associated with a particular neighborhood covers a two-mile
+            radius (or four-mile diameter, with the school at the center), which
+            is a pretty big geographic footprint. When people think of their
+            neighborhood, they might think quite small - perhaps just the homes
+            and school nearest to them. Other people might think quite large -
+            perhaps all of Oak Cliff or East Dallas. How you imagine the
+            boundary lines of your neighborhood will shape how you perceive the
+            data. Additionally, schools that sit on the edge of Downtown
+            Dallas/other major business hubs or on the edge of the Medical
+            District/other major healthcare hubs will capture a volume of data
+            that might far surpass what a resident notices and can access in
+            his/her immediate vicinity. For example, the two-mile radius around
+            a school in South Dallas/Fair Park will capture some parts of
+            Downtown Dallas, including businesses and jobs that are not
+            necessarily representative of what exists right around the feeder
+            pattern schools. Finally, the majority of data included in the CRE
+            come from publicly-available databases. Sometimes, those databases
+            might code certain data elements (like a health clinic) differently
+            than we would. We are continuing to work to “clean” the data to
+            ensure that it reflects the lived experiences of residents as
+            closely as possible.
+          </p>
+        </div>
+      ),
     },
   ],
 }
@@ -123,15 +208,48 @@ const use = {
     },
     {
       text: "What is redlining?",
-      body:
-        <p>Redlining was a practice by the Home Owners Loan Corporation in the 1930s that “arrayed neighborhoods by risk, determined by housing age and density as well as racial composition . . . Neighborhoods that contained black and brown populations were literally highlighted in red and residents were deemed less credit-worthy of a long-term, fixed rate mortgage” (<a href="https://www.localhousingsolutions.org/plan/addressing-neighborhood-disparities-overview/addressing-neighborhood-disparities/" target="_blank">NYU Furman Center</a>). In redlining maps, you’ll see four colors: 
-        <ul>
-          <li>Residential areas highlighted in red (labeled “hazardous”) were typically home to Black residents, older housing, and poorer households;</li>
-          <li>Areas in yellow (labeled “definitely declining”) were also usually home to majority people of color;</li>
-          <li>Areas in blue (labeled “still desirable”) were usually home to majority working-class white residents;</li>
-          <li>Areas in green (labeled “best”) were usually home to professional class white residents.</li>
+      body: (
+        <p>
+          Redlining was a practice by the Home Owners Loan Corporation in the
+          1930s that “arrayed neighborhoods by risk, determined by housing age
+          and density as well as racial composition . . . Neighborhoods that
+          contained black and brown populations were literally highlighted in
+          red and residents were deemed less credit-worthy of a long-term, fixed
+          rate mortgage” (
+          <a
+            href="https://www.localhousingsolutions.org/plan/addressing-neighborhood-disparities-overview/addressing-neighborhood-disparities/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NYU Furman Center
+          </a>
+          ). In redlining maps, you’ll see four colors:
+          <ul>
+            <li>
+              Residential areas highlighted in red (labeled “hazardous”) were
+              typically home to Black residents, older housing, and poorer
+              households;
+            </li>
+            <li>
+              Areas in yellow (labeled “definitely declining”) were also usually
+              home to majority people of color;
+            </li>
+            <li>
+              Areas in blue (labeled “still desirable”) were usually home to
+              majority working-class white residents;
+            </li>
+            <li>
+              Areas in green (labeled “best”) were usually home to professional
+              class white residents.
+            </li>
           </ul>
-          In short, the practice of redlining meant that people of color were denied homeownership opportunities. Neighborhoods that were redlined were also often excluded from economic development opportunities. The long-term impact of redlining is still very much felt today, as illustrated within the Community Resource Explorer.</p>,
+          In short, the practice of redlining meant that people of color were
+          denied homeownership opportunities. Neighborhoods that were redlined
+          were also often excluded from economic development opportunities. The
+          long-term impact of redlining is still very much felt today, as
+          illustrated within the Community Resource Explorer.
+        </p>
+      ),
     },
   ],
 }
@@ -140,19 +258,39 @@ const nextSteps = {
   title: "Next Steps",
   questions: [
     {
-      text: "I have insight about my neighborhood that I would like to share. How can I do that?",
-      body:
-        <p>We plan to continue adding to the CRE over time and are eager to list the many assets of Dallas neighborhoods that might not be currently reflected. To that end, please share insight about your neighborhood by completing the form <a href="/contact">here</a>.</p>
+      text:
+        "I have insight about my neighborhood that I would like to share. How can I do that?",
+      body: (
+        <p>
+          We plan to continue adding to the CRE over time and are eager to list
+          the many assets of Dallas neighborhoods that might not be currently
+          reflected. To that end, please share insight about your neighborhood
+          by completing the form <a href="/contact">here</a>.
+        </p>
+      ),
     },
     {
-      text: "I am interested in the CRE for schools outside of Dallas ISD. Who should I talk to?",
-      body:
-        <p>Feel free to email Ashley Flores, Senior Director at the Child Poverty Action Lab, at <a href="mailto:ashley@childpovertyactionlab.org">ashley@childpovertyactionlab.org</a>.</p>
+      text:
+        "I am interested in the CRE for schools outside of Dallas ISD. Who should I talk to?",
+      body: (
+        <p>
+          Feel free to email Ashley Flores, Senior Director at the Child Poverty
+          Action Lab, at{" "}
+          <a href="mailto:ashley@childpovertyactionlab.org">
+            ashley@childpovertyactionlab.org
+          </a>
+          .
+        </p>
+      ),
     },
     {
       text: "How can I stay informed about updates to the CRE?",
-      body:
-        <p>Sign up using the form below <mark>(ADD LINK TO FORM)</mark> to receive future news about the CRE.</p>
+      body: (
+        <p>
+          Sign up using the form below <mark>(ADD LINK TO FORM)</mark> to
+          receive future news about the CRE.
+        </p>
+      ),
     },
   ],
 }
@@ -165,7 +303,7 @@ class Faq extends React.Component {
 
     this.state = {
       expandedMap: {},
-      mobileMenuActive: false
+      mobileMenuActive: false,
     }
 
     this.toggleExpansion = this.toggleExpansion.bind(this)
@@ -174,7 +312,7 @@ class Faq extends React.Component {
   }
 
   componentDidMount() {
-    const hash = _.get(this.props, 'location.hash', null)
+    const hash = _.get(this.props, "location.hash", null)
     const uid = hash.slice(1)
 
     if (uid) {
@@ -182,7 +320,7 @@ class Faq extends React.Component {
 
       // wants hash (w/#) though docs don't include. doesn't seem to respond to extra options
       animateScroll.scrollTo(hash, {
-        containerId: 'faq-page',
+        containerId: "faq-page",
         // duration: 1500,
         // delay: 1000,
         // offset: 50, // Scrolls to element + 50 pixels down the page
@@ -190,38 +328,39 @@ class Faq extends React.Component {
     }
   }
 
-  toggleExpansion (uid, expand, updateHash) {
+  toggleExpansion(uid, expand, updateHash) {
     if (updateHash) {
-      
-      const hash = expand ? ("#" + uid) : ""
+      const hash = expand ? "#" + uid : ""
       // window.location.hash = hash
-      
+
       // doesn't cause a "jump" where browser scrolls to #id
-      window.history.replaceState(null, null, this.props.location.pathname + hash);
+      window.history.replaceState(
+        null,
+        null,
+        this.props.location.pathname + hash
+      )
     }
-    
+
     this.setState({
       expandedMap: {
         ...this.state.expandedMap,
-        [uid]: expand
-      }
+        [uid]: expand,
+      },
     })
   }
 
-
-  toggleMenu () {
+  toggleMenu() {
     this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
   }
 
   // close menu
-  handleCloseMenu (uid) {
+  handleCloseMenu(uid) {
     this.setState({ mobileMenuActive: false })
 
     setTimeout(() => {
       this.toggleExpansion(uid, true, true)
     }, 900)
   }
-
 
   // returns 2 menus - one seen on mobile, another for tablet+
   // if react-scroll doesn't fit the bill, see https://css-tricks.com/sticky-smooth-active-nav/
@@ -276,7 +415,13 @@ class Faq extends React.Component {
           {sectionTitles}
         </div>
         <div key="side-menu-mobile" className={mobileClasses}>
-          <span onClick={this.toggleMenu} className="jump">
+          <span
+            tabindex="0"
+            role="button"
+            onClick={this.toggleMenu}
+            onKeyDown={this.toggleMenu}
+            className="jump"
+          >
             Jump to
             <InlineSvg type="down-chevron" />
           </span>
@@ -317,7 +462,7 @@ class Faq extends React.Component {
                 </div>
 
                 {s.questions.map((q, idx) => {
-                  const uid = `${s.id}-${idx+1}` // add 1 so human-readable
+                  const uid = `${s.id}-${idx + 1}` // add 1 so human-readable
                   const expanded = this.state.expandedMap[uid]
                   let classes = "question"
                   classes += expanded ? " expanded" : ""
@@ -326,13 +471,30 @@ class Faq extends React.Component {
                     <Element name={uid} className={classes} id={uid} key={uid}>
                       <div
                         className="question-text"
-                        onClick={this.toggleExpansion.bind(this, uid, !expanded, true)}
+                        onClick={this.toggleExpansion.bind(
+                          this,
+                          uid,
+                          !expanded,
+                          true
+                        )}
+                        onKeyDown={this.toggleExpansion.bind(
+                          this,
+                          uid,
+                          !expanded,
+                          true
+                        )}
+                        role="button"
+                        tabindex="0"
                         // aria-controls="example-collapse-text"
                         // aria-expanded={expanded}
                       >
                         <span className="text">
                           {q.text}
-                          <img src={icon} className="svg-base expander-icon" />
+                          <img
+                            alt="expand"
+                            src={icon}
+                            className="svg-base expander-icon"
+                          />
                         </span>
                       </div>
                       <Collapse in={expanded}>
@@ -355,12 +517,12 @@ class Faq extends React.Component {
 
     return (
       <Layout id="faq-page" activePageId={pages.FAQ.id}>
-      <SEO
-        url={this.props.location.href}
-        title={name}
-        keywords={keywords}
-        image={image}
-        description={description}
+        <SEO
+          url={this.props.location.href}
+          title={name}
+          keywords={keywords}
+          image={image}
+          description={description}
         />
 
         <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
@@ -386,24 +548,24 @@ class Faq extends React.Component {
             className="methods-paper"
             xs={{ offset: 0, span: 12 }}
             md={{ offset: 5, span: 7 }}
-            >
+          >
             <Element name="methods-paper" id="methods-paper">
               <Row className="content">
                 <Col
                   xs={12}
                   className="section-title" // visible only for mobile
-                  >
+                >
                   Methods Paper
                 </Col>
 
                 <Col xs={12} className="description">
                   <div className="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
                   </div>
                   <CustomLink>Download paper</CustomLink>
                 </Col>

@@ -2,15 +2,10 @@ import React from "react"
 
 import { Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
-import Helmet from "react-helmet"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
 import { pages } from "../consts"
-import _ from "lodash"
-import { navigate } from "gatsby"
 
 const Contact = ({ location }) => {
-
   // const onSubmit = e => {
   //   navigate(pages.THANKS.path)
   // }
@@ -34,15 +29,25 @@ const Contact = ({ location }) => {
           // xl={{ offset: 4, span: 4 }}
         >
           <h1>Contact us</h1>
-          <Form name="cre-contact" method="POST" data-netlify="true" action="/thank-you">
+          <Form
+            name="cre-contact"
+            method="POST"
+            data-netlify="true"
+            action="/thank-you"
+          >
             <Form.Group controlId="formGroupName">
               <Form.Label name="name">Name</Form.Label>
               <Form.Control required type="name" placeholder="Enter name" />
             </Form.Group>
-            
+
             <Form.Group controlId="formGroupEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control required name="email" type="email" placeholder="Enter your email address" />
+              <Form.Control
+                required
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+              />
             </Form.Group>
 
             <Form.Group controlId="formGroupSubject">
@@ -52,7 +57,13 @@ const Contact = ({ location }) => {
 
             <Form.Group controlId="formGroupMessage">
               <Form.Label>Message</Form.Label>
-              <Form.Control required name="message" type="message" as="textarea" rows="8" />
+              <Form.Control
+                required
+                name="message"
+                type="message"
+                as="textarea"
+                rows="8"
+              />
             </Form.Group>
 
             <Button variant="primary" size="lg" type="submit">

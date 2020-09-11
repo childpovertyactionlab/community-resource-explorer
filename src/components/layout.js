@@ -8,10 +8,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import clsx from "clsx"
-import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
-import Header from "./header"
-import Navbar from "./navBar"
 import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
 import Footer from "./footer"
