@@ -1,6 +1,8 @@
 import React from "react"
 import totalJobs from "./images/school-faq-example.jpg"
 
+import _ from "lodash"
+
 const HOME = {
   id: "home",
   path: "/",
@@ -448,7 +450,15 @@ const nextStepsSection = {
 }
 
 const faqSections = [backgroundSection, aboutSection, useSection, nextStepsSection]
-const faqQuestionmap = {
+
+const faqSectionMap = {
+  backgroundSection,
+  aboutSection,
+  useSection,
+  nextStepsSection,
+}
+
+const faqQuestionMap = {
   whatIs,
   whoBuilt,
   whoUse,
@@ -475,4 +485,4 @@ const stickyHeaderHeight = 64
 
 const salesForceUrl = "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
 
-export { pages, menuPages, stickyHeaderHeight, salesForceUrl, faqSections, faqQuestionmap }
+export { pages, menuPages, stickyHeaderHeight, salesForceUrl, faqSections, faqQuestionMap, faqSectionMap }

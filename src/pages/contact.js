@@ -3,9 +3,10 @@ import React, { useState } from "react"
 import { Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { pages, salesForceUrl } from "../consts"
+import { pages, salesForceUrl, faqSectionMap, faqQuestionMap } from "../consts"
 
 import _ from "lodash"
+import { QuestionGroup } from "./faq"
 
 
 // "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc."
@@ -37,39 +38,39 @@ import _ from "lodash"
 const conditionalOptions = {
   "none": {
     text: "",
-    content: "none"
+    questions: null
   },
   "why-built": {
     text: "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.",
-    content: "why-built"
+    questions: faqSectionMap.backgroundSection.questions
   },
   "how-data": {
     text: "I have questions about the data: how it was calculated, where it came from, which schools are included, etc.",
-    content: "how-data"
+    questions: faqSectionMap.aboutSection.questions
   },
   "my-experience": {
     text: "The data does not match my personal experience",
-    content: "my-experience"
+    questions: [faqQuestionMap.myNeighborhood]
   },
   "stay-informed": {
     text: "I’d like to stay informed about the Resource Explorer",
-    content: "stay-informed"
+    questions: [faqQuestionMap.stayInformed]
   },
   "share-insights": {
     text: "I’d like to share insights about my neighborhood to help improve the Resource Explorer",
-    content: "share-insights"
+    questions: [faqQuestionMap.neighborhoodInsight]
   },
   "expand-cre": {
     text: "I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?",
-    content: "expand-cre"
+    questions: [faqQuestionMap.expandCre]
   },
   "bug-report": {
     text: "I need help with using the website or something’s not working",
-    content: "bug-report"
+    questions: null
   },
   "something-else": {
     text: "Another reason",
-    content: ''
+    questions: null
   },
 }
 
@@ -172,6 +173,20 @@ const Contact = ({ location }) => {
     </Form>
   )
 
+  const getFaqSection = questions => {
+    if (!questions) {
+      return
+    }
+
+    return (
+      <QuestionGroup
+        questions={questions}
+        toggleExpansion={_.noop}
+        expandedMap={{}}
+        groupId="contact"
+      />)
+  }
+
   return (
     <Layout id="contact-page" activePageId={pages.CONTACT.id}>
       <SEO
@@ -195,7 +210,9 @@ const Contact = ({ location }) => {
           </select>
 
           <div className="conditional-content why-built-content">
-            {conditionalOption === "something-else" ? cpalForm : conditionalOptions[conditionalOption].content}
+            {conditionalOption === "something-else" ?
+              cpalForm :
+              getFaqSection(conditionalOptions[conditionalOption].questions)}
           </div>
           
         </Col>

@@ -266,7 +266,7 @@ class Faq extends React.Component {
 const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap }) => {
   // let [expandedMap, setExpandedMap] = useState({})
   // const updateExpandedMap = uid => {
-
+  console.log("QS: ", questions)
   return (
     <div>    
       {questions.map((q, idx) => {
@@ -317,3 +317,6 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap }) =>
 }
 
 export default Faq
+export {
+  QuestionGroup
+}
