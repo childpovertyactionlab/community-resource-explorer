@@ -181,48 +181,12 @@ class Faq extends React.Component {
                   {s.title}
                 </div>
 
-                {s.questions.map((q, idx) => {
-                  const uid = `${s.id}-${idx + 1}` // add 1 so human-readable
-                  const expanded = this.state.expandedMap[uid]
-                  let classes = "question"
-                  classes += expanded ? " expanded" : ""
-                  const icon = expanded ? minus : plus
-                  return (
-                    <Element name={uid} className={classes} id={uid} key={uid}>
-                      <div
-                        className="question-text"
-                        onClick={this.toggleExpansion.bind(
-                          this,
-                          uid,
-                          !expanded,
-                          true
-                        )}
-                        onKeyDown={this.toggleExpansion.bind(
-                          this,
-                          uid,
-                          !expanded,
-                          true
-                        )}
-                        role="button"
-                        tabindex="0"
-                        // aria-controls="example-collapse-text"
-                        // aria-expanded={expanded}
-                      >
-                        <span className="text">
-                          {q.text}
-                          <img
-                            alt="expand"
-                            src={icon}
-                            className="svg-base expander-icon"
-                          />
-                        </span>
-                      </div>
-                      <Collapse in={expanded}>
-                        <div className="question-body">{q.body}</div>
-                      </Collapse>
-                    </Element>
-                  )
-                })}
+                <QuestionGroup
+                  questions={s.questions}
+                  groupId={s.id}
+                  toggleExpansion={this.toggleExpansion}
+                  expandedMap={this.state.expandedMap}
+                />
               </Col>
             </Row>
           )
@@ -297,6 +261,59 @@ class Faq extends React.Component {
       </Layout>
     )
   }
+}
+
+const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap }) => {
+  // let [expandedMap, setExpandedMap] = useState({})
+  // const updateExpandedMap = uid => {
+
+  return (
+    <div>    
+      {questions.map((q, idx) => {
+        const uid = `${groupId}-${idx + 1}` // add 1 so human-readable
+        const expanded = expandedMap[uid]
+        let classes = "question"
+        classes += expanded ? " expanded" : ""
+        const icon = expanded ? minus : plus
+        return (
+          <Element name={uid} className={classes} id={uid} key={uid}>
+            <div
+              className="question-text"
+              onClick={toggleExpansion.bind(
+                this,
+                uid,
+                !expanded,
+                true
+              )}
+              onKeyDown={toggleExpansion.bind(
+                this,
+                uid,
+                !expanded,
+                true
+              )}
+              role="button"
+              tabindex="0"
+            // aria-controls="example-collapse-text"
+            // aria-expanded={expanded}
+            >
+              <span className="text">
+                {q.text}
+                <img
+                  alt="expand"
+                  src={icon}
+                  className="svg-base expander-icon"
+                />
+              </span>
+            </div>
+            <Collapse in={expanded}>
+              <div className="question-body">{q.body}</div>
+            </Collapse>
+          </Element>
+        )
+      })
+    }
+    </div>
+  )
 }
 
 export default Faq
