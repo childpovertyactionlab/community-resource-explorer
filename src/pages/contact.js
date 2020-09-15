@@ -38,7 +38,6 @@ import { QuestionGroup } from "./faq"
 const conditionalOptions = {
   "none": {
     text: "",
-    questions: null
   },
   "why-built": {
     text: "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.",
@@ -64,13 +63,13 @@ const conditionalOptions = {
     text: "I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?",
     questions: [faqQuestionMap.expandCre]
   },
-  "bug-report": {
+  "contact-form-hyper": {
     text: "I need help with using the website or something’s not working",
-    questions: null
+    formName: "troubleshooting"
   },
-  "something-else": {
+  "contact-form-cpal": {
     text: "Another reason",
-    questions: null
+    formName: "cre-contact"
   },
 }
 
@@ -133,54 +132,67 @@ const Contact = ({ location }) => {
   const { keywords, image, description } = pages.CONTACT.meta
   const { name } = pages.CONTACT
 
-  const cpalForm = (
-    <Form
-      id="contact-form"
-      name="cre-contact"
-      method="POST"
-      // data-netlify="true"
-      // action="/thank-you"
-      onSubmit={onSubmit}
-    >
-      <h1>Contact us</h1>
-      <Form.Group controlId="formGroupName">
-        <Form.Label name="name">Name</Form.Label>
-        <Form.Control required type="name" placeholder="Enter name" />
-      </Form.Group>
+  const getConditionalSection = () => {
 
-      <Form.Group controlId="formGroupEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-          required
-          name="email"
-          type="email"
-          placeholder="Enter your email address"
-        />
-      </Form.Group>
+  }
+  
+  const getContactForm = conditionalOption => {
+    const { formName } = conditionalOptions[conditionalOption]
+    return (
+      <Form
+        id="contact-form"
+        name={formName}
+        method="POST"
+        // data-netlify="true"
+        // action="/thank-you"
+        onSubmit={onSubmit}
+      >
+        <h1>Contact us</h1>
+        <Form.Group controlId="formGroupName">
+          <Form.Label class="required" name="name">Name</Form.Label>
+          <Form.Control required type="name" placeholder="Enter name" />
+        </Form.Group>
 
-      <Form.Group controlId="formGroupSubject">
-        <Form.Label>Subject</Form.Label>
-        <Form.Control required name="subject" type="subject" />
-      </Form.Group>
+        <Form.Group controlId="formGroupEmail">
+          <Form.Label class="required">Email</Form.Label>
+          <Form.Control
+            required
+            name="email"
+            type="email"
+            placeholder="Enter your email address"
+          />
+        </Form.Group>
 
-      <Form.Group controlId="formGroupMessage">
-        <Form.Label>Message</Form.Label>
-        <Form.Control
-          required
-          name="message"
-          type="message"
-          as="textarea"
-          rows="8"
-        />
-      </Form.Group>
+        <Form.Group controlId="formGroupSubject">
+          <Form.Label class="required">Subject</Form.Label>
+          <Form.Control required name="subject" type="subject" />
+        </Form.Group>
 
-      <Button variant="primary" size="lg" type="submit">
-        Submit
-      </Button>
-    </Form>
-  )
+        <Form.Group controlId="formGroupMessage">
+          <Form.Label class="required">Message</Form.Label>
+          <Form.Control
+            required
+            name="message"
+            type="message"
+            as="textarea"
+            rows="8"
+          />
+        </Form.Group>
+
+        <Form.Group controlId="formGroupNewsletter">
+          <Form.Label>I'd like to sign up for the newsletter</Form.Label>
+          <input type="checkbox" />
+        </Form.Group>
+
+        <Button variant="primary" size="lg" type="submit">
+          Submit
+        </Button>
+      </Form>
+    )
+  }
 
   const getFaqSection = conditionalOption => {
+    console.log('co: ', conditionalOption)
     const { questions } = conditionalOptions[conditionalOption]
     if (!questions) {
       return
@@ -222,8 +234,8 @@ const Contact = ({ location }) => {
           </Form.Control>
 
           <div className="conditional-content why-built-content">
-            {conditionalOption === "something-else" ?
-              cpalForm :
+            {conditionalOption.startsWith("contact-form") ?
+              getContactForm(conditionalOption) :
               getFaqSection(conditionalOption)}
           </div>
           
