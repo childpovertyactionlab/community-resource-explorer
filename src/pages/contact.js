@@ -82,49 +82,16 @@ const Contact = ({ location }) => {
   let [expandedMap, setExpandedMap] = useState({})
   
   const onSubmit = e => {
-    // const options = { 
-    //   oid: "00D1U00000110AJ", 
-    //   first_name: "f", 
-    //   last_name: "l", 
-    //   email: "o@e", 
-    //   company: "b", 
-    //   "00N1U00000VNkxU": ""
-    // }
-    // fetch(salesForceUrl, {
-    //   method: 'POST',
-    //   mode: 'cors',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(options)
-    // })
-    // alert('sub')
-
-    // const formData = new FormData()
-    // formData.append("oid", "00D1U00000110AJ")
-    // formData.append("00D1U00000110AJ", "")
-    // formData.append("first_name", "f")
-    // formData.append("last_name", "l")
-    // formData.append("email", "o@e")
-
-    // fetch(salesForceUrl, {
-    //   method: 'POST',
-    //   mode: 'cors',
-    //   body: formData
-    // })
-    // alert('sub')
-    e.preventDefault()
-    if (document.getElementById('newsletter-toggle').value !== "on") {
+    if (!document.getElementById('newsletter-toggle').checked) {
+      console.log('off')
       return
     } 
+    console.log('on')
+    e.preventDefault()
     
-    console.log('fd...')
     const formDatas = {}
-    console.log('fd!')
-    _.each(['first_name', 'last_name', 'email'], fieldName => {
-      const field = document.querySelector(`#contact-form .${fieldName}`)
-      const newsletterField = document.querySelector(`#newsletter-form .${fieldName}`)
-      newsletterField.value = field.value
+    _.each(['first_name', 'last_name', 'email', 'subject', 'message'], fieldName => {
+      const field = document.forms.contactForm.querySelector(`.${fieldName}`)
 
       console.log(fieldName, ' : ', field.value)
       formDatas[fieldName] = field.value
@@ -137,16 +104,20 @@ const Contact = ({ location }) => {
       data: qs.stringify(formDatas),
     }
 
-    // Submit to Netlify. Upon success, set the feedback message and clear all
-    // the fields within the form. Upon failure, keep the fields as they are,
-    // but set the feedback message to show the error state.
+    // submit to netlify asynchronously so we can then submit newsletter form
     axios(axiosOptions)
       .then(response => {
-        console.log("sux: ", response)
-        document.querySelector('#newsletter-form form').submit()
+        console.log("success: ", response)
+        _.each(['first_name', 'last_name', 'email'], fieldName => {
+          const newsletterField = document.forms.newsletterForm.querySelector(`.${fieldName}`)
+          console.log(fieldName, ' | ', newsletterField)
+
+          newsletterField.value = formDatas[fieldName]
+        })
+        document.forms.newsletterForm.submit()
       })
       .catch(err =>
-        console.error('~: ', err)
+        console.error('error: ', err)
       )
   }
 
@@ -169,11 +140,11 @@ const Contact = ({ location }) => {
     return (
         <>
         <Form
-          id="contact-form"
+          id="contactForm"
           name={formName}
           method="POST"
           data-netlify="true"
-          // action="/thank-you"
+          action="/thank-you"
           onSubmit={onSubmit}
         >
           <input type="hidden" name="form-name" value={formName} />
@@ -201,7 +172,7 @@ const Contact = ({ location }) => {
 
           <Form.Group controlId="formGroupSubject">
             <Form.Label className="required">Subject</Form.Label>
-            <Form.Control required name="subject" type="subject" />
+            <Form.Control required name="subject" className="subject" type="subject" />
           </Form.Group>
 
           <Form.Group controlId="formGroupMessage">
@@ -210,14 +181,15 @@ const Contact = ({ location }) => {
               required
               name="message"
               type="message"
+              className="message"
               as="textarea"
               rows="8"
             />
           </Form.Group>
 
-          <Form.Group controlId="formGroupNewsletter">
-            <Form.Label>Subscribe to our email updates</Form.Label>
-            <input id="newsletter-toggle" type="checkbox" />
+          <Form.Group>
+            <Form.Label htmlFor="newsletter-toggle">Subscribe to our email updates</Form.Label>
+            <input id="newsletter-toggle" name="newsletter-toggle" type="checkbox" />
           </Form.Group>
 
           <Button variant="primary" size="lg" type="submit">
@@ -225,7 +197,7 @@ const Contact = ({ location }) => {
           </Button>
         </Form>
 
-        <div id="newsletter-form">
+        <div id="newsletter-form-container">
           <SignUpForm withoutSubmit={true} />
         </div>
       </>

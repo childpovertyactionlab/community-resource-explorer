@@ -7,12 +7,13 @@ import SEO from "../components/seo"
 import { pages, salesForceUrl } from "../consts"
 import _ from "lodash"
 
-const DEBUG = true
+const DEBUG = false
 
 const SignUpForm = ({ email, withoutSubmit }) => {
   return (
     <Form
       action={salesForceUrl}
+      name="newsletterForm"
       method="POST"
     >
       <h2>Almost done!</h2>

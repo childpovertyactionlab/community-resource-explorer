@@ -24,11 +24,15 @@
     @include faq-question-styles;
   }
 
-  #contact-form {
+  #contactForm {
     label.required::after {
       content: "*";
       padding-left: 2px;
       color: $cinnabar;
     }
+  }
+
+  #newsletter-form-container {
+    display: none;
   }
 }
