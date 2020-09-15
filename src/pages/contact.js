@@ -7,6 +7,7 @@ import { pages, salesForceUrl, faqSectionMap, faqQuestionMap } from "../consts"
 
 import _ from "lodash"
 import { QuestionGroup } from "./faq"
+import { SignUpForm } from "./signup"
 
 
 // "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc."
@@ -80,7 +81,6 @@ const Contact = ({ location }) => {
   let [expandedMap, setExpandedMap] = useState({})
   
   const onSubmit = e => {
-    // console.log(e)
     // const options = { 
     //   oid: "00D1U00000110AJ", 
     //   first_name: "f", 
@@ -99,26 +99,34 @@ const Contact = ({ location }) => {
     // })
     // alert('sub')
 
-    const formData = new FormData()
-    formData.append("oid", "00D1U00000110AJ")
-    formData.append("00D1U00000110AJ", "")
-    formData.append("first_name", "f")
-    formData.append("last_name", "l")
-    formData.append("email", "o@e")
-    console.log(formData)
+    // const formData = new FormData()
+    // formData.append("oid", "00D1U00000110AJ")
+    // formData.append("00D1U00000110AJ", "")
+    // formData.append("first_name", "f")
+    // formData.append("last_name", "l")
+    // formData.append("email", "o@e")
 
-    fetch(salesForceUrl, {
-      method: 'POST',
-      mode: 'cors',
-      body: formData
-    })
-    .then(x => console.log("!!", x))
-    .catch(err => console.error("??", err))
+    // fetch(salesForceUrl, {
+    //   method: 'POST',
+    //   mode: 'cors',
+    //   body: formData
+    // })
     // alert('sub')
+    // e.preventDefault()
+    if (document.getElementById('newsletter-toggle').value !== "on") {
+      return
+    } 
+    
+    ['first_name', 'last_name', 'email'].forEach(fieldName => {
+      const field = document.querySelector(`#contact-form .${fieldName}`)
+      const newsletterField = document.querySelector(`#newsletter-form .${fieldName}`)
+      newsletterField.value = field.value
+    })
+
+    document.querySelector('#newsletter-form form').submit()
   }
 
   const updatePage = e => {
-    console.log(e.target.value)
     setConditionalOption(e.target.value)
   }
 
@@ -131,68 +139,75 @@ const Contact = ({ location }) => {
 
   const { keywords, image, description } = pages.CONTACT.meta
   const { name } = pages.CONTACT
-
-  const getConditionalSection = () => {
-
-  }
   
   const getContactForm = conditionalOption => {
     const { formName } = conditionalOptions[conditionalOption]
     return (
-      <Form
-        id="contact-form"
-        name={formName}
-        method="POST"
-        // data-netlify="true"
-        // action="/thank-you"
-        onSubmit={onSubmit}
-      >
-        <h1>Contact us</h1>
-        <Form.Group controlId="formGroupName">
-          <Form.Label class="required" name="name">Name</Form.Label>
-          <Form.Control required type="name" placeholder="Enter name" />
-        </Form.Group>
+        <>
+        <Form
+          id="contact-form"
+          name={formName}
+          method="POST"
+          data-netlify="true"
+          // action="/thank-you"
+          onSubmit={onSubmit}
+        >
+          <h1>Contact us</h1>
+          <Form.Group controlId="formGroupFirstName">
+            <Form.Label className="required" name="first_name">First Name</Form.Label>
+            <Form.Control required className="first_name" type="name" placeholder="Enter first name" />
+          </Form.Group>
 
-        <Form.Group controlId="formGroupEmail">
-          <Form.Label class="required">Email</Form.Label>
-          <Form.Control
-            required
-            name="email"
-            type="email"
-            placeholder="Enter your email address"
-          />
-        </Form.Group>
+          <Form.Group controlId="formGroupLastName">
+            <Form.Label className="required" name="last_name">Last Name</Form.Label>
+            <Form.Control required className="last_name" type="name" placeholder="Enter last name" />
+          </Form.Group>
 
-        <Form.Group controlId="formGroupSubject">
-          <Form.Label class="required">Subject</Form.Label>
-          <Form.Control required name="subject" type="subject" />
-        </Form.Group>
+          <Form.Group controlId="formGroupEmail">
+            <Form.Label className="required">Email</Form.Label>
+            <Form.Control
+              required
+              className="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email address"
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formGroupMessage">
-          <Form.Label class="required">Message</Form.Label>
-          <Form.Control
-            required
-            name="message"
-            type="message"
-            as="textarea"
-            rows="8"
-          />
-        </Form.Group>
+          <Form.Group controlId="formGroupSubject">
+            <Form.Label className="required">Subject</Form.Label>
+            <Form.Control required name="subject" type="subject" />
+          </Form.Group>
 
-        <Form.Group controlId="formGroupNewsletter">
-          <Form.Label>I'd like to sign up for the newsletter</Form.Label>
-          <input type="checkbox" />
-        </Form.Group>
+          <Form.Group controlId="formGroupMessage">
+            <Form.Label className="required">Message</Form.Label>
+            <Form.Control
+              required
+              name="message"
+              type="message"
+              as="textarea"
+              rows="8"
+            />
+          </Form.Group>
 
-        <Button variant="primary" size="lg" type="submit">
-          Submit
-        </Button>
-      </Form>
+          <Form.Group controlId="formGroupNewsletter">
+            <Form.Label>Subscribe to our email updates</Form.Label>
+            <input id="newsletter-toggle" type="checkbox" />
+          </Form.Group>
+
+          <Button variant="primary" size="lg" type="submit">
+            Submit
+          </Button>
+        </Form>
+
+        <div id="newsletter-form">
+          <SignUpForm withoutSubmit={true} />
+        </div>
+      </>
     )
   }
 
   const getFaqSection = conditionalOption => {
-    console.log('co: ', conditionalOption)
     const { questions } = conditionalOptions[conditionalOption]
     if (!questions) {
       return

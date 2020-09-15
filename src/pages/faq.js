@@ -14,6 +14,7 @@ import plus from "../images/plus.svg"
 import InlineSvg from "../components/inlineSvg"
 
 import _ from "lodash"
+import { Helmet } from "react-helmet"
 
 // Current as of 7/29, 2:53pm
 
@@ -208,6 +209,9 @@ class Faq extends React.Component {
           image={image}
           description={description}
         />
+        <Helmet>
+          <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
+        </Helmet>
 
         <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
           <div className="page-title-section">

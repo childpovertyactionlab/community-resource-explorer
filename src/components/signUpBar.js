@@ -11,7 +11,9 @@ const SignUpBar = ({ ...props }) => {
 
   const submit = () => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
-    const valid = emailRegex.test(emailValue)
+    // don't test email for now (tests in SignUp)
+    // const valid = emailRegex.test(emailValue)
+    const valid = true
 
     setEmailValid(valid)
     if (!valid) {
