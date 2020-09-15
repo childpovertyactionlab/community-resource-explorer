@@ -4,11 +4,12 @@ import { Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { pages, salesForceUrl, faqSectionMap, faqQuestionMap } from "../consts"
-
-import _ from "lodash"
 import { QuestionGroup } from "./faq"
 import { SignUpForm } from "./signup"
 
+import _ from "lodash"
+import axios from "axios"
+import * as qs from "query-string"
 
 // "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc."
 // "display FAQs from the “background” section below this menu"
@@ -112,18 +113,41 @@ const Contact = ({ location }) => {
     //   body: formData
     // })
     // alert('sub')
-    // e.preventDefault()
+    e.preventDefault()
     if (document.getElementById('newsletter-toggle').value !== "on") {
       return
     } 
     
-    ['first_name', 'last_name', 'email'].forEach(fieldName => {
+    console.log('fd...')
+    const formDatas = {}
+    console.log('fd!')
+    _.each(['first_name', 'last_name', 'email'], fieldName => {
       const field = document.querySelector(`#contact-form .${fieldName}`)
       const newsletterField = document.querySelector(`#newsletter-form .${fieldName}`)
       newsletterField.value = field.value
+
+      console.log(fieldName, ' : ', field.value)
+      formDatas[fieldName] = field.value
     })
 
-    document.querySelector('#newsletter-form form').submit()
+    const axiosOptions = {
+      url: location.pathname,
+      method: "post",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: qs.stringify(formDatas),
+    }
+
+    // Submit to Netlify. Upon success, set the feedback message and clear all
+    // the fields within the form. Upon failure, keep the fields as they are,
+    // but set the feedback message to show the error state.
+    axios(axiosOptions)
+      .then(response => {
+        console.log("sux: ", response)
+        document.querySelector('#newsletter-form form').submit()
+      })
+      .catch(err =>
+        console.error('~: ', err)
+      )
   }
 
   const updatePage = e => {
@@ -152,6 +176,7 @@ const Contact = ({ location }) => {
           // action="/thank-you"
           onSubmit={onSubmit}
         >
+          <input type="hidden" name="form-name" value={formName} />
           <h1>Contact us</h1>
           <Form.Group controlId="formGroupFirstName">
             <Form.Label className="required" name="first_name">First Name</Form.Label>
