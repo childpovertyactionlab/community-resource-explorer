@@ -63,3 +63,7 @@ $font-weight-lighter: 200;
 $hero-wide-img-width-md: 9 * $column;
 $hero-wide-img-width-xl: 7 * $column;
 $sticky-header-height: 64px; // keep in sync with stickyHeaderHeight in consts.js
+
+// space between faq Qs
+$q-breath: 3 * $spacer;
+$q-after-breath: 6 * $spacer;

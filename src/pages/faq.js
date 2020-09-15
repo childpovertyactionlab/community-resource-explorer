@@ -263,15 +263,14 @@ class Faq extends React.Component {
   }
 }
 
-const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap }) => {
-  // let [expandedMap, setExpandedMap] = useState({})
-  // const updateExpandedMap = uid => {
-  console.log("QS: ", questions)
+const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, invertExpansionMap }) => {
   return (
     <div>    
       {questions.map((q, idx) => {
         const uid = `${groupId}-${idx + 1}` // add 1 so human-readable
-        const expanded = expandedMap[uid]
+        const expandedValue = expandedMap[uid]
+        const expanded = invertExpansionMap ? !expandedValue : expandedValue
+
         let classes = "question"
         classes += expanded ? " expanded" : ""
         const icon = expanded ? minus : plus
@@ -282,13 +281,13 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap }) =>
               onClick={toggleExpansion.bind(
                 this,
                 uid,
-                !expanded,
+                !expandedValue,
                 true
               )}
               onKeyDown={toggleExpansion.bind(
                 this,
                 uid,
-                !expanded,
+                !expandedValue,
                 true
               )}
               role="button"

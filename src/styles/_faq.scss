@@ -1,20 +1,16 @@
-#faq-page {
-  $q-breath: 3 * $spacer;
-  $q-after-breath: 6 * $spacer;
-
-  $inter-section-breath-xs: 6 * $spacer - $q-breath;
-  $outer-section-breath-xs: 8 * $spacer - $q-breath;
-  $method-breath-xs: 7 * $spacer;
+$inter-section-breath-xs: 6 * $spacer - $q-breath;
+$outer-section-breath-xs: 8 * $spacer - $q-breath;
+$method-breath-xs: 7 * $spacer;
   
-  $inter-section-breath-md: 9 * $spacer - $q-breath;
-  $outer-section-breath-md: 10 * $spacer - $q-breath;
-  $method-breath-md: 9 * $spacer;
+$inter-section-breath-md: 9 * $spacer - $q-breath;
+$outer-section-breath-md: 10 * $spacer - $q-breath;
+$method-breath-md: 9 * $spacer;
 
-  $inter-section-breath-xl: 10 * $spacer - $q-breath;
-  $outer-section-breath-xl: 12 * $spacer - $q-breath;
-  $method-breath-xl: 11 * $spacer;
+$inter-section-breath-xl: 10 * $spacer - $q-breath;
+$outer-section-breath-xl: 12 * $spacer - $q-breath;
+$method-breath-xl: 11 * $spacer;
 
-
+#faq-page {
   .hero-square {
     .color-section {
       background: $old-lace;
@@ -171,82 +167,7 @@
     }
 
     .question {      
-      .question-text {
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 24px;
-        padding-top: $q-breath;
-        padding-bottom: $q-breath;
-        border-bottom: 1px solid black;
-
-        &:hover {
-          color: $chalet-green;
-        }      
-        &:not(:hover) .expander-icon {
-          // can't set stroke of svg in img w/CSS, so it's set to hover color and we make it black when not hovered like so:
-          filter: brightness(0) grayscale(1);
-        }
-
-        .text {
-          position: relative;
-          display: block; // at least for sm to keep + right
-          padding-right: 3 * $spacer;
-          .expander-icon {
-            width: 13px;
-            height: 13px;
-            position: absolute;
-            right: 0;
-            top: 9px;
-            &.expanded {
-              top: 15px;
-              height: 1px;
-            }
-          }
-        }
-      }
-      .question-body {
-        font-size: 15px;
-        line-height: 22px;
-        font-weight: $font-weight-light;
-        color:  $dk-gray;
-        mix-blend-mode: normal;
-
-        padding-top: $q-breath;
-        padding-bottom: $q-after-breath;
-
-        a {
-          color:rgb(212, 68, 28);
-        }
-        img {
-          max-width: 100%;
-          margin: 3.2rem 0;
-        }
-      }
-
-      &:last-of-type {
-        &:not(.expanded) .question-text {
-          border-bottom: unset;
-        }
-
-        &.expanded .question-body {
-          padding-bottom: $q-breath; // so that total padding calculates correctly
-        }
-      }
-      
-      @include media-breakpoint-up(md) {
-        max-width: 450px;  
-      }
-      @include media-breakpoint-up(xl) {
-        .question-text {
-          font-size: 18px;
-          line-height: 27px;
-        }
-        .question-body {
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
+      @include faq-question-styles;
     }
   }
 

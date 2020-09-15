@@ -78,7 +78,7 @@ const conditionalOptions = {
 const Contact = ({ location }) => {
 
   let [conditionalOption, setConditionalOption] = useState("none")
-
+  let [expandedMap, setExpandedMap] = useState({})
   
   const onSubmit = e => {
     // console.log(e)
@@ -121,6 +121,13 @@ const Contact = ({ location }) => {
   const updatePage = e => {
     console.log(e.target.value)
     setConditionalOption(e.target.value)
+  }
+
+  const toggleExpansion = (uid, expand) => {
+    setExpandedMap({
+      ...expandedMap,
+      [uid]: expand,
+    })
   }
 
   const { keywords, image, description } = pages.CONTACT.meta
@@ -173,17 +180,22 @@ const Contact = ({ location }) => {
     </Form>
   )
 
-  const getFaqSection = questions => {
+  const getFaqSection = conditionalOption => {
+    const { questions } = conditionalOptions[conditionalOption]
     if (!questions) {
       return
     }
 
+    // single questions should default to expanded
+    const invertExpansionMap = questions.length < 2
+
     return (
       <QuestionGroup
         questions={questions}
-        toggleExpansion={_.noop}
-        expandedMap={{}}
-        groupId="contact"
+        toggleExpansion={toggleExpansion}
+        expandedMap={expandedMap}
+        invertExpansionMap={invertExpansionMap}
+        groupId={conditionalOption}
       />)
   }
 
@@ -203,16 +215,16 @@ const Contact = ({ location }) => {
           // xl={{ offset: 4, span: 4 }}
         >
           <label htmlFor="why-contact">I am reaching out because:</label>
-          <select name="why-contact" onChange={updatePage}>
+          <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
             })}
-          </select>
+          </Form.Control>
 
           <div className="conditional-content why-built-content">
             {conditionalOption === "something-else" ?
               cpalForm :
-              getFaqSection(conditionalOptions[conditionalOption].questions)}
+              getFaqSection(conditionalOption)}
           </div>
           
         </Col>
