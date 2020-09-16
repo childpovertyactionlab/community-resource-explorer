@@ -12,61 +12,61 @@ const data = [
     Dataset: 'Community Resource Index',
     Description: 'A dataset containing the values, ranks, and weights for the CRI and each of the five subindices.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/u8vvk15ebrno7k7/CRI_IndexValues_FullFinal.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'Community Indicators',
     Description: 'This dataset contains the indicator values for all components of the Community Subindex.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/807pp5jl3htpklr/CRI_Community_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'Economic Indicators',
     Description: 'This dataset contains the indicator values for all components of the Economic Subindex.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/m2ehgqk8zycz3ws/CRI_Economics_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'Education Indicators',
     Description: 'This dataset contains the indicator values for all components of the Education Subindex.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/kan3spc9jlwbigw/CRI_Education_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'Family Indicators',
     Description: 'This dataset contains the indicator values for all components of the Family Subindex.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/kps8ircrg4tpnry/CRI_Family_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'Health Indicators',
     Description: 'This dataset contains the indicator values for all components of the Health Subindex.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/b8h78idysugd8ny/CRI_Health_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
-    Dataset: 'Overview Data',
+    Dataset: 'Demographic Data',
     Description: 'This dataset includes a variety of demographic and socioeconomic variables related to each campus area that were not used to calculate the CRI.',
     Geography: '2 - mile Campus Communities',
-    Link: 'CSV | R Script',
+    Link: <a target="_blank" href="https://www.dropbox.com/s/rnjvqqxe1zmul8r/CRI_Demographics_Variables_StDevs.csv?dl=0">CSV</a>,
   },
   {
     Dataset: 'CRI Full Dataset',
     Description: 'This is the full dataset, including all input, indicator, and normalized data used to build the CRI.This is a large file and includes a data dictionary.',
     Geography: '2 - mile Campus Communities',
-    Link: 'Download ZIP File',
-  },
-  {
-    Dataset: 'Community Features',
-    Description: 'This is a spatial file that includes features used to calculate and measure the CRI that we are able to share.',
-    Geography: 'Individual locations',
-    Link: 'GEOJSON, Geopackage, Shapefile',
+    Link: 'Coming soon!',
   },
   {
     Dataset: 'CRI Source Data',
     Description: 'The following are the raw data used to calculate the CRI, compiled from a variety of sources.These are not the indicator values used for the CRI.Individual CSV’s are included for different components of the source data.',
     Geography: 'Census tract',
-    Link: 'Download ZIP File',
+    Link: 'Coming soon!',
+  },
+  {
+    Dataset: 'Data Dictionary',
+    Description: 'A spreadsheet that includes all of the variable names, descriptions, and sources for every aspect of the CRI.',
+    Geography: 'N/A',
+    Link: <a target="_blank" href="https://docs.google.com/spreadsheets/d/1zIBYO7LeEcinnfJLcgXV4zWm7JOUjSQfKifl5S76qgQ/edit?usp=sharing">CSV</a>,
   },
 ]
 
@@ -114,6 +114,7 @@ const Data = ({ location }) => {
           className="mx-md-auto"
           xs={{ offset: 1, span: 10 }}
           md={{ offset: 0, span: 10 }}
+          xl={{ offset: 0, span: 7 }}
         >
           <Table striped bordered responsive="md">
             <thead>
