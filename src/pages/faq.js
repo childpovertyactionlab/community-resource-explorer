@@ -174,7 +174,7 @@ class Faq extends React.Component {
                 id={`${s.id}-section`} // target for the side menu to scroll to
                 xs={{ span: 10, offset: 1 }}
                 md={{ span: 6, offset: 5 }}
-                xl={{ span: 4, offset: 5 }}
+                xl={{ span: 5, offset: 5 }}
               >
                 <div
                   className="section-title" // visible only for mobile
