@@ -40,6 +40,7 @@ import * as qs from "query-string"
 const conditionalOptions = {
   "none": {
     text: "",
+    nothingSelected: true,
   },
   "why-built": {
     text: "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.",
@@ -136,9 +137,17 @@ const Contact = ({ location }) => {
   const { name } = pages.CONTACT
   
   const getContactForm = conditionalOption => {
-    const { formName } = conditionalOptions[conditionalOption]
+    const {
+      nothingSelected,
+      formName = conditionalOptions["contact-form-cpal"].formName
+    } = conditionalOptions[conditionalOption]
+
+    if (nothingSelected) {
+      return
+    }
+
     return (
-        <>
+      <>
         <Form
           id="contactForm"
           name={formName}
@@ -210,17 +219,22 @@ const Contact = ({ location }) => {
       return
     }
 
-    // single questions should default to expanded
-    const invertExpansionMap = questions.length < 2
+    const singleFaq = questions.length < 2
 
     return (
-      <QuestionGroup
-        questions={questions}
-        toggleExpansion={toggleExpansion}
-        expandedMap={expandedMap}
-        invertExpansionMap={invertExpansionMap}
-        groupId={conditionalOption}
-      />)
+      <>
+        <h3>{`Before contacting us, please read the FAQ${singleFaq ? "" : "s" } below to see if ${singleFaq ? "it answers" : "they answer"} your question.`}</h3>
+        <QuestionGroup
+          questions={questions}
+          toggleExpansion={toggleExpansion}
+          expandedMap={expandedMap}
+          invertExpansionMap={singleFaq} // if just one, default to expanded
+          groupId={conditionalOption}
+        />
+        <h3>Was your question answered? If not, please contact us using the form below.</h3>
+        <br />
+      </>
+      )
   }
 
   return (
@@ -238,8 +252,7 @@ const Contact = ({ location }) => {
           md={{ offset: 2, span: 8 }}
           // xl={{ offset: 4, span: 4 }}
         >
-          {getContactForm("contact-form-hyper")}
-          {/* <label htmlFor="why-contact">I am reaching out because:</label>
+          <label htmlFor="why-contact">I am reaching out because:</label>
           <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
@@ -247,11 +260,10 @@ const Contact = ({ location }) => {
           </Form.Control>
 
           <div className="conditional-content why-built-content">
-            {conditionalOption.startsWith("contact-form") ?
-              getContactForm(conditionalOption) :
-              getFaqSection(conditionalOption)}
+            {getFaqSection(conditionalOption)}
+            {getContactForm(conditionalOption)}
           </div>
-           */}
+          
         </Col>
       </Row>
     </Layout>
