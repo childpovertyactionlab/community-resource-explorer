@@ -132,17 +132,17 @@ const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, DATA, CONTACT]
 const whatIs = {
   text: "What is the Community Resource Explorer and why was it created?",
   body:
-    "The Community Resource Explorer, or CRE, is a data tool that illustrates how resources are allocated in neighborhoods around Dallas ISD schools. The tool was created to help individuals and institutions see and act on relevant, specific data at the neighborhood level. Reliable, current, and neighborhood-specific data has been hard to come by, but the CRE ensures that communities have the information they need to thrive.",
+    "TThe Community Resource Explorer, or CRE, is a data tool that illustrates how resources are allocated in neighborhoods around Dallas ISD schools. The tool was created to help individuals and institutions see and act on relevant, specific data at the neighborhood level. Reliable, current, and neighborhood-specific data has been hard to come by, but the CRE ensures that communities have the information they need to thrive.",
 }
 
 const whoBuilt = {
-  text: "Who built the CRE?",
+  text: "Who built the Community Resource Explorer?",
   body:
     "The Child Poverty Action Lab (CPAL) developed the concept for the CRE, with input and support from several other local organizations. CPAL was also responsible for initial data collection and analysis and will continue to maintain and upgrade the tool as needed. Hyperobjekt was the web developer that created the container site and elevated the user experience.",
 }
 
 const whoUse = {
-  text: "Who should use the CRE?",
+  text: "Who should use the Community Resource Explorer?",
   body: (
     <p>
       The CRE is for use by <i>individuals</i>, like residents of a
@@ -153,7 +153,7 @@ const whoUse = {
 }
 
 const howFunded = {
-  text: "How was the CRE funded?",
+  text: "How was the Community Resource Explorer funded?",
   body: "The CRE was funded with generous support from Comerica Bank.",
 }
 
@@ -169,41 +169,32 @@ const backgroundSection = {
   ],
 }
 
+const whySchools = {
+  text: "Why is the Community Resource Explorer oriented around schools?",
+  body:
+    "The data is organized around schools because Dallas ISD initially requested neighborhood-level data from CPAL in support of the Equity in Bond Planning project. Dallas ISD wanted to understand how resources were allocated in the immediate vicinity around its schools, so mapping available data within a two-mile radius around each neighborhood school reveals what is/is not available to students and their families. Additionally, schools are often the anchor public institution for a community, and they exist all over the city, making them a relevant centerpoint for the data. In the future, CPAL is interested in further developing the tool so that a user can put in any address (such as a home, community center, faith-based institution, etc.) and see the data for the two-mile radius around that address.",
+}
+
 const whichSchools = {
-  text: "Which schools are included in the CRE?",
+  text: "Which schools are included in the Community Resource Explorer?",
   body:
     "The 189 neighborhood schools in Dallas ISD are currently included in the CRE. Magnet schools, transformation and innovation schools, and alternative schools are not included.",
 }
 
 const differenceCri = {
-  text: "What is the difference between the CRE and the CRI?",
+  text: "What is the difference between the Community Resource Explorer and the Community Resource Index?",
   body: (
     <p>
-      The Community Resource Explorer (CRE) is this newly-built website to
-      house neighborhood-level data related to resource allocation and
-      quality of life in Dallas. The Community Resource Index (CRI) is a
-      statistical approach that summarizes a collection of data -- in this
-      case, neighborhood indicators -- into one value for comparison. Every
-      school included in the Explorer has six different index values: one
-      each for Economics, Education, Family, Community, and Health, and one
-      overall index value that represents a combination of all five
-      categories.
+      The Community Resource <i>Explorer</i> (CRE) is this newly-built website to house neighborhood-level data related to resource allocation and quality of life in Dallas. The Community Resource <i>Index</i> (CRI) is a statistical approach that summarizes a collection of data -- in this case, neighborhood indicators -- into one value for comparison. Every school included in the Explorer has six different index values: one each for Economics, Education, Family, Community, and Health, and one overall index value that represents a combination of all five categories.
     </p>
   ),
 }
 
 const dataSource = {
-  text: "Where did the data come from for the CRE?",
+  text: "Where did the data come from for the Community Resource Explorer?",
   body: (
     <p>
-      Data featured in the CRE from from a variety of public sources, such
-      as the U.S. Census Bureau, the Dallas Independent School District, and
-      the Centers for Disease Control & Prevention. A few data points were
-      acquired from third-party data vendors (spending on fresh fruits and
-      vegetables) or collected by CPAL (e.g., supermarkets and grocery
-      stores, community health clinics). To learn more about the data used
-          for this project, visit the{" "}
-      <a href="/get-the-data">Get the Data page</a>.
+      Data featured in the CRE from from a variety of public sources, such as the U.S. Census Bureau, the Dallas Independent School District, and the Centers for Disease Control & Prevention. A few data points were acquired from third-party data vendors (spending on fresh fruits and vegetables) or collected by CPAL (e.g., supermarkets and grocery stores, community health clinics). To learn more about the data used for this project, visit the {" "}<a href="/get-the-data">Get the Data page</a>.
     </p>
   ),
 }
@@ -213,12 +204,7 @@ const indicatorChoice = {
   body: (
     <p>
       {" "}
-          To determine which indicators to include, we looked for (1) indicators
-          that have an impact on the quality of life for kids and their
-          families, (2) indicators that have reliable, current data that can be
-          mapped within a two-mile radius, and (3) indicators that can be acted
-          upon by individuals and institutions. We also studied similar data
-          projects, such as the{" "}
+      To determine which indicators to include, we looked for (1) indicators that have an impact on the quality of life for kids and their families, (2) indicators that have reliable, current data that can be mapped within a two-mile radius, and (3) indicators that can be acted upon by individuals and institutions. We also studied similar data projects, such as the{" "}
       <a
         target="_blank"
         rel="noreferrer"
@@ -232,22 +218,12 @@ const indicatorChoice = {
 }
 
 const dataCalculation = {
-  text: "How were data in the CRE calculated?",
+  text: "How was the Community Resource Index calculated?",
   body: (
     <p>
-      The CRI was calculated by aggregating or summarizing data related to
-      five key categories (Community, Economics, Education, Family, and
-      Health) for the geography within two miles of every neighborhood
-      elementary, middle, and high school campus in Dallas ISD. Data related
-      to each of the five categories were analyzed separately and combined
-      into indices to help identify relative differences in resource
-      allocation - i.e., where there are an abundance of resources and where
-      there fewer resources that are related to student outcomes and
-      community-level quality of life. The five scores were then combined
-      into an overall CRI score. If you want to learn more about how we
-          calculated the CRI,{" "}
+      The CRI was calculated by aggregating or summarizing data related to five key categories (Community, Economics, Education, Family, and Health) for the geography within two miles of every neighborhood elementary, middle, and high school campus in Dallas ISD. Data related to each of the five categories were analyzed separately and combined into indices to help identify relative differences in resource allocation - i.e., where there are an abundance of resources and where there fewer resources that are related to student outcomes and community-level quality of life. The five scores were then combined into an overall CRI score. If you want to learn more about how we calculated the CRI, you can read the{" "}
       <mark>
-        you can read the full methodology or visit the Methodology page here
+        full methodology or visit the Methodology page here
           </mark>
           .
     </p>
@@ -327,6 +303,7 @@ const aboutSection = {
   id: "about",
   title: "About the Data",
   questions: [
+    whySchools,
     whichSchools,
     differenceCri,
     dataSource,
