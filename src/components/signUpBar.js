@@ -24,7 +24,7 @@ const SignUpBar = ({ ...props }) => {
   }
   return (
     <Row noGutters>
-      <Col xs={12} className="sign-up-bar">
+      <Col xs={12} id="sign-up-bar" className="sign-up-bar">
         <div className="content">
           <div className="subscribe-wrapper">
             <Form.Label className="email-label">
