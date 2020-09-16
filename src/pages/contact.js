@@ -238,7 +238,8 @@ const Contact = ({ location }) => {
           md={{ offset: 2, span: 8 }}
           // xl={{ offset: 4, span: 4 }}
         >
-          <label htmlFor="why-contact">I am reaching out because:</label>
+          {getContactForm("contact-form-hyper")}
+          {/* <label htmlFor="why-contact">I am reaching out because:</label>
           <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
@@ -250,7 +251,7 @@ const Contact = ({ location }) => {
               getContactForm(conditionalOption) :
               getFaqSection(conditionalOption)}
           </div>
-          
+           */}
         </Col>
       </Row>
     </Layout>

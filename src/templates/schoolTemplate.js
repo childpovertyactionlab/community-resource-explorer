@@ -39,7 +39,7 @@ export const query = graphql`
 const SchoolPage = ({ data, ...props }) => {
   // console.log("SchoolPage, ", props)
 
-  // Initialize translantion plugin
+  // Initialize translation plugin
   i18n.init({
     locale: "en_US",
     languages: {
@@ -302,7 +302,7 @@ const SchoolPage = ({ data, ...props }) => {
                   id="point"
                   type="fill"
                   paint={{
-                    "fill-color": CRI_COLORS[2],
+                    "fill-color": CRI_COLORS[school.cri_weight_sd],
                     "fill-opacity": 0.2,
                   }}
                 />
@@ -373,11 +373,15 @@ const SchoolPage = ({ data, ...props }) => {
             </div>
             <div className="demographics">
               <div className="demo demo-bl">
-                <span className="percent">{school.dem_totp}</span>
+                <span className="percent">
+                  {getRoundedValue(school.dem_totp, 0)}
+                </span>
                 {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
               </div>
               <div className="demo demo-bl">
-                <span className="percent">{school.dem_popch}</span>
+                <span className="percent">
+                  {getRoundedValue(school.dem_popch, 0)}
+                </span>
                 {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
               </div>
               <div className="demo demo-bl">
