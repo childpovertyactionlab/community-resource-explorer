@@ -3,8 +3,7 @@ import React from "react"
 import { Row, Col } from "react-bootstrap"
 import Menu from "./menu"
 
-const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
-  
+const Hero = ({ children, activePageId, imgSrc, wide = false }) => {
   const getHero = () => {
     if (wide) {
       return (
@@ -18,8 +17,10 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
               <div className="branding-md-up">
                 <a className="logo-link" href="/">
                   <span className="site-logo svg-base"></span>
-                  <span className="site-title">Community Resource Explorer</span>
-                </a>  
+                  <span className="site-title">
+                    Community Resource Explorer
+                  </span>
+                </a>
               </div>
 
               <Menu activePageId={activePageId} />
@@ -40,7 +41,7 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
               <Row>
                 <Col xs={12} className="p-0">
                   <div className="image-section">
-                    <img src={imgSrc} />
+                    <img alt="todo draw from props" src={imgSrc} />
                   </div>
                 </Col>
               </Row>
@@ -56,7 +57,7 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
             <a className="logo-link" href="/">
               <span className="site-logo svg-base"></span>
               <span className="site-title">Community Resource Explorer</span>
-            </a>  
+            </a>
           </div>
 
           <div className="content">{children}</div>
@@ -68,17 +69,13 @@ const Hero = ({ children, activePageId, imgSrc, wide=false }) => {
             <Menu activePageId={activePageId} />
           </div>
 
-          <img src={imgSrc} className="hero-image" />
+          <img alt="todo draw from props" src={imgSrc} className="hero-image" />
         </div>
       </Col>
     )
   }
 
-  return (
-    <Row id="hero">
-      {getHero()}
-    </Row>
-  )
+  return <Row id="hero">{getHero()}</Row>
 }
 
 export default Hero

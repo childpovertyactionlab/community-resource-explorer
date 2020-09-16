@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Col, Row, Collapse } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -29,7 +29,6 @@ const numberedPoints = [
   { n: number4, p: "Optimizing local, state, and federal resources;" },
   { n: number5, p: "Infusing innovation into the social sector." },
 ]
-
 
 const about = ({ location }) => {
   const { keywords, image, description } = pages.ABOUT.meta
@@ -72,7 +71,11 @@ const about = ({ location }) => {
           {numberedPoints.map((numPoint, idx) => (
             <div key={idx} className={`numbered-point n-${idx + 1}`}>
               {/* TODO - use Morganite Bold text rather than svgs */}
-              <img className="number" src={numPoint.n} />
+              <img
+                alt="TODO fetch from data"
+                className="number"
+                src={numPoint.n}
+              />
               <p className="point">{numPoint.p}</p>
             </div>
           ))}
@@ -93,11 +96,17 @@ const about = ({ location }) => {
 
         <Col className="explorer-why-wrapper" xs={12}>
           <div className="jumper-wrapper-xl">
-            <img src={jumpImg} />
+            <img alt="child jumping" src={jumpImg} />
 
             <div className="funder-wrapper xl">
               <div className="funder xl">
-                <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
+                <a
+                  href="https://www.comerica.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img alt="Comerica Bank logo" src={comerica} />
+                </a>
                 <p className="text">
                   Comerica generously funded the development of the Community
                   Resource Explorer
@@ -114,7 +123,7 @@ const about = ({ location }) => {
               xl={{ offset: 0, span: 7 }}
             >
               <div className="jumper-wrapper-md-down">
-                <img src={jumpImg} />
+                <img alt="child jumping" src={jumpImg} />
               </div>
 
               <div className="content">
@@ -152,7 +161,13 @@ const about = ({ location }) => {
 
         <Col className="funder-wrapper md-down" xs={12}>
           <div className="funder md-down">
-            <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
+            <a
+              href="https://www.comerica.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img alt="Comerica Bank logo" src={comerica} />
+            </a>
             <p className="text">
               Comerica generously funded the development of the Community
               Resource Explorer

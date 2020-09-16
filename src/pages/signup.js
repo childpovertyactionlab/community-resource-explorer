@@ -4,22 +4,109 @@ import { Col, Row, Form, Button } from "react-bootstrap"
 import Layout from "../components/layout"
 import Helmet from "react-helmet"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
-import { pages } from "../consts"
+import { pages, salesForceUrl } from "../consts"
 import _ from "lodash"
 
 const DEBUG = false
 
-const SignUp = ({ location }) => {
+const SignUpForm = ({ email, withoutSubmit }) => {
+  return (
+    <Form
+      action={salesForceUrl}
+      name="newsletterForm"
+      method="POST"
+    >
+      <h2>Almost done!</h2>
+      
+      {!withoutSubmit && (
+        <p>
+          We'd love to know more about you. You can enter additional info below, or{" "}
+          <input
+            className="inline-submit"
+            type="submit"
+            name="submit"
+            value="click here"
+          />{" "}
+          to finish and submit only your email address.
+        </p>
+      )}
 
+      <input type="hidden" name="oid" value="00D1U00000110AJ" />
+      <input
+        type="hidden"
+        name="retURL"
+        value="https://dallasisd.resourceexplorer.org/thank-you"
+      />
+
+      {DEBUG && (
+        <>
+          <input type="hidden" name="debug" value="1" />
+          <input type="hidden" name="debugEmail" value="jmaashoward@gmail.com" />
+        </>
+      )}
+
+      <Form.Group>
+        <Form.Label name="first_name">First Name</Form.Label>
+        <Form.Control className="first_name" name="first_name" type="text" />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label name="last_name">Last Name</Form.Label>
+        <Form.Control className="last_name" name="last_name" type="text" />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label className="required">Email</Form.Label>
+        <Form.Control
+          required
+          defaultValue={email}
+          className="email"
+          name="email"
+          type="email"
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label name="company">Organization</Form.Label>
+        <Form.Control id="company" name="company" type="text" />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label name="neighborhood">Neighborhood</Form.Label>
+        <Form.Control
+          id="00N1U00000VNkxU"
+          name="00N1U00000VNkxU"
+          type="text"
+        />
+      </Form.Group>
+
+      {!withoutSubmit && (
+        <Button variant="primary" size="lg" type="submit">
+          Submit
+        </Button>
+      )}
+    </Form>
+  )
+}
+
+const SignUp = ({ location }) => {
   // TODO: if !email, have alternate text to "Almost"
-  const email = _.get(location, 'state.emailValue', '')
+  const { emailValue } = _.get(location, "state", "")
 
   const { keywords, image, description } = pages.SIGNUP.meta
   const { name } = pages.SIGNUP
 
+  // const onSubmit = e => {
+  //   console.log(e)
+  //   debugger
+  // }
+
   return (
-    <Layout id="signup-page" activePageId={pages.SIGNUP.id} disableFooter={true}>
+    <Layout
+      id="signup-page"
+      activePageId={pages.SIGNUP.id}
+      disableFooter={true}
+    >
       <SEO
         url={location.href}
         title={name}
@@ -37,53 +124,7 @@ const SignUp = ({ location }) => {
           md={{ offset: 2, span: 8 }}
           // xl={{ offset: 4, span: 4 }}
         >
-          <Form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-            <h2>
-              Almost done!
-            </h2>
-            <p>
-              We'd love to know more about you. You can enter additional info below, or{' '}
-              <input className="inline-submit" type="submit" name="submit" value="click here" />
-              {' '}to finish and submit only your email address.
-            </p>
-
-            <input type="hidden" name="oid" value="00D1U00000110AJ" />
-            <input type="hidden" name="retURL" value="https://dallasisd.resourceexplorer.org/thank-you" />
-
-            {DEBUG && <>
-              <input type="hidden" name="debug" value="1" />
-              <input type="hidden" name="debugEmail" value="hoshmn@msn.com" />
-            </>}
-
-            <Form.Group>
-              <Form.Label name="first_name">First Name</Form.Label>
-              <Form.Control id="first_name" name="first_name" type="text" />
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label name="last_name">Last Name</Form.Label>
-              <Form.Control id="last_name" name="last_name" type="text" />
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label className="required">Email</Form.Label>
-              <Form.Control required defaultValue={email} name="email" type="email" />
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label name="company">Organization</Form.Label>
-              <Form.Control id="company" name="company" type="text" />
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label name="neighborhood">Neighborhood</Form.Label>
-              <Form.Control id="00N1U00000VNkxU" name="00N1U00000VNkxU" type="text" />
-            </Form.Group>
-
-            <Button variant="primary" size="lg" type="submit">
-              Submit
-            </Button>
-          </Form>
+          <SignUpForm email={emailValue} />
         </Col>
       </Row>
     </Layout>
@@ -91,3 +132,6 @@ const SignUp = ({ location }) => {
 }
 
 export default SignUp
+export {
+  SignUpForm
+}

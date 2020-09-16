@@ -25,6 +25,41 @@
         }
       }
     }
+    .school-intro {
+      margin-top: 6rem;
+      h2 {
+        margin-bottom: 4rem;
+      }
+      h4,
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      h3 {
+        margin-bottom: 4rem;
+      }
+      .print-school-page {
+        margin-bottom: 4rem;
+      }
+    }
+    &.school-metadata,
+    &.custom-feeder-prose {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .map-descriptor {
+      p {
+        font-family: Halyard;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding: 0.7rem 1rem;
+        @include media-breakpoint-up(md) {
+          padding: 0.7rem 0 0;
+        }
+      }
+    }
   }
   .row {
     &.school-metadata,
@@ -46,6 +81,7 @@
         }
       }
     }
+
     &.school-metadata {
       margin-top: 3rem;
       h2 {
@@ -56,19 +92,22 @@
           font-size: 2rem;
         }
         .n-i-scale {
-          width: 92%;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 92%;
+          }
         }
       }
-     
+
       .demo-callout {
         width: 100%;
-        display: flex;
-        background-color: #ebede3;
+        // display: flex;
+        // background-color: #ebede3;
         font-family: Halyard;
-        padding: 42px;
+        padding: 56px 0 2rem;
         margin-top: 1.6rem;
         .parent-label {
-          width: 40%;
+          width: 60%;
           font-size: 1.8rem;
           padding-right: 1.6rem;
           hr {
@@ -79,7 +118,7 @@
           }
         }
         .demographics {
-          width: 60%;
+          // width: 60%;
           font-size: 1.6rem;
           .percent {
             margin-right: 0.4rem;
@@ -93,7 +132,25 @@
           }
         }
       }
-  
+
+      .link-mean-info-button {
+        margin: 4rem 0 2rem;
+        padding: 1rem;
+        background-color: #f8faf3;
+        color: #606b44;
+        font-style: italic;
+        max-width: 275px;
+        display: flex;
+        align-items: center;
+        &:hover {
+          text-decoration: none;
+        }
+        svg {
+          margin-right: 1rem;
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
     &.custom-feeder-prose,
     &.info-robotext,
@@ -112,6 +169,7 @@
   .row-print-only {
     page-break-inside: avoid;
     visibility: hidden;
+    height: 8rem;
     .vcenter {
       display: flex;
       align-items: center;
@@ -181,7 +239,10 @@
           // }
         }
         .n-i-scale {
-          width: 80%;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 80%;
+          }
         }
       }
       h5 {
@@ -278,6 +339,81 @@
       display: none;
     }
 
+    // Scale when legend is displayed.
+    .n-i-scale.show-legend {
+      margin-top: 8rem;
+      .n-i-scale-linear .n-i-scale-line {
+        .n-i-scale-hash {
+          top: -61px !important;
+          .n-i-scale-hash-legend {
+            width: 200px;
+            margin-left: -100px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-family: Halyard;
+            span,
+            svg {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+        .n-i-scale-mean {
+          z-index: 30;
+          .n-i-scale-mean-legend {
+            width: 100px;
+            margin-left: -50px;
+            font-style: italic;
+            font-size: 1.3rem;
+            text-align: center;
+            font-family: Halyard;
+          }
+        }
+      }
+      .n-i-scale-parent .n-i-scale-quintiles {
+        margin-top: 0.5rem;
+      }
+      .n-i-scale-quintiles-legend-label {
+        margin-top: 1rem;
+        @include media-breakpoint-up(md) {
+          margin-top: 2rem;
+        }
+        font-style: italic;
+        font-size: 1rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.3rem;
+        }
+        text-align: center;
+        font-family: Halyard;
+        span,
+        svg {
+          display: block;
+          width: 100%;
+        }
+      }
+      .n-i-scale-quintiles-legend {
+        font-style: italic;
+        font-size: 1rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.4rem;
+        }
+        text-align: center;
+        font-family: Halyard;
+      }
+      .n-i-scale-minmax {
+        span {
+          width: 100%;
+          display: block;
+          &.legend-label {
+            font-family: Halyard;
+            font-size: 1.3rem;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
       border: 1px solid #ccc;
       height: 12px;
@@ -290,6 +426,42 @@
         height: 100%;
         border-right: 1px solid #ccc;
         width: 16.665%;
+        &:after,
+        &:before {
+          display: none;
+        }
+        &.quintile-2 {
+          width: 33.33%;
+        }
+        &.quintile-4 {
+          border-right: none;
+        }
+        &.quintile-0:before,
+        &.quintile-4:after {
+          display: none;
+        }
+      }
+    }
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend-label {
+      position: relative;
+      height: 4.5rem;
+      @include media-breakpoint-up(md) {
+        height: 5.5rem;
+      }
+      .n-i-scale-quintile {
+        width: 120px;
+        margin-left: -60px;
+        position: absolute;
+      }
+    }
+    .n-i-scale .n-i-scale-parent .n-i-scale-quintiles-legend {
+      width: 100%;
+      display: flex;
+      .n-i-scale-quintile {
+        height: 100%;
+        // border-right: 1px solid #ccc;
+        width: 16.665%;
+        text-align: center;
         &:after,
         &:before {
           display: none;
@@ -341,5 +513,6 @@
   }
   .row-print-only {
     visibility: visible !important;
+    height: auto !important;
   }
 }

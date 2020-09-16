@@ -6,7 +6,6 @@ import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 
 const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
-
   let [menuOpen, setMenuOpen] = useState(false)
 
   if (controlled) {
@@ -17,12 +16,23 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
 
   const toggleMenuOpen = () => setMenuOpen(!menuOpen)
   const closeMenu = () => setMenuOpen(false)
-    
+
   const getMenuPanel = () => {
     return (
-      <Row noGutters className="menu-panel" onWheel={closeMenu} onScroll={closeMenu}>
+      <Row
+        noGutters
+        className="menu-panel"
+        onWheel={closeMenu}
+        onScroll={closeMenu}
+      >
         <div className="logo"></div>
-        <div className="close-menu" onClick={closeMenu}>
+        <div
+          className="close-menu"
+          onClick={closeMenu}
+          onKeyDown={closeMenu}
+          tabindex="0"
+          role="button"
+        >
           <InlineSvg type="x" />
           Close
         </div>
@@ -32,23 +42,28 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
 
         <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
           <div className="menu-page-names-container">
-            {menuPages.filter(p => !p.footerOnly).map(page => {
-              const nameClasses =
-                "menu-page-name" + (page.id === activePageId ? " active" : "")
-              const navigateToPage = () => {
-                closeMenu()
-                navigate(page.path)
-              }
-              return (
-                <div
-                  onClick={navigateToPage}
-                  className={nameClasses}
-                  key={page.id}
-                >
-                  {page.name}
-                </div>
-              )
-            })}
+            {menuPages
+              .filter(p => !p.footerOnly)
+              .map(page => {
+                const nameClasses =
+                  "menu-page-name" + (page.id === activePageId ? " active" : "")
+                const navigateToPage = () => {
+                  closeMenu()
+                  navigate(page.path)
+                }
+                return (
+                  <div
+                    onClick={navigateToPage}
+                    className={nameClasses}
+                    key={page.id}
+                    onKeyDown={navigateToPage}
+                    tabindex="0"
+                    role="button"
+                  >
+                    {page.name}
+                  </div>
+                )
+              })}
           </div>
         </Col>
         <Col className="equipped" xs={0} md={5} xl={{ offset: 1, span: 4 }}>
@@ -56,8 +71,12 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
             All Dallas neighborhoods should have what they need to thrive.
           </p>
         </Col>
-        <Col className="mask" onClick={closeMenu} onWheel={closeMenu} onScroll={closeMenu}>
-        </Col>
+        <Col
+          className="mask"
+          onClick={closeMenu}
+          onWheel={closeMenu}
+          onScroll={closeMenu}
+        ></Col>
       </Row>
     )
   }
@@ -67,7 +86,13 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
       return
     }
     return (
-      <span onClick={toggleMenuOpen} className="menu-icon-group">
+      <span
+        onClick={toggleMenuOpen}
+        onKeyDown={toggleMenuOpen}
+        className="menu-icon-group"
+        role="button"
+        tabindex="0"
+      >
         <span className="menu-icon svg-base"></span>
         Menu
       </span>

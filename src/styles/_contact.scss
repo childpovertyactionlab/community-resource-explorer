@@ -4,15 +4,35 @@
   label {
     font-size: 16px;
     margin-top: 1.5 * $spacer;
+    margin-right: $spacer;
+  }
 
-    &::after {
+  select {
+    width: 550px;
+    max-width: 100%;
+  }
+
+  button {
+    margin-top: 1.5 * $spacer;
+  }
+
+  .conditional-content {
+    padding: 3 * $spacer 0;
+  }
+
+  .question {
+    @include faq-question-styles;
+  }
+
+  #contactForm {
+    label.required::after {
       content: "*";
       padding-left: 2px;
       color: $cinnabar;
     }
   }
 
-  button {
-    margin-top: 1.5 * $spacer;
+  #newsletter-form-container {
+    display: none;
   }
 }

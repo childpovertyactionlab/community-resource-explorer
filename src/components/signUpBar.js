@@ -1,18 +1,19 @@
 import React, { useState } from "react"
-import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import { Row, Col, Form } from "react-bootstrap"
 import CustomLink from "../components/customLink"
 import { navigate } from "gatsby"
 import { pages } from "../consts"
 import comerica from "../images/comericabank-logo.svg"
 
-
-const SignUpBar = ({ }) => {
+const SignUpBar = ({ ...props }) => {
   const [emailValue, setEmailValue] = useState("")
   const [emailValid, setEmailValid] = useState(true)
-  
+
   const submit = () => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-    const valid = emailRegex.test(emailValue)
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
+    // don't test email for now (tests in SignUp)
+    // const valid = emailRegex.test(emailValue)
+    const valid = true
 
     setEmailValid(valid)
     if (!valid) {
@@ -25,33 +26,44 @@ const SignUpBar = ({ }) => {
     <Row noGutters>
       <Col xs={12} className="sign-up-bar">
         <div className="content">
-         
           <div className="subscribe-wrapper">
-            <Form.Label className="email-label">Subscribe to our <span className="no-break">e-mail</span> updates</Form.Label>
+            <Form.Label className="email-label">
+              Subscribe to our <span className="no-break">e-mail</span> updates
+            </Form.Label>
 
             <div className="email-inputs-row">
-
               <div className="email-input-wrapper">
-                <Form.Control type="email"
+                <Form.Control
+                  type="email"
                   onChange={e => setEmailValue(e.target.value)}
                   className="email-input"
                   placeholder="Enter your e-mail address"
                 />
-                {!emailValid && <p className="feedback">Please provide a valid email.</p>}
+                {!emailValid && (
+                  <p className="feedback">Please provide a valid email.</p>
+                )}
               </div>
 
-              <CustomLink onClick={submit} type="right-arrow-thin">Subscribe</CustomLink>
-
+              <CustomLink onClick={submit} type="right-arrow-thin">
+                Subscribe
+              </CustomLink>
             </div>
           </div>
 
           <div className="funder-wrapper">
-            <a href="https://www.comerica.com/" target="_blank"><img src={comerica} /></a>
-            <p className="text">Comerica generously funded the development of the Community Resource Explorer</p>
+            <a
+              href="https://www.comerica.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img alt="comerica bank logo" src={comerica} />
+            </a>
+            <p className="text">
+              Comerica generously funded the development of the Community
+              Resource Explorer
+            </p>
           </div>
-          
         </div>
-
       </Col>
     </Row>
   )
