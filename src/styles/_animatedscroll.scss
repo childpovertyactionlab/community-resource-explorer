@@ -42,13 +42,13 @@ $viz-height: 500px; // Adjust viz height here.
       position: absolute;
       top: 0;
       left: 0;
-      display: block;
-      opacity: 0;
+      display: none;
+      // opacity: 0;
       width: 100%;
       height: $viz-height;
       &.active {
-        opacity: 1;
-        // display: block;
+        // opacity: 1;
+        display: block;
         .blue,
         .green,
         .red {
