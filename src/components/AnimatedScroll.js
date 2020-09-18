@@ -55,24 +55,12 @@ const Viz02 = ({ ...props }) => {
       delay={(el, index) => {
         console.log(el)
         if (el.childNodes[0].classList.contains("02")) {
-          console.log("has the class")
+          console.log("has the class for delay")
           return index * 240
         } else {
           return 1
         }
       }}
-     /* duration={(el, index) => {
-        console.log(el)
-        if (el.childNodes[0].classList.contains("02")) {
-          console.log("has the duration class")
-          return 600
-        } else {
-          return 0
-        }
-      }} */
-        
-    // opacity={[0, 1]}
-      //scale={[0.75, 0.9]}
       svg={true}
     >
       <circle id="Radius" cx="424.783" cy="277.023" r="124.086" fill="#465EB3" fill-opacity="0.1"/>
