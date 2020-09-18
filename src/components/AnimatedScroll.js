@@ -46,17 +46,35 @@ const Viz02 = ({ ...props }) => {
 
 const Viz03 = ({ ...props }) => {
   return (
-    <svg width="500" height="500">
-      <rect
-        width="500"
-        height="500"
-        style={{
-          fill: "yellow",
-          strokeWidth: 10,
-          stroke: "black",
-        }}
-      />
-    </svg>
+    <Anime
+      easing="easeOutElastic"
+      autoplay={true}
+      loop={true}
+      duration={600}
+      direction="alternate"
+      delay={(el, index) => index * 240}
+      translateX="130px"
+      scale={[0.75, 0.9]}
+    >
+      <svg width="500" height="500">
+    
+          <circle id="King" cx="200" cy="200" r="32" fill="#86A0D2"/>
+         
+   
+      </svg>
+
+      <svg width="500" height="500">
+     
+          <circle id="Deep green 1" cx="300" cy="300" r="32" fill="#5DBF7F"/>
+   
+      </svg>
+      <svg width="500" height="500">
+     
+          <circle id="Deep green 2" cx="250" cy="250" r="32" fill="#5DBF7F"/>
+   
+      </svg>
+      
+    </Anime>
   )
 }
 
