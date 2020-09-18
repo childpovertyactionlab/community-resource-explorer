@@ -33,62 +33,60 @@ const Viz02 = ({ ...props }) => {
       loop={false}
       duration={600}
       direction="alternate"
-      delay={(el, index) => index * 240}
+      delay={(el, index) => {
+        console.log(el)
+        return index * 240
+      }}
       translateX="130px"
       scale={[0.75, 0.9]}
+      svg={true}
     >
-      <div className="blue" />
-      <div className="green" />
-      <div className="red" />
+      <circle cx="30" cy="30" r="15" fill="blue" className="blue" />
+      <circle cx="30" cy="60" r="15" fill="green" className="green" />
+      <circle cx="30" cy="90" r="15" fill="red" className="red" />
     </Anime>
   )
 }
 
 const Viz03 = ({ ...props }) => {
   return (
-    <svg width="500" height="500">
-      <rect
-        width="500"
-        height="500"
-        style={{
-          fill: "yellow",
-          strokeWidth: 10,
-          stroke: "black",
-        }}
-      />
-    </svg>
+    <rect
+      width="500"
+      height="500"
+      style={{
+        fill: "yellow",
+        strokeWidth: 10,
+        stroke: "black",
+      }}
+    />
   )
 }
 
 const Viz04 = ({ ...props }) => {
   return (
-    <svg width="500" height="500">
-      <rect
-        width="500"
-        height="500"
-        style={{
-          fill: "green",
-          strokeWidth: 10,
-          stroke: "black",
-        }}
-      />
-    </svg>
+    <rect
+      width="500"
+      height="500"
+      style={{
+        fill: "green",
+        strokeWidth: 10,
+        stroke: "black",
+      }}
+    />
   )
 }
 
 const Viz05 = ({ ...props }) => {
   return (
-    <svg width="500" height="500">
-      <rect
-        width="500"
-        height="500"
-        style={{
-          fill: "purple",
-          strokeWidth: 10,
-          stroke: "black",
-        }}
-      />
-    </svg>
+    <rect
+      width="500"
+      height="500"
+      style={{
+        fill: "purple",
+        strokeWidth: 10,
+        stroke: "black",
+      }}
+    />
   )
 }
 
@@ -185,7 +183,9 @@ const AnimatedScroll = ({ ...props }) => {
               key={`text_${el.id}`}
               id={`viz_${el.id}`}
             >
-              {getSVG()}
+              <svg width="500" height="500">
+                {getSVG()}
+              </svg>
             </div>
           )
         })}
