@@ -57,21 +57,9 @@ const Viz03 = ({ ...props }) => {
       scale={[0.75, 0.9]}
     >
       <svg width="500" height="500">
-    
           <circle id="King" cx="200" cy="200" r="32" fill="#86A0D2"/>
-         
-   
-      </svg>
-
-      <svg width="500" height="500">
-     
           <circle id="Deep green 1" cx="300" cy="300" r="32" fill="#5DBF7F"/>
-   
-      </svg>
-      <svg width="500" height="500">
-     
           <circle id="Deep green 2" cx="250" cy="250" r="32" fill="#5DBF7F"/>
-   
       </svg>
       
     </Anime>
