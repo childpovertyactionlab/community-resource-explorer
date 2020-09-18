@@ -3,7 +3,7 @@ import React from "react"
 import { Row, Col } from "react-bootstrap"
 import Menu from "./menu"
 
-const Hero = ({ children, activePageId, imgSrc, wide = false }) => {
+const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent }) => {
   const getHero = () => {
     if (wide) {
       return (
@@ -25,6 +25,9 @@ const Hero = ({ children, activePageId, imgSrc, wide = false }) => {
 
               <Menu activePageId={activePageId} />
             </Col>
+          </Row>
+          <Row className="inserted-section">
+            {insertedContent}
           </Row>
 
           <Row>

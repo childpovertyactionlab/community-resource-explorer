@@ -33,6 +33,50 @@ const numberedPoints = [
 const about = ({ location }) => {
   const { keywords, image, description } = pages.ABOUT.meta
   const { name } = pages.ABOUT
+
+  const insertedContent = (
+    <Col
+      className="explorer-why p-0"
+      xs={{ offset: 0, span: 12 }}
+      md={{ offset: 0, span: 10 }}
+      xl={{ offset: 0, span: 7 }}
+    >
+      <div className="jumper-wrapper">
+        <img alt="child jumping" src={jumpImg} />
+      </div>
+
+      <div className="content">
+        <p className="title">Why we built the explorer</p>
+        <div className="text-blocks">
+          <p>
+            CPAL built the Community Resource Explorer to ensure that
+            all Dallas neighborhoods are places of great opportunity for
+            children and their families. Dallas neighborhoods are
+            unique, each with their own stories to tell, people to
+            celebrate, and places to love. Our neighborhoods are a
+            tremendous asset to our city. However, some neighborhoods
+            are well-appointed with resources, like grocery stores and
+            doctor’s offices and park space, but many others are not.
+          </p>
+          <p>
+            The CRE is a diagnostic tool that illustrates how resources
+            are allocated across five categories and 30+ indicators in
+            neighborhoods around Dallas ISD schools. The intent of the
+            tool is to help frontline institutions act on relevant,
+            specific data so that investment decisions and resource
+            allocation can have the greatest impact. Our hope is that
+            the CRE can help right the wrongs of the past by bringing
+            new programs and services, economic development
+            opportunities, and public amenities to communities that have
+            been under-resourced for far too long.
+          </p>
+        </div>
+
+        <CustomLink>Go to the explorer</CustomLink>
+      </div>
+    </Col>
+  )
+  
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
       <SEO
@@ -43,7 +87,7 @@ const about = ({ location }) => {
         description={description}
       />
 
-      <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg}>
+      <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg} insertedContent={insertedContent}>
         <div className="page-title-section">
           <div className="title">Our Mission</div>
           <div className="subtitle">
@@ -94,7 +138,7 @@ const about = ({ location }) => {
           </p>
         </Col>
 
-        <Col className="explorer-why-wrapper" xs={12}>
+        {/* <Col className="explorer-why-wrapper" xs={12}>
           <div className="jumper-wrapper-xl">
             <img alt="child jumping" src={jumpImg} />
 
@@ -114,49 +158,6 @@ const about = ({ location }) => {
               </div>
             </div>
           </div>
-
-          <Row>
-            <Col
-              className="explorer-why p-0"
-              xs={{ offset: 0, span: 12 }}
-              md={{ offset: 0, span: 10 }}
-              xl={{ offset: 0, span: 7 }}
-            >
-              <div className="jumper-wrapper-md-down">
-                <img alt="child jumping" src={jumpImg} />
-              </div>
-
-              <div className="content">
-                <p className="title">Why we built the explorer</p>
-                <div className="text-blocks">
-                  <p>
-                    CPAL built the Community Resource Explorer to ensure that
-                    all Dallas neighborhoods are places of great opportunity for
-                    children and their families. Dallas neighborhoods are
-                    unique, each with their own stories to tell, people to
-                    celebrate, and places to love. Our neighborhoods are a
-                    tremendous asset to our city. However, some neighborhoods
-                    are well-appointed with resources, like grocery stores and
-                    doctor’s offices and park space, but many others are not.
-                  </p>
-                  <p>
-                    The CRE is a diagnostic tool that illustrates how resources
-                    are allocated across five categories and 30+ indicators in
-                    neighborhoods around Dallas ISD schools. The intent of the
-                    tool is to help frontline institutions act on relevant,
-                    specific data so that investment decisions and resource
-                    allocation can have the greatest impact. Our hope is that
-                    the CRE can help right the wrongs of the past by bringing
-                    new programs and services, economic development
-                    opportunities, and public amenities to communities that have
-                    been under-resourced for far too long.
-                  </p>
-                </div>
-
-                <CustomLink>Go to the explorer</CustomLink>
-              </div>
-            </Col>
-          </Row>
         </Col>
 
         <Col className="funder-wrapper md-down" xs={12}>
@@ -173,7 +174,7 @@ const about = ({ location }) => {
               Resource Explorer
             </p>
           </div>
-        </Col>
+        </Col> */}
       </Row>
     </Layout>
   )
