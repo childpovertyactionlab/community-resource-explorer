@@ -34,45 +34,67 @@ const Viz02 = ({ ...props }) => {
       duration={600}
       direction="alternate"
       delay={(el, index) => {
-        console.log(el)
+        // console.log(el)
         return index * 240
       }}
       translateX="130px"
       scale={[0.75, 0.9]}
       svg={true}
     >
-      <circle cx="30" cy="30" r="15" fill="blue" className="blue" />
-      <circle cx="30" cy="60" r="15" fill="green" className="green" />
-      <circle cx="30" cy="90" r="15" fill="red" className="red" />
+      <circle cx="30" cy="30" r="15" fill="blue" className="01" />
+      <circle cx="30" cy="60" r="15" fill="green" className="02" />
+      <circle cx="30" cy="90" r="15" fill="red" className="03" />
     </Anime>
   )
 }
 
 const Viz03 = ({ ...props }) => {
   return (
-    <rect
-      width="500"
-      height="500"
-      style={{
-        fill: "yellow",
-        strokeWidth: 10,
-        stroke: "black",
+    <Anime
+      easing="easeInOutElastic"
+      autoplay={true}
+      loop={false}
+      duration={1600}
+      direction="alternate"
+      delay={(el, index) => {
+        // console.log(el)
+        return index * 240
       }}
-    />
+      opacity={[0, 1]}
+      svg={true}
+    >
+      <circle cx="30" cy="30" r="15" fill="blue" className="01" />
+      <circle cx="30" cy="60" r="15" fill="green" className="02" />
+      <circle cx="30" cy="90" r="15" fill="red" className="03" />
+    </Anime>
   )
 }
 
 const Viz04 = ({ ...props }) => {
+  // Example with selective delay.
   return (
-    <rect
-      width="500"
-      height="500"
-      style={{
-        fill: "green",
-        strokeWidth: 10,
-        stroke: "black",
+    <Anime
+      easing="easeInOutElastic"
+      autoplay={true}
+      loop={false}
+      duration={1600}
+      direction="alternate"
+      delay={(el, index) => {
+        console.log(el)
+        if (el.childNodes[0].classList.contains("03")) {
+          console.log("has the class")
+          return 2000
+        } else {
+          return index * 240
+        }
       }}
-    />
+      opacity={[0, 1]}
+      svg={true}
+    >
+      <circle cx="30" cy="30" r="15" fill="blue" className="01" />
+      <circle cx="30" cy="60" r="15" fill="green" className="02" />
+      <circle cx="30" cy="90" r="15" fill="red" className="03" />
+    </Anime>
   )
 }
 
@@ -133,7 +155,7 @@ const AnimatedScroll = ({ ...props }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0)
 
   const updateVisible = () => {
-    console.log("updateVisible()")
+    // console.log("updateVisible()")
     const el = document.querySelector(".animated-scroll-text")
     // console.log(el.scrollTop)
     const item = Math.round(el.scrollTop / itemHeight) // Math.modulus(el.scrollTip / itemHeight)
