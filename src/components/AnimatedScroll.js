@@ -37,7 +37,7 @@ const Viz02 = ({ ...props }) => {
         // console.log(el)
         return index * 240
       }}
-      translateX="130px"
+      translateX={[0, 130]}
       scale={[0.75, 0.9]}
       svg={true}
     >
@@ -88,7 +88,15 @@ const Viz04 = ({ ...props }) => {
           return index * 240
         }
       }}
-      opacity={[0, 1]}
+      opacity={(el, index) => {
+        if (el.childNodes[0].classList.contains("03")) {
+          console.log("has the class")
+          return [0, 0.2]
+        } else {
+          return [0, 1]
+        }
+      }}
+      translateX={[0, 130]}
       svg={true}
     >
       <circle cx="30" cy="30" r="15" fill="blue" className="01" />
