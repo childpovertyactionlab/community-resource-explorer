@@ -6,17 +6,23 @@ import Anime from "react-anime"
 // Define each of your svgs here.
 const Viz01 = ({ ...props }) => {
   return (
-  
-      <rect
-        width="500"
-        height="500"
-        style={{
-          fill: "red",
-          strokeWidth: 10,
-          stroke: "black",
-        }}
-      />
-
+    <Anime
+      easing="easeOutElastic"
+      autoplay={true}
+      loop={false}
+      duration={600}
+      direction="alternate"
+      delay={(el, index) => {
+        // console.log(el)
+        return index * 240
+      }}
+      opacity={[0, 1]}
+      //scale={[0.75, 0.9]}
+      svg={true}
+    >
+      <circle id="Radius" cx="424.783" cy="277.023" r="124.086" fill="#465EB3" fill-opacity="0.1"/>
+      <circle id="King" cx="424.783" cy="277.023" r="8.70779" fill="#86A0D2"/>
+    </Anime>
   )
 }
 
@@ -37,22 +43,50 @@ const Viz02 = ({ ...props }) => {
         // console.log(el)
         return index * 240
       }}
-      opacity={[0, 1]}
+      opacity={(el, index) => {
+        console.log(el)
+        if (el.childNodes[0].classList.contains("02")) {
+          console.log("has the class")
+          return [0,1]
+        } else {
+          return 1
+        }
+      }}
+      delay={(el, index) => {
+        console.log(el)
+        if (el.childNodes[0].classList.contains("02")) {
+          console.log("has the class")
+          return index * 240
+        } else {
+          return 1
+        }
+      }}
+     /* duration={(el, index) => {
+        console.log(el)
+        if (el.childNodes[0].classList.contains("02")) {
+          console.log("has the duration class")
+          return 600
+        } else {
+          return 0
+        }
+      }} */
+        
+    // opacity={[0, 1]}
       //scale={[0.75, 0.9]}
       svg={true}
     >
       <circle id="Radius" cx="424.783" cy="277.023" r="124.086" fill="#465EB3" fill-opacity="0.1"/>
       <circle id="King" cx="424.783" cy="277.023" r="8.70779" fill="#86A0D2"/>
-      <circle id="Deep green 1" cx="604.926" cy="247.09" r="8.70779" fill="#5DBF7F"/>
-      <circle id="Deep green 2" cx="508.052" cy="264.506" r="8.70779" fill="#5DBF7F"/>
-      <circle id="Green 1" cx="360.563" cy="371.448" r="8.70779" fill="#8DD6B6"/>
-      <circle id="Green 2" cx="277.295" cy="338.522" r="8.70779" fill="#8DD6B6"/>
-      <circle id="DK Blue 1" cx="466.145" cy="290.901" r="8.70779" fill="#4E59B1"/>
-      <circle id="LT green 1" cx="490.636" cy="161.917" r="10.2078" fill="#8DD6B6" stroke="white" stroke-width="3"/>
-      <circle id="LT Green 2" cx="400.837" cy="99.8741" r="10.2078" fill="#8DD6B6" stroke="white" stroke-width="3"/>
-      <circle id="Cyan 2" cx="424.783" cy="233.484" r="8.70779" fill="#A4DCE5"/>
-      <circle id="Cyan 1" cx="457.437" cy="233.484" r="8.70779" fill="#A4DCE5"/>
-      <circle id="DK Blue 2" cx="508.052" cy="299.609" r="8.70779" fill="#4E59B1"/>
+      <circle class="dots02 duration" id="Deep green 1" cx="604.926" cy="247.09" r="8.70779" fill="#5DBF7F"/>
+      <circle class="dots02" id="Deep green 2" cx="508.052" cy="264.506" r="8.70779" fill="#5DBF7F"/>
+      <circle class="dots02" id="Green 1" cx="360.563" cy="371.448" r="8.70779" fill="#8DD6B6"/>
+      <circle class="dots02" id="Green 2" cx="277.295" cy="338.522" r="8.70779" fill="#8DD6B6"/>
+      <circle class="dots02" id="DK Blue 1" cx="466.145" cy="290.901" r="8.70779" fill="#4E59B1"/>
+      <circle class="dots02" id="LT green 1" cx="490.636" cy="161.917" r="10.2078" fill="#8DD6B6" stroke="white" stroke-width="3"/>
+      <circle class="dots02" id="LT Green 2" cx="400.837" cy="99.8741" r="10.2078" fill="#8DD6B6" stroke="white" stroke-width="3"/>
+      <circle class="dots02" id="Cyan 2" cx="424.783" cy="233.484" r="8.70779" fill="#A4DCE5"/>
+      <circle class="dots02" id="Cyan 1" cx="457.437" cy="233.484" r="8.70779" fill="#A4DCE5"/>
+      <circle class="dots02" id="DK Blue 2" cx="508.052" cy="299.609" r="8.70779" fill="#4E59B1"/>
     </Anime>
   )
 }
