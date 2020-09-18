@@ -6,68 +6,12 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
 import { pages } from "../consts"
-import goalie from "../images/goalie.png"
 import escapes from "../images/fire-escapes.png"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
-import couching from "../images/couching.png"
-import running from "../images/running.png"
-import swinging from "../images/swinging.png"
 import portrait from "../images/child-portrait-3:4.png"
-import CustomCarousel from "../components/customCarousel"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
-
-const caroItems = [
-  {
-    src: couching,
-    alt: "s1",
-    indexName: "Insights from the Education Index",
-    character1: "",
-    character2: "%",
-    stat1num: 42,
-    stat2num: 3,
-    stat1text: "of residents with a bachelor's degree in one school community",
-    stat2text:
-      "of residents with a bachelor's degree in another school community, 13 miles away",
-  },
-  {
-    src: running,
-    alt: "s2",
-    indexName: "Insights from the Health Index",
-    character1: "",
-    character2: "",
-    stat1num: 82,
-    stat2num: 69,
-    stat1text: "average life expectancy in one school community",
-    stat2text:
-      "average life expectancy in another school community, 9 miles away",
-  },
-  {
-    src: swinging,
-    alt: "s4",
-    indexName: "Insights from the Community Index",
-    character1: "",
-    character2: "",
-    stat1num: 54,
-    stat2num: 13,
-    stat1text:
-      "campus communities with more than one square mile of nearby park space",
-    stat2text:
-      "campus communities with less than 1/10th square mile of nearby park space",
-  },
-  {
-    src: goalie,
-    alt: "s5",
-    indexName: "Insights from the Economic Index",
-    character1: "$",
-    character2: "",
-    stat1num: "81,300",
-    stat2num: "17,202",
-    stat1text: "median household income in the most affluent campus community",
-    stat2text: "median household income in the least affluent campus community",
-  },
-]
 
 const q1 = {
   superhead: `Voices from the Community`,
@@ -135,10 +79,6 @@ const home = ({ location }) => {
           <div className="superheading">{q1.superhead}</div>
           <div className="text">“{q1.text}”</div>
           <div className="attribution">{q1.attribution}</div>
-        </Col>
-
-        <Col className="carousel-section p-0" xs={{ offset: 0, span: 12 }}>
-          <CustomCarousel items={caroItems} />
         </Col>
 
         <Col
