@@ -14,14 +14,14 @@ const Viz01 = ({ ...props }) => {
       loop={false}
       duration={2400}
       direction="alternate"
-      transformOrigin={[120, 424]}
+      transformOrigin={[424, 277]}
       delay={(el, index) => {
         // console.log(el)
         return index * 240
       }}
       opacity={[0, 1]}
       svg={true}
-      scale={[0.4, 1]}>
+      scale={[0.8, 1]}>
       <circle id="Radius" cx="424.783" cy="277.023" r="124.086" fill="#465EB3" fill-opacity="0.1"/>
       <circle id="King" cx="424.783" cy="277.023" r="8.70779" fill="#86A0D2"/>
     </Anime>
