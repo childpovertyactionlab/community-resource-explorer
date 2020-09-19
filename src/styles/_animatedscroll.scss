@@ -49,6 +49,11 @@ $viz-height: 500px; // Adjust viz height here.
       &.active {
         // opacity: 1;
         display: block;
+        .blue {
+          background-color: blue;
+          width: 40px;
+          height: 40px;
+        }
         svg g {
           width: 30px;
           height: 30px;
