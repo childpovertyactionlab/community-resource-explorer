@@ -142,7 +142,24 @@ const ScrollFeatureSVG = ({ ...props }) => {
             </Anime>
           )}
           {props.index === 3 && (
-            <g className="fourth">
+            <Anime
+              id="Fourth"
+              className="fourth"
+              easing="easeOutElastic"
+              autoplay={true}
+              loop={false}
+              duration={2400}
+              delay={(el, index) => {
+                // console.log(el)
+                return index * 2
+              }}
+              opacity={() => {
+                // If we're on the third slide, transition opacity from 0 to 1.
+                // Else no transition.
+                return props.index === 3 ? [0, 1] : [1, 1]
+              }}
+              svg={true}
+            >
               <circle
                 id="Ellipse 99"
                 cx="369.271"
@@ -751,7 +768,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 stroke="white"
                 stroke-width="3"
               />
-            </g>
+            </Anime>
           )}
         </g>
         {props.index === 0 && (
