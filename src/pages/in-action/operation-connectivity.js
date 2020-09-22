@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Hero from "../../components/hero"
 import { pages } from "../../consts"
-import opHero from "../../images/student-computer2.jpg"
+import opHero from "../../images/remote-learning.jpg"
 
 // TODOcms collapse into isd template
 
