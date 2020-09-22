@@ -274,7 +274,10 @@
         width: $jumper-width-md;
         height: $jumper-width-md * $jumper-wide-aspect-ratio;
       }
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(lg) {
+        width: $jumper-width-xl;
+      }
+      @include media-breakpoint-up(lg) {
         // use .jumper-wrapper-xl
         // display: none;
         // background: $why-background;
@@ -336,7 +339,9 @@
       font-weight: $font-weight-lighter;
       font-size: 18px;
       line-height: 27px;
-
+      @include media-breakpoint-only(lg) {
+        padding-right: 4.8rem;
+      }
       p:not(:last-of-type) {
         padding-bottom: 4 * $spacer;
       }

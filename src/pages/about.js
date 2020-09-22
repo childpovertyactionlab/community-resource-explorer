@@ -39,7 +39,7 @@ const about = ({ location }) => {
       className="explorer-why p-0"
       xs={{ offset: 0, span: 12 }}
       md={{ offset: 0, span: 10 }}
-      xl={{ offset: 0, span: 7 }}
+      lg={{ offset: 0, span: 7 }}
     >
       <div className="jumper-wrapper">
         <div className="image" alt="child jumping" style={{ backgroundImage: `url(${jumpImg})` }} />
