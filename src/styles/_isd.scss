@@ -69,8 +69,12 @@
       margin-bottom: 11 * $spacer;
     }
 
-    img {
+    .carousel-inner, .carousel-item, .carousel-image {
       width: 100%;
+      height: 100%;
+    }
+    .carousel-image {
+      background-size: cover;
     }
 
     .caro-text-panel {

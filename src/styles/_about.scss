@@ -3,9 +3,14 @@
   $why-background: $green-white;
   $hero-color: $bridal-heath;
   $number-gray: #4B4B4B;
+  
   $jumper-width-md: 6 * $column;
+  $jumper-wide-aspect-ratio: .682;
 
-  p { // *?
+  $jumper-width-xl: 5 * $column;
+  $jumper-narrow-aspect-ratio: .8;
+
+  p {
     color: $turtle-green;
   }
 
@@ -252,15 +257,22 @@
 
     position: unset; // so .jumper-wrapper can position around .inserted-section
     .jumper-wrapper { // this is now the sole .jumper-wrapper
-      img {
+      .image {
         width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: right;
       }
       
+      width: 100vw;
+      height: 100vw * $jumper-wide-aspect-ratio;
       margin-bottom: 8 * $spacer;
       @include media-breakpoint-up(md) {
         margin-bottom: 9 * $spacer;
         margin-left: $column;
         width: $jumper-width-md;
+        height: $jumper-width-md * $jumper-wide-aspect-ratio;
       }
       @include media-breakpoint-up(xl) {
         // use .jumper-wrapper-xl
@@ -268,6 +280,8 @@
         // background: $why-background;
         position: absolute;
         right: $column;
+        width: $jumper-width-xl;
+        height: $jumper-width-xl * $jumper-narrow-aspect-ratio;
       }
     }
     // ______________

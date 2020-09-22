@@ -42,7 +42,7 @@ const about = ({ location }) => {
       xl={{ offset: 0, span: 7 }}
     >
       <div className="jumper-wrapper">
-        <img alt="child jumping" src={jumpImg} />
+        <div className="image" alt="child jumping" style={{ backgroundImage: `url(${jumpImg})` }} />
       </div>
 
       <div className="content">
