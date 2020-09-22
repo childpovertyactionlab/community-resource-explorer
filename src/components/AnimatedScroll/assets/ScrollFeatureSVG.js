@@ -909,7 +909,18 @@ const ScrollFeatureSVG = ({ ...props }) => {
           </g>
         )}
         {props.index === 1 && (
-          <g id="tooltip" className="second">
+          <Anime
+            id="tooltip"
+            className="second"
+            easing="easeOutElastic"
+            autoplay={true}
+            loop={false}
+            duration={2400}
+            opacity={() => {
+              return props.index === 1 ? [0, 1] : [1, 1]
+            }}
+            svg={true}
+          >
             <g id="tooltip_2">
               <g id="background" filter="url(#filter0_d)">
                 <rect
@@ -1278,7 +1289,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               fill="white"
               stroke-width="0.5"
             />
-          </g>
+          </Anime>
         )}
       </g>
       <defs>
