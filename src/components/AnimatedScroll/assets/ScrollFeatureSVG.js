@@ -5,9 +5,10 @@ const ScrollFeatureSVG = () => {
     <>
       <g id="scroll-feature">
         <g id="Dots">
-          <g id="First">
+          <g id="First" className="first">
             <circle
               id="Radius"
+              className="first"
               cx="424.585"
               cy="276.585"
               r="132.585"
@@ -21,6 +22,8 @@ const ScrollFeatureSVG = () => {
               r="8.70779"
               fill="#86A0D2"
             />
+          </g>
+          <g className="third">  
             <circle
               id="Deep green 1"
               cx="604.926"
@@ -96,7 +99,7 @@ const ScrollFeatureSVG = () => {
               fill="#4E59B1"
             />
           </g>
-          <g id="Second">
+          <g className="fourth">
             <circle
               id="Ellipse 99"
               cx="369.271"
@@ -707,7 +710,7 @@ const ScrollFeatureSVG = () => {
             />
           </g>
         </g>
-        <g id="rotary-text">
+        <g id="rotary-text" className="first">
           <path
             id="K"
             d="M307.93 293.011L297.474 294.094L297.344 292.837L302.437 292.309L303.573 292.255L296.83 287.871L296.671 286.343L301.438 289.501L307.111 285.101L307.266 286.597L302.371 290.273L305.069 292.101L306.002 291.94L307.8 291.753L307.93 293.011Z"
@@ -859,7 +862,7 @@ const ScrollFeatureSVG = () => {
             fill="#4860B1"
           />
         </g>
-        <g id="tooltip">
+        <g id="tooltip" className="second">
           <g id="tooltip_2">
             <g id="background" filter="url(#filter0_d)">
               <rect
@@ -988,6 +991,7 @@ const ScrollFeatureSVG = () => {
             y="416.25"
             width="66.5"
             height="9.5"
+            fill="white"
             stroke="#CCCCCC"
             stroke-width="0.5"
           />
@@ -1104,6 +1108,7 @@ const ScrollFeatureSVG = () => {
             width="33.5"
             height="9.5"
             stroke="#CCCCCC"
+            fill="white"
             stroke-width="0.5"
           />
           <rect
@@ -1133,6 +1138,7 @@ const ScrollFeatureSVG = () => {
             width="33.5"
             height="9.5"
             stroke="#CCCCCC"
+            fill="white"
             stroke-width="0.5"
           />
           <rect
@@ -1222,6 +1228,7 @@ const ScrollFeatureSVG = () => {
             width="33.5"
             height="9.5"
             stroke="#CCCCCC"
+            fill="white"
             stroke-width="0.5"
           />
         </g>
