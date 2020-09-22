@@ -41,13 +41,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
                 </Col>
               </Row>
 
-              <Row>
-                <Col xs={12} className="p-0">
-                  <div className="image-section">
-                    <img alt="todo draw from props" src={imgSrc} />
-                  </div>
-                </Col>
-              </Row>
+              
             </Col>
           </Row>
         </Col>

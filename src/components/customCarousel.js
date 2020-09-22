@@ -51,7 +51,7 @@ const CustomCarousel = ({ items }) => {
       >
         {items.map(({ src, alt }, i) => (
           <Carousel.Item key={alt}>
-            <img src={src} alt={alt} />
+            <div className="carousel-image" style={{ backgroundImage: `url(${src})` }} alt={alt} />
           </Carousel.Item>
         ))}
       </Carousel>

@@ -3,29 +3,47 @@
   $why-background: $green-white;
   $hero-color: $bridal-heath;
   $number-gray: #4B4B4B;
+  
   $jumper-width-md: 6 * $column;
+  $jumper-wide-aspect-ratio: .682;
 
-  p { // *?
+  $jumper-width-xl: 5 * $column;
+  $jumper-narrow-aspect-ratio: .8;
+
+  p {
     color: $turtle-green;
   }
 
   .hero-wide {
-    .color-section {
+    .inserted-section {
       background: $hero-color;
+      position: relative; // for .jumper-wrapper to position around
 
       @include media-breakpoint-up(md) {
-        // for md plus, add white bg behind lower part of img
-        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
-        $cutoff: (1/2) * $hero-wide-img-width-md * $white-bg-proportion; // 1/2 ~ image aspect ratio
-        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+        padding-top: 7 * $spacer;
       }
-      
       @include media-breakpoint-up(xl) {
-        // same as above, different img width (so different $cutoff)
-        $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
-        $cutoff: (1/2) * $hero-wide-img-width-xl * $white-bg-proportion; // 1/2 ~ image aspect ratio
-        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+        padding-top: 10 * $spacer;
       }
+    }
+
+    .color-section {
+      @include media-breakpoint-up(xl) {
+        padding-top: 9 * $spacer;
+      }
+      // @include media-breakpoint-up(md) {
+      //   // for md plus, add white bg behind lower part of img
+      //   $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+      //   $cutoff: (1/2) * $hero-wide-img-width-md * $white-bg-proportion; // 1/2 ~ image aspect ratio
+      //   background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      // }
+      
+      // @include media-breakpoint-up(xl) {
+      //   // same as above, different img width (so different $cutoff)
+      //   $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
+      //   $cutoff: (1/2) * $hero-wide-img-width-xl * $white-bg-proportion; // 1/2 ~ image aspect ratio
+      //   background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+      // }
     }
     .menu-section {
       @include media-breakpoint-up(md) {
@@ -152,113 +170,129 @@
     }
   }
 
-  .jumper-wrapper-xl {
-    display: none;
-    img {
-      width: 100%;
-    }
+  // .jumper-wrapper-xl {
+  //   display: none;
+  //   img {
+  //     width: 100%;
+  //   }
 
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    top: 12 * $spacer;
-    width: 50%;
+  //   position: absolute;
+  //   z-index: 1;
+  //   right: 0;
+  //   top: 12 * $spacer;
+  //   width: 50%;
 
-    @include media-breakpoint-up(xl) {
-      display: block;
-    }
-  }
+  //   @include media-breakpoint-up(xl) {
+  //     display: block;
+  //   }
+  // }
 
-  .funder-wrapper {
-    &.xl {
-      position: relative;
-      display: none;
-      @include media-breakpoint-up(xl) {
-        display: block;
-      }
-    }
-    &.md-down {
-      @include media-breakpoint-up(xl) {
-        display: none;
-      }
-    }
+  // .funder-wrapper {
+  //   &.xl {
+  //     position: relative;
+  //     display: none;
+  //     @include media-breakpoint-up(xl) {
+  //       display: block;
+  //     }
+  //   }
+  //   &.md-down {
+  //     @include media-breakpoint-up(xl) {
+  //       display: none;
+  //     }
+  //   }
 
-    .funder {
-      &.xl {
-        position: absolute;
-        top: 21 * $spacer;
-        right: $column;
-      }
+  //   .funder {
+  //     &.xl {
+  //       position: absolute;
+  //       top: 21 * $spacer;
+  //       right: $column;
+  //     }
 
-      display: flex;
-      flex-direction: column;
+  //     display: flex;
+  //     flex-direction: column;
 
-      a {
-        width: 214px;
-        margin: auto;
-      }
+  //     a {
+  //       width: 214px;
+  //       margin: auto;
+  //     }
 
-      img {
-        width: 214px;
-        margin: auto;
-      }
-      .text {
-        margin: auto;
-        text-align: center;
+  //     img {
+  //       width: 214px;
+  //       margin: auto;
+  //     }
+  //     .text {
+  //       margin: auto;
+  //       text-align: center;
 
-        font-size: 16px;
-        line-height: 25px;
-        width: 10 * $column;
-        margin-top: 3 * $spacer;
-        margin-bottom: 7 * $spacer;
+  //       font-size: 16px;
+  //       line-height: 25px;
+  //       width: 10 * $column;
+  //       margin-top: 3 * $spacer;
+  //       margin-bottom: 7 * $spacer;
         
-        @include media-breakpoint-up(md) {
-          width: 6 * $column;
-          margin-top: 4 * $spacer;
-        }
+  //       @include media-breakpoint-up(md) {
+  //         width: 6 * $column;
+  //         margin-top: 4 * $spacer;
+  //       }
 
-        @include media-breakpoint-up(xl) {
-          font-size: 18px;
-          line-height: 27px;
-          width: 3 * $column;
-        }
-      }
-    }
-  }
+  //       @include media-breakpoint-up(xl) {
+  //         font-size: 18px;
+  //         line-height: 27px;
+  //         width: 3 * $column;
+  //       }
+  //     }
+  //   }
+  // }
 
   .explorer-why {
-    background: $why-background;
+    // background: $why-background;
 
     // _jumping boy__
-    @include media-breakpoint-down(md) {
+    // @include media-breakpoint-down(md) {
       // for md only, add white bg behind upper part of img
-      $white-bg-proportion: .6; // <- tune 0-1 to control how far down img background color begins
-      $cutoff: (2/3) * $jumper-width-md * $white-bg-proportion; // 2/3 ~ image aspect ratio
-      background: linear-gradient(transparent 0, transparent $cutoff, $why-background $cutoff);
-    }
-    .jumper-wrapper-md-down {
-      img {
+      // $white-bg-proportion: .6; // <- tune 0-1 to control how far down img background color begins
+      // $cutoff: (2/3) * $jumper-width-md * $white-bg-proportion; // 2/3 ~ image aspect ratio
+      // background: linear-gradient(transparent 0, transparent $cutoff, $why-background $cutoff);
+    // }
+
+    position: unset; // so .jumper-wrapper can position around .inserted-section
+    .jumper-wrapper { // this is now the sole .jumper-wrapper
+      .image {
         width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: right;
       }
       
+      width: 100vw;
+      height: 100vw * $jumper-wide-aspect-ratio;
       margin-bottom: 8 * $spacer;
       @include media-breakpoint-up(md) {
         margin-bottom: 9 * $spacer;
         margin-left: $column;
         width: $jumper-width-md;
+        height: $jumper-width-md * $jumper-wide-aspect-ratio;
       }
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(lg) {
+        width: $jumper-width-xl;
+      }
+      @include media-breakpoint-up(lg) {
         // use .jumper-wrapper-xl
-        display: none;
-        background: $why-background;
+        // display: none;
+        // background: $why-background;
+        position: absolute;
+        right: $column;
+        width: $jumper-width-xl;
+        height: $jumper-width-xl * $jumper-narrow-aspect-ratio;
       }
     }
     // ______________
 
-    margin-bottom: 8 * $spacer;
-    @include media-breakpoint-up(md) {
-      margin-bottom: 7 * $spacer;
-    }
+    // margin-bottom: 8 * $spacer;
+    // @include media-breakpoint-up(md) {
+    //   margin-bottom: 7 * $spacer;
+    // }
     
     .content {
       margin-left: $column;
@@ -290,7 +324,6 @@
         line-height: 65px;
 
         max-width: 350px; // break into two lines
-        padding-top: 14 * $spacer; // other breakpoints have margin-bottom on the image
       }
 
       margin-bottom: 6 * $spacer;
@@ -306,7 +339,9 @@
       font-weight: $font-weight-lighter;
       font-size: 18px;
       line-height: 27px;
-
+      @include media-breakpoint-only(lg) {
+        padding-right: 4.8rem;
+      }
       p:not(:last-of-type) {
         padding-bottom: 4 * $spacer;
       }

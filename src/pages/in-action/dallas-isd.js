@@ -3,9 +3,65 @@ import React from "react"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Hero from "../../components/hero"
+import Hero from "../../components/hero-no-img"
+import CustomCarousel from "../../components/customCarousel"
 import { pages } from "../../consts"
 import isdHero from "../../images/isd-hero.png"
+import goalie from "../../images/goalie.png"
+import couching from "../../images/couching.png"
+import running from "../../images/running.png"
+import swinging from "../../images/swinging.png"
+
+const caroItems = [
+  {
+    src: couching,
+    alt: "s1",
+    indexName: "Insights from the Education Index",
+    character1: "",
+    character2: "%",
+    stat1num: 42,
+    stat2num: 3,
+    stat1text: "of residents with a bachelor's degree in one school community",
+    stat2text:
+      "of residents with a bachelor's degree in another school community, 13 miles away",
+  },
+  {
+    src: running,
+    alt: "s2",
+    indexName: "Insights from the Health Index",
+    character1: "",
+    character2: "",
+    stat1num: 82,
+    stat2num: 69,
+    stat1text: "average life expectancy in one school community",
+    stat2text:
+      "average life expectancy in another school community, 9 miles away",
+  },
+  {
+    src: swinging,
+    alt: "s4",
+    indexName: "Insights from the Community Index",
+    character1: "",
+    character2: "",
+    stat1num: 54,
+    stat2num: 13,
+    stat1text:
+      "campus communities with more than one square mile of nearby park space",
+    stat2text:
+      "campus communities with less than 1/10th square mile of nearby park space",
+  },
+  {
+    src: goalie,
+    alt: "s5",
+    indexName: "Insights from the Economic Index",
+    character1: "$",
+    character2: "",
+    stat1num: "81,300",
+    stat2num: "17,202",
+    stat1text: "median household income in the most affluent campus community",
+    stat2text: "median household income in the least affluent campus community",
+  },
+]
 
 const content = [
   {
@@ -158,6 +214,11 @@ const isd = ({ location }) => {
       </Hero>
 
       <Row id="page">
+
+        <Col className="carousel-section p-0" xs={{ offset: 0, span: 12 }}>
+          <CustomCarousel items={caroItems} />
+        </Col>
+
         {content.map(el => {
           switch (el.type) {
             case 'section':
