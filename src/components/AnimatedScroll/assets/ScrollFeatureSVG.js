@@ -23,7 +23,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
           }}
         >
-          <image href="/images/map-rect.png" x="0" y="0" width="1800" />
+          <image href="/images/home-map-bg.jpg" x="0" y="0" width="1800" />
         </Anime>
         <g id="Dots">
           {props.index < 5 && (
