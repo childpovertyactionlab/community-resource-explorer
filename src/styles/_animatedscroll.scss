@@ -25,6 +25,16 @@ $viz-height: 500px; // Adjust viz height here.
         justify-content: center;
         align-items: center;
         height: $viz-height;
+        font-family: Halyard Text;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.17;
+        letter-spacing: -1px;
+        span {
+          max-width: 75%;
+        }
+
       }
     }
   }

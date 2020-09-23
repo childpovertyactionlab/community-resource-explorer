@@ -23,7 +23,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
           }}
         >
-          <image href="/images/home-map-bg.jpg" x="0" y="0" width="1800" />
+          <image href="/images/home-map-bg.jpg" x="-300" y="-160" width="1232" />
         </Anime>
         <g id="Dots">
           {props.index < 5 && (
@@ -36,10 +36,6 @@ const ScrollFeatureSVG = ({ ...props }) => {
               duration={600}
               direction="alternate"
               transformOrigin={[400, 250]}
-              delay={(el, index) => {
-                // console.log(el)
-                return index * 240
-              }}
               opacity={() => {
                 return props.index === 0 ? [0, 1] : [1, 1]
               }}
