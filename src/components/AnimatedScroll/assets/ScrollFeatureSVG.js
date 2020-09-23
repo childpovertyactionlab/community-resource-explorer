@@ -5,6 +5,29 @@ const ScrollFeatureSVG = ({ ...props }) => {
   return (
     <>
       <g id="scroll-feature">
+        <Anime
+          id="bg_map"
+          className="bg-map"
+          svg={true}
+          easing="easeOutElastic"
+          autoplay={true}
+          loop={false}
+          duration={2400}
+          delay={(el, index) => {
+            // console.log(el)
+            return index * 240
+          }}
+          opacity={() => {
+            // If we're on the first slide, transition opacity from 0 to 1.
+            // Else no transition.
+            return props.index === 0 ? [0, 1] : [1, 1]
+          }}
+          scale={() => {
+            return props.index === 0 ? [0.8, 1.2] : [1.2, 1.2]
+          }}
+        >
+          <image href="/images/map-rect.png" x="0" y="0" width="1800" />
+        </Anime>
         <g id="Dots">
           {props.index < 5 && (
             <Anime
