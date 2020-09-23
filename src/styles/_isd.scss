@@ -23,7 +23,7 @@
       margin-bottom: 10 * $spacer;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 8 * $spacer;
+      margin-top: 0 * $spacer;
       margin-bottom: 15 * $spacer;
     }
   }
