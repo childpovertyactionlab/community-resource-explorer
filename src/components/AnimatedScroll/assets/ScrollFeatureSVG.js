@@ -9,21 +9,18 @@ const ScrollFeatureSVG = ({ ...props }) => {
           id="bg_map"
           className="bg-map"
           svg={true}
-          easing="easeOutElastic"
+          easing="easeInOutSine"
+          transformOrigin={[400, 250]}
           autoplay={true}
           loop={false}
-          duration={2400}
-          delay={(el, index) => {
-            // console.log(el)
-            return index * 240
-          }}
+          duration={600}
           opacity={() => {
             // If we're on the first slide, transition opacity from 0 to 1.
             // Else no transition.
             return props.index === 0 ? [0, 1] : [1, 1]
           }}
           scale={() => {
-            return props.index === 0 ? [0.8, 1.2] : [1.2, 1.2]
+           return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
           }}
         >
           <image href="/images/map-rect.png" x="0" y="0" width="1800" />
@@ -31,14 +28,14 @@ const ScrollFeatureSVG = ({ ...props }) => {
         <g id="Dots">
           {props.index < 5 && (
             <Anime
-              id="First"
+              id="First" // Initial dot --------------------------------/
               className="first"
-              easing="easeOutElastic"
+              easing="easeInOutSine"
               autoplay={true}
               loop={false}
-              duration={2400}
+              duration={600}
               direction="alternate"
-              transformOrigin={[424, 277]}
+              transformOrigin={[400, 250]}
               delay={(el, index) => {
                 // console.log(el)
                 return index * 240
@@ -48,7 +45,8 @@ const ScrollFeatureSVG = ({ ...props }) => {
               }}
               svg={true}
               scale={() => {
-                return props.index === 0 ? [0.8, 1] : [1, 1]
+               // return props.index === 0 ? [0.8, 1] : [1, 1]
+                return props.index === 3 ? [1, 0.9] : [1, 1]
               }}
             >
               <circle
@@ -71,20 +69,22 @@ const ScrollFeatureSVG = ({ ...props }) => {
           )}
           {(props.index === 2 || props.index === 3) && (
             <Anime
-              id="Third"
+              id="Third" // several dots ---------------------------------------
               className="third"
-              easing="easeOutElastic"
+              easing="easeInOutSine"
               autoplay={true}
               loop={false}
-              duration={2400}
-              delay={(el, index) => {
-                // console.log(el)
-                return index * 240
-              }}
+              duration={600}
+              transformOrigin={[400, 250]}
               opacity={() => {
                 // If we're on the third slide, transition opacity from 0 to 1.
                 // Else no transition.
                 return props.index === 2 ? [0, 1] : [1, 1]
+              }}
+              scale={() => {
+                // If we're on the fourth slide, transition scale from 0 to 1.
+                // Else no transition.
+                return props.index === 3 ? [1, 0.9] : [1, 1]
               }}
               svg={true}
             >
@@ -166,12 +166,13 @@ const ScrollFeatureSVG = ({ ...props }) => {
           )}
           {props.index === 3 && (
             <Anime
-              id="Fourth"
+              id="Fourth" // STATE 4, lots of dots ----------------------------------------------------------------
               className="fourth"
-              easing="easeOutElastic"
+              easing="easeInOutSine"
               autoplay={true}
               loop={false}
-              duration={2400}
+              duration={600}
+              transformOrigin={[400, 250]}
               delay={(el, index) => {
                 // console.log(el)
                 return index * 2
@@ -180,6 +181,11 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 // If we're on the third slide, transition opacity from 0 to 1.
                 // Else no transition.
                 return props.index === 3 ? [0, 1] : [1, 1]
+              }}
+              scale={() => {
+                // If we're on the fourth slide, transition scale from 0 to 1.
+                // Else no transition.
+                return props.index === 4 ? [1] : [0.85]
               }}
               svg={true}
             >
@@ -795,6 +801,8 @@ const ScrollFeatureSVG = ({ ...props }) => {
           )}
         </g>
         {props.index < 5 && (
+
+          
           <g id="rotary-text" className="first">
             <path
               id="K"

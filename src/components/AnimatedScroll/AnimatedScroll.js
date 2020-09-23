@@ -87,7 +87,7 @@ const AnimatedScroll = ({ ...props }) => {
               key={`text_${el.id}`}
               id={`viz_${el.id}`}
             >
-              <svg width="800" height="500" viewBox="0 0 800 500">
+              <svg width="800" height="500" viewBox="0 0 760 475">
                 <ScrollFeatureSVG index={activeItemIndex} />
               </svg>
             </div>
