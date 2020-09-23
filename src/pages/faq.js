@@ -137,7 +137,7 @@ class Faq extends React.Component {
         </div>
         <div key="side-menu-mobile" className={mobileClasses}>
           <span
-            tabindex="0"
+            tabIndex="0"
             role="button"
             onClick={this.toggleMenu}
             onKeyDown={this.toggleMenu}
@@ -267,9 +267,15 @@ class Faq extends React.Component {
   }
 }
 
-const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, invertExpansionMap }) => {
+const QuestionGroup = ({
+  questions,
+  groupId,
+  toggleExpansion,
+  expandedMap,
+  invertExpansionMap,
+}) => {
   return (
-    <div>    
+    <div>
       {questions.map((q, idx) => {
         const uid = `${groupId}-${idx + 1}` // add 1 so human-readable
         const expandedValue = expandedMap[uid]
@@ -282,22 +288,12 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, inve
           <Element name={uid} className={classes} id={uid} key={uid}>
             <div
               className="question-text"
-              onClick={toggleExpansion.bind(
-                this,
-                uid,
-                !expandedValue,
-                true
-              )}
-              onKeyDown={toggleExpansion.bind(
-                this,
-                uid,
-                !expandedValue,
-                true
-              )}
+              onClick={toggleExpansion.bind(this, uid, !expandedValue, true)}
+              onKeyDown={toggleExpansion.bind(this, uid, !expandedValue, true)}
               role="button"
-              tabindex="0"
-            // aria-controls="example-collapse-text"
-            // aria-expanded={expanded}
+              tabIndex="0"
+              // aria-controls="example-collapse-text"
+              // aria-expanded={expanded}
             >
               <span className="text">
                 {q.text}
@@ -313,13 +309,10 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, inve
             </Collapse>
           </Element>
         )
-      })
-    }
+      })}
     </div>
   )
 }
 
 export default Faq
-export {
-  QuestionGroup
-}
+export { QuestionGroup }

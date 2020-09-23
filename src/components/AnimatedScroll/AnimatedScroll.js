@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Row } from "react-bootstrap"
 import clsx from "clsx"
-import Anime from "react-anime"
 
 import ScrollFeatureSVG from "./assets/ScrollFeatureSVG"
 

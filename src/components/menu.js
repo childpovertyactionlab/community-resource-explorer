@@ -30,7 +30,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
           className="close-menu"
           onClick={closeMenu}
           onKeyDown={closeMenu}
-          tabindex="0"
+          tabIndex="0"
           role="button"
         >
           <InlineSvg type="x" />
@@ -57,7 +57,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
                     className={nameClasses}
                     key={page.id}
                     onKeyDown={navigateToPage}
-                    tabindex="0"
+                    tabIndex="0"
                     role="button"
                   >
                     {page.name}
@@ -91,7 +91,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         onKeyDown={toggleMenuOpen}
         className="menu-icon-group"
         role="button"
-        tabindex="0"
+        tabIndex="0"
       >
         <span className="menu-icon svg-base"></span>
         Menu

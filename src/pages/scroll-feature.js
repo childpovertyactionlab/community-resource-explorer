@@ -1,5 +1,4 @@
 import React from "react"
-import { Col, Row } from "react-bootstrap"
 
 import AnimatedScroll from "./../components/AnimatedScroll/AnimatedScroll"
 
