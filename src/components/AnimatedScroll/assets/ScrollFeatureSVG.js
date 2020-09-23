@@ -1363,7 +1363,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
           width="256"
           height="357"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilterss="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
