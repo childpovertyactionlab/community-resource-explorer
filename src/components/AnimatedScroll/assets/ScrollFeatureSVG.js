@@ -46,7 +46,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               />
             </Anime>
           )}
-          {props.index === 2 && (
+          {(props.index === 2 || props.index === 3) && (
             <Anime
               id="Third"
               className="third"
