@@ -23,7 +23,12 @@ const ScrollFeatureSVG = ({ ...props }) => {
             return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
           }}
         >
-          <image href="/images/home-map-bg.jpg" x="-300" y="-160" width="1232" />
+          <image
+            href="/images/home-map-bg.jpg"
+            x="-300"
+            y="-160"
+            width="1232"
+          />
         </Anime>
         <g id="Dots">
           {props.index < 5 && (
@@ -126,7 +131,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="LT Green 2"
@@ -135,7 +140,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Cyan 2"
@@ -241,7 +246,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 108"
@@ -250,7 +255,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 109"
@@ -259,7 +264,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 110"
@@ -268,7 +273,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 111"
@@ -277,7 +282,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 112"
@@ -286,7 +291,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 113"
@@ -295,7 +300,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 114"
@@ -304,7 +309,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 115"
@@ -313,7 +318,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 116"
@@ -322,7 +327,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 117"
@@ -331,7 +336,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 118"
@@ -340,7 +345,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 119"
@@ -349,7 +354,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 120"
@@ -358,7 +363,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 121"
@@ -367,7 +372,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 122"
@@ -376,7 +381,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 123"
@@ -385,7 +390,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 124"
@@ -394,7 +399,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 125"
@@ -403,7 +408,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 126"
@@ -412,7 +417,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 127"
@@ -421,7 +426,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 128"
@@ -430,7 +435,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 129"
@@ -439,7 +444,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 130"
@@ -448,7 +453,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 131"
@@ -457,7 +462,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 132"
@@ -466,7 +471,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 133"
@@ -475,7 +480,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 135"
@@ -484,7 +489,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 136"
@@ -493,7 +498,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 137"
@@ -502,7 +507,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 138"
@@ -511,7 +516,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 141"
@@ -520,7 +525,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 142"
@@ -529,7 +534,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 143"
@@ -538,7 +543,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 144"
@@ -547,7 +552,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#5DBF7F"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 145"
@@ -556,7 +561,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#5DBF7F"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 139"
@@ -565,7 +570,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#A4DCE5"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <circle
                 id="Ellipse 63"
@@ -791,7 +796,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 r="10.2078"
                 fill="#8DD6B6"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
             </Anime>
           )}
@@ -801,7 +806,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             id="rotary-text"
             className="first"
             svg={true}
-            direction='alternate'
+            direction="alternate"
             easing="easeInOutSine"
             transformOrigin={[400, 250]}
             autoplay={true}
@@ -973,7 +978,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             autoplay={true}
             loop={false}
             duration={600}
-            direction='alternate'
+            direction="alternate"
             opacity={() => {
               return props.index === 1 ? [0, 1] : [1, 1]
             }}
@@ -1069,7 +1074,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 980"
@@ -1079,7 +1084,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 985"
@@ -1089,7 +1094,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 990"
@@ -1099,7 +1104,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 995"
@@ -1109,7 +1114,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 970"
@@ -1175,7 +1180,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 977"
@@ -1185,7 +1190,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 982"
@@ -1195,7 +1200,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 987"
@@ -1205,7 +1210,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 992"
@@ -1215,7 +1220,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 997"
@@ -1225,7 +1230,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               stroke="#CCCCCC"
               fill="white"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 971"
@@ -1235,7 +1240,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 1002"
@@ -1245,7 +1250,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 1004"
@@ -1255,7 +1260,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               stroke="#CCCCCC"
               fill="white"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 978"
@@ -1265,7 +1270,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 983"
@@ -1275,7 +1280,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 988"
@@ -1285,7 +1290,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 10"
@@ -1295,7 +1300,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 979"
@@ -1305,7 +1310,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 984"
@@ -1315,7 +1320,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 989"
@@ -1325,7 +1330,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 994"
@@ -1335,7 +1340,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               fill="white"
               stroke="#CCCCCC"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
             <rect
               id="Rectangle 999"
@@ -1345,7 +1350,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               height="9.5"
               stroke="#CCCCCC"
               fill="white"
-              stroke-width="0.5"
+              strokeWidth="0.5"
             />
           </Anime>
         )}
