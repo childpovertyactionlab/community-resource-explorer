@@ -20,7 +20,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             return props.index === 0 ? [0, 1] : [1, 1]
           }}
           scale={() => {
-           return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
+            return props.index === 3 ? [1, 0.9] : [1.2, 1.2]
           }}
         >
           <image href="/images/map-rect.png" x="0" y="0" width="1800" />
@@ -45,7 +45,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               }}
               svg={true}
               scale={() => {
-               // return props.index === 0 ? [0.8, 1] : [1, 1]
+                // return props.index === 0 ? [0.8, 1] : [1, 1]
                 return props.index === 3 ? [1, 0.9] : [1, 1]
               }}
             >
@@ -801,9 +801,21 @@ const ScrollFeatureSVG = ({ ...props }) => {
           )}
         </g>
         {props.index < 5 && (
-
-          
-          <g id="rotary-text" className="first">
+          <Anime
+            id="rotary-text"
+            className="first"
+            svg={true}
+            easing="easeInOutSine"
+            transformOrigin={[400, 250]}
+            autoplay={true}
+            loop={false}
+            duration={600}
+            opacity={() => {
+              // If we're on the first slide, transition opacity from 0 to 1.
+              // Else no transition.
+              return props.index === 0 ? [0, 1] : [1, 1]
+            }}
+          >
             <path
               id="K"
               d="M307.93 293.011L297.474 294.094L297.344 292.837L302.437 292.309L303.573 292.255L296.83 287.871L296.671 286.343L301.438 289.501L307.111 285.101L307.266 286.597L302.371 290.273L305.069 292.101L306.002 291.94L307.8 291.753L307.93 293.011Z"
@@ -954,7 +966,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
               d="M492.146 185.889C492.025 185.8 491.913 185.691 491.81 185.562C491.7 185.441 491.617 185.347 491.561 185.279L492.14 184.494C492.211 184.559 492.3 184.645 492.408 184.75C492.515 184.856 492.612 184.941 492.698 185.004C493.076 185.282 493.456 185.377 493.84 185.288C494.225 185.215 494.708 184.954 495.289 184.508L497.67 176.067L498.752 176.864L497.111 182.114L496.435 183.842L496.487 183.88L497.923 182.712L502.372 179.531L503.429 180.309L495.676 185.548C495.101 185.932 494.518 186.192 493.929 186.328C493.341 186.478 492.747 186.332 492.146 185.889Z"
               fill="#4860B1"
             />
-          </g>
+          </Anime>
         )}
         {props.index === 1 && (
           <Anime
