@@ -26,11 +26,7 @@ const AnimatedScroll = ({ ...props }) => {
       id: "04",
       text: "Learn more about your community's assets and needs",
     },
-    {
-      id: "05",
-      text:
-        "05 Occaecat irure eiusmod proident velit ex id minim. Anim deserunt nulla et cillum do ut occaecat.",
-    },
+    
   ]
 
   const [activeItemIndex, setActiveItemIndex] = useState(0)

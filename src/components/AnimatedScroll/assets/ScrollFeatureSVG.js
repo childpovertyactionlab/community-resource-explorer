@@ -800,11 +800,12 @@ const ScrollFeatureSVG = ({ ...props }) => {
             </Anime>
           )}
         </g>
-        {props.index < 5 && (
+        {props.index < 2 && (
           <Anime
             id="rotary-text"
             className="first"
             svg={true}
+            direction='alternate'
             easing="easeInOutSine"
             transformOrigin={[400, 250]}
             autoplay={true}
@@ -972,10 +973,11 @@ const ScrollFeatureSVG = ({ ...props }) => {
           <Anime
             id="tooltip"
             className="second"
-            easing="easeOutElastic"
+            easing="easeInOutSine"
             autoplay={true}
             loop={false}
-            duration={2400}
+            duration={600}
+            direction='alternate'
             opacity={() => {
               return props.index === 1 ? [0, 1] : [1, 1]
             }}
