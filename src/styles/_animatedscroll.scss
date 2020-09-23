@@ -46,6 +46,9 @@ $viz-height: 500px; // Adjust viz height here.
       // opacity: 0;
       width: 100%;
       height: $viz-height;
+      svg {
+        width: 100%;
+      }
       &.active {
         // opacity: 1;
         display: block;
@@ -54,27 +57,7 @@ $viz-height: 500px; // Adjust viz height here.
           width: 40px;
           height: 40px;
         }
-        svg g {
-          width: 30px;
-          height: 30px;
-          border-radius: 15px;
-          .blue,
-          .green,
-          .red {
-            width: 30px;
-            height: 30px;
-            border-radius: 15px;
-          }
-          .blue {
-            background-color: blue;
-          }
-          .green {
-            background-color: green;
-          }
-          .red {
-            background-color: red;
-          }
-        }
+        
       }
     }
   }
