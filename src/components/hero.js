@@ -6,6 +6,8 @@ import Menu from "./menu"
 const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent }) => {
   const getHero = () => {
     if (wide) {
+      // TODO: simplify by removing appendage from hero
+      const colorId = insertedContent ? 'hero-appendage' : ''
       return (
         <Col xs={12} className="hero-wide">
           <Row>
@@ -30,7 +32,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
             {insertedContent}
           </Row>
 
-          <Row>
+          <Row id={colorId}>
             <Col className="color-section" xs={12}>
               <Row>
                 <Col className="dallas-isd" xs={1} md={1}>
