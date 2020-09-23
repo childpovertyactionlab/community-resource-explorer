@@ -12,6 +12,7 @@ import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
+import AnimatedScroll from "../components/AnimatedScroll/AnimatedScroll"
 
 const q1 = {
   superhead: `Voices from the Community`,
@@ -101,7 +102,7 @@ const home = ({ location }) => {
             “{q2.text}”<div className="attribution">{q2.attribution}</div>
           </div>
         </Col>
-
+        <AnimatedScroll />
         <Col
           xs={{ offset: 0, span: 12 }}
           // md={{ offset: 1, span: 4 }}
