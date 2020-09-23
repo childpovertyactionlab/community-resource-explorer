@@ -57,7 +57,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
                 cy="276.585"
                 r="132.585"
                 fill="#465EB3"
-                fill-opacity="0.1"
+                fillOpacity="0.1"
               />
               <circle
                 id="King"
@@ -985,7 +985,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             svg={true}
           >
             <g id="tooltip_2">
-              <g id="background" filter="url(#filter0_d)">
+              <g id="background">
                 <rect
                   x="557"
                   y="99"
@@ -1363,9 +1363,9 @@ const ScrollFeatureSVG = ({ ...props }) => {
           width="256"
           height="357"
           filterUnits="userSpaceOnUse"
-          colorInterpolationFilterss="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="1" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
