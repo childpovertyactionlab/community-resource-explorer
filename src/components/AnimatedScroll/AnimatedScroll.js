@@ -20,11 +20,16 @@ const AnimatedScroll = ({ ...props }) => {
     {
       id: "03",
       text:
-        "The color scale illustrates how well school communities are resourced.",
+        <div>The color scale illustrates how well school communities are resourced.
+          <img src="/images/scale.svg"  />
+        </div>
     },
     {
       id: "04",
-      text: "Learn more about your community's assets and needs",
+      text: 
+       <div>Learn more about your community's assets and needs
+         <a href="/explorer">Go the the explorer <img src="/images/rt-arrow-orange.svg" /></a>
+       </div>
     },
     
   ]
@@ -48,6 +53,24 @@ const AnimatedScroll = ({ ...props }) => {
 
   return (
     <Row className="animated-scroll">
+      <div className="animated-scroll-viz">
+        {items.map(el => {
+          return (
+            <div
+              className={clsx(
+                "animated-scroll-viz-item",
+                items[activeItemIndex].id === el.id ? "active" : ""
+              )}
+              key={`text_${el.id}`}
+              id={`viz_${el.id}`}
+            >
+              <svg width="800" height="500" viewBox="0 0 760 475">
+                <ScrollFeatureSVG index={activeItemIndex} />
+              </svg>
+            </div>
+          )
+        })}
+      </div>
       <div className="animated-scroll-text">
         <div
           className={clsx(
@@ -71,24 +94,7 @@ const AnimatedScroll = ({ ...props }) => {
           })}
         </div>
       </div>
-      <div className="animated-scroll-viz">
-        {items.map(el => {
-          return (
-            <div
-              className={clsx(
-                "animated-scroll-viz-item",
-                items[activeItemIndex].id === el.id ? "active" : ""
-              )}
-              key={`text_${el.id}`}
-              id={`viz_${el.id}`}
-            >
-              <svg width="800" height="500" viewBox="0 0 760 475">
-                <ScrollFeatureSVG index={activeItemIndex} />
-              </svg>
-            </div>
-          )
-        })}
-      </div>
+      
     </Row>
   )
 }
