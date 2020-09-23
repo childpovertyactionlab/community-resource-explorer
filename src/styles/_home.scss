@@ -2,15 +2,12 @@
   $inter-spacer-xs: 8 * $spacer;
   $inter-spacer-md: 11 * $spacer;
   $inter-spacer-xl: 14 * $spacer;
-  
-  $text-panel-buffer: .7 * $column;
-  $text-panel-buffer-sm: 1 * $column;
 
   img {
     width: 100%;
   }
 
-  #page, .cre-rect, .carousel-section {
+  #page, .cre-rect {
     margin-top: $inter-spacer-xs;
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
@@ -337,147 +334,6 @@
     }
   }
 
-  .custom-carousel {
-    display: flex;
-
-    img {
-      width: 100%;
-    }
-
-    .caro-text-panel {
-      position: relative;
-      background: $deluge;
-      padding: $text-panel-buffer;
-
-      .controls {
-        
-        svg {
-          cursor: pointer;
-        }
-
-        .arrows {
-          stroke: $white;
-          position: absolute;
-          bottom: $text-panel-buffer;
-          right: $text-panel-buffer;
-
-          .right-arrow-md {
-            padding-left: 3 * $spacer;
-          }
-        }
-
-        .eclipses {
-          position: absolute;
-          bottom: $text-panel-buffer;
-          left: $text-panel-buffer;
-
-          .eclipse {
-            padding-right: 1 * $spacer;
-            circle {
-              fill: $fog;
-            }
-            &.active circle {
-              fill: $white;
-            }
-          }
-        }
-      }
-
-      .statistics {
-        position: relative;
-        .index-name {
-          font-weight: 400;
-          font-size: 18px;
-          color: #d8ccff;
-          margin-bottom: 2.4rem;
-          @include media-breakpoint-up(xl) {
-            font-size: 20px;
-          }
-        }
-      }
-      .statistic {
-        margin-bottom: 3 * $spacer;
-        display: flex;
-        span {
-          display: block;
-        }
-        .number {
-          font-size: 88px;
-          @include media-breakpoint-up(xl) {
-            font-size: 144px;
-          }
-          line-height: 1;
-          color: $fog;
-          font-family: "Morganite Bold";
-        }
-        .percent, .character1, .character2 {
-          font-size: 24px;
-          @include media-breakpoint-up(xl) {
-            font-size: 30px;
-          }
-          color: $fog;
-          font-family: "Morganite Bold";
-          vertical-align: top;
-        }
-        .character1 {
-          margin-right: 1 * $spacer;
-        }
-        .character2 {
-          margin-right: 2 * $spacer;
-          margin-left: 1 * $spacer;
-        }
-        .text {
-          // so staistic texts align with each other, and wrap properly (not below number)
-         // position: absolute;
-         // left: 8 * $spacer;
-          font-size: 16px;
-          @include media-breakpoint-up(xl) {
-          left: 14 * $spacer;
-            font-size: 20px;
-          }
-          line-height: 1.2;
-          font-weight: $font-weight-light;
-          color: $steel-gray;
-          vertical-align: top;
-
-          @include media-breakpoint-up(xl) {
-            //margin-right: 1 * $text-panel-buffer;
-          }
-        }
-      }
-    }
-
-    // layout
-    @include media-breakpoint-down(xs) {
-      flex-direction: column;
-      
-      .caro-text-panel {
-        flex-basis: calc(#{$column} * 7);
-        padding: $text-panel-buffer-sm;
-        .controls {
-          .eclipses {
-            bottom: $text-panel-buffer-sm;
-            left: $text-panel-buffer-sm;
-          }
-          .arrows {
-            bottom: $text-panel-buffer-sm;
-            right: $text-panel-buffer-sm;
-          }
-        }
-      }
-    }
-    
-    @include media-breakpoint-up(md) {
-      .carousel.slide {
-        flex-basis: calc(100vw * 6.5 / 12);
-      }
-      .caro-text-panel {
-        flex-basis: 0;
-        flex-grow: 1;
-      }
-    }
-  }
-
   .recent {
     margin-top: $inter-spacer-xs;
     margin-top: 4.8rem;
@@ -503,7 +359,7 @@
         background-image: url("../images/forest-wide.png");
       }
       &.computer {
-        background-image: url("../images/student-computer2.jpg");
+        background-image: url("../images/remote-learning.jpg");
         background-position: bottom; // so laptop isn't cut off
       }
     }

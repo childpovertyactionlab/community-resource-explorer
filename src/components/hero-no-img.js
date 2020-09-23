@@ -33,7 +33,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
           <Row>
             <Col className="color-section" xs={12}>
               <Row>
-                <Col className="dallas-isd" xs={1} md={1}>
+                <Col className="dallas-isd" xs={2} md={1}>
                   {/* <span className="text">DALLAS ISD</span> */}
                 </Col>
                 <Col className="p-0">
@@ -41,13 +41,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
                 </Col>
               </Row>
 
-              <Row>
-                <Col xs={12} className="p-0">
-                  <div className="image-section">
-                    <img alt="todo draw from props" src={imgSrc} />
-                  </div>
-                </Col>
-              </Row>
+              
             </Col>
           </Row>
         </Col>

@@ -304,6 +304,7 @@ $content-width-xl: $hero-wide-img-width-xl;
         padding-bottom: 8 * $spacer;
         // padding-left: $column;
         width: $content-width-md;
+        width: $content-width-xl;
       }
       @include media-breakpoint-up(xl) {
         padding-top: 7 * $spacer;
