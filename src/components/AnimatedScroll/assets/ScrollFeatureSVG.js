@@ -771,7 +771,7 @@ const ScrollFeatureSVG = ({ ...props }) => {
             </Anime>
           )}
         </g>
-        {props.index === 0 && (
+        {props.index < 5 && (
           <g id="rotary-text" className="first">
             <path
               id="K"
