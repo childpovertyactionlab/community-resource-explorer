@@ -37,6 +37,14 @@
       }
     }
     
+    .image-section {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 6 * $spacer;
+      }
+    }
     // TODO mixin
     .color-section {
       background: $hero-color;
