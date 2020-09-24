@@ -6,7 +6,6 @@ import i18n from "@pureartisan/simple-i18n"
 import { Col, Row, Button } from "react-bootstrap"
 import clsx from "clsx"
 import { FaPrint, FaInfoCircle } from "react-icons/fa"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // import { logger } from "./../utils/logger"
 import Layout from "../components/layout"
@@ -194,7 +193,8 @@ const SchoolPage = ({ data, ...props }) => {
   const printPage = () => {
     if (window) {
       window.print()
-      trackCustomEvent({
+
+      const trackingData = {
         // string - required - The object that was interacted with (e.g.video)
         category: "Print School View",
         // string - required - Type of interaction (e.g. 'play')
@@ -203,7 +203,9 @@ const SchoolPage = ({ data, ...props }) => {
         label: school.SCHOOLNAME,
         // number - optional - Numeric value associated with the event. (e.g. A product ID)
         value: school.SLN,
-      })
+      }
+      typeof window !== "undefined" &&
+        window.gtag("event", "click", { ...trackingData })
     }
   }
 
