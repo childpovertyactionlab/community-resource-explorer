@@ -59,6 +59,7 @@ const CustomCarousel = ({ items }) => {
       <div className="caro-text-panel">
         <div className="statistics">
           <div className="index-name">{indexName}</div>
+          <div className="underbar"></div>
           <div className="statistic stat-1">
             <span className="character1">{character1}</span>
             <span className="number">{stat1num}</span>

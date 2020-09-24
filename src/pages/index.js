@@ -12,6 +12,7 @@ import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
+import { Link } from "gatsby"
 
 const q1 = {
   superhead: `Voices from the Community`,
@@ -170,7 +171,7 @@ const home = ({ location }) => {
 
           <div className="post-details p-0">
             <div className="post-title">
-              How the CRE is informing policy and community understanding in Dallas
+              <Link to={pages.ISD.path}>How the CRE is informing policy and community understanding in Dallas</Link>
             </div>
 
             <div className="post-contents">
@@ -180,7 +181,7 @@ const home = ({ location }) => {
               right the wrongs of the past.{" "}
             </div>
 
-            <CustomLink linkTo={pages.ISD.path}>Read post</CustomLink>
+            <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
           </div>
         </Col>
         <Col
@@ -194,8 +195,8 @@ const home = ({ location }) => {
 
           <div className="post-details p-0">
             <div className="post-title">
-              More than ever, Dallas students need reliable broadband. Here's
-              how the CRE is helping.
+            <Link to={pages.ISD.path}>More than ever, Dallas students need reliable broadband. Here's
+              how the CRE is helping.</Link>
             </div>
 
             <div className="post-contents">
