@@ -33,8 +33,18 @@ class stickyHeader extends React.Component {
 
   unthrottledUpdateStickiness(e) {
     const hero = document.getElementById('hero')
+    let heroHeight = hero.getBoundingClientRect().height
 
-    const minScroll = hero.getBoundingClientRect().height - stickyHeaderHeight
+    // TODO: simplify by removing appendage from hero
+    const heroAppendage = document.getElementById('hero-appendage')
+    console.log(heroHeight)
+    if (heroAppendage) {
+      const appendageHeight = heroAppendage.getBoundingClientRect().height
+      heroHeight -= appendageHeight
+      console.log(heroHeight)
+    }
+
+    const minScroll = heroHeight - stickyHeaderHeight
 
     const scrollOffset = window.scrollY
     const active = scrollOffset >= minScroll
