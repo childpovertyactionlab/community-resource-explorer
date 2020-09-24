@@ -18,7 +18,7 @@ const AnimatedScroll = ({ ...props }) => {
     {
       id: "02",
       text:
-        "The Explorer visualizes data for each school community across these categories.",
+        "The Explorer visualizes data for each school community across several categories.",
     },
     {
       id: "03",
