@@ -31,7 +31,7 @@ const AnimatedScroll = ({ ...props }) => {
       id: "04",
       text: 
        <div>Learn more about your community's assets and needs
-         <a href="/explorer">Go the the explorer <img class="rt-arrow-orange" src="/images/rt-arrow-orange.svg" /></a>
+         <a href="/explorer">Go to the explorer <img class="rt-arrow-orange" src="/images/rt-arrow-orange.svg" /></a>
        </div>
     },
     
