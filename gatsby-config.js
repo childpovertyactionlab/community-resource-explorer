@@ -25,7 +25,7 @@ module.exports = {
         // Setting this parameter is optional
         anonymize: false,
         // Setting this parameter is also optional
-        respectDNT: true,
+        respectDNT: false,
         // Avoids sending pageview hits from custom paths
         exclude: ["/preview/**"],
         // ["/preview/**", "*localhost:3000/**", "*localhost:8000/**"],
@@ -38,7 +38,7 @@ module.exports = {
         // Set Variation ID. 0 for original 1,2,3....
         // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
         // Defers execution of google analytics script after page load
-        defer: true,
+        defer: false,
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
