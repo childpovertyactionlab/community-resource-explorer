@@ -16,7 +16,7 @@ import AnimatedScroll from "../components/AnimatedScroll/AnimatedScroll"
 
 const q1 = {
   superhead: '',
-  text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores and doctor’s offices and park space, but many others are not.`,
+  text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
   attribution: "The Community Resource Explorer visualizes these assets and disparities.",
 }
 const q2 = {
