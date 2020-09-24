@@ -1,122 +1,225 @@
-$viz-height: 500px; // Adjust viz height here.
-#home-page {
-  .animated-scroll.row {
-    //border: 5px dotted blue; // Comment this out when dev is done.
-    margin-top: 8rem;
-    margin-bottom: 0rem;
-    height: $viz-height;
-    position: relative;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    .animated-scroll-text,
-    .animated-scroll-viz {
-    }
-    .animated-scroll-text {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      // background-color: green;
-      // opacity: 0.2;
-      overflow-y: scroll;
-      .animated-scroll-text-items {
-        width: 100%;
-        .animated-scroll-text-item {
-          width: 50%;
-          color: #2C390B;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: $viz-height;
-          font-family: Halyard;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 30px;
-          line-height: 1.17;
-          letter-spacing: -1px;
-          background: rgb(250,251,246);
-          background: linear-gradient(90deg, rgba(250,251,246,1) 65%, rgba(255,255,255,0) 100%);
-          span {
-            max-width: 75%;
-              img#colorscale {
-                margin-top: 2.4rem;
-                width: 64%;
-              }
-          }
-          &#viz_01 {
-            div span {
-              font-family: Louize Display;
-              font-style: italic;
-              font-weight: normal;
-              font-size: 30px;
-              line-height: 1.1;
-              color: #E55934;
-              display: block;
-              margin-bottom: 2.4rem;
-            }
-          }
-          &#viz_04 {
-            /* Learn more about your community's assets and needs */
-            font-family: Halyard;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 50px;
-            line-height: 1.1;
-            letter-spacing: -2px;
-            color: #E55934;
-            div a {
-              color: #E55934;
-              margin-top: 2.4rem;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 18.2857px;
-              line-height: 1.56;
-              letter-spacing: 0.251429px;
-              display: block;
-              img.rt-arrow-orange {
-                position: relative;
-                //top:-12px;
-                width: 16px;
-              }
-            }
-          }
+// $viz-height: 500px; // Adjust viz height here.
+// #home-page {
+//   .animated-scroll.row {
+//     //border: 5px dotted blue; // Comment this out when dev is done.
+//     margin-top: 8rem;
+//     margin-bottom: 0rem;
+//     height: $viz-height;
+//     position: relative;
+//     width: 100%;
+//     margin-left: 0;
+//     margin-right: 0;
+//     .animated-scroll-text,
+//     .animated-scroll-viz {
+//     }
+//     .animated-scroll-text {
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       // background-color: green;
+//       // opacity: 0.2;
+//       overflow-y: scroll;
+//       .animated-scroll-text-items {
+//         width: 100%;
+//         .animated-scroll-text-item {
+//           width: 50%;
+//           color: #2C390B;
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           height: $viz-height;
+//           font-family: Halyard;
+//           font-style: normal;
+//           font-weight: 500;
+//           font-size: 30px;
+//           line-height: 1.17;
+//           letter-spacing: -1px;
+//           background: rgb(250,251,246);
+//           background: linear-gradient(90deg, rgba(250,251,246,1) 65%, rgba(255,255,255,0) 100%);
+//           span {
+//             max-width: 75%;
+//               img#colorscale {
+//                 margin-top: 2.4rem;
+//                 width: 64%;
+//               }
+//           }
+//           &#viz_01 {
+//             div span {
+//               font-family: Louize Display;
+//               font-style: italic;
+//               font-weight: normal;
+//               font-size: 30px;
+//               line-height: 1.1;
+//               color: #E55934;
+//               display: block;
+//               margin-bottom: 2.4rem;
+//             }
+//           }
+//           &#viz_04 {
+//             /* Learn more about your community's assets and needs */
+//             font-family: Halyard;
+//             font-style: normal;
+//             font-weight: 500;
+//             font-size: 50px;
+//             line-height: 1.1;
+//             letter-spacing: -2px;
+//             color: #E55934;
+//             div a {
+//               color: #E55934;
+//               margin-top: 2.4rem;
+//               font-style: normal;
+//               font-weight: normal;
+//               font-size: 18.2857px;
+//               line-height: 1.56;
+//               letter-spacing: 0.251429px;
+//               display: block;
+//               img.rt-arrow-orange {
+//                 position: relative;
+//                 //top:-12px;
+//                 width: 16px;
+//               }
+//             }
+//           }
 
-        }
-      }
-    }
-    .animated-scroll-viz {
-      width: 65%;
+//         }
+//       }
+//     }
+//     .animated-scroll-viz {
+//       width: 65%;
+//       display: block;
+//       margin-right: 0;
+//       margin-left: auto;
+//       height: 100%;
+//       // background-color: red;
+//       // opacity: 0.2;
+//       position: relative;
+//       overflow: hidden;
+//       .animated-scroll-viz-item {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         display: none;
+//         // opacity: 0;
+//         width: 100%;
+//         height: $viz-height;
+//         svg {
+//           width: 100%;
+//         }
+//         &.active {
+//           // opacity: 1;
+//           display: block;
+//           .blue {
+//             background-color: blue;
+//             width: 40px;
+//             height: 40px;
+//           }
+
+//         }
+//       }
+//     }
+//   }
+// }
+
+$topOffset: 64px; // sticky header height
+
+.animation {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.animation__fixed {
+  position: sticky;
+  top: $topOffset;
+  width: 100%;
+  height: calc(100vh - #{$topOffset});
+
+  background: url("/images/home-map-bg.jpg");
+  background-position: fixed;
+  background-repeat: none;
+  background-size: auto 100%;
+  background-position: center right;
+  z-index: 1;
+}
+
+.animation__step {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: calc(100vh - #{$topOffset});
+  width: 100%;
+  z-index: 2;
+}
+
+.animation__step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.2rem;
+  background: rgb(250, 251, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 251, 246, 1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  color: #2c390b;
+  font-family: Halyard, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  letter-spacing: -1px;
+  max-width: 15em;
+}
+
+// step 1
+.animation__step.animation__step--1 {
+  margin-top: calc(-100vh + #{$topOffset});
+  .animation__step-content {
+    & span:first-child {
+      font-family: Louize Display;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.1;
+      color: #e55934;
       display: block;
-      margin-right: 0;
-      margin-left: auto;
-      height: 100%;
-      // background-color: red;
-      // opacity: 0.2;
-      position: relative;
-      overflow: hidden;
-      .animated-scroll-viz-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-        // opacity: 0;
-        width: 100%;
-        height: $viz-height;
-        svg {
-          width: 100%;
-        }
-        &.active {
-          // opacity: 1;
-          display: block;
-          .blue {
-            background-color: blue;
-            width: 40px;
-            height: 40px;
-          }
-          
-        }
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+// step 2
+
+// step 3
+
+// step 4
+.animation__step.animation__step--4 {
+  .animation__step-content {
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      color: #e55934;
+    }
+    a {
+      color: #e55934;
+      margin-top: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.2857px;
+      line-height: 1.56;
+      letter-spacing: 0.251429px;
+      display: block;
+      & > img {
+        position: relative;
+        max-width: 16px;
       }
     }
   }

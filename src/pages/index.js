@@ -12,13 +12,14 @@ import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
-import AnimatedScroll from "../components/AnimatedScroll/AnimatedScroll"
 import { Link } from "react-scroll"
+import ExplorerSteps from "../components/AnimatedScroll/ExplorerSteps"
 
 const q1 = {
-  superhead: '',
+  superhead: "",
   text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
-  attribution: "The Community Resource Explorer visualizes these assets and disparities.",
+  attribution:
+    "The Community Resource Explorer visualizes these assets and disparities.",
 }
 const q2 = {
   superhead: `Voices from the Community`,
@@ -61,11 +62,14 @@ const home = ({ location }) => {
         </p>
         <div className="hero-links caption">
           <Link to="page" smooth={true} offset={-stickyHeaderHeight}>
-            <a href="">Learn more <InlineSvg type="down-arrow-sm" /></a>
+            <a href="">
+              Learn more <InlineSvg type="down-arrow-sm" />
+            </a>
           </Link>
-          <a href="/explorer">Go to the Explorer <InlineSvg type="down-arrow-sm" /></a>
+          <a href="/explorer">
+            Go to the Explorer <InlineSvg type="down-arrow-sm" />
+          </a>
         </div>
-        
       </Hero>
 
       <Row id="page">
@@ -76,7 +80,11 @@ const home = ({ location }) => {
           lg={{ offset: 2, span: 3 }}
           xl={{ offset: 2, span: 3 }}
         >
-          <div className="escapes" style={{ backgroundImage: `url(${escapes})` }} alt="Escapes" />
+          <div
+            className="escapes"
+            style={{ backgroundImage: `url(${escapes})` }}
+            alt="Escapes"
+          />
         </Col>
 
         <Col
@@ -91,8 +99,7 @@ const home = ({ location }) => {
           <div className="attribution">{q1.attribution}</div>
         </Col>
 
-        <AnimatedScroll />
-
+        <ExplorerSteps />
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
           <span className="custom-underline">Recent blog</span> posts
