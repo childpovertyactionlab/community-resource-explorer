@@ -199,6 +199,7 @@ const NonInteractiveScale = ({
               <div
                 className={clsx("n-i-scale-quintile", "quintile-" + i)}
                 style={styles[i]}
+                key={"quintile_" + i}
               ></div>
             )
           })}
