@@ -30,7 +30,7 @@ const CustomLink = ({
       onClick={handleClick}
       onKeyDown={handleClick}
       role="button"
-      tabindex="0"
+      tabIndex="0"
     >
       {children}
       <InlineSvg type={type} classes="right-arrow"></InlineSvg>

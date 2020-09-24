@@ -194,7 +194,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       onKeyDown={onClick}
       className={classes}
       role="button"
-      tabindex="0"
+      tabIndex="0"
     >
       {getSvg(type)}
     </div>

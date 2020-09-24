@@ -27,7 +27,7 @@ const Footer = () => {
                   onClick={() => navigate(p.path)}
                   onKeyDown={() => navigate(p.path)}
                   role="button"
-                  tabindex="0"
+                  tabIndex="0"
                 >
                   {p.name}
                 </span>
