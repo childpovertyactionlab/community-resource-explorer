@@ -46,16 +46,27 @@
   #hero {
     .color-section {
       background: $old-lace;
-
       flex: 350px 7 7; // gives more vert space for text to take up 
     }
-
     .emphasis {
       color: $cinnabar;
     }
     .p-emphasis {
       color: $cinnabar;
       font-weight: 400;
+    }
+    .hero-links {
+      a {
+        color: #656647;
+        &:first-child {
+          margin-right: 2.4rem;
+        }
+        &:nth-child(2) {
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      }
     }
 
     .content {
@@ -101,7 +112,7 @@
         font-size: 18px;
         margin-right: 2 * $column;
         margin-top: 4 * $spacer;
-        margin-bottom: 10 * $spacer;
+        margin-bottom: 3 * $spacer;
       }
     }
 

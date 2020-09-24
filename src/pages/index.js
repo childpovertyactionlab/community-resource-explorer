@@ -58,11 +58,11 @@ const home = ({ location }) => {
           </span>{" "}
           so individuals and institutions can have the greatest impact.
         </p>
-        <div className="hero-links">
-          <a href="/">Learn more</a>
-          <a href="/">Go to the Explorer</a>
+        <div className="hero-links caption">
+          <a href="#page" className="jump">Learn more <InlineSvg type="down-arrow-sm" /></a>
+          <a href="/explorer">Go to the Explorer <InlineSvg type="down-arrow-sm" /></a>
         </div>
-        <InlineSvg type="down-arrow" />
+        
       </Hero>
 
       <Row id="page">
