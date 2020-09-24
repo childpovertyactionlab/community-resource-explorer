@@ -170,7 +170,7 @@ const home = ({ location }) => {
 
           <div className="post-details p-0">
             <div className="post-title">
-              How we’re informing policy and community understanding in Dallas.
+              How the CRE is informing policy and community understanding in Dallas
             </div>
 
             <div className="post-contents">

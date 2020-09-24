@@ -209,7 +209,7 @@ const isd = ({ location }) => {
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">
           <div className="subtitle px-0">
-            How we’re informing policy and community understanding in Dallas
+            How the CRE is informing policy and community understanding in Dallas
           </div>
         </div>
       </Hero>

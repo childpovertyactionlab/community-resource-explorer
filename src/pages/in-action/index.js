@@ -64,7 +64,7 @@ const InAction = ({ location }) => {
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
         <div className="title">The Explorer in Action</div>
         <div className="headline">
-          How we’re informing policy and community understanding in Dallas
+          How the CRE is informing policy and community understanding in Dallas
         </div>
         <CustomLink linkTo={pages.ISD.path} underlined={false}>
           Read post
