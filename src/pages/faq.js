@@ -248,14 +248,9 @@ class Faq extends React.Component {
 
                 <Col xs={12} className="description">
                   <div className="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                  If you’re interested in learning about how we analyze the data for the community resource explorer, follow the links below:
                   </div>
-                  <CustomLink>Download paper</CustomLink>
+                  <CustomLink linkTo="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk">Read the Methods paper</CustomLink><CustomLink linkTo="/get-the-data">Get the Data</CustomLink>
                 </Col>
               </Row>
             </Element>
