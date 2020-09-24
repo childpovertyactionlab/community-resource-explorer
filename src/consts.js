@@ -227,10 +227,7 @@ const dataCalculation = {
   body: (
     <p>
       The CRI was calculated by aggregating or summarizing data related to five key categories (Community, Economics, Education, Family, and Health) for the geography within two miles of every neighborhood elementary, middle, and high school campus in Dallas ISD. Data related to each of the five categories were analyzed separately and combined into indices to help identify relative differences in resource allocation - i.e., where there are an abundance of resources and where there fewer resources that are related to student outcomes and community-level quality of life. The five scores were then combined into an overall CRI score. If you want to learn more about how we calculated the CRI, you can read the{" "}
-      <mark>
-        full methodology or visit the Methodology page here
-          </mark>
-          .
+      <a href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk" target="_blank">read our Methodology paper</a>.
     </p>
   ),
 }
@@ -277,7 +274,7 @@ const newVersion = {
         <li>The calculations for each of the five subindices (Community, Economics, Education, Family, and Health) as well as the overall Community Resource Index were improved to help overcounting indicators that are highly related (such as percentage of low-wage jobs and median household income). We did this by using Principal Components Analysis to group and weight subsets of data for each subindex, as well as by removing indicators like doctor’s offices that made it harder to produce meaningful data for each two-mile area. We also adjusted for population density.</li>
         <li>The Community Resource Explorer makes it easier to understand the data that drives the CRI. We worked to make an interface that is easier to navigate, that allows for more interaction with the different datasets, and that hopefully doesn’t have too many glitches.</li>
         <li>You can now export PDF reports that include the data for all elements of the CRI for any one campus community in Dallas ISD. To do so, click on a school within the Explorer to view its full report, then click “Export PDF” to download.</li></ul>
-        Learn more about the changes we made to the data and <mark>methodology here</mark>.
+        Learn more about the changes we made to the data and <a href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk">Read the Methods paper</a>.
         </span>
 }
 

@@ -194,17 +194,17 @@ const SchoolPage = ({ data, ...props }) => {
   const printPage = () => {
     if (window) {
       window.print()
+      trackCustomEvent({
+        // string - required - The object that was interacted with (e.g.video)
+        category: "Print School View",
+        // string - required - Type of interaction (e.g. 'play')
+        action: "click",
+        // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+        label: school.SCHOOLNAME,
+        // number - optional - Numeric value associated with the event. (e.g. A product ID)
+        value: school.SLN,
+      })
     }
-    trackCustomEvent({
-      // string - required - The object that was interacted with (e.g.video)
-      category: "Print School View",
-      // string - required - Type of interaction (e.g. 'play')
-      action: "click",
-      // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-      label: school.SCHOOLNAME,
-      // number - optional - Numeric value associated with the event. (e.g. A product ID)
-      value: school.SLN,
-    })
   }
 
   const keywords = [

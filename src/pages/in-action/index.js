@@ -9,7 +9,7 @@ import Hero from "../../components/hero"
 import CustomLink from "../../components/customLink"
 import { pages } from "../../consts"
 
-import soccer from "../../images/soccer.png"
+import soccer from "../../images/running.png"
 
 // TODOcms activate when we have more posts than can be shown at once
 const SHOW_MORE_BUTTON = false
@@ -64,7 +64,7 @@ const InAction = ({ location }) => {
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
         <div className="title">The Explorer in Action</div>
         <div className="headline">
-          How we’re informing policy and community understanding in Dallas
+          How the CRE is informing policy and community understanding in Dallas
         </div>
         <CustomLink linkTo={pages.ISD.path} underlined={false}>
           Read post

@@ -13,18 +13,7 @@ import running from "../../images/running.png"
 import swinging from "../../images/swinging.png"
 
 const caroItems = [
-  {
-    src: couching,
-    alt: "s1",
-    indexName: "Insights from the Education Index",
-    character1: "",
-    character2: "%",
-    stat1num: 42,
-    stat2num: 3,
-    stat1text: "of residents with a bachelor's degree in one school community",
-    stat2text:
-      "of residents with a bachelor's degree in another school community, 13 miles away",
-  },
+  
   {
     src: running,
     alt: "s2",
@@ -36,6 +25,18 @@ const caroItems = [
     stat1text: "average life expectancy in one school community",
     stat2text:
       "average life expectancy in another school community, 9 miles away",
+  },
+  {
+    src: couching,
+    alt: "s1",
+    indexName: "Insights from the Education Index",
+    character1: "",
+    character2: "%",
+    stat1num: 42,
+    stat2num: 3,
+    stat1text: "of residents with a bachelor's degree in one school community",
+    stat2text:
+      "of residents with a bachelor's degree in another school community, 13 miles away",
   },
   {
     src: swinging,
@@ -208,7 +209,7 @@ const isd = ({ location }) => {
       <Hero wide={true} activePageId={pages.ISD.id} imgSrc={isdHero}>
         <div className="page-title-section">
           <div className="subtitle px-0">
-            How we’re informing policy and community understanding in Dallas
+            How the CRE is informing policy and community understanding in Dallas
           </div>
         </div>
       </Hero>

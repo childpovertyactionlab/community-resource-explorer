@@ -9,7 +9,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import clsx from "clsx"
 import { Container, Row, Col } from "react-bootstrap"
-
+import favicon from '../images/menu-logo.svg'
+    import Helmet from 'react-helmet'
 import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
 import Footer from "./footer"
@@ -37,6 +38,9 @@ const Layout = ({
       `}
       render={data => (
         <>
+        <Helmet>
+          <link rel="icon" href={favicon} />
+        </Helmet>
           <Container fluid className={clsx("main", props.className)}>
             {!disableHeader && <StickyHeader activePageId={activePageId} />}
             <Row noGutters>

@@ -137,7 +137,7 @@ class Faq extends React.Component {
         </div>
         <div key="side-menu-mobile" className={mobileClasses}>
           <span
-            tabindex="0"
+            tabIndex="0"
             role="button"
             onClick={this.toggleMenu}
             onKeyDown={this.toggleMenu}
@@ -248,14 +248,9 @@ class Faq extends React.Component {
 
                 <Col xs={12} className="description">
                   <div className="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                  If you’re interested in getting the data and learning about how it was analyzed for the Community Resource Explorer, follow the links below:
                   </div>
-                  <CustomLink>Download paper</CustomLink>
+                  <CustomLink linkTo="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk">Read the Methods paper</CustomLink><CustomLink linkTo="/get-the-data">Get the Data</CustomLink>
                 </Col>
               </Row>
             </Element>
@@ -267,9 +262,15 @@ class Faq extends React.Component {
   }
 }
 
-const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, invertExpansionMap }) => {
+const QuestionGroup = ({
+  questions,
+  groupId,
+  toggleExpansion,
+  expandedMap,
+  invertExpansionMap,
+}) => {
   return (
-    <div>    
+    <div>
       {questions.map((q, idx) => {
         const uid = `${groupId}-${idx + 1}` // add 1 so human-readable
         const expandedValue = expandedMap[uid]
@@ -282,22 +283,12 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, inve
           <Element name={uid} className={classes} id={uid} key={uid}>
             <div
               className="question-text"
-              onClick={toggleExpansion.bind(
-                this,
-                uid,
-                !expandedValue,
-                true
-              )}
-              onKeyDown={toggleExpansion.bind(
-                this,
-                uid,
-                !expandedValue,
-                true
-              )}
+              onClick={toggleExpansion.bind(this, uid, !expandedValue, true)}
+              onKeyDown={toggleExpansion.bind(this, uid, !expandedValue, true)}
               role="button"
-              tabindex="0"
-            // aria-controls="example-collapse-text"
-            // aria-expanded={expanded}
+              tabIndex="0"
+              // aria-controls="example-collapse-text"
+              // aria-expanded={expanded}
             >
               <span className="text">
                 {q.text}
@@ -313,13 +304,10 @@ const QuestionGroup = ({ questions, groupId, toggleExpansion, expandedMap, inve
             </Collapse>
           </Element>
         )
-      })
-    }
+      })}
     </div>
   )
 }
 
 export default Faq
-export {
-  QuestionGroup
-}
+export { QuestionGroup }

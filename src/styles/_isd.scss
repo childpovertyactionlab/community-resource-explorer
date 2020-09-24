@@ -37,6 +37,14 @@
       }
     }
     
+    .image-section {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 6 * $spacer;
+      }
+    }
     // TODO mixin
     .color-section {
       background: $hero-color;
@@ -85,6 +93,10 @@
       position: relative;
       background: $green-white;
       padding: $text-panel-buffer;
+      padding: 5.6rem;
+      @include media-breakpoint-up(xl) {
+        padding: 7.2rem;
+      }
 
       .controls {
         
@@ -125,15 +137,25 @@
         .index-name {
           font-weight: 400;
           font-size: 18px;
-          color: $orange-roughy2;
-          margin-bottom: 2.4rem;
+          //color: $orange-roughy2;
+          font-family: 'Louize Display';
+          font-style: italic;
+          color: #2C390B;
+          width: 46%;
+          margin-bottom: 0.8rem;
           @include media-breakpoint-up(xl) {
             font-size: 20px;
           }
         }
+        .underbar {
+          width: 84px;
+          height: 4px;
+          background-color: $cinnabar;
+          margin-bottom: 4rem;
+        }
       }
       .statistic {
-        margin-bottom: 3 * $spacer;
+        margin-bottom: 1 * $spacer;
         display: flex;
         span {
           display: block;
@@ -176,6 +198,7 @@
           font-weight: $font-weight-light;
           color: $steel-gray;
           vertical-align: top;
+          max-width: 66%;
 
           @include media-breakpoint-up(xl) {
             //margin-right: 1 * $text-panel-buffer;
@@ -195,6 +218,7 @@
         flex-basis: calc(#{$column} * 7);
         padding: $text-panel-buffer-sm;
         .controls {
+          margin-top: 3.2rem;
           .eclipses {
             bottom: $text-panel-buffer-sm;
             left: $text-panel-buffer-sm;
@@ -209,7 +233,7 @@
     
     @include media-breakpoint-up(md) {
       .carousel.slide {
-        flex-basis: calc(100vw * 6.5 / 12);
+        flex-basis: calc(100vw * 7 / 12);
       }
       .caro-text-panel {
         flex-basis: 0;
