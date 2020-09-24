@@ -192,7 +192,6 @@ const SchoolPage = ({ data, ...props }) => {
 
   const printPage = () => {
     if (window) {
-      window.print()
       const trackingData = {
         event_category: "School View",
         event_action: "Print school view",
@@ -200,7 +199,8 @@ const SchoolPage = ({ data, ...props }) => {
         value: school.SLN,
       }
       typeof window !== "undefined" &&
-        window.gtag("event", "click", { ...trackingData })
+        window.gtag("event", "print", { ...trackingData })
+      window.print()
     }
   }
 
