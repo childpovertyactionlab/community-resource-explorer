@@ -10,7 +10,10 @@ const AnimatedScroll = ({ ...props }) => {
     {
       id: "01",
       text:
-        "Each community is represented by a two-mile radius around a school.",
+        <div>
+        <span>In the Explorer</span>
+        Each community is represented by a two-mile radius around a school.
+        </div>
     },
     {
       id: "02",
@@ -21,14 +24,14 @@ const AnimatedScroll = ({ ...props }) => {
       id: "03",
       text:
         <div>The color scale illustrates how well school communities are resourced.
-          <img src="/images/scale.svg"  />
+          <img id="colorscale" src="/images/scale.svg"  />
         </div>
     },
     {
       id: "04",
       text: 
        <div>Learn more about your community's assets and needs
-         <a href="/explorer">Go the the explorer <img src="/images/rt-arrow-orange.svg" /></a>
+         <a href="/explorer">Go the the explorer <img class="rt-arrow-orange" src="/images/rt-arrow-orange.svg" /></a>
        </div>
     },
     

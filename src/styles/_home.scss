@@ -118,30 +118,68 @@
     @include media-breakpoint-only(xs) {
       margin-bottom: 6 * $spacer;
     }
+    .escapes {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+      @include media-breakpoint-up(md) {
+        margin-right: 3.2rem;
+      }
+    }
   }
 
   .quote {
     @include quote-styles;
-  
-     
+
+      .text {
+        font-family: Halyard Text;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: -1px;
+        color: #545E33;
+        border-top: none;
+        font-size: 24px;
+        @include media-breakpoint-up(md) {
+          line-height: 1.3;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 30px;
+          line-height: 1.17;
+        }
+      }
+      .attribution {
+        font-family: Halyard Text;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        @include media-breakpoint-up(xl) {
+          font-size: 30px;
+        }
+        line-height: 1.17;
+        /* or 117% */
+        letter-spacing: -1px;
+        color: #E55934;
+      }
         background: $bridal-heath;
       &.light, &.dark {
         .text {
-          border-top: 4px solid $cinnabar;
+          border-top: none;
           border-bottom: none !important;
           padding-top: 4 * $spacer;
           padding-bottom: 4 * $spacer;
-          margin-bottom: 0 * $spacer;
+          margin-bottom: 3 * $spacer;
           
           @include media-breakpoint-up(md) {
-            padding-top: 4 * $spacer;
-            padding-bottom: 4 * $spacer;
-            margin-bottom: 0 * $spacer;
+           padding-top: 0 * $spacer;
+            padding-bottom: 0 * $spacer;
+            margin-bottom: 3 * $spacer;
           }
           @include media-breakpoint-up(xl) {
-            padding-top: 4 * $spacer;
-            padding-bottom: 4 * $spacer;
-            margin-bottom: 0 * $spacer;
+          //  padding-top: 4 * $spacer;
+          //  padding-bottom: 4 * $spacer;
+            margin-bottom: 3 * $spacer;
           }
         }
       }

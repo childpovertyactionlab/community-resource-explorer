@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
 import { pages } from "../consts"
-import escapes from "../images/fire-escapes.png"
+import escapes from "../images/playground.jpg"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
@@ -15,9 +15,9 @@ import CustomLink from "../components/customLink"
 import AnimatedScroll from "../components/AnimatedScroll/AnimatedScroll"
 
 const q1 = {
-  superhead: `Voices from the Community`,
-  text: `Affordable housing is one of [our] greatest needs. Other economic hardships stem from that. If my housing isn't affordable, everything else is less affordable.`,
-  attribution: "Pleasant Grove assistant principal",
+  superhead: '',
+  text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores and doctor’s offices and park space, but many others are not.`,
+  attribution: "The Community Resource Explorer visualizes these assets and disparities.",
 }
 const q2 = {
   superhead: `Voices from the Community`,
@@ -58,101 +58,38 @@ const home = ({ location }) => {
           </span>{" "}
           so individuals and institutions can have the greatest impact.
         </p>
+        <div className="hero-links">
+          <a href="/">Learn more</a>
+          <a href="/">Go to the Explorer</a>
+        </div>
         <InlineSvg type="down-arrow" />
       </Hero>
 
       <Row id="page">
         <Col
-          className="p-0 image-by-quote"
+          className="p-0 image-by-quote" // 2nd panel image ------------------------------------
           xs={{ offset: 2, span: 8 }}
-          // md={{ offset: 1, span: 5 }}
-          md={{ offset: 1, span: 3 }}
+          md={{ offset: 1, span: 4 }}
+          lg={{ offset: 2, span: 3 }}
+          xl={{ offset: 2, span: 3 }}
         >
-          <img alt="Escapes" src={escapes} />
+          <div className="escapes" style={{ backgroundImage: `url(${escapes})` }} alt="Escapes" />
         </Col>
 
         <Col
-          xs={{ offset: 1, span: 10 }}
+          xs={{ offset: 1, span: 10 }} // 2nd panel text -----------------------------------------
           // md={{ offset: 1, span: 4 }}
-          md={{ offset: 1, span: 6 }}
+          md={{ offset: 0, span: 6 }}
+          lg={{ offset: 0, span: 5 }}
+          xl={{ offset: 0, span: 5 }}
           className="quote-by-image quote light no-bg p-0"
         >
-          <div className="superheading">{q1.superhead}</div>
-          <div className="text">“{q1.text}”</div>
+          <div className="text">{q1.text}</div>
           <div className="attribution">{q1.attribution}</div>
         </Col>
 
-        <Col
-          className="p-0 image-over-quote"
-          xs={{ offset: 1, span: 10 }}
-          md={{ offset: 4, span: 7 }}
-          xl={{ offset: 5, span: 5 }}
-        >
-          <img alt="kids" src={kids} />
-        </Col>
-
-        <Col
-          xs={{ offset: 1, span: 10 }}
-          md={{ offset: 4, span: 7 }}
-          xl={{ offset: 5, span: 5 }}
-          className="quote-under-image quote dark no-bg no-border p-0"
-        >
-          <div className="superheading">{q1.superhead}</div>
-          <div className="text">
-            “{q2.text}”<div className="attribution">{q2.attribution}</div>
-          </div>
-        </Col>
         <AnimatedScroll />
-        <Col
-          xs={{ offset: 0, span: 12 }}
-          // md={{ offset: 1, span: 4 }}
-          // md={{ offset: 5, span: 5 }}
-          className="cre-rect p-0"
-        >
-          <div className="bg-image">{/* <img src={mapRect} /> */}</div>
-          <div className="content">
-            <div className="text">
-              <p className="description description-medium">
-                Learn more about your community's <br></br>assets and needs by
-                using the
-              </p>
-              <h1 className="">Community Resource Explorer</h1>
-              <p className="description">
-                Get data on schools and their surrounding communities, download
-                reports, and more.
-              </p>
-              <div className="go-to" role="button">
-                <button
-                  onClick={() => navigate(pages.EXPLORER.path)}
-                  onKeyDown={() => navigate(pages.EXPLORER.path)}
-                >
-                  Go to the explorer <InlineSvg type="right-arrow" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </Col>
 
-        <Col
-          xs={{ offset: 0, span: 12 }}
-          md={{ offset: 1, span: 10 }}
-          xl={{ offset: 1, span: 9 }}
-          // md={{ offset: 5, span: 5 }}
-          className="p-0"
-        >
-          <div className="quote-with-image">
-            <div className="quote dark">
-              <div className="text">
-                <div className="superheading">{q1.superhead}</div>“{q3.text}”
-                <div className="attribution">{q3.attribution}</div>
-              </div>
-            </div>
-
-            <div className="image-wrapper">
-              <img alt="bank" src={bank} />
-            </div>
-          </div>
-        </Col>
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
           <span className="custom-underline">Recent blog</span> posts
