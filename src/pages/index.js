@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
-import { pages } from "../consts"
+import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
@@ -13,6 +13,7 @@ import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import AnimatedScroll from "../components/AnimatedScroll/AnimatedScroll"
+import { Link } from "react-scroll"
 
 const q1 = {
   superhead: '',
@@ -59,7 +60,9 @@ const home = ({ location }) => {
           so individuals and institutions can have the greatest impact.
         </p>
         <div className="hero-links caption">
-          <a href="#page" className="jump">Learn more <InlineSvg type="down-arrow-sm" /></a>
+          <Link to="page" smooth={true} offset={-stickyHeaderHeight}>
+            <a href="">Learn more <InlineSvg type="down-arrow-sm" /></a>
+          </Link>
           <a href="/explorer">Go to the Explorer <InlineSvg type="down-arrow-sm" /></a>
         </div>
         
