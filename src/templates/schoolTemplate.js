@@ -193,15 +193,10 @@ const SchoolPage = ({ data, ...props }) => {
   const printPage = () => {
     if (window) {
       window.print()
-
       const trackingData = {
-        // string - required - The object that was interacted with (e.g.video)
-        category: "Print School View",
-        // string - required - Type of interaction (e.g. 'play')
-        action: "click",
-        // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-        label: school.SCHOOLNAME,
-        // number - optional - Numeric value associated with the event. (e.g. A product ID)
+        event_category: "School View",
+        event_action: "Print school view",
+        event_label: school.SCHOOLNAME,
         value: school.SLN,
       }
       typeof window !== "undefined" &&
