@@ -35,23 +35,17 @@ It accepts a `toggleMenu` prop that is a function, which toggles the parent site
 
 ## Google Analytics Tracking
 
-This site uses the [gatsby-plugin-google-analytics](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/) plugin for GA event tracking. To register a custom event, your import and call should look like so: 
+This site uses the [gatsby-plugin-google-gtag](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/) plugin for GA event tracking. To register a custom event, your call should look like so: 
 
-```
-// Import tracking method
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
-
-// Call tracking method inside you component
-trackCustomEvent({
-  // string - required - The object that was interacted with (e.g.video)
-  category: "Special Button",
-  // string - required - Type of interaction (e.g. 'play')
-  action: "Click",
-  // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-  label: "Gatsby Plugin Example Campaign",
-  // number - optional - Numeric value associated with the event. (e.g. A product ID)
-  value: 43
-})
+```js
+const trackingData = {
+  event_category: "Any Category",
+  event_action: "Any Action",
+  event_label: labelString,
+  value: valueNumber,
+}
+typeof window !== "undefined" &&
+  window.gtag("event", "any_event_name", { ...trackingData })
 ```
 
 This site passes the Google Analytics Tracking ID in to the site during build. Provide it in your `.env.development` and in the Environment variables for the Netlify build: 
