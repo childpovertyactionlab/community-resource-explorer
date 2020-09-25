@@ -74,7 +74,7 @@ const ExplorerSteps = ({ className, ...props }) => {
           <p>
             <span>Learn more about your community's assets and needs</span>
             <a href="/explorer">
-              Go to the explorer{" "}
+              Go to the Explorer{" "}
               <img
                 className="rt-arrow-orange"
                 src="/images/rt-arrow-orange.svg"

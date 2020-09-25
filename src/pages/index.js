@@ -75,7 +75,7 @@ const home = ({ location }) => {
           <Col
             className="p-0 image-by-quote"
             xs={{ offset: 1, span: 10 }}
-            md={{ offset: 1, span: 4 }}
+            md={{ offset: 1, span: 5 }}
             lg={{ offset: 2, span: 3 }}
             xl={{ offset: 2, span: 3 }}
           >
@@ -88,7 +88,7 @@ const home = ({ location }) => {
           {/** Removed from below // md={{ offset: 1, span: 4 }} */}
           <Col
             xs={{ offset: 1, span: 10 }}
-            md={{ offset: 0, span: 6 }}
+            md={{ offset: 0, span: 5 }}
             lg={{ offset: 0, span: 5 }}
             xl={{ offset: 0, span: 5 }}
             className="quote-by-image quote light no-bg p-0"

@@ -70,6 +70,9 @@
       rgba(255, 255, 255, 0) 100%
     );
     font-size: 30px;
+    p {
+      margin-bottom: 3.2rem;
+    }
     & > * {
       padding: 0;
       background: transparent;

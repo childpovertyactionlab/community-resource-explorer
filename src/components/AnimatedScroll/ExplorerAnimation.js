@@ -29,42 +29,42 @@ const ExplorerAnimation = ({ step, className, ...props }) => {
     <div className={clsx("expani", className)} {...props}>
       <svg className="expani__map" viewBox="0 0 760 475">
         <Background
-          initial={{ opacity: 0, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{
             opacity: step < 1 ? 0 : 1,
-            scale: step === 4 ? 0.9 : 1,
+            scale: step === 4 ? 0.7 : 0.8,
           }}
           transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ originX: "56%", originY: "58%" }}
         />
         <SelectedSchool
-          initial={{ opacity: 0, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{
             opacity: step < 1 || step > 4 ? 0 : 1,
-            scale: step === 4 ? 0.9 : 1,
+            scale: step === 4 ? 0.7 : 0.8,
           }}
           transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
         />
         <SchoolLabel
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, scale: 0.8, translateX: 5, translateY: 10 }}
           animate={{
-            opacity: step < 3 && step > 0 ? 1 : 0,
+            opacity: step < 3 && step > 0 ? 0.8 : 0,
           }}
           transition={{ duration: 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
         />
         <SmallCluster
-          initial={{ opacity: 0, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{
             opacity: step < 3 ? 0 : 1,
-            scale: step === 4 ? 0.9 : 1,
+            scale: step === 4 ? 0.7 : 0.8,
           }}
           transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
         />
         <LargeCluster
-          initial={{ opacity: 0, scale: 1 }}
+          initial={{ opacity: 0 }}
           variants={cluster}
           animate={step === 4 ? "show" : "hidden"}
           style={{ transformOrigin: "400px 250px" }}

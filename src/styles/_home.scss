@@ -11,12 +11,11 @@
     margin-top: $inter-spacer-xs;
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
-      margin-top: 4rem;
       margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-md;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 5.6rem;
+      margin-top: 8.8rem;
       margin-top: $inter-spacer-md;
       margin-bottom: $inter-spacer-xl;
     }
@@ -26,10 +25,12 @@
     @include media-breakpoint-up(md) {
       margin-top: 4rem;
       margin-top: $inter-spacer-md;
+      margin-top: 6.4rem;
       margin-bottom: 4rem;
     }
     @include media-breakpoint-up(xl) {
-      margin-bottom: 5.6rem;
+      margin-bottom: 8.8rem;
+      margin-top: 8.8rem;
     }
 
   }
@@ -58,6 +59,17 @@
     .hero-links {
       a {
         color: #656647;
+        cursor: pointer;
+        &:hover {
+          color: $cinnabar;
+          text-decoration: none;
+          svg {
+            stroke: $cinnabar;
+          }
+        }
+        svg {
+          stroke: #656647;
+        }
         &:first-child {
           margin-right: 2.4rem;
         }
@@ -72,7 +84,7 @@
     .image-section {
       img {
         @include media-breakpoint-only(md) {
-          width: 126%;
+          width: 133%;
         }
       }
     }
@@ -80,7 +92,7 @@
     .content {
       padding-bottom: 5 * $spacer;
       @include media-breakpoint-only(md) {
-        padding-top: 5 * $spacer;
+        padding-top: 7 * $spacer;
       }
       @include media-breakpoint-only(lg) {
         padding-bottom: 10 * $spacer;
@@ -137,6 +149,9 @@
 
   #panelTwo {
     @include media-breakpoint-up(md) {
+      margin-bottom: 6.4rem;
+    }
+    @include media-breakpoint-up(lg) {
       margin-bottom: 8.8rem;
     }
   }
