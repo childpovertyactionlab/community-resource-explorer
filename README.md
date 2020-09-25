@@ -17,20 +17,20 @@ The schools component renders a static map with a single school location using '
 1. To use it locally, add a `.env.development` file to the root of the project. 
 2. Add the following: 
 ```
-MAPBOX_USER=[ADD USER HERE]
-MAPBOX_API_TOKEN=[ADD TOKEN HERE]
+GATSBY_MAPBOX_USER=[ADD USER HERE]
+GATSBY_MAPBOX_API_TOKEN=[ADD TOKEN HERE]
 ```
 3. Never commit your `.env` files to a git repository.
 
-For the map to work properly when built on Netlify, it will be necessary to add the Mapbox API token using the Netlify environment variables. 
+For the map to work properly when built on Netlify, it will be necessary to add the Mapbox API token using the Netlify environment variables. It is also necessary for environment variables to be prefaced with `GATSBY_`, or else they are not passed to the Gatsby build process during Netlify's build.
 
 ## Explorer Component
 
 The explorer requires the following API settings in your local `.env` file or in the Netlify build environment variables: 
 
 ```
-MAPBOX_USER=[ADD USER HERE]
-MAPBOX_API_TOKEN=[ADD TOKEN HERE]
+GATSBY_MAPBOX_USER=[ADD USER HERE]
+GATSBY_MAPBOX_API_TOKEN=[ADD TOKEN HERE]
 ```
 
 It accepts a `toggleMenu` prop that is a function, which toggles the parent site nav menu.
