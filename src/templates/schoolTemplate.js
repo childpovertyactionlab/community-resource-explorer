@@ -5,7 +5,7 @@ import circle from "@turf/circle"
 import i18n from "@pureartisan/simple-i18n"
 import { Col, Row, Button } from "react-bootstrap"
 import clsx from "clsx"
-import { FaPrint, FaInfoCircle } from "react-icons/fa"
+import { FaInfoCircle } from "react-icons/fa"
 
 // import { logger } from "./../utils/logger"
 import Layout from "../components/layout"
@@ -230,93 +230,168 @@ const SchoolPage = ({ data, ...props }) => {
         description={""}
       />
       <SchoolHero wide={true} className="school-metadata custom-feeder-prose">
-        {/** Row with map and heading */}
-        {/**<Row className="school-metadata custom-feeder-prose"> */}
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 5, offset: 1 }}
-          className="school-intro"
-        >
-          <h2>{school.SCHOOLNAME}</h2>
-          <h4>
-            {school.ADDRESS}
-            <br />
-            {school.CITY}, TX {school.ZIP}
-            <br />
-            {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
-          </h4>
-          {/**
-            <h3>
-              {i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })}
-            </h3>
-            */}
-          <Button
-            aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
-            color="none"
-            onClick={printPage}
-            className="print-school-page"
+        <div className="row-replacement-hack row">
+          {/** ^Necessary to mimic row behavior because the navbar and hero row are packaged together. */}
+          <Col
+            xs={{ span: 10, offset: 1 }}
+            md={{ span: 4, offset: 1 }}
+            className="school-intro"
           >
-            <FaPrint /> {i18n.translate("SCHOOL_BUTTON_PRINT")}
-            <span className="sr-only">
-              {i18n.translate("SCHOOL_BUTTON_PRINT")}
-            </span>
-          </Button>
-        </Col>
-        <Col
-          className="map-section"
-          xs={{ span: 12, offset: 0 }}
-          md={{ span: 6, offset: 0 }}
-        >
-          <div
-            className="map-parent"
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <StaticMap
-              {...viewport}
-              mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
-              mapStyle={defaultMapStyle}
-              aria-describedby="map_descriptor"
-            >
-              <Marker
-                latitude={viewport.latitude}
-                longitude={viewport.longitude}
+            <div className="center-me">
+              <h2>{school.SCHOOLNAME}</h2>
+              <h4>
+                {school.ADDRESS}
+                <br />
+                {school.CITY}, TX {school.ZIP}
+                <br />
+                {i18n.translate("UI_MAP_TOOLTIP_FEEDER", {
+                  name: school.Feeder,
+                })}
+              </h4>
+              <Button
+                aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
+                color="none"
+                onClick={printPage}
+                className="print-school-page"
               >
-                <div
-                  style={{
-                    width: "10px",
-                    height: "10px",
-                    borderRadius: "5px",
-                    border: "1px solid #fff",
-                    backgroundColor: CRI_COLORS[school.cri_weight_sd],
-                  }}
-                ></div>
-              </Marker>
-              <Source id="my-data" type="geojson" data={zoneJson}>
-                <Layer
-                  id="point"
-                  type="fill"
-                  paint={{
-                    "fill-color": CRI_COLORS[school.cri_weight_sd],
-                    "fill-opacity": 0.2,
-                  }}
-                />
-              </Source>
-            </StaticMap>
+                {i18n.translate("SCHOOL_BUTTON_PRINT")}
+                <span className="sr-only">
+                  {i18n.translate("SCHOOL_BUTTON_PRINT")}
+                </span>
+              </Button>
+            </div>
+          </Col>
+          <Col
+            className="map-section"
+            xs={{ span: 12, offset: 0 }}
+            md={{ span: 6, offset: 0 }}
+          >
+            <div
+              className="map-parent"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <StaticMap
+                {...viewport}
+                mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
+                mapStyle={defaultMapStyle}
+                aria-describedby="map_descriptor"
+              >
+                <Marker
+                  latitude={viewport.latitude}
+                  longitude={viewport.longitude}
+                >
+                  <div
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "5px",
+                      border: "1px solid #fff",
+                      backgroundColor: CRI_COLORS[school.cri_weight_sd],
+                    }}
+                  ></div>
+                </Marker>
+                <Source id="my-data" type="geojson" data={zoneJson}>
+                  <Layer
+                    id="point"
+                    type="fill"
+                    paint={{
+                      "fill-color": CRI_COLORS[school.cri_weight_sd],
+                      "fill-opacity": 0.2,
+                    }}
+                  />
+                </Source>
+              </StaticMap>
+            </div>
+          </Col>
+          <Col
+            className="map-descriptor"
+            xs={{ span: 10, offset: 1 }}
+            md={{ span: 3, offset: 5 }}
+          >
+            <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
+          </Col>
+        </div>
+      </SchoolHero>
+      {/** Demographics row*/}
+      <Row className="demographics">
+        <Col
+          className="demo-title"
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 1 }}
+        >
+          <div className="parent-label">
+            {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
           </div>
         </Col>
         <Col
-          className="map-descriptor"
-          xs={{ span: 12, offset: 0 }}
-          md={{ span: 3, offset: 6 }}
+          className="demo-first"
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 3, offset: 0 }}
         >
-          <p id="map_descriptor">{i18n.translate("SCHOOL_MAP_DESCRIPTOR")}</p>
+          <div className="center-me">
+            <div className="demo demo-bl">
+              <span className="percent">
+                {getRoundedValue(school.dem_totp, 0)}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
+            </div>
+            <div className="demo demo-bl">
+              <span className="percent">
+                {getRoundedValue(school.dem_popch, 0)}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
+            </div>
+            <div className="demo demo-bl">
+              <span className="percent">
+                {getRoundedValue(
+                  getPercent(school.dem_popbl, school.dem_totp),
+                  1
+                ) + "%"}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_POPBL")}
+            </div>
+          </div>
         </Col>
-        {/**</Row>*/}
-      </SchoolHero>
-
+        <Col
+          className="demo-second"
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 3, offset: 0 }}
+        >
+          <div classname="center-me">
+            <div className="demo demo-hi">
+              <span className="percent">
+                {getRoundedValue(
+                  getPercent(school.dem_pophi, school.dem_totp),
+                  1
+                ) + "%"}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_POPHI")}
+            </div>
+            <div className="demo demo-as">
+              <span className="percent">
+                {getRoundedValue(
+                  getPercent(school.dem_popas, school.dem_totp),
+                  1
+                ) + "%"}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_POPAS")}
+            </div>
+            <div className="demo demo-wh">
+              <span className="percent">
+                {getRoundedValue(
+                  getPercent(school.dem_popwh, school.dem_totp),
+                  1
+                ) + "%"}
+              </span>
+              {i18n.translate("UI_MAP_METRIC_DEM_POPWH")}
+            </div>
+          </div>
+        </Col>
+      </Row>
+      {/** End demographics row*/}
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
         <Col
@@ -324,8 +399,21 @@ const SchoolPage = ({ data, ...props }) => {
           md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
+          <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
+          <p>{i18n.translate(`SCHOOL_CRI_DESCRIPTOR`)}</p>
+          <Link to="/faq/#about-8" className="link-mean-info-button">
+            <FaInfoCircle />
+            <span className="mean-info-button">
+              Why is the mean not always in the middle of the scale?
+            </span>
+          </Link>
+        </Col>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 0 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
           <div className="metric-group">
-            <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
             <NonInteractiveScale
               className="metric-group"
               metric="cri_weight"
@@ -351,84 +439,6 @@ const SchoolPage = ({ data, ...props }) => {
               showLegend={true}
             />
           </div>
-          <Link to="/faq/#about-8" className="link-mean-info-button">
-            <FaInfoCircle />
-            <span className="mean-info-button">
-              Why is the mean not always in the middle of the scale?
-            </span>
-          </Link>
-        </Col>
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          lg={{ span: 4, offset: 1 }}
-          className="custom-feeder"
-        >
-          <div className="demo-callout">
-            <div className="parent-label">
-              {i18n.translate("SCHOOL_PROSE_DEMO_LABEL")}
-              <hr></hr>
-            </div>
-            <div className="demographics">
-              <div className="demo demo-bl">
-                <span className="percent">
-                  {getRoundedValue(school.dem_totp, 0)}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
-              </div>
-              <div className="demo demo-bl">
-                <span className="percent">
-                  {getRoundedValue(school.dem_popch, 0)}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
-              </div>
-              <div className="demo demo-bl">
-                <span className="percent">
-                  {getRoundedValue(
-                    getPercent(school.dem_popbl, school.dem_totp),
-                    1
-                  ) + "%"}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_POPBL")}
-              </div>
-              <div className="demo demo-hi">
-                <span className="percent">
-                  {getRoundedValue(
-                    getPercent(school.dem_pophi, school.dem_totp),
-                    1
-                  ) + "%"}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_POPHI")}
-              </div>
-              <div className="demo demo-as">
-                <span className="percent">
-                  {getRoundedValue(
-                    getPercent(school.dem_popas, school.dem_totp),
-                    1
-                  ) + "%"}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_POPAS")}
-              </div>
-              <div className="demo demo-wh">
-                <span className="percent">
-                  {getRoundedValue(
-                    getPercent(school.dem_popwh, school.dem_totp),
-                    1
-                  ) + "%"}
-                </span>
-                {i18n.translate("UI_MAP_METRIC_DEM_POPWH")}
-              </div>
-            </div>
-          </div>
-        </Col>
-      </Row>
-
-      <Row className="custom-feeder-prose">
-        <Col
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
-          className={clsx("metric-collection-cri_weight", "metric-collection")}
-        >
-          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <p
@@ -453,7 +463,15 @@ const SchoolPage = ({ data, ...props }) => {
             }}
           ></p>
         </Col>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 4, offset: 0 }}
+          className={clsx("metric-collection-cri_weight", "metric-collection")}
+        >
+          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
+        </Col>
       </Row>
+      <Row className="custom-feeder-prose"></Row>
 
       {/** Iterate through other categories */}
       {categories.map(el => {
