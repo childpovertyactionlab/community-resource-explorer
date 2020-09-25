@@ -4,5 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
-import "./src/styles/style.scss"
+// load styles
+require("./src/styles/style.scss");
+// load instersection observer polyfill
+require("intersection-observer");
+
+exports.onClientEntry = () => {
+  // Don't need to do anything here, but if you don't 
+  // export something, the import won't work.
+  // See: https://github.com/gatsbyjs/gatsby/issues/2177#issuecomment-382280801
+}
