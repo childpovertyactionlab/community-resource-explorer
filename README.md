@@ -33,8 +33,6 @@ GATSBY_MAPBOX_USER=[ADD USER HERE]
 GATSBY_MAPBOX_API_TOKEN=[ADD TOKEN HERE]
 ```
 
-It accepts a `toggleMenu` prop that is a function, which toggles the parent site nav menu.
-
 ## Google Analytics Tracking
 
 This site uses the [gatsby-plugin-google-gtag](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/) plugin for GA event tracking. To register a custom event, your call should look like so: 
@@ -55,3 +53,5 @@ This site passes the Google Analytics Tracking ID in to the site during build. P
 ```
 GATSBY_GA_TRACKING_ID=[id]
 ```
+
+Note that you cannot test this plugin locally using Gatsby in development mode; you must run `gatsby develop && gatsby serve`, which will launch Gatsby on a separate port (localhost:9000).
