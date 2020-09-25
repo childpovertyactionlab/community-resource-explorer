@@ -69,8 +69,19 @@
       }
     }
 
+    .image-section {
+      img {
+        @include media-breakpoint-only(md) {
+          width: 126%;
+        }
+      }
+    }
+
     .content {
       padding-bottom: 5 * $spacer;
+      @include media-breakpoint-only(md) {
+        padding-top: 5 * $spacer;
+      }
       @include media-breakpoint-only(lg) {
         padding-bottom: 10 * $spacer;
         .caption {

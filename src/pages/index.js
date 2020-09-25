@@ -61,7 +61,7 @@ const home = ({ location }) => {
           so individuals and institutions can have the greatest impact.
         </p>
         <div className="hero-links caption">
-          <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight}>
+          <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight -48}>
             <a href="">
               Learn more <InlineSvg type="down-arrow-sm" />
             </a>

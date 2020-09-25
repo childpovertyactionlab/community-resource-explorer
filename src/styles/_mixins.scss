@@ -260,6 +260,14 @@
       
       padding-top: 3 * $spacer;
       font-size: 24px;
+      a {
+        color: unset;
+        transition: color .3s ease;
+        &:hover {
+          color: $cinnabar;
+          text-decoration: none;
+        }
+      }
     }
     .post-contents {
       font-weight: $font-weight-light;
@@ -291,14 +299,7 @@
     .post-details {
       .post-title {
         font-size: 30px;
-        a {
-          color: unset;
-          transition: color .3s ease;
-          &:hover {
-            color: $cinnabar;
-            text-decoration: none;
-          }
-        }
+        
       }
       .post-contents {
         font-size: 16px;
