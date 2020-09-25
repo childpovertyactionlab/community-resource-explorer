@@ -121,6 +121,32 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
             />
           </svg>
         )
+      case "down-arrow-sm":
+        return (
+          <svg
+            width="9"
+            height="10"
+            viewBox="0 0 9 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.44849 9.26255L4.44849 3.20812L4.44849 0.180908"
+              stroke="#656647"
+              strokeWidth="0.686"
+            />
+            <path
+              d="M8.91797 4.74146V4.74146C6.45533 4.74145 4.45897 6.7783 4.45897 9.24094V9.24094"
+              stroke="#656647"
+              strokeWidth="0.686"
+            />
+            <path
+              d="M0 4.74146V4.74146C2.46264 4.74146 4.459 6.7783 4.459 9.24094V9.24094"
+              stroke="#656647"
+              strokeWidth="0.686"
+            />
+          </svg>
+        )
       case "eclipse":
         return (
           <svg
