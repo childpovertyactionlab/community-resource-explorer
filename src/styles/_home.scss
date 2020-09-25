@@ -48,6 +48,9 @@
     .color-section {
       background: $old-lace;
       flex: 350px 7 7; // gives more vert space for text to take up 
+      @include media-breakpoint-only(xs) {
+        display: block;
+      }
     }
     .emphasis {
       color: $cinnabar;
