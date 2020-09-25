@@ -4,13 +4,13 @@ from = "/"
   status = 301
   force=true
 [[redirects]]
-from = "/faqs"
-  to = "https://dallasisd.resourceexplorer.org/faqs"
+from = "/faq"
+  to = "https://dallasisd.resourceexplorer.org/faq"
   status = 301
   force=true   
 [[redirects]]
-from = "/explorer-in-action"
-  to = "https://dallasisd.resourceexplorer.org/explorer-in-action"
+from = "/in-action/*"
+  to = "https://dallasisd.resourceexplorer.org/in-action/:splat"
   status = 301
   force=true  
 [[redirects]]  
@@ -27,7 +27,18 @@ from = "/contact"
 from = "/explorer"
   to = "https://dallasisd.resourceexplorer.org/explorer"
   status = 301
-  force=true          
+  force=true  
+[[redirects]]  
+from = "/explorer"
+  to = "https://dallasisd.resourceexplorer.org/get-the-data"
+  status = 301
+  force=true   
+[[redirects]]  
+from = "/schools/*"
+  to = "https://dallasisd.resourceexplorer.org/schools/:splat"
+  status = 301
+  force=true    
+
   
 
 
