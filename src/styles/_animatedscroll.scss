@@ -106,9 +106,12 @@ $topOffset: 64px; // sticky header height
 }
 
 // step 3 specific styles
-.animation__step.animation__step--3 {
-  img {
-    max-width: 320px;
+@media (min-width: 600px) {
+  // prevent legend from getting too big on large displays
+  .animation__step.animation__step--3 {
+    img {
+      max-width: 320px;
+    }
   }
 }
 
