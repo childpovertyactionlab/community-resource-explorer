@@ -173,7 +173,7 @@ const en_US = {
   SCHOOL_PROSE_QUINTILE_FIFTH: `<p>{schoolname} is in the fifth quintile of schools in our Community Resource Index. (School communities in this quintile are the most asset-rich.) See below for a full breakdown of its resources by category and measure.</p>`,
   SCHOOL_PROSE_TOP: `Based on how this school community compares to others, the data suggest that the following might be assets/strengths: {quintiles}.`,
   SCHOOL_PROSE_BOTTOM: `Based on how this school community compares to others, the data suggest that the following might be needs/areas for additional resources: {quintiles}.`,
-  SCHOOL_BUTTON_PRINT: `PRINT PDF`,
+  SCHOOL_BUTTON_PRINT: `Print PDF`,
   SCHOOL_PROSE_RACE: `The racial makeup of this community is {black}% Black, {hispanic}% Hispanic, {asian}% Asian, and {white}% white.`,
   SCHOOL_PROSE_DEMO_LABEL: `Residents in this campus community`,
   SCHOOL_MAP_DESCRIPTOR: `The data on this page is representative of the 2-mile radius around the
@@ -188,5 +188,6 @@ const en_US = {
   SCHOOL_SCALE_COMM_REL: `This community relative to average`,
   SCHOOL_SCALE_MIN: `Min`,
   SCHOOL_SCALE_MAX: `Max`,
+  SCHOOL_CRI_DESCRIPTOR: `The Community Resource Index is an average of all Index categories (economics, education, family, health, and community). It presents an overall view of the resources available to each school’s surrounding community.`,
 }
 export default en_US
