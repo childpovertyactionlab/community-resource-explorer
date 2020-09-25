@@ -14,7 +14,7 @@ import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
 import { Link } from "gatsby"
-
+import { Link as ScrollLink } from "react-scroll"
 const q1 = {
   superhead: "",
   text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
@@ -61,11 +61,11 @@ const home = ({ location }) => {
           so individuals and institutions can have the greatest impact.
         </p>
         <div className="hero-links caption">
-          <Link to="page" smooth={true} offset={-stickyHeaderHeight}>
+          <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight}>
             <a href="">
               Learn more <InlineSvg type="down-arrow-sm" />
             </a>
-          </Link>
+          </ScrollLink>
           <a href="/explorer">
             Go to the Explorer <InlineSvg type="down-arrow-sm" />
           </a>
