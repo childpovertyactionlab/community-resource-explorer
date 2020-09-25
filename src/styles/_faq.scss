@@ -198,6 +198,10 @@ $method-breath-xl: 11 * $spacer;
       }
     }
 
+    .custom-link {
+      display: table;
+    }
+
     .section-title {
       padding-top: 0;
       padding-bottom: 6 * $spacer;
@@ -223,7 +227,7 @@ $method-breath-xl: 11 * $spacer;
 
       .description {
         .text {
-          padding-bottom: 6 * $spacer;
+          padding-bottom: 4 * $spacer;
         }
       }
     }
@@ -243,7 +247,7 @@ $method-breath-xl: 11 * $spacer;
         .text {
           font-size: 20px;
           line-height: 27px;
-          padding-bottom: 8 * $spacer;
+          padding-bottom: 4 * $spacer;
         }
       }
     }

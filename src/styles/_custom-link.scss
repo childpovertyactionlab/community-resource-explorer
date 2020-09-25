@@ -1,6 +1,7 @@
 .custom-link {
   
   font-size: 14px;
+  transition: color .2s ease;
   @include media-breakpoint-up(xl) {
     font-size: 16px;
   }
@@ -10,7 +11,9 @@
   &:hover {
     .right-arrow svg {
       margin-left: 14px;
+      stroke: $cinnabar;
     }
+    color: $cinnabar;
   }
   cursor: pointer;
   
@@ -26,6 +29,9 @@
   &.underlined {
     padding: 0 2rem;
     border-bottom: solid $black 1px;
+    &:hover {
+      border-bottom-color: $cinnabar;
+    }
   }
 
   .right-arrow {
