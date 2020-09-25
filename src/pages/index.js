@@ -13,7 +13,7 @@ import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import { Link } from "react-scroll"
-import ExplorerSteps from "../components/AnimatedScroll/ExplorerSteps"
+import ExplorerSteps from "../components/AnimatedScroll"
 
 const q1 = {
   superhead: "",

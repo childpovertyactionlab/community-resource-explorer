@@ -1,22 +1,23 @@
 import { motion } from "framer-motion"
 import React from "react"
-import { Tooltip } from "./assets/Tooltip"
-import { Background } from "./assets/Background"
-import { LargeCluster } from "./assets/LargeCluster"
-import { SchoolLabel } from "./assets/SchoolLabel"
-import { SelectedSchool } from "./assets/SelectedSchool"
-import { SmallCluster } from "./assets/SmallCluster"
+import { Tooltip } from "./components/Tooltip"
+import { Background } from "./components/Background"
+import { LargeCluster } from "./components/LargeCluster"
+import { SchoolLabel } from "./components/SchoolLabel"
+import { SelectedSchool } from "./components/SelectedSchool"
+import { SmallCluster } from "./components/SmallCluster"
 import clsx from "clsx"
 
 const ExplorerAnimation = ({ step, className, ...props }) => {
+  // states for the staggered large cluster animation
   const cluster = {
     hidden: { opacity: 0, scale: 1 },
     show: {
       opacity: 1,
       scale: 0.85,
       transition: {
-        duration: 2,
-        staggerChildren: 0.02,
+        duration: 1.2,
+        staggerChildren: 0.015,
       },
     },
   }
@@ -29,7 +30,7 @@ const ExplorerAnimation = ({ step, className, ...props }) => {
             opacity: step < 1 ? 0 : 1,
             scale: step === 4 ? 0.9 : 1,
           }}
-          transition={{ duration: step === 4 ? 2 : 0.6 }}
+          transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ originX: "56%", originY: "58%" }}
         />
         <SelectedSchool
@@ -38,13 +39,13 @@ const ExplorerAnimation = ({ step, className, ...props }) => {
             opacity: step < 1 || step > 4 ? 0 : 1,
             scale: step === 4 ? 0.9 : 1,
           }}
-          transition={{ duration: step === 4 ? 2 : 0.6 }}
+          transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
         />
         <SchoolLabel
           initial={{ opacity: 0 }}
           animate={{
-            opacity: step < 3 ? 1 : 0,
+            opacity: step < 3 && step > 0 ? 1 : 0,
           }}
           transition={{ duration: 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
@@ -55,7 +56,7 @@ const ExplorerAnimation = ({ step, className, ...props }) => {
             opacity: step < 3 ? 0 : 1,
             scale: step === 4 ? 0.9 : 1,
           }}
-          transition={{ duration: step === 4 ? 2 : 0.6 }}
+          transition={{ duration: step === 4 ? 1.2 : 0.6 }}
           style={{ transformOrigin: "400px 250px" }}
         />
         <LargeCluster
