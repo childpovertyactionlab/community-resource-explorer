@@ -7,8 +7,7 @@
     width: 100%;
   }
 
-  #page,
-  .cre-rect {
+  #page, .cre-rect {
     margin-top: $inter-spacer-xs;
     margin-bottom: $inter-spacer-xs;
     @include media-breakpoint-up(md) {
@@ -32,6 +31,7 @@
     @include media-breakpoint-up(xl) {
       margin-bottom: 5.6rem;
     }
+
   }
 
   .cre-rect {
@@ -46,16 +46,27 @@
   #hero {
     .color-section {
       background: $old-lace;
-
-      flex: 350px 7 7; // gives more vert space for text to take up
+      flex: 350px 7 7; // gives more vert space for text to take up 
     }
-
     .emphasis {
       color: $cinnabar;
     }
     .p-emphasis {
       color: $cinnabar;
       font-weight: 400;
+    }
+    .hero-links {
+      a {
+        color: #656647;
+        &:first-child {
+          margin-right: 2.4rem;
+        }
+        &:nth-child(2) {
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      }
     }
 
     .content {
@@ -71,12 +82,12 @@
           max-width: unset;
           margin-right: 2 * $column;
           @include media-breakpoint-up(md) {
-            margin-right: 0.8 * $column;
+            margin-right: .8 *  $column;
             font-size: 30px;
             line-height: 36px;
           }
           @include media-breakpoint-up(xl) {
-            margin-right: 0.8 * $column;
+            margin-right: .8 * $column;
             font-size: 50px;
             line-height: 55px;
             max-width: 560px;
@@ -88,10 +99,10 @@
       font-size: 16px;
       line-height: 1.5;
       font-weight: $font-weight-light;
-
+      
       margin-right: 2 * $column;
-      margin-top: 2 * $spacer;
-      margin-bottom: 6 * $spacer;
+      margin-top: 4 * $spacer;
+      margin-bottom: 1 * $spacer;
       @include media-breakpoint-up(md) {
         margin-right: $column;
         margin-top: 3 * $spacer;
@@ -101,7 +112,7 @@
         font-size: 18px;
         margin-right: 2 * $column;
         margin-top: 4 * $spacer;
-        margin-bottom: 10 * $spacer;
+        margin-bottom: 3 * $spacer;
       }
     }
 
@@ -113,37 +124,84 @@
     }
   }
 
+  #panelTwo {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8.8rem;
+    }
+  }
   .image-by-quote {
     @include media-breakpoint-only(xs) {
-      margin-bottom: 6 * $spacer;
+      margin-bottom: 1 * $spacer;
+      height: 240px;
+    }
+    .escapes {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+      @include media-breakpoint-up(md) {
+        margin-right: 3.2rem;
+      }
     }
   }
 
   .quote {
     @include quote-styles;
 
-    background: $bridal-heath;
-    &.light,
-    &.dark {
       .text {
-        border-top: 4px solid $cinnabar;
-        border-bottom: none !important;
-        padding-top: 4 * $spacer;
-        padding-bottom: 4 * $spacer;
-        margin-bottom: 0 * $spacer;
-
+        font-family: Halyard;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: -1px;
+        color: #545E33;
+        border-top: none;
+        font-size: 24px;
         @include media-breakpoint-up(md) {
-          padding-top: 4 * $spacer;
-          padding-bottom: 4 * $spacer;
-          margin-bottom: 0 * $spacer;
+          line-height: 1.3;
         }
         @include media-breakpoint-up(xl) {
+          font-size: 30px;
+          line-height: 1.17;
+        }
+      }
+      .attribution {
+        font-family: Halyard;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        @include media-breakpoint-only(xs) {
+          margin-bottom: 6 * $spacer
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 30px;
+        }
+        line-height: 1.17;
+        /* or 117% */
+        letter-spacing: -1px;
+        color: #E55934;
+      }
+        background: $bridal-heath;
+      &.light, &.dark {
+        .text {
+          border-top: none;
+          border-bottom: none !important;
           padding-top: 4 * $spacer;
           padding-bottom: 4 * $spacer;
           margin-bottom: 0 * $spacer;
+          
+          @include media-breakpoint-up(md) {
+           padding-top: 0 * $spacer;
+            padding-bottom: 0 * $spacer;
+            margin-bottom: 3 * $spacer;
+          }
+          @include media-breakpoint-up(xl) {
+          //  padding-top: 4 * $spacer;
+          //  padding-bottom: 4 * $spacer;
+            margin-bottom: 3 * $spacer;
+          }
         }
       }
-    }
     &.dark:not(.no-border) {
       .superheading {
         padding-bottom: 1.6rem;
@@ -154,9 +212,10 @@
         padding-bottom: 0;
       }
     }
+
   }
 
-  .quote-with-image {
+  .quote-with-image { 
     display: flex;
 
     .quote {
@@ -165,11 +224,11 @@
       @include media-breakpoint-up(md) {
         padding-right: 0 !important;
       }
-
+      
       @include media-breakpoint-up(xl) {
         // padding-right: $column !important;
       }
-
+    
       background: $bridal-heath;
       display: inline-block;
       .text {
@@ -223,6 +282,7 @@
         }
       }
     }
+
   }
 
   .image-over-quote {
@@ -232,6 +292,102 @@
     }
     @include media-breakpoint-up(xl) {
       margin-bottom: 6 * $spacer;
+    }
+  }
+
+  .cre-rect {
+    position: relative;
+    .bg-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-image: url("../images/map-screencap3.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position-y: bottom;
+    }
+    .content {
+      //background:transparentize($green-white, .25);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding-top: 8 * $spacer;
+      padding-bottom: 8 * $spacer;
+      @include media-breakpoint-up(md) {
+        padding-top: 10 * $spacer;
+        padding-bottom: 10 * $spacer;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-top: 12 * $spacer;
+        padding-bottom: 12 * $spacer;
+      }
+
+      .text {
+        text-align: center;
+
+        h1 {
+          margin-left: 1 * $column;
+          margin-right: 1 * $column;
+          font-size: 26px;
+          @include media-breakpoint-up(md) {
+            font-size: 30px;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 50px;
+          }
+          font-weight: $font-weight-bold;
+        }
+        .description {
+          font-size: 16px;
+          margin: 2 * $spacer auto;
+          width: 8 * $column;
+          @include media-breakpoint-up(md) {
+            width: 6 * $column;
+            font-size: 18px;
+            margin: 3 * $spacer auto;
+          }
+          @include media-breakpoint-up(xl) {
+            width: 4 * $column;
+            margin: 3 * $spacer auto;
+            // font-size: 18px;
+          }
+          font-weight: $font-weight-light;
+          line-height: 1.5;
+          &.description-medium {
+            font-weight: 400;
+          }
+        }
+        .go-to {
+          font-size: 16px;
+          cursor: pointer;
+          @include media-breakpoint-up(md) {
+            font-size: 22px;
+          }
+          button {
+            color: $cinnabar;
+            stroke: $cinnabar;
+            background: none;
+            border: none;
+            border-bottom: 1px solid $cinnabar;
+            padding: 0 2rem .8rem;
+            svg {
+              transition: margin-left .3s ease;
+            }
+            &:hover {
+              svg {
+                margin-left: 8px;
+              }
+            }
+          
+          }
+          
+        }
+      }
     }
   }
 
@@ -247,7 +403,7 @@
       margin-top: 9.6rem;
     }
   }
-
+  
   .post-section {
     @include blog-post-section-styles;
 
@@ -267,10 +423,10 @@
 
     &.second {
       @include media-breakpoint-up(md) {
-        margin-left: $gutter * 2 !important;
+        margin-left: $gutter*2 !important;
       }
     }
-
+    
     .post-image {
       margin: 0 0 1.6rem !important;
     }
