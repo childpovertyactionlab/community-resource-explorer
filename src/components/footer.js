@@ -1,6 +1,7 @@
 import React from "react"
 import { Col, Row } from "react-bootstrap"
 import { navigate } from "gatsby"
+import { Link } from "gatsby"
 import { menuPages } from "../consts"
 import twitterIcon from "../images/twitter.svg"
 
@@ -33,12 +34,12 @@ const Footer = () => {
                 </span>
               )
             })}
-            <img alt="Share on Twitter" src={twitterIcon} />
+            {/** <img alt="Share on Twitter" src={twitterIcon} /> */}
           </div>
 
           <div className="footnotes-row">
             <span>Map made possible by Mapbox</span>
-            <span>Site by Hyperobjekt</span>
+            <span><Link to="https://hyperobjekt.com">Site by Hyperobjekt</Link></span>
           </div>
         </div>
       </Col>

@@ -15,7 +15,9 @@
       margin-bottom: 8 * $spacer;
     }
   }
-
+  a {
+    color: unset;
+  }
   .branding-row {
     display: flex;
     justify-content: space-between;
