@@ -1,12 +1,14 @@
-# Gatsby React Bootstrap Starter
+# CPAL-Site
 
-A GatsbyJS starter that includes
+Repo for the Gatsby site for the CPAL Resource Explorer.
 
-- react-bootstrap
-- react-icons
-- sticky on scroll navbar
-- SASS compiler
-- basic layout
+## Contributing
+
+This repo presumes the eventual existence of multiple sites or districts presenting different datasets. At present, the only active production branch is `dallasisd`. This process will change when there are additional production branches for additional sites (subdomains).
+
+1. Check out a new branch from `master`.
+2. Merge your changes back into  `master` (or make a pull request to the same effect).
+3. Changes on `master` are published by merging into `dallasisd`.
 
 ## Schools Page Map
 
