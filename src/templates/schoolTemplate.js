@@ -209,6 +209,17 @@ const SchoolPage = ({ data, ...props }) => {
     i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder }),
   ]
 
+  const getCatDesc = catID => {
+    // console.log("getCatDesc(el.default_metric)", catID)
+    return CPAL_METRICS.filter(metric => {
+      return metric.id === catID
+    })[0]
+      ? CPAL_METRICS.filter(metric => {
+          return metric.id === catID
+        })[0].desc
+      : false
+  }
+
   return (
     <Layout
       className="school-page"
@@ -360,7 +371,7 @@ const SchoolPage = ({ data, ...props }) => {
           xs={{ span: 10, offset: 1 }}
           md={{ span: 3, offset: 0 }}
         >
-          <div classname="center-me">
+          <div className="center-me">
             <div className="demo demo-hi">
               <span className="percent">
                 {getRoundedValue(
@@ -394,14 +405,19 @@ const SchoolPage = ({ data, ...props }) => {
       {/** End demographics row*/}
       {/** Intro row */}
       <Row className="school-metadata custom-feeder-prose">
+        <Col xs={{ span: 10, offset: 1 }} className="section-heading">
+          <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
+        </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
           md={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-          <h4>{i18n.translate("SCHOOL_PROSE_CRI_SCORE")}</h4>
           <p>{i18n.translate(`SCHOOL_CRI_DESCRIPTOR`)}</p>
-          <Link to="/faq/#about-8" className="link-mean-info-button">
+          <Link
+            to="/faq/#about-8"
+            className="link-mean-info-button d-xs-none d-sm-none d-md-flex"
+          >
             <FaInfoCircle />
             <span className="mean-info-button">
               Why is the mean not always in the middle of the scale?
@@ -439,6 +455,15 @@ const SchoolPage = ({ data, ...props }) => {
               showLegend={true}
             />
           </div>
+          <Link
+            to="/faq/#about-8"
+            className="link-mean-info-button d-md-none d-lg-none d-xl-none"
+          >
+            <FaInfoCircle />
+            <span className="mean-info-button">
+              Why is the mean not always in the middle of the scale?
+            </span>
+          </Link>
         </Col>
         <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
           <p
@@ -471,8 +496,6 @@ const SchoolPage = ({ data, ...props }) => {
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
         </Col>
       </Row>
-      <Row className="custom-feeder-prose"></Row>
-
       {/** Iterate through other categories */}
       {categories.map(el => {
         return (
@@ -489,6 +512,14 @@ const SchoolPage = ({ data, ...props }) => {
               )}
             >
               <h5>{i18n.translate(el.title)}</h5>
+              {!!getCatDesc(el.default_metric) && (
+                <div
+                  className="metric-group cat-intro"
+                  dangerouslySetInnerHTML={{
+                    __html: i18n.translate(getCatDesc(el.default_metric)),
+                  }}
+                ></div>
+              )}
               {getMetricCollection(el.id, 0).map(el => {
                 // console.log(
                 //   "in metric collection, element = ",
@@ -497,7 +528,7 @@ const SchoolPage = ({ data, ...props }) => {
                 // )
                 return (
                   <div
-                    className="metric-group"
+                    className="metric-group level-0"
                     id={"metric_" + el.id}
                     key={"metric_" + el.id}
                   >
@@ -560,7 +591,7 @@ const SchoolPage = ({ data, ...props }) => {
                 // )
                 return (
                   <div
-                    className="metric-group"
+                    className="metric-group level-1"
                     id={"metric_" + el.id}
                     key={"metric_" + el.id}
                   >
