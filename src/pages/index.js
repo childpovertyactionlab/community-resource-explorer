@@ -61,10 +61,8 @@ const home = ({ location }) => {
           so individuals and institutions can have the greatest impact.
         </p>
         <div className="hero-links caption">
-          <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight -48}>
-            <a href="">
-              Learn more <InlineSvg type="down-arrow-sm" />
-            </a>
+          <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight - 48}>
+            Learn more <InlineSvg type="down-arrow-sm" />
           </ScrollLink>
           <a href="/explorer">
             Go to the Explorer <InlineSvg type="down-arrow-sm" />
@@ -73,11 +71,9 @@ const home = ({ location }) => {
       </Hero>
 
       <Row id="page">
-        <Col id="panelTwo" className="d-block d-md-flex"
-          xs="12"
-          >
+        <Col id="panelTwo" className="d-block d-md-flex" xs="12">
           <Col
-            className="p-0 image-by-quote" // 2nd panel image ------------------------------------
+            className="p-0 image-by-quote"
             xs={{ offset: 1, span: 10 }}
             md={{ offset: 1, span: 4 }}
             lg={{ offset: 2, span: 3 }}
@@ -89,10 +85,9 @@ const home = ({ location }) => {
               alt="Escapes"
             />
           </Col>
-
+          {/** Removed from below // md={{ offset: 1, span: 4 }} */}
           <Col
-            xs={{ offset: 1, span: 10 }} // 2nd panel text -----------------------------------------
-            // md={{ offset: 1, span: 4 }}
+            xs={{ offset: 1, span: 10 }}
             md={{ offset: 0, span: 6 }}
             lg={{ offset: 0, span: 5 }}
             xl={{ offset: 0, span: 5 }}
@@ -101,7 +96,7 @@ const home = ({ location }) => {
             <div className="text">{q1.text}</div>
             <div className="attribution">{q1.attribution}</div>
           </Col>
-          </Col>
+        </Col>
         <ExplorerSteps />
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
