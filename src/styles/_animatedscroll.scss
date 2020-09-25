@@ -134,13 +134,20 @@ $topOffset: 64px; // sticky header height
   top: $topOffset;
   width: 100%;
   height: calc(100vh - #{$topOffset});
+  z-index: 1;
+}
 
+.animation__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url("/images/home-map-bg.jpg");
   background-position: fixed;
   background-repeat: none;
-  background-size: auto 100%;
+  background-size: auto 100%; // fill height
   background-position: center right;
-  z-index: 1;
 }
 
 .animation__step {
@@ -173,7 +180,10 @@ $topOffset: 64px; // sticky header height
   font-size: 30px;
   line-height: 1.17;
   letter-spacing: -1px;
-  max-width: 15em;
+  width: 45%;
+  & > * {
+    max-width: 15em;
+  }
 }
 
 // step 1
@@ -223,4 +233,19 @@ $topOffset: 64px; // sticky header height
       }
     }
   }
+}
+
+.expani__map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.expani__tooltip {
+  position: absolute;
+  right: 3.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

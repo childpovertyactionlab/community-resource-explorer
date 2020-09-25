@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import clsx from "clsx"
-import ScrollFeatureSVG from "./assets/ScrollFeatureSVG"
+import ExplorerAnimation from "./ExplorerAnimation"
 
 const ExplorerSteps = ({ ...props }) => {
   // setup intersection observers
@@ -30,14 +30,7 @@ const ExplorerSteps = ({ ...props }) => {
       ref={animationRef}
       className={clsx("animation", { "animation--active": inViewAnimation })}
     >
-      <div className="animation__fixed">
-        <svg
-          viewBox="0 0 760 475"
-          style={{ height: "100%", position: "absolute", top: 0, right: 0 }}
-        >
-          <ScrollFeatureSVG index={activeIndex} />
-        </svg>
-      </div>
+      <ExplorerAnimation className="animation__fixed" step={activeIndex + 1} />
       <div ref={step1.ref} className={step1.classes}>
         <div className="animation__step-content">
           <p>
