@@ -5,21 +5,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
-import { pages, stickyHeaderHeight } from "../consts"
-import escapes from "../images/playground.jpg"
+import { pages } from "../consts"
+import escapes from "../images/fire-escapes.png"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3:4.png"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
-import ExplorerSteps from "../components/AnimatedScroll"
 import { Link } from "gatsby"
+import ExplorerSteps from "../components/AnimatedScroll"
 
 const q1 = {
-  superhead: "",
-  text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
-  attribution:
-    "The Community Resource Explorer visualizes these assets and disparities.",
+  superhead: `Voices from the Community`,
+  text: `Affordable housing is one of [our] greatest needs. Other economic hardships stem from that. If my housing isn't affordable, everything else is less affordable.`,
+  attribution: "Pleasant Grove assistant principal",
 }
 const q2 = {
   superhead: `Voices from the Community`,
@@ -60,46 +59,73 @@ const home = ({ location }) => {
           </span>{" "}
           so individuals and institutions can have the greatest impact.
         </p>
-        <div className="hero-links caption">
-          <Link to="page" smooth={true} offset={-stickyHeaderHeight}>
-            <a href="">
-              Learn more <InlineSvg type="down-arrow-sm" />
-            </a>
-          </Link>
-          <a href="/explorer">
-            Go to the Explorer <InlineSvg type="down-arrow-sm" />
-          </a>
-        </div>
+        <InlineSvg type="down-arrow" />
       </Hero>
 
       <Row id="page">
         <Col
-          className="p-0 image-by-quote" // 2nd panel image ------------------------------------
+          className="p-0 image-by-quote"
           xs={{ offset: 2, span: 8 }}
-          md={{ offset: 1, span: 4 }}
-          lg={{ offset: 2, span: 3 }}
-          xl={{ offset: 2, span: 3 }}
+          // md={{ offset: 1, span: 5 }}
+          md={{ offset: 1, span: 3 }}
         >
-          <div
-            className="escapes"
-            style={{ backgroundImage: `url(${escapes})` }}
-            alt="Escapes"
-          />
+          <img alt="Escapes" src={escapes} />
         </Col>
 
         <Col
-          xs={{ offset: 1, span: 10 }} // 2nd panel text -----------------------------------------
+          xs={{ offset: 1, span: 10 }}
           // md={{ offset: 1, span: 4 }}
-          md={{ offset: 0, span: 6 }}
-          lg={{ offset: 0, span: 5 }}
-          xl={{ offset: 0, span: 5 }}
+          md={{ offset: 1, span: 6 }}
           className="quote-by-image quote light no-bg p-0"
         >
-          <div className="text">{q1.text}</div>
+          <div className="superheading">{q1.superhead}</div>
+          <div className="text">“{q1.text}”</div>
           <div className="attribution">{q1.attribution}</div>
         </Col>
 
-        <ExplorerSteps />
+        <Col
+          className="p-0 image-over-quote"
+          xs={{ offset: 1, span: 10 }}
+          md={{ offset: 4, span: 7 }}
+          xl={{ offset: 5, span: 5 }}
+        >
+          <img alt="kids" src={kids} />
+        </Col>
+
+        <Col
+          xs={{ offset: 1, span: 10 }}
+          md={{ offset: 4, span: 7 }}
+          xl={{ offset: 5, span: 5 }}
+          className="quote-under-image quote dark no-bg no-border p-0"
+        >
+          <div className="superheading">{q1.superhead}</div>
+          <div className="text">
+            “{q2.text}”<div className="attribution">{q2.attribution}</div>
+          </div>
+        </Col>
+
+        <ExplorerSteps className="cre-rect" />
+
+        <Col
+          xs={{ offset: 0, span: 12 }}
+          md={{ offset: 1, span: 10 }}
+          xl={{ offset: 1, span: 9 }}
+          // md={{ offset: 5, span: 5 }}
+          className="p-0"
+        >
+          <div className="quote-with-image">
+            <div className="quote dark">
+              <div className="text">
+                <div className="superheading">{q1.superhead}</div>“{q3.text}”
+                <div className="attribution">{q3.attribution}</div>
+              </div>
+            </div>
+
+            <div className="image-wrapper">
+              <img alt="bank" src={bank} />
+            </div>
+          </div>
+        </Col>
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
           <span className="custom-underline">Recent blog</span> posts

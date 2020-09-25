@@ -6,7 +6,7 @@ import ExplorerAnimation from "./ExplorerAnimation"
 /**
  * Contains all of the sections for the homepage scroll animation along with a fixed animation in the background
  */
-const ExplorerSteps = ({ ...props }) => {
+const ExplorerSteps = ({ className, ...props }) => {
   // setup intersection observers
   const [animationRef, inViewAnimation] = useInView()
   const step1 = useInView({ rootMargin: "-49% 0px" })
@@ -35,7 +35,10 @@ const ExplorerSteps = ({ ...props }) => {
   return (
     <div
       ref={animationRef}
-      className={clsx("animation", { "animation--active": inViewAnimation })}
+      className={clsx("animation", className, {
+        "animation--active": inViewAnimation,
+      })}
+      {...props}
     >
       <ExplorerAnimation className="animation__fixed" step={activeIndex + 1} />
       <div ref={step1.ref} className={step1.classes}>
