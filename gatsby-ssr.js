@@ -1,7 +1,6 @@
 /**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ * Do not inline all of the CSS, instead create file that can be cached
+ * See: https://github.com/gatsbyjs/gatsby/issues/1526
  */
 
 export const onPreRenderHTML = ({ getHeadComponents }) => {

@@ -2,11 +2,11 @@ import { motion } from "framer-motion"
 import React from "react"
 
 export const LargeCluster = props => {
+  // states for individual circles
   const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   }
-
   return (
     <motion.g {...props}>
       <motion.circle

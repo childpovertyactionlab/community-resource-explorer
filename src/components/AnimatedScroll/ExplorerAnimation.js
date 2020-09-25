@@ -8,6 +8,10 @@ import { SelectedSchool } from "./components/SelectedSchool"
 import { SmallCluster } from "./components/SmallCluster"
 import clsx from "clsx"
 
+/**
+ * Contains the background animation for the homepage and cycles
+ * through animation states based on the provided `step`
+ */
 const ExplorerAnimation = ({ step, className, ...props }) => {
   // states for the staggered large cluster animation
   const cluster = {

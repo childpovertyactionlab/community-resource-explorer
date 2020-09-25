@@ -1,8 +1,11 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import clsx from "clsx"
 import ExplorerAnimation from "./ExplorerAnimation"
 
+/**
+ * Contains all of the sections for the homepage scroll animation along with a fixed animation in the background
+ */
 const ExplorerSteps = ({ ...props }) => {
   // setup intersection observers
   const [animationRef, inViewAnimation] = useInView()
@@ -10,7 +13,8 @@ const ExplorerSteps = ({ ...props }) => {
   const step2 = useInView({ rootMargin: "-49% 0px" })
   const step3 = useInView({ rootMargin: "-49% 0px" })
   const step4 = useInView({ rootMargin: "-49% 0px" })
-
+  // ref to track active step
+  const activeRef = useRef(0)
   // add classes to step
   const steps = [step1, step2, step3, step4].map((step, i) => {
     const stepClass = "animation__step--" + (i + 1)
@@ -22,9 +26,12 @@ const ExplorerSteps = ({ ...props }) => {
     return step
   })
 
-  // get the lowest step in view
-  const activeIndex = steps.findIndex(step => step.inView)
-
+  // check if any steps are in view
+  const currentIndex = steps.findIndex(step => step.inView)
+  // set active index to the current step in view, or the last viewed index
+  const activeIndex = currentIndex > -1 ? currentIndex : activeRef.current
+  // update the ref to the active step index
+  activeRef.current = currentIndex > -1 ? currentIndex : activeRef.current
   return (
     <div
       ref={animationRef}
