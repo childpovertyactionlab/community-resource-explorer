@@ -1,5 +1,5 @@
 #data-page {
-  margin-top: calc((8 * #{$spacer}) + (#{$sticky-header-height}));
+  margin-top: 8 * $spacer;
   margin-bottom: 10 * $spacer;
   
   // .title {
@@ -12,6 +12,13 @@
   //     line-height: 36px;
   //   }
   // }
+    a {
+      color: $cinnabar;
+    }
+  @include ancillary-page-styles;
+
+  
+  
   .title {
       font-weight: $font-weight-bold;
       font-size: 26px;
@@ -40,6 +47,7 @@
     font-weight: $font-weight-lighter;
     font-size: 18px;
     line-height: 27px;
+    margin-top: 6 * $spacer;
 
     p:not(:last-of-type) {
       padding-bottom: 4 * $spacer;
@@ -47,9 +55,9 @@
     p.citation {
      // margin-left: $column;
       font-weight: normal;
-      padding-left: 3.33333vw;
+      padding-left: 3.2rem;
       font-weight: normal;
-      border-left: 3px solid $turtle-green;
+      border-left: 3px solid $deluge;
     }
 
     margin-bottom: 6 * $spacer;
@@ -57,19 +65,25 @@
       margin-bottom: 5 * $spacer;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 8 * $spacer;
     }
   }
 
   table {
-    font-size: 14px;
+    font-size: 18px;
     // bold headers and Dataset titles
     th, td:first-of-type {
       font-weight: $font-weight-bold;
     }
+    tbody tr:nth-of-type(odd) {
+      background-color: #F7F7F7;
+    }
     td {
       font-weight: $font-weight-light;
+    }
+    a {
+      color: $cinnabar;
     }
   }
 }

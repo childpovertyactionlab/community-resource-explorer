@@ -4,6 +4,7 @@ import { Col, Row, Table } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { pages } from "../consts"
+import { Link } from "gatsby"
 
 const headers = ["Dataset", "Description", "Geography", "Link"]
 
@@ -157,18 +158,30 @@ const Data = ({ location }) => {
         image={image}
         description={description}
       />
-      <Row noGutters className="">
+      <Row className="ancillary-page-heading">
         <Col
-          className="title mx-md-auto"
+          className=""
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 0, span: 7 }}
+          md={{ offset: 1, span: 8 }}
+          lg={{ offset: 1, span: 7 }}
+          xl={{ offset: 2, span: 7 }}
         >
-          Get the data
+          <div className="content">
+            <div className="page-title-section">
+              <div className="subtitle">
+                Get the data
+              </div>
+            </div>
+          </div>
         </Col>
+      </Row> 
+      <Row noGutters> 
         <Col
-          className="text-blocks mx-md-auto"
+          className="text-blocks"
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 0, span: 7 }}
+          md={{ offset: 1, span: 8 }}
+          lg={{ offset: 1, span: 7 }}
+          xl={{ offset: 2, span: 7 }}
         >
           <p>
             The Community Resource Index was calculated primarily from publicly
@@ -182,8 +195,7 @@ const Data = ({ location }) => {
             visiting our Github.
           </p>
           <p>
-            To learn more about how the CRI was calculated, visit the
-            Methodology or FAQ.
+            To learn more about how the CRI was calculated, visit the <a href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit" target="_blank" rel="noreferrer">Methodology</a> or <Link to="/faq">FAQ</Link>.
           </p>
           <p>
             If you do, please cite or attribute our work in the following way:
@@ -197,10 +209,10 @@ const Data = ({ location }) => {
       </Row>
       <Row>
         <Col
-          className="mx-md-auto"
+          className=""
           xs={{ offset: 1, span: 10 }}
-          md={{ offset: 0, span: 10 }}
-          xl={{ offset: 0, span: 7 }}
+          md={{ offset: 1, span: 10 }}
+          xl={{ offset: 2, span: 8 }}
         >
           <Table striped bordered responsive="md">
             <thead>
