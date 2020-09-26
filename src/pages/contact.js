@@ -157,7 +157,6 @@ const Contact = ({ location }) => {
           onSubmit={onSubmit}
         >
           <input type="hidden" name="form-name" value={formName} />
-          <h1>Contact us</h1>
           <Form.Group controlId="formGroupFirstName">
             <Form.Label className="required" name="first_name">First Name</Form.Label>
             <Form.Control required className="first_name" type="name" placeholder="Enter first name" />
@@ -246,12 +245,32 @@ const Contact = ({ location }) => {
         image={image}
         description={description}
       />
+      <Row id="contact-header" className="ancillary-page-heading">
+     
+      <Col
+          xs={{ offset: 1, span: 10 }}
+          md={{ offset: 2, span: 8 }}
+          lg={{ offset: 2, span: 8 }}
+          >
+          <div className="content">
+            <div className="page-title-section">
+              <div className="title">Questions or feedback?</div>
+              <div className="subtitle">
+                Get in touch
+
+              </div>
+            </div>
+          </div>  
+        </Col>  
+      </Row>
       <Row id="page">
         <Col
           xs={{ offset: 1, span: 10 }}
           md={{ offset: 2, span: 8 }}
+          lg={{ offset: 2, span: 6 }}
           // xl={{ offset: 4, span: 4 }}
         >
+          
           <label htmlFor="why-contact">I am reaching out because:</label>
           <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {

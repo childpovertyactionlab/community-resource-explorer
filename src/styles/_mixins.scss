@@ -152,6 +152,117 @@
   }
 }
 
+@mixin ancillary-page-styles {
+
+    .ancillary-page-heading {
+      background-color: $old-lace;
+    }
+
+    .content {
+      padding-top: 7 * $spacer;
+      padding-bottom: 6 * $spacer;
+      .page-title-section {
+        border-left: 4px solid $cinnabar;
+        padding-left: 2 * $spacer;
+        .title {
+          font-size: 14px;
+          font-weight: $font-weight-light;
+          line-height: 1; // 77px; need to align border-left to text top
+          padding-bottom: 3 * $spacer;
+          color: $firefly;
+        }
+        .subtitle {
+          max-width: 280px;
+          font-size: 36px;
+          line-height: 40px;
+          font-weight: $font-weight-bold;
+          letter-spacing: -2px;
+        }
+      }
+      .headline {
+        font-weight: $font-weight-bold;
+        max-width: 340px;
+        font-size: 30px;
+        line-height: 34px;
+        letter-spacing: -1px;
+        padding-bottom: 3 * $spacer;
+        }
+    }
+    .branding {
+      display: none;
+    }
+  
+  
+  @media screen and (min-width: $md-start) {
+   
+  .content {  
+      .menu-section {
+        height: 6 * $spacer;
+      }
+
+      .site-logo-mobile {
+        display: none;
+      }
+
+      .image-section {
+      //  flex: $image-section-flex;
+      }
+      
+      .color-section {
+        //flex: $color-section-flex;
+        .content {
+          padding-top: 0;
+          padding-bottom: 6 * $spacer;
+  
+          .page-title-section {
+            .title {
+              font-size: 20px;
+            }
+          }
+  
+          .headline {
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: -2px;
+          }
+        }  
+        .branding {
+          display: block;
+          padding-top: $spacer / 2;
+        }
+      }
+    }
+  }
+
+  //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
+  @media screen and (min-width: $xl-start) {
+    .content {
+      padding-bottom: 9 * $spacer;
+        
+        .page-title-section {
+          padding-left: 3 * $spacer;
+          .subtitle {
+            max-width: 520px;
+            font-size: 60px;
+            line-height: 65px
+          }
+          .title {
+            padding-bottom: 4 * $spacer;
+          }
+        }
+
+        .headline {
+          max-width: 520px;
+          font-size: 50px;
+          line-height: 55px;
+          padding-bottom: 4 * $spacer;
+        }
+    }
+  }
+}
+
+
+
 @mixin faq-question-styles {
   .question-text {
     cursor: pointer;
