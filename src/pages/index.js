@@ -143,7 +143,7 @@ const home = ({ location }) => {
 
           <div className="post-details p-0">
             <div className="post-title">
-              <Link to={pages.ISD.path}>
+              <Link to={pages.OPERATION.path}>
                 More than ever, Dallas students need reliable broadband. Here's
                 how the CRE is helping.
               </Link>

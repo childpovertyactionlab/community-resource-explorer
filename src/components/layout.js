@@ -40,6 +40,7 @@ const Layout = ({
         <>
         <Helmet>
           <link rel="icon" href={favicon} />
+          <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry"></script>
         </Helmet>
           <Container fluid className={clsx("main", props.className)}>
             {!disableHeader && <StickyHeader activePageId={activePageId} />}
