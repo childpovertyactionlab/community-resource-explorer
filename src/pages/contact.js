@@ -39,7 +39,7 @@ import * as qs from "query-string"
 // Update the class accordingly if the key name is changed.
 const conditionalOptions = {
   "none": {
-    text: "",
+    text: "Select an option",
     nothingSelected: true,
   },
   "why-built": {

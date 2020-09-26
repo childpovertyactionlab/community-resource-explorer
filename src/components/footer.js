@@ -39,7 +39,7 @@ const Footer = () => {
 
           <div className="footnotes-row">
             <span>Map made possible by Mapbox</span>
-            <span><Link to="https://hyperobjekt.com">Site by Hyperobjekt</Link></span>
+            <span><a href="https://hyperobjekt.com" target="_blank" rel="noreferrer">Site by Hyperobjekt</a></span>
           </div>
         </div>
       </Col>
