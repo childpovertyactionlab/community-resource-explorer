@@ -56,7 +56,7 @@
 @mixin quote-styles {
 
   .superheading {
-    font-family: Louize Display;
+    font-family: angie-sans, sans-serif;
     font-style: italic;
     color: #E94F34;
     font-size: 16px;
@@ -65,7 +65,7 @@
     }
   }
   .text {
-    font-family: Louize Display;
+    font-family: angie-sans, sans-serif;
     font-weight: $font-weight-bold;
     font-size: 26px;
     line-height: 30px;

@@ -47,7 +47,7 @@
   width: 100%;
   font-size: 18px;
   color: #2c390b;
-  font-family: Halyard, sans-serif;
+  font-family: halyard-text, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 1.17;
@@ -86,9 +86,9 @@
   margin-top: calc(-100vh + #{$sticky-header-height});
   .animation__step-content {
     & span:first-child {
-      font-family: Louize Display;
+      font-family: angie-sans, sans-serif;
+      font-weight: 700;
       font-style: italic;
-      font-weight: 400;
       font-size: 21px;
       line-height: 1.1;
       color: #e55934;

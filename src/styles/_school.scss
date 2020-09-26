@@ -49,7 +49,7 @@
     }
     .map-descriptor {
       p {
-        font-family: Halyard;
+        font-family: halyard-text;
         font-weight: 300;
         font-style: italic;
         font-size: 1.4rem;
@@ -103,7 +103,7 @@
         width: 100%;
         // display: flex;
         // background-color: #ebede3;
-        font-family: Halyard;
+        font-family: halyard-text;
         padding: 56px 0 2rem;
         margin-top: 1.6rem;
         .parent-label {
@@ -199,7 +199,7 @@
         }
       }
       .text {
-        font-family: "Louize Display";
+        font-family: "angie-sans, sans-serif";
         font-style: italic;
         font-weight: normal;
         // font-size: 14px;
@@ -308,7 +308,7 @@
               text-align: center;
               margin-left: -100px;
               height: 2rem;
-              font-family: Halyard;
+              font-family: halyard-text;
               font-weight: 500;
               font-size: 1.8rem;
               line-height: 1.8rem;
@@ -351,7 +351,7 @@
             text-align: center;
             font-style: italic;
             font-size: 1.3rem;
-            font-family: Halyard;
+            font-family: halyard-text;
             span,
             svg {
               display: block;
@@ -367,7 +367,7 @@
             font-style: italic;
             font-size: 1.3rem;
             text-align: center;
-            font-family: Halyard;
+            font-family: halyard-text;
           }
         }
       }
@@ -385,7 +385,7 @@
           font-size: 1.3rem;
         }
         text-align: center;
-        font-family: Halyard;
+        font-family: halyard-text;
         span,
         svg {
           display: block;
@@ -399,14 +399,14 @@
           font-size: 1.4rem;
         }
         text-align: center;
-        font-family: Halyard;
+        font-family: halyard-text;
       }
       .n-i-scale-minmax {
         span {
           width: 100%;
           display: block;
           &.legend-label {
-            font-family: Halyard;
+            font-family: halyard-text;
             font-size: 1.3rem;
             font-style: italic;
           }
