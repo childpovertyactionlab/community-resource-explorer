@@ -192,7 +192,7 @@ const Data = ({ location }) => {
             data we used to calculate the CRI available for use in additional
             capacities. You can download the data, R scripts, and ArcGIS tools
             CPAL created to calculate the CRI from the links below or by
-            visiting our Github.
+            visiting our <a href="https://github.com/childpovertyactionlab" target="_blank" rel="noreferrer">Github</a>.
           </p>
           <p>
             To learn more about how the CRI was calculated, visit the <a href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit" target="_blank" rel="noreferrer">Methodology</a> or <Link to="/faq">FAQ</Link>.
