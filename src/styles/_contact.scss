@@ -1,20 +1,50 @@
 #contact-page {
-  margin-top: 14 * $spacer;
+  margin-top: 8 * $spacer;
 
+  @include ancillary-page-styles;
+
+  #page {
+    margin-top: 5 * $spacer;
+    //background: #FFFBF3;
+  }
   label {
     font-size: 16px;
     margin-top: 1.5 * $spacer;
     margin-right: $spacer;
+    margin-bottom: 2 * $spacer;
   }
-
-  select {
+  input:not(#newsletter-toggle) {
     width: 550px;
+  }
+  select, input, textarea {
     max-width: 100%;
     font-size: 16px;
+    margin-bottom: 2 * $spacer;
+  }
+
+  h3 {
+    font-weight: $font-weight-bold;
+    letter-spacing: -1px;
+    font-size: 20px;
+    line-height: 25px;
+    color: $cinnabar;
+    @include media-breakpoint-up(xl) {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 4 * $spacer;
+      &:nth-child(3) {
+        margin-top: 5 * $spacer;
+      }
+    }
   }
 
   button {
     margin-top: 1.5 * $spacer;
+    background-color: $cinnabar;
+    font-size: 16px;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: 3 * $spacer;
   }
 
   .conditional-content {
