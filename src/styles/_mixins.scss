@@ -154,8 +154,16 @@
 
 @mixin ancillary-page-styles {
 
+  
     .ancillary-page-heading {
-      background-color: $old-lace;
+      background-color: $green-white;
+      padding-top: calc((1 * #{$spacer}) + (#{$sticky-header-height}));
+      @include media-breakpoint-up(lg) {
+        padding-top: calc((4 * #{$spacer}) + (#{$sticky-header-height}));
+      }
+      @include media-breakpoint-up(xl) {
+        padding-top: calc((6 * #{$spacer}) + (#{$sticky-header-height}));
+      }
     }
 
     .content {
@@ -199,18 +207,16 @@
       .menu-section {
         height: 6 * $spacer;
       }
-
       .site-logo-mobile {
         display: none;
       }
-
       .image-section {
       //  flex: $image-section-flex;
       }
       
-      .color-section {
+     
         //flex: $color-section-flex;
-        .content {
+   
           padding-top: 0;
           padding-bottom: 6 * $spacer;
   
@@ -218,26 +224,28 @@
             .title {
               font-size: 20px;
             }
+            .subtitle {
+              font-size: 40px;
+            }
           }
-  
           .headline {
             font-size: 36px;
             line-height: 40px;
             letter-spacing: -2px;
           }
-        }  
+      
         .branding {
           display: block;
           padding-top: $spacer / 2;
         }
-      }
+   
     }
   }
 
   //\\//\\//\\//\\/ DESKTOP /\\//\\//\//
   @media screen and (min-width: $xl-start) {
     .content {
-      padding-bottom: 9 * $spacer;
+      padding-bottom: 8 * $spacer;
         
         .page-title-section {
           padding-left: 3 * $spacer;
