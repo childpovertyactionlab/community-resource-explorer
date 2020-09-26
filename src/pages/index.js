@@ -9,7 +9,7 @@ import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
 import kids from "../images/kids-playing.png"
 import bank from "../images/bank.png"
-import portrait from "../images/child-portrait-3:4.png"
+import portrait from "../images/child-portrait-3-4.jpg"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
@@ -129,7 +129,7 @@ const home = ({ location }) => {
               right the wrongs of the past.{" "}
             </div>
 
-            <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
+            <CustomLink linkTo={pages.ISD.path}>Read post</CustomLink>
           </div>
         </Col>
         <Col
