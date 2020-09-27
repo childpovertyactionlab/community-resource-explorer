@@ -62,7 +62,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `og:image`,
-          content: metaImage,
+          content: `/images/cre-social-media.png`,
         },
         {
           property: `og:url`,
@@ -94,7 +94,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: `/images/cre-social-media.png`,
         },
       ]
         .concat(
@@ -112,7 +112,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
 
 SEO.defaultProps = {
   lang: `en`,
-  image: ``,
+  image: `/images/cre-social-media.png`,
   meta: [],
   keywords: [],
   description: ``,
