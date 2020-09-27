@@ -9,7 +9,7 @@ module.exports = {
     description: `All Dallas neighborhoods should have what they need to thrive.`,
     author: `Child Poverty Action Lab`,
     keywords: [],
-    image: "",
+    image: "/images/cre-social-media.png",
     siteUrl: "https://dallasisd.resourceexplorer.org",
     mapboxApiKey: `${process.env.GATSBY_MAPBOX_API_TOKEN}`,
     facebookAppID: `747645499355447`,
