@@ -7,10 +7,10 @@ import Hero from "../../components/hero-no-img"
 import CustomCarousel from "../../components/customCarousel"
 import { pages } from "../../consts"
 import isdHero from "../../images/isd-hero.png"
-import goalie from "../../images/goalie.png"
-import couching from "../../images/couching.png"
-import running from "../../images/running.png"
-import swinging from "../../images/swinging.png"
+import goalie from "../../images/goalie.jpg"
+import couching from "../../images/couching.jpg"
+import running from "../../images/running.jpg"
+import swinging from "../../images/swinging.jpg"
 
 const caroItems = [
   
