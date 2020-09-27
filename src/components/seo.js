@@ -62,7 +62,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `og:image`,
-          content: `/images/cre-social-media.png`,
+          content: `https://dallasisd.resourceexplorer.org/images/cre-social-media.png`,
         },
         {
           property: `og:url`,
@@ -94,7 +94,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `twitter:image`,
-          content: `/images/cre-social-media.png`,
+          content: `https://dallasisd.resourceexplorer.org/images/cre-social-media.png`,
         },
       ]
         .concat(
