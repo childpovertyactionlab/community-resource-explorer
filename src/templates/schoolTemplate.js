@@ -198,9 +198,10 @@ const SchoolPage = ({ data, ...props }) => {
         event_label: school.SCHOOLNAME,
         value: school.SLN,
       }
-      typeof window !== "undefined" &&
+      if (typeof window !== "undefined") {
+        window.print()
         window.gtag("event", "print", { ...trackingData })
-      window.print()
+      }
     }
   }
 

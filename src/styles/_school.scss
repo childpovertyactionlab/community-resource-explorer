@@ -312,7 +312,7 @@
     // padding: 6rem auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    page-break-inside: avoid;
+    // page-break-inside: avoid;
     &:nth-child(odd) {
       background-color: $light-yellow;
     }
@@ -649,5 +649,63 @@
   .row-print-only {
     visibility: visible !important;
     height: auto !important;
+  }
+  // Remove background color from all background-color rows.
+  .school-hero,
+  .school-metadata,
+  .row-metric-group {
+    background-color: $white !important;
+  }
+  // Widen all columns that are narrowed for pretty desktop layout.
+  .school-metadata .col-md-4,
+  .row-metric-group .col-md-4 {
+    flex: 0 0 44% !important;
+    max-width: 44% !important;
+  }
+  // Reduce padding for intro content to fit on one page.
+  .row-replacement-hack,
+  .demographics.row,
+  .school-metadata.row {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .demographics.row {
+    .demo {
+      font-size: 1.2rem;
+      .percent {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  // Add extra breaks to split the categories where necessary.
+  .row-metric-econ,
+  .row-metric-edu,
+  .row-metric-fam {
+    break-inside: avoid;
+  }
+  .row-metric-fam {
+    break-after: page !important;
+  }
+  .row-metric-comm,
+  .row-metric-hel {
+    break-inside: auto !important;
+    break-before: page;
+    display: block !important;
+    .metric-collection,
+    .metric-group {
+      display: inline-block !important;
+    }
+    &:nth-child(8) {
+      break-after: page !important;
+    }
+    &:nth-child(9) {
+      break-before: always !important;
+    }
+  }
+  .row-metric-hel {
+    break-after: avoid-page !important;
+  }
+  .row-print-only {
+    break-before: avoid-page !important;
   }
 }
