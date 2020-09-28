@@ -416,7 +416,7 @@ const SchoolPage = ({ data, ...props }) => {
         >
           <p>{i18n.translate(`SCHOOL_CRI_DESCRIPTOR`)}</p>
           <Link
-            to="/faq/#about-8"
+            to="/faq/#about-9"
             className="link-mean-info-button d-xs-none d-sm-none d-md-flex"
           >
             <FaInfoCircle />
