@@ -679,55 +679,42 @@
       }
     }
   }
-  // Add extra breaks to split the categories where necessary.
+
   .row-metric-econ,
   .row-metric-edu,
-  .row-metric-fam {
+  .row-metric-fam,
+  .row-metric-comm,
+  .row-metric-hel {
     break-inside: avoid;
   }
-  .row-metric-fam {
-    break-after: page;
-  }
+
   .row-metric-comm {
-    // .container-fluid {
-    break-inside: auto !important;
-    break-before: page;
-    display: block !important;
-    .metric-collection,
-    .metric-group {
-      display: inline-block !important;
-    }
-    &:nth-child(8) {
-      break-after: page !important;
-    }
-    &:nth-child(9) {
-      break-before: always !important;
+    #metric_comm_cctrcap,
+    #metric_comm_juvcrimecap {
+      margin-bottom: 24rem !important;
     }
   }
+
   .row-metric-hel {
-    break-after: avoid;
-    break-after: avoid-page;
-  }
-  .row-metric-hel {
-    // .container-fluid {
-    break-inside: auto !important;
-    break-before: page;
-    display: block !important;
-    .metric-collection,
-    .metric-group {
-      display: inline-block !important;
+    #metric_hel_checkup,
+    #metric_hel_mhlth {
+      margin-bottom: 24rem !important;
     }
-    // &:nth-child(8) {
-    //   break-after: page !important;
-    // }
-    // &:nth-child(9) {
-    //   break-before: always !important;
-    // }
   }
-  .container-fluid {
-    break-before: avoid-page;
+}
+
+@media print and (-webkit-min-device-pixel-ratio: 0) {
+  .row-metric-comm {
+    #metric_comm_cctrcap,
+    #metric_comm_juvcrimecap {
+      margin-bottom: 24rem !important;
+    }
   }
-  .row-print-only {
-    break-before: avoid-page !important;
+
+  .row-metric-hel {
+    #metric_hel_checkup,
+    #metric_hel_mhlth {
+      margin-bottom: 24rem !important;
+    }
   }
 }
