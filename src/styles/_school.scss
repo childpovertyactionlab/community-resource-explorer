@@ -264,7 +264,7 @@
     }
   }
   .row-print-only {
-    page-break-inside: avoid;
+    // page-break-inside: avoid;
     visibility: hidden;
     height: 8rem;
     .vcenter {
@@ -398,7 +398,7 @@
   .metric-group {
     .n-i-scale-parent {
       .n-i-scale-linear {
-        margin-top: 4rem;
+        margin-top: 3.6rem;
         .n-i-scale-line {
           border-bottom: 1px dotted #606b44;
           &:after,
@@ -640,7 +640,8 @@
   }
   // Hide footer
   .sign-up-bar,
-  .footer {
+  .footer,
+  .link-mean-info-button {
     display: none !important;
     height: 0 !important;
     width: 0 !important;
@@ -684,10 +685,10 @@
     break-inside: avoid;
   }
   .row-metric-fam {
-    break-after: page !important;
+    break-after: page;
   }
-  .row-metric-comm,
-  .row-metric-hel {
+  .row-metric-comm {
+    // .container-fluid {
     break-inside: auto !important;
     break-before: page;
     display: block !important;
@@ -703,7 +704,27 @@
     }
   }
   .row-metric-hel {
-    break-after: avoid-page !important;
+    break-after: avoid;
+    break-after: avoid-page;
+  }
+  .row-metric-hel {
+    // .container-fluid {
+    break-inside: auto !important;
+    break-before: page;
+    display: block !important;
+    .metric-collection,
+    .metric-group {
+      display: inline-block !important;
+    }
+    // &:nth-child(8) {
+    //   break-after: page !important;
+    // }
+    // &:nth-child(9) {
+    //   break-before: always !important;
+    // }
+  }
+  .container-fluid {
+    break-before: avoid-page;
   }
   .row-print-only {
     break-before: avoid-page !important;
