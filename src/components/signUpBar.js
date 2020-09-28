@@ -59,8 +59,7 @@ const SignUpBar = ({ ...props }) => {
               <img alt="comerica bank logo" src={comerica} />
             </a>
             <p className="text">
-              Comerica generously funded the development of the Community
-              Resource Explorer
+              The Community Resource Explorer is powered by Comerica Bank.
             </p>
           </div>
         </div>
