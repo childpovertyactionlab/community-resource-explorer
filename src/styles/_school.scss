@@ -309,7 +309,9 @@
     }
   }
   .row-metric-group {
-    padding: 6rem 0;
+    // padding: 6rem auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     page-break-inside: avoid;
     &:nth-child(odd) {
       background-color: $light-yellow;
@@ -320,54 +322,8 @@
     .metric-collection {
       display: flex;
       flex-wrap: wrap;
-      .metric-group {
-        padding: 2rem 0;
-        width: 100%;
-        font-size: 1rem !important;
-        h6 {
-          font-size: 1.6rem;
-          font-weight: 400;
-          padding-bottom: 0.6rem;
-          line-height: 1.9rem;
-          width: 85%;
-        }
-        &.level-0 {
-          h6 {
-            font-size: 2.4rem;
-            font-weight: 500;
-          }
-        }
-        &.cat-intro {
-          // padding-right: 3rem;
-          p {
-            width: 100%;
-            @include media-breakpoint-up(md) {
-              width: 80%;
-            }
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            font-weight: 200;
-            span {
-              font-size: 1.8rem;
-              font-weight: 500;
-            }
-          }
-        }
-        @include media-breakpoint-up(md) {
-          width: 49%;
-          flex: 0 0 49%;
-          // padding: 0;
-          // &:nth-child(odd) {
-          //   padding-right: 2rem;
-          // }
-        }
-        .n-i-scale {
-          width: 100%;
-          @include media-breakpoint-up(md) {
-            width: 80%;
-          }
-        }
-      }
+      // padding-top: 2rem;
+      // padding-bottom: 2rem;
       h5 {
         // padding: 2rem 0 1rem;
         width: 100%;
@@ -390,6 +346,50 @@
         h6 {
           font-size: 1.6rem;
           font-weight: 400;
+        }
+      }
+    }
+    .metric-group {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      width: 100%;
+      font-size: 1rem !important;
+      h6 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding-bottom: 0.6rem;
+        line-height: 1.9rem;
+        width: 85%;
+      }
+      &.level-0 {
+        h6 {
+          font-size: 2.4rem;
+          font-weight: 500;
+        }
+      }
+      &.cat-intro {
+        p {
+          width: 100%;
+          // @include media-breakpoint-up(md) {
+          //   width: 80%;
+          // }
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: 200;
+          span {
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+        }
+      }
+      // @include media-breakpoint-up(md) {
+      //   width: 49%;
+      //   flex: 0 0 49%;
+      // }
+      .n-i-scale {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 96%;
         }
       }
     }

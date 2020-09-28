@@ -512,134 +512,137 @@ const SchoolPage = ({ data, ...props }) => {
               )}
             >
               <h5>{i18n.translate(el.title)}</h5>
-              {!!getCatDesc(el.default_metric) && (
-                <div
-                  className="metric-group cat-intro"
-                  dangerouslySetInnerHTML={{
-                    __html: i18n.translate(getCatDesc(el.default_metric)),
-                  }}
-                ></div>
-              )}
-              {getMetricCollection(el.id, 0).map(el => {
-                // console.log(
-                //   "in metric collection, element = ",
-                //   el,
-                //   school[el.id]
-                // )
-                return (
-                  <div
-                    className="metric-group level-0"
-                    id={"metric_" + el.id}
-                    key={"metric_" + el.id}
-                  >
-                    <h6>{i18n.translate(el.title)}</h6>
-                    <NonInteractiveScale
-                      className={"scale-" + el.id}
-                      id={"scale_" + el.id}
-                      key={"scale_" + el.id}
-                      metric={el.id}
-                      quintiles={constructQuintiles(
-                        school[el.id + "_sd"],
-                        el.high_is_good
-                      )}
-                      colors={el.colors}
-                      showHash={true}
-                      hashLeft={getHashLeft(
-                        school[el.id],
-                        el.range[0],
-                        el.range[1],
-                        el.high_is_good
-                      )}
-                      hashValue={getRoundedValue(
-                        school[el.id],
-                        el.decimals,
-                        false,
-                        el.is_currency ? el.is_currency : 0
-                      )}
-                      showMean={true}
-                      meanLeft={getHashLeft(
-                        el.mean,
-                        el.range[0],
-                        el.range[1],
-                        el.high_is_good
-                      )}
-                      meanValue={getRoundedValue(
-                        el.mean,
-                        el.decimals,
-                        false,
-                        el.is_currency ? el.is_currency : 0
-                      )}
-                      showMinMax={true}
-                    />
-                  </div>
-                )
-              })}
             </Col>
-            <Col
-              xs={{ span: 10, offset: 1 }}
-              className={clsx(
-                "metric-collection-" + el.id,
-                "metric-collection"
-              )}
-            >
-              {getMetricCollection(el.id, 1).map(el => {
-                // Metric collection level 1, sub-metrics
-                // console.log(
-                //   "in secondary metric collection, el = ",
-                //   el,
-                //   school["econ_totjobs"]
-                // )
-                return (
-                  <div
-                    className="metric-group level-1"
-                    id={"metric_" + el.id}
-                    key={"metric_" + el.id}
-                  >
-                    <h6>{i18n.translate(el.title)}</h6>
-                    <NonInteractiveScale
-                      className={"scale-" + el.id}
-                      id={"scale_" + el.id}
-                      key={"scale_" + el.id}
-                      metric={el.id}
-                      quintiles={constructQuintiles(
-                        school[el.id + "_sd"],
-                        el.high_is_good
-                      )}
-                      colors={el.colors}
-                      showHash={true}
-                      hashLeft={getHashLeft(
-                        school[el.id],
-                        el.range[0],
-                        el.range[1],
-                        el.high_is_good
-                      )}
-                      hashValue={getRoundedValue(
-                        school[el.id],
-                        el.decimals,
-                        false,
-                        el.is_currency ? el.is_currency : 0,
-                        el.as_percent ? el.as_percent : 0
-                      )}
-                      showMean={true}
-                      meanLeft={getHashLeft(
-                        el.mean,
-                        el.range[0],
-                        el.range[1],
-                        el.high_is_good
-                      )}
-                      meanValue={getRoundedValue(
-                        el.mean,
-                        el.decimals,
-                        false,
-                        el.is_currency ? el.is_currency : 0,
-                        el.as_percent ? el.as_percent : 0
-                      )}
-                      showMinMax={true}
-                    />
-                  </div>
-                )
-              })}
-            </Col>
+            {!!getCatDesc(el.default_metric) && (
+              <Col
+                xs={{ span: 10, offset: 1 }}
+                md={{ span: 4, offset: 1 }}
+                className="metric-group cat-intro"
+                dangerouslySetInnerHTML={{
+                  __html: i18n.translate(getCatDesc(el.default_metric)),
+                }}
+              ></Col>
+            )}
+            {getMetricCollection(el.id, 0).map(el => {
+              // console.log(
+              //   "in metric collection, element = ",
+              //   el,
+              //   school[el.id]
+              // )
+              return (
+                <Col
+                  xs={{ span: 10, offset: 1 }}
+                  md={{ span: 4, offset: 0 }}
+                  className="metric-group level-0"
+                  id={"metric_" + el.id}
+                  key={"metric_" + el.id}
+                >
+                  <h6>{i18n.translate(el.title)}</h6>
+                  <NonInteractiveScale
+                    className={"scale-" + el.id}
+                    id={"scale_" + el.id}
+                    key={"scale_" + el.id}
+                    metric={el.id}
+                    quintiles={constructQuintiles(
+                      school[el.id + "_sd"],
+                      el.high_is_good
+                    )}
+                    colors={el.colors}
+                    showHash={true}
+                    hashLeft={getHashLeft(
+                      school[el.id],
+                      el.range[0],
+                      el.range[1],
+                      el.high_is_good
+                    )}
+                    hashValue={getRoundedValue(
+                      school[el.id],
+                      el.decimals,
+                      false,
+                      el.is_currency ? el.is_currency : 0
+                    )}
+                    showMean={true}
+                    meanLeft={getHashLeft(
+                      el.mean,
+                      el.range[0],
+                      el.range[1],
+                      el.high_is_good
+                    )}
+                    meanValue={getRoundedValue(
+                      el.mean,
+                      el.decimals,
+                      false,
+                      el.is_currency ? el.is_currency : 0
+                    )}
+                    showMinMax={true}
+                  />
+                </Col>
+              )
+            })}
+            {getMetricCollection(el.id, 1).map((el, i) => {
+              // Metric collection level 1, sub-metrics
+              // console.log(
+              //   "in secondary metric collection, el = ",
+              //   el,
+              //   school["econ_totjobs"]
+              // )
+              return (
+                <Col
+                  xs={{ span: 10, offset: 1 }}
+                  md={{ span: 4, offset: i % 2 === 0 ? 1 : 0 }}
+                  id={"metric_" + el.id}
+                  key={"metric_" + el.id}
+                  className={clsx(
+                    "metric-collection-" + el.id,
+                    "metric-collection",
+                    "metric-group",
+                    "level-1"
+                  )}
+                >
+                  <h6>{i18n.translate(el.title)}</h6>
+                  <NonInteractiveScale
+                    className={"scale-" + el.id}
+                    id={"scale_" + el.id}
+                    key={"scale_" + el.id}
+                    metric={el.id}
+                    quintiles={constructQuintiles(
+                      school[el.id + "_sd"],
+                      el.high_is_good
+                    )}
+                    colors={el.colors}
+                    showHash={true}
+                    hashLeft={getHashLeft(
+                      school[el.id],
+                      el.range[0],
+                      el.range[1],
+                      el.high_is_good
+                    )}
+                    hashValue={getRoundedValue(
+                      school[el.id],
+                      el.decimals,
+                      false,
+                      el.is_currency ? el.is_currency : 0,
+                      el.as_percent ? el.as_percent : 0
+                    )}
+                    showMean={true}
+                    meanLeft={getHashLeft(
+                      el.mean,
+                      el.range[0],
+                      el.range[1],
+                      el.high_is_good
+                    )}
+                    meanValue={getRoundedValue(
+                      el.mean,
+                      el.decimals,
+                      false,
+                      el.is_currency ? el.is_currency : 0,
+                      el.as_percent ? el.as_percent : 0
+                    )}
+                    showMinMax={true}
+                  />
+                </Col>
+              )
+            })}
           </Row>
         )
       })}
