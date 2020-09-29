@@ -10,12 +10,23 @@ const pageElements = [
     page: 1,
     x: 0,
     y: 0,
+    rect: true,
+    rectFill: "#fcfcf8",
+    rectX: 0,
+    rectY: 0,
+    rectHeight: 10,
   },
   {
     selector: ".demographics.row",
     page: 1,
     x: 0,
     y: 130,
+    rect: true,
+    rectFill: "#000",
+    rectX: 50,
+    rectY: 50,
+    rectHeight: 20,
+    rectWidth: 20,
   },
   {
     selector: ".school-metadata.custom-feeder-prose.row",
@@ -47,9 +58,10 @@ const pageElements = [
     x: 0,
     y: 0,
     rect: true,
+    rectFill: "#fcfcf8",
     rectX: 0,
-    rectY: 235,
-    rectHeight: 50,
+    rectY: 215,
+    rectHeight: 70,
   },
   {
     selector: ".row-metric-comm",
@@ -57,9 +69,10 @@ const pageElements = [
     x: 0,
     y: -200,
     rect: true,
+    rectFill: "#fcfcf8",
     rectX: 0,
     rectY: 0,
-    rectHeight: 40,
+    rectHeight: 20,
   },
   {
     selector: ".row-metric-hel",
@@ -67,9 +80,10 @@ const pageElements = [
     x: 0,
     y: 0,
     rect: true,
+    rectFill: "#fff",
     rectX: 0,
-    rectY: 235,
-    rectHeight: 50,
+    rectY: 215,
+    rectHeight: 70,
   },
   {
     selector: ".row-metric-hel",
@@ -77,19 +91,21 @@ const pageElements = [
     x: 0,
     y: -200,
     rect: true,
+    rectFill: "#fff",
     rectX: 0,
     rectY: 0,
-    rectHeight: 40,
+    rectHeight: 20,
   },
   {
     selector: ".row-print-only",
     page: 9,
     x: 0,
-    y: 150,
+    y: 60,
   },
 ]
 
 const PrintSchoolPage = ({ ...props }) => {
+  // Inserts a page element using an item from the array.
   const insertPageElement = (pdf, i, filename) => {
     console.log("insertPageElement, ", i)
     const el = pageElements[i]
@@ -111,12 +127,19 @@ const PrintSchoolPage = ({ ...props }) => {
         imageHeight * ratio
       )
       if (el.rect) {
-        pdf.setFillColor(0, 0, 0)
-        pdf.rect(el.rectX, el.rectY, pageWidth, el.rectHeight, "F")
+        pdf.setFillColor(el.rectFill)
+        pdf.rect(
+          el.rectX,
+          el.rectY,
+          el.rectWidth ? el.rectWidth : pageWidth,
+          el.rectHeight,
+          "F"
+        )
       }
       if (i === pageElements.length - 1) {
         console.log("Last one.")
         pdf.save(filename + ".pdf")
+        printTakedown()
       } else {
         insertPageElement(pdf, i + 1, filename)
       }
@@ -124,11 +147,11 @@ const PrintSchoolPage = ({ ...props }) => {
   }
 
   const printSetup = () => {
-    // const logosRow = document
-    //   .querySelectorAll(".row-print-only")
-    //   .forEach(el => {
-    //     el.setAttribute("style", "visibilty:visible;")
-    //   })
+    const logosRow = document
+      .querySelectorAll(".row-print-only")
+      .forEach(el => {
+        el.setAttribute("style", "visibility:visible;height:18rem;")
+      })
     // const hideElements = document
     //   .querySelectorAll(
     //     ".print-school-page, .branding-md-up, .menu-component, .link-mean-info-button"
@@ -140,11 +163,11 @@ const PrintSchoolPage = ({ ...props }) => {
   }
 
   const printTakedown = () => {
-    // const logosRow = document
-    //   .querySelectorAll(".row-print-only")
-    //   .forEach(el => {
-    //     el.setAttribute("style", "visibilty:hidden;")
-    //   })
+    const logosRow = document
+      .querySelectorAll(".row-print-only")
+      .forEach(el => {
+        el.setAttribute("style", "visibility:hidden;")
+      })
     // const hideElements = document
     //   .querySelectorAll(
     //     ".print-school-page, .branding-md-up, .menu-component, .link-mean-info-button"
@@ -167,7 +190,7 @@ const PrintSchoolPage = ({ ...props }) => {
       pdf.addPage("letter", "p")
     }
 
-    // printSetup()
+    printSetup()
     // pageElements.forEach((el, i) => {
     //   console.log("forEach, el = ", el)
     //   if (i === pageElements.length - 1) {
