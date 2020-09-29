@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import i18n from "@pureartisan/simple-i18n"
-import { Button } from "react-bootstrap"
+import { Button, Spinner } from "react-bootstrap"
 import { jsPDF } from "jspdf"
 import html2canvas from "html2canvas"
 
@@ -20,19 +20,25 @@ const pageElements = [
     selector: ".demographics.row",
     page: 1,
     x: 0,
-    y: 130,
+    y: 110,
     rect: true,
-    rectFill: "#000",
-    rectX: 50,
-    rectY: 50,
-    rectHeight: 20,
-    rectWidth: 20,
+    rectFill: "#fcfcf8",
+    rectX: 15,
+    rectY: 70,
+    rectHeight: 10,
+    rectWidth: 50,
   },
   {
     selector: ".school-metadata.custom-feeder-prose.row",
     page: 2,
     x: 0,
     y: 0,
+    rect: true,
+    rectFill: "#fcfcf8",
+    rectX: 15,
+    rectY: 40,
+    rectHeight: 10,
+    rectWidth: 50,
   },
   {
     selector: ".row-metric-econ",
@@ -60,14 +66,14 @@ const pageElements = [
     rect: true,
     rectFill: "#fcfcf8",
     rectX: 0,
-    rectY: 215,
-    rectHeight: 70,
+    rectY: 200,
+    rectHeight: 80,
   },
   {
     selector: ".row-metric-comm",
     page: 7,
     x: 0,
-    y: -200,
+    y: -210,
     rect: true,
     rectFill: "#fcfcf8",
     rectX: 0,
@@ -82,8 +88,8 @@ const pageElements = [
     rect: true,
     rectFill: "#fff",
     rectX: 0,
-    rectY: 215,
-    rectHeight: 70,
+    rectY: 198,
+    rectHeight: 90,
   },
   {
     selector: ".row-metric-hel",
@@ -94,20 +100,21 @@ const pageElements = [
     rectFill: "#fff",
     rectX: 0,
     rectY: 0,
-    rectHeight: 20,
+    rectHeight: 16,
   },
   {
     selector: ".row-print-only",
     page: 9,
     x: 0,
-    y: 60,
+    y: 80,
   },
 ]
 
 const PrintSchoolPage = ({ ...props }) => {
+  const [buildingPDF, setBuildingPDF] = useState(false)
   // Inserts a page element using an item from the array.
   const insertPageElement = (pdf, i, filename) => {
-    console.log("insertPageElement, ", i)
+    // console.log("insertPageElement, ", i)
     const el = pageElements[i]
     const node = document.querySelector(el.selector)
     html2canvas(node).then(canvas => {
@@ -140,6 +147,7 @@ const PrintSchoolPage = ({ ...props }) => {
         console.log("Last one.")
         pdf.save(filename + ".pdf")
         printTakedown()
+        setBuildingPDF(false)
       } else {
         insertPageElement(pdf, i + 1, filename)
       }
@@ -207,6 +215,7 @@ const PrintSchoolPage = ({ ...props }) => {
 
   const printPage = () => {
     if (window) {
+      setBuildingPDF(true)
       buildPDF()
       const trackingData = {
         event_category: "School View",
@@ -219,6 +228,7 @@ const PrintSchoolPage = ({ ...props }) => {
       // }
     }
   }
+
   return (
     <Button
       aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
@@ -227,6 +237,15 @@ const PrintSchoolPage = ({ ...props }) => {
       className="print-school-page"
     >
       {i18n.translate("SCHOOL_BUTTON_PRINT")}
+      <Spinner
+        animation="border"
+        style={{
+          display: !!buildingPDF ? "inline-block" : "none",
+          marginRight: "0.5rem",
+          width: "1rem",
+          height: "1rem",
+        }}
+      />
     </Button>
   )
 }
