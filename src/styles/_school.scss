@@ -389,7 +389,7 @@
       .n-i-scale {
         width: 100%;
         @include media-breakpoint-up(md) {
-          width: 96%;
+          width: 95%;
         }
       }
     }
@@ -477,6 +477,9 @@
     // Scale when legend is displayed.
     .n-i-scale.show-legend {
       margin-top: 8rem;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
       .n-i-scale-linear .n-i-scale-line {
         .n-i-scale-hash {
           top: -61px !important;
