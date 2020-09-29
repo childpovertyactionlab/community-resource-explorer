@@ -90,7 +90,9 @@ const pageElements = [
 ]
 
 const PrintSchoolPage = ({ ...props }) => {
-  const insertPageElement = (pdf, el) => {
+  const insertPageElement = (pdf, i, filename) => {
+    console.log("insertPageElement, ", i)
+    const el = pageElements[i]
     const node = document.querySelector(el.selector)
     html2canvas(node).then(canvas => {
       console.log("Adding node, ", el)
@@ -112,8 +114,12 @@ const PrintSchoolPage = ({ ...props }) => {
         pdf.setFillColor(0, 0, 0)
         pdf.rect(el.rectX, el.rectY, pageWidth, el.rectHeight, "F")
       }
-
-      return true
+      if (i === pageElements.length - 1) {
+        console.log("Last one.")
+        pdf.save(filename + ".pdf")
+      } else {
+        insertPageElement(pdf, i + 1, filename)
+      }
     })
   }
 
@@ -162,17 +168,18 @@ const PrintSchoolPage = ({ ...props }) => {
     }
 
     // printSetup()
-    pageElements.forEach((el, i) => {
-      console.log("forEach, el = ", el)
-      if (i === pageElements.length - 1) {
-        setTimeout(() => {
-          console.log("Calling save.")
-          pdf.save(filename + ".pdf")
-          // printTakedown()
-        }, 6000)
-      }
-      return insertPageElement(pdf, el)
-    })
+    // pageElements.forEach((el, i) => {
+    //   console.log("forEach, el = ", el)
+    //   if (i === pageElements.length - 1) {
+    //     setTimeout(() => {
+    //       console.log("Calling save.")
+    //       pdf.save(filename + ".pdf")
+    //       // printTakedown()
+    //     }, 6000)
+    //   }
+    //   insertPageElement(pdf, 0)
+    // })
+    insertPageElement(pdf, 0, filename)
   }
 
   const printPage = () => {
