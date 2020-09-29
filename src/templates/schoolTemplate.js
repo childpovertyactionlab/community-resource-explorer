@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import StaticMap, { Marker, Source, Layer } from "react-map-gl"
 import circle from "@turf/circle"
 import i18n from "@pureartisan/simple-i18n"
-import { Col, Row, Button } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import clsx from "clsx"
 import { FaInfoCircle } from "react-icons/fa"
 
@@ -23,6 +23,7 @@ import {
 import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
 import comerica from "../images/comericabank-logo.svg"
+import PrintSchoolPage from "../components/PrintPDF"
 
 export const query = graphql`
   query SchoolPageQuery {
@@ -190,21 +191,6 @@ const SchoolPage = ({ data, ...props }) => {
     }
   }
 
-  const printPage = () => {
-    if (window) {
-      const trackingData = {
-        event_category: "School View",
-        event_action: "Print school view",
-        event_label: school.SCHOOLNAME,
-        value: school.SLN,
-      }
-      if (typeof window !== "undefined") {
-        window.print()
-        window.gtag("event", "print", { ...trackingData })
-      }
-    }
-  }
-
   const keywords = [
     school.SCHOOLNAME,
     i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder }),
@@ -260,17 +246,7 @@ const SchoolPage = ({ data, ...props }) => {
                   name: school.Feeder,
                 })}
               </h4>
-              <Button
-                aria-label={i18n.translate("SCHOOL_BUTTON_PRINT")}
-                color="none"
-                onClick={printPage}
-                className="print-school-page"
-              >
-                {i18n.translate("SCHOOL_BUTTON_PRINT")}
-                <span className="sr-only">
-                  {i18n.translate("SCHOOL_BUTTON_PRINT")}
-                </span>
-              </Button>
+              <PrintSchoolPage school={school} />
             </div>
           </Col>
           <Col
