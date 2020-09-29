@@ -41,6 +41,7 @@
         margin-bottom: 4rem;
         @include media-breakpoint-up(lg) {
           margin-bottom: 0;
+          padding-left: 4rem;
         }
         h2 {
           margin-bottom: 2rem;
@@ -478,7 +479,8 @@
     .n-i-scale.show-legend {
       margin-top: 8rem;
       @include media-breakpoint-up(md) {
-        margin-top: 0;
+        margin-top: -2.6rem;
+        margin-bottom: 5.6rem;
       }
       .n-i-scale-linear .n-i-scale-line {
         .n-i-scale-hash {
