@@ -102,17 +102,19 @@
       }
 
       .controls {
-        
+        display: flex;
+        justify-content: space-between;
+        max-width: 480px;
         svg {
           cursor: pointer;
         }
 
         .arrows {
           stroke: $boulder;
-          position: absolute;
+          /* position: absolute;
           bottom: $text-panel-buffer;
           bottom: 4.43333vw;
-          right: $text-panel-buffer;
+          right: $text-panel-buffer; */
 
           .right-arrow-md {
             padding-left: 3 * $spacer;
@@ -120,11 +122,11 @@
         }
 
         .eclipses {
-          position: absolute;
+          /* position: absolute;
           //position: inherit;
           bottom: $text-panel-buffer;
           bottom: 4.43333vw;
-          left: $text-panel-buffer;
+          left: $text-panel-buffer; */
 
           .eclipse {
             padding-right: 1 * $spacer;
@@ -141,17 +143,23 @@
       .statistics {
         position: relative;
         margin-bottom: 1.6rem;
-        .index-name {
-          font-weight: 400;
-          font-size: 18px;
-          //color: $orange-roughy2;
-          font-family: 'Louize Display';
-          font-style: italic;
-          color: #2C390B;
-          width: 46%;
+        .index-name { 
           margin-bottom: 0.8rem;
           @include media-breakpoint-up(xl) {
-            font-size: 20px;
+            margin-bottom: 1.6rem;
+          }
+          span {
+            font-weight: 400;
+            font-size: 18px;
+            //color: $orange-roughy2;
+            font-family: 'Louize Display';
+            font-style: italic;
+            color: #2C390B;
+            width: 46%;
+            margin-bottom: 0.8rem;
+            @include media-breakpoint-up(xl) {
+              font-size: 20px;
+            }
           }
         }
         .underbar {
