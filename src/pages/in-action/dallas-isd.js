@@ -17,7 +17,7 @@ const caroItems = [
   {
     src: running,
     alt: "s2",
-    indexName: "Insights from the Health Index",
+    indexName: <span>Insights from the <br/>Health Index</span>,
     character1: "",
     character2: "",
     stat1num: 82,
@@ -29,7 +29,7 @@ const caroItems = [
   {
     src: couching,
     alt: "s1",
-    indexName: "Insights from the Education Index",
+    indexName: <span>Insights from the <br/>Education Index</span>,
     character1: "",
     character2: "%",
     stat1num: 42,
@@ -41,7 +41,7 @@ const caroItems = [
   {
     src: swinging,
     alt: "s4",
-    indexName: "Insights from the Community Index",
+    indexName: <span>Insights from the <br/>Community Index</span>,
     character1: "",
     character2: "",
     stat1num: 54,
@@ -54,7 +54,7 @@ const caroItems = [
   {
     src: goalie,
     alt: "s5",
-    indexName: "Insights from the Economic Index",
+    indexName: <span>Insights from the <br/>Economic Index</span>,
     character1: "$",
     character2: "",
     stat1num: "81,300",

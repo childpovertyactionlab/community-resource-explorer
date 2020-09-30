@@ -94,21 +94,27 @@
       background: $green-white;
       padding: $text-panel-buffer;
       padding: 5.6rem;
+      @include media-breakpoint-only(md) {
+        padding: 4.8rem 4rem 5.6rem;
+      }
       @include media-breakpoint-up(xl) {
         padding: 7.2rem;
       }
 
       .controls {
-        
+        display: flex;
+        justify-content: space-between;
+        max-width: 480px;
         svg {
           cursor: pointer;
         }
 
         .arrows {
           stroke: $boulder;
-          position: absolute;
+          /* position: absolute;
           bottom: $text-panel-buffer;
-          right: $text-panel-buffer;
+          bottom: 4.43333vw;
+          right: $text-panel-buffer; */
 
           .right-arrow-md {
             padding-left: 3 * $spacer;
@@ -116,9 +122,11 @@
         }
 
         .eclipses {
-          position: absolute;
+          /* position: absolute;
+          //position: inherit;
           bottom: $text-panel-buffer;
-          left: $text-panel-buffer;
+          bottom: 4.43333vw;
+          left: $text-panel-buffer; */
 
           .eclipse {
             padding-right: 1 * $spacer;
@@ -134,17 +142,24 @@
 
       .statistics {
         position: relative;
-        .index-name {
-          font-weight: 400;
-          font-size: 18px;
-          //color: $orange-roughy2;
-          font-family: 'Louize Display';
-          font-style: italic;
-          color: #2C390B;
-          width: 46%;
+        margin-bottom: 1.6rem;
+        .index-name { 
           margin-bottom: 0.8rem;
           @include media-breakpoint-up(xl) {
-            font-size: 20px;
+            margin-bottom: 1.6rem;
+          }
+          span {
+            font-weight: 400;
+            font-size: 18px;
+            //color: $orange-roughy2;
+            font-family: 'Louize Display';
+            font-style: italic;
+            color: #2C390B;
+            width: 46%;
+            margin-bottom: 0.8rem;
+            @include media-breakpoint-up(xl) {
+              font-size: 20px;
+            }
           }
         }
         .underbar {
@@ -179,7 +194,7 @@
           vertical-align: top;
         }
         .character1 {
-          margin-right: 1 * $spacer;
+         // margin-right: 1 * $spacer;
         }
         .character2 {
           margin-right: 2 * $spacer;
