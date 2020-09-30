@@ -108,6 +108,7 @@
           stroke: $boulder;
           position: absolute;
           bottom: $text-panel-buffer;
+          bottom: 4.43333vw;
           right: $text-panel-buffer;
 
           .right-arrow-md {
@@ -116,7 +117,8 @@
         }
 
         .eclipses {
-          position: absolute;
+          //position: absolute;
+          position: inherit;
           bottom: $text-panel-buffer;
           left: $text-panel-buffer;
 
@@ -134,6 +136,7 @@
 
       .statistics {
         position: relative;
+        margin-bottom: 1.6rem;
         .index-name {
           font-weight: 400;
           font-size: 18px;
@@ -179,7 +182,7 @@
           vertical-align: top;
         }
         .character1 {
-          margin-right: 1 * $spacer;
+         // margin-right: 1 * $spacer;
         }
         .character2 {
           margin-right: 2 * $spacer;
