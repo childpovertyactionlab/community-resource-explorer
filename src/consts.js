@@ -3,6 +3,7 @@ import totalJobs from "./images/school-faq-example.jpg"
 import mapView from "./images/faq-map-view.jpg"
 import mapLayers from "./images/faq-map-layers.jpg"
 import mapScale from "./images/faq-scale.jpg"
+import { Link } from "gatsby"
 
 
 
@@ -310,8 +311,11 @@ const aboutSection = {
 
 const howUsed = {
   text: "How is the Community Resource Explorer currently being used?",
-  body:
-    " The CRE is currently being used by Dallas ISD as part of the Equity in Bond Planning project, a commitment to build Student and Family Resource Centers in four neighborhoods that were historically redlined and shut-out of economic development opportunities. The CRE was one data tool among several that Dallas ISD administrators used to identify where the need exists for more equitable resource allocation. The CRE data has also been part of community engagement efforts to co-create a vision for the resource centers: residents, parents and students, and community leaders have shared their own experiences in the neighborhood and have identified assets and needs aligned to the five CRE categories. Learn more about the project here. <mark>(NEED LINK)</mark>.",
+  body: (
+    <span>
+      The CRE is currently being used by Dallas ISD as part of the Equity in Bond Planning project, a commitment to build Student and Family Resource Centers in four neighborhoods that were historically redlined and shut-out of economic development opportunities. The CRE was one data tool among several that Dallas ISD administrators used to identify where the need exists for more equitable resource allocation. The CRE data has also been part of community engagement efforts to co-create a vision for the resource centers: residents, parents and students, and community leaders have shared their own experiences in the neighborhood and have identified assets and needs aligned to the five CRE categories. <Link to="/in-action/dallas-isd">Learn more about the project here.</Link>
+      </span>
+  ),
 }
 
 const whatRedlining = {
