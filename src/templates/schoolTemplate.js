@@ -411,7 +411,8 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 1 }}
+          md={{ span: 5, offset: 1 }}
+          xl={{ span: 4, offset: 1 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <p>{i18n.translate(`SCHOOL_CRI_DESCRIPTOR`)}</p>
@@ -427,7 +428,8 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 0 }}
+          md={{ span: 5, offset: 0 }}
+          xl={{ span: 4, offset: 0 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <div className="metric-group">
@@ -466,7 +468,7 @@ const SchoolPage = ({ data, ...props }) => {
             </span>
           </Link>
         </Col>
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 4, offset: 1 }}>
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 1 }} xl={{ span: 4, offset: 1 }}>
           <p
             className="quintile-prose"
             dangerouslySetInnerHTML={{
@@ -491,7 +493,8 @@ const SchoolPage = ({ data, ...props }) => {
         </Col>
         <Col
           xs={{ span: 10, offset: 1 }}
-          md={{ span: 4, offset: 0 }}
+          md={{ span: 5, offset: 0 }}
+          xl={{ span: 4, offset: 0 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
           <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
@@ -517,7 +520,8 @@ const SchoolPage = ({ data, ...props }) => {
             {!!getCatDesc(el.default_metric) && (
               <Col
                 xs={{ span: 10, offset: 1 }}
-                md={{ span: 4, offset: 1 }}
+                md={{ span: 5, offset: 1 }}
+                xl={{ span: 4, offset: 1 }}
                 className="metric-group cat-intro"
                 dangerouslySetInnerHTML={{
                   __html: i18n.translate(getCatDesc(el.default_metric)),
@@ -533,7 +537,8 @@ const SchoolPage = ({ data, ...props }) => {
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 4, offset: 0 }}
+                  md={{ span: 5, offset: 0 }}
+                  xl={{ span: 4, offset: 0 }}
                   className="metric-group level-0"
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
@@ -590,7 +595,8 @@ const SchoolPage = ({ data, ...props }) => {
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 4, offset: i % 2 === 0 ? 1 : 0 }}
+                  md={{ span: 5, offset: i % 2 === 0 ? 1 : 0 }}
+                  xl={{ span: 4, offset: i % 2 === 0 ? 1 : 0 }}
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
                   className={clsx(
