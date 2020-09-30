@@ -92,7 +92,7 @@ export const Tooltip = props => {
       <path d="M92 94H58V104H92V94Z" fill="#82A3D1" />
       <path d="M92 272H58V282H92V272Z" fill="#82A3D1" />
       <path d="M92 317H58V327H92V317Z" fill="#82A3D1" />
-      <path d="M57 139H23V149H57V139Z" fill="#465EB3" />
+      <path d="M57 139H23V149H57V139Z" fill="#fff" stroke="#CCCCCC" />
       <path d="M193 183H159V193H193V183Z" fill="#88D3B7" />
       <path d="M158 139H91V149H158V139Z" fill="#C1EFF6" />
       <path d="M58 227H24V237H58V227Z" fill="#465EB3" />
