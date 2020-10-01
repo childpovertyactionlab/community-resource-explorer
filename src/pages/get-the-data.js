@@ -17,15 +17,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/u8vvk15ebrno7k7/CRI_IndexValues_FullFinal.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/u8vvk15ebrno7k7/CRI_IndexValues_FullFinal.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Community Indicators",
@@ -35,15 +26,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/807pp5jl3htpklr/CRI_Community_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/807pp5jl3htpklr/CRI_Community_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Economic Indicators",
@@ -53,15 +35,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/m2ehgqk8zycz3ws/CRI_Economics_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/m2ehgqk8zycz3ws/CRI_Economics_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Education Indicators",
@@ -71,15 +44,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/kan3spc9jlwbigw/CRI_Education_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/kan3spc9jlwbigw/CRI_Education_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Family Indicators",
@@ -89,15 +53,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/kps8ircrg4tpnry/CRI_Family_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/kps8ircrg4tpnry/CRI_Family_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Health Indicators",
@@ -107,15 +62,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/b8h78idysugd8ny/CRI_Health_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/b8h78idysugd8ny/CRI_Health_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "Demographic Data",
@@ -125,15 +71,6 @@ const data = [
     Link:
       "https://www.dropbox.com/s/rnjvqqxe1zmul8r/CRI_Demographics_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://www.dropbox.com/s/rnjvqqxe1zmul8r/CRI_Demographics_Variables_StDevs.csv?dl=0"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
   {
     Dataset: "CRI Full Dataset",
@@ -157,15 +94,6 @@ const data = [
     Link:
       "https://docs.google.com/spreadsheets/d/1zIBYO7LeEcinnfJLcgXV4zWm7JOUjSQfKifl5S76qgQ/edit?usp=sharing",
     LinkLabel: "CSV",
-    // Link: (
-    //   <a
-    //     target="_blank"
-    //     rel="noreferrer"
-    //     href="https://docs.google.com/spreadsheets/d/1zIBYO7LeEcinnfJLcgXV4zWm7JOUjSQfKifl5S76qgQ/edit?usp=sharing"
-    //   >
-    //     CSV
-    //   </a>
-    // ),
   },
 ]
 
@@ -173,16 +101,46 @@ const Data = ({ location }) => {
   const { keywords, image, description } = pages.DATA.meta
   const { name } = pages.DATA
 
-  const TrackDataDownloads = e => {
-    // console.log("TrackDataDownloads, ", e.currentTarget.id)
-    if (window) {
-      const trackingData = {
-        event_category: "Get Data",
-        event_action: "Download CSV",
-        event_label: e.currentTarget.id,
-      }
-      window.gtag("event", "download", { ...trackingData })
+  const trackGetData = (type, label) => {
+    console.log("trackGetData, ", type)
+    let trackingData = {
+      event_category: "Get Data",
     }
+    if (type === "csv") {
+      trackingData.event_action = "Download CSV"
+      trackingData.event_label = label
+    }
+    if (type === "github") {
+      trackingData.event_action = "Navigate to Github"
+      trackingData.event_label = label
+    }
+    if (type === "methods") {
+      trackingData.event_action = "Navigate to Methodology Paper"
+      trackingData.event_label = label
+    }
+    if (window) {
+      window.gtag("event", "getdata", { ...trackingData })
+    }
+  }
+
+  const trackGithub = (type, e) => {
+    let hash = ""
+    if (window) {
+      hash = window.location.pathname
+    }
+    trackGetData("github", hash)
+  }
+
+  const trackMethods = (type, e) => {
+    let hash = ""
+    if (window) {
+      hash = window.location.pathname
+    }
+    trackGetData("methods", hash)
+  }
+
+  const trackDataDownloads = (type, e) => {
+    trackGetData("csv", e.currentTarget.id)
   }
 
   return (
@@ -231,6 +189,8 @@ const Data = ({ location }) => {
               href="https://github.com/childpovertyactionlab"
               target="_blank"
               rel="noreferrer"
+              className="track-github-access"
+              onClick={trackGithub}
             >
               Github
             </a>
@@ -242,6 +202,8 @@ const Data = ({ location }) => {
               href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit"
               target="_blank"
               rel="noreferrer"
+              className="track-method-access"
+              onClick={trackMethods}
             >
               Methodology
             </a>{" "}
@@ -294,7 +256,7 @@ const Data = ({ location }) => {
                         target="_blank"
                         rel="noreferrer"
                         className="get-data-link"
-                        onClick={TrackDataDownloads}
+                        onClick={trackDataDownloads}
                       >
                         {r.LinkLabel}
                       </a>
