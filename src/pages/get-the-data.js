@@ -102,7 +102,7 @@ const Data = ({ location }) => {
   const { name } = pages.DATA
 
   const trackGetData = (type, label) => {
-    console.log("trackGetData, ", type)
+    // console.log("trackGetData, ", type)
     let trackingData = {
       event_category: "Get Data",
     }
@@ -123,7 +123,7 @@ const Data = ({ location }) => {
     }
   }
 
-  const trackGithub = (type, e) => {
+  const trackGithub = () => {
     let hash = ""
     if (window) {
       hash = window.location.pathname
@@ -131,7 +131,7 @@ const Data = ({ location }) => {
     trackGetData("github", hash)
   }
 
-  const trackMethods = (type, e) => {
+  const trackMethods = () => {
     let hash = ""
     if (window) {
       hash = window.location.pathname
@@ -139,7 +139,7 @@ const Data = ({ location }) => {
     trackGetData("methods", hash)
   }
 
-  const trackDataDownloads = (type, e) => {
+  const trackDataDownloads = e => {
     trackGetData("csv", e.currentTarget.id)
   }
 
