@@ -418,7 +418,7 @@ const SchoolPage = ({ data, ...props }) => {
           <p>{i18n.translate(`SCHOOL_CRI_DESCRIPTOR`)}</p>
           <Link
             to="/faq/#about-9"
-            className="link-mean-info-button d-xs-none d-sm-none d-md-flex"
+            className="link-mean-info-button d-none d-md-flex"
           >
             <FaInfoCircle />
             <span className="mean-info-button">
@@ -468,7 +468,11 @@ const SchoolPage = ({ data, ...props }) => {
             </span>
           </Link>
         </Col>
-        <Col xs={{ span: 10, offset: 1 }} md={{ span: 5, offset: 1 }} xl={{ span: 4, offset: 1 }}>
+        <Col
+          xs={{ span: 10, offset: 1 }}
+          md={{ span: 5, offset: 1 }}
+          xl={{ span: 4, offset: 1 }}
+        >
           <p
             className="quintile-prose"
             dangerouslySetInnerHTML={{
