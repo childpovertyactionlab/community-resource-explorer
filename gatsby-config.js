@@ -42,6 +42,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -56,6 +57,14 @@ module.exports = {
       options: {
         path: `./src/data/map/schools.json`,
         typeName: `Schools`,
+      },
+    },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/cms`,
+        typeName: ({ node, object, isArray }) => object.level,
       },
     },
     `gatsby-plugin-sass`,

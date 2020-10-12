@@ -13,26 +13,34 @@ import portrait from "../images/child-portrait-3-4.jpg"
 import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
-const q1 = {
-  superhead: "",
-  text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
-  attribution:
-    "The Community Resource Explorer visualizes these assets and disparities.",
-}
-const q2 = {
-  superhead: `Voices from the Community`,
-  text: `There is no safe place for students just to be young people in the community.`,
-  attribution: "Dallas ISD Trustee",
-}
-const q3 = {
-  superhead: `Voices from the Community`,
-  text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
-  attribution: "Pleasant Grove Resident",
-}
 
-const home = ({ location }) => {
+/**
+ * Fetch data from yaml file for this page.
+ */
+export const query = graphql`
+  query PageQuery {
+    homeYaml {
+      subtitle
+      caption
+      q {
+        attribution
+        superhead
+        text
+      }
+    }
+    sharedYaml {
+      learnMore
+      goToExplorer
+      recentBlogPosts
+      readPost
+    }
+  }
+`
+
+const home = ({ data, location }) => {
+  console.log("home page data, ", data)
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
 
@@ -48,24 +56,18 @@ const home = ({ location }) => {
 
       <Hero activePageId={pages.HOME.id} imgSrc={portrait}>
         <div className="page-title-section">
-          <p className="subtitle">
-            All Dallas neighborhoods should have what they need to{" "}
-            <span className="">thrive.</span>
-          </p>
+          <p className="subtitle">{data.homeYaml.subtitle}</p>
         </div>
-        <p className="caption">
-          The Community Resource Explorer is{" "}
-          <span className="p-emphasis">
-            a data tool that reveals where assets and needs exist
-          </span>{" "}
-          so individuals and institutions can have the greatest impact.
-        </p>
+        <p
+          className="caption"
+          dangerouslySetInnerHTML={{ __html: data.homeYaml.caption }}
+        ></p>
         <div className="hero-links caption">
           <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight - 48}>
-            Learn more <InlineSvg type="down-arrow-sm" />
+            {data.sharedYaml.learnMore} <InlineSvg type="down-arrow-sm" />
           </ScrollLink>
           <a href="/explorer">
-            Go to the Explorer <InlineSvg type="down-arrow-sm" />
+            {data.sharedYaml.goToExplorer} <InlineSvg type="down-arrow-sm" />
           </a>
         </div>
       </Hero>
@@ -93,14 +95,16 @@ const home = ({ location }) => {
             xl={{ offset: 0, span: 5 }}
             className="quote-by-image quote light no-bg p-0"
           >
-            <div className="text">{q1.text}</div>
-            <div className="attribution">{q1.attribution}</div>
+            <div className="text">{data.homeYaml.q[0].text}</div>
+            <div className="attribution">{data.homeYaml.q[0].attribution}</div>
           </Col>
         </Col>
         <ExplorerSteps />
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
-          <span className="custom-underline">Recent blog</span> posts
+          <span className="custom-underline">
+            {data.sharedYaml.recentBlogPosts}
+          </span>
         </Col>
 
         {/* TODOcms: pinned blog post here, dynamically create below */}

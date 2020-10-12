@@ -1,4 +1,3 @@
-
 // __@mixins for shared styles (consider all instances before modifying)____
 
 @mixin dallas-isd-styles {
@@ -34,10 +33,9 @@
     top: 7px;
     margin-right: 5px;
     margin-right: 8px;
-     // updating per A's request, may change back
-
+    // updating per A's request, may change back
   }
-  
+
   .site-title {
     // _figma_
     font-size: 15px;
@@ -48,17 +46,16 @@
     mix-blend-mode: normal;
     // updating per A's request, may change back
     color: #484e56;
-    font-weight: 400;  
+    font-weight: 400;
     // _______
   }
 }
 
 @mixin quote-styles {
-
   .superheading {
     font-family: Louize Display;
     font-style: italic;
-    color: #E94F34;
+    color: #e94f34;
     font-size: 16px;
     @include media-breakpoint-up(xl) {
       font-size: 18px;
@@ -69,7 +66,7 @@
     font-weight: $font-weight-bold;
     font-size: 26px;
     line-height: 30px;
-    
+
     @include media-breakpoint-up(xl) {
       font-size: 30px;
       line-height: 36px;
@@ -93,7 +90,7 @@
       padding-top: 4 * $spacer;
       padding-bottom: 4 * $spacer;
       margin-bottom: 2 * $spacer;
-      
+
       @include media-breakpoint-up(md) {
         padding-top: 5 * $spacer;
         padding-bottom: 5 * $spacer;
@@ -117,7 +114,7 @@
     .text {
       .attribution {
         padding-top: 3 * $spacer;
-        
+
         @include media-breakpoint-up(xl) {
           padding-top: 5 * $spacer;
         }
@@ -153,57 +150,53 @@
 }
 
 @mixin ancillary-page-styles {
-
-  
-    .ancillary-page-heading {
-      background-color: $green-white;
-      padding-top: calc((1 * #{$spacer}) + (#{$sticky-header-height}));
-      @include media-breakpoint-up(lg) {
-        padding-top: calc((4 * #{$spacer}) + (#{$sticky-header-height}));
-      }
-      @include media-breakpoint-up(xl) {
-        padding-top: calc((6 * #{$spacer}) + (#{$sticky-header-height}));
-      }
+  .ancillary-page-heading {
+    background-color: $green-white;
+    padding-top: calc((1 * #{$spacer}) + (#{$sticky-header-height}));
+    @include media-breakpoint-up(lg) {
+      padding-top: calc((4 * #{$spacer}) + (#{$sticky-header-height}));
     }
+    @include media-breakpoint-up(xl) {
+      padding-top: calc((6 * #{$spacer}) + (#{$sticky-header-height}));
+    }
+  }
 
-    .content {
-      padding-top: 7 * $spacer;
-      padding-bottom: 6 * $spacer;
-      .page-title-section {
-        border-left: 4px solid $cinnabar;
-        padding-left: 2 * $spacer;
-        .title {
-          font-size: 14px;
-          font-weight: $font-weight-light;
-          line-height: 1; // 77px; need to align border-left to text top
-          padding-bottom: 3 * $spacer;
-          color: $firefly;
-        }
-        .subtitle {
-          max-width: 280px;
-          font-size: 36px;
-          line-height: 40px;
-          font-weight: $font-weight-bold;
-          letter-spacing: -2px;
-        }
-      }
-      .headline {
-        font-weight: $font-weight-bold;
-        max-width: 340px;
-        font-size: 30px;
-        line-height: 34px;
-        letter-spacing: -1px;
+  .content {
+    padding-top: 7 * $spacer;
+    padding-bottom: 6 * $spacer;
+    .page-title-section {
+      border-left: 4px solid $cinnabar;
+      padding-left: 2 * $spacer;
+      .title {
+        font-size: 14px;
+        font-weight: $font-weight-light;
+        line-height: 1; // 77px; need to align border-left to text top
         padding-bottom: 3 * $spacer;
-        }
+        color: $firefly;
+      }
+      .subtitle {
+        max-width: 280px;
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: $font-weight-bold;
+        letter-spacing: -2px;
+      }
     }
-    .branding {
-      display: none;
+    .headline {
+      font-weight: $font-weight-bold;
+      max-width: 340px;
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: -1px;
+      padding-bottom: 3 * $spacer;
     }
-  
-  
+  }
+  .branding {
+    display: none;
+  }
+
   @media screen and (min-width: $md-start) {
-   
-  .content {  
+    .content {
       .menu-section {
         height: 6 * $spacer;
       }
@@ -211,34 +204,32 @@
         display: none;
       }
       .image-section {
-      //  flex: $image-section-flex;
+        //  flex: $image-section-flex;
       }
-      
-     
-        //flex: $color-section-flex;
-   
-          padding-top: 0;
-          padding-bottom: 6 * $spacer;
-  
-          .page-title-section {
-            .title {
-              font-size: 20px;
-            }
-            .subtitle {
-              font-size: 40px;
-            }
-          }
-          .headline {
-            font-size: 36px;
-            line-height: 40px;
-            letter-spacing: -2px;
-          }
-      
-        .branding {
-          display: block;
-          padding-top: $spacer / 2;
+
+      //flex: $color-section-flex;
+
+      padding-top: 0;
+      padding-bottom: 6 * $spacer;
+
+      .page-title-section {
+        .title {
+          font-size: 20px;
         }
-   
+        .subtitle {
+          font-size: 40px;
+        }
+      }
+      .headline {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -2px;
+      }
+
+      .branding {
+        display: block;
+        padding-top: $spacer / 2;
+      }
     }
   }
 
@@ -246,30 +237,28 @@
   @media screen and (min-width: $xl-start) {
     .content {
       padding-bottom: 8 * $spacer;
-        
-        .page-title-section {
-          padding-left: 3 * $spacer;
-          .subtitle {
-            max-width: 520px;
-            font-size: 60px;
-            line-height: 65px
-          }
-          .title {
-            padding-bottom: 4 * $spacer;
-          }
-        }
 
-        .headline {
+      .page-title-section {
+        padding-left: 3 * $spacer;
+        .subtitle {
           max-width: 520px;
-          font-size: 50px;
-          line-height: 55px;
+          font-size: 60px;
+          line-height: 65px;
+        }
+        .title {
           padding-bottom: 4 * $spacer;
         }
+      }
+
+      .headline {
+        max-width: 520px;
+        font-size: 50px;
+        line-height: 55px;
+        padding-bottom: 4 * $spacer;
+      }
     }
   }
 }
-
-
 
 @mixin faq-question-styles {
   .question-text {
@@ -283,7 +272,7 @@
 
     &:hover {
       color: $chalet-green;
-    }      
+    }
     &:not(:hover) .expander-icon {
       // can't set stroke of svg in img w/CSS, so it's set to hover color and we make it black when not hovered like so:
       filter: brightness(0) grayscale(1);
@@ -310,14 +299,14 @@
     font-size: 15px;
     line-height: 22px;
     font-weight: $font-weight-light;
-    color:  $dk-gray;
+    color: $dk-gray;
     mix-blend-mode: normal;
 
     padding-top: $q-breath;
     padding-bottom: $q-after-breath;
 
     a {
-      color:rgb(212, 68, 28);
+      color: rgb(212, 68, 28);
     }
     img {
       max-width: 100%;
@@ -334,9 +323,9 @@
       padding-bottom: $q-breath; // so that total padding calculates correctly
     }
   }
-  
+
   @include media-breakpoint-up(md) {
-    max-width: 512px;  
+    max-width: 512px;
   }
   @include media-breakpoint-up(xl) {
     .question-text {
@@ -376,12 +365,12 @@
       font-weight: $font-weight-bold;
       letter-spacing: -1px;
       color: $firefly;
-      
+
       padding-top: 3 * $spacer;
       font-size: 24px;
       a {
         color: unset;
-        transition: color .3s ease;
+        transition: color 0.3s ease;
         &:hover {
           color: $cinnabar;
           text-decoration: none;
@@ -414,11 +403,10 @@
   }
   @include media-breakpoint-up(xl) {
     padding-bottom: 8 * $spacer;
-  
+
     .post-details {
       .post-title {
         font-size: 30px;
-        
       }
       .post-contents {
         font-size: 16px;
@@ -431,11 +419,11 @@
 .load-more button {
   font-size: 14px;
   letter-spacing: 0.22px;
-  padding: $spacer 4*$spacer;
+  padding: $spacer 4 * $spacer;
 
   @include media-breakpoint-up(xl) {
     font-size: 16px;
-    padding: 1.5*$spacer 5*$spacer;
+    padding: 1.5 * $spacer 5 * $spacer;
   }
 }
 
@@ -449,9 +437,18 @@
   color: $firefly;
 
   .custom-underline {
+    // This is the element that presents the underline.
+    &:after {
+      display: block;
+      content: "";
+      height: 4px;
+      background-color: $cinnabar;
+      margin-top: 4 * $spacer;
+      width: 60%;
+    }
     display: inline-block;
-    border-bottom: 4px solid $cinnabar;
-    
+    // border-bottom: 4px solid $cinnabar;
+
     padding-bottom: 2 * $spacer;
     margin-bottom: 4 * $spacer;
     @include media-breakpoint-up(md) {
