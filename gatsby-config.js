@@ -67,6 +67,7 @@ module.exports = {
         typeName: ({ node, object, isArray }) => object.level,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
