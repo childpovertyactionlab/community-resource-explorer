@@ -210,3 +210,49 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+const PostTemplate = require.resolve(`./src/templates/postTemplate.js`)
+
+// Creates pages for course events
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allMdx {
+        edges {
+          node {
+            body
+            frontmatter {
+              title
+              date
+              path
+              caroItems {
+                alt
+                character1
+                character2
+                indexName
+                src
+                stat1text
+                stat2text
+              }
+            }
+            excerpt
+          }
+        }
+      }
+    }
+  `)
+
+  const posts = result.data.allMdx.edges
+  posts.forEach(({ node: post }) => {
+    // console.log("post, ", post)
+    createPage({
+      path: `/in-action/${post.frontmatter.path}/`,
+      component: PostTemplate,
+      context: {
+        slug: post.frontmatter.path,
+        post: post,
+      },
+    })
+  })
+}

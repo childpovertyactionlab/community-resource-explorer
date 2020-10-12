@@ -4,8 +4,8 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "./src/data/cms/home.yml"
-        fields:
+        file: "./src/data/cms/yml/en_US/home.yml"
+        fields: # update fields
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - label: Team
@@ -15,10 +15,10 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Position, name: position, widget: string }
               - { label: Photo, name: photo, widget: image }
-      - label: "Locations Page"
-        name: "locations"
-        file: "site/content/locations.yml"
-        fields:
+      - label: "Shared Strings"
+        name: "shared"
+        file: "./src/data/cms/yml/en_US/shared.yml"
+        fields: # update fields
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - label: Locations
@@ -27,3 +27,12 @@ collections:
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Address, name: address, widget: string }
+  - label: "Posts"
+    name: "posts"
+    files:
+      - label: "Post"
+        name: "home"
+        folder: "./src/data/cms/md/en_US/posts"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown } # update fields
