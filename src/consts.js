@@ -5,8 +5,6 @@ import mapLayers from "./images/faq-map-layers.jpg"
 import mapScale from "./images/faq-scale.jpg"
 import { Link } from "gatsby"
 
-
-
 import _ from "lodash"
 
 const HOME = {

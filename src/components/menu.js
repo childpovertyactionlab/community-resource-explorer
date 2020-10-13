@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap"
 import { menuPages } from "../consts"
 import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
+import { a11yClick } from "../utils/a11yClick"
 
 const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
   let [menuOpen, setMenuOpen] = useState(false)
@@ -14,8 +15,17 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
     setMenuOpen = setMenuOpenHandler
   }
 
-  const toggleMenuOpen = () => setMenuOpen(!menuOpen)
+  const toggleMenuOpen = e => {
+    if (a11yClick(e)) {
+      setMenuOpen(!menuOpen)
+    }
+  }
   const closeMenu = () => setMenuOpen(false)
+  const checkAndCloseMenu = e => {
+    if (a11yClick(e)) {
+      setMenuOpen(false)
+    }
+  }
 
   const getMenuPanel = () => {
     return (
@@ -28,8 +38,8 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         <div className="logo"></div>
         <div
           className="close-menu"
-          onClick={closeMenu}
-          onKeyDown={closeMenu}
+          onClick={checkAndCloseMenu}
+          onKeyDown={checkAndCloseMenu}
           tabIndex="0"
           role="button"
           aria-label="close menu"
@@ -48,9 +58,11 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
               .map(page => {
                 const nameClasses =
                   "menu-page-name" + (page.id === activePageId ? " active" : "")
-                const navigateToPage = () => {
-                  closeMenu()
-                  navigate(page.path)
+                const navigateToPage = e => {
+                  if (a11yClick(e)) { 
+                    closeMenu()
+                    navigate(page.path)
+                  }
                 }
                 return (
                   <div
@@ -93,7 +105,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         className="menu-icon-group"
         role="button"
         aria-label="open menu"
-        aria-aria-expanded={menuOpen}
+        aria-expanded={menuOpen}
         tabIndex="0"
       >
         <span className="menu-icon svg-base"></span>

@@ -35,6 +35,13 @@ class stickyHeader extends React.Component {
 
   unthrottledUpdateStickiness(e) {
     const hero = document.getElementById("hero")
+    if (!hero) {
+      // pages w/o hero (e.g. "get-the-data") have header fixed to page-top & don't listen to scroll
+      // NOTE: shouldn't get hit as heroless pages shouldn't attach a scroll event listener
+      this.setState({ active: true })
+      return
+    }
+
     let heroHeight = hero.getBoundingClientRect().height
 
     // TODO: simplify by removing appendage from hero

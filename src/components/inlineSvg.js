@@ -1,5 +1,6 @@
 import React from "react"
 import _ from "lodash"
+import { a11yClick } from "../utils/a11yClick"
 
 const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel = "" }) => {
   const getSvg = type => {
@@ -219,11 +220,17 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel = "" }) => 
     }
   }
 
+  const handleClick = e => {
+    if (a11yClick(e)) {
+      onClick()
+    }
+  }
+
   classes += " inline-svg " + type
   return (
     <div
-      onClick={onClick}
-      onKeyDown={onClick}
+      onClick={handleClick}
+      onKeyDown={handleClick}
       className={classes}
       role="button"
       aria-label={ariaLabel}

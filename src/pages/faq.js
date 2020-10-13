@@ -15,6 +15,7 @@ import InlineSvg from "../components/inlineSvg"
 
 import _ from "lodash"
 import { Helmet } from "react-helmet"
+import { a11yClick } from "../utils/a11yClick"
 
 // Current as of 7/29, 2:53pm
 
@@ -70,12 +71,18 @@ class Faq extends React.Component {
     })
   }
 
-  toggleMenu() {
-    this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
+  toggleMenu(e) {
+    if (a11yClick(e)) {
+      this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
+    }
   }
 
   // close menu
-  handleCloseMenu(uid) {
+  handleCloseMenu(uid, e) {
+    if (!a11yClick(e)) {
+      return
+    }
+
     this.setState({ mobileMenuActive: false })
 
     setTimeout(() => {
@@ -269,6 +276,11 @@ const QuestionGroup = ({
   expandedMap,
   invertExpansionMap,
 }) => {
+  const handleClick = (uid, expand, updateHash, e) => {
+    if (a11yClick(e)) {
+      toggleExpansion(uid, expand, updateHash)
+    }
+  }
   return (
     <div>
       {questions.map((q, idx) => {
@@ -283,12 +295,12 @@ const QuestionGroup = ({
           <Element name={uid} className={classes} id={uid} key={uid}>
             <div
               className="question-text"
-              onClick={toggleExpansion.bind(this, uid, !expandedValue, true)}
-              onKeyDown={toggleExpansion.bind(this, uid, !expandedValue, true)}
+              onClick={handleClick.bind(this, uid, !expandedValue, true)}
+              onKeyDown={handleClick.bind(this, uid, !expandedValue, true)}
               role="button"
               tabIndex="0"
               // aria-controls="example-collapse-text"
-              // aria-expanded={expanded}
+              aria-expanded={expanded}
             >
               <span className="text">
                 {q.text}
