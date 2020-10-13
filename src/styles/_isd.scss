@@ -1,9 +1,9 @@
 // todo standardize page id
 #isd-page {
   $hero-color: #fff;
-  $dk-gray: #4B4B4B;
-  
-  $text-panel-buffer: .7 * $column;
+  $dk-gray: #4b4b4b;
+
+  $text-panel-buffer: 0.7 * $column;
   $text-panel-buffer-sm: 1 * $column;
 
   p {
@@ -36,7 +36,7 @@
         color: $orange-roughy2;
       }
     }
-    
+
     .image-section {
       @include media-breakpoint-up(md) {
         margin-bottom: 5 * $spacer;
@@ -53,14 +53,24 @@
         // for md plus, add white bg behind lower part of img
         $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
         $cutoff: (1/2) * $hero-wide-img-width-md * $white-bg-proportion; // 1/2 ~ image aspect ratio
-        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+        background: linear-gradient(
+          0deg,
+          transparent 0,
+          transparent $cutoff,
+          $hero-color $cutoff
+        );
       }
-      
+
       @include media-breakpoint-up(xl) {
         // same as above, different img width (so different $cutoff)
         $white-bg-proportion: 0.55; // <- tune 0-1 to control how far from img bottom background color ends
         $cutoff: (1/2) * $hero-wide-img-width-xl * $white-bg-proportion; // 1/2 ~ image aspect ratio
-        background: linear-gradient(0deg, transparent 0, transparent $cutoff, $hero-color $cutoff);
+        background: linear-gradient(
+          0deg,
+          transparent 0,
+          transparent $cutoff,
+          $hero-color $cutoff
+        );
       }
     }
     .menu-section {
@@ -80,8 +90,10 @@
     @include media-breakpoint-up(xl) {
       margin-bottom: 11 * $spacer;
     }
-    
-    .carousel-inner, .carousel-item, .carousel-image {
+
+    .carousel-inner,
+    .carousel-item,
+    .carousel-image {
       width: 100%;
       height: 100%;
     }
@@ -143,7 +155,7 @@
       .statistics {
         position: relative;
         margin-bottom: 1.6rem;
-        .index-name { 
+        .index-name {
           margin-bottom: 0.8rem;
           @include media-breakpoint-up(xl) {
             margin-bottom: 1.6rem;
@@ -152,9 +164,9 @@
             font-weight: 400;
             font-size: 18px;
             //color: $orange-roughy2;
-            font-family: 'Louize Display';
+            font-family: "Louize Display";
             font-style: italic;
-            color: #2C390B;
+            color: #2c390b;
             width: 46%;
             margin-bottom: 0.8rem;
             @include media-breakpoint-up(xl) {
@@ -184,7 +196,9 @@
           color: $orange-roughy2;
           font-family: "Morganite Bold";
         }
-        .percent, .character1, .character2 {
+        .percent,
+        .character1,
+        .character2 {
           font-size: 24px;
           @include media-breakpoint-up(xl) {
             font-size: 30px;
@@ -194,7 +208,7 @@
           vertical-align: top;
         }
         .character1 {
-         // margin-right: 1 * $spacer;
+          // margin-right: 1 * $spacer;
         }
         .character2 {
           margin-right: 2 * $spacer;
@@ -202,11 +216,11 @@
         }
         .text {
           // so staistic texts align with each other, and wrap properly (not below number)
-         // position: absolute;
-         // left: 8 * $spacer;
+          // position: absolute;
+          // left: 8 * $spacer;
           font-size: 16px;
           @include media-breakpoint-up(xl) {
-          left: 14 * $spacer;
+            left: 14 * $spacer;
             font-size: 20px;
           }
           line-height: 1.2;
@@ -228,7 +242,7 @@
       .carousel.slide {
         height: 400px;
       }
-      
+
       .caro-text-panel {
         flex-basis: calc(#{$column} * 7);
         padding: $text-panel-buffer-sm;
@@ -245,7 +259,7 @@
         }
       }
     }
-    
+
     @include media-breakpoint-up(md) {
       .carousel.slide {
         flex-basis: calc(100vw * 7 / 12);
@@ -263,25 +277,23 @@
         margin-bottom: 0 * $spacer; // only impacts xs
       }
     }
-    .title {
+    .title,
+    .title h2 {
       font-weight: $font-weight-bold;
       letter-spacing: -0.01em;
       font-size: 26px;
       line-height: 30px;
       margin-bottom: 6 * $spacer; // only impacts xs
-      
-     
 
       @include media-breakpoint-up(xl) {
         font-size: 30px;
         line-height: 36px;
       }
-
     }
 
     .paragraphs {
       p {
-       // font-weight: $font-weight-lighter;
+        // font-weight: $font-weight-lighter;
         color: $boulder;
         font-size: 15px;
         line-height: 22px;
@@ -321,5 +333,4 @@
       padding-right: 2 * $column;
     }
   }
-
 }

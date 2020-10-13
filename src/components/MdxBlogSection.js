@@ -24,7 +24,15 @@ const MdxBlogSection = ({ ...props }) => {
           xl={{ offset: 1, span: 4 }}
           className="paragraphs p-0"
         >
-          <MDXRenderer>{props.content}</MDXRenderer>
+          {props.children.map((el, i) => {
+            if (!el.props) {
+              return <p key={`child_p_${i}`}>{el}</p>
+            }
+            if (!!el.props.mdxType && el.props.mdxType === "p") {
+              return <p key={`child_p_${i}`}>{el.props.children}</p>
+            }
+            return null
+          })}
         </Col>
       </Row>
     </Col>

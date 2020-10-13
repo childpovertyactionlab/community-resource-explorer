@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap"
 
 let quoteStyleTypes = ["light", "dark"]
 
-const MdxQuote = ({ ...props }) => {
+const MdxQuote = ({ children, ...props }) => {
   // console.log("MdxQuote, ", props)
   let styleType
   if (!props.styleType) {
@@ -20,7 +20,7 @@ const MdxQuote = ({ ...props }) => {
       key={props.attribution}
     >
       <div className="text">
-        “{props.content}”{styleType === "dark" ? attributionDiv : null}
+        “{children}”{styleType === "dark" ? attributionDiv : null}
       </div>
       {styleType === "light" ? attributionDiv : null}
     </Col>
