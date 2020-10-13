@@ -40,7 +40,7 @@ export const query = graphql`
 `
 
 const home = ({ data, location }) => {
-  console.log("home page data, ", data)
+  // console.log("home page data, ", data)
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
 

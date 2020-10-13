@@ -50,6 +50,7 @@ caroItems: # Pass this in if you want an image carousel.
     stat2text: "median household income in the least affluent campus community"
 ---
 
+
 ## Equity in Bond Planning Project Overview"
 
 In January 2020, the Dallas ISD Administration and Board of Trustees boldly committed to using 2020 Bond funding to make investments in historically redlined neighborhoods, neighborhoods where residents were shut - out of viable homeownership and economic development opportunities for decades. Dallas ISD has courageously recognized that “intentional decisions . . .have led to racial and economic segregation that produced major inequities that persist to this day” and is determined to right the wrongs of the past.

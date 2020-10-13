@@ -8,6 +8,7 @@ import SEO from "./../components/seo"
 import Hero from "./../components/hero-no-img"
 import CustomCarousel from "./../components/customCarousel"
 import { pages } from "./../consts"
+import { MDXProvider } from "@mdx-js/react"
 import MdxQuote from "./../components/MdxQuote"
 
 import isdHero from "./../images/isd-hero.png"
@@ -18,6 +19,8 @@ import swinging from "./../images/swinging.jpg"
 
 const PostTemplate = ({ data, ...props }) => {
   console.log("PostTemplate, ", props)
+
+  const shortcodes = { MdxQuote }
 
   // let quoteStyleTypes = ["light", "dark"]
 
@@ -245,8 +248,9 @@ const PostTemplate = ({ data, ...props }) => {
             <CustomCarousel items={post.frontmatter.caroItems} />
           </Col>
         )}
-
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXProvider components={{ ...shortcodes }}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
       </Row>
     </Layout>
   )

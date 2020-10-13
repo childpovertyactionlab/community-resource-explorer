@@ -7,7 +7,6 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
 import clsx from "clsx"
 import { Container, Row, Col } from "react-bootstrap"
 import favicon from "../images/menu-logo.svg"
@@ -15,7 +14,6 @@ import Helmet from "react-helmet"
 import StickyHeader from "./stickyHeader"
 import SignUpBar from "./signUpBar"
 import Footer from "./footer"
-import MdxQuote from "./MdxQuote"
 
 const Layout = ({
   children,
@@ -27,7 +25,7 @@ const Layout = ({
   ...props
 }) => {
   // console.log("layout loaded", props.location)
-  const shortcodes = { MdxQuote }
+
   return (
     <StaticQuery
       query={graphql`
@@ -41,7 +39,6 @@ const Layout = ({
       `}
       render={data => (
         <>
-          <MDXProvider components={shortcodes}>{children}</MDXProvider>
           <Helmet>
             <link rel="icon" href={favicon} />
             <script
@@ -49,6 +46,7 @@ const Layout = ({
               src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry"
             ></script>
           </Helmet>
+
           <Container fluid className={clsx("main", props.className)}>
             {!disableHeader && <StickyHeader activePageId={activePageId} />}
             <Row noGutters>
