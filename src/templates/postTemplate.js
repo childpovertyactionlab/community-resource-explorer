@@ -44,7 +44,7 @@ const PostTemplate = ({ data, ...props }) => {
       </Hero>
 
       <Row id="page">
-        {post.frontmatter.caroItems && (
+        {!!post.frontmatter.showCaroItems && (
           <Col className="carousel-section p-0" xs={{ offset: 0, span: 12 }}>
             <CustomCarousel items={post.frontmatter.caroItems} />
           </Col>
