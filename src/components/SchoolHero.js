@@ -10,12 +10,12 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
         <Col xs={12} className="school-hero hero-wide m-0 p-0">
           <Row>
             <Col className="menu-section p-0" xs={12}>
-              <a className="logo-link" href="/">
+              <a className="logo-link" aria-label="Go home" href="/">
                 <span className="branding-mobile svg-base"></span>
               </a>
 
               <div className="branding-md-up">
-                <a className="logo-link" href="/">
+                <a className="logo-link" aria-label="Go home" href="/">
                   <span className="site-logo svg-base"></span>
                   <span className="site-title">
                     Community Resource Explorer
@@ -34,7 +34,7 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
       <Col xs={12} className="hero-square p-0">
         <div className="color-section">
           <div className="branding">
-            <a className="logo-link" href="/">
+            <a className="logo-link" aria-label="Go home" href="/">
               <span className="site-logo svg-base"></span>
               <span className="site-title">Community Resource Explorer</span>
             </a>

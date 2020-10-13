@@ -84,7 +84,7 @@ const Contact = ({ location }) => {
   
   const onSubmit = e => {
     if (!document.getElementById('newsletter-toggle').checked) {
-      console.log('off')
+      // console.log('off')
       return
     } 
     console.log('on')
@@ -94,7 +94,7 @@ const Contact = ({ location }) => {
     _.each(['first_name', 'last_name', 'email', 'subject', 'message'], fieldName => {
       const field = document.forms.contactForm.querySelector(`.${fieldName}`)
 
-      console.log(fieldName, ' : ', field.value)
+      // console.log(fieldName, ' : ', field.value)
       formDatas[fieldName] = field.value
     })
 
@@ -272,7 +272,7 @@ const Contact = ({ location }) => {
         >
           
           <label htmlFor="why-contact">I am reaching out because:</label>
-          <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
+          <Form.Control as="select" custom id="why-contact" name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
             })}

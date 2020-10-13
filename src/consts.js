@@ -245,11 +245,11 @@ const mapOrganization = {
   body:
     <span>
     <p>The map view shows all 189 school communities included in the Explorer, color-coded to illustrate each community’s overall Community Resource Index (CRI) value.</p>
-    <img src={mapView} />
+    <img alt="Dallas ISD map" src={mapView} />
     <p>Communities in green have CRI values that are well above average, communities in purple/blue have CRI values that are well below average, and communities in aqua have CRI values that are about average. CRI values range from 0 to 100; values closer to 100 indicate more resources than values closer to 0.</p> 
-    <img src={mapScale} />
+    <img alt="example CRI scale" src={mapScale} />
     <p>You can zoom in on the map to see a smaller geographic footprint. You can also turn on layers to see the historical redlining map, feeder pattern attendance boundaries, and the racial and ethnic demographics across the city.
-    <img src={mapLayers} /> 
+    <img alt="map layers" src={mapLayers} /> 
       <br />In the map view, you can see data for each sub-index category (Economics, Education, Family, Community, Health) and individual indicators as well—turn these on by clicking on the “Metrics” button on the left-hand side of the window. For each sub-index category and each indicator, the color-coding pattern is the same: communities in green always represent the above average condition, and communities in purple/blue always represent the below average condition. If you’re interested in analyzing a smaller subset of campuses, you can adjust the map display by selecting a category or indicator and selecting a piece of the distribution to display. For example, for Median Household Income, you can select the far right (dark green) square on the distribution, and only the campus communities with well above average Median Household Income will appear on the map.</p>
     </span>,
 }
@@ -259,7 +259,7 @@ const profileOrganization = {
   body:
     <span>Each profile includes information about the school’s address and feeder pattern as well as the demographics, assets, and needs of the community surrounding the school. It’s important to keep in mind that the data reflect the geography of the two-mile radius around the school, not the school itself. For example, the racial and ethnic make-up of the community reflects all residents in the surrounding neighborhood, not just the students at the school.<br />
       <br />Every profile also includes the community’s overall Community Resource Index (CRI) value, representing all the indicators taken together and illustrating how well-resourced the community is relative to the other campus communities, as well as five sub-index categories, one each for Economics, Education, Family, Community, and Health. Each category includes (1) an index value, representing all the indicators included in the category and illustrating how well-resourced the community is relative to the other campus communities in that particular category and (2) a series of indicators that provide both raw data about the community as well as where the community falls in the distribution of all communities on each indicator. For example, the sample indicator below, Total Jobs, tells us:
-        <img src={totalJobs} />
+        <img alt="total jobs scale" src={totalJobs} />
       <ul><li>The <b>range</b> of Total Jobs across all campus communities. The minimum (lowest) is 1,468. The maximum (highest) is 209,962.</li>
         <li>The <b>mean</b>, or average, of Total Jobs across all campus communities. Marked by a tick mark (vertical line), the mean number of jobs is 27,096. For most indicators, the tick mark for the mean will be about halfway between the min and the max (i.e., near the centerpoint of the line). For some indicators, like Total Jobs, the tick mark might be further left or right, indicating skew in the data. In this case, Total Jobs skews left—209,962 is an outlier.</li>
         <li>The <b>actual number</b> of Total Jobs for this particular school community. Marked by a red dot, the actual number of jobs within the two-mile radius around this school is 53,614.</li>

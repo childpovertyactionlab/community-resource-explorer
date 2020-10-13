@@ -38,9 +38,10 @@ const SignUpBar = ({ ...props }) => {
                   onChange={e => setEmailValue(e.target.value)}
                   className="email-input"
                   placeholder="Enter your e-mail address"
+                  aria-label="subscribe to email updates"
                 />
                 {!emailValid && (
-                  <p className="feedback">Please provide a valid email.</p>
+                  <p aria-hidden={emailValid} className="feedback">Please provide a valid email.</p>
                 )}
               </div>
 

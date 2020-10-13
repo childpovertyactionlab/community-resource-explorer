@@ -32,6 +32,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
           onKeyDown={closeMenu}
           tabIndex="0"
           role="button"
+          aria-label="close menu"
         >
           <InlineSvg type="x" />
           Close
@@ -91,6 +92,8 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         onKeyDown={toggleMenuOpen}
         className="menu-icon-group"
         role="button"
+        aria-label="open menu"
+        aria-aria-expanded={menuOpen}
         tabIndex="0"
       >
         <span className="menu-icon svg-base"></span>

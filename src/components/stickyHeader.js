@@ -60,7 +60,7 @@ class stickyHeader extends React.Component {
       <nav className={classes}>
         <div className="content">
           <div className="branding">
-            <a className="logo-link" href="/">
+            <a className="logo-link" aria-label="Go home" href="/">
               <span className="site-logo svg-base"></span>
               <span className="site-title">Community Resource Explorer</span>
             </a>
