@@ -3,8 +3,8 @@ import { Col } from "react-bootstrap"
 
 let quoteStyleTypes = ["light", "dark"]
 
-const MdxQuote = ({ children, ...props }) => {
-  console.log("MdxQuote, ", children, props)
+const MdxQuote = ({ ...props }) => {
+  // console.log("MdxQuote, ", props)
   let styleType
   if (!props.styleType) {
     styleType = quoteStyleTypes.shift()
@@ -20,7 +20,7 @@ const MdxQuote = ({ children, ...props }) => {
       key={props.attribution}
     >
       <div className="text">
-        “{children}”{styleType === "dark" ? attributionDiv : null}
+        “{props.content}”{styleType === "dark" ? attributionDiv : null}
       </div>
       {styleType === "light" ? attributionDiv : null}
     </Col>

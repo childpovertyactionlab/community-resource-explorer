@@ -23,13 +23,45 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 // import schools from "../../content/data/schools.json"
 const { createFilePath } = require("gatsby-source-filesystem")
 
+// School page template.
 const SchoolTemplate = require.resolve(`./src/templates/schoolTemplate.js`)
+// Blog post template.
+const PostTemplate = require.resolve(`./src/templates/postTemplate.js`)
 
 // Creates pages for course events
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
+      allMdx {
+        edges {
+          node {
+            body
+            frontmatter {
+              title
+              date
+              path
+              showCaroItems
+              caroItems {
+                alt
+                character1
+                character2
+                indexName
+                src
+                stat1text
+                stat2text
+              }
+              contents {
+                type
+                attribution
+                content
+                heading
+              }
+            }
+            excerpt
+          }
+        }
+      }
       allSchoolsJson {
         edges {
           node {
@@ -197,6 +229,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  // Create schools pages.
   const schools = result.data.allSchoolsJson.edges
   schools.forEach(({ node: school }) => {
     // console.log("school, ", school)
@@ -209,40 +242,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-}
 
-const PostTemplate = require.resolve(`./src/templates/postTemplate.js`)
-
-// Creates pages for course events
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allMdx {
-        edges {
-          node {
-            body
-            frontmatter {
-              title
-              date
-              path
-              caroItems {
-                alt
-                character1
-                character2
-                indexName
-                src
-                stat1text
-                stat2text
-              }
-            }
-            excerpt
-          }
-        }
-      }
-    }
-  `)
-
+  // Create post pages.
   const posts = result.data.allMdx.edges
   posts.forEach(({ node: post }) => {
     // console.log("post, ", post)
@@ -256,3 +257,54 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+// Creates pages for course events
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions
+//   const result = await graphql(`
+//     query {
+//       allMdx {
+//         edges {
+//           node {
+//             body
+//             frontmatter {
+//               title
+//               date
+//               path
+//               showCaroItems
+//               caroItems {
+//                 alt
+//                 character1
+//                 character2
+//                 indexName
+//                 src
+//                 stat1text
+//                 stat2text
+//               }
+//               contents {
+//                 type
+//                 attribution
+//                 content
+//                 heading
+//               }
+//             }
+//             excerpt
+//           }
+//         }
+//       }
+//     }
+//   `)
+
+// const posts = result.data.allMdx.edges
+// posts.forEach(({ node: post }) => {
+//   // console.log("post, ", post)
+//   createPage({
+//     path: `/in-action/${post.frontmatter.path}/`,
+//     component: PostTemplate,
+//     context: {
+//       slug: post.frontmatter.path,
+//       post: post,
+//     },
+//   })
+// })
+// }
