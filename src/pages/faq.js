@@ -38,15 +38,21 @@ class Faq extends React.Component {
     const uid = hash.slice(1)
 
     if (uid) {
-      this.toggleExpansion(uid, true)
+      setTimeout(() => {
+        this.toggleExpansion(uid, true)
+        
+        const target = document.getElementById(uid)
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+      }, 600);
 
+      // doesn't respect offset (so question text is obscured) and doesn't animate
       // wants hash (w/#) though docs don't include. doesn't seem to respond to extra options
-      animateScroll.scrollTo(hash, {
-        containerId: "faq-page",
-        // duration: 1500,
-        // delay: 1000,
-        // offset: 50, // Scrolls to element + 50 pixels down the page
-      })
+      // animateScroll.scrollTo(hash, {
+      //   containerId: "faq-page",
+      //   offset: -stickyHeader,
+      // })
     }
   }
 
@@ -83,6 +89,17 @@ class Faq extends React.Component {
       return
     }
 
+    if (e.type !== 'click') {
+      const target = document.getElementById(uid)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+      // doesn't scroll
+      // animateScroll.scrollTo(`#${uid}`, {
+      //   containerId: "faq-page",
+      // })
+    }
+
     this.setState({ mobileMenuActive: false })
 
     setTimeout(() => {
@@ -98,7 +115,12 @@ class Faq extends React.Component {
       <>
         {faqSections.map(s => (
           <>
-            <div className="menu-title" key={"side-menu-title-" + s.id}>
+            <div
+              className="menu-title"key={"side-menu-title-" + s.id}
+              tabIndex="0"
+              role="button"
+              onKeyDown={this.handleCloseMenu.bind(this, `${s.id}-1`)}
+            >
               <Link
                 onClick={this.handleCloseMenu.bind(this, `${s.id}-1`)}
                 activeClass="active"
@@ -107,6 +129,7 @@ class Faq extends React.Component {
                 to={s.id + "-section"}
                 offset={-stickyHeaderHeight}
                 // containerId="faq-page"
+                
               >
                 {s.title}
               </Link>
@@ -114,7 +137,12 @@ class Faq extends React.Component {
             <br />
           </>
         ))}
-        <div className="menu-title" key={"side-menu-title-methods-paper"}>
+        <div
+          className="menu-title"key={"side-menu-title-methods-paper"}
+          tabIndex="0"
+          role="button"
+          onKeyDown={this.handleCloseMenu.bind(this, 'methods-paper')}
+        >
           <Link
             onClick={this.handleCloseMenu.bind(this, `methods-paper`)}
             activeClass="active"
@@ -123,6 +151,7 @@ class Faq extends React.Component {
             to="methods-paper"
             offset={-stickyHeaderHeight}
             // containerId="faq-page"
+            
           >
             Methods Paper
           </Link>
