@@ -35,8 +35,6 @@ import * as qs from "query-string"
 // "Another reason"
 // "Skips FAQ items, just goes to the regular form"
 
-// NOTE: the keys in this object are used as classes to determine what displays (eg certain faqs, a form).
-// Update the class accordingly if the key name is changed.
 const conditionalOptions = {
   "none": {
     text: "Select an option",
@@ -254,7 +252,8 @@ const Contact = ({ location }) => {
           >
           <div className="content">
             <div className="page-title-section">
-              <div className="title">Questions or feedback?</div>
+              <h1 className="sr-only">Contact us</h1>
+              <h2 className="title">Questions or feedback?</h2>
               <div className="subtitle">
                 Get in touch
 

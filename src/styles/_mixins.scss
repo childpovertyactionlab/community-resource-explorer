@@ -177,6 +177,7 @@
           font-size: 14px;
           font-weight: $font-weight-light;
           line-height: 1; // 77px; need to align border-left to text top
+          margin-bottom: 0;
           padding-bottom: 3 * $spacer;
           color: $firefly;
         }
