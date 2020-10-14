@@ -2,7 +2,7 @@ import React from "react"
 import _ from "lodash"
 import { a11yClick } from "../utils/a11yClick"
 
-const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel = "" }) => {
+const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel }) => {
   const getSvg = type => {
     switch (type) {
       // declare stroke color in CSS, as defining here cannot be overridden
@@ -234,7 +234,6 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel = "" }) => 
       className={classes}
       role="button"
       aria-label={ariaLabel}
-      aria-hidden={!ariaLabel}
       tabIndex="0"
     >
       {getSvg(type)}

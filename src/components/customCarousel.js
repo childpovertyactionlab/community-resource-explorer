@@ -86,14 +86,15 @@ const CustomCarousel = ({ items }) => {
                   onClick={onClick}
                   classes={classes}
                   type="eclipse"
+                  ariaLabel={"go to slide "+(idx+1)}
                 />
               )
             })}
           </div>
 
           <div className="arrows">
-            <InlineSvg onClick={goBack} type="left-arrow-md" />
-            <InlineSvg onClick={goForward} type="right-arrow-md" />
+            <InlineSvg onClick={goBack} type="left-arrow-md" ariaLabel="previous slide" />
+            <InlineSvg onClick={goForward} type="right-arrow-md" ariaLabel="next slide" />
           </div>
         </div>
       </div>

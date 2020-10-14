@@ -64,7 +64,7 @@ class stickyHeader extends React.Component {
   render() {
     const classes = "sticky-header " + (this.state.active ? "active" : "")
     return (
-      <nav className={classes}>
+      <div className={classes}>
         <div className="content">
           <div className="branding">
             <a className="logo-link" aria-label="Go home" href="/">
@@ -72,9 +72,9 @@ class stickyHeader extends React.Component {
               <span className="site-title">Community Resource Explorer</span>
             </a>
           </div>
-          <Menu activePageId={this.props.activePageId} />
+          <Menu activePageId={this.props.activePageId} inactive={!this.state.active} />
         </div>
-      </nav>
+      </div>
     )
   }
 }

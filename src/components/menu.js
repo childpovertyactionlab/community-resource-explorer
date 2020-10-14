@@ -6,7 +6,7 @@ import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
 import { a11yClick } from "../utils/a11yClick"
 
-const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
+const Menu = ({ activePageId, controlled, setMenuOpenHandler, open, inactive }) => {
   let [menuOpen, setMenuOpen] = useState(false)
 
   if (controlled) {
@@ -40,7 +40,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
           className="close-menu"
           onClick={checkAndCloseMenu}
           onKeyDown={checkAndCloseMenu}
-          tabIndex="0"
+          tabIndex={(menuOpen && !inactive) ? 0 : -1}
           role="button"
           aria-label="close menu"
         >
@@ -52,7 +52,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         </Col>
 
         <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
-          <div className="menu-page-names-container">
+          <nav className="menu-page-names-container">
             {menuPages
               .filter(p => !p.footerOnly)
               .map(page => {
@@ -70,14 +70,15 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
                     className={nameClasses}
                     key={page.id}
                     onKeyDown={navigateToPage}
-                    tabIndex="0"
+                    // tabIndex="0"
+                    tabIndex={menuOpen ? 0 : -1}
                     role="button"
                   >
                     {page.name}
                   </div>
                 )
               })}
-          </div>
+          </nav>
         </Col>
         <Col className="equipped" xs={0} md={5} xl={{ offset: 1, span: 4 }}>
           <p className="text">
@@ -106,7 +107,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         role="button"
         aria-label="open menu"
         aria-expanded={menuOpen}
-        tabIndex="0"
+        tabIndex={inactive ? -1 : 0}
       >
         <span className="menu-icon svg-base"></span>
         Menu
