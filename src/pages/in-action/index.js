@@ -62,7 +62,7 @@ const InAction = ({ location }) => {
 
       {/* TODO: pages.BLOG.id */}
       <Hero activePageId={pages.ACTION.id} imgSrc={soccer}>
-        <div className="title">The Explorer in Action</div>
+        <h2 className="title">The Explorer in Action</h2>
         <div className="headline">
           How the CRE is informing policy and community understanding in Dallas
         </div>
@@ -73,6 +73,7 @@ const InAction = ({ location }) => {
 
       <Row id="page" noGutters>
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
+          <h3 className="sr-only">More recent posts</h3>
           <span className="custom-underline">More recent</span> posts
         </Col>
 
@@ -98,10 +99,11 @@ const InAction = ({ location }) => {
                 md={{ span: 6, offset: 0 }}
                 xl={{ span: 4, offset: 0 }}
               >
-                <div className="post-title">
+                <h4 className="post-title">
+                  {/* TODO: fetch title and contents from CMS data */}
                   More than ever, Dallas students need reliable broadband.
                   Here's how the CRE is helping.
-                </div>
+                </h4>
 
                 <div className="post-contents">
                   In 2020, access to the internet is a must-have utility. But

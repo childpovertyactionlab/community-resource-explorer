@@ -212,6 +212,7 @@ class Faq extends React.Component {
                 md={{ span: 6, offset: 5 }}
                 xl={{ span: 5, offset: 5 }}
               >
+                <h3 className="sr-only">{s.title}</h3>
                 <div
                   className="section-title" // visible only for mobile
                 >
@@ -251,7 +252,7 @@ class Faq extends React.Component {
 
         <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
           <div className="page-title-section">
-            <div className="title">Frequently Asked Questions</div>
+            <h2 className="title">Frequently Asked Questions</h2>
             <div className="subtitle">
               Have questions about our data or the Explorer?
             </div>
@@ -275,6 +276,7 @@ class Faq extends React.Component {
           >
             <Element name="methods-paper" id="methods-paper">
               <Row className="content">
+                <h3 className="sr-only">Methods Paper</h3>
                 <Col
                   xs={12}
                   className="section-title" // visible only for mobile

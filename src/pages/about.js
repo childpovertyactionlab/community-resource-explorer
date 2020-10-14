@@ -46,7 +46,7 @@ const about = ({ location }) => {
       </div>
 
       <div className="content">
-        <p className="title">Why we built the explorer</p>
+        <h2 className="title">Why we built the explorer</h2>
         <div className="text-blocks">
           <p>
             CPAL built the Community Resource Explorer to ensure that
@@ -89,7 +89,7 @@ const about = ({ location }) => {
 
       <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg} insertedContent={insertedContent}>
         <div className="page-title-section">
-          <div className="title">Our Mission</div>
+          <h3 className="title">Our Mission</h3>
           <div className="subtitle">
             The Child Poverty Action Lab exists to reduce child poverty in
             Dallas by half within a generation.
@@ -104,7 +104,7 @@ const about = ({ location }) => {
           md={{ offset: 1, span: 7 }}
           xl={{ offset: 1, span: 5 }}
         >
-          <p className="title">Who we are</p>
+          <h3 className="title">Who we are</h3>
           <p className="text">
             CPAL is a nonprofit organization that seeks systems-level change for
             the good of Dallas kids and their families. We do this by:
@@ -116,7 +116,7 @@ const about = ({ location }) => {
             <div key={idx} className={`numbered-point n-${idx + 1}`}>
               {/* TODO - use Morganite Bold text rather than svgs */}
               <img
-                alt="TODO fetch from data"
+                alt={idx+1}
                 className="number"
                 src={numPoint.n}
               />
