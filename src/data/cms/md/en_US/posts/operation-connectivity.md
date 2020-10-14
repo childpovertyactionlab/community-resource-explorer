@@ -1,11 +1,13 @@
 ---
 path: "operation-connectivity"
-date: 2020-08-01T17:12:33.962Z
+date: 2020-09-01T17:12:33.962Z
 title: "More than ever, Dallas students need reliable broadband. Here's how the CRE is helping."
+subtitle: "In 2020, access to the internet is a must-have utility. But despite the internet's apparent ubiquity, 42% of Dallas households lack fixed internet access, according to Census data."
 keywords:
 image: 
 description:
 heroImage: "remote-learning.jpg"
+heroImageAlt: "Hero image learner at laptop"
 showCaroItems: false
 caroItems:
   - src: # leave these empty if you're not using the carousel
@@ -18,7 +20,6 @@ caroItems:
     stat1text: 
     stat2text:
 ---
-
 
 <MdxBlogSection header="Operation Connectivity">
 

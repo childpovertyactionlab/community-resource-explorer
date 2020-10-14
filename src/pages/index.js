@@ -1,20 +1,18 @@
 import React from "react"
-
 import { Col, Row } from "react-bootstrap"
+import { Link, graphql } from "gatsby"
+import { Link as ScrollLink } from "react-scroll"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
 import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
-// import kids from "../images/kids-playing.png"
-// import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3-4.jpg"
-// import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
-import { Link, graphql } from "gatsby"
-import { Link as ScrollLink } from "react-scroll"
+import PostTeaser from "../components/PostTeaser"
 
 /**
  * Fetch data from yaml file for this page.
@@ -36,6 +34,31 @@ export const query = graphql`
       recentBlogPosts
       readPost
     }
+    allMdx(sort: { fields: frontmatter___date, order: ASC }) {
+      edges {
+        node {
+          body
+          frontmatter {
+            title
+            date
+            path
+            showCaroItems
+            caroItems {
+              alt
+              character1
+              character2
+              indexName
+              src
+              stat1text
+              stat2text
+            }
+            heroImage
+            heroImageAlt
+          }
+          excerpt(truncate: true, pruneLength: 200)
+        }
+      }
+    }
   }
 `
 
@@ -43,6 +66,8 @@ const home = ({ data, location }) => {
   // console.log("home page data, ", data)
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
+  const posts = data.allMdx.edges.slice(-2)
+  console.log("posts, ", posts)
 
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
@@ -107,61 +132,10 @@ const home = ({ data, location }) => {
           </span>
         </Col>
 
-        {/* TODOcms: pinned blog post here, dynamically create below */}
-
-        <Col
-          className="post-section p-0"
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 5, offset: 1 }}
-        >
-          <figure className="post-image forest p-0">
-            {/* <img src={forest} /> */}
-          </figure>
-
-          <div className="post-details p-0">
-            <div className="post-title">
-              <Link to={pages.ISD.path}>
-                How the CRE is informing policy and community understanding in
-                Dallas
-              </Link>
-            </div>
-
-            <div className="post-contents">
-              Dallas ISD has courageously recognized that “intentional decisions
-              . . .have led to racial and economic segregation that produced
-              major inequities that persist to this day” and is determined to
-              right the wrongs of the past.{" "}
-            </div>
-
-            <CustomLink linkTo={pages.ISD.path}>Read post</CustomLink>
-          </div>
-        </Col>
-        <Col
-          className="post-section second p-0"
-          xs={{ span: 10, offset: 1 }}
-          md={{ span: 5, offset: 0 }}
-        >
-          <figure className="post-image computer p-0">
-            {/* <img src={computer} /> */}
-          </figure>
-
-          <div className="post-details p-0">
-            <div className="post-title">
-              <Link to={pages.OPERATION.path}>
-                More than ever, Dallas students need reliable broadband. Here's
-                how the CRE is helping.
-              </Link>
-            </div>
-
-            <div className="post-contents">
-              In 2020, access to the internet is a must-have utility. But
-              despite the internet's apparent ubiquity, 42% of Dallas households
-              lack fixed internet access, according to Census data.{" "}
-            </div>
-
-            <CustomLink linkTo={pages.OPERATION.path}>Read post</CustomLink>
-          </div>
-        </Col>
+        {/** Dynamically populated list if first two blog posts */}
+        {posts.map((el, i) => {
+          return <PostTeaser key={`post-teaser-${i}`} indx={i} {...el.node} />
+        })}
       </Row>
     </Layout>
   )

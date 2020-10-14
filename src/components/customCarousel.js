@@ -2,8 +2,11 @@ import React, { useState } from "react"
 
 import { Col, Carousel } from "react-bootstrap"
 import InlineSvg from "./inlineSvg"
+import GatsbyImage from "./GatsbyImage"
 
 const CustomCarousel = ({ items }) => {
+  console.log("CustomCarousel, ", items)
+
   const [index, setIndex] = useState(0)
 
   const goBack = () => {
@@ -51,7 +54,13 @@ const CustomCarousel = ({ items }) => {
       >
         {items.map(({ src, alt }, i) => (
           <Carousel.Item key={alt}>
-            <div className="carousel-image" style={{ backgroundImage: `url(${src})` }} alt={alt} />
+            <div
+              className="carousel-image"
+              style={{ backgroundImage: `url(${src})` }}
+              alt={alt}
+            >
+              <GatsbyImage filename={src} alt={alt} />
+            </div>
           </Carousel.Item>
         ))}
       </Carousel>

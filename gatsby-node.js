@@ -51,14 +51,11 @@ exports.createPages = async ({ graphql, actions }) => {
                 stat1text
                 stat2text
               }
-              contents {
-                type
-                attribution
-                content
-                heading
-              }
+              heroImage
+              heroImageAlt
+              subtitle
             }
-            excerpt
+            excerpt(truncate: true, pruneLength: 200)
           }
         }
       }
@@ -257,54 +254,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
-// Creates pages for course events
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   const result = await graphql(`
-//     query {
-//       allMdx {
-//         edges {
-//           node {
-//             body
-//             frontmatter {
-//               title
-//               date
-//               path
-//               showCaroItems
-//               caroItems {
-//                 alt
-//                 character1
-//                 character2
-//                 indexName
-//                 src
-//                 stat1text
-//                 stat2text
-//               }
-//               contents {
-//                 type
-//                 attribution
-//                 content
-//                 heading
-//               }
-//             }
-//             excerpt
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-// const posts = result.data.allMdx.edges
-// posts.forEach(({ node: post }) => {
-//   // console.log("post, ", post)
-//   createPage({
-//     path: `/in-action/${post.frontmatter.path}/`,
-//     component: PostTemplate,
-//     context: {
-//       slug: post.frontmatter.path,
-//       post: post,
-//     },
-//   })
-// })
-// }

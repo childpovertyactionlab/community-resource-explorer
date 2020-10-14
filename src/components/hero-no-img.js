@@ -2,8 +2,16 @@ import React from "react"
 
 import { Row, Col } from "react-bootstrap"
 import Menu from "./menu"
+import GatsbyImage from "./GatsbyImage"
 
-const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent }) => {
+const Hero = ({
+  children,
+  activePageId,
+  imgSrc = false,
+  wide = false,
+  insertedContent,
+  ...props
+}) => {
   const getHero = () => {
     if (wide) {
       return (
@@ -26,9 +34,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
               <Menu activePageId={activePageId} />
             </Col>
           </Row>
-          <Row className="inserted-section">
-            {insertedContent}
-          </Row>
+          <Row className="inserted-section">{insertedContent}</Row>
 
           <Row>
             <Col className="color-section" xs={12}>
@@ -40,13 +46,30 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
                   <div className="content">{children}</div>
                 </Col>
               </Row>
-
-              
+              <Row>
+                <Col className="p-0" xs={12}>
+                  {!!imgSrc && (
+                    <img
+                      alt="todo draw from props"
+                      src={imgSrc}
+                      className="hero-image"
+                    />
+                  )}
+                  {!!props.gatsbyImgSrc && (
+                    <GatsbyImage
+                      filename={props.gatsbyImgSrc}
+                      alt={props.heroImageAlt}
+                      className="image-section"
+                    />
+                  )}
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>
       )
     }
+
     return (
       <Col xs={12} className="hero-square p-0">
         <div className="color-section">
@@ -66,12 +89,24 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
             <Menu activePageId={activePageId} />
           </div>
 
-          <img alt="todo draw from props" src={imgSrc} className="hero-image" />
+          {!!imgSrc && (
+            <img
+              alt="todo draw from props"
+              src={imgSrc}
+              className="hero-image"
+            />
+          )}
+          {!!props.gatsbyImgSrc && (
+            <GatsbyImage
+              filename={props.gatsbyImgSrc}
+              alt={props.heroImageAlt}
+            />
+          )}
         </div>
       </Col>
     )
   }
-
+  // console.log("Hero no img, ", props)
   return <Row id="hero">{getHero()}</Row>
 }
 

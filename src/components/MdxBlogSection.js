@@ -1,20 +1,19 @@
-import React, { useState } from "react"
+import React from "react"
 import { Col, Row } from "react-bootstrap"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const MdxBlogSection = ({ ...props }) => {
   // console.log("MdxBlogSection, ", props)
 
-  const pArr = []
-  if (typeof props.children === "object") {
-    // console.log("It is an object.")
-    pArr.push(props.children)
-  } else {
+  let pArr = []
+  if (Array.isArray(props.children)) {
     // console.log("It is an array.")
     props.children.forEach(el => {
       // console.log("el, ", el)
       pArr.push(el)
     })
+  } else {
+    // console.log("It is an object.")
+    pArr.push(props.children)
   }
 
   const random = Math.floor(Math.random() * 100 + 1)
@@ -39,13 +38,13 @@ const MdxBlogSection = ({ ...props }) => {
           {/** If it's an array, more than one node, render as a list of paragraphs. */}
           {pArr.length > 0 &&
             pArr.map((el, i) => {
-              console.log(el)
+              // console.log(el)
               if (!el.props) {
-                console.log("bare element")
+                // console.log("bare element")
                 return <p key={`child_p_${i}`}>{el}</p>
               }
               if (!!el.props.mdxType && el.props.mdxType === "p") {
-                console.log("its a paragraph")
+                // console.log("its a paragraph")
                 return <p key={`child_p_${i}`}>{el.props.children}</p>
               }
               return ""
