@@ -2,10 +2,9 @@ import React, { useState } from "react"
 
 import { Col, Carousel } from "react-bootstrap"
 import InlineSvg from "./inlineSvg"
-import GatsbyImage from "./GatsbyImage"
 
 const CustomCarousel = ({ items }) => {
-  console.log("CustomCarousel, ", items)
+  // console.log("CustomCarousel, ", items)
 
   const [index, setIndex] = useState(0)
 
@@ -15,20 +14,6 @@ const CustomCarousel = ({ items }) => {
   const goForward = () => {
     setIndex((index + 1) % items.length)
   }
-
-  // const getCarousel = () => {
-  //   return (
-  //     <Carousel indicators={false} controls={false} activeIndex={index}>
-  //       {items.map(({ src, alt }) => (
-  //         <Carousel.Item>
-  //           <img className="d-block w-100" src={src} alt={alt} />
-  //           <div className="shadow">other stuff</div>
-  //         </Carousel.Item>
-  //       ))}
-  //       {/* <div className="shadow2">mo-other stuff</div> */}
-  //     </Carousel>
-  //   )
-  // }
 
   const {
     indexName,
@@ -52,33 +37,40 @@ const CustomCarousel = ({ items }) => {
         controls={false}
         activeIndex={index}
       >
-        {items.map(({ src, alt }, i) => (
-          <Carousel.Item key={alt}>
-            <div
+        {items.map((el, i) => {
+          const styles = {
+            background: `url(${el.src.childImageSharp.fluid.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }
+          return (
+            <Carousel.Item
+              key={`carousel_item_` + i}
               className="carousel-image"
-              style={{ backgroundImage: `url(${src})` }}
-              alt={alt}
-            >
-              <GatsbyImage filename={src} alt={alt} />
-            </div>
-          </Carousel.Item>
-        ))}
+              alt={el.alt}
+              style={{ ...styles }}
+            ></Carousel.Item>
+          )
+        })}
       </Carousel>
 
       <div className="caro-text-panel">
         <div className="statistics">
-          <div className="index-name">{indexName}</div>
+          <div
+            className="index-name"
+            dangerouslySetInnerHTML={{ __html: indexName }}
+          ></div>
           <div className="underbar"></div>
           <div className="statistic stat-1">
             <span className="character1">{character1}</span>
-            <span className="number">{stat1num}</span>
+            <span className="number">{Number(stat1num).toLocaleString()}</span>
             <span className="character2">{character2}</span>
             <span className="text">{stat1text}</span>
           </div>
 
           <div className="statistic stat-2">
             <span className="character1">{character1}</span>
-            <span className="number">{stat2num}</span>
+            <span className="number">{Number(stat2num).toLocaleString()}</span>
             <span className="character2">{character2}</span>
             <span className="text">{stat2text}</span>
           </div>

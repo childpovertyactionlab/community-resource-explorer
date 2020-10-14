@@ -2,7 +2,7 @@ import React from "react"
 
 import { Row, Col } from "react-bootstrap"
 import Menu from "./menu"
-import GatsbyImage from "./GatsbyImage"
+import Img from "gatsby-image"
 
 const Hero = ({
   children,
@@ -56,10 +56,10 @@ const Hero = ({
                     />
                   )}
                   {!!props.gatsbyImgSrc && (
-                    <GatsbyImage
-                      filename={props.gatsbyImgSrc}
+                    <Img
                       alt={props.heroImageAlt}
-                      className="image-section"
+                      fluid={props.gatsbyImgSrc.childImageSharp.fluid}
+                      className={`image-section`}
                     />
                   )}
                 </Col>
@@ -97,9 +97,10 @@ const Hero = ({
             />
           )}
           {!!props.gatsbyImgSrc && (
-            <GatsbyImage
-              filename={props.gatsbyImgSrc}
+            <Img
               alt={props.heroImageAlt}
+              fluid={props.gatsbyImgSrc.childImageSharp.fluid}
+              className={`image-section`}
             />
           )}
         </div>

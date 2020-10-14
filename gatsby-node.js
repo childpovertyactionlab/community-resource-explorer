@@ -47,11 +47,35 @@ exports.createPages = async ({ graphql, actions }) => {
                 character1
                 character2
                 indexName
-                src
+                src {
+                  childImageSharp {
+                    fluid(maxWidth: 800) {
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
+                      originalImg
+                    }
+                  }
+                }
                 stat1text
                 stat2text
+                stat1num
+                stat2num
               }
-              heroImage
+              heroImage {
+                childImageSharp {
+                  fluid(maxWidth: 1920) {
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
+                    originalImg
+                  }
+                }
+              }
               heroImageAlt
               subtitle
             }
@@ -234,7 +258,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/schools/${school.SLN}/`,
       component: SchoolTemplate,
       context: {
-        slug: school.SLN,
+        slug: String(school.SLN),
         schoolNode: school,
       },
     })
@@ -248,7 +272,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/in-action/${post.frontmatter.path}/`,
       component: PostTemplate,
       context: {
-        slug: post.frontmatter.path,
+        slug: String(post.frontmatter.path),
         post: post,
       },
     })

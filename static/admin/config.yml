@@ -1,3 +1,7 @@
+backend:
+  name: git-gateway
+  branch: staging
+media_folder: "src/data/cms/img"
 collections:
   - label: "Pages"
     name: "pages"
@@ -29,10 +33,7 @@ collections:
               - { label: Address, name: address, widget: string }
   - label: "Posts"
     name: "posts"
-    files:
-      - label: "Post"
-        name: "home"
-        folder: "./src/data/cms/md/en_US/posts"
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown } # update fields
+    folder: "./src/data/cms/md/en_US/posts"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Intro, name: intro, widget: markdown } # update fields

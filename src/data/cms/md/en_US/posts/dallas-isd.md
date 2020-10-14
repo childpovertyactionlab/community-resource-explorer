@@ -7,11 +7,11 @@ subtitle: "Dallas ISD has courageously recognized that “intentional decisions 
 keywords:
 image: 
 description:
-heroImage: "running.jpg"
+heroImage: "./../../../../../images/running.jpg" # Path to the file relative to markdown file.
 heroImageAlt: "Children running on the street"
 showCaroItems: true
 caroItems: # Pass this in if you want an image carousel.
-  - src: running.jpg
+  - src: ./../../../../../images/running.jpg # Path to the file relative to markdown file.
     alt: "s2"
     indexName: <span>Insights from the <br/>Health Index</span>
     character1: ""
@@ -21,7 +21,7 @@ caroItems: # Pass this in if you want an image carousel.
     stat1text: "average life expectancy in one school community"
     stat2text:
       "average life expectancy in another school community, 9 miles away"
-  - src: couching.jpg
+  - src: ./../../../../../images/couching.jpg
     alt: "s1"
     indexName: <span>Insights from the <br/>Education Index</span>
     character1: ""
@@ -31,7 +31,7 @@ caroItems: # Pass this in if you want an image carousel.
     stat1text: "of residents with a bachelor's degree in one school community"
     stat2text:
       "of residents with a bachelor's degree in another school community, 13 miles away"
-  - src: swinging.jpg
+  - src: ./../../../../../images/swinging.jpg
     alt: "s4"
     indexName: <span>Insights from the <br/>Community Index</span>
     character1: ""
@@ -42,13 +42,13 @@ caroItems: # Pass this in if you want an image carousel.
       "campus communities with more than one square mile of nearby park space"
     stat2text:
       "campus communities with less than 1/10th square mile of nearby park space"
-  - src: goalie.jpg
+  - src: ./../../../../../images/goalie.jpg
     alt: "s5"
     indexName: <span>Insights from the <br/>Economic Index</span>
     character1: "$"
     character2: ""
-    stat1num: "81,300"
-    stat2num: "17,202"
+    stat1num: 81300
+    stat2num: 17202
     stat1text: "median household income in the most affluent campus community"
     stat2text: "median household income in the least affluent campus community"
 ---

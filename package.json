@@ -14,6 +14,7 @@
     "cpal-components": "^1.3.8",
     "framer-motion": "^2.7.2",
     "gatsby": "^2.3.34",
+    "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-google-gtag": "^2.1.11",
     "gatsby-plugin-manifest": "^2.0.29",

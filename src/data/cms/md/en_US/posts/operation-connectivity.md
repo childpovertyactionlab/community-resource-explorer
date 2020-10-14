@@ -6,19 +6,19 @@ subtitle: "In 2020, access to the internet is a must-have utility. But despite t
 keywords:
 image: 
 description:
-heroImage: "remote-learning.jpg"
+heroImage: "./../../../../../images/remote-learning.jpg" # Path to the file relative to markdown file.
 heroImageAlt: "Hero image learner at laptop"
 showCaroItems: false
-caroItems:
-  - src: # leave these empty if you're not using the carousel
-    alt: 
-    indexName: 
-    character1: 
-    character2: 
-    stat1num: 
-    stat2num: 
-    stat1text: 
-    stat2text:
+caroItems: # leave these empty if you're not using the carousel
+  - src: "./../../../../../images/test.jpg" # Path to the file relative to markdown file. 
+    alt: ""
+    indexName: ""
+    character1: ""
+    character2: ""
+    stat1num: null
+    stat2num: null
+    stat1text: ""
+    stat2text: ""
 ---
 
 <MdxBlogSection header="Operation Connectivity">

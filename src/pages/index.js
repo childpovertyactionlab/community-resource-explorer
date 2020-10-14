@@ -48,11 +48,23 @@ export const query = graphql`
               character1
               character2
               indexName
-              src
+              src {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               stat1text
               stat2text
             }
-            heroImage
+            heroImage {
+              childImageSharp {
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             heroImageAlt
           }
           excerpt(truncate: true, pruneLength: 200)
