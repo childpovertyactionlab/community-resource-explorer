@@ -1,6 +1,6 @@
 import React from "react"
 import { Col, Row } from "react-bootstrap"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
 
 import Layout from "../components/layout"
@@ -10,7 +10,6 @@ import InlineSvg from "../components/inlineSvg"
 import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
 import portrait from "../images/child-portrait-3-4.jpg"
-import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
 import PostTeaser from "../components/PostTeaser"
 
