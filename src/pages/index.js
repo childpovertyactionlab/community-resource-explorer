@@ -7,14 +7,12 @@ import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
 import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
-import kids from "../images/kids-playing.png"
-import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3-4.jpg"
-import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
 import { Link } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
+import { a11yClick } from "../utils/a11yClick"
 const q1 = {
   superhead: "",
   text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
@@ -36,6 +34,15 @@ const home = ({ location }) => {
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
 
+  const pageScroll = e => {
+    if (a11yClick(e)) {
+      const target = document.getElementById('page')
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+  
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
       <SEO
@@ -62,10 +69,15 @@ const home = ({ location }) => {
         </p>
         <div className="hero-links caption">
           <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight - 48}>
-            Learn more <InlineSvg type="down-arrow-sm" />
+            <span role="button" tabIndex="0" onKeyDown={pageScroll}>
+              Learn more <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
+            </span>
           </ScrollLink>
           <a href="/explorer">
-            Go to the Explorer <InlineSvg type="down-arrow-sm" />
+            {/* NOTE: in firefox this <a> wasn't receiving focus */}
+            <span tabIndex="0" role="button">
+              Go to the Explorer <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
+            </span>
           </a>
         </div>
       </Hero>

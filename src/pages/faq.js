@@ -180,7 +180,7 @@ class Faq extends React.Component {
             className="jump"
           >
             Jump to
-            <InlineSvg type="down-chevron" />
+            <InlineSvg type="down-chevron" tabIndexed={false} />
           </span>
           <div className="sections">{sectionTitles}</div>
         </div>

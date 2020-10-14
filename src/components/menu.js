@@ -44,7 +44,7 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open, inactive }) 
           role="button"
           aria-label="close menu"
         >
-          <InlineSvg type="x" />
+          <InlineSvg type="x" tabIndexed={false} />
           Close
         </div>
         <Col className="dallas-isd" xs={1}>

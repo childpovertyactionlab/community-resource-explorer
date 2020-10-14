@@ -38,7 +38,7 @@ const CustomLink = ({
       tabIndex="0"
     >
       {children}
-      <InlineSvg type={type} classes="right-arrow"></InlineSvg>
+      <InlineSvg type={type} classes="right-arrow" ariaLabel="" tabIndexed={false}></InlineSvg>
     </div>
   )
 }

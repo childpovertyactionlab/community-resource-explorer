@@ -2,7 +2,9 @@ import React from "react"
 import _ from "lodash"
 import { a11yClick } from "../utils/a11yClick"
 
-const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel }) => {
+// set tabIndexed to false to prevent svg from being accessed via keyboard nav
+// (eg if it's not a button, or is inside another button)
+const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel=type, tabIndexed=true }) => {
   const getSvg = type => {
     switch (type) {
       // declare stroke color in CSS, as defining here cannot be overridden
@@ -232,9 +234,9 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel }) => {
       onClick={handleClick}
       onKeyDown={handleClick}
       className={classes}
-      role="button"
       aria-label={ariaLabel}
-      tabIndex="0"
+      role={tabIndexed ? "button" : ""}
+      tabIndex={tabIndexed ? "0" : "-1"}
     >
       {getSvg(type)}
     </div>
