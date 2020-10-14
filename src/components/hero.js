@@ -19,9 +19,9 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
               <div className="branding-md-up">
                 <a className="logo-link" aria-label="Go home" href="/">
                   <span className="site-logo svg-base"></span>
-                  <span className="site-title">
+                  <h1 className="site-title">
                     Community Resource Explorer
-                  </span>
+                  </h1>
                 </a>
               </div>
 
@@ -61,7 +61,7 @@ const Hero = ({ children, activePageId, imgSrc, wide = false, insertedContent })
           <div className="branding">
             <a className="logo-link" aria-label="Go home" href="/">
               <span className="site-logo svg-base"></span>
-              <span className="site-title">Community Resource Explorer</span>
+              <h1 className="site-title">Community Resource Explorer</h1>
             </a>
           </div>
 

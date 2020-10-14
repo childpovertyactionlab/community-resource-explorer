@@ -135,7 +135,7 @@
 // step 4 specific styles
 .animation__step.animation__step--4 {
   .animation__step-content {
-    span {
+    span, h4 {
       font-style: normal;
       font-weight: 500;
       font-size: 24px;
@@ -162,7 +162,8 @@
 // bump font size
 @media (min-width: 600px) {
   .animation__step.animation__step--4 {
-    .animation__step-content span {
+    .animation__step-content span,
+    .animation__step-content h4 {
       font-size: 50px;
       letter-spacing: -2px;
     }
