@@ -74,10 +74,7 @@ const home = ({ location }) => {
             </span>
           </ScrollLink>
           <a href="/explorer">
-            {/* NOTE: in firefox this <a> wasn't receiving focus */}
-            <span tabIndex="0" role="button">
-              Go to the Explorer <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
-            </span>
+            Go to the Explorer <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
           </a>
         </div>
       </Hero>
