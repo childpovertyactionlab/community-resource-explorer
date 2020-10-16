@@ -77,7 +77,7 @@ const home = ({ data, location }) => {
   // console.log("home page data, ", data)
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
-  const posts = data.allMdx.edges.slice(-2) // most recent 2 posts
+  const posts = data.allMdx.edges.slice(-2)
   console.log("posts, ", posts)
 
   return (
