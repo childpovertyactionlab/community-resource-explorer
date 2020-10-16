@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import { Col, Row, Table } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,6 +7,15 @@ import { pages } from "../consts"
 import { Link } from "gatsby"
 
 const headers = ["Dataset", "Description", "Geography", "Link"]
+
+export const query = graphql`
+  query PageQuery {
+    datapageYaml {
+      subtitle
+      intro
+    }
+  }
+`
 
 const data = [
   {
@@ -175,43 +184,7 @@ const Data = ({ location }) => {
           lg={{ offset: 1, span: 7 }}
           xl={{ offset: 2, span: 7 }}
         >
-          <p>
-            The Community Resource Index was calculated primarily from publicly
-            available data, either from state and federal agencies or local to
-            the Dallas area. The CRI, and the Community Resource Explorer, is
-            only one way that the data can support organizations working to
-            improve our communities. We believe it is critical that we make the
-            data we used to calculate the CRI available for use in additional
-            capacities. You can download the data, R scripts, and ArcGIS tools
-            CPAL created to calculate the CRI from the links below or by
-            visiting our{" "}
-            <a
-              href="https://github.com/childpovertyactionlab"
-              target="_blank"
-              rel="noreferrer"
-              className="track-github-access"
-              onClick={trackGithub}
-            >
-              Github
-            </a>
-            .
-          </p>
-          <p>
-            To learn more about how the CRI was calculated, visit the{" "}
-            <a
-              href="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit"
-              target="_blank"
-              rel="noreferrer"
-              className="track-method-access"
-              onClick={trackMethods}
-            >
-              Methodology
-            </a>{" "}
-            or <Link to="/faq">FAQ</Link>.
-          </p>
-          <p>
-            If you do, please cite or attribute our work in the following way:
-          </p>
+          {data.dataageYaml.intro}
           <p className="citation">
             Owen Wilson-Chavez, Michael Lopez, and Ashley Flores. Dallas ISD
             Community Resource Index. Child Poverty Action Lab, 2020.{" "}
