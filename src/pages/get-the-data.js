@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import { Col, Row, Table } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,6 +7,13 @@ import { pages } from "../consts"
 import { Link } from "gatsby"
 
 const headers = ["Dataset", "Description", "Geography", "Link"]
+
+export const query = graphql`
+  query MyQuery {
+    datapageYaml {
+      subtitle
+    }
+  }`
 
 const data = [
   {
@@ -162,7 +169,7 @@ const Data = ({ location }) => {
         >
           <div className="content">
             <div className="page-title-section">
-              <div className="subtitle">Get the data</div>
+              <div className="subtitle">{data.datapageYaml.subtitle}</div>
             </div>
           </div>
         </Col>
