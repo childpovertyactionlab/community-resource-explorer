@@ -13,9 +13,10 @@ export const query = graphql`
     datapageYaml {
       subtitle
     }
-  }`
+  }
+`
 
-const data = [
+const dataArr = [
   {
     Dataset: "Community Resource Index",
     Description:
@@ -104,7 +105,7 @@ const data = [
   },
 ]
 
-const Data = ({ location }) => {
+const Data = ({ data, location }) => {
   const { keywords, image, description } = pages.DATA.meta
   const { name } = pages.DATA
 
@@ -242,7 +243,7 @@ const Data = ({ location }) => {
               </tr>
             </thead>
             <tbody>
-              {data.map((r, i) => (
+              {dataArr.map((r, i) => (
                 <tr key={r.Dataset}>
                   <td key={r.Dataset + "-" + i} className="dataset">
                     {r.Dataset}
