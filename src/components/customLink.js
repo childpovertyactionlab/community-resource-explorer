@@ -1,6 +1,7 @@
 import React from "react"
 import InlineSvg from "./inlineSvg"
 import { navigate } from "gatsby"
+import { a11yClick } from "../utils/a11yClick"
 
 const CustomLink = ({
   children,
@@ -14,7 +15,11 @@ const CustomLink = ({
     classes += " underlined"
   }
 
-  const handleClick = () => {
+  const handleClick = e => {
+    if (!a11yClick(e)) {
+      return
+    }
+    
     if (onClick) {
       onClick()
     }
@@ -33,7 +38,7 @@ const CustomLink = ({
       tabIndex="0"
     >
       {children}
-      <InlineSvg type={type} classes="right-arrow"></InlineSvg>
+      <InlineSvg type={type} classes="right-arrow" ariaLabel="" tabIndexed={false}></InlineSvg>
     </div>
   )
 }

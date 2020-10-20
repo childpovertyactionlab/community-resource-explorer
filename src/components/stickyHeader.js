@@ -35,6 +35,13 @@ class stickyHeader extends React.Component {
 
   unthrottledUpdateStickiness(e) {
     const hero = document.getElementById("hero")
+    if (!hero) {
+      // pages w/o hero (e.g. "get-the-data") have header fixed to page-top & don't listen to scroll
+      // NOTE: shouldn't get hit as heroless pages shouldn't attach a scroll event listener
+      this.setState({ active: true })
+      return
+    }
+
     let heroHeight = hero.getBoundingClientRect().height
 
     // TODO: simplify by removing appendage from hero
@@ -57,17 +64,17 @@ class stickyHeader extends React.Component {
   render() {
     const classes = "sticky-header " + (this.state.active ? "active" : "")
     return (
-      <nav className={classes}>
+      <div className={classes}>
         <div className="content">
           <div className="branding">
-            <a className="logo-link" href="/">
+            <a className="logo-link" aria-label="Go home" href="/">
               <span className="site-logo svg-base"></span>
               <span className="site-title">Community Resource Explorer</span>
             </a>
           </div>
-          <Menu activePageId={this.props.activePageId} />
+          <Menu activePageId={this.props.activePageId} inactive={!this.state.active} />
         </div>
-      </nav>
+      </div>
     )
   }
 }

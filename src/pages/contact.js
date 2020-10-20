@@ -35,8 +35,6 @@ import * as qs from "query-string"
 // "Another reason"
 // "Skips FAQ items, just goes to the regular form"
 
-// NOTE: the keys in this object are used as classes to determine what displays (eg certain faqs, a form).
-// Update the class accordingly if the key name is changed.
 const conditionalOptions = {
   "none": {
     text: "Select an option",
@@ -84,7 +82,7 @@ const Contact = ({ location }) => {
   
   const onSubmit = e => {
     if (!document.getElementById('newsletter-toggle').checked) {
-      console.log('off')
+      // console.log('off')
       return
     } 
     console.log('on')
@@ -94,7 +92,7 @@ const Contact = ({ location }) => {
     _.each(['first_name', 'last_name', 'email', 'subject', 'message'], fieldName => {
       const field = document.forms.contactForm.querySelector(`.${fieldName}`)
 
-      console.log(fieldName, ' : ', field.value)
+      // console.log(fieldName, ' : ', field.value)
       formDatas[fieldName] = field.value
     })
 
@@ -254,7 +252,8 @@ const Contact = ({ location }) => {
           >
           <div className="content">
             <div className="page-title-section">
-              <div className="title">Questions or feedback?</div>
+              <h1 className="sr-only">Contact us</h1>
+              <h2 className="title">Questions or feedback?</h2>
               <div className="subtitle">
                 Get in touch
 
@@ -272,7 +271,7 @@ const Contact = ({ location }) => {
         >
           
           <label htmlFor="why-contact">I am reaching out because:</label>
-          <Form.Control as="select" custom name="why-contact" onChange={updatePage}>
+          <Form.Control as="select" custom id="why-contact" name="why-contact" onChange={updatePage}>
             {_.map(conditionalOptions, (v,k) => {
               return <option value={k} key={k}>{v.text}</option>
             })}

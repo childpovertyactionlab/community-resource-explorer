@@ -38,6 +38,7 @@ $mobile-logo-height: 38px;
         .title {
           font-size: 14px;
           line-height: 1; // 77px; need to align border-left to text top
+          margin-bottom: 0;
           padding-bottom: 3 * $spacer;
         }
         
@@ -160,19 +161,13 @@ $mobile-logo-height: 38px;
         border-left: 4px solid $cinnabar;
         
         .title {
-          // _figma_
           font-weight: $font-weight-light;
-          /* or 387% */
           color: $firefly;
-          // _______          
         }
         
         .subtitle {
-          // _figma_
           font-weight: $font-weight-bold;
-          /* or 108% */
           letter-spacing: -2px;
-          // _______
         }
       }
 
@@ -185,13 +180,10 @@ $mobile-logo-height: 38px;
 
   .image-section {
     .menu-section {
-      // _figma_
       font-weight: $font-weight-light;
       font-size: 14px;
       line-height: $menu-height;
-      /* or 150% */
       color: $firefly;        
-      // _______
   
       // display: flex;
       // flex-direction: column;

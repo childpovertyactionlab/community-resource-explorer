@@ -4,6 +4,7 @@ import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { menuPages } from "../consts"
 import twitterIcon from "../images/twitter.svg"
+import { a11yClick } from "../utils/a11yClick"
 
 const Footer = () => {
   return (
@@ -22,11 +23,16 @@ const Footer = () => {
 
           <div className="pages-row">
             {menuPages.map(p => {
+              const handleClick = e => {
+                if (a11yClick(e)) {
+                  navigate(p.path)
+                }
+              }
               return (
                 <span
                   key={p.id}
-                  onClick={() => navigate(p.path)}
-                  onKeyDown={() => navigate(p.path)}
+                  onClick={handleClick}
+                  onKeyDown={handleClick}
                   role="button"
                   tabIndex="0"
                 >

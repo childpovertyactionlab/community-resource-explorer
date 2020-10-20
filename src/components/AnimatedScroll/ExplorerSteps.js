@@ -72,7 +72,7 @@ const ExplorerSteps = ({ className, ...props }) => {
       <div ref={step4.ref} className={step4.classes}>
         <div className="animation__step-content">
           <p>
-            <span>Learn more about your community's assets and needs</span>
+            <h4>Learn more about your community's assets and needs</h4>
             <a href="/explorer">
               Go to the Explorer{" "}
               <img

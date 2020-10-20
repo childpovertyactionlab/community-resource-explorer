@@ -162,7 +162,7 @@ const Data = ({ location }) => {
         >
           <div className="content">
             <div className="page-title-section">
-              <div className="subtitle">Get the data</div>
+              <h2 className="subtitle">Get the data</h2>
             </div>
           </div>
         </Col>

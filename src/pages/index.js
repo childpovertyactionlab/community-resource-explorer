@@ -7,14 +7,12 @@ import Hero from "../components/hero"
 import InlineSvg from "../components/inlineSvg"
 import { pages, stickyHeaderHeight } from "../consts"
 import escapes from "../images/playground.jpg"
-import kids from "../images/kids-playing.png"
-import bank from "../images/bank.png"
 import portrait from "../images/child-portrait-3-4.jpg"
-import { navigate } from "gatsby"
 import CustomLink from "../components/customLink"
 import ExplorerSteps from "../components/AnimatedScroll"
 import { Link } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
+import { a11yClick } from "../utils/a11yClick"
 const q1 = {
   superhead: "",
   text: `Our neighborhoods are a tremendous asset to our city. However, some communities are well-appointed with resources, like grocery stores, doctor’s offices, and park space, but many others are not.`,
@@ -36,6 +34,15 @@ const home = ({ location }) => {
   const { keywords, image, description } = pages.HOME.meta
   const { name } = pages.HOME
 
+  const pageScroll = e => {
+    if (a11yClick(e)) {
+      const target = document.getElementById('page')
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+  
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
       <SEO
@@ -48,10 +55,10 @@ const home = ({ location }) => {
 
       <Hero activePageId={pages.HOME.id} imgSrc={portrait}>
         <div className="page-title-section">
-          <p className="subtitle">
+          <h2 className="subtitle">
             All Dallas neighborhoods should have what they need to{" "}
             <span className="">thrive.</span>
-          </p>
+          </h2>
         </div>
         <p className="caption">
           The Community Resource Explorer is{" "}
@@ -62,10 +69,12 @@ const home = ({ location }) => {
         </p>
         <div className="hero-links caption">
           <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight - 48}>
-            Learn more <InlineSvg type="down-arrow-sm" />
+            <span role="button" tabIndex="0" onKeyDown={pageScroll}>
+              Learn more <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
+            </span>
           </ScrollLink>
           <a href="/explorer">
-            Go to the Explorer <InlineSvg type="down-arrow-sm" />
+            Go to the Explorer <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
           </a>
         </div>
       </Hero>
@@ -97,9 +106,12 @@ const home = ({ location }) => {
             <div className="attribution">{q1.attribution}</div>
           </Col>
         </Col>
+
+        <h3 className="sr-only">Introducing the Community Resource Explorer</h3>
         <ExplorerSteps />
 
         <Col xs={{ span: 11, offset: 1 }} className="recent p-0">
+          <h3 className="sr-only">Recent blog posts</h3>
           <span className="custom-underline">Recent blog</span> posts
         </Col>
 
@@ -115,12 +127,13 @@ const home = ({ location }) => {
           </figure>
 
           <div className="post-details p-0">
-            <div className="post-title">
+            <h4 className="post-title">
               <Link to={pages.ISD.path}>
+                {/* <div></div> */}
                 How the CRE is informing policy and community understanding in
                 Dallas
               </Link>
-            </div>
+            </h4>
 
             <div className="post-contents">
               Dallas ISD has courageously recognized that “intentional decisions
@@ -142,12 +155,12 @@ const home = ({ location }) => {
           </figure>
 
           <div className="post-details p-0">
-            <div className="post-title">
+            <h4 className="post-title">
               <Link to={pages.OPERATION.path}>
                 More than ever, Dallas students need reliable broadband. Here's
                 how the CRE is helping.
               </Link>
-            </div>
+            </h4>
 
             <div className="post-contents">
               In 2020, access to the internet is a must-have utility. But

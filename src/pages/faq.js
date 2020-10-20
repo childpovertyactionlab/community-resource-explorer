@@ -15,6 +15,7 @@ import InlineSvg from "../components/inlineSvg"
 
 import _ from "lodash"
 import { Helmet } from "react-helmet"
+import { a11yClick } from "../utils/a11yClick"
 
 // Current as of 7/29, 2:53pm
 
@@ -37,15 +38,21 @@ class Faq extends React.Component {
     const uid = hash.slice(1)
 
     if (uid) {
-      this.toggleExpansion(uid, true)
+      setTimeout(() => {
+        this.toggleExpansion(uid, true)
+        
+        const target = document.getElementById(uid)
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+      }, 600);
 
+      // doesn't respect offset (so question text is obscured) and doesn't animate
       // wants hash (w/#) though docs don't include. doesn't seem to respond to extra options
-      animateScroll.scrollTo(hash, {
-        containerId: "faq-page",
-        // duration: 1500,
-        // delay: 1000,
-        // offset: 50, // Scrolls to element + 50 pixels down the page
-      })
+      // animateScroll.scrollTo(hash, {
+      //   containerId: "faq-page",
+      //   offset: -stickyHeader,
+      // })
     }
   }
 
@@ -70,12 +77,29 @@ class Faq extends React.Component {
     })
   }
 
-  toggleMenu() {
-    this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
+  toggleMenu(e) {
+    if (a11yClick(e)) {
+      this.setState({ mobileMenuActive: !this.state.mobileMenuActive })
+    }
   }
 
   // close menu
-  handleCloseMenu(uid) {
+  handleCloseMenu(uid, e) {
+    if (!a11yClick(e)) {
+      return
+    }
+
+    if (e.type !== 'click') {
+      const target = document.getElementById(uid)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+      // doesn't scroll
+      // animateScroll.scrollTo(`#${uid}`, {
+      //   containerId: "faq-page",
+      // })
+    }
+
     this.setState({ mobileMenuActive: false })
 
     setTimeout(() => {
@@ -91,7 +115,12 @@ class Faq extends React.Component {
       <>
         {faqSections.map(s => (
           <>
-            <div className="menu-title" key={"side-menu-title-" + s.id}>
+            <div
+              className="menu-title"key={"side-menu-title-" + s.id}
+              tabIndex="0"
+              role="button"
+              onKeyDown={this.handleCloseMenu.bind(this, `${s.id}-1`)}
+            >
               <Link
                 onClick={this.handleCloseMenu.bind(this, `${s.id}-1`)}
                 activeClass="active"
@@ -100,6 +129,7 @@ class Faq extends React.Component {
                 to={s.id + "-section"}
                 offset={-stickyHeaderHeight}
                 // containerId="faq-page"
+                
               >
                 {s.title}
               </Link>
@@ -107,7 +137,12 @@ class Faq extends React.Component {
             <br />
           </>
         ))}
-        <div className="menu-title" key={"side-menu-title-methods-paper"}>
+        <div
+          className="menu-title"key={"side-menu-title-methods-paper"}
+          tabIndex="0"
+          role="button"
+          onKeyDown={this.handleCloseMenu.bind(this, 'methods-paper')}
+        >
           <Link
             onClick={this.handleCloseMenu.bind(this, `methods-paper`)}
             activeClass="active"
@@ -116,6 +151,7 @@ class Faq extends React.Component {
             to="methods-paper"
             offset={-stickyHeaderHeight}
             // containerId="faq-page"
+            
           >
             Methods Paper
           </Link>
@@ -144,7 +180,7 @@ class Faq extends React.Component {
             className="jump"
           >
             Jump to
-            <InlineSvg type="down-chevron" />
+            <InlineSvg type="down-chevron" tabIndexed={false} />
           </span>
           <div className="sections">{sectionTitles}</div>
         </div>
@@ -176,6 +212,7 @@ class Faq extends React.Component {
                 md={{ span: 6, offset: 5 }}
                 xl={{ span: 5, offset: 5 }}
               >
+                <h3 className="sr-only">{s.title}</h3>
                 <div
                   className="section-title" // visible only for mobile
                 >
@@ -215,7 +252,7 @@ class Faq extends React.Component {
 
         <Hero activePageId={pages.FAQ.id} imgSrc={portrait}>
           <div className="page-title-section">
-            <div className="title">Frequently Asked Questions</div>
+            <h2 className="title">Frequently Asked Questions</h2>
             <div className="subtitle">
               Have questions about our data or the Explorer?
             </div>
@@ -239,6 +276,7 @@ class Faq extends React.Component {
           >
             <Element name="methods-paper" id="methods-paper">
               <Row className="content">
+                <h3 className="sr-only">Methods Paper</h3>
                 <Col
                   xs={12}
                   className="section-title" // visible only for mobile
@@ -269,6 +307,11 @@ const QuestionGroup = ({
   expandedMap,
   invertExpansionMap,
 }) => {
+  const handleClick = (uid, expand, updateHash, e) => {
+    if (a11yClick(e)) {
+      toggleExpansion(uid, expand, updateHash)
+    }
+  }
   return (
     <div>
       {questions.map((q, idx) => {
@@ -283,12 +326,12 @@ const QuestionGroup = ({
           <Element name={uid} className={classes} id={uid} key={uid}>
             <div
               className="question-text"
-              onClick={toggleExpansion.bind(this, uid, !expandedValue, true)}
-              onKeyDown={toggleExpansion.bind(this, uid, !expandedValue, true)}
+              onClick={handleClick.bind(this, uid, !expandedValue, true)}
+              onKeyDown={handleClick.bind(this, uid, !expandedValue, true)}
               role="button"
               tabIndex="0"
               // aria-controls="example-collapse-text"
-              // aria-expanded={expanded}
+              aria-expanded={expanded}
             >
               <span className="text">
                 {q.text}

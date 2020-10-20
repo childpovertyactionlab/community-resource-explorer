@@ -4,8 +4,9 @@ import { Row, Col } from "react-bootstrap"
 import { menuPages } from "../consts"
 import { navigate } from "gatsby"
 import InlineSvg from "./inlineSvg"
+import { a11yClick } from "../utils/a11yClick"
 
-const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
+const Menu = ({ activePageId, controlled, setMenuOpenHandler, open, inactive }) => {
   let [menuOpen, setMenuOpen] = useState(false)
 
   if (controlled) {
@@ -14,8 +15,17 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
     setMenuOpen = setMenuOpenHandler
   }
 
-  const toggleMenuOpen = () => setMenuOpen(!menuOpen)
+  const toggleMenuOpen = e => {
+    if (a11yClick(e)) {
+      setMenuOpen(!menuOpen)
+    }
+  }
   const closeMenu = () => setMenuOpen(false)
+  const checkAndCloseMenu = e => {
+    if (a11yClick(e)) {
+      setMenuOpen(false)
+    }
+  }
 
   const getMenuPanel = () => {
     return (
@@ -28,12 +38,13 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         <div className="logo"></div>
         <div
           className="close-menu"
-          onClick={closeMenu}
-          onKeyDown={closeMenu}
-          tabIndex="0"
+          onClick={checkAndCloseMenu}
+          onKeyDown={checkAndCloseMenu}
+          tabIndex={(menuOpen && !inactive) ? 0 : -1}
           role="button"
+          aria-label="close menu"
         >
-          <InlineSvg type="x" />
+          <InlineSvg type="x" tabIndexed={false} />
           Close
         </div>
         <Col className="dallas-isd" xs={1}>
@@ -41,15 +52,17 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         </Col>
 
         <Col className="menu-page-names-col" xs={11} md={6} xl={5}>
-          <div className="menu-page-names-container">
+          <nav className="menu-page-names-container">
             {menuPages
               .filter(p => !p.footerOnly)
               .map(page => {
                 const nameClasses =
                   "menu-page-name" + (page.id === activePageId ? " active" : "")
-                const navigateToPage = () => {
-                  closeMenu()
-                  navigate(page.path)
+                const navigateToPage = e => {
+                  if (a11yClick(e)) { 
+                    closeMenu()
+                    navigate(page.path)
+                  }
                 }
                 return (
                   <div
@@ -57,14 +70,15 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
                     className={nameClasses}
                     key={page.id}
                     onKeyDown={navigateToPage}
-                    tabIndex="0"
+                    // tabIndex="0"
+                    tabIndex={menuOpen ? 0 : -1}
                     role="button"
                   >
                     {page.name}
                   </div>
                 )
               })}
-          </div>
+          </nav>
         </Col>
         <Col className="equipped" xs={0} md={5} xl={{ offset: 1, span: 4 }}>
           <p className="text">
@@ -91,7 +105,9 @@ const Menu = ({ activePageId, controlled, setMenuOpenHandler, open }) => {
         onKeyDown={toggleMenuOpen}
         className="menu-icon-group"
         role="button"
-        tabIndex="0"
+        aria-label="open menu"
+        aria-expanded={menuOpen}
+        tabIndex={inactive ? -1 : 0}
       >
         <span className="menu-icon svg-base"></span>
         Menu

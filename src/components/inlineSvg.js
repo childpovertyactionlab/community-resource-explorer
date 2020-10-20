@@ -1,13 +1,17 @@
 import React from "react"
 import _ from "lodash"
+import { a11yClick } from "../utils/a11yClick"
 
-const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
+// set tabIndexed to false to prevent svg from being accessed via keyboard nav
+// (eg if it's not a button, or is inside another button)
+const InlineSvg = ({ type, onClick = _.noop, classes = "", ariaLabel=type, tabIndexed=true }) => {
   const getSvg = type => {
     switch (type) {
       // declare stroke color in CSS, as defining here cannot be overridden
       case "right-arrow-thin":
         return (
           <svg
+            aria-hidden="true"
             width="12"
             height="9"
             viewBox="0 0 12 9"
@@ -33,6 +37,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "right-arrow":
         return (
           <svg
+            aria-hidden="true"
             width="11"
             height="7"
             viewBox="0 0 11 7"
@@ -46,6 +51,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "right-arrow-md":
         return (
           <svg
+            aria-hidden="true"
             width="24"
             height="18"
             viewBox="0 0 24 18"
@@ -72,6 +78,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "left-arrow-md":
         return (
           <svg
+            aria-hidden="true"
             width="24"
             height="18"
             viewBox="0 0 24 18"
@@ -98,6 +105,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "down-arrow":
         return (
           <svg
+            aria-hidden="true"
             width="18"
             height="24"
             viewBox="0 0 18 24"
@@ -124,6 +132,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "down-arrow-sm":
         return (
           <svg
+            aria-hidden="true"
             width="9"
             height="10"
             viewBox="0 0 9 10"
@@ -147,6 +156,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "eclipse":
         return (
           <svg
+            aria-hidden="true"
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -159,6 +169,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "down-chevron":
         return (
           <svg
+            aria-hidden="true"
             width="13"
             height="13"
             viewBox="0 0 13 13"
@@ -184,6 +195,7 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
       case "x":
         return (
           <svg
+            aria-hidden="true"
             width="12"
             height="12"
             viewBox="0 0 12 12"
@@ -210,14 +222,21 @@ const InlineSvg = ({ type, onClick = _.noop, classes = "" }) => {
     }
   }
 
+  const handleClick = e => {
+    if (a11yClick(e)) {
+      onClick()
+    }
+  }
+
   classes += " inline-svg " + type
   return (
     <div
-      onClick={onClick}
-      onKeyDown={onClick}
+      onClick={handleClick}
+      onKeyDown={handleClick}
       className={classes}
-      role="button"
-      tabIndex="0"
+      aria-label={ariaLabel}
+      role={tabIndexed ? "button" : ""}
+      tabIndex={tabIndexed ? "0" : "-1"}
     >
       {getSvg(type)}
     </div>
