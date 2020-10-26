@@ -1,9 +1,7 @@
 import React from "react"
 import { Col, Row } from "react-bootstrap"
 import { navigate } from "gatsby"
-import { Link } from "gatsby"
 import { menuPages } from "../consts"
-import twitterIcon from "../images/twitter.svg"
 import { a11yClick } from "../utils/a11yClick"
 
 const Footer = () => {
@@ -45,7 +43,15 @@ const Footer = () => {
 
           <div className="footnotes-row">
             <span>Map made possible by Mapbox</span>
-            <span><a href="https://hyperobjekt.com" target="_blank" rel="noreferrer">Site by Hyperobjekt</a></span>
+            <span>
+              <a
+                href="https://hyperobjekt.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Site by Hyperobjekt
+              </a>
+            </span>
           </div>
         </div>
       </Col>

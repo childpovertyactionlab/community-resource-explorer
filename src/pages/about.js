@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { pages } from "../consts"
 import CustomLink from "../components/customLink"
-import comerica from "../images/comericabank-logo.svg"
+// import comerica from "../images/comericabank-logo.svg"
 import jumpImg from "../images/about-jump.jpg"
 import soccerImg from "../images/about-soccer.jpg"
 import number1 from "../images/number-1.svg"
@@ -42,33 +42,35 @@ const about = ({ location }) => {
       lg={{ offset: 0, span: 7 }}
     >
       <div className="jumper-wrapper">
-        <div className="image" alt="child jumping" style={{ backgroundImage: `url(${jumpImg})` }} />
+        <div
+          className="image"
+          alt="child jumping"
+          style={{ backgroundImage: `url(${jumpImg})` }}
+        />
       </div>
 
       <div className="content">
         <h2 className="title">Why we built the explorer</h2>
         <div className="text-blocks">
           <p>
-            CPAL built the Community Resource Explorer to ensure that
-            all Dallas neighborhoods are places of great opportunity for
-            children and their families. Dallas neighborhoods are
-            unique, each with their own stories to tell, people to
-            celebrate, and places to love. Our neighborhoods are a
-            tremendous asset to our city. However, some neighborhoods
-            are well-appointed with resources, like grocery stores and
-            doctor’s offices and park space, but many others are not.
+            CPAL built the Community Resource Explorer to ensure that all Dallas
+            neighborhoods are places of great opportunity for children and their
+            families. Dallas neighborhoods are unique, each with their own
+            stories to tell, people to celebrate, and places to love. Our
+            neighborhoods are a tremendous asset to our city. However, some
+            neighborhoods are well-appointed with resources, like grocery stores
+            and doctor’s offices and park space, but many others are not.
           </p>
           <p>
-            The CRE is a diagnostic tool that illustrates how resources
-            are allocated across five categories and 30+ indicators in
-            neighborhoods around Dallas ISD schools. The intent of the
-            tool is to help frontline institutions act on relevant,
-            specific data so that investment decisions and resource
-            allocation can have the greatest impact. Our hope is that
-            the CRE can help right the wrongs of the past by bringing
-            new programs and services, economic development
-            opportunities, and public amenities to communities that have
-            been under-resourced for far too long.
+            The CRE is a diagnostic tool that illustrates how resources are
+            allocated across five categories and 30+ indicators in neighborhoods
+            around Dallas ISD schools. The intent of the tool is to help
+            frontline institutions act on relevant, specific data so that
+            investment decisions and resource allocation can have the greatest
+            impact. Our hope is that the CRE can help right the wrongs of the
+            past by bringing new programs and services, economic development
+            opportunities, and public amenities to communities that have been
+            under-resourced for far too long.
           </p>
         </div>
 
@@ -76,7 +78,7 @@ const about = ({ location }) => {
       </div>
     </Col>
   )
-  
+
   return (
     <Layout id="about-page" activePageId={pages.ABOUT.id}>
       <SEO
@@ -87,7 +89,12 @@ const about = ({ location }) => {
         description={description}
       />
 
-      <Hero wide={true} activePageId={pages.ABOUT.id} imgSrc={soccerImg} insertedContent={insertedContent}>
+      <Hero
+        wide={true}
+        activePageId={pages.ABOUT.id}
+        imgSrc={soccerImg}
+        insertedContent={insertedContent}
+      >
         <div className="page-title-section">
           <h3 className="title">Our Mission</h3>
           <div className="subtitle">
@@ -115,11 +122,7 @@ const about = ({ location }) => {
           {numberedPoints.map((numPoint, idx) => (
             <div key={idx} className={`numbered-point n-${idx + 1}`}>
               {/* TODO - use Morganite Bold text rather than svgs */}
-              <img
-                alt={idx+1}
-                className="number"
-                src={numPoint.n}
-              />
+              <img alt={idx + 1} className="number" src={numPoint.n} />
               <p className="point">{numPoint.p}</p>
             </div>
           ))}
