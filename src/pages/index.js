@@ -19,16 +19,16 @@ const q1 = {
   attribution:
     "The Community Resource Explorer visualizes these assets and disparities.",
 }
-const q2 = {
-  superhead: `Voices from the Community`,
-  text: `There is no safe place for students just to be young people in the community.`,
-  attribution: "Dallas ISD Trustee",
-}
-const q3 = {
-  superhead: `Voices from the Community`,
-  text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
-  attribution: "Pleasant Grove Resident",
-}
+// const q2 = {
+//   superhead: `Voices from the Community`,
+//   text: `There is no safe place for students just to be young people in the community.`,
+//   attribution: "Dallas ISD Trustee",
+// }
+// const q3 = {
+//   superhead: `Voices from the Community`,
+//   text: `Not having enough banks is an issue. In some parts of the north, there's a bank on every corner. The reason why many businesses were able to get a PPP [loan] was because they had a relationship with a bank . . . You need physical bank locations in the neighborhood to serve community needs.`,
+//   attribution: "Pleasant Grove Resident",
+// }
 
 const home = ({ location }) => {
   const { keywords, image, description } = pages.HOME.meta
@@ -36,13 +36,13 @@ const home = ({ location }) => {
 
   const pageScroll = e => {
     if (a11yClick(e)) {
-      const target = document.getElementById('page')
+      const target = document.getElementById("page")
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
+        target.scrollIntoView({ behavior: "smooth" })
       }
     }
   }
-  
+
   return (
     <Layout id="home-page" activePageId={pages.HOME.id}>
       <SEO
@@ -70,11 +70,13 @@ const home = ({ location }) => {
         <div className="hero-links caption">
           <ScrollLink to="page" smooth={true} offset={-stickyHeaderHeight - 48}>
             <span role="button" tabIndex="0" onKeyDown={pageScroll}>
-              Learn more <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
+              Learn more{" "}
+              <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
             </span>
           </ScrollLink>
           <a href="/explorer">
-            Go to the Explorer <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
+            Go to the Explorer{" "}
+            <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
           </a>
         </div>
       </Hero>

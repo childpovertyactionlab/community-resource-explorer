@@ -10,7 +10,7 @@ const SignUpBar = ({ ...props }) => {
   const [emailValid, setEmailValid] = useState(true)
 
   const submit = () => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
+    // const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
     // don't test email for now (tests in SignUp)
     // const valid = emailRegex.test(emailValue)
     const valid = true
@@ -41,7 +41,9 @@ const SignUpBar = ({ ...props }) => {
                   aria-label="subscribe to email updates"
                 />
                 {!emailValid && (
-                  <p aria-hidden={emailValid} className="feedback">Please provide a valid email.</p>
+                  <p aria-hidden={emailValid} className="feedback">
+                    Please provide a valid email.
+                  </p>
                 )}
               </div>
 

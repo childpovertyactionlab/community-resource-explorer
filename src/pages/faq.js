@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Col, Row, Collapse } from "react-bootstrap"
 import SEO from "../components/seo"
-import { Link, animateScroll, Element } from "react-scroll"
+import { Link, Element } from "react-scroll"
 import CustomLink from "../components/customLink"
 import Hero from "../components/hero"
 import { pages, stickyHeaderHeight, faqSections } from "../consts"
@@ -40,12 +40,12 @@ class Faq extends React.Component {
     if (uid) {
       setTimeout(() => {
         this.toggleExpansion(uid, true)
-        
+
         const target = document.getElementById(uid)
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          target.scrollIntoView({ behavior: "smooth", block: "center" })
         }
-      }, 600);
+      }, 600)
 
       // doesn't respect offset (so question text is obscured) and doesn't animate
       // wants hash (w/#) though docs don't include. doesn't seem to respond to extra options
@@ -89,10 +89,10 @@ class Faq extends React.Component {
       return
     }
 
-    if (e.type !== 'click') {
+    if (e.type !== "click") {
       const target = document.getElementById(uid)
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        target.scrollIntoView({ behavior: "smooth", block: "center" })
       }
       // doesn't scroll
       // animateScroll.scrollTo(`#${uid}`, {
@@ -116,7 +116,8 @@ class Faq extends React.Component {
         {faqSections.map(s => (
           <>
             <div
-              className="menu-title"key={"side-menu-title-" + s.id}
+              className="menu-title"
+              key={"side-menu-title-" + s.id}
               tabIndex="0"
               role="button"
               onKeyDown={this.handleCloseMenu.bind(this, `${s.id}-1`)}
@@ -129,7 +130,6 @@ class Faq extends React.Component {
                 to={s.id + "-section"}
                 offset={-stickyHeaderHeight}
                 // containerId="faq-page"
-                
               >
                 {s.title}
               </Link>
@@ -138,10 +138,11 @@ class Faq extends React.Component {
           </>
         ))}
         <div
-          className="menu-title"key={"side-menu-title-methods-paper"}
+          className="menu-title"
+          key={"side-menu-title-methods-paper"}
           tabIndex="0"
           role="button"
-          onKeyDown={this.handleCloseMenu.bind(this, 'methods-paper')}
+          onKeyDown={this.handleCloseMenu.bind(this, "methods-paper")}
         >
           <Link
             onClick={this.handleCloseMenu.bind(this, `methods-paper`)}
@@ -151,7 +152,6 @@ class Faq extends React.Component {
             to="methods-paper"
             offset={-stickyHeaderHeight}
             // containerId="faq-page"
-            
           >
             Methods Paper
           </Link>
@@ -286,9 +286,14 @@ class Faq extends React.Component {
 
                 <Col xs={12} className="description">
                   <div className="text">
-                  If you’re interested in getting the data and learning about how it was analyzed for the Community Resource Explorer, follow the links below:
+                    If you’re interested in getting the data and learning about
+                    how it was analyzed for the Community Resource Explorer,
+                    follow the links below:
                   </div>
-                  <CustomLink linkTo="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk">Read the Methods paper</CustomLink><CustomLink linkTo="/get-the-data">Get the Data</CustomLink>
+                  <CustomLink linkTo="https://docs.google.com/document/d/16fytZ3X0ubGWUc3Zm_BC8ovOjJ0ro4tJUQfhhGY5WgI/edit?usp=drivesdk">
+                    Read the Methods paper
+                  </CustomLink>
+                  <CustomLink linkTo="/get-the-data">Get the Data</CustomLink>
                 </Col>
               </Row>
             </Element>

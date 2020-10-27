@@ -66,13 +66,17 @@ const ExplorerSteps = ({ className, ...props }) => {
             The color scale illustrates how well school communities are
             resourced.
           </p>
-          <img id="colorscale" alt="color scale indicating which colors correspond to each quintile" src="/images/scale.svg" />
+          <img
+            id="colorscale"
+            alt="color scale indicating which colors correspond to each quintile"
+            src="/images/scale.svg"
+          />
         </div>
       </div>
       <div ref={step4.ref} className={step4.classes}>
         <div className="animation__step-content">
           <p>
-            <h4>Learn more about your community's assets and needs</h4>
+            <span>Learn more about your community's assets and needs</span>
             <a href="/explorer">
               Go to the Explorer{" "}
               <img
