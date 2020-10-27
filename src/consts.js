@@ -129,6 +129,17 @@ const THANKS = {
   },
 }
 
+const ANALYTICS = {
+  id: "analytics",
+  path: "/analytics",
+  name: "Analytics",
+  meta: {
+    description: "",
+    image: "",
+    keywords: [],
+  },
+}
+
 const pages = {
   HOME,
   EXPLORER,
@@ -141,6 +152,7 @@ const pages = {
   DATA,
   SIGNUP,
   THANKS,
+  ANALYTICS
 }
 const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, DATA, CONTACT]
 
