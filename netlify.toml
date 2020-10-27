@@ -3,3 +3,10 @@
 #   [headers.values]
 #     # The Basic-Auth header may not be available on all plans.
 #     Basic-Auth = "cpal:access-resource-explorer hyperobjekt:universal-access"
+
+[[redirects]]
+from = "/analytics"
+  to = "https://analytics--hyperobjekt.netlify.app/cpal/"
+  status = 301
+  force=true
+
