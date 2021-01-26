@@ -119,14 +119,14 @@ const Contact = ({ location }) => {
           const newsletterField = document.forms.newsletterForm.querySelector(
             `.${fieldName}`
           )
-          console.log(fieldName, ' | ', newsletterField)
+          // console.log(fieldName, ' | ', newsletterField)
 
           newsletterField.value = formDatas[fieldName]
         })
         console.log(
           'Submit to Netlify successful, now calling salesforce form.'
         )
-        // document.forms.newsletterForm.submit()
+        document.forms.newsletterForm.submit()
       })
       .catch(err => console.error('error: ', err))
   }
