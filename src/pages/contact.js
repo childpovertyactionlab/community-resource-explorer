@@ -1,15 +1,15 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
-import { Col, Row, Form, Button } from "react-bootstrap"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { pages, faqSectionMap, faqQuestionMap } from "../consts"
-import { QuestionGroup } from "./faq"
-import { SignUpForm } from "./signup"
+import { Col, Row, Form, Button } from 'react-bootstrap'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { pages, faqSectionMap, faqQuestionMap } from '../consts'
+import { QuestionGroup } from './faq'
+import { SignUpForm } from './signup'
 
-import _ from "lodash"
-import axios from "axios"
-import * as qs from "query-string"
+import _ from 'lodash'
+import axios from 'axios'
+import * as qs from 'query-string'
 
 // "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc."
 // "display FAQs from the “background” section below this menu"
@@ -37,62 +37,63 @@ import * as qs from "query-string"
 
 const conditionalOptions = {
   none: {
-    text: "Select an option",
+    text: 'Select an option',
     nothingSelected: true,
   },
-  "why-built": {
+  'why-built': {
     text:
-      "I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.",
+      'I have questions about why (and by whom) the Community Resource Explorer was built, who funds it, etc.',
     questions: faqSectionMap.backgroundSection.questions,
   },
-  "how-data": {
+  'how-data': {
     text:
-      "I have questions about the data: how it was calculated, where it came from, which schools are included, etc.",
+      'I have questions about the data: how it was calculated, where it came from, which schools are included, etc.',
     questions: faqSectionMap.aboutSection.questions,
   },
-  "my-experience": {
-    text: "The data does not match my personal experience",
+  'my-experience': {
+    text: 'The data does not match my personal experience',
     questions: [faqQuestionMap.myNeighborhood],
   },
-  "stay-informed": {
-    text: "I’d like to stay informed about the Resource Explorer",
+  'stay-informed': {
+    text: 'I’d like to stay informed about the Resource Explorer',
     questions: [faqQuestionMap.stayInformed],
   },
-  "share-insights": {
+  'share-insights': {
     text:
-      "I’d like to share insights about my neighborhood to help improve the Resource Explorer",
+      'I’d like to share insights about my neighborhood to help improve the Resource Explorer',
     questions: [faqQuestionMap.neighborhoodInsight],
   },
-  "expand-cre": {
+  'expand-cre': {
     text:
-      "I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?",
+      'I am interested in applying the Resource Explorer to schools outside of Dallas ISD. Whom should I talk to?',
     questions: [faqQuestionMap.expandCre],
   },
-  "contact-form-hyper": {
-    text: "I need help with using the website or something’s not working",
-    formName: "troubleshooting",
+  'contact-form-hyper': {
+    text: 'I need help with using the website or something’s not working',
+    formName: 'troubleshooting',
   },
-  "contact-form-cpal": {
-    text: "Another reason",
-    formName: "cre-contact",
+  'contact-form-cpal': {
+    text: 'Another reason',
+    formName: 'cre-contact',
   },
 }
 
 const Contact = ({ location }) => {
-  let [conditionalOption, setConditionalOption] = useState("none")
+  let [conditionalOption, setConditionalOption] = useState('none')
   let [expandedMap, setExpandedMap] = useState({})
 
-  const onSubmit = e => {
-    if (!document.getElementById("newsletter-toggle").checked) {
+  const onSubmit = (e, formName) => {
+    // console.log('submit happened, ', e, formName)
+    if (!document.getElementById('newsletter-toggle').checked) {
       // console.log('off')
       return
     }
-    console.log("on")
+    console.log('on')
     e.preventDefault()
 
     const formDatas = {}
     _.each(
-      ["first_name", "last_name", "email", "subject", "message"],
+      ['first_name', 'last_name', 'email', 'subject', 'message'],
       fieldName => {
         const field = document.forms.contactForm.querySelector(`.${fieldName}`)
 
@@ -103,26 +104,31 @@ const Contact = ({ location }) => {
 
     const axiosOptions = {
       url: location.pathname,
-      method: "post",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      data: qs.stringify(formDatas),
+      method: 'post',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      data: 'form-name=' + formName + '&' + qs.stringify(formDatas),
     }
+
+    console.log('axiosOptions, ', axiosOptions)
 
     // submit to netlify asynchronously so we can then submit newsletter form
     axios(axiosOptions)
       .then(response => {
-        console.log("success: ", response)
-        _.each(["first_name", "last_name", "email"], fieldName => {
+        console.log('success: ', response)
+        _.each(['first_name', 'last_name', 'email'], fieldName => {
           const newsletterField = document.forms.newsletterForm.querySelector(
             `.${fieldName}`
           )
-          console.log(fieldName, " | ", newsletterField)
+          console.log(fieldName, ' | ', newsletterField)
 
           newsletterField.value = formDatas[fieldName]
         })
-        document.forms.newsletterForm.submit()
+        console.log(
+          'Submit to Netlify successful, now calling salesforce form.'
+        )
+        // document.forms.newsletterForm.submit()
       })
-      .catch(err => console.error("error: ", err))
+      .catch(err => console.error('error: ', err))
   }
 
   const updatePage = e => {
@@ -142,7 +148,7 @@ const Contact = ({ location }) => {
   const getContactForm = conditionalOption => {
     const {
       nothingSelected,
-      formName = conditionalOptions["contact-form-cpal"].formName,
+      formName = conditionalOptions['contact-form-cpal'].formName,
     } = conditionalOptions[conditionalOption]
 
     if (nothingSelected) {
@@ -157,7 +163,9 @@ const Contact = ({ location }) => {
           method="POST"
           data-netlify="true"
           action="/thank-you"
-          onSubmit={onSubmit}
+          onSubmit={e => {
+            onSubmit(e, formName)
+          }}
         >
           <input type="hidden" name="form-name" value={formName} />
           <Form.Group controlId="formGroupFirstName">
@@ -251,9 +259,9 @@ const Contact = ({ location }) => {
     return (
       <>
         <h3>{`Before contacting us, please read the FAQ${
-          singleFaq ? "" : "s"
+          singleFaq ? '' : 's'
         } below to see if ${
-          singleFaq ? "it answers" : "they answer"
+          singleFaq ? 'it answers' : 'they answer'
         } your question.`}</h3>
         <QuestionGroup
           questions={questions}
