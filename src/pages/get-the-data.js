@@ -15,7 +15,7 @@ const data = [
       "A dataset containing the values, ranks, and weights for the CRI and each of the five subindices.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/u8vvk15ebrno7k7/CRI_IndexValues_FullFinal.csv?dl=0",
+      "https://www.dropbox.com/s/pyyf0njl9iq6i84/CRI_IndexValues_FullFinal.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -24,7 +24,7 @@ const data = [
       "This dataset contains the indicator values for all components of the Community Subindex.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/807pp5jl3htpklr/CRI_Community_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/l1e2iyl4uzi97us/CRI_Community_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -33,7 +33,7 @@ const data = [
       "This dataset contains the indicator values for all components of the Economic Subindex.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/m2ehgqk8zycz3ws/CRI_Economics_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/sr5x94zg0hsprmb/CRI_Economics_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -42,7 +42,7 @@ const data = [
       "This dataset contains the indicator values for all components of the Education Subindex.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/kan3spc9jlwbigw/CRI_Education_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/28k3zwckj6xesuc/CRI_Education_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -51,7 +51,7 @@ const data = [
       "This dataset contains the indicator values for all components of the Family Subindex.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/kps8ircrg4tpnry/CRI_Family_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/vzi5qg22s0525a1/CRI_Family_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -60,7 +60,7 @@ const data = [
       "This dataset contains the indicator values for all components of the Health Subindex.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/b8h78idysugd8ny/CRI_Health_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/n9yfz8bn2iudmyd/CRI_Health_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
@@ -69,7 +69,7 @@ const data = [
       "This dataset includes a variety of demographic and socioeconomic variables related to each campus area that were not used to calculate the CRI.",
     Geography: "2 - mile Campus Communities",
     Link:
-      "https://www.dropbox.com/s/rnjvqqxe1zmul8r/CRI_Demographics_Variables_StDevs.csv?dl=0",
+      "https://www.dropbox.com/s/lzwnzwtsmtxj39k/CRI_Demographics_Variables_StDevs.csv?dl=0",
     LinkLabel: "CSV",
   },
   {
