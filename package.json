@@ -11,7 +11,7 @@
     "clsx": "^1.1.1",
     "cpal-components": "^1.4.3",
     "framer-motion": "^2.7.2",
-    "gatsby": "^2.3.34",
+    "gatsby": "^5.12.5",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-google-gtag": "^2.1.11",
     "gatsby-plugin-manifest": "^2.0.29",
