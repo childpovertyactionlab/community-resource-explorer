@@ -40,9 +40,9 @@ RUN npm -v
 RUN touch .eslintrc
 
 # env variables to be added via CI/CD pipeline. If local, use a .env file
-ENV GATSBY_GA_TRACKING_ID=UA-175054752-1
-ENV GATSBY_MAPBOX_API_TOKEN=pk.eyJ1IjoiY3BhbCIsImEiOiJja2N6OTJpZGswMWRsMnFtdHR5dDY1OGpoIn0.BR4hVJ6JdqAKCSyTykbAmg
-ENV GATSBY_MAPBOX_USER=cpal
+ENV GATSBY_GA_TRACKING_ID $GATSBY_GA_TRACKING_ID
+ENV GATSBY_MAPBOX_API_TOKEN $GATSBY_MAPBOX_API_TOKEN
+ENV GATSBY_MAPBOX_USER $GATSBY_MAPBOX_USER
 
 # copy all files into container, .dockerignore file specifies all that need to be skipped
 COPY . .
