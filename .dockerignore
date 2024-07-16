@@ -1,0 +1,10 @@
+README.md
+README-OLD.md
+.gitignore
+.prettierrc
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.cache/
+public
