@@ -11,7 +11,7 @@ services:
     container_name: cre_build
     develop:
       watch:
-        - action: sync
+        - action: sync+restart
           path: .
           target: /src
     stdin_open: true
