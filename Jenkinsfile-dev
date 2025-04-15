@@ -17,7 +17,7 @@ pipeline {
       steps {
         script {
             withCredentials([aws(credentialsId: 'jenkins-main', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                withAWSParameterStore(credentialsId: 'jenkins-main', naming: 'basename', path: '/dev/jenkins/community-resource-explorer-dev/', regionName: 'us-east-1') {
+                withAWSParameterStore(credentialsId: 'jenkins-main', naming: 'basename', path: '/dev/jenkins/community-resource-explorer/', regionName: 'us-east-1') {
                     sh "/kaniko/executor \
                     --context ${WORKSPACE} \
                     --build-arg GATSBY_GA_TRACKING_ID=${GATSBY_GA_TRACKING_ID} \
