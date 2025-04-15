@@ -1,0 +1,125 @@
+pipeline {
+  agent {
+    label 'agent'
+  }
+
+  environment {
+    AWS_REGION = 'us-east-1'
+    ECR_REPO = 'community-resource-explorer-dev'
+    AWS_ACCOUNT_ID = credentials('AWS_ACCOUNT_ID')
+    URL_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+    GIT_LAST_AUTHOR = sh(script: 'git --no-pager show -s --format=\'%an\' $GIT_COMMIT', returnStdout: true).trim()
+    GIT_LAST_COMMIT = sh(script: 'git log -1 --pretty=\'%B\'', returnStdout: true).trim()
+  }
+
+  stages {
+    stage('Build Image') {
+      steps {
+        script {
+            withCredentials([aws(credentialsId: 'jenkins-main', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                withAWSParameterStore(credentialsId: 'jenkins-main', naming: 'basename', path: '/dev/jenkins/community-resource-explorer-dev/', regionName: 'us-east-1') {
+                    sh "/kaniko/executor \
+                    --context ${WORKSPACE} \
+                    --build-arg GATSBY_GA_TRACKING_ID=${GATSBY_GA_TRACKING_ID} \
+                    --build-arg GATSBY_MAPBOX_API_TOKEN=${GATSBY_MAPBOX_API_TOKEN} \
+                    --build-arg GATSBY_MAPBOX_USER=${GATSBY_MAPBOX_USER} \
+                    --dockerfile ${WORKSPACE}/Dockerfile.dev \
+                    --destination ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/$ECR_REPO:${env.BUILD_NUMBER}"
+                }
+            }
+        }
+      }
+    }
+    stage('Deployment') {
+      steps{
+        script {
+          sshagent(credentials : ['th-clinic-finder-dev']){
+            sh "ssh -o StrictHostKeyChecking=no -l ubuntu ec2-18-208-181-44.compute-1.amazonaws.com 'sudo docker container stop ${env.JOB_NAME} && yes | sudo docker system prune -a --volumes && sudo aws ecr get-login-password --region ${AWS_REGION} | sudo docker login --username AWS --password-stdin ${URL_REGISTRY} && sudo docker pull ${URL_REGISTRY}/$ECR_REPO:${env.BUILD_NUMBER} && sudo docker run -d --name ${env.JOB_NAME} -p 80:8000 ${URL_REGISTRY}/$ECR_REPO:${env.BUILD_NUMBER}'"
+          }    
+        }
+      }
+    }
+  }
+    post { 
+        always { 
+            script {
+                def googleChatWebhook = "https://chat.googleapis.com/v1/spaces/AAAAoUs72D8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI'&'token=CsfmN3hotP5Vom1RAN9nD4AF1OdO_AqWeHEehdR1tRA"
+
+                String buildResult = currentBuild.currentResult
+                def statusIcons = [SUCCESS: 'https://emojis.slackmojis.com/emojis/images/1643514331/3045/jenkins-party.gif?1643514331', UNSTABLE: 'https://emojis.slackmojis.com/emojis/images/1643511247/47419/jenkins-is-fine.gif?1643511247', FAILURE: 'https://emojis.slackmojis.com/emojis/images/1659520601/60442/old_man_yells_at_jenkins.png?1659520601']
+                def colors = [SUCCESS: '#5DBCD2', UNSTABLE: '#aca620', FAILURE: '#ff0000']
+
+                String cardTitle = "`${env.JOB_NAME}` has completed runtime"
+
+                def buildStatusIcon = statusIcons[buildResult] ?: 'https://emojis.slackmojis.com/emojis/images/1643508777/51026/jenkins-worried.gif?1643508777'
+                def buildStatusTitle = "<b>${currentBuild.currentResult}</b>"
+
+                String buildDetails = currentBuild.resultIsWorseOrEqualTo("UNSTABLE") ? "\nLast commit author: *${env.GIT_LAST_AUTHOR}*\n ```${env.GIT_LAST_COMMIT}```": '';
+
+                String buildAuthor = "Last Commit Author: <b>${env.GIT_LAST_AUTHOR}</b>"
+                String buildCommit = "Commit Description: <code>${env.GIT_LAST_COMMIT}</code>"
+                String buildRuntime = "Build number ${env.BUILD_ID} took ${currentBuild.durationString}"
+
+                sh """
+                curl -X POST -H 'Content-Type: application/json' -d '{
+                    "cardsV2": [
+                        {
+                            "card": {
+                                "header": {
+                                    "title": "${cardTitle} - ${buildStatusTitle}",
+                                    "imageUrl": "${buildStatusIcon}"
+                                },
+                                "sections": [
+                                    {
+                                        "header": "Runtime Information",
+                                        "widgets": [
+                                            {
+                                                "textParagraph": {
+                                                    "text": "${buildAuthor}"
+                                                }
+                                            },
+                                            {
+                                                "textParagraph": {
+                                                    "text": "${buildCommit}"
+                                                }
+                                            },
+                                            {
+                                                "textParagraph": {
+                                                    "text": "${buildRuntime}"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "accessoryWidgets": [
+                        {
+                            "buttonList": {
+                                "buttons": [
+                                    {
+                                        "text": "Build Details",
+                                        "icon": {
+                                            "materialIcon": {
+                                                "name": "link"
+                                            }
+                                        },
+                                        "onClick": {
+                                            "openLink": {
+                                                "url": "${env.BUILD_URL}"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }' ${googleChatWebhook}
+
+                """ 
+            }
+            cleanWs()
+        }
+    }
+}
