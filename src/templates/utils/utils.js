@@ -107,6 +107,10 @@ export const getRoundedValue = (
   isCurrency = false,
   isPercent = false
 ) => {
+  if (typeof value !== "number" || isNaN(value)) {
+    console.warn("getRoundedValue: Non-numeric value encountered", { value, decimals, padZeroes, isCurrency, isPercent });
+    return "-";
+  }
   const type = typeof value
   if (!!isPercent) {
     value = value * 100
@@ -301,7 +305,6 @@ export const getFeederAverage = (metric, schoolSet) => {
   return total / values.length
 }
 
-export const getPercent = (portion, total) => {
-  // console.log("getPercent, ", (portion / total) * 100)
-  return (portion / total) * 100
-}
+export const getPercent = (percentDecimal, total) => {
+  return percentDecimal * 100
+};

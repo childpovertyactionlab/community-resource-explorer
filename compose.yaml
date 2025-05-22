@@ -1,9 +1,11 @@
+version: "3.9"
+
 services:
   frontend:
     build: .
-    platform: linux/amd64
+    platform: linux/amd64 # OR remove this line for native (arm64 or amd64 auto)
     ports:
-      - 80:8000
+      - "80:8000"
     environment:
       GATSBY_GA_TRACKING_ID: ${GATSBY_GA_TRACKING_ID}
       GATSBY_MAPBOX_API_TOKEN: ${GATSBY_MAPBOX_API_TOKEN}
