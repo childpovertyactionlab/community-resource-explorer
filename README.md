@@ -93,13 +93,3 @@ NODE_ENV=production docker compose up --build
 # If running in background
 docker compose down
 ```
-
-### Cleaning Up
-
-```bash
-# Remove containers and local volumes
-docker compose down -v
-
-# Remove all unused containers, networks, and images
-docker system prune -a
-```
