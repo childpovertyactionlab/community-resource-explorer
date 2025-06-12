@@ -55,3 +55,41 @@ GATSBY_GA_TRACKING_ID=[id]
 ```
 
 Note that you cannot test this plugin locally using Gatsby in development mode; you must run `gatsby develop && gatsby serve`, which will launch Gatsby on a separate port (localhost:9000).
+
+## Docker Development
+
+
+### Development Mode
+
+To start the development server:
+
+```bash
+# Build and start the container
+docker compose up --build
+
+# To run in detached mode (background)
+docker compose up --build -d
+
+# To view logs when running in detached mode
+docker compose logs -f
+```
+
+The application will be available at http://localhost:8000
+
+### Production Mode
+
+To run in production mode:
+
+```bash
+# Start with production environment
+NODE_ENV=production docker compose up --build
+```
+
+### Stopping the Container
+
+```bash
+# If running in foreground, use Ctrl+C
+
+# If running in background
+docker compose down
+```
