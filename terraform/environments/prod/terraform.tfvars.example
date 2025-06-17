@@ -1,0 +1,12 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+# AWS Configuration
+aws_region = "us-east-1"  # for prod
+
+# Application Secrets
+mapbox_api_token = "your_mapbox_token_here"
+ga_tracking_id   = "your_ga_tracking_id_here"
+mapbox_user      = "your_mapbox_username_here"
+
+# CloudFront price class override for production
+price_class = "PriceClass_All"

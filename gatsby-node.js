@@ -5,15 +5,17 @@
  */
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
-    actions.setWebpackConfig({
-      resolve: {
-        alias: {
-          // Use a mock for react-resize-aware during SSR
-          // to prevent errors with browser-specific code.
-          'react-resize-aware': require.resolve('./src/mocks/react-resize-aware.js'),
-        },
+ 
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        'react-resize-aware': require.resolve('./src/mocks/react-resize-aware.js'),
       },
+    },
+  })
+
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
       module: {
         rules: [
           {
