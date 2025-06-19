@@ -1,9 +1,14 @@
-// src/mocks/react-resize-aware.js
-// This mock is used during SSR (build-html stage in Gatsby)
-// to prevent errors with browser-specific code.
 
-const mockResizeListener = () => {}; // A no-op function for the listener element
-const mockSizes = { width: 0, height: 0 }; // Default sizes
+
+import React from "react"
+
+const mockResizeListener = React.createElement("div", {
+  style: { display: "none" },
+  key: "mock-resize-listener"
+});
+
+// Default sizes that will be returned by the hook
+const mockSizes = { width: 1024, height: 768 };
 
 // Export a function that mimics the useResizeAware hook's signature
 const useMockResizeAware = () => [mockResizeListener, mockSizes];
