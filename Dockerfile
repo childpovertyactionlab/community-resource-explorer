@@ -1,23 +1,21 @@
-# Use Node.js 14 explicitly for Gatsby v2 compatibility
-FROM node:14-bullseye AS build
+FROM node:18-bullseye AS build
 
 # Set working directory
 WORKDIR /app
 
-# Default environment variables can be overridden at runtime
-
-# Install system dependencies
+# Install system dependencies for native module compilation
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python \
+    python3 \
     make \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy package files
+# Copy package
 COPY package*.json ./
 
-# Install dependencies. Legacy peer deps flag isn't ideal, but for compatibility with these old dependencies
-RUN npm ci --legacy-peer-deps
+# With --legacy-peer-deps for React 18 compatibility
+RUN npm ci --legacy-peer-deps \
+    && npm install @parcel/watcher@2.0.5 --no-save
 
 # Copy the rest of the application
 COPY . .
