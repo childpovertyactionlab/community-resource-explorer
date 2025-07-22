@@ -77,7 +77,7 @@ pipeline {
                     withEnv(readFile('env.export').split('\n') as List) {
                         echo "Building Gatsby site for ${DEPLOY_ENV} environment"
                         sh """
-                        echo "Using Node $(node -v)"
+                        echo "Using Node \$(node -v)"
                         npm ci --legacy-peer-deps
                         npm run build
                         """
