@@ -1,3 +1,13 @@
+cvariable "environment" {
+  description = "Environment name (dev, prod)"
+  type        = string
+}
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+}
+
 variable "mapbox_api_token" {
   description = "Mapbox API token for maps functionality"
   type        = string

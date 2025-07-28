@@ -28,7 +28,7 @@ resource "aws_cloudwatch_dashboard" "main" {
           ]
           view    = "timeSeries"
           stacked = false
-          region  = "us-east-1"
+          region  = var.aws_region
           title   = "CloudFront Requests and Data Transfer"
           period  = 300
         }
@@ -47,7 +47,7 @@ resource "aws_cloudwatch_dashboard" "main" {
           ]
           view    = "timeSeries"
           stacked = false
-          region  = "us-east-1"
+          region  = var.aws_region
           title   = "CloudFront Error Rates"
           period  = 300
         }
@@ -67,7 +67,6 @@ resource "aws_cloudwatch_metric_alarm" "high_4xx_error_rate" {
   statistic           = "Average"
   threshold           = "5"
   alarm_description   = "This metric monitors 4xx error rate"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
 
   dimensions = {
     DistributionId = var.cloudfront_distribution_id
@@ -88,7 +87,6 @@ resource "aws_cloudwatch_metric_alarm" "high_5xx_error_rate" {
   statistic           = "Average"
   threshold           = "1"
   alarm_description   = "This metric monitors 5xx error rate"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
 
   dimensions = {
     DistributionId = var.cloudfront_distribution_id
@@ -99,14 +97,6 @@ resource "aws_cloudwatch_metric_alarm" "high_5xx_error_rate" {
   }
 }
 
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "${var.project_name}-${var.environment}-alerts"
-
-  tags = {
-    Name = "${var.project_name}-${var.environment}-alerts"
-  }
-}
 
 # Budget Alert
 resource "aws_budgets_budget" "cost_budget" {
