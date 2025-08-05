@@ -1,13 +1,23 @@
-FROM node:14
+FROM node:18-bullseye AS build
 
+# Set working directory
 WORKDIR /app
-RUN apt-get update && apt-get install -y python2 make g++
+
+# Install system dependencies for native module compilation
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy package
 COPY package*.json ./
-RUN npm install
+
+# With --legacy-peer-deps for React 18 compatibility
+RUN npm ci --legacy-peer-deps \
+    && npm install @parcel/watcher@2.0.5 --no-save
+
+# Copy the rest of the application
 COPY . .
-ENV GATSBY_GA_TRACKING_ID=$GATSBY_GA_TRACKING_ID
-ENV GATSBY_MAPBOX_API_TOKEN=$GATSBY_MAPBOX_API_TOKEN
-ENV GATSBY_MAPBOX_USER=$GATSBY_MAPBOX_USER
-RUN touch .eslintrc
+
 EXPOSE 8000
-CMD ["npm", "run", "develop"]

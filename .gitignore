@@ -69,6 +69,14 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-
 tutorial.md
 .vscode
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+

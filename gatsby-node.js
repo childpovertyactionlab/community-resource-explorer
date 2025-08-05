@@ -5,7 +5,16 @@
  */
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+ 
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        'react-resize-aware': require.resolve('./src/mocks/react-resize-aware.js'),
+      },
+    },
+  })
+
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [

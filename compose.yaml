@@ -2,22 +2,31 @@ version: "3.9"
 
 services:
   frontend:
-    build: .
-    platform: linux/amd64 # OR remove this line for native (arm64 or amd64 auto)
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
     ports:
-      - "80:8000"
+      - "8000:8000"
     environment:
-      GATSBY_GA_TRACKING_ID: ${GATSBY_GA_TRACKING_ID}
-      GATSBY_MAPBOX_API_TOKEN: ${GATSBY_MAPBOX_API_TOKEN}
-      GATSBY_MAPBOX_USER: ${GATSBY_MAPBOX_USER}
+      # Application environment variables
+      - NODE_ENV=${NODE_ENV:-development}
+      - GATSBY_TELEMETRY_DISABLED=1
+      - HOST=0.0.0.0
+      - GATSBY_GA_TRACKING_ID=${GATSBY_GA_TRACKING_ID}
+      - GATSBY_MAPBOX_API_TOKEN=${GATSBY_MAPBOX_API_TOKEN}
+      - GATSBY_MAPBOX_USER=${GATSBY_MAPBOX_USER}
+      - SHARP_IGNORE_GLOBAL_LIBVIPS=1
+      
     container_name: cre_build
-    develop:
-      watch:
-        - action: sync+restart
-          path: .
-          target: /src
     stdin_open: true
+    tty: true
     volumes:
-      - ./:/app
+      - .:/app
       - /app/node_modules
-    restart: always
+    command: ["sh", "-c", "npm run clean && npm run develop"]
+
+volumes: {}
+
+# Start with:
+# docker compose up --build
