@@ -177,9 +177,6 @@
         }
         .n-i-scale {
           width: 100%;
-          @include media-breakpoint-up(md) {
-            width: 92%;
-          }
         }
       }
 
@@ -408,9 +405,6 @@
       // }
       .n-i-scale {
         width: 100%;
-        @include media-breakpoint-up(md) {
-          width: 95%;
-        }
       }
     }
   }

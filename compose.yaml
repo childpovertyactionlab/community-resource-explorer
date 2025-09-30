@@ -21,7 +21,7 @@ services:
     container_name: cre_build
     stdin_open: true
     tty: true
-    volumes:
+    volumes:  
       - .:/app
       - /app/node_modules
     command: ["sh", "-c", "npm run clean && npm run develop"]

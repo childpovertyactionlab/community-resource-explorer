@@ -77,8 +77,14 @@ const SchoolPage = ({ data, ...props }) => {
   zoneJson.features.push(cir)
 
   // Helper to get metric value and z-score
-  const getMetricValue = (metric) => school[metric.replace(/\//g, "_") + "_estimate"]
-  const getMetricZ = (metric) => school[metric.replace(/\//g, "_") + "_z"]
+  const getMetricValue = (metric) => {
+    const value = school[metric.replace(/\//g, "_") + "_estimate"];
+    return typeof value === "string" ? parseFloat(value) : value;
+  }
+  const getMetricZ = (metric) => {
+    const value = school[metric.replace(/\//g, "_") + "_z"];
+    return typeof value === "string" ? parseFloat(value) : value;
+  }
 
   // Helper to get feeder high school name
   const getFeederHSName = () => {
@@ -559,7 +565,7 @@ const SchoolPage = ({ data, ...props }) => {
           xl={{ span: 4, offset: 0 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-          <div dangerouslySetInnerHTML={{ __html: getCustomFeederProse(getFeederHSName()) }} />
+          <div dangerouslySetInnerHTML={getCustomFeederProse(getFeederHSName())} />
         </Col>
       </Row>
       {/** Iterate through other categories */}
@@ -594,8 +600,8 @@ const SchoolPage = ({ data, ...props }) => {
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 5, offset: 0 }}
-                  xl={{ span: 4, offset: 0 }}
+                  md={{ span: 9, offset: 0 }}
+                  xl={{ span: 8, offset: 0 }}
                   className="metric-group level-0"
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
@@ -653,8 +659,8 @@ const SchoolPage = ({ data, ...props }) => {
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 5, offset: i % 2 === 0 ? 1 : 0 }}
-                  xl={{ span: 4, offset: i % 2 === 0 ? 1 : 0 }}
+                  md={{ span: 9, offset: 0 }}
+                  xl={{ span: 8, offset: 0 }}
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
                   className={clsx(

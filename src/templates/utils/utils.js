@@ -107,40 +107,36 @@ export const getRoundedValue = (
   isCurrency = false,
   isPercent = false
 ) => {
-  if (typeof value !== "number" || isNaN(value)) {
+  // Convert to number if it's a string
+  const numValue = typeof value === "string" ? parseFloat(value) : value;
+  
+  // Check if value is null, undefined, or NaN after conversion
+  if (numValue == null || isNaN(numValue)) {
     console.warn("getRoundedValue: Non-numeric value encountered", { value, decimals, padZeroes, isCurrency, isPercent });
     return "-";
   }
-  const type = typeof value
+  
+  let workingValue = numValue;
+  
   if (!!isPercent) {
-    value = value * 100
+    workingValue = workingValue * 100;
   }
-  let fixed = null
-  if (type === "string") {
-    if (padZeroes) {
-      fixed = parseFloat(value)
-        .toFixed(decimals)
-        .toLocaleString()
-    } else {
-      fixed = +parseFloat(value)
-        .toFixed(decimals)
-        .toLocaleString()
-    }
+  
+  let fixed = null;
+  if (padZeroes) {
+    fixed = workingValue.toFixed(decimals);
   } else {
-    if (padZeroes) {
-      fixed = Number(value.toFixed(decimals)).toLocaleString()
-    } else {
-      fixed = Number(value.toFixed(decimals)).toLocaleString()
-    }
+    fixed = Number(workingValue.toFixed(decimals)).toLocaleString();
   }
+  
   if (!!isCurrency) {
-    fixed = "$" + fixed
+    fixed = "$" + fixed;
   }
   if (!!isPercent) {
-    fixed = fixed + "%"
+    fixed = fixed + "%";
   }
 
-  return fixed
+  return fixed;
 }
 
 /**
