@@ -363,8 +363,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_LOWJOB`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.136899987322143,
     citation: "Census On The Map 2022"
   },
@@ -379,8 +379,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_MIDJOB`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.423761521821436,
     citation: "Census On The Map 2022"
   },
@@ -395,8 +395,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_OWNCB`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.259057305140382,
     citation: "ACS 5yr Table B25106"
   },
@@ -411,8 +411,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_RENTCB`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.48363233244211,
     citation: "ACS 5yr Table B25106"
   },
@@ -444,7 +444,7 @@ export const CPAL_METRICS = [
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INSCOV`,
     decimals: 0,
-    as_percent: 0,
+    as_percent: 1,
     mean: 0.764418560950744,
     citation: "ACS 5yr Subject Table S2701"
   },
@@ -459,7 +459,7 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INSRAT`,
-    decimals: 0,
+    decimals: 1,
     as_percent: 0,
     mean: 1.94063537638977,
     citation: "ACS 5yr Subject Tables S2703 and S2704"
@@ -475,7 +475,7 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_PHARMA`,
-    decimals: 0,
+    decimals: 1,
     as_percent: 0,
     mean: 2.81541646646059,
     citation: "Texas State Board of Pharmacy 2024"
@@ -507,8 +507,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_BROAD`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.096203555221695,
     citation: "ACS 5yr Table B28005"
   },
@@ -571,8 +571,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_ECSEAT`,
-    decimals: 0,
-    as_percent: 0,
+    decimals: 1,
+    as_percent: 1,
     mean: 0.268752757527654,
     citation: "Texas Department of Family and Protective Services 2024"
   },

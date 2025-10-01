@@ -126,6 +126,8 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const schools = result.data.allSchoolsJson.edges
+  const allSchools = schools.map(({ node }) => node)
+
   schools.forEach(({ node: school }) => {
     createPage({
       path: `/schools/${school.sln}/`,
@@ -133,6 +135,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: school.sln,
         schoolNode: school,
+        allSchools: allSchools,
       },
     })
   })

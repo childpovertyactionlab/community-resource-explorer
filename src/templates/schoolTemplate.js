@@ -78,7 +78,11 @@ const SchoolPage = ({ data, ...props }) => {
 
   // Helper to get metric value and z-score
   const getMetricValue = (metric) => {
-    const value = school[metric.replace(/\//g, "_") + "_estimate"];
+    // INDEX fields don't have _estimate suffix
+    const fieldName = metric.includes('INDEX') 
+      ? metric.replace(/\//g, "_")
+      : metric.replace(/\//g, "_") + "_estimate";
+    const value = school[fieldName];
     return typeof value === "string" ? parseFloat(value) : value;
   }
   const getMetricZ = (metric) => {
@@ -86,11 +90,24 @@ const SchoolPage = ({ data, ...props }) => {
     return typeof value === "string" ? parseFloat(value) : value;
   }
 
-  // Helper to get feeder high school name
+  // Helper to get feeder high school name(s)
   const getFeederHSName = () => {
-    if (!school.hs || !allSchools.length) return ""
-    const hsSchool = allSchools.find(s => s.OBJECTID === school.hs)
-    return hsSchool ? hsSchool.campus : ""
+    if (!school.hs || school.hs === "NA" || !allSchools.length) return ""
+
+    // Handle multiple feeder schools (comma-separated IDs like "9,32")
+    const hsIds = school.hs.toString().split(',').map(id => id.trim())
+
+    const hsNames = hsIds
+      .map(hsId => {
+        const hsSchool = allSchools.find(s => s.OBJECTID?.toString() === hsId)
+        return hsSchool ? hsSchool.campus : null
+      })
+      .filter(name => name !== null)
+
+    if (hsNames.length === 0) return ""
+    if (hsNames.length === 1) return hsNames[0]
+    if (hsNames.length === 2) return hsNames.join(" & ")
+    return hsNames.slice(0, -1).join(", ") + " & " + hsNames[hsNames.length - 1]
   }
 
   // Strip first item from tabs for generating categories
@@ -246,9 +263,9 @@ const SchoolPage = ({ data, ...props }) => {
   console.log("getMetric cri/INDEX", getMetric("cri/INDEX", CPAL_METRICS));
 
   // For CRI index, use the value directly and coerce to number:
-  const criValue = Number(school["cri/INDEX"]);
+  const criValue = Number(school.cri_INDEX);
   const criMetric = getMetric("cri/INDEX", CPAL_METRICS);
-  console.log("school['cri/INDEX']:", school["cri/INDEX"], typeof school["cri/INDEX"]);
+  console.log("school.cri_INDEX:", school.cri_INDEX, typeof school.cri_INDEX);
   console.log("criValue (as number):", criValue, typeof criValue);
   console.log("criMetric.decimals:", criMetric.decimals);
 
@@ -287,7 +304,7 @@ const SchoolPage = ({ data, ...props }) => {
                 {school.CITY}, TX {school.ZIP} */}
                 <br />
                 {i18n.translate("UI_MAP_TOOLTIP_FEEDER", {
-                  name: school.hs, // ask about having feeder?
+                  name: getFeederHSName() || (school.hs && school.hs !== "NA" ? school.hs : "Various"),
                 })}
               </h4>
               <Button
@@ -542,7 +559,12 @@ const SchoolPage = ({ data, ...props }) => {
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
                 school.campus,
-                getMetricZ("cri/INDEX")
+                getQuintile(
+                  criValue,
+                  criMetric.range[0],
+                  criMetric.range[1],
+                  criMetric.high_is_good
+                )
               ),
             }}
           ></p>
