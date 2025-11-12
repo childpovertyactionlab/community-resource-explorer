@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy package
+# Copy package files
 COPY package*.json ./
 
 # With --legacy-peer-deps for React 18 compatibility
@@ -20,5 +20,9 @@ RUN npm ci --legacy-peer-deps \
 
 # Copy the rest of the application
 COPY . .
+
+# Apply z-score patch to cpal-components
+# This makes the Explorer page display z-scores (not 0-100)
+RUN node scripts/patchCpalForZScores.js
 
 EXPOSE 8000

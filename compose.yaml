@@ -24,7 +24,7 @@ services:
     volumes:  
       - .:/app
       - /app/node_modules
-    command: ["sh", "-c", "npm run clean && npm run develop"]
+    command: ["sh", "-c", "node scripts/patchCpalForZScores.js && npm run clean && npm run develop"]
 
 volumes: {}
 
