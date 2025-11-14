@@ -74,10 +74,10 @@ const home = ({ location }) => {
               <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
             </span>
           </ScrollLink>
-          <a href="/explorer">
+          <Link to="/explorer">
             Go to the Explorer{" "}
             <InlineSvg type="down-arrow-sm" tabIndexed={false} ariaLabel="" />
-          </a>
+          </Link>
         </div>
       </Hero>
 

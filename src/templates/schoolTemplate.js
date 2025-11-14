@@ -334,7 +334,7 @@ const SchoolPage = ({ data, ...props }) => {
             >
               <StaticMap
                 {...viewport}
-                mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
+                mapboxAccessToken={data.site.siteMetadata.mapboxApiKey}
                 mapStyle={defaultMapStyle}
                 aria-describedby="map_descriptor"
               >

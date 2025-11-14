@@ -5,7 +5,8 @@
  */
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
- 
+  // Use our custom resize-aware implementation for all stages
+  // The original package uses JSX runtime which isn't configured in this Gatsby setup
   actions.setWebpackConfig({
     resolve: {
       alias: {

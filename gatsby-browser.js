@@ -6,8 +6,11 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/style.scss"
+import "mapbox-gl/dist/mapbox-gl.css"
 
-// Hide Mapbox token errors that don't actually break anything
+// Temporarily disabled error suppression to debug map issues
+// TODO: Re-enable after fixing map display issues
+/*
 if (typeof window !== 'undefined') {
   const isMapboxError = (msg) => {
     const str = msg?.toString() || ''
@@ -65,4 +68,5 @@ if (typeof window !== 'undefined') {
   })
   window._gatsbyEvents = originalEvents
 }
+*/
 

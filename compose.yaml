@@ -21,10 +21,12 @@ services:
     container_name: cre_build
     stdin_open: true
     tty: true
-    volumes:  
+    volumes:
       - .:/app
       - /app/node_modules
-    command: ["sh", "-c", "node scripts/patchCpalForZScores.js && npm run clean && npm run develop"]
+      - /app/.cache
+      - /app/public
+    command: ["npm", "run", "develop:docker"]
 
 volumes: {}
 
