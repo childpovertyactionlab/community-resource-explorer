@@ -21,8 +21,6 @@
     "dem/hispan/estimate": 0.4698,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.462,
-    "com/comrec/estimate": 0.0575,
-    "com/comrec/z": -1.094,
     "com/evics/estimate": 91.6174,
     "com/evics/z": -0.2871,
     "com/libs/estimate": 0.2299,
@@ -67,11 +65,11 @@
     "yth/cccall/z": -0.3755,
     "yth/ecseat/estimate": 0.2288,
     "yth/ecseat/z": -0.2678,
-    "com/INDEX": -1.6672,
+    "com/INDEX": -1.6173,
     "eco/INDEX": -0.1376,
     "hel/INDEX": -0.2584,
     "yth/INDEX": -0.2063,
-    "cri/INDEX": -0.6108
+    "cri/INDEX": -0.6229
   },
   {
     "OBJECTID": 129,
@@ -95,8 +93,6 @@
     "dem/hispan/estimate": 0.5026,
     "dem/male/estimate": 0.5069,
     "dem/white/estimate": 0.3976,
-    "com/comrec/estimate": 0.4178,
-    "com/comrec/z": 0.851,
     "com/evics/estimate": 90.6397,
     "com/evics/z": -0.2568,
     "com/libs/estimate": 0.376,
@@ -141,11 +137,11 @@
     "yth/cccall/z": 0.5296,
     "yth/ecseat/estimate": 0.2832,
     "yth/ecseat/z": 0.2149,
-    "com/INDEX": -1.3971,
+    "com/INDEX": -1.2658,
     "eco/INDEX": 0.7345,
     "hel/INDEX": -0.0672,
     "yth/INDEX": 0.7774,
-    "cri/INDEX": 0.3952
+    "cri/INDEX": 0.4054
   },
   {
     "OBJECTID": 114,
@@ -169,8 +165,6 @@
     "dem/hispan/estimate": 0.4424,
     "dem/male/estimate": 0.4723,
     "dem/white/estimate": 0.1999,
-    "com/comrec/estimate": 0.3223,
-    "com/comrec/z": 0.4749,
     "com/evics/estimate": 129.4322,
     "com/evics/z": -1.2644,
     "com/libs/estimate": 0.1934,
@@ -215,11 +209,11 @@
     "yth/cccall/z": 0.7757,
     "yth/ecseat/estimate": 0.2132,
     "yth/ecseat/z": -0.416,
-    "com/INDEX": -0.3664,
+    "com/INDEX": -1.0456,
     "eco/INDEX": -2.6706,
     "hel/INDEX": -3.4095,
     "yth/INDEX": 0.6418,
-    "cri/INDEX": -4.503
+    "cri/INDEX": -4.5723
   },
   {
     "OBJECTID": 126,
@@ -243,8 +237,6 @@
     "dem/hispan/estimate": 0.2325,
     "dem/male/estimate": 0.5241,
     "dem/white/estimate": 0.6136,
-    "com/comrec/estimate": 0.4723,
-    "com/comrec/z": 1.0467,
     "com/evics/estimate": 66.3259,
     "com/evics/z": 0.6265,
     "com/libs/estimate": 0.436,
@@ -289,11 +281,11 @@
     "yth/cccall/z": 1.4776,
     "yth/ecseat/estimate": 0.5062,
     "yth/ecseat/z": 1.822,
-    "com/INDEX": -0.2756,
+    "com/INDEX": -0.1778,
     "eco/INDEX": 2.954,
     "hel/INDEX": 4.1282,
     "yth/INDEX": 1.6417,
-    "cri/INDEX": 5.5284
+    "cri/INDEX": 5.5056
   },
   {
     "OBJECTID": 135,
@@ -317,8 +309,6 @@
     "dem/hispan/estimate": 0.7087,
     "dem/male/estimate": 0.4799,
     "dem/white/estimate": 0.3718,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 75.1185,
     "com/evics/z": 0.2744,
     "com/libs/estimate": 0.2771,
@@ -363,11 +353,11 @@
     "yth/cccall/z": -1.2623,
     "yth/ecseat/estimate": 0.1258,
     "yth/ecseat/z": -1.3757,
-    "com/INDEX": 0.5445,
+    "com/INDEX": 1.1483,
     "eco/INDEX": -0.6976,
     "hel/INDEX": -1.5022,
     "yth/INDEX": -2.1373,
-    "cri/INDEX": -1.9134
+    "cri/INDEX": -1.8068
   },
   {
     "OBJECTID": 112,
@@ -391,8 +381,6 @@
     "dem/hispan/estimate": 0.1918,
     "dem/male/estimate": 0.496,
     "dem/white/estimate": 0.6009,
-    "com/comrec/estimate": 0.162,
-    "com/comrec/z": -0.3156,
     "com/evics/estimate": 60.4042,
     "com/evics/z": 0.8909,
     "com/libs/estimate": 0.405,
@@ -437,11 +425,11 @@
     "yth/cccall/z": -0.2159,
     "yth/ecseat/estimate": 0.3268,
     "yth/ecseat/z": 0.569,
-    "com/INDEX": 1.4963,
+    "com/INDEX": 1.7015,
     "eco/INDEX": 1.4561,
     "hel/INDEX": 3.2719,
     "yth/INDEX": -0.7705,
-    "cri/INDEX": 3.6594
+    "cri/INDEX": 3.6671
   },
   {
     "OBJECTID": 208,
@@ -465,8 +453,6 @@
     "dem/hispan/estimate": 0.3703,
     "dem/male/estimate": 0.5132,
     "dem/white/estimate": 0.5953,
-    "com/comrec/estimate": 0.239,
-    "com/comrec/z": 0.0978,
     "com/evics/estimate": 50.4514,
     "com/evics/z": 1.4001,
     "com/libs/estimate": 0.3585,
@@ -511,11 +497,11 @@
     "yth/cccall/z": -0.2227,
     "yth/ecseat/estimate": 0.3054,
     "yth/ecseat/z": 0.3987,
-    "com/INDEX": 1.7555,
+    "com/INDEX": 1.9628,
     "eco/INDEX": 1.0666,
     "hel/INDEX": 2.2825,
     "yth/INDEX": -0.8045,
-    "cri/INDEX": 2.6655
+    "cri/INDEX": 2.6879
   },
   {
     "OBJECTID": 133,
@@ -539,8 +525,6 @@
     "dem/hispan/estimate": 0.5837,
     "dem/male/estimate": 0.4753,
     "dem/white/estimate": 0.3047,
-    "com/comrec/estimate": 0.0995,
-    "com/comrec/z": -0.7319,
     "com/evics/estimate": 106.0317,
     "com/evics/z": -0.7004,
     "com/libs/estimate": 0.199,
@@ -585,11 +569,11 @@
     "yth/cccall/z": 0.239,
     "yth/ecseat/estimate": 0.2789,
     "yth/ecseat/z": 0.1782,
-    "com/INDEX": 0.3118,
+    "com/INDEX": 0.5231,
     "eco/INDEX": -1.7406,
     "hel/INDEX": -1.5617,
     "yth/INDEX": 0.6572,
-    "cri/INDEX": -2.3082
+    "cri/INDEX": -2.2301
   },
   {
     "OBJECTID": 218,
@@ -613,8 +597,6 @@
     "dem/hispan/estimate": 0.4502,
     "dem/male/estimate": 0.5135,
     "dem/white/estimate": 0.3518,
-    "com/comrec/estimate": 0.7235,
-    "com/comrec/z": 1.8278,
     "com/evics/estimate": 112.1223,
     "com/evics/z": -0.8583,
     "com/libs/estimate": 0.5565,
@@ -659,11 +641,11 @@
     "yth/cccall/z": 1.0994,
     "yth/ecseat/estimate": 0.3218,
     "yth/ecseat/z": 0.5296,
-    "com/INDEX": -1.0961,
+    "com/INDEX": -2.0247,
     "eco/INDEX": -0.154,
     "hel/INDEX": -0.9469,
     "yth/INDEX": 1.4445,
-    "cri/INDEX": -0.7653
+    "cri/INDEX": -0.9196
   },
   {
     "OBJECTID": 136,
@@ -680,11 +662,11 @@
     "point_y": 32.7549,
     "com/urbhe/estimate": 1.7497,
     "com/urbhe/z": 0.0332,
-    "com/INDEX": -1.737,
+    "com/INDEX": -1.8436,
     "eco/INDEX": -0.154,
     "hel/INDEX": -0.8892,
     "yth/INDEX": -0.2302,
-    "cri/INDEX": -1.1108
+    "cri/INDEX": -1.1472
   },
   {
     "OBJECTID": 205,
@@ -708,8 +690,6 @@
     "dem/hispan/estimate": 0.518,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.4321,
-    "com/comrec/estimate": 0.1021,
-    "com/comrec/z": -0.7122,
     "com/evics/estimate": 90.9921,
     "com/evics/z": -0.2678,
     "com/libs/estimate": 0.2553,
@@ -754,11 +734,11 @@
     "yth/cccall/z": -0.6284,
     "yth/ecseat/estimate": 0.1815,
     "yth/ecseat/z": -0.7359,
-    "com/INDEX": -1.9513,
+    "com/INDEX": -2.1585,
     "eco/INDEX": -0.3358,
     "hel/INDEX": -0.6451,
     "yth/INDEX": -0.7407,
-    "cri/INDEX": -1.1858
+    "cri/INDEX": -1.2503
   },
   {
     "OBJECTID": 128,
@@ -782,8 +762,6 @@
     "dem/hispan/estimate": 0.5272,
     "dem/male/estimate": 0.5283,
     "dem/white/estimate": 0.4909,
-    "com/comrec/estimate": 0.2853,
-    "com/comrec/z": 0.314,
     "com/evics/estimate": 66.0275,
     "com/evics/z": 0.6392,
     "com/libs/estimate": 0.4564,
@@ -828,11 +806,11 @@
     "yth/cccall/z": -0.0336,
     "yth/ecseat/estimate": 0.3191,
     "yth/ecseat/z": 0.5087,
-    "com/INDEX": -0.2548,
+    "com/INDEX": 0.2668,
     "eco/INDEX": 2.2246,
     "hel/INDEX": 2.0993,
     "yth/INDEX": 0.3031,
-    "cri/INDEX": 3.2433
+    "cri/INDEX": 3.3027
   },
   {
     "OBJECTID": 202,
@@ -856,8 +834,6 @@
     "dem/hispan/estimate": 0.4456,
     "dem/male/estimate": 0.509,
     "dem/white/estimate": 0.3646,
-    "com/comrec/estimate": 0.5676,
-    "com/comrec/z": 1.3631,
     "com/evics/estimate": 109.2343,
     "com/evics/z": -0.7845,
     "com/libs/estimate": 0.3784,
@@ -902,11 +878,11 @@
     "yth/cccall/z": 1.2429,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.4781,
+    "com/INDEX": -1.8341,
     "eco/INDEX": 0.1872,
     "hel/INDEX": -0.4929,
     "yth/INDEX": 1.5734,
-    "cri/INDEX": -0.2127
+    "cri/INDEX": -0.2733
   },
   {
     "OBJECTID": 212,
@@ -930,8 +906,6 @@
     "dem/hispan/estimate": 0.6493,
     "dem/male/estimate": 0.4916,
     "dem/white/estimate": 0.3101,
-    "com/comrec/estimate": 0.0628,
-    "com/comrec/z": -1.0419,
     "com/evics/estimate": 93.4601,
     "com/evics/z": -0.3435,
     "com/libs/estimate": 0.3141,
@@ -976,11 +950,11 @@
     "yth/cccall/z": -0.9176,
     "yth/ecseat/estimate": 0.1371,
     "yth/ecseat/z": -1.2366,
-    "com/INDEX": -0.3133,
+    "com/INDEX": -0.2347,
     "eco/INDEX": -1.9021,
     "hel/INDEX": -2.6739,
     "yth/INDEX": -1.0864,
-    "cri/INDEX": -3.6588
+    "cri/INDEX": -3.6252
   },
   {
     "OBJECTID": 113,
@@ -1004,8 +978,6 @@
     "dem/hispan/estimate": 0.5825,
     "dem/male/estimate": 0.5096,
     "dem/white/estimate": 0.3186,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 172.9803,
     "com/evics/z": -2.0846,
     "com/libs/estimate": 0.9274,
@@ -1050,11 +1022,11 @@
     "yth/cccall/z": -1.5989,
     "yth/ecseat/estimate": 0.067,
     "yth/ecseat/z": -2.2343,
-    "com/INDEX": 1.4214,
+    "com/INDEX": 1.4036,
     "eco/INDEX": -2.4191,
     "hel/INDEX": -2.2049,
     "yth/INDEX": -1.6109,
-    "cri/INDEX": -3.4916
+    "cri/INDEX": -3.4592
   },
   {
     "OBJECTID": 203,
@@ -1078,8 +1050,6 @@
     "dem/hispan/estimate": 0.5061,
     "dem/male/estimate": 0.4801,
     "dem/white/estimate": 0.258,
-    "com/comrec/estimate": 0.1972,
-    "com/comrec/z": -0.1168,
     "com/evics/estimate": 118.1036,
     "com/evics/z": -1.0053,
     "com/libs/estimate": 0.2465,
@@ -1124,11 +1094,11 @@
     "yth/cccall/z": 0.4812,
     "yth/ecseat/estimate": 0.235,
     "yth/ecseat/z": -0.21,
-    "com/INDEX": -0.4458,
+    "com/INDEX": -0.5955,
     "eco/INDEX": -1.9305,
     "hel/INDEX": -2.7391,
     "yth/INDEX": 0.676,
-    "cri/INDEX": -3.4553
+    "cri/INDEX": -3.4409
   },
   {
     "OBJECTID": 213,
@@ -1152,8 +1122,6 @@
     "dem/hispan/estimate": 0.6512,
     "dem/male/estimate": 0.4957,
     "dem/white/estimate": 0.3012,
-    "com/comrec/estimate": 0.0816,
-    "com/comrec/z": -0.8743,
     "com/evics/estimate": 105.4795,
     "com/evics/z": -0.6856,
     "com/libs/estimate": 0.408,
@@ -1198,11 +1166,11 @@
     "yth/cccall/z": -1.7276,
     "yth/ecseat/estimate": 0.0885,
     "yth/ecseat/z": -1.8881,
-    "com/INDEX": 0.7756,
+    "com/INDEX": 0.6133,
     "eco/INDEX": -2.085,
     "hel/INDEX": -2.9853,
     "yth/INDEX": -2.2009,
-    "cri/INDEX": -4.033
+    "cri/INDEX": -4.0392
   },
   {
     "OBJECTID": 130,
@@ -1226,8 +1194,6 @@
     "dem/hispan/estimate": 0.6323,
     "dem/male/estimate": 0.5021,
     "dem/white/estimate": 0.3813,
-    "com/comrec/estimate": 0.0896,
-    "com/comrec/z": -0.8088,
     "com/evics/estimate": 80.166,
     "com/evics/z": 0.0905,
     "com/libs/estimate": 0.2689,
@@ -1272,11 +1238,11 @@
     "yth/cccall/z": -0.4504,
     "yth/ecseat/estimate": 0.1914,
     "yth/ecseat/z": -0.6331,
-    "com/INDEX": -0.6515,
+    "com/INDEX": -0.0066,
     "eco/INDEX": 0.0555,
     "hel/INDEX": -1.2253,
     "yth/INDEX": -0.502,
-    "cri/INDEX": -1.0689
+    "cri/INDEX": -0.9576
   },
   {
     "OBJECTID": 209,
@@ -1300,8 +1266,6 @@
     "dem/hispan/estimate": 0.3499,
     "dem/male/estimate": 0.495,
     "dem/white/estimate": 0.5667,
-    "com/comrec/estimate": 0.2193,
-    "com/comrec/z": -0.0008,
     "com/evics/estimate": 59.9368,
     "com/evics/z": 0.9129,
     "com/libs/estimate": 0.3289,
@@ -1346,11 +1310,11 @@
     "yth/cccall/z": -0.6039,
     "yth/ecseat/estimate": 0.2656,
     "yth/ecseat/z": 0.0647,
-    "com/INDEX": 2.2583,
+    "com/INDEX": 2.2684,
     "eco/INDEX": 1.4621,
     "hel/INDEX": 2.3805,
     "yth/INDEX": -1.1347,
-    "cri/INDEX": 3.0638
+    "cri/INDEX": 3.0486
   },
   {
     "OBJECTID": 121,
@@ -1374,8 +1338,6 @@
     "dem/hispan/estimate": 0.2617,
     "dem/male/estimate": 0.5139,
     "dem/white/estimate": 0.5874,
-    "com/comrec/estimate": 0.4075,
-    "com/comrec/z": 0.8128,
     "com/evics/estimate": 64.5679,
     "com/evics/z": 0.7024,
     "com/libs/estimate": 0.5187,
@@ -1420,11 +1382,11 @@
     "yth/cccall/z": 1.3376,
     "yth/ecseat/estimate": 0.4352,
     "yth/ecseat/z": 1.3578,
-    "com/INDEX": -0.1022,
+    "com/INDEX": -0.2348,
     "eco/INDEX": 2.8543,
     "hel/INDEX": 3.2439,
     "yth/INDEX": 1.3796,
-    "cri/INDEX": 4.7772
+    "cri/INDEX": 4.7197
   },
   {
     "OBJECTID": 116,
@@ -1448,8 +1410,6 @@
     "dem/hispan/estimate": 0.3371,
     "dem/male/estimate": 0.4602,
     "dem/white/estimate": 0.1827,
-    "com/comrec/estimate": 0.1853,
-    "com/comrec/z": -0.1815,
     "com/evics/estimate": 157.5569,
     "com/evics/z": -1.8205,
     "com/libs/estimate": 0.278,
@@ -1494,11 +1454,11 @@
     "yth/cccall/z": 2.3295,
     "yth/ecseat/estimate": 0.435,
     "yth/ecseat/z": 1.3566,
-    "com/INDEX": -0.837,
+    "com/INDEX": -0.8945,
     "eco/INDEX": -3.6971,
     "hel/INDEX": -0.9167,
     "yth/INDEX": 4.2012,
-    "cri/INDEX": -2.8873
+    "cri/INDEX": -2.816
   },
   {
     "OBJECTID": 120,
@@ -1522,8 +1482,6 @@
     "dem/hispan/estimate": 0.2281,
     "dem/male/estimate": 0.5259,
     "dem/white/estimate": 0.624,
-    "com/comrec/estimate": 0.5212,
-    "com/comrec/z": 1.2126,
     "com/evics/estimate": 66.0244,
     "com/evics/z": 0.6393,
     "com/libs/estimate": 0.484,
@@ -1568,11 +1526,11 @@
     "yth/cccall/z": 1.505,
     "yth/ecseat/estimate": 0.5181,
     "yth/ecseat/z": 1.8965,
-    "com/INDEX": -0.1254,
+    "com/INDEX": 0.0355,
     "eco/INDEX": 3.0529,
     "hel/INDEX": 4.4532,
     "yth/INDEX": 1.6343,
-    "cri/INDEX": 5.8695
+    "cri/INDEX": 5.8565
   },
   {
     "OBJECTID": 217,
@@ -1596,8 +1554,6 @@
     "dem/hispan/estimate": 0.588,
     "dem/male/estimate": 0.4985,
     "dem/white/estimate": 0.3583,
-    "com/comrec/estimate": 0.246,
-    "com/comrec/z": 0.1315,
     "com/evics/estimate": 89.5496,
     "com/evics/z": -0.2226,
     "com/libs/estimate": 0.1968,
@@ -1642,11 +1598,11 @@
     "yth/cccall/z": -0.4622,
     "yth/ecseat/estimate": 0.1802,
     "yth/ecseat/z": -0.7499,
-    "com/INDEX": -1.3978,
+    "com/INDEX": -1.8462,
     "eco/INDEX": -1.2176,
     "hel/INDEX": -1.7413,
     "yth/INDEX": -0.5148,
-    "cri/INDEX": -2.535
+    "cri/INDEX": -2.6167
   },
   {
     "OBJECTID": 223,
@@ -1670,8 +1626,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -1716,11 +1670,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 211,
@@ -1744,8 +1698,6 @@
     "dem/hispan/estimate": 0.1958,
     "dem/male/estimate": 0.4938,
     "dem/white/estimate": 0.5584,
-    "com/comrec/estimate": 0.1134,
-    "com/comrec/z": -0.6299,
     "com/evics/estimate": 67.3212,
     "com/evics/z": 0.5843,
     "com/libs/estimate": 0.3402,
@@ -1790,11 +1742,11 @@
     "yth/cccall/z": -0.1781,
     "yth/ecseat/estimate": 0.3239,
     "yth/ecseat/z": 0.5464,
-    "com/INDEX": 0.9361,
+    "com/INDEX": 1.3532,
     "eco/INDEX": 1.1395,
     "hel/INDEX": 2.5199,
     "yth/INDEX": -0.6283,
-    "cri/INDEX": 2.7897
+    "cri/INDEX": 2.8391
   },
   {
     "OBJECTID": 206,
@@ -1818,8 +1770,6 @@
     "dem/hispan/estimate": 0.518,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.4321,
-    "com/comrec/estimate": 0.1021,
-    "com/comrec/z": -0.7122,
     "com/evics/estimate": 90.9921,
     "com/evics/z": -0.2678,
     "com/libs/estimate": 0.2553,
@@ -1864,11 +1814,11 @@
     "yth/cccall/z": -0.6284,
     "yth/ecseat/estimate": 0.1815,
     "yth/ecseat/z": -0.7359,
-    "com/INDEX": -1.9513,
+    "com/INDEX": -2.1585,
     "eco/INDEX": -0.3358,
     "hel/INDEX": -0.6451,
     "yth/INDEX": -0.7407,
-    "cri/INDEX": -1.1858
+    "cri/INDEX": -1.2503
   },
   {
     "OBJECTID": 125,
@@ -1892,8 +1842,6 @@
     "dem/hispan/estimate": 0.518,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.4321,
-    "com/comrec/estimate": 0.1021,
-    "com/comrec/z": -0.7122,
     "com/evics/estimate": 90.9921,
     "com/evics/z": -0.2678,
     "com/libs/estimate": 0.2553,
@@ -1938,11 +1886,11 @@
     "yth/cccall/z": -0.6284,
     "yth/ecseat/estimate": 0.1815,
     "yth/ecseat/z": -0.7359,
-    "com/INDEX": -1.9513,
+    "com/INDEX": -2.1585,
     "eco/INDEX": -0.3358,
     "hel/INDEX": -0.6451,
     "yth/INDEX": -0.7407,
-    "cri/INDEX": -1.1858
+    "cri/INDEX": -1.2503
   },
   {
     "OBJECTID": 118,
@@ -1966,8 +1914,6 @@
     "dem/hispan/estimate": 0.3368,
     "dem/male/estimate": 0.525,
     "dem/white/estimate": 0.4955,
-    "com/comrec/estimate": 0.5956,
-    "com/comrec/z": 1.4506,
     "com/evics/estimate": 81.9609,
     "com/evics/z": 0.0278,
     "com/libs/estimate": 0.4581,
@@ -2012,11 +1958,11 @@
     "yth/cccall/z": 1.6671,
     "yth/ecseat/estimate": 0.4328,
     "yth/ecseat/z": 1.3419,
-    "com/INDEX": -0.7698,
+    "com/INDEX": -1.2692,
     "eco/INDEX": 2.1854,
     "hel/INDEX": 1.7662,
     "yth/INDEX": 2.0206,
-    "cri/INDEX": 3.1667
+    "cri/INDEX": 3.0601
   },
   {
     "OBJECTID": 224,
@@ -2040,8 +1986,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2086,11 +2030,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 124,
@@ -2114,8 +2058,6 @@
     "dem/hispan/estimate": 0.2846,
     "dem/male/estimate": 0.527,
     "dem/white/estimate": 0.5633,
-    "com/comrec/estimate": 0.5839,
-    "com/comrec/z": 1.4142,
     "com/evics/estimate": 73.7332,
     "com/evics/z": 0.327,
     "com/libs/estimate": 0.506,
@@ -2160,11 +2102,11 @@
     "yth/cccall/z": 1.6381,
     "yth/ecseat/estimate": 0.499,
     "yth/ecseat/z": 1.7764,
-    "com/INDEX": -0.5211,
+    "com/INDEX": -0.4778,
     "eco/INDEX": 2.6259,
     "hel/INDEX": 3.4126,
     "yth/INDEX": 2.1921,
-    "cri/INDEX": 4.7987
+    "cri/INDEX": 4.7786
   },
   {
     "OBJECTID": 119,
@@ -2188,8 +2130,6 @@
     "dem/hispan/estimate": 0.3332,
     "dem/male/estimate": 0.5254,
     "dem/white/estimate": 0.5035,
-    "com/comrec/estimate": 0.5934,
-    "com/comrec/z": 1.444,
     "com/evics/estimate": 79.3708,
     "com/evics/z": 0.1187,
     "com/libs/estimate": 0.4108,
@@ -2234,11 +2174,11 @@
     "yth/cccall/z": 1.3575,
     "yth/ecseat/estimate": 0.4013,
     "yth/ecseat/z": 1.1232,
-    "com/INDEX": -0.7404,
+    "com/INDEX": -1.2651,
     "eco/INDEX": 2.2497,
     "hel/INDEX": 1.8268,
     "yth/INDEX": 1.7465,
-    "cri/INDEX": 3.219
+    "cri/INDEX": 3.1037
   },
   {
     "OBJECTID": 225,
@@ -2262,8 +2202,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2308,11 +2246,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 226,
@@ -2336,8 +2274,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2382,11 +2318,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 227,
@@ -2410,8 +2346,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2456,11 +2390,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 228,
@@ -2484,8 +2418,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2530,11 +2462,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 207,
@@ -2558,8 +2490,6 @@
     "dem/hispan/estimate": 0.4483,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.4073,
-    "com/comrec/estimate": 0.5013,
-    "com/comrec/z": 1.1458,
     "com/evics/estimate": 86.6426,
     "com/evics/z": -0.1293,
     "com/libs/estimate": 0.3759,
@@ -2604,11 +2534,11 @@
     "yth/cccall/z": 0.8491,
     "yth/ecseat/estimate": 0.3331,
     "yth/ecseat/z": 0.6182,
-    "com/INDEX": -1.2895,
+    "com/INDEX": -1.2859,
     "eco/INDEX": 1.0628,
     "hel/INDEX": 0.4159,
     "yth/INDEX": 1.1772,
-    "cri/INDEX": 1.0875
+    "cri/INDEX": 1.0746
   },
   {
     "OBJECTID": 152,
@@ -2632,8 +2562,6 @@
     "dem/hispan/estimate": 0.4931,
     "dem/male/estimate": 0.475,
     "dem/white/estimate": 0.2297,
-    "com/comrec/estimate": 0.1075,
-    "com/comrec/z": -0.6721,
     "com/evics/estimate": 112.4886,
     "com/evics/z": -0.8676,
     "com/libs/estimate": 0.1613,
@@ -2678,11 +2606,11 @@
     "yth/cccall/z": 1.0374,
     "yth/ecseat/estimate": 0.3093,
     "yth/ecseat/z": 0.43,
-    "com/INDEX": -1.0781,
+    "com/INDEX": -0.9317,
     "eco/INDEX": -2.7799,
     "hel/INDEX": -2.0661,
     "yth/INDEX": 1.5527,
-    "cri/INDEX": -3.5462
+    "cri/INDEX": -3.4736
   },
   {
     "OBJECTID": 16,
@@ -2706,8 +2634,6 @@
     "dem/hispan/estimate": 0.5763,
     "dem/male/estimate": 0.4748,
     "dem/white/estimate": 0.2976,
-    "com/comrec/estimate": 0.0993,
-    "com/comrec/z": -0.7338,
     "com/evics/estimate": 106.6144,
     "com/evics/z": -0.7159,
     "com/libs/estimate": 0.1985,
@@ -2752,11 +2678,11 @@
     "yth/cccall/z": 0.1771,
     "yth/ecseat/estimate": 0.2721,
     "yth/ecseat/z": 0.1207,
-    "com/INDEX": 0.1208,
+    "com/INDEX": 0.3265,
     "eco/INDEX": -1.8537,
     "hel/INDEX": -1.6338,
     "yth/INDEX": 0.4891,
-    "cri/INDEX": -2.507
+    "cri/INDEX": -2.4331
   },
   {
     "OBJECTID": 149,
@@ -2780,8 +2706,6 @@
     "dem/hispan/estimate": 0.6545,
     "dem/male/estimate": 0.4831,
     "dem/white/estimate": 0.2848,
-    "com/comrec/estimate": 0.2151,
-    "com/comrec/z": -0.0222,
     "com/evics/estimate": 105.0656,
     "com/evics/z": -0.6745,
     "com/libs/estimate": 0.1434,
@@ -2826,11 +2750,11 @@
     "yth/cccall/z": -1.4005,
     "yth/ecseat/estimate": 0.1118,
     "yth/ecseat/z": -1.5582,
-    "com/INDEX": 0.377,
+    "com/INDEX": -0.2546,
     "eco/INDEX": -2.0763,
     "hel/INDEX": -3.3021,
     "yth/INDEX": -1.9781,
-    "cri/INDEX": -4.293
+    "cri/INDEX": -4.3838
   },
   {
     "OBJECTID": 148,
@@ -2854,8 +2778,6 @@
     "dem/hispan/estimate": 0.6319,
     "dem/male/estimate": 0.4891,
     "dem/white/estimate": 0.3137,
-    "com/comrec/estimate": 0.0719,
-    "com/comrec/z": -0.9585,
     "com/evics/estimate": 92.4925,
     "com/evics/z": -0.314,
     "com/libs/estimate": 0.3593,
@@ -2900,11 +2822,11 @@
     "yth/cccall/z": -0.7957,
     "yth/ecseat/estimate": 0.1493,
     "yth/ecseat/z": -1.092,
-    "com/INDEX": 0.0748,
+    "com/INDEX": 0.2758,
     "eco/INDEX": -2.008,
     "hel/INDEX": -2.0453,
     "yth/INDEX": -0.653,
-    "cri/INDEX": -3.1299
+    "cri/INDEX": -3.0677
   },
   {
     "OBJECTID": 1,
@@ -2928,8 +2850,6 @@
     "dem/hispan/estimate": 0.2031,
     "dem/male/estimate": 0.4966,
     "dem/white/estimate": 0.5857,
-    "com/comrec/estimate": 0.1594,
-    "com/comrec/z": -0.3311,
     "com/evics/estimate": 61.033,
     "com/evics/z": 0.8617,
     "com/libs/estimate": 0.3985,
@@ -2974,11 +2894,11 @@
     "yth/cccall/z": -0.4131,
     "yth/ecseat/estimate": 0.3028,
     "yth/ecseat/z": 0.3776,
-    "com/INDEX": 1.4527,
+    "com/INDEX": 1.663,
     "eco/INDEX": 1.3044,
     "hel/INDEX": 3.0748,
     "yth/INDEX": -1.0313,
-    "cri/INDEX": 3.3473
+    "cri/INDEX": 3.3548
   },
   {
     "OBJECTID": 13,
@@ -3002,8 +2922,6 @@
     "dem/hispan/estimate": 0.4609,
     "dem/male/estimate": 0.4966,
     "dem/white/estimate": 0.4889,
-    "com/comrec/estimate": 0.099,
-    "com/comrec/z": -0.7358,
     "com/evics/estimate": 81.6264,
     "com/evics/z": 0.0394,
     "com/libs/estimate": 0.2475,
@@ -3048,11 +2966,11 @@
     "yth/cccall/z": -0.3597,
     "yth/ecseat/estimate": 0.2317,
     "yth/ecseat/z": -0.2406,
-    "com/INDEX": -1.0865,
+    "com/INDEX": -1.1295,
     "eco/INDEX": 0.3177,
     "hel/INDEX": 0.0596,
     "yth/INDEX": -0.4265,
-    "cri/INDEX": 0.0283
+    "cri/INDEX": -0.0023
   },
   {
     "OBJECTID": 154,
@@ -3076,8 +2994,6 @@
     "dem/hispan/estimate": 0.5999,
     "dem/male/estimate": 0.5026,
     "dem/white/estimate": 0.3651,
-    "com/comrec/estimate": 0.1294,
-    "com/comrec/z": -0.5202,
     "com/evics/estimate": 81.97,
     "com/evics/z": 0.0275,
     "com/libs/estimate": 0.3019,
@@ -3122,11 +3038,11 @@
     "yth/cccall/z": -0.2079,
     "yth/ecseat/estimate": 0.2069,
     "yth/ecseat/z": -0.478,
-    "com/INDEX": -0.9762,
+    "com/INDEX": -0.4375,
     "eco/INDEX": -0.1228,
     "hel/INDEX": -1.3195,
     "yth/INDEX": -0.3149,
-    "cri/INDEX": -1.2959
+    "cri/INDEX": -1.2034
   },
   {
     "OBJECTID": 14,
@@ -3150,8 +3066,6 @@
     "dem/hispan/estimate": 0.3606,
     "dem/male/estimate": 0.4987,
     "dem/white/estimate": 0.4876,
-    "com/comrec/estimate": 0.0423,
-    "com/comrec/z": -1.2571,
     "com/evics/estimate": 74.7212,
     "com/evics/z": 0.2894,
     "com/libs/estimate": 0.2115,
@@ -3196,11 +3110,11 @@
     "yth/cccall/z": -0.7539,
     "yth/ecseat/estimate": 0.2233,
     "yth/ecseat/z": -0.319,
-    "com/INDEX": -0.2999,
+    "com/INDEX": 0.1549,
     "eco/INDEX": 0.5268,
     "hel/INDEX": 0.4211,
     "yth/INDEX": -1.1864,
-    "cri/INDEX": 0.4597
+    "cri/INDEX": 0.5148
   },
   {
     "OBJECTID": 231,
@@ -3224,8 +3138,6 @@
     "dem/hispan/estimate": 0.4723,
     "dem/male/estimate": 0.4895,
     "dem/white/estimate": 0.2652,
-    "com/comrec/estimate": 0.3455,
-    "com/comrec/z": 0.571,
     "com/evics/estimate": 121.9639,
     "com/evics/z": -1.0963,
     "com/libs/estimate": 0.2304,
@@ -3270,11 +3182,11 @@
     "yth/cccall/z": 1.0323,
     "yth/ecseat/estimate": 0.2589,
     "yth/ecseat/z": 0.0056,
-    "com/INDEX": -0.0596,
+    "com/INDEX": -0.5592,
     "eco/INDEX": -1.8026,
     "hel/INDEX": -2.6305,
     "yth/INDEX": 1.4643,
-    "cri/INDEX": -3.0811
+    "cri/INDEX": -3.1167
   },
   {
     "OBJECTID": 150,
@@ -3298,8 +3210,6 @@
     "dem/hispan/estimate": 0.6184,
     "dem/male/estimate": 0.4952,
     "dem/white/estimate": 0.31,
-    "com/comrec/estimate": 0.2518,
-    "com/comrec/z": 0.1594,
     "com/evics/estimate": 93.3523,
     "com/evics/z": -0.3402,
     "com/libs/estimate": 0.2014,
@@ -3344,11 +3254,11 @@
     "yth/cccall/z": -0.8457,
     "yth/ecseat/estimate": 0.1538,
     "yth/ecseat/z": -1.0402,
-    "com/INDEX": -0.6966,
+    "com/INDEX": -1.1595,
     "eco/INDEX": -1.7671,
     "hel/INDEX": -2.8052,
     "yth/INDEX": -1.213,
-    "cri/INDEX": -3.7417
+    "cri/INDEX": -3.8126
   },
   {
     "OBJECTID": 7,
@@ -3372,8 +3282,6 @@
     "dem/hispan/estimate": 0.2623,
     "dem/male/estimate": 0.5138,
     "dem/white/estimate": 0.588,
-    "com/comrec/estimate": 0.4031,
-    "com/comrec/z": 0.796,
     "com/evics/estimate": 64.3129,
     "com/evics/z": 0.7136,
     "com/libs/estimate": 0.513,
@@ -3418,11 +3326,11 @@
     "yth/cccall/z": 1.298,
     "yth/ecseat/estimate": 0.4335,
     "yth/ecseat/z": 1.3465,
-    "com/INDEX": -0.1045,
+    "com/INDEX": -0.2376,
     "eco/INDEX": 2.8264,
     "hel/INDEX": 3.2141,
     "yth/INDEX": 1.3434,
-    "cri/INDEX": 4.7276
+    "cri/INDEX": 4.6699
   },
   {
     "OBJECTID": 145,
@@ -3446,8 +3354,6 @@
     "dem/hispan/estimate": 0.4259,
     "dem/male/estimate": 0.5081,
     "dem/white/estimate": 0.5329,
-    "com/comrec/estimate": 0.1929,
-    "com/comrec/z": -0.14,
     "com/evics/estimate": 58.0553,
     "com/evics/z": 1.0031,
     "com/libs/estimate": 0.2572,
@@ -3492,11 +3398,11 @@
     "yth/cccall/z": -0.635,
     "yth/ecseat/estimate": 0.2477,
     "yth/ecseat/z": -0.0936,
-    "com/INDEX": 1.8562,
+    "com/INDEX": 2.0079,
     "eco/INDEX": 1.1434,
     "hel/INDEX": 1.5981,
     "yth/INDEX": -1.3669,
-    "cri/INDEX": 2.1334
+    "cri/INDEX": 2.1446
   },
   {
     "OBJECTID": 8,
@@ -3520,8 +3426,6 @@
     "dem/hispan/estimate": 0.3011,
     "dem/male/estimate": 0.533,
     "dem/white/estimate": 0.5951,
-    "com/comrec/estimate": 0.2958,
-    "com/comrec/z": 0.3606,
     "com/evics/estimate": 57.835,
     "com/evics/z": 1.0139,
     "com/libs/estimate": 0.5493,
@@ -3566,11 +3470,11 @@
     "yth/cccall/z": 0.0553,
     "yth/ecseat/estimate": 0.3629,
     "yth/ecseat/z": 0.8444,
-    "com/INDEX": -0.236,
+    "com/INDEX": 0.2656,
     "eco/INDEX": 2.8742,
     "hel/INDEX": 4.1102,
     "yth/INDEX": -0.1802,
-    "cri/INDEX": 5.156
+    "cri/INDEX": 5.1838
   },
   {
     "OBJECTID": 146,
@@ -3594,8 +3498,6 @@
     "dem/hispan/estimate": 0.268,
     "dem/male/estimate": 0.4874,
     "dem/white/estimate": 0.5609,
-    "com/comrec/estimate": 0.2522,
-    "com/comrec/z": 0.1612,
     "com/evics/estimate": 63.6405,
     "com/evics/z": 0.7433,
     "com/libs/estimate": 0.353,
@@ -3640,11 +3542,11 @@
     "yth/cccall/z": 0.0795,
     "yth/ecseat/estimate": 0.3285,
     "yth/ecseat/z": 0.5824,
-    "com/INDEX": 1.9906,
+    "com/INDEX": 1.8972,
     "eco/INDEX": 1.5867,
     "hel/INDEX": 3.2677,
     "yth/INDEX": -0.55,
-    "cri/INDEX": 3.874
+    "cri/INDEX": 3.8359
   },
   {
     "OBJECTID": 153,
@@ -3668,8 +3570,6 @@
     "dem/hispan/estimate": 0.2327,
     "dem/male/estimate": 0.5247,
     "dem/white/estimate": 0.6139,
-    "com/comrec/estimate": 0.4758,
-    "com/comrec/z": 1.0588,
     "com/evics/estimate": 67.3561,
     "com/evics/z": 0.5829,
     "com/libs/estimate": 0.4758,
@@ -3714,11 +3614,11 @@
     "yth/cccall/z": 1.4811,
     "yth/ecseat/estimate": 0.5113,
     "yth/ecseat/z": 1.8545,
-    "com/INDEX": -0.3841,
+    "com/INDEX": -0.1382,
     "eco/INDEX": 2.9488,
     "hel/INDEX": 4.1839,
     "yth/INDEX": 1.5694,
-    "cri/INDEX": 5.5357
+    "cri/INDEX": 5.537
   },
   {
     "OBJECTID": 12,
@@ -3742,8 +3642,6 @@
     "dem/hispan/estimate": 0.6295,
     "dem/male/estimate": 0.4867,
     "dem/white/estimate": 0.3516,
-    "com/comrec/estimate": 0.0471,
-    "com/comrec/z": -1.2024,
     "com/evics/estimate": 74.8192,
     "com/evics/z": 0.2857,
     "com/libs/estimate": 0.2356,
@@ -3788,11 +3686,11 @@
     "yth/cccall/z": -0.1393,
     "yth/ecseat/estimate": 0.2009,
     "yth/ecseat/z": -0.5377,
-    "com/INDEX": 0.4783,
+    "com/INDEX": 1.1179,
     "eco/INDEX": -0.8055,
     "hel/INDEX": -1.6488,
     "yth/INDEX": -0.1048,
-    "cri/INDEX": -1.7736
+    "cri/INDEX": -1.6328
   },
   {
     "OBJECTID": 144,
@@ -3816,8 +3714,6 @@
     "dem/hispan/estimate": 0.5087,
     "dem/male/estimate": 0.4846,
     "dem/white/estimate": 0.2788,
-    "com/comrec/estimate": 0.249,
-    "com/comrec/z": 0.1463,
     "com/evics/estimate": 109.7038,
     "com/evics/z": -0.7967,
     "com/libs/estimate": 0.249,
@@ -3862,11 +3758,11 @@
     "yth/cccall/z": 0.5156,
     "yth/ecseat/estimate": 0.2242,
     "yth/ecseat/z": -0.3111,
-    "com/INDEX": -0.1158,
+    "com/INDEX": -0.3996,
     "eco/INDEX": -1.6035,
     "hel/INDEX": -2.3398,
     "yth/INDEX": 0.6724,
-    "cri/INDEX": -2.857
+    "cri/INDEX": -2.8687
   },
   {
     "OBJECTID": 4,
@@ -3890,8 +3786,6 @@
     "dem/hispan/estimate": 0.3346,
     "dem/male/estimate": 0.5254,
     "dem/white/estimate": 0.5014,
-    "com/comrec/estimate": 0.6695,
-    "com/comrec/z": 1.673,
     "com/evics/estimate": 40.8841,
     "com/evics/z": 1.9948,
     "com/libs/estimate": 0.4463,
@@ -3936,11 +3830,11 @@
     "yth/cccall/z": -0.6759,
     "yth/ecseat/estimate": 0.4402,
     "yth/ecseat/z": 1.3922,
-    "com/INDEX": 0.0385,
+    "com/INDEX": -0.2067,
     "eco/INDEX": 3.5545,
     "hel/INDEX": 1.8852,
     "yth/INDEX": 0.0539,
-    "cri/INDEX": 4.0856
+    "cri/INDEX": 3.9977
   },
   {
     "OBJECTID": 11,
@@ -3964,8 +3858,6 @@
     "dem/hispan/estimate": 0.6478,
     "dem/male/estimate": 0.5086,
     "dem/white/estimate": 0.4187,
-    "com/comrec/estimate": 0.1571,
-    "com/comrec/z": -0.3447,
     "com/evics/estimate": 33.5052,
     "com/evics/z": 2.5577,
     "com/libs/estimate": 0.2619,
@@ -4010,11 +3902,11 @@
     "yth/cccall/z": -2.4531,
     "yth/ecseat/estimate": 0.215,
     "yth/ecseat/z": -0.3991,
-    "com/INDEX": 0.379,
+    "com/INDEX": 1.2407,
     "eco/INDEX": 1.5823,
     "hel/INDEX": 0.0073,
     "yth/INDEX": -2.0739,
-    "cri/INDEX": 0.9048
+    "cri/INDEX": 1.0255
   },
   {
     "OBJECTID": 2,
@@ -4038,8 +3930,6 @@
     "dem/hispan/estimate": 0.579,
     "dem/male/estimate": 0.5057,
     "dem/white/estimate": 0.3172,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 160.5225,
     "com/evics/z": -1.8732,
     "com/libs/estimate": 0.9171,
@@ -4084,11 +3974,11 @@
     "yth/cccall/z": -1.7315,
     "yth/ecseat/estimate": 0.0633,
     "yth/ecseat/z": -2.3,
-    "com/INDEX": 1.5183,
+    "com/INDEX": 1.5303,
     "eco/INDEX": -2.3898,
     "hel/INDEX": -2.0264,
     "yth/INDEX": -1.7592,
-    "cri/INDEX": -3.3448
+    "cri/INDEX": -3.3094
   },
   {
     "OBJECTID": 69,
@@ -4112,8 +4002,6 @@
     "dem/hispan/estimate": 0.5109,
     "dem/male/estimate": 0.5255,
     "dem/white/estimate": 0.4972,
-    "com/comrec/estimate": 0.2987,
-    "com/comrec/z": 0.3735,
     "com/evics/estimate": 66.951,
     "com/evics/z": 0.5999,
     "com/libs/estimate": 0.4481,
@@ -4158,11 +4046,11 @@
     "yth/cccall/z": 0.0774,
     "yth/ecseat/estimate": 0.3296,
     "yth/ecseat/z": 0.5913,
-    "com/INDEX": -0.4741,
+    "com/INDEX": 0.035,
     "eco/INDEX": 2.3571,
     "hel/INDEX": 2.1512,
     "yth/INDEX": 0.35,
-    "cri/INDEX": 3.3523
+    "cri/INDEX": 3.4057
   },
   {
     "OBJECTID": 15,
@@ -4186,8 +4074,6 @@
     "dem/hispan/estimate": 0.4236,
     "dem/male/estimate": 0.4696,
     "dem/white/estimate": 0.1895,
-    "com/comrec/estimate": 0.3608,
-    "com/comrec/z": 0.6323,
     "com/evics/estimate": 127.3127,
     "com/evics/z": -1.2177,
     "com/libs/estimate": 0.1443,
@@ -4232,11 +4118,11 @@
     "yth/cccall/z": 0.5617,
     "yth/ecseat/estimate": 0.1924,
     "yth/ecseat/z": -0.6236,
-    "com/INDEX": -1.0266,
+    "com/INDEX": -1.9306,
     "eco/INDEX": -2.9872,
     "hel/INDEX": -3.5154,
     "yth/INDEX": 0.345,
-    "cri/INDEX": -4.9798
+    "cri/INDEX": -5.0987
   },
   {
     "OBJECTID": 210,
@@ -4260,8 +4146,6 @@
     "dem/hispan/estimate": 0.2604,
     "dem/male/estimate": 0.5196,
     "dem/white/estimate": 0.6377,
-    "com/comrec/estimate": 0.1961,
-    "com/comrec/z": -0.1227,
     "com/evics/estimate": 42.9173,
     "com/evics/z": 1.8576,
     "com/libs/estimate": 0.4314,
@@ -4306,11 +4190,11 @@
     "yth/cccall/z": 0.1045,
     "yth/ecseat/estimate": 0.3588,
     "yth/ecseat/z": 0.8142,
-    "com/INDEX": 0.9162,
+    "com/INDEX": 1.4754,
     "eco/INDEX": 2.9945,
     "hel/INDEX": 4.3859,
     "yth/INDEX": -0.6417,
-    "cri/INDEX": 5.5682
+    "cri/INDEX": 5.6122
   },
   {
     "OBJECTID": 5,
@@ -4334,8 +4218,6 @@
     "dem/hispan/estimate": 0.5377,
     "dem/male/estimate": 0.4942,
     "dem/white/estimate": 0.4076,
-    "com/comrec/estimate": 0.1503,
-    "com/comrec/z": -0.3861,
     "com/evics/estimate": 89.6241,
     "com/evics/z": -0.2249,
     "com/libs/estimate": 0.2506,
@@ -4380,11 +4262,11 @@
     "yth/cccall/z": -0.6924,
     "yth/ecseat/estimate": 0.1804,
     "yth/ecseat/z": -0.7478,
-    "com/INDEX": -1.7722,
+    "com/INDEX": -2.1038,
     "eco/INDEX": -0.5708,
     "hel/INDEX": -1.1035,
     "yth/INDEX": -0.8623,
-    "cri/INDEX": -1.6951
+    "cri/INDEX": -1.7756
   },
   {
     "OBJECTID": 10,
@@ -4408,8 +4290,6 @@
     "dem/hispan/estimate": 0.474,
     "dem/male/estimate": 0.5092,
     "dem/white/estimate": 0.4039,
-    "com/comrec/estimate": 0.4564,
-    "com/comrec/z": 0.9908,
     "com/evics/estimate": 86.872,
     "com/evics/z": -0.1367,
     "com/libs/estimate": 0.4149,
@@ -4454,11 +4334,11 @@
     "yth/cccall/z": 0.6512,
     "yth/ecseat/estimate": 0.3044,
     "yth/ecseat/z": 0.3906,
-    "com/INDEX": -1.3325,
+    "com/INDEX": -1.2383,
     "eco/INDEX": 0.903,
     "hel/INDEX": 0.1593,
     "yth/INDEX": 0.9528,
-    "cri/INDEX": 0.7311
+    "cri/INDEX": 0.7344
   },
   {
     "OBJECTID": 9,
@@ -4482,8 +4362,6 @@
     "dem/hispan/estimate": 0.4701,
     "dem/male/estimate": 0.5249,
     "dem/white/estimate": 0.5106,
-    "com/comrec/estimate": 0.2431,
-    "com/comrec/z": 0.1177,
     "com/evics/estimate": 46.6186,
     "com/evics/z": 1.6236,
     "com/libs/estimate": 0.2431,
@@ -4528,11 +4406,11 @@
     "yth/cccall/z": -0.9019,
     "yth/ecseat/estimate": 0.2146,
     "yth/ecseat/z": -0.403,
-    "com/INDEX": 1.459,
+    "com/INDEX": 1.672,
     "eco/INDEX": 1.5304,
     "hel/INDEX": 1.7098,
     "yth/INDEX": -1.5095,
-    "cri/INDEX": 2.4159
+    "cri/INDEX": 2.4271
   },
   {
     "OBJECTID": 147,
@@ -4556,8 +4434,6 @@
     "dem/hispan/estimate": 0.175,
     "dem/male/estimate": 0.495,
     "dem/white/estimate": 0.6003,
-    "com/comrec/estimate": 0.1156,
-    "com/comrec/z": -0.6142,
     "com/evics/estimate": 60.9221,
     "com/evics/z": 0.8668,
     "com/libs/estimate": 0.3855,
@@ -4602,11 +4478,11 @@
     "yth/cccall/z": -0.2026,
     "yth/ecseat/estimate": 0.3351,
     "yth/ecseat/z": 0.6339,
-    "com/INDEX": 1.2092,
+    "com/INDEX": 1.5936,
     "eco/INDEX": 1.6189,
     "hel/INDEX": 3.1046,
     "yth/INDEX": -0.7589,
-    "cri/INDEX": 3.6098
+    "cri/INDEX": 3.6463
   },
   {
     "OBJECTID": 117,
@@ -4630,8 +4506,6 @@
     "dem/hispan/estimate": 0.3657,
     "dem/male/estimate": 0.4672,
     "dem/white/estimate": 0.1564,
-    "com/comrec/estimate": 0.2413,
-    "com/comrec/z": 0.1089,
     "com/evics/estimate": 145.2604,
     "com/evics/z": -1.5907,
     "com/libs/estimate": 0.2413,
@@ -4676,11 +4550,11 @@
     "yth/cccall/z": 1.3115,
     "yth/ecseat/estimate": 0.2591,
     "yth/ecseat/z": 0.0079,
-    "com/INDEX": -0.4691,
+    "com/INDEX": -1.0784,
     "eco/INDEX": -3.1225,
     "hel/INDEX": -3.2308,
     "yth/INDEX": 1.685,
-    "cri/INDEX": -4.5495
+    "cri/INDEX": -4.5916
   },
   {
     "OBJECTID": 134,
@@ -4704,8 +4578,6 @@
     "dem/hispan/estimate": 0.7021,
     "dem/male/estimate": 0.4829,
     "dem/white/estimate": 0.3769,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 65.3897,
     "com/evics/z": 0.6667,
     "com/libs/estimate": 0.1965,
@@ -4750,11 +4622,11 @@
     "yth/cccall/z": -1.2756,
     "yth/ecseat/estimate": 0.1231,
     "yth/ecseat/z": -1.4099,
-    "com/INDEX": 0.6267,
+    "com/INDEX": 1.3514,
     "eco/INDEX": -0.573,
     "hel/INDEX": -1.524,
     "yth/INDEX": -1.9674,
-    "cri/INDEX": -1.794
+    "cri/INDEX": -1.6632
   },
   {
     "OBJECTID": 122,
@@ -4778,8 +4650,6 @@
     "dem/hispan/estimate": 0.3412,
     "dem/male/estimate": 0.5276,
     "dem/white/estimate": 0.5172,
-    "com/comrec/estimate": 0.5886,
-    "com/comrec/z": 1.429,
     "com/evics/estimate": 75.2052,
     "com/evics/z": 0.2711,
     "com/libs/estimate": 0.4709,
@@ -4824,11 +4694,11 @@
     "yth/cccall/z": 1.1525,
     "yth/ecseat/estimate": 0.422,
     "yth/ecseat/z": 1.2674,
-    "com/INDEX": -0.5063,
+    "com/INDEX": -0.4164,
     "eco/INDEX": 2.362,
     "hel/INDEX": 2.6043,
     "yth/INDEX": 1.7457,
-    "cri/INDEX": 3.924
+    "cri/INDEX": 3.9155
   },
   {
     "OBJECTID": 17,
@@ -4852,8 +4722,6 @@
     "dem/hispan/estimate": 0.6065,
     "dem/male/estimate": 0.4833,
     "dem/white/estimate": 0.3282,
-    "com/comrec/estimate": 0.0925,
-    "com/comrec/z": -0.7862,
     "com/evics/estimate": 88.3588,
     "com/evics/z": -0.1847,
     "com/libs/estimate": 0.1849,
@@ -4898,11 +4766,11 @@
     "yth/cccall/z": 0.137,
     "yth/ecseat/estimate": 0.2546,
     "yth/ecseat/z": -0.0321,
-    "com/INDEX": 0.4858,
+    "com/INDEX": 0.8625,
     "eco/INDEX": -1.0702,
     "hel/INDEX": -1.742,
     "yth/INDEX": 0.386,
-    "cri/INDEX": -1.9578
+    "cri/INDEX": -1.8551
   },
   {
     "OBJECTID": 176,
@@ -4926,8 +4794,6 @@
     "dem/hispan/estimate": 0.6658,
     "dem/male/estimate": 0.4921,
     "dem/white/estimate": 0.3009,
-    "com/comrec/estimate": 0.1297,
-    "com/comrec/z": -0.5182,
     "com/evics/estimate": 88.6759,
     "com/evics/z": -0.1949,
     "com/libs/estimate": 0.1945,
@@ -4972,11 +4838,11 @@
     "yth/cccall/z": -1.3665,
     "yth/ecseat/estimate": 0.1013,
     "yth/ecseat/z": -1.7027,
-    "com/INDEX": 0.5768,
+    "com/INDEX": 0.34,
     "eco/INDEX": -1.9526,
     "hel/INDEX": -3.0671,
     "yth/INDEX": -2.0441,
-    "cri/INDEX": -4.0022
+    "cri/INDEX": -4.0228
   },
   {
     "OBJECTID": 66,
@@ -5000,8 +4866,6 @@
     "dem/hispan/estimate": 0.7309,
     "dem/male/estimate": 0.4952,
     "dem/white/estimate": 0.4351,
-    "com/comrec/estimate": 0.4565,
-    "com/comrec/z": 0.9911,
     "com/evics/estimate": 50.8539,
     "com/evics/z": 1.3777,
     "com/libs/estimate": 0.6848,
@@ -5046,11 +4910,11 @@
     "yth/cccall/z": -1.4354,
     "yth/ecseat/estimate": 0.1594,
     "yth/ecseat/z": -0.976,
-    "com/INDEX": 1.727,
+    "com/INDEX": 1.7734,
     "eco/INDEX": 0.2282,
     "hel/INDEX": -0.4792,
     "yth/INDEX": -0.9472,
-    "cri/INDEX": -0.0569
+    "cri/INDEX": -0.0362
   },
   {
     "OBJECTID": 177,
@@ -5074,8 +4938,6 @@
     "dem/hispan/estimate": 0.6475,
     "dem/male/estimate": 0.4928,
     "dem/white/estimate": 0.3045,
-    "com/comrec/estimate": 0.0742,
-    "com/comrec/z": -0.9378,
     "com/evics/estimate": 99.0236,
     "com/evics/z": -0.507,
     "com/libs/estimate": 0.2968,
@@ -5120,11 +4982,11 @@
     "yth/cccall/z": -1.4752,
     "yth/ecseat/estimate": 0.1093,
     "yth/ecseat/z": -1.5921,
-    "com/INDEX": 0.4921,
+    "com/INDEX": 0.3869,
     "eco/INDEX": -1.993,
     "hel/INDEX": -2.8321,
     "yth/INDEX": -1.8359,
-    "cri/INDEX": -3.8358
+    "cri/INDEX": -3.8327
   },
   {
     "OBJECTID": 65,
@@ -5148,8 +5010,6 @@
     "dem/hispan/estimate": 0.7322,
     "dem/male/estimate": 0.4871,
     "dem/white/estimate": 0.4051,
-    "com/comrec/estimate": 0.1653,
-    "com/comrec/z": -0.2962,
     "com/evics/estimate": 54.203,
     "com/evics/z": 1.1973,
     "com/libs/estimate": 0.4132,
@@ -5194,11 +5054,11 @@
     "yth/cccall/z": -1.5716,
     "yth/ecseat/estimate": 0.1412,
     "yth/ecseat/z": -1.1866,
-    "com/INDEX": 1.5332,
+    "com/INDEX": 1.7921,
     "eco/INDEX": 0.2182,
     "hel/INDEX": -1.2784,
     "yth/INDEX": -1.6367,
-    "cri/INDEX": -0.8106
+    "cri/INDEX": -0.7564
   },
   {
     "OBJECTID": 201,
@@ -5222,8 +5082,6 @@
     "dem/hispan/estimate": 0.466,
     "dem/male/estimate": 0.5245,
     "dem/white/estimate": 0.5151,
-    "com/comrec/estimate": 0.2385,
-    "com/comrec/z": 0.0954,
     "com/evics/estimate": 47.8683,
     "com/evics/z": 1.5488,
     "com/libs/estimate": 0.318,
@@ -5268,11 +5126,11 @@
     "yth/cccall/z": -0.699,
     "yth/ecseat/estimate": 0.2326,
     "yth/ecseat/z": -0.2318,
-    "com/INDEX": 1.3988,
+    "com/INDEX": 1.6989,
     "eco/INDEX": 1.5336,
     "hel/INDEX": 1.8502,
     "yth/INDEX": -1.325,
-    "cri/INDEX": 2.5443
+    "cri/INDEX": 2.5717
   },
   {
     "OBJECTID": 33,
@@ -5296,8 +5154,6 @@
     "dem/hispan/estimate": 0.4948,
     "dem/male/estimate": 0.5008,
     "dem/white/estimate": 0.4512,
-    "com/comrec/estimate": 0.3826,
-    "com/comrec/z": 0.7181,
     "com/evics/estimate": 74.321,
     "com/evics/z": 0.3046,
     "com/libs/estimate": 0.1913,
@@ -5342,11 +5198,11 @@
     "yth/cccall/z": -0.0875,
     "yth/ecseat/estimate": 0.2381,
     "yth/ecseat/z": -0.181,
-    "com/INDEX": -0.4595,
+    "com/INDEX": -1.0988,
     "eco/INDEX": 0.3719,
     "hel/INDEX": -0.5322,
     "yth/INDEX": -0.1065,
-    "cri/INDEX": -0.2149
+    "cri/INDEX": -0.3367
   },
   {
     "OBJECTID": 30,
@@ -5370,8 +5226,6 @@
     "dem/hispan/estimate": 0.6788,
     "dem/male/estimate": 0.489,
     "dem/white/estimate": 0.2989,
-    "com/comrec/estimate": 0.0847,
-    "com/comrec/z": -0.8483,
     "com/evics/estimate": 72.8911,
     "com/evics/z": 0.3595,
     "com/libs/estimate": 0.1695,
@@ -5416,11 +5270,11 @@
     "yth/cccall/z": -1.7023,
     "yth/ecseat/estimate": 0.1017,
     "yth/ecseat/z": -1.6971,
-    "com/INDEX": 0.8526,
+    "com/INDEX": 0.7063,
     "eco/INDEX": -1.8928,
     "hel/INDEX": -3.3383,
     "yth/INDEX": -2.3387,
-    "cri/INDEX": -4.1635
+    "cri/INDEX": -4.1662
   },
   {
     "OBJECTID": 178,
@@ -5444,8 +5298,6 @@
     "dem/hispan/estimate": 0.6431,
     "dem/male/estimate": 0.4918,
     "dem/white/estimate": 0.3145,
-    "com/comrec/estimate": 0.0589,
-    "com/comrec/z": -1.0796,
     "com/evics/estimate": 90.224,
     "com/evics/z": -0.2438,
     "com/libs/estimate": 0.2946,
@@ -5490,11 +5342,11 @@
     "yth/cccall/z": -1.0504,
     "yth/ecseat/estimate": 0.128,
     "yth/ecseat/z": -1.3482,
-    "com/INDEX": -0.7479,
+    "com/INDEX": -0.5918,
     "eco/INDEX": -1.8867,
     "hel/INDEX": -2.5211,
     "yth/INDEX": -1.3633,
-    "cri/INDEX": -3.6525
+    "cri/INDEX": -3.6154
   },
   {
     "OBJECTID": 74,
@@ -5518,8 +5370,6 @@
     "dem/hispan/estimate": 0.4709,
     "dem/male/estimate": 0.5111,
     "dem/white/estimate": 0.4105,
-    "com/comrec/estimate": 0.4529,
-    "com/comrec/z": 0.9782,
     "com/evics/estimate": 85.1851,
     "com/evics/z": -0.0813,
     "com/libs/estimate": 0.4117,
@@ -5564,11 +5414,11 @@
     "yth/cccall/z": 0.6466,
     "yth/ecseat/estimate": 0.3049,
     "yth/ecseat/z": 0.3944,
-    "com/INDEX": -1.2618,
+    "com/INDEX": -1.134,
     "eco/INDEX": 1.0632,
     "hel/INDEX": 0.4158,
     "yth/INDEX": 0.9896,
-    "cri/INDEX": 1.061
+    "cri/INDEX": 1.0684
   },
   {
     "OBJECTID": 109,
@@ -5592,8 +5442,6 @@
     "dem/hispan/estimate": 0.4794,
     "dem/male/estimate": 0.484,
     "dem/white/estimate": 0.2597,
-    "com/comrec/estimate": 0.2823,
-    "com/comrec/z": 0.3006,
     "com/evics/estimate": 118.0216,
     "com/evics/z": -1.0034,
     "com/libs/estimate": 0.2258,
@@ -5638,11 +5486,11 @@
     "yth/cccall/z": 0.6518,
     "yth/ecseat/estimate": 0.2162,
     "yth/ecseat/z": -0.3876,
-    "com/INDEX": -0.1831,
+    "com/INDEX": -0.5676,
     "eco/INDEX": -1.8989,
     "hel/INDEX": -2.6926,
     "yth/INDEX": 1.0428,
-    "cri/INDEX": -3.2911
+    "cri/INDEX": -3.3117
   },
   {
     "OBJECTID": 110,
@@ -5666,8 +5514,6 @@
     "dem/hispan/estimate": 0.5269,
     "dem/male/estimate": 0.4987,
     "dem/white/estimate": 0.3182,
-    "com/comrec/estimate": 0.2321,
-    "com/comrec/z": 0.0636,
     "com/evics/estimate": 106.2208,
     "com/evics/z": -0.7054,
     "com/libs/estimate": 0.1857,
@@ -5712,11 +5558,11 @@
     "yth/cccall/z": 0.4447,
     "yth/ecseat/estimate": 0.2321,
     "yth/ecseat/z": -0.2367,
-    "com/INDEX": -0.841,
+    "com/INDEX": -0.842,
     "eco/INDEX": -1.0103,
     "hel/INDEX": -1.8587,
     "yth/INDEX": 0.7889,
-    "cri/INDEX": -2.1554
+    "cri/INDEX": -2.1326
   },
   {
     "OBJECTID": 67,
@@ -5740,8 +5586,6 @@
     "dem/hispan/estimate": 0.4507,
     "dem/male/estimate": 0.523,
     "dem/white/estimate": 0.5322,
-    "com/comrec/estimate": 0.1519,
-    "com/comrec/z": -0.3765,
     "com/evics/estimate": 49.1455,
     "com/evics/z": 1.4743,
     "com/libs/estimate": 0.4557,
@@ -5786,11 +5630,11 @@
     "yth/cccall/z": -0.3891,
     "yth/ecseat/estimate": 0.2713,
     "yth/ecseat/z": 0.1135,
-    "com/INDEX": 1.4285,
+    "com/INDEX": 1.8777,
     "eco/INDEX": 1.6152,
     "hel/INDEX": 1.7844,
     "yth/INDEX": -1.0439,
-    "cri/INDEX": 2.6082
+    "cri/INDEX": 2.6665
   },
   {
     "OBJECTID": 31,
@@ -5814,8 +5658,6 @@
     "dem/hispan/estimate": 0.6112,
     "dem/male/estimate": 0.4813,
     "dem/white/estimate": 0.2643,
-    "com/comrec/estimate": 0.3861,
-    "com/comrec/z": 0.7315,
     "com/evics/estimate": 113.345,
     "com/evics/z": -0.889,
     "com/libs/estimate": 0.1544,
@@ -5860,11 +5702,11 @@
     "yth/cccall/z": -1.1547,
     "yth/ecseat/estimate": 0.1296,
     "yth/ecseat/z": -1.3277,
-    "com/INDEX": 0.4031,
+    "com/INDEX": -0.6421,
     "eco/INDEX": -2.3603,
     "hel/INDEX": -3.5603,
     "yth/INDEX": -1.3865,
-    "cri/INDEX": -4.595
+    "cri/INDEX": -4.7481
   },
   {
     "OBJECTID": 250,
@@ -5888,8 +5730,6 @@
     "dem/hispan/estimate": 0.4366,
     "dem/male/estimate": 0.4727,
     "dem/white/estimate": 0.206,
-    "com/comrec/estimate": 0.4239,
-    "com/comrec/z": 0.8734,
     "com/evics/estimate": 135.1008,
     "com/evics/z": -1.3856,
     "com/libs/estimate": 0.2119,
@@ -5934,11 +5774,11 @@
     "yth/cccall/z": 0.8657,
     "yth/ecseat/estimate": 0.2345,
     "yth/ecseat/z": -0.2143,
-    "com/INDEX": -0.5139,
+    "com/INDEX": -1.4628,
     "eco/INDEX": -2.8711,
     "hel/INDEX": -3.6546,
     "yth/INDEX": 1.3055,
-    "cri/INDEX": -4.7497
+    "cri/INDEX": -4.8574
   },
   {
     "OBJECTID": 191,
@@ -5962,8 +5802,6 @@
     "dem/hispan/estimate": 0.4525,
     "dem/male/estimate": 0.5079,
     "dem/white/estimate": 0.5174,
-    "com/comrec/estimate": 0.2971,
-    "com/comrec/z": 0.3667,
     "com/evics/estimate": 58.9164,
     "com/evics/z": 0.9615,
     "com/libs/estimate": 0.3714,
@@ -6008,11 +5846,11 @@
     "yth/cccall/z": -0.6889,
     "yth/ecseat/estimate": 0.2735,
     "yth/ecseat/z": 0.1325,
-    "com/INDEX": 1.9453,
+    "com/INDEX": 2.0333,
     "eco/INDEX": 0.9235,
     "hel/INDEX": 1.5579,
     "yth/INDEX": -1.2585,
-    "cri/INDEX": 1.9719
+    "cri/INDEX": 1.9764
   },
   {
     "OBJECTID": 164,
@@ -6036,8 +5874,6 @@
     "dem/hispan/estimate": 0.4723,
     "dem/male/estimate": 0.5236,
     "dem/white/estimate": 0.5192,
-    "com/comrec/estimate": 0.2487,
-    "com/comrec/z": 0.1448,
     "com/evics/estimate": 55.4757,
     "com/evics/z": 1.1317,
     "com/libs/estimate": 0.4146,
@@ -6082,11 +5918,11 @@
     "yth/cccall/z": -0.6669,
     "yth/ecseat/estimate": 0.255,
     "yth/ecseat/z": -0.0286,
-    "com/INDEX": 1.8887,
+    "com/INDEX": 2.007,
     "eco/INDEX": 1.4966,
     "hel/INDEX": 1.4336,
     "yth/INDEX": -1.2845,
-    "cri/INDEX": 2.2939
+    "cri/INDEX": 2.299
   },
   {
     "OBJECTID": 160,
@@ -6110,8 +5946,6 @@
     "dem/hispan/estimate": 0.5614,
     "dem/male/estimate": 0.4782,
     "dem/white/estimate": 0.2804,
-    "com/comrec/estimate": 0.089,
-    "com/comrec/z": -0.8138,
     "com/evics/estimate": 104.2086,
     "com/evics/z": -0.6513,
     "com/libs/estimate": 0.2225,
@@ -6156,11 +5990,11 @@
     "yth/cccall/z": 0.7204,
     "yth/ecseat/estimate": 0.2984,
     "yth/ecseat/z": 0.3411,
-    "com/INDEX": -0.1418,
+    "com/INDEX": 0.2575,
     "eco/INDEX": -2.0006,
     "hel/INDEX": -1.8155,
     "yth/INDEX": 1.238,
-    "cri/INDEX": -2.6712
+    "cri/INDEX": -2.5533
   },
   {
     "OBJECTID": 63,
@@ -6184,8 +6018,6 @@
     "dem/hispan/estimate": 0.444,
     "dem/male/estimate": 0.529,
     "dem/white/estimate": 0.5208,
-    "com/comrec/estimate": 0.2968,
-    "com/comrec/z": 0.365,
     "com/evics/estimate": 72.5761,
     "com/evics/z": 0.3718,
     "com/libs/estimate": 0.4451,
@@ -6230,11 +6062,11 @@
     "yth/cccall/z": 0.4773,
     "yth/ecseat/estimate": 0.3805,
     "yth/ecseat/z": 0.9743,
-    "com/INDEX": -0.6043,
+    "com/INDEX": -0.0525,
     "eco/INDEX": 2.5795,
     "hel/INDEX": 2.7368,
     "yth/INDEX": 0.9435,
-    "cri/INDEX": 4.0346
+    "cri/INDEX": 4.0951
   },
   {
     "OBJECTID": 90,
@@ -6258,8 +6090,6 @@
     "dem/hispan/estimate": 0.4617,
     "dem/male/estimate": 0.496,
     "dem/white/estimate": 0.4679,
-    "com/comrec/estimate": 0.0638,
-    "com/comrec/z": -1.0322,
     "com/evics/estimate": 84.6679,
     "com/evics/z": -0.0641,
     "com/libs/estimate": 0.2554,
@@ -6304,11 +6134,11 @@
     "yth/cccall/z": -0.6926,
     "yth/ecseat/estimate": 0.2139,
     "yth/ecseat/z": -0.4091,
-    "com/INDEX": -0.9466,
+    "com/INDEX": -0.8267,
     "eco/INDEX": -0.064,
     "hel/INDEX": 0.0317,
     "yth/INDEX": -0.4543,
-    "cri/INDEX": -0.2594
+    "cri/INDEX": -0.2556
   },
   {
     "OBJECTID": 195,
@@ -6332,8 +6162,6 @@
     "dem/hispan/estimate": 0.5164,
     "dem/male/estimate": 0.5194,
     "dem/white/estimate": 0.4152,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 218.672,
     "com/evics/z": -2.7475,
     "com/libs/estimate": 0.3592,
@@ -6378,11 +6206,11 @@
     "yth/cccall/z": -1.8424,
     "yth/ecseat/estimate": 0.0557,
     "yth/ecseat/z": -2.4402,
-    "com/INDEX": 0.4275,
+    "com/INDEX": 0.1821,
     "eco/INDEX": -2.4518,
     "hel/INDEX": -1.6265,
     "yth/INDEX": -2.8128,
-    "cri/INDEX": -3.4519
+    "cri/INDEX": -3.4938
   },
   {
     "OBJECTID": 39,
@@ -6406,8 +6234,6 @@
     "dem/hispan/estimate": 0.3717,
     "dem/male/estimate": 0.521,
     "dem/white/estimate": 0.4477,
-    "com/comrec/estimate": 0.6238,
-    "com/comrec/z": 1.5372,
     "com/evics/estimate": 87.6116,
     "com/evics/z": -0.1607,
     "com/libs/estimate": 0.4799,
@@ -6452,11 +6278,11 @@
     "yth/cccall/z": 1.6983,
     "yth/ecseat/estimate": 0.4299,
     "yth/ecseat/z": 1.3219,
-    "com/INDEX": -0.7257,
+    "com/INDEX": -1.2268,
     "eco/INDEX": 1.5597,
     "hel/INDEX": 1.0057,
     "yth/INDEX": 1.9681,
-    "cri/INDEX": 2.128
+    "cri/INDEX": 2.0324
   },
   {
     "OBJECTID": 34,
@@ -6480,8 +6306,6 @@
     "dem/hispan/estimate": 0.5103,
     "dem/male/estimate": 0.4973,
     "dem/white/estimate": 0.4478,
-    "com/comrec/estimate": 0.1478,
-    "com/comrec/z": -0.4018,
     "com/evics/estimate": 81.1961,
     "com/evics/z": 0.0544,
     "com/libs/estimate": 0.2463,
@@ -6526,11 +6350,11 @@
     "yth/cccall/z": -0.4054,
     "yth/ecseat/estimate": 0.1999,
     "yth/ecseat/z": -0.5473,
-    "com/INDEX": -1.3827,
+    "com/INDEX": -1.6584,
     "eco/INDEX": 0.027,
     "hel/INDEX": -0.5271,
     "yth/INDEX": -0.4619,
-    "cri/INDEX": -0.6839
+    "cri/INDEX": -0.7536
   },
   {
     "OBJECTID": 75,
@@ -6554,8 +6378,6 @@
     "dem/hispan/estimate": 0.6404,
     "dem/male/estimate": 0.4874,
     "dem/white/estimate": 0.3608,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 82.1589,
     "com/evics/z": 0.021,
     "com/libs/estimate": 0.2376,
@@ -6600,11 +6422,11 @@
     "yth/cccall/z": -0.3212,
     "yth/ecseat/estimate": 0.1915,
     "yth/ecseat/z": -0.6327,
-    "com/INDEX": -0.0063,
+    "com/INDEX": 1.053,
     "eco/INDEX": -0.6916,
     "hel/INDEX": -1.5929,
     "yth/INDEX": -0.3602,
-    "cri/INDEX": -1.7708
+    "cri/INDEX": -1.5652
   },
   {
     "OBJECTID": 62,
@@ -6628,8 +6450,6 @@
     "dem/hispan/estimate": 0.2685,
     "dem/male/estimate": 0.527,
     "dem/white/estimate": 0.5804,
-    "com/comrec/estimate": 0.4646,
-    "com/comrec/z": 1.0198,
     "com/evics/estimate": 71.2979,
     "com/evics/z": 0.422,
     "com/libs/estimate": 0.4259,
@@ -6674,11 +6494,11 @@
     "yth/cccall/z": 1.1904,
     "yth/ecseat/estimate": 0.4262,
     "yth/ecseat/z": 1.2965,
-    "com/INDEX": -0.3488,
+    "com/INDEX": -0.4659,
     "eco/INDEX": 2.7307,
     "hel/INDEX": 3.3045,
     "yth/INDEX": 1.2605,
-    "cri/INDEX": 4.6687
+    "cri/INDEX": 4.6097
   },
   {
     "OBJECTID": 161,
@@ -6702,8 +6522,6 @@
     "dem/hispan/estimate": 0.5757,
     "dem/male/estimate": 0.4855,
     "dem/white/estimate": 0.3023,
-    "com/comrec/estimate": 0.1269,
-    "com/comrec/z": -0.5369,
     "com/evics/estimate": 100.9996,
     "com/evics/z": -0.5629,
     "com/libs/estimate": 0.2115,
@@ -6748,11 +6566,11 @@
     "yth/cccall/z": 0.6429,
     "yth/ecseat/estimate": 0.2542,
     "yth/ecseat/z": -0.036,
-    "com/INDEX": -0.2582,
+    "com/INDEX": -0.0222,
     "eco/INDEX": -1.4728,
     "hel/INDEX": -1.9586,
     "yth/INDEX": 0.9811,
-    "cri/INDEX": -2.4461
+    "cri/INDEX": -2.3657
   },
   {
     "OBJECTID": 111,
@@ -6776,8 +6594,6 @@
     "dem/hispan/estimate": 0.2351,
     "dem/male/estimate": 0.4951,
     "dem/white/estimate": 0.5537,
-    "com/comrec/estimate": 0.157,
-    "com/comrec/z": -0.3456,
     "com/evics/estimate": 63.5241,
     "com/evics/z": 0.7485,
     "com/libs/estimate": 0.3532,
@@ -6822,11 +6638,11 @@
     "yth/cccall/z": -0.4166,
     "yth/ecseat/estimate": 0.2837,
     "yth/ecseat/z": 0.2192,
-    "com/INDEX": 1.4699,
+    "com/INDEX": 1.6697,
     "eco/INDEX": 1.044,
     "hel/INDEX": 2.8485,
     "yth/INDEX": -1.0975,
-    "cri/INDEX": 2.975
+    "cri/INDEX": 2.9839
   },
   {
     "OBJECTID": 165,
@@ -6850,8 +6666,6 @@
     "dem/hispan/estimate": 0.4608,
     "dem/male/estimate": 0.5155,
     "dem/white/estimate": 0.5259,
-    "com/comrec/estimate": 0.2157,
-    "com/comrec/z": -0.0194,
     "com/evics/estimate": 64.8426,
     "com/evics/z": 0.6904,
     "com/libs/estimate": 0.2875,
@@ -6896,11 +6710,11 @@
     "yth/cccall/z": -0.8528,
     "yth/ecseat/estimate": 0.2153,
     "yth/ecseat/z": -0.3956,
-    "com/INDEX": 1.704,
+    "com/INDEX": 1.8345,
     "eco/INDEX": 0.8803,
     "hel/INDEX": 1.3301,
     "yth/INDEX": -1.7354,
-    "cri/INDEX": 1.6487
+    "cri/INDEX": 1.6537
   },
   {
     "OBJECTID": 76,
@@ -6924,8 +6738,6 @@
     "dem/hispan/estimate": 0.6799,
     "dem/male/estimate": 0.4851,
     "dem/white/estimate": 0.3822,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 71.876,
     "com/evics/z": 0.3992,
     "com/libs/estimate": 0.2754,
@@ -6970,11 +6782,11 @@
     "yth/cccall/z": -0.6857,
     "yth/ecseat/estimate": 0.1749,
     "yth/ecseat/z": -0.8063,
-    "com/INDEX": 0.9043,
+    "com/INDEX": 1.8967,
     "eco/INDEX": -0.4088,
     "hel/INDEX": -1.4204,
     "yth/INDEX": -0.7106,
-    "cri/INDEX": -1.3361
+    "cri/INDEX": -1.139
   },
   {
     "OBJECTID": 180,
@@ -6998,8 +6810,6 @@
     "dem/hispan/estimate": 0.6525,
     "dem/male/estimate": 0.4954,
     "dem/white/estimate": 0.3004,
-    "com/comrec/estimate": 0.0785,
-    "com/comrec/z": -0.9004,
     "com/evics/estimate": 101.1864,
     "com/evics/z": -0.5681,
     "com/libs/estimate": 0.3926,
@@ -7044,11 +6854,11 @@
     "yth/cccall/z": -1.5519,
     "yth/ecseat/estimate": 0.0944,
     "yth/ecseat/z": -1.8015,
-    "com/INDEX": 0.7477,
+    "com/INDEX": 0.5962,
     "eco/INDEX": -2.0473,
     "hel/INDEX": -3.0408,
     "yth/INDEX": -2.0695,
-    "cri/INDEX": -4.0289
+    "cri/INDEX": -4.0316
   },
   {
     "OBJECTID": 37,
@@ -7072,8 +6882,6 @@
     "dem/hispan/estimate": 0.3564,
     "dem/male/estimate": 0.5232,
     "dem/white/estimate": 0.4856,
-    "com/comrec/estimate": 0.5524,
-    "com/comrec/z": 1.3143,
     "com/evics/estimate": 79.5737,
     "com/evics/z": 0.1114,
     "com/libs/estimate": 0.4143,
@@ -7118,11 +6926,11 @@
     "yth/cccall/z": 1.3393,
     "yth/ecseat/estimate": 0.3945,
     "yth/ecseat/z": 1.0749,
-    "com/INDEX": -0.8326,
+    "com/INDEX": -1.3633,
     "eco/INDEX": 1.9515,
     "hel/INDEX": 1.5302,
     "yth/INDEX": 1.7207,
-    "cri/INDEX": 2.7542
+    "cri/INDEX": 2.6411
   },
   {
     "OBJECTID": 175,
@@ -7146,8 +6954,6 @@
     "dem/hispan/estimate": 0.1823,
     "dem/male/estimate": 0.4956,
     "dem/white/estimate": 0.5934,
-    "com/comrec/estimate": 0.1141,
-    "com/comrec/z": -0.6249,
     "com/evics/estimate": 64.173,
     "com/evics/z": 0.7198,
     "com/libs/estimate": 0.4184,
@@ -7192,11 +6998,11 @@
     "yth/cccall/z": -0.2605,
     "yth/ecseat/estimate": 0.311,
     "yth/ecseat/z": 0.4434,
-    "com/INDEX": 1.0837,
+    "com/INDEX": 1.4908,
     "eco/INDEX": 1.5995,
     "hel/INDEX": 2.9537,
     "yth/INDEX": -0.7623,
-    "cri/INDEX": 3.4608
+    "cri/INDEX": 3.5011
   },
   {
     "OBJECTID": 24,
@@ -7220,8 +7026,6 @@
     "dem/hispan/estimate": 0.3773,
     "dem/male/estimate": 0.469,
     "dem/white/estimate": 0.1574,
-    "com/comrec/estimate": 0.5032,
-    "com/comrec/z": 1.1524,
     "com/evics/estimate": 148.9518,
     "com/evics/z": -1.6616,
     "com/libs/estimate": 0.3019,
@@ -7266,11 +7070,11 @@
     "yth/cccall/z": 0.5226,
     "yth/ecseat/estimate": 0.1871,
     "yth/ecseat/z": -0.6779,
-    "com/INDEX": -0.7265,
+    "com/INDEX": -2.0414,
     "eco/INDEX": -3.3238,
     "hel/INDEX": -3.8351,
     "yth/INDEX": 0.2069,
-    "cri/INDEX": -5.4437
+    "cri/INDEX": -5.6294
   },
   {
     "OBJECTID": 53,
@@ -7294,8 +7098,6 @@
     "dem/hispan/estimate": 0.3963,
     "dem/male/estimate": 0.5185,
     "dem/white/estimate": 0.5808,
-    "com/comrec/estimate": 0.3119,
-    "com/comrec/z": 0.4305,
     "com/evics/estimate": 43.8323,
     "com/evics/z": 1.7979,
     "com/libs/estimate": 0.3119,
@@ -7340,11 +7142,11 @@
     "yth/cccall/z": -0.3931,
     "yth/ecseat/estimate": 0.2822,
     "yth/ecseat/z": 0.2068,
-    "com/INDEX": 1.5444,
+    "com/INDEX": 1.7115,
     "eco/INDEX": 1.2072,
     "hel/INDEX": 2.3511,
     "yth/INDEX": -1.1762,
-    "cri/INDEX": 2.7243
+    "cri/INDEX": 2.73
   },
   {
     "OBJECTID": 91,
@@ -7368,8 +7170,6 @@
     "dem/hispan/estimate": 0.4845,
     "dem/male/estimate": 0.496,
     "dem/white/estimate": 0.4426,
-    "com/comrec/estimate": 0.075,
-    "com/comrec/z": -0.9309,
     "com/evics/estimate": 90.6039,
     "com/evics/z": -0.2557,
     "com/libs/estimate": 0.2999,
@@ -7414,11 +7214,11 @@
     "yth/cccall/z": -0.4516,
     "yth/ecseat/estimate": 0.209,
     "yth/ecseat/z": -0.4568,
-    "com/INDEX": -1.1369,
+    "com/INDEX": -1.0511,
     "eco/INDEX": -0.4005,
     "hel/INDEX": 0.1853,
     "yth/INDEX": 0.0453,
-    "cri/INDEX": -0.3443
+    "cri/INDEX": -0.3412
   },
   {
     "OBJECTID": 166,
@@ -7442,8 +7242,6 @@
     "dem/hispan/estimate": 0.3973,
     "dem/male/estimate": 0.5029,
     "dem/white/estimate": 0.5461,
-    "com/comrec/estimate": 0.1863,
-    "com/comrec/z": -0.1761,
     "com/evics/estimate": 56.5493,
     "com/evics/z": 1.0775,
     "com/libs/estimate": 0.2484,
@@ -7488,11 +7286,11 @@
     "yth/cccall/z": -0.7505,
     "yth/ecseat/estimate": 0.241,
     "yth/ecseat/z": -0.1551,
-    "com/INDEX": 1.9955,
+    "com/INDEX": 2.1264,
     "eco/INDEX": 1.3469,
     "hel/INDEX": 1.8084,
     "yth/INDEX": -1.4692,
-    "cri/INDEX": 2.4492
+    "cri/INDEX": 2.4538
   },
   {
     "OBJECTID": 77,
@@ -7516,8 +7314,6 @@
     "dem/hispan/estimate": 0.6463,
     "dem/male/estimate": 0.4835,
     "dem/white/estimate": 0.3619,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 70.1942,
     "com/evics/z": 0.4661,
     "com/libs/estimate": 0.2059,
@@ -7562,11 +7358,11 @@
     "yth/cccall/z": -0.4434,
     "yth/ecseat/estimate": 0.1861,
     "yth/ecseat/z": -0.6881,
-    "com/INDEX": 0.6513,
+    "com/INDEX": 1.6553,
     "eco/INDEX": -0.7221,
     "hel/INDEX": -1.5868,
     "yth/INDEX": -0.6074,
-    "cri/INDEX": -1.7202
+    "cri/INDEX": -1.519
   },
   {
     "OBJECTID": 78,
@@ -7590,8 +7386,6 @@
     "dem/hispan/estimate": 0.5959,
     "dem/male/estimate": 0.4954,
     "dem/white/estimate": 0.3346,
-    "com/comrec/estimate": 0.1276,
-    "com/comrec/z": -0.5318,
     "com/evics/estimate": 85.0858,
     "com/evics/z": -0.078,
     "com/libs/estimate": 0.2127,
@@ -7636,11 +7430,11 @@
     "yth/cccall/z": 0.0864,
     "yth/ecseat/estimate": 0.2107,
     "yth/ecseat/z": -0.4407,
-    "com/INDEX": -0.1657,
+    "com/INDEX": 0.2024,
     "eco/INDEX": -0.9357,
     "hel/INDEX": -1.7208,
     "yth/INDEX": 0.1592,
-    "cri/INDEX": -1.9887
+    "cri/INDEX": -1.9003
   },
   {
     "OBJECTID": 92,
@@ -7664,8 +7458,6 @@
     "dem/hispan/estimate": 0.3508,
     "dem/male/estimate": 0.501,
     "dem/white/estimate": 0.5179,
-    "com/comrec/estimate": 0.0406,
-    "com/comrec/z": -1.2774,
     "com/evics/estimate": 68.3888,
     "com/evics/z": 0.5398,
     "com/libs/estimate": 0.3245,
@@ -7710,11 +7502,11 @@
     "yth/cccall/z": -0.7654,
     "yth/ecseat/estimate": 0.2386,
     "yth/ecseat/z": -0.1771,
-    "com/INDEX": -0.2174,
+    "com/INDEX": 0.2657,
     "eco/INDEX": 0.9045,
     "hel/INDEX": 0.9894,
     "yth/INDEX": -1.0332,
-    "cri/INDEX": 1.2071
+    "cri/INDEX": 1.2626
   },
   {
     "OBJECTID": 194,
@@ -7738,8 +7530,6 @@
     "dem/hispan/estimate": 0.4883,
     "dem/male/estimate": 0.496,
     "dem/white/estimate": 0.4259,
-    "com/comrec/estimate": 0.073,
-    "com/comrec/z": -0.9488,
     "com/evics/estimate": 93.9448,
     "com/evics/z": -0.3581,
     "com/libs/estimate": 0.2918,
@@ -7784,11 +7574,11 @@
     "yth/cccall/z": -0.262,
     "yth/ecseat/estimate": 0.2076,
     "yth/ecseat/z": -0.4711,
-    "com/INDEX": -1.5591,
+    "com/INDEX": -1.4384,
     "eco/INDEX": -0.5603,
     "hel/INDEX": 0.1831,
     "yth/INDEX": 0.2095,
-    "cri/INDEX": -0.5088
+    "cri/INDEX": -0.5015
   },
   {
     "OBJECTID": 44,
@@ -7812,8 +7602,6 @@
     "dem/hispan/estimate": 0.6068,
     "dem/male/estimate": 0.4883,
     "dem/white/estimate": 0.3317,
-    "com/comrec/estimate": 0.0598,
-    "com/comrec/z": -1.0706,
     "com/evics/estimate": 98.9377,
     "com/evics/z": -0.5045,
     "com/libs/estimate": 0.3591,
@@ -7858,11 +7646,11 @@
     "yth/cccall/z": -0.6902,
     "yth/ecseat/estimate": 0.1624,
     "yth/ecseat/z": -0.9428,
-    "com/INDEX": -1.1721,
+    "com/INDEX": -0.8523,
     "eco/INDEX": -1.8306,
     "hel/INDEX": -1.6173,
     "yth/INDEX": -0.6642,
-    "cri/INDEX": -2.8881
+    "cri/INDEX": -2.8258
   },
   {
     "OBJECTID": 181,
@@ -7886,8 +7674,6 @@
     "dem/hispan/estimate": 0.647,
     "dem/male/estimate": 0.4932,
     "dem/white/estimate": 0.2945,
-    "com/comrec/estimate": 0.2373,
-    "com/comrec/z": 0.0894,
     "com/evics/estimate": 95.5566,
     "com/evics/z": -0.4062,
     "com/libs/estimate": 0.178,
@@ -7932,11 +7718,11 @@
     "yth/cccall/z": -1.0362,
     "yth/ecseat/estimate": 0.1213,
     "yth/ecseat/z": -1.4331,
-    "com/INDEX": 0.1748,
+    "com/INDEX": -0.3219,
     "eco/INDEX": -1.9251,
     "hel/INDEX": -2.8997,
     "yth/INDEX": -1.675,
-    "cri/INDEX": -3.8619
+    "cri/INDEX": -3.9315
   },
   {
     "OBJECTID": 79,
@@ -7960,8 +7746,6 @@
     "dem/hispan/estimate": 0.4906,
     "dem/male/estimate": 0.5154,
     "dem/white/estimate": 0.4339,
-    "com/comrec/estimate": 0.3736,
-    "com/comrec/z": 0.6828,
     "com/evics/estimate": 78.0233,
     "com/evics/z": 0.1671,
     "com/libs/estimate": 0.4981,
@@ -8006,11 +7790,11 @@
     "yth/cccall/z": 0.3237,
     "yth/ecseat/estimate": 0.2798,
     "yth/ecseat/z": 0.1865,
-    "com/INDEX": -1.0293,
+    "com/INDEX": -0.6836,
     "eco/INDEX": 1.4495,
     "hel/INDEX": 1.0758,
     "yth/INDEX": 0.6271,
-    "cri/INDEX": 1.8219
+    "cri/INDEX": 1.8585
   },
   {
     "OBJECTID": 80,
@@ -8034,8 +7818,6 @@
     "dem/hispan/estimate": 0.6373,
     "dem/male/estimate": 0.4997,
     "dem/white/estimate": 0.3669,
-    "com/comrec/estimate": 0.0895,
-    "com/comrec/z": -0.8094,
     "com/evics/estimate": 79.7362,
     "com/evics/z": 0.1057,
     "com/libs/estimate": 0.2239,
@@ -8080,11 +7862,11 @@
     "yth/cccall/z": -0.4772,
     "yth/ecseat/estimate": 0.1896,
     "yth/ecseat/z": -0.6517,
-    "com/INDEX": -0.186,
+    "com/INDEX": 0.3959,
     "eco/INDEX": -0.3955,
     "hel/INDEX": -1.5324,
     "yth/INDEX": -0.5228,
-    "cri/INDEX": -1.5616
+    "cri/INDEX": -1.4496
   },
   {
     "OBJECTID": 93,
@@ -8108,8 +7890,6 @@
     "dem/hispan/estimate": 0.2103,
     "dem/male/estimate": 0.4962,
     "dem/white/estimate": 0.6054,
-    "com/comrec/estimate": 0.1115,
-    "com/comrec/z": -0.6439,
     "com/evics/estimate": 64.3966,
     "com/evics/z": 0.7099,
     "com/libs/estimate": 0.4087,
@@ -8154,11 +7934,11 @@
     "yth/cccall/z": -0.1176,
     "yth/ecseat/estimate": 0.3074,
     "yth/ecseat/z": 0.4145,
-    "com/INDEX": 0.8747,
+    "com/INDEX": 1.2521,
     "eco/INDEX": 1.7009,
     "hel/INDEX": 2.7693,
     "yth/INDEX": -0.4769,
-    "cri/INDEX": 3.4115
+    "cri/INDEX": 3.4482
   },
   {
     "OBJECTID": 55,
@@ -8182,8 +7962,6 @@
     "dem/hispan/estimate": 0.2437,
     "dem/male/estimate": 0.53,
     "dem/white/estimate": 0.6188,
-    "com/comrec/estimate": 0.4388,
-    "com/comrec/z": 0.9279,
     "com/evics/estimate": 65.5981,
     "com/evics/z": 0.6577,
     "com/libs/estimate": 0.5585,
@@ -8228,11 +8006,11 @@
     "yth/cccall/z": 1.1898,
     "yth/ecseat/estimate": 0.4922,
     "yth/ecseat/z": 1.7331,
-    "com/INDEX": -0.2412,
+    "com/INDEX": 0.1545,
     "eco/INDEX": 3.0278,
     "hel/INDEX": 4.6318,
     "yth/INDEX": 1.2088,
-    "cri/INDEX": 5.8935
+    "cri/INDEX": 5.9146
   },
   {
     "OBJECTID": 187,
@@ -8256,8 +8034,6 @@
     "dem/hispan/estimate": 0.6235,
     "dem/male/estimate": 0.4909,
     "dem/white/estimate": 0.2832,
-    "com/comrec/estimate": 0.3607,
-    "com/comrec/z": 0.6319,
     "com/evics/estimate": 100.3563,
     "com/evics/z": -0.5448,
     "com/libs/estimate": 0.1803,
@@ -8302,11 +8078,11 @@
     "yth/cccall/z": -0.8188,
     "yth/ecseat/estimate": 0.1437,
     "yth/ecseat/z": -1.1576,
-    "com/INDEX": 0.2418,
+    "com/INDEX": -0.5007,
     "eco/INDEX": -1.9557,
     "hel/INDEX": -3.086,
     "yth/INDEX": -1.1335,
-    "cri/INDEX": -3.922
+    "cri/INDEX": -4.0264
   },
   {
     "OBJECTID": 46,
@@ -8330,8 +8106,6 @@
     "dem/hispan/estimate": 0.2071,
     "dem/male/estimate": 0.5128,
     "dem/white/estimate": 0.654,
-    "com/comrec/estimate": 0.2359,
-    "com/comrec/z": 0.0826,
     "com/evics/estimate": 48.4314,
     "com/evics/z": 1.5157,
     "com/libs/estimate": 0.4382,
@@ -8376,11 +8150,11 @@
     "yth/cccall/z": 0.6393,
     "yth/ecseat/estimate": 0.4431,
     "yth/ecseat/z": 1.4115,
-    "com/INDEX": 0.7162,
+    "com/INDEX": 0.9279,
     "eco/INDEX": 3.0749,
     "hel/INDEX": 4.1409,
     "yth/INDEX": 0.349,
-    "cri/INDEX": 5.5778
+    "cri/INDEX": 5.5706
   },
   {
     "OBJECTID": 155,
@@ -8404,8 +8178,6 @@
     "dem/hispan/estimate": 0.4451,
     "dem/male/estimate": 0.5076,
     "dem/white/estimate": 0.3467,
-    "com/comrec/estimate": 0.6477,
-    "com/comrec/z": 1.6088,
     "com/evics/estimate": 112.1234,
     "com/evics/z": -0.8584,
     "com/libs/estimate": 0.3986,
@@ -8450,11 +8222,11 @@
     "yth/cccall/z": 1.2851,
     "yth/ecseat/estimate": 0.3419,
     "yth/ecseat/z": 0.686,
-    "com/INDEX": -1.2267,
+    "com/INDEX": -1.7622,
     "eco/INDEX": -0.166,
     "hel/INDEX": -0.709,
     "yth/INDEX": 1.6805,
-    "cri/INDEX": -0.5785
+    "cri/INDEX": -0.6623
   },
   {
     "OBJECTID": 107,
@@ -8478,8 +8250,6 @@
     "dem/hispan/estimate": 0.7003,
     "dem/male/estimate": 0.4902,
     "dem/white/estimate": 0.3912,
-    "com/comrec/estimate": 0.1101,
-    "com/comrec/z": -0.6538,
     "com/evics/estimate": 78.0304,
     "com/evics/z": 0.1668,
     "com/libs/estimate": 0.2752,
@@ -8524,11 +8294,11 @@
     "yth/cccall/z": -0.831,
     "yth/ecseat/estimate": 0.1779,
     "yth/ecseat/z": -0.7741,
-    "com/INDEX": 1.2708,
+    "com/INDEX": 1.6318,
     "eco/INDEX": -0.1816,
     "hel/INDEX": -1.242,
     "yth/INDEX": -0.8553,
-    "cri/INDEX": -0.9954
+    "cri/INDEX": -0.913
   },
   {
     "OBJECTID": 94,
@@ -8552,8 +8322,6 @@
     "dem/hispan/estimate": 0.484,
     "dem/male/estimate": 0.495,
     "dem/white/estimate": 0.4375,
-    "com/comrec/estimate": 0.0621,
-    "com/comrec/z": -1.0483,
     "com/evics/estimate": 96.175,
     "com/evics/z": -0.4244,
     "com/libs/estimate": 0.2486,
@@ -8598,11 +8366,11 @@
     "yth/cccall/z": -0.4912,
     "yth/ecseat/estimate": 0.2028,
     "yth/ecseat/z": -0.5187,
-    "com/INDEX": -1.8725,
+    "com/INDEX": -1.8259,
     "eco/INDEX": -0.4672,
     "hel/INDEX": -0.2348,
     "yth/INDEX": -0.2086,
-    "cri/INDEX": -0.8746
+    "cri/INDEX": -0.8875
   },
   {
     "OBJECTID": 21,
@@ -8626,8 +8394,6 @@
     "dem/hispan/estimate": 0.6255,
     "dem/male/estimate": 0.5009,
     "dem/white/estimate": 0.3271,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 141.6713,
     "com/evics/z": -1.5199,
     "com/libs/estimate": 0.5539,
@@ -8672,11 +8438,11 @@
     "yth/cccall/z": -1.922,
     "yth/ecseat/estimate": 0.0468,
     "yth/ecseat/z": -2.6164,
-    "com/INDEX": 0.872,
+    "com/INDEX": 0.9867,
     "eco/INDEX": -2.2288,
     "hel/INDEX": -2.613,
     "yth/INDEX": -2.462,
-    "cri/INDEX": -3.8897
+    "cri/INDEX": -3.8498
   },
   {
     "OBJECTID": 57,
@@ -8700,8 +8466,6 @@
     "dem/hispan/estimate": 0.3603,
     "dem/male/estimate": 0.527,
     "dem/white/estimate": 0.582,
-    "com/comrec/estimate": 0.3347,
-    "com/comrec/z": 0.5264,
     "com/evics/estimate": 45.0648,
     "com/evics/z": 1.7195,
     "com/libs/estimate": 0.3347,
@@ -8746,11 +8510,11 @@
     "yth/cccall/z": -0.8226,
     "yth/ecseat/estimate": 0.2556,
     "yth/ecseat/z": -0.0234,
-    "com/INDEX": 0.7293,
+    "com/INDEX": 1.1117,
     "eco/INDEX": 2.5834,
     "hel/INDEX": 3.4897,
     "yth/INDEX": -1.2628,
-    "cri/INDEX": 4.4545
+    "cri/INDEX": 4.4667
   },
   {
     "OBJECTID": 20,
@@ -8774,8 +8538,6 @@
     "dem/hispan/estimate": 0.2379,
     "dem/male/estimate": 0.4938,
     "dem/white/estimate": 0.5256,
-    "com/comrec/estimate": 0.1532,
-    "com/comrec/z": -0.3683,
     "com/evics/estimate": 69.1347,
     "com/evics/z": 0.5092,
     "com/libs/estimate": 0.3448,
@@ -8820,11 +8582,11 @@
     "yth/cccall/z": -0.543,
     "yth/ecseat/estimate": 0.2764,
     "yth/ecseat/z": 0.1577,
-    "com/INDEX": 1.3157,
+    "com/INDEX": 1.517,
     "eco/INDEX": 0.7099,
     "hel/INDEX": 2.3152,
     "yth/INDEX": -0.955,
-    "cri/INDEX": 2.324
+    "cri/INDEX": 2.3402
   },
   {
     "OBJECTID": 182,
@@ -8848,8 +8610,6 @@
     "dem/hispan/estimate": 0.6494,
     "dem/male/estimate": 0.4954,
     "dem/white/estimate": 0.3195,
-    "com/comrec/estimate": 0.1018,
-    "com/comrec/z": -0.7149,
     "com/evics/estimate": 106.1947,
     "com/evics/z": -0.7047,
     "com/libs/estimate": 0.407,
@@ -8894,11 +8654,11 @@
     "yth/cccall/z": -1.6019,
     "yth/ecseat/estimate": 0.114,
     "yth/ecseat/z": -1.5291,
-    "com/INDEX": 1.2666,
+    "com/INDEX": 0.9938,
     "eco/INDEX": -2.0793,
     "hel/INDEX": -2.8443,
     "yth/INDEX": -1.8791,
-    "cri/INDEX": -3.7868
+    "cri/INDEX": -3.8036
   },
   {
     "OBJECTID": 89,
@@ -8922,8 +8682,6 @@
     "dem/hispan/estimate": 0.2565,
     "dem/male/estimate": 0.5116,
     "dem/white/estimate": 0.6123,
-    "com/comrec/estimate": 0.2845,
-    "com/comrec/z": 0.3106,
     "com/evics/estimate": 57.7196,
     "com/evics/z": 1.0195,
     "com/libs/estimate": 0.4623,
@@ -8968,11 +8726,11 @@
     "yth/cccall/z": 0.3903,
     "yth/ecseat/estimate": 0.3794,
     "yth/ecseat/z": 0.9661,
-    "com/INDEX": 0.5555,
+    "com/INDEX": 0.5761,
     "eco/INDEX": 2.4783,
     "hel/INDEX": 3.2249,
     "yth/INDEX": 0.0795,
-    "cri/INDEX": 4.3738
+    "cri/INDEX": 4.3389
   },
   {
     "OBJECTID": 97,
@@ -8996,8 +8754,6 @@
     "dem/hispan/estimate": 0.6049,
     "dem/male/estimate": 0.4857,
     "dem/white/estimate": 0.3268,
-    "com/comrec/estimate": 0.0885,
-    "com/comrec/z": -0.8179,
     "com/evics/estimate": 90.2877,
     "com/evics/z": -0.2458,
     "com/libs/estimate": 0.2212,
@@ -9042,11 +8798,11 @@
     "yth/cccall/z": 0.2863,
     "yth/ecseat/estimate": 0.2491,
     "yth/ecseat/z": -0.0818,
-    "com/INDEX": 0.145,
+    "com/INDEX": 0.5565,
     "eco/INDEX": -1.0453,
     "hel/INDEX": -1.7373,
     "yth/INDEX": 0.5787,
-    "cri/INDEX": -1.9605
+    "cri/INDEX": -1.8537
   },
   {
     "OBJECTID": 198,
@@ -9070,8 +8826,6 @@
     "dem/hispan/estimate": 0.5138,
     "dem/male/estimate": 0.5196,
     "dem/white/estimate": 0.4721,
-    "com/comrec/estimate": 0.2172,
-    "com/comrec/z": -0.0114,
     "com/evics/estimate": 75.1604,
     "com/evics/z": 0.2728,
     "com/libs/estimate": 0.391,
@@ -9116,11 +8870,11 @@
     "yth/cccall/z": -0.1636,
     "yth/ecseat/estimate": 0.3009,
     "yth/ecseat/z": 0.3616,
-    "com/INDEX": -0.9982,
+    "com/INDEX": -0.3526,
     "eco/INDEX": 2.1028,
     "hel/INDEX": 1.9512,
     "yth/INDEX": 0.2122,
-    "cri/INDEX": 2.9013
+    "cri/INDEX": 2.9745
   },
   {
     "OBJECTID": 47,
@@ -9144,8 +8898,6 @@
     "dem/hispan/estimate": 0.2172,
     "dem/male/estimate": 0.5183,
     "dem/white/estimate": 0.6366,
-    "com/comrec/estimate": 0.3738,
-    "com/comrec/z": 0.6839,
     "com/evics/estimate": 58.2439,
     "com/evics/z": 0.994,
     "com/libs/estimate": 0.5098,
@@ -9190,11 +8942,11 @@
     "yth/cccall/z": 0.8683,
     "yth/ecseat/estimate": 0.4673,
     "yth/ecseat/z": 1.5721,
-    "com/INDEX": 0.2645,
+    "com/INDEX": 0.295,
     "eco/INDEX": 3.027,
     "hel/INDEX": 4.0279,
     "yth/INDEX": 0.5892,
-    "cri/INDEX": 5.4219
+    "cri/INDEX": 5.3805
   },
   {
     "OBJECTID": 27,
@@ -9218,8 +8970,6 @@
     "dem/hispan/estimate": 0.3456,
     "dem/male/estimate": 0.4623,
     "dem/white/estimate": 0.1716,
-    "com/comrec/estimate": 0.1631,
-    "com/comrec/z": -0.3092,
     "com/evics/estimate": 146.1498,
     "com/evics/z": -1.6079,
     "com/libs/estimate": 0.1631,
@@ -9264,11 +9014,11 @@
     "yth/cccall/z": 2.03,
     "yth/ecseat/estimate": 0.388,
     "yth/ecseat/z": 1.028,
-    "com/INDEX": -0.6268,
+    "com/INDEX": -0.8675,
     "eco/INDEX": -3.667,
     "hel/INDEX": -1.4849,
     "yth/INDEX": 3.449,
-    "cri/INDEX": -3.3809
+    "cri/INDEX": -3.3453
   },
   {
     "OBJECTID": 173,
@@ -9292,8 +9042,6 @@
     "dem/hispan/estimate": 0.175,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.5995,
-    "com/comrec/estimate": 0.116,
-    "com/comrec/z": -0.6118,
     "com/evics/estimate": 61.3135,
     "com/evics/z": 0.8487,
     "com/libs/estimate": 0.3866,
@@ -9338,11 +9086,11 @@
     "yth/cccall/z": -0.2643,
     "yth/ecseat/estimate": 0.3291,
     "yth/ecseat/z": 0.587,
-    "com/INDEX": 1.2221,
+    "com/INDEX": 1.5983,
     "eco/INDEX": 1.5802,
     "hel/INDEX": 3.0973,
     "yth/INDEX": -0.8395,
-    "cri/INDEX": 3.564
+    "cri/INDEX": 3.5986
   },
   {
     "OBJECTID": 48,
@@ -9366,8 +9114,6 @@
     "dem/hispan/estimate": 0.2439,
     "dem/male/estimate": 0.5184,
     "dem/white/estimate": 0.5992,
-    "com/comrec/estimate": 0.4358,
-    "com/comrec/z": 0.917,
     "com/evics/estimate": 63.7931,
     "com/evics/z": 0.7366,
     "com/libs/estimate": 0.5085,
@@ -9412,11 +9158,11 @@
     "yth/cccall/z": 1.2328,
     "yth/ecseat/estimate": 0.4341,
     "yth/ecseat/z": 1.3508,
-    "com/INDEX": -0.0027,
+    "com/INDEX": -0.1166,
     "eco/INDEX": 2.9229,
     "hel/INDEX": 3.3616,
     "yth/INDEX": 1.2442,
-    "cri/INDEX": 4.9106
+    "cri/INDEX": 4.8544
   },
   {
     "OBJECTID": 156,
@@ -9440,8 +9186,6 @@
     "dem/hispan/estimate": 0.4693,
     "dem/male/estimate": 0.4743,
     "dem/white/estimate": 0.222,
-    "com/comrec/estimate": 0.2959,
-    "com/comrec/z": 0.3611,
     "com/evics/estimate": 124.7681,
     "com/evics/z": -1.1606,
     "com/libs/estimate": 0.2959,
@@ -9486,11 +9230,11 @@
     "yth/cccall/z": 0.6683,
     "yth/ecseat/estimate": 0.2164,
     "yth/ecseat/z": -0.3852,
-    "com/INDEX": -0.044,
+    "com/INDEX": -0.5686,
     "eco/INDEX": -2.4238,
     "hel/INDEX": -3.1158,
     "yth/INDEX": 0.71,
-    "cri/INDEX": -4.033
+    "cri/INDEX": -4.0737
   },
   {
     "OBJECTID": 183,
@@ -9514,8 +9258,6 @@
     "dem/hispan/estimate": 0.669,
     "dem/male/estimate": 0.4929,
     "dem/white/estimate": 0.3018,
-    "com/comrec/estimate": 0.0711,
-    "com/comrec/z": -0.9651,
     "com/evics/estimate": 93.546,
     "com/evics/z": -0.3461,
     "com/libs/estimate": 0.2845,
@@ -9560,11 +9302,11 @@
     "yth/cccall/z": -1.5224,
     "yth/ecseat/estimate": 0.1002,
     "yth/ecseat/z": -1.7177,
-    "com/INDEX": 0.7587,
+    "com/INDEX": 0.6518,
     "eco/INDEX": -2.0592,
     "hel/INDEX": -3.1953,
     "yth/INDEX": -2.1134,
-    "cri/INDEX": -4.1589
+    "cri/INDEX": -4.1526
   },
   {
     "OBJECTID": 58,
@@ -9588,8 +9330,6 @@
     "dem/hispan/estimate": 0.2887,
     "dem/male/estimate": 0.5319,
     "dem/white/estimate": 0.6046,
-    "com/comrec/estimate": 0.2863,
-    "com/comrec/z": 0.3189,
     "com/evics/estimate": 57.695,
     "com/evics/z": 1.0207,
     "com/libs/estimate": 0.5318,
@@ -9634,11 +9374,11 @@
     "yth/cccall/z": 0.1822,
     "yth/ecseat/estimate": 0.3891,
     "yth/ecseat/z": 1.0363,
-    "com/INDEX": -0.1315,
+    "com/INDEX": 0.3744,
     "eco/INDEX": 2.936,
     "hel/INDEX": 4.1875,
     "yth/INDEX": -0.1628,
-    "cri/INDEX": 5.2805
+    "cri/INDEX": 5.3096
   },
   {
     "OBJECTID": 167,
@@ -9662,8 +9402,6 @@
     "dem/hispan/estimate": 0.4854,
     "dem/male/estimate": 0.5208,
     "dem/white/estimate": 0.511,
-    "com/comrec/estimate": 0.261,
-    "com/comrec/z": 0.2031,
     "com/evics/estimate": 55.2604,
     "com/evics/z": 1.1427,
     "com/libs/estimate": 0.261,
@@ -9708,11 +9446,11 @@
     "yth/cccall/z": -0.7482,
     "yth/ecseat/estimate": 0.2491,
     "yth/ecseat/z": -0.0816,
-    "com/INDEX": 1.8792,
+    "com/INDEX": 1.9144,
     "eco/INDEX": 1.3519,
     "hel/INDEX": 1.3335,
     "yth/INDEX": -1.2806,
-    "cri/INDEX": 2.1098
+    "cri/INDEX": 2.1018
   },
   {
     "OBJECTID": 98,
@@ -9736,8 +9474,6 @@
     "dem/hispan/estimate": 0.429,
     "dem/male/estimate": 0.4719,
     "dem/white/estimate": 0.1888,
-    "com/comrec/estimate": 0.2939,
-    "com/comrec/z": 0.3523,
     "com/evics/estimate": 139.4086,
     "com/evics/z": -1.4744,
     "com/libs/estimate": 0.2351,
@@ -9782,11 +9518,11 @@
     "yth/cccall/z": 0.8309,
     "yth/ecseat/estimate": 0.2382,
     "yth/ecseat/z": -0.1805,
-    "com/INDEX": -0.9052,
+    "com/INDEX": -1.4096,
     "eco/INDEX": -2.603,
     "hel/INDEX": -2.8114,
     "yth/INDEX": 0.9861,
-    "cri/INDEX": -4.0376
+    "cri/INDEX": -4.0832
   },
   {
     "OBJECTID": 49,
@@ -9810,8 +9546,6 @@
     "dem/hispan/estimate": 0.2173,
     "dem/male/estimate": 0.5254,
     "dem/white/estimate": 0.638,
-    "com/comrec/estimate": 0.4369,
-    "com/comrec/z": 0.9208,
     "com/evics/estimate": 62.9945,
     "com/evics/z": 0.7722,
     "com/libs/estimate": 0.5097,
@@ -9856,11 +9590,11 @@
     "yth/cccall/z": 1.2526,
     "yth/ecseat/estimate": 0.5057,
     "yth/ecseat/z": 1.8189,
-    "com/INDEX": 0.0056,
+    "com/INDEX": 0.2382,
     "eco/INDEX": 3.1412,
     "hel/INDEX": 4.4864,
     "yth/INDEX": 1.1367,
-    "cri/INDEX": 5.8989
+    "cri/INDEX": 5.8931
   },
   {
     "OBJECTID": 157,
@@ -9884,8 +9618,6 @@
     "dem/hispan/estimate": 0.4544,
     "dem/male/estimate": 0.4872,
     "dem/white/estimate": 0.2446,
-    "com/comrec/estimate": 0.5077,
-    "com/comrec/z": 1.1676,
     "com/evics/estimate": 130.2937,
     "com/evics/z": -1.2831,
     "com/libs/estimate": 0.2539,
@@ -9930,11 +9662,11 @@
     "yth/cccall/z": 1.0106,
     "yth/ecseat/estimate": 0.2728,
     "yth/ecseat/z": 0.1264,
-    "com/INDEX": 0.0292,
+    "com/INDEX": -0.7945,
     "eco/INDEX": -2.1541,
     "hel/INDEX": -2.799,
     "yth/INDEX": 1.5547,
-    "cri/INDEX": -3.4401
+    "cri/INDEX": -3.5278
   },
   {
     "OBJECTID": 158,
@@ -9958,8 +9690,6 @@
     "dem/hispan/estimate": 0.4818,
     "dem/male/estimate": 0.5034,
     "dem/white/estimate": 0.3378,
-    "com/comrec/estimate": 0.4769,
-    "com/comrec/z": 1.0624,
     "com/evics/estimate": 114.3367,
     "com/evics/z": -0.9137,
     "com/libs/estimate": 0.3338,
@@ -10004,11 +9734,11 @@
     "yth/cccall/z": 1.0066,
     "yth/ecseat/estimate": 0.3157,
     "yth/ecseat/z": 0.4815,
-    "com/INDEX": -1.3397,
+    "com/INDEX": -1.6608,
     "eco/INDEX": -0.531,
     "hel/INDEX": -1.2801,
     "yth/INDEX": 1.5237,
-    "cri/INDEX": -1.3242
+    "cri/INDEX": -1.365
   },
   {
     "OBJECTID": 22,
@@ -10032,8 +9762,6 @@
     "dem/hispan/estimate": 0.6582,
     "dem/male/estimate": 0.5006,
     "dem/white/estimate": 0.3297,
-    "com/comrec/estimate": 0.1242,
-    "com/comrec/z": -0.5548,
     "com/evics/estimate": 101.4098,
     "com/evics/z": -0.5743,
     "com/libs/estimate": 0.4969,
@@ -10078,11 +9806,11 @@
     "yth/cccall/z": -1.874,
     "yth/ecseat/estimate": 0.0941,
     "yth/ecseat/z": -1.8053,
-    "com/INDEX": 1.7464,
+    "com/INDEX": 1.4174,
     "eco/INDEX": -1.8572,
     "hel/INDEX": -2.9396,
     "yth/INDEX": -2.2277,
-    "cri/INDEX": -3.6698
+    "cri/INDEX": -3.6961
   },
   {
     "OBJECTID": 60,
@@ -10106,8 +9834,6 @@
     "dem/hispan/estimate": 0.297,
     "dem/male/estimate": 0.5117,
     "dem/white/estimate": 0.5523,
-    "com/comrec/estimate": 0.407,
-    "com/comrec/z": 0.8107,
     "com/evics/estimate": 69.7731,
     "com/evics/z": 0.4832,
     "com/libs/estimate": 0.4884,
@@ -10152,11 +9878,11 @@
     "yth/cccall/z": 1.2975,
     "yth/ecseat/estimate": 0.4241,
     "yth/ecseat/z": 1.2823,
-    "com/INDEX": -0.3639,
+    "com/INDEX": -0.6017,
     "eco/INDEX": 2.5055,
     "hel/INDEX": 2.4833,
     "yth/INDEX": 1.3954,
-    "cri/INDEX": 3.9059
+    "cri/INDEX": 3.8352
   },
   {
     "OBJECTID": 159,
@@ -10180,8 +9906,6 @@
     "dem/hispan/estimate": 0.4865,
     "dem/male/estimate": 0.477,
     "dem/white/estimate": 0.2372,
-    "com/comrec/estimate": 0.262,
-    "com/comrec/z": 0.2077,
     "com/evics/estimate": 122.6048,
     "com/evics/z": -1.1111,
     "com/libs/estimate": 0.262,
@@ -10226,11 +9950,11 @@
     "yth/cccall/z": 0.4004,
     "yth/ecseat/estimate": 0.22,
     "yth/ecseat/z": -0.3504,
-    "com/INDEX": -0.2743,
+    "com/INDEX": -0.6394,
     "eco/INDEX": -2.1916,
     "hel/INDEX": -2.9583,
     "yth/INDEX": 0.5378,
-    "cri/INDEX": -3.809
+    "cri/INDEX": -3.8293
   },
   {
     "OBJECTID": 82,
@@ -10254,8 +9978,6 @@
     "dem/hispan/estimate": 0.6808,
     "dem/male/estimate": 0.4956,
     "dem/white/estimate": 0.3822,
-    "com/comrec/estimate": 0.0975,
-    "com/comrec/z": -0.7475,
     "com/evics/estimate": 82.1382,
     "com/evics/z": 0.0217,
     "com/libs/estimate": 0.2437,
@@ -10300,11 +10022,11 @@
     "yth/cccall/z": -0.6674,
     "yth/ecseat/estimate": 0.1825,
     "yth/ecseat/z": -0.7257,
-    "com/INDEX": 0.7132,
+    "com/INDEX": 1.1485,
     "eco/INDEX": -0.3096,
     "hel/INDEX": -1.4615,
     "yth/INDEX": -0.6661,
-    "cri/INDEX": -1.3173
+    "cri/INDEX": -1.2233
   },
   {
     "OBJECTID": 83,
@@ -10328,8 +10050,6 @@
     "dem/hispan/estimate": 0.5647,
     "dem/male/estimate": 0.504,
     "dem/white/estimate": 0.3625,
-    "com/comrec/estimate": 0.2107,
-    "com/comrec/z": -0.0449,
     "com/evics/estimate": 94.2313,
     "com/evics/z": -0.3667,
     "com/libs/estimate": 0.3372,
@@ -10374,11 +10094,11 @@
     "yth/cccall/z": 0.1939,
     "yth/ecseat/estimate": 0.2492,
     "yth/ecseat/z": -0.0808,
-    "com/INDEX": -1.4604,
+    "com/INDEX": -1.1225,
     "eco/INDEX": -0.0203,
     "hel/INDEX": -1.1592,
     "yth/INDEX": 0.3129,
-    "cri/INDEX": -1.0752
+    "cri/INDEX": -1.0193
   },
   {
     "OBJECTID": 168,
@@ -10402,8 +10122,6 @@
     "dem/hispan/estimate": 0.2791,
     "dem/male/estimate": 0.5047,
     "dem/white/estimate": 0.572,
-    "com/comrec/estimate": 0.1679,
-    "com/comrec/z": -0.281,
     "com/evics/estimate": 51.2283,
     "com/evics/z": 1.3569,
     "com/libs/estimate": 0.4196,
@@ -10448,11 +10166,11 @@
     "yth/cccall/z": -0.4807,
     "yth/ecseat/estimate": 0.2969,
     "yth/ecseat/z": 0.3291,
-    "com/INDEX": 1.7831,
+    "com/INDEX": 2.0601,
     "eco/INDEX": 1.2375,
     "hel/INDEX": 3.1148,
     "yth/INDEX": -1.0883,
-    "cri/INDEX": 3.3731
+    "cri/INDEX": 3.3965
   },
   {
     "OBJECTID": 199,
@@ -10476,8 +10194,6 @@
     "dem/hispan/estimate": 0.2816,
     "dem/male/estimate": 0.522,
     "dem/white/estimate": 0.6314,
-    "com/comrec/estimate": 0.1764,
-    "com/comrec/z": -0.2317,
     "com/evics/estimate": 41.2738,
     "com/evics/z": 1.968,
     "com/libs/estimate": 0.3969,
@@ -10522,11 +10238,11 @@
     "yth/cccall/z": -0.3305,
     "yth/ecseat/estimate": 0.3094,
     "yth/ecseat/z": 0.4311,
-    "com/INDEX": 0.7934,
+    "com/INDEX": 1.4618,
     "eco/INDEX": 2.9872,
     "hel/INDEX": 4.0752,
     "yth/INDEX": -1.026,
-    "cri/INDEX": 5.2452
+    "cri/INDEX": 5.3049
   },
   {
     "OBJECTID": 171,
@@ -10550,8 +10266,6 @@
     "dem/hispan/estimate": 0.198,
     "dem/male/estimate": 0.4988,
     "dem/white/estimate": 0.6245,
-    "com/comrec/estimate": 0.1714,
-    "com/comrec/z": -0.2604,
     "com/evics/estimate": 50.1625,
     "com/evics/z": 1.4164,
     "com/libs/estimate": 0.4285,
@@ -10596,11 +10310,11 @@
     "yth/cccall/z": 0.0208,
     "yth/ecseat/estimate": 0.3608,
     "yth/ecseat/z": 0.829,
-    "com/INDEX": 1.8065,
+    "com/INDEX": 2.078,
     "eco/INDEX": 1.8306,
     "hel/INDEX": 3.9095,
     "yth/INDEX": -0.4844,
-    "cri/INDEX": 4.5168
+    "cri/INDEX": 4.5359
   },
   {
     "OBJECTID": 84,
@@ -10624,8 +10338,6 @@
     "dem/hispan/estimate": 0.5475,
     "dem/male/estimate": 0.5064,
     "dem/white/estimate": 0.396,
-    "com/comrec/estimate": 0.2547,
-    "com/comrec/z": 0.1731,
     "com/evics/estimate": 86.8808,
     "com/evics/z": -0.137,
     "com/libs/estimate": 0.3396,
@@ -10670,11 +10382,11 @@
     "yth/cccall/z": 0.233,
     "yth/ecseat/estimate": 0.2664,
     "yth/ecseat/z": 0.0712,
-    "com/INDEX": -1.5347,
+    "com/INDEX": -1.1511,
     "eco/INDEX": 0.6677,
     "hel/INDEX": -0.4864,
     "yth/INDEX": 0.4178,
-    "cri/INDEX": -0.0519
+    "cri/INDEX": 0.0015
   },
   {
     "OBJECTID": 95,
@@ -10698,8 +10410,6 @@
     "dem/hispan/estimate": 0.4262,
     "dem/male/estimate": 0.4955,
     "dem/white/estimate": 0.4712,
-    "com/comrec/estimate": 0.0523,
-    "com/comrec/z": -1.1467,
     "com/evics/estimate": 87.014,
     "com/evics/z": -0.1414,
     "com/libs/estimate": 0.2616,
@@ -10744,11 +10454,11 @@
     "yth/cccall/z": -0.9554,
     "yth/ecseat/estimate": 0.218,
     "yth/ecseat/z": -0.3703,
-    "com/INDEX": -0.7609,
+    "com/INDEX": -0.5178,
     "eco/INDEX": -0.1291,
     "hel/INDEX": -0.3606,
     "yth/INDEX": -0.9972,
-    "cri/INDEX": -0.6616
+    "cri/INDEX": -0.6365
   },
   {
     "OBJECTID": 96,
@@ -10772,8 +10482,6 @@
     "dem/hispan/estimate": 0.4307,
     "dem/male/estimate": 0.4967,
     "dem/white/estimate": 0.4918,
-    "com/comrec/estimate": 0.1016,
-    "com/comrec/z": -0.7161,
     "com/evics/estimate": 87.4259,
     "com/evics/z": -0.1547,
     "com/libs/estimate": 0.3556,
@@ -10818,11 +10526,11 @@
     "yth/cccall/z": -0.5632,
     "yth/ecseat/estimate": 0.2292,
     "yth/ecseat/z": -0.2638,
-    "com/INDEX": -0.8164,
+    "com/INDEX": -0.8287,
     "eco/INDEX": 0.3026,
     "hel/INDEX": 0.2908,
     "yth/INDEX": -0.5445,
-    "cri/INDEX": 0.2155
+    "cri/INDEX": 0.1907
   },
   {
     "OBJECTID": 40,
@@ -10846,8 +10554,6 @@
     "dem/hispan/estimate": 0.416,
     "dem/male/estimate": 0.5189,
     "dem/white/estimate": 0.4119,
-    "com/comrec/estimate": 0.663,
-    "com/comrec/z": 1.654,
     "com/evics/estimate": 98.5303,
     "com/evics/z": -0.4929,
     "com/libs/estimate": 0.459,
@@ -10892,11 +10598,11 @@
     "yth/cccall/z": 1.2779,
     "yth/ecseat/estimate": 0.3586,
     "yth/ecseat/z": 0.8128,
-    "com/INDEX": -1.0332,
+    "com/INDEX": -1.8091,
     "eco/INDEX": 0.8418,
     "hel/INDEX": 0.3637,
     "yth/INDEX": 1.8391,
-    "cri/INDEX": 1.0373
+    "cri/INDEX": 0.8975
   },
   {
     "OBJECTID": 41,
@@ -10920,8 +10626,6 @@
     "dem/hispan/estimate": 0.4071,
     "dem/male/estimate": 0.5196,
     "dem/white/estimate": 0.3949,
-    "com/comrec/estimate": 0.6659,
-    "com/comrec/z": 1.6625,
     "com/evics/estimate": 94.9647,
     "com/evics/z": -0.3886,
     "com/libs/estimate": 0.461,
@@ -10966,11 +10670,11 @@
     "yth/cccall/z": 1.5933,
     "yth/ecseat/estimate": 0.3912,
     "yth/ecseat/z": 1.0515,
-    "com/INDEX": -1.1731,
+    "com/INDEX": -1.8883,
     "eco/INDEX": 0.7404,
     "hel/INDEX": 0.0057,
     "yth/INDEX": 1.8271,
-    "cri/INDEX": 0.668
+    "cri/INDEX": 0.541
   },
   {
     "OBJECTID": 61,
@@ -10994,8 +10698,6 @@
     "dem/hispan/estimate": 0.2916,
     "dem/male/estimate": 0.5241,
     "dem/white/estimate": 0.5481,
-    "com/comrec/estimate": 0.4644,
-    "com/comrec/z": 1.0188,
     "com/evics/estimate": 66.6568,
     "com/evics/z": 0.6124,
     "com/libs/estimate": 0.5066,
@@ -11040,11 +10742,11 @@
     "yth/cccall/z": 1.4005,
     "yth/ecseat/estimate": 0.4401,
     "yth/ecseat/z": 1.3916,
-    "com/INDEX": -0.3552,
+    "com/INDEX": -0.6184,
     "eco/INDEX": 2.6506,
     "hel/INDEX": 2.6755,
     "yth/INDEX": 1.7047,
-    "cri/INDEX": 4.2116
+    "cri/INDEX": 4.1378
   },
   {
     "OBJECTID": 50,
@@ -11068,8 +10770,6 @@
     "dem/hispan/estimate": 0.1973,
     "dem/male/estimate": 0.5008,
     "dem/white/estimate": 0.6582,
-    "com/comrec/estimate": 0.1831,
-    "com/comrec/z": -0.1938,
     "com/evics/estimate": 50.6287,
     "com/evics/z": 1.3902,
     "com/libs/estimate": 0.4395,
@@ -11114,11 +10814,11 @@
     "yth/cccall/z": 0.2106,
     "yth/ecseat/estimate": 0.3682,
     "yth/ecseat/z": 0.8842,
-    "com/INDEX": 1.2746,
+    "com/INDEX": 1.4678,
     "eco/INDEX": 2.4699,
     "hel/INDEX": 3.4203,
     "yth/INDEX": 0.0735,
-    "cri/INDEX": 4.6335
+    "cri/INDEX": 4.6375
   },
   {
     "OBJECTID": 85,
@@ -11142,8 +10842,6 @@
     "dem/hispan/estimate": 0.6112,
     "dem/male/estimate": 0.5055,
     "dem/white/estimate": 0.407,
-    "com/comrec/estimate": 0.1356,
-    "com/comrec/z": -0.4795,
     "com/evics/estimate": 75.1203,
     "com/evics/z": 0.2743,
     "com/libs/estimate": 0.3615,
@@ -11188,11 +10886,11 @@
     "yth/cccall/z": -0.2319,
     "yth/ecseat/estimate": 0.2344,
     "yth/ecseat/z": -0.2153,
-    "com/INDEX": -1.0713,
+    "com/INDEX": -0.4435,
     "eco/INDEX": 0.7232,
     "hel/INDEX": -0.5586,
     "yth/INDEX": -0.1322,
-    "cri/INDEX": -0.0789
+    "cri/INDEX": 0.0176
   },
   {
     "OBJECTID": 162,
@@ -11216,8 +10914,6 @@
     "dem/hispan/estimate": 0.5386,
     "dem/male/estimate": 0.4862,
     "dem/white/estimate": 0.2907,
-    "com/comrec/estimate": 0.1829,
-    "com/comrec/z": -0.1951,
     "com/evics/estimate": 103.0245,
     "com/evics/z": -0.619,
     "com/libs/estimate": 0.1829,
@@ -11262,11 +10958,11 @@
     "yth/cccall/z": 0.3503,
     "yth/ecseat/estimate": 0.2153,
     "yth/ecseat/z": -0.3963,
-    "com/INDEX": -0.1241,
+    "com/INDEX": -0.3296,
     "eco/INDEX": -1.4618,
     "hel/INDEX": -2.2491,
     "yth/INDEX": 0.5375,
-    "cri/INDEX": -2.7071
+    "cri/INDEX": -2.7083
   },
   {
     "OBJECTID": 229,
@@ -11290,8 +10986,6 @@
     "dem/hispan/estimate": 0.4424,
     "dem/male/estimate": 0.5018,
     "dem/white/estimate": 0.511,
-    "com/comrec/estimate": 0.3624,
-    "com/comrec/z": 0.6388,
     "com/evics/estimate": 69.2586,
     "com/evics/z": 0.5041,
     "com/libs/estimate": 0.1812,
@@ -11336,11 +11030,11 @@
     "yth/cccall/z": 0.1873,
     "yth/ecseat/estimate": 0.2896,
     "yth/ecseat/z": 0.2689,
-    "com/INDEX": -0.1037,
+    "com/INDEX": -0.6024,
     "eco/INDEX": 1.1061,
     "hel/INDEX": 0.5068,
     "yth/INDEX": 0.1816,
-    "cri/INDEX": 1.2198
+    "cri/INDEX": 1.1174
   },
   {
     "OBJECTID": 188,
@@ -11364,8 +11058,6 @@
     "dem/hispan/estimate": 0.6281,
     "dem/male/estimate": 0.4954,
     "dem/white/estimate": 0.3105,
-    "com/comrec/estimate": 0.1539,
-    "com/comrec/z": -0.3642,
     "com/evics/estimate": 92.2393,
     "com/evics/z": -0.3063,
     "com/libs/estimate": 0.2052,
@@ -11410,11 +11102,11 @@
     "yth/cccall/z": -0.7904,
     "yth/ecseat/estimate": 0.1519,
     "yth/ecseat/z": -1.0615,
-    "com/INDEX": -0.8898,
+    "com/INDEX": -1.1328,
     "eco/INDEX": -1.8314,
     "hel/INDEX": -2.7794,
     "yth/INDEX": -1.1391,
-    "cri/INDEX": -3.7905
+    "cri/INDEX": -3.8229
   },
   {
     "OBJECTID": 196,
@@ -11438,8 +11130,6 @@
     "dem/hispan/estimate": 0.5169,
     "dem/male/estimate": 0.5296,
     "dem/white/estimate": 0.442,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 184.4903,
     "com/evics/z": -2.2668,
     "com/libs/estimate": 0.4366,
@@ -11484,11 +11174,11 @@
     "yth/cccall/z": -1.5747,
     "yth/ecseat/estimate": 0.049,
     "yth/ecseat/z": -2.5709,
-    "com/INDEX": -0.4379,
+    "com/INDEX": -0.6907,
     "eco/INDEX": -2.2415,
     "hel/INDEX": -1.5626,
     "yth/INDEX": -2.8733,
-    "cri/INDEX": -3.4022
+    "cri/INDEX": -3.4597
   },
   {
     "OBJECTID": 43,
@@ -11512,8 +11202,6 @@
     "dem/hispan/estimate": 0.5249,
     "dem/male/estimate": 0.4971,
     "dem/white/estimate": 0.3409,
-    "com/comrec/estimate": 0.5077,
-    "com/comrec/z": 1.1675,
     "com/evics/estimate": 101.1149,
     "com/evics/z": -0.5661,
     "com/libs/estimate": 0.3554,
@@ -11558,11 +11246,11 @@
     "yth/cccall/z": -0.01,
     "yth/ecseat/estimate": 0.2249,
     "yth/ecseat/z": -0.3039,
-    "com/INDEX": 0.7151,
+    "com/INDEX": -0.0072,
     "eco/INDEX": -0.8406,
     "hel/INDEX": -1.562,
     "yth/INDEX": 0.0846,
-    "cri/INDEX": -1.6634
+    "cri/INDEX": -1.7639
   },
   {
     "OBJECTID": 99,
@@ -11586,8 +11274,6 @@
     "dem/hispan/estimate": 0.6731,
     "dem/male/estimate": 0.4798,
     "dem/white/estimate": 0.3565,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 91.9985,
     "com/evics/z": -0.2989,
     "com/libs/estimate": 0.1882,
@@ -11632,11 +11318,11 @@
     "yth/cccall/z": -0.6133,
     "yth/ecseat/estimate": 0.1587,
     "yth/ecseat/z": -0.9838,
-    "com/INDEX": 0.0455,
+    "com/INDEX": 0.6479,
     "eco/INDEX": -0.9337,
     "hel/INDEX": -1.4851,
     "yth/INDEX": -0.9754,
-    "cri/INDEX": -1.9659
+    "cri/INDEX": -1.8491
   },
   {
     "OBJECTID": 87,
@@ -11660,8 +11346,6 @@
     "dem/hispan/estimate": 0.6532,
     "dem/male/estimate": 0.5073,
     "dem/white/estimate": 0.4141,
-    "com/comrec/estimate": 0.1538,
-    "com/comrec/z": -0.3646,
     "com/evics/estimate": 69.2545,
     "com/evics/z": 0.5043,
     "com/libs/estimate": 0.2564,
@@ -11706,11 +11390,11 @@
     "yth/cccall/z": -0.8084,
     "yth/ecseat/estimate": 0.2139,
     "yth/ecseat/z": -0.4096,
-    "com/INDEX": -0.1796,
+    "com/INDEX": 0.4034,
     "eco/INDEX": 0.6482,
     "hel/INDEX": -0.2107,
     "yth/INDEX": -0.5977,
-    "cri/INDEX": 0.1968
+    "cri/INDEX": 0.2886
   },
   {
     "OBJECTID": 132,
@@ -11734,8 +11418,6 @@
     "dem/hispan/estimate": 0.4328,
     "dem/male/estimate": 0.4702,
     "dem/white/estimate": 0.1952,
-    "com/comrec/estimate": 0.3507,
-    "com/comrec/z": 0.5919,
     "com/evics/estimate": 124.1142,
     "com/evics/z": -1.1457,
     "com/libs/estimate": 0.1403,
@@ -11780,11 +11462,11 @@
     "yth/cccall/z": 0.5747,
     "yth/ecseat/estimate": 0.1933,
     "yth/ecseat/z": -0.6143,
-    "com/INDEX": -0.7643,
+    "com/INDEX": -1.5983,
     "eco/INDEX": -2.9199,
     "hel/INDEX": -3.5154,
     "yth/INDEX": 0.3722,
-    "cri/INDEX": -4.8809
+    "cri/INDEX": -4.9839
   },
   {
     "OBJECTID": 100,
@@ -11808,8 +11490,6 @@
     "dem/hispan/estimate": 0.4121,
     "dem/male/estimate": 0.4677,
     "dem/white/estimate": 0.184,
-    "com/comrec/estimate": 0.1269,
-    "com/comrec/z": -0.537,
     "com/evics/estimate": 139.7438,
     "com/evics/z": -1.4812,
     "com/libs/estimate": 0.1269,
@@ -11854,11 +11534,11 @@
     "yth/cccall/z": 1.6071,
     "yth/ecseat/estimate": 0.3373,
     "yth/ecseat/z": 0.6506,
-    "com/INDEX": -0.8718,
+    "com/INDEX": -1.1551,
     "eco/INDEX": -3.3672,
     "hel/INDEX": -2.207,
     "yth/INDEX": 2.4251,
-    "cri/INDEX": -3.9099
+    "cri/INDEX": -3.8951
   },
   {
     "OBJECTID": 101,
@@ -11882,8 +11562,6 @@
     "dem/hispan/estimate": 0.4038,
     "dem/male/estimate": 0.4699,
     "dem/white/estimate": 0.174,
-    "com/comrec/estimate": 0.3466,
-    "com/comrec/z": 0.5752,
     "com/evics/estimate": 143.1901,
     "com/evics/z": -1.5501,
     "com/libs/estimate": 0.2079,
@@ -11928,11 +11606,11 @@
     "yth/cccall/z": 1.3013,
     "yth/ecseat/estimate": 0.2549,
     "yth/ecseat/z": -0.0299,
-    "com/INDEX": -0.7081,
+    "com/INDEX": -1.4267,
     "eco/INDEX": -2.7656,
     "hel/INDEX": -3.231,
     "yth/INDEX": 1.4191,
-    "cri/INDEX": -4.3675
+    "cri/INDEX": -4.4388
   },
   {
     "OBJECTID": 36,
@@ -11956,8 +11634,6 @@
     "dem/hispan/estimate": 0.625,
     "dem/male/estimate": 0.4891,
     "dem/white/estimate": 0.3201,
-    "com/comrec/estimate": 0.0617,
-    "com/comrec/z": -1.0527,
     "com/evics/estimate": 93.9721,
     "com/evics/z": -0.3589,
     "com/libs/estimate": 0.3701,
@@ -12002,11 +11678,11 @@
     "yth/cccall/z": -0.7712,
     "yth/ecseat/estimate": 0.1618,
     "yth/ecseat/z": -0.95,
-    "com/INDEX": -0.8697,
+    "com/INDEX": -0.5906,
     "eco/INDEX": -1.8806,
     "hel/INDEX": -1.9962,
     "yth/INDEX": -0.6822,
-    "cri/INDEX": -3.1612
+    "cri/INDEX": -3.099
   },
   {
     "OBJECTID": 123,
@@ -12030,8 +11706,6 @@
     "dem/hispan/estimate": 0.2602,
     "dem/male/estimate": 0.5285,
     "dem/white/estimate": 0.5926,
-    "com/comrec/estimate": 0.5785,
-    "com/comrec/z": 1.3974,
     "com/evics/estimate": 69.5959,
     "com/evics/z": 0.4904,
     "com/libs/estimate": 0.5014,
@@ -12076,11 +11750,11 @@
     "yth/cccall/z": 1.4113,
     "yth/ecseat/estimate": 0.4882,
     "yth/ecseat/z": 1.708,
-    "com/INDEX": -0.3663,
+    "com/INDEX": -0.2226,
     "eco/INDEX": 2.7833,
     "hel/INDEX": 3.9849,
     "yth/INDEX": 1.7951,
-    "cri/INDEX": 5.304
+    "cri/INDEX": 5.2929
   },
   {
     "OBJECTID": 35,
@@ -12104,8 +11778,6 @@
     "dem/hispan/estimate": 0.502,
     "dem/male/estimate": 0.4945,
     "dem/white/estimate": 0.4432,
-    "com/comrec/estimate": 0.1062,
-    "com/comrec/z": -0.6821,
     "com/evics/estimate": 86.9212,
     "com/evics/z": -0.1383,
     "com/libs/estimate": 0.2123,
@@ -12150,11 +11822,11 @@
     "yth/cccall/z": -0.3948,
     "yth/ecseat/estimate": 0.2029,
     "yth/ecseat/z": -0.5173,
-    "com/INDEX": -1.8264,
+    "com/INDEX": -2.004,
     "eco/INDEX": -0.3012,
     "hel/INDEX": -0.3682,
     "yth/INDEX": -0.2987,
-    "cri/INDEX": -0.8576
+    "cri/INDEX": -0.9119
   },
   {
     "OBJECTID": 103,
@@ -12178,8 +11850,6 @@
     "dem/hispan/estimate": 0.4963,
     "dem/male/estimate": 0.4756,
     "dem/white/estimate": 0.2295,
-    "com/comrec/estimate": 0.1049,
-    "com/comrec/z": -0.6914,
     "com/evics/estimate": 116.6996,
     "com/evics/z": -0.9715,
     "com/libs/estimate": 0.1574,
@@ -12224,11 +11894,11 @@
     "yth/cccall/z": 0.8769,
     "yth/ecseat/estimate": 0.2988,
     "yth/ecseat/z": 0.3444,
-    "com/INDEX": -0.9092,
+    "com/INDEX": -0.7618,
     "eco/INDEX": -2.7509,
     "hel/INDEX": -2.1952,
     "yth/INDEX": 1.2972,
-    "cri/INDEX": -3.6356
+    "cri/INDEX": -3.5632
   },
   {
     "OBJECTID": 200,
@@ -12252,8 +11922,6 @@
     "dem/hispan/estimate": 0.4973,
     "dem/male/estimate": 0.4765,
     "dem/white/estimate": 0.2281,
-    "com/comrec/estimate": 0.1498,
-    "com/comrec/z": -0.3895,
     "com/evics/estimate": 125.0359,
     "com/evics/z": -1.1666,
     "com/libs/estimate": 0.1498,
@@ -12298,11 +11966,11 @@
     "yth/cccall/z": 0.8417,
     "yth/ecseat/estimate": 0.3041,
     "yth/ecseat/z": 0.3882,
-    "com/INDEX": -0.2419,
+    "com/INDEX": -0.4353,
     "eco/INDEX": -2.6319,
     "hel/INDEX": -2.5405,
     "yth/INDEX": 1.3115,
-    "cri/INDEX": -3.6905
+    "cri/INDEX": -3.669
   },
   {
     "OBJECTID": 189,
@@ -12326,8 +11994,6 @@
     "dem/hispan/estimate": 0.5699,
     "dem/male/estimate": 0.4961,
     "dem/white/estimate": 0.3425,
-    "com/comrec/estimate": 0.477,
-    "com/comrec/z": 1.0628,
     "com/evics/estimate": 87.7297,
     "com/evics/z": -0.1645,
     "com/libs/estimate": 0.2862,
@@ -12372,11 +12038,11 @@
     "yth/cccall/z": -0.3511,
     "yth/ecseat/estimate": 0.194,
     "yth/ecseat/z": -0.6073,
-    "com/INDEX": -0.3336,
+    "com/INDEX": -1.1087,
     "eco/INDEX": -1.1787,
     "hel/INDEX": -2.2202,
     "yth/INDEX": -0.4361,
-    "cri/INDEX": -2.6723
+    "cri/INDEX": -2.7946
   },
   {
     "OBJECTID": 169,
@@ -12400,8 +12066,6 @@
     "dem/hispan/estimate": 0.38,
     "dem/male/estimate": 0.5143,
     "dem/white/estimate": 0.5875,
-    "com/comrec/estimate": 0.2495,
-    "com/comrec/z": 0.1485,
     "com/evics/estimate": 52.5609,
     "com/evics/z": 1.2843,
     "com/libs/estimate": 0.3742,
@@ -12446,11 +12110,11 @@
     "yth/cccall/z": -0.158,
     "yth/ecseat/estimate": 0.312,
     "yth/ecseat/z": 0.4516,
-    "com/INDEX": 1.763,
+    "com/INDEX": 1.9347,
     "eco/INDEX": 1.0812,
     "hel/INDEX": 2.1682,
     "yth/INDEX": -0.7132,
-    "cri/INDEX": 2.6075
+    "cri/INDEX": 2.6255
   },
   {
     "OBJECTID": 104,
@@ -12474,8 +12138,6 @@
     "dem/hispan/estimate": 0.5724,
     "dem/male/estimate": 0.4783,
     "dem/white/estimate": 0.2915,
-    "com/comrec/estimate": 0.0905,
-    "com/comrec/z": -0.8017,
     "com/evics/estimate": 103.6048,
     "com/evics/z": -0.6349,
     "com/libs/estimate": 0.181,
@@ -12520,11 +12182,11 @@
     "yth/cccall/z": 0.5451,
     "yth/ecseat/estimate": 0.2948,
     "yth/ecseat/z": 0.312,
-    "com/INDEX": -0.0106,
+    "com/INDEX": 0.355,
     "eco/INDEX": -1.8297,
     "hel/INDEX": -1.7508,
     "yth/INDEX": 1.0604,
-    "cri/INDEX": -2.5028
+    "cri/INDEX": -2.3935
   },
   {
     "OBJECTID": 29,
@@ -12548,8 +12210,6 @@
     "dem/hispan/estimate": 0.2939,
     "dem/male/estimate": 0.4576,
     "dem/white/estimate": 0.1513,
-    "com/comrec/estimate": 0.2017,
-    "com/comrec/z": -0.0927,
     "com/evics/estimate": 163.184,
     "com/evics/z": -1.9197,
     "com/libs/estimate": 0.2017,
@@ -12594,11 +12254,11 @@
     "yth/cccall/z": 2.226,
     "yth/ecseat/estimate": 0.4238,
     "yth/ecseat/z": 1.2801,
-    "com/INDEX": -0.34,
+    "com/INDEX": -0.6447,
     "eco/INDEX": -3.8501,
     "hel/INDEX": -0.8677,
     "yth/INDEX": 4.0099,
-    "cri/INDEX": -2.9138
+    "cri/INDEX": -2.8823
   },
   {
     "OBJECTID": 88,
@@ -12622,8 +12282,6 @@
     "dem/hispan/estimate": 0.6028,
     "dem/male/estimate": 0.501,
     "dem/white/estimate": 0.3498,
-    "com/comrec/estimate": 0.171,
-    "com/comrec/z": -0.2627,
     "com/evics/estimate": 81.4382,
     "com/evics/z": 0.0459,
     "com/libs/estimate": 0.2138,
@@ -12668,11 +12326,11 @@
     "yth/cccall/z": -0.2587,
     "yth/ecseat/estimate": 0.1887,
     "yth/ecseat/z": -0.6609,
-    "com/INDEX": -0.6112,
+    "com/INDEX": -0.2383,
     "eco/INDEX": -0.5299,
     "hel/INDEX": -1.5826,
     "yth/INDEX": -0.3523,
-    "cri/INDEX": -1.7424
+    "cri/INDEX": -1.6701
   },
   {
     "OBJECTID": 170,
@@ -12696,8 +12354,6 @@
     "dem/hispan/estimate": 0.4108,
     "dem/male/estimate": 0.5098,
     "dem/white/estimate": 0.5469,
-    "com/comrec/estimate": 0.181,
-    "com/comrec/z": -0.2059,
     "com/evics/estimate": 56.1021,
     "com/evics/z": 1.0999,
     "com/libs/estimate": 0.3016,
@@ -12742,11 +12398,11 @@
     "yth/cccall/z": -0.7717,
     "yth/ecseat/estimate": 0.2489,
     "yth/ecseat/z": -0.0836,
-    "com/INDEX": 1.8832,
+    "com/INDEX": 2.1266,
     "eco/INDEX": 1.1316,
     "hel/INDEX": 1.6244,
     "yth/INDEX": -1.5099,
-    "cri/INDEX": 2.1248
+    "cri/INDEX": 2.151
   },
   {
     "OBJECTID": 42,
@@ -12770,8 +12426,6 @@
     "dem/hispan/estimate": 0.5305,
     "dem/male/estimate": 0.4985,
     "dem/white/estimate": 0.3869,
-    "com/comrec/estimate": 0.4263,
-    "com/comrec/z": 0.8824,
     "com/evics/estimate": 87.5641,
     "com/evics/z": -0.1592,
     "com/libs/estimate": 0.2368,
@@ -12816,11 +12470,11 @@
     "yth/cccall/z": -0.0619,
     "yth/ecseat/estimate": 0.2052,
     "yth/ecseat/z": -0.4942,
-    "com/INDEX": -0.2277,
+    "com/INDEX": -0.9232,
     "eco/INDEX": -0.5465,
     "hel/INDEX": -1.2914,
     "yth/INDEX": -0.1068,
-    "cri/INDEX": -1.4313
+    "cri/INDEX": -1.5464
   },
   {
     "OBJECTID": 163,
@@ -12844,8 +12498,6 @@
     "dem/hispan/estimate": 0.3379,
     "dem/male/estimate": 0.4944,
     "dem/white/estimate": 0.5663,
-    "com/comrec/estimate": 0.22,
-    "com/comrec/z": 0.0027,
     "com/evics/estimate": 62.1662,
     "com/evics/z": 0.8096,
     "com/libs/estimate": 0.275,
@@ -12890,11 +12542,11 @@
     "yth/cccall/z": -0.1506,
     "yth/ecseat/estimate": 0.2977,
     "yth/ecseat/z": 0.3356,
-    "com/INDEX": 2.1576,
+    "com/INDEX": 2.1085,
     "eco/INDEX": 1.5035,
     "hel/INDEX": 2.5623,
     "yth/INDEX": -0.6265,
-    "cri/INDEX": 3.2992
+    "cri/INDEX": 3.2768
   },
   {
     "OBJECTID": 186,
@@ -12918,8 +12570,6 @@
     "dem/hispan/estimate": 0.6131,
     "dem/male/estimate": 0.4854,
     "dem/white/estimate": 0.275,
-    "com/comrec/estimate": 0.4481,
-    "com/comrec/z": 0.9614,
     "com/evics/estimate": 116.4594,
     "com/evics/z": -0.9657,
     "com/libs/estimate": 0.1921,
@@ -12964,11 +12614,11 @@
     "yth/cccall/z": -0.9199,
     "yth/ecseat/estimate": 0.1363,
     "yth/ecseat/z": -1.2458,
-    "com/INDEX": 0.3565,
+    "com/INDEX": -0.6236,
     "eco/INDEX": -2.0846,
     "hel/INDEX": -3.442,
     "yth/INDEX": -1.2788,
-    "cri/INDEX": -4.2899
+    "cri/INDEX": -4.4338
   },
   {
     "OBJECTID": 26,
@@ -12992,8 +12642,6 @@
     "dem/hispan/estimate": 0.3856,
     "dem/male/estimate": 0.4644,
     "dem/white/estimate": 0.1964,
-    "com/comrec/estimate": 0.1557,
-    "com/comrec/z": -0.3531,
     "com/evics/estimate": 143.4181,
     "com/evics/z": -1.5546,
     "com/libs/estimate": 0.3115,
@@ -13038,11 +12686,11 @@
     "yth/cccall/z": 2.1782,
     "yth/ecseat/estimate": 0.4095,
     "yth/ecseat/z": 1.1808,
-    "com/INDEX": -0.9256,
+    "com/INDEX": -0.9465,
     "eco/INDEX": -3.5501,
     "hel/INDEX": -1.4628,
     "yth/INDEX": 3.6543,
-    "cri/INDEX": -3.2926
+    "cri/INDEX": -3.2196
   },
   {
     "OBJECTID": 106,
@@ -13066,8 +12714,6 @@
     "dem/hispan/estimate": 0.7512,
     "dem/male/estimate": 0.4806,
     "dem/white/estimate": 0.3767,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 67.6072,
     "com/evics/z": 0.5723,
     "com/libs/estimate": 0.2566,
@@ -13112,11 +12758,11 @@
     "yth/cccall/z": -1.5262,
     "yth/ecseat/estimate": 0.1287,
     "yth/ecseat/z": -1.3388,
-    "com/INDEX": 0.9461,
+    "com/INDEX": 1.5148,
     "eco/INDEX": -0.7309,
     "hel/INDEX": -1.7566,
     "yth/INDEX": -2.0322,
-    "cri/INDEX": -2.0435
+    "cri/INDEX": -1.9343
   },
   {
     "OBJECTID": 185,
@@ -13140,8 +12786,6 @@
     "dem/hispan/estimate": 0.6195,
     "dem/male/estimate": 0.4872,
     "dem/white/estimate": 0.3179,
-    "com/comrec/estimate": 0.0765,
-    "com/comrec/z": -0.9175,
     "com/evics/estimate": 92.6941,
     "com/evics/z": -0.3202,
     "com/libs/estimate": 0.3826,
@@ -13186,11 +12830,11 @@
     "yth/cccall/z": -0.7551,
     "yth/ecseat/estimate": 0.1523,
     "yth/ecseat/z": -1.0567,
-    "com/INDEX": 0.2217,
+    "com/INDEX": 0.4514,
     "eco/INDEX": -2.0165,
     "hel/INDEX": -1.8842,
     "yth/INDEX": -0.4604,
-    "cri/INDEX": -2.9586
+    "cri/INDEX": -2.8881
   },
   {
     "OBJECTID": 86,
@@ -13214,8 +12858,6 @@
     "dem/hispan/estimate": 0.6486,
     "dem/male/estimate": 0.4893,
     "dem/white/estimate": 0.3654,
-    "com/comrec/estimate": 0.0938,
-    "com/comrec/z": -0.7755,
     "com/evics/estimate": 83.4309,
     "com/evics/z": -0.0224,
     "com/libs/estimate": 0.2346,
@@ -13260,11 +12902,11 @@
     "yth/cccall/z": -0.3686,
     "yth/ecseat/estimate": 0.1922,
     "yth/ecseat/z": -0.6253,
-    "com/INDEX": 0.4472,
+    "com/INDEX": 0.9322,
     "eco/INDEX": -0.6016,
     "hel/INDEX": -1.537,
     "yth/INDEX": -0.3775,
-    "cri/INDEX": -1.5884
+    "cri/INDEX": -1.4821
   },
   {
     "OBJECTID": 38,
@@ -13288,8 +12930,6 @@
     "dem/hispan/estimate": 0.5756,
     "dem/male/estimate": 0.4985,
     "dem/white/estimate": 0.3684,
-    "com/comrec/estimate": 0.3413,
-    "com/comrec/z": 0.5537,
     "com/evics/estimate": 89.661,
     "com/evics/z": -0.2261,
     "com/libs/estimate": 0.195,
@@ -13334,11 +12974,11 @@
     "yth/cccall/z": -0.4906,
     "yth/ecseat/estimate": 0.1773,
     "yth/ecseat/z": -0.7802,
-    "com/INDEX": -1.2693,
+    "com/INDEX": -1.911,
     "eco/INDEX": -1.065,
     "hel/INDEX": -1.543,
     "yth/INDEX": -0.5788,
-    "cri/INDEX": -2.2616
+    "cri/INDEX": -2.3803
   },
   {
     "OBJECTID": 204,
@@ -13362,8 +13002,6 @@
     "dem/hispan/estimate": 0.518,
     "dem/male/estimate": 0.4948,
     "dem/white/estimate": 0.4321,
-    "com/comrec/estimate": 0.1021,
-    "com/comrec/z": -0.7122,
     "com/evics/estimate": 90.9921,
     "com/evics/z": -0.2678,
     "com/libs/estimate": 0.2553,
@@ -13408,11 +13046,11 @@
     "yth/cccall/z": -0.6284,
     "yth/ecseat/estimate": 0.1815,
     "yth/ecseat/z": -0.7359,
-    "com/INDEX": -1.9513,
+    "com/INDEX": -2.1585,
     "eco/INDEX": -0.3358,
     "hel/INDEX": -0.6451,
     "yth/INDEX": -0.7407,
-    "cri/INDEX": -1.1858
+    "cri/INDEX": -1.2503
   },
   {
     "OBJECTID": 197,
@@ -13436,8 +13074,6 @@
     "dem/hispan/estimate": 0.5597,
     "dem/male/estimate": 0.5196,
     "dem/white/estimate": 0.3868,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 197.7896,
     "com/evics/z": -2.4636,
     "com/libs/estimate": 0.5873,
@@ -13482,11 +13118,11 @@
     "yth/cccall/z": -2.0044,
     "yth/ecseat/estimate": 0.0517,
     "yth/ecseat/z": -2.5174,
-    "com/INDEX": 0.6892,
+    "com/INDEX": 0.4796,
     "eco/INDEX": -2.6129,
     "hel/INDEX": -2.139,
     "yth/INDEX": -2.8689,
-    "cri/INDEX": -3.9214
+    "cri/INDEX": -3.9486
   },
   {
     "OBJECTID": 45,
@@ -13510,8 +13146,6 @@
     "dem/hispan/estimate": 0.6015,
     "dem/male/estimate": 0.4965,
     "dem/white/estimate": 0.3379,
-    "com/comrec/estimate": 0.1971,
-    "com/comrec/z": -0.117,
     "com/evics/estimate": 86.5647,
     "com/evics/z": -0.1267,
     "com/libs/estimate": 0.1971,
@@ -13556,11 +13190,11 @@
     "yth/cccall/z": -0.4957,
     "yth/ecseat/estimate": 0.1819,
     "yth/ecseat/z": -0.7319,
-    "com/INDEX": -1.086,
+    "com/INDEX": -1.5165,
     "eco/INDEX": -1.462,
     "hel/INDEX": -2.2279,
     "yth/INDEX": -0.6132,
-    "cri/INDEX": -3.0461
+    "cri/INDEX": -3.1157
   },
   {
     "OBJECTID": 249,
@@ -13584,8 +13218,6 @@
     "dem/hispan/estimate": 0.4458,
     "dem/male/estimate": 0.4713,
     "dem/white/estimate": 0.2035,
-    "com/comrec/estimate": 0.334,
-    "com/comrec/z": 0.5235,
     "com/evics/estimate": 124.0148,
     "com/evics/z": -1.1435,
     "com/libs/estimate": 0.1336,
@@ -13630,11 +13262,11 @@
     "yth/cccall/z": 0.5762,
     "yth/ecseat/estimate": 0.2026,
     "yth/ecseat/z": -0.5206,
-    "com/INDEX": -0.3664,
+    "com/INDEX": -1.0801,
     "eco/INDEX": -2.7712,
     "hel/INDEX": -3.4924,
     "yth/INDEX": 0.5069,
-    "cri/INDEX": -4.663
+    "cri/INDEX": -4.7387
   },
   {
     "OBJECTID": 64,
@@ -13658,8 +13290,6 @@
     "dem/hispan/estimate": 0.4284,
     "dem/male/estimate": 0.526,
     "dem/white/estimate": 0.51,
-    "com/comrec/estimate": 0.2638,
-    "com/comrec/z": 0.216,
     "com/evics/estimate": 74.0852,
     "com/evics/z": 0.3136,
     "com/libs/estimate": 0.4397,
@@ -13704,11 +13334,11 @@
     "yth/cccall/z": 0.3201,
     "yth/ecseat/estimate": 0.3932,
     "yth/ecseat/z": 1.0653,
-    "com/INDEX": -0.7944,
+    "com/INDEX": -0.1378,
     "eco/INDEX": 2.4787,
     "hel/INDEX": 2.7555,
     "yth/INDEX": 0.8582,
-    "cri/INDEX": 3.927
+    "cri/INDEX": 4.0036
   },
   {
     "OBJECTID": 230,
@@ -13732,8 +13362,6 @@
     "dem/hispan/estimate": 0.4444,
     "dem/male/estimate": 0.4852,
     "dem/white/estimate": 0.2375,
-    "com/comrec/estimate": 0.5965,
-    "com/comrec/z": 1.4535,
     "com/evics/estimate": 130.2872,
     "com/evics/z": -1.283,
     "com/libs/estimate": 0.2651,
@@ -13778,11 +13406,11 @@
     "yth/cccall/z": 1.0046,
     "yth/ecseat/estimate": 0.277,
     "yth/ecseat/z": 0.1622,
-    "com/INDEX": 0.1245,
+    "com/INDEX": -0.8436,
     "eco/INDEX": -2.3434,
     "hel/INDEX": -3.0176,
     "yth/INDEX": 1.5564,
-    "cri/INDEX": -3.729
+    "cri/INDEX": -3.8381
   },
   {
     "OBJECTID": 28,
@@ -13806,8 +13434,6 @@
     "dem/hispan/estimate": 0.3951,
     "dem/male/estimate": 0.4662,
     "dem/white/estimate": 0.216,
-    "com/comrec/estimate": 0.1622,
-    "com/comrec/z": -0.3144,
     "com/evics/estimate": 151.3833,
     "com/evics/z": -1.7074,
     "com/libs/estimate": 0.3244,
@@ -13852,11 +13478,11 @@
     "yth/cccall/z": 1.9094,
     "yth/ecseat/estimate": 0.4057,
     "yth/ecseat/z": 1.154,
-    "com/INDEX": -0.9413,
+    "com/INDEX": -0.985,
     "eco/INDEX": -3.5102,
     "hel/INDEX": -1.1332,
     "yth/INDEX": 3.4433,
-    "cri/INDEX": -3.0542
+    "cri/INDEX": -2.9913
   },
   {
     "OBJECTID": 70,
@@ -13880,8 +13506,6 @@
     "dem/hispan/estimate": 0.6916,
     "dem/male/estimate": 0.4979,
     "dem/white/estimate": 0.4494,
-    "com/comrec/estimate": 0.4053,
-    "com/comrec/z": 0.8046,
     "com/evics/estimate": 59.3942,
     "com/evics/z": 0.9386,
     "com/libs/estimate": 0.608,
@@ -13926,11 +13550,11 @@
     "yth/cccall/z": -0.8607,
     "yth/ecseat/estimate": 0.2378,
     "yth/ecseat/z": -0.1842,
-    "com/INDEX": 1.1842,
+    "com/INDEX": 1.3787,
     "eco/INDEX": 0.5135,
     "hel/INDEX": 0.5928,
     "yth/INDEX": -0.2725,
-    "cri/INDEX": 0.9808
+    "cri/INDEX": 1.0187
   },
   {
     "OBJECTID": 32,
@@ -13954,8 +13578,6 @@
     "dem/hispan/estimate": 0.6632,
     "dem/male/estimate": 0.4838,
     "dem/white/estimate": 0.2883,
-    "com/comrec/estimate": 0.2321,
-    "com/comrec/z": 0.0635,
     "com/evics/estimate": 75.2619,
     "com/evics/z": 0.269,
     "com/libs/estimate": 0.1547,
@@ -14000,11 +13622,11 @@
     "yth/cccall/z": -1.397,
     "yth/ecseat/estimate": 0.1148,
     "yth/ecseat/z": -1.5183,
-    "com/INDEX": 0.8644,
+    "com/INDEX": 0.3087,
     "eco/INDEX": -2.0436,
     "hel/INDEX": -3.4287,
     "yth/INDEX": -2.0549,
-    "cri/INDEX": -4.2944
+    "cri/INDEX": -4.3654
   },
   {
     "OBJECTID": 127,
@@ -14028,8 +13650,6 @@
     "dem/hispan/estimate": 0.3322,
     "dem/male/estimate": 0.5072,
     "dem/white/estimate": 0.5435,
-    "com/comrec/estimate": 0.404,
-    "com/comrec/z": 0.7996,
     "com/evics/estimate": 69.5809,
     "com/evics/z": 0.491,
     "com/libs/estimate": 0.404,
@@ -14074,11 +13694,11 @@
     "yth/cccall/z": 0.7487,
     "yth/ecseat/estimate": 0.3504,
     "yth/ecseat/z": 0.7504,
-    "com/INDEX": 0.5388,
+    "com/INDEX": 0.2986,
     "eco/INDEX": 2.0646,
     "hel/INDEX": 1.9201,
     "yth/INDEX": 0.8177,
-    "cri/INDEX": 3.2092
+    "cri/INDEX": 3.1506
   },
   {
     "OBJECTID": 71,
@@ -14102,8 +13722,6 @@
     "dem/hispan/estimate": 0.4747,
     "dem/male/estimate": 0.5266,
     "dem/white/estimate": 0.5191,
-    "com/comrec/estimate": 0.2299,
-    "com/comrec/z": 0.0529,
     "com/evics/estimate": 47.2936,
     "com/evics/z": 1.5829,
     "com/libs/estimate": 0.2299,
@@ -14148,11 +13766,11 @@
     "yth/cccall/z": -0.7203,
     "yth/ecseat/estimate": 0.2537,
     "yth/ecseat/z": -0.0407,
-    "com/INDEX": 1.2356,
+    "com/INDEX": 1.5065,
     "eco/INDEX": 1.3419,
     "hel/INDEX": 1.6789,
     "yth/INDEX": -1.3534,
-    "cri/INDEX": 2.2404
+    "cri/INDEX": 2.263
   },
   {
     "OBJECTID": 72,
@@ -14176,8 +13794,6 @@
     "dem/hispan/estimate": 0.6158,
     "dem/male/estimate": 0.4887,
     "dem/white/estimate": 0.3435,
-    "com/comrec/estimate": 0.1341,
-    "com/comrec/z": -0.4892,
     "com/evics/estimate": 82.2912,
     "com/evics/z": 0.0165,
     "com/libs/estimate": 0.2682,
@@ -14222,11 +13838,11 @@
     "yth/cccall/z": -0.1633,
     "yth/ecseat/estimate": 0.1943,
     "yth/ecseat/z": -0.6035,
-    "com/INDEX": 0.2689,
+    "com/INDEX": 0.6427,
     "eco/INDEX": -0.8781,
     "hel/INDEX": -1.6354,
     "yth/INDEX": -0.1322,
-    "cri/INDEX": -1.8577
+    "cri/INDEX": -1.7676
   },
   {
     "OBJECTID": 233,
@@ -14250,8 +13866,6 @@
     "dem/hispan/estimate": 0.6395,
     "dem/male/estimate": 0.4902,
     "dem/white/estimate": 0.3083,
-    "com/comrec/estimate": 0.0693,
-    "com/comrec/z": -0.982,
     "com/evics/estimate": 91.8325,
     "com/evics/z": -0.2938,
     "com/libs/estimate": 0.277,
@@ -14296,11 +13910,11 @@
     "yth/cccall/z": -1.1563,
     "yth/ecseat/estimate": 0.1366,
     "yth/ecseat/z": -1.2427,
-    "com/INDEX": 0.027,
+    "com/INDEX": 0.1487,
     "eco/INDEX": -1.9818,
     "hel/INDEX": -2.5486,
     "yth/INDEX": -1.2076,
-    "cri/INDEX": -3.588
+    "cri/INDEX": -3.544
   },
   {
     "OBJECTID": 105,
@@ -14324,8 +13938,6 @@
     "dem/hispan/estimate": 0.7155,
     "dem/male/estimate": 0.4815,
     "dem/white/estimate": 0.3784,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 66.312,
     "com/evics/z": 0.6271,
     "com/libs/estimate": 0.2756,
@@ -14370,11 +13982,11 @@
     "yth/cccall/z": -1.3375,
     "yth/ecseat/estimate": 0.1273,
     "yth/ecseat/z": -1.3574,
-    "com/INDEX": 0.6976,
+    "com/INDEX": 1.3661,
     "eco/INDEX": -0.5584,
     "hel/INDEX": -1.4628,
     "yth/INDEX": -2.0089,
-    "cri/INDEX": -1.7325
+    "cri/INDEX": -1.612
   },
   {
     "OBJECTID": 81,
@@ -14398,8 +14010,6 @@
     "dem/hispan/estimate": 0.6534,
     "dem/male/estimate": 0.5034,
     "dem/white/estimate": 0.395,
-    "com/comrec/estimate": 0.0939,
-    "com/comrec/z": -0.7751,
     "com/evics/estimate": 77.8995,
     "com/evics/z": 0.1716,
     "com/libs/estimate": 0.2347,
@@ -14444,11 +14054,11 @@
     "yth/cccall/z": -0.4678,
     "yth/ecseat/estimate": 0.1967,
     "yth/ecseat/z": -0.5799,
-    "com/INDEX": -0.4445,
+    "com/INDEX": 0.2017,
     "eco/INDEX": 0.2478,
     "hel/INDEX": -1.2106,
     "yth/INDEX": -0.3706,
-    "cri/INDEX": -0.8572
+    "cri/INDEX": -0.743
   },
   {
     "OBJECTID": 179,
@@ -14472,8 +14082,6 @@
     "dem/hispan/estimate": 0.6411,
     "dem/male/estimate": 0.4925,
     "dem/white/estimate": 0.3094,
-    "com/comrec/estimate": 0.0807,
-    "com/comrec/z": -0.8819,
     "com/evics/estimate": 104.7933,
     "com/evics/z": -0.6672,
     "com/libs/estimate": 0.4035,
@@ -14518,11 +14126,11 @@
     "yth/cccall/z": -1.3917,
     "yth/ecseat/estimate": 0.1139,
     "yth/ecseat/z": -1.5293,
-    "com/INDEX": 0.6865,
+    "com/INDEX": 0.5534,
     "eco/INDEX": -2.0588,
     "hel/INDEX": -2.5611,
     "yth/INDEX": -1.6271,
-    "cri/INDEX": -3.6146
+    "cri/INDEX": -3.6129
   },
   {
     "OBJECTID": 102,
@@ -14546,8 +14154,6 @@
     "dem/hispan/estimate": 0.5866,
     "dem/male/estimate": 0.4733,
     "dem/white/estimate": 0.3093,
-    "com/comrec/estimate": 0.0553,
-    "com/comrec/z": -1.1155,
     "com/evics/estimate": 114.3875,
     "com/evics/z": -0.9149,
     "com/libs/estimate": 0.2214,
@@ -14592,11 +14198,11 @@
     "yth/cccall/z": 0.1688,
     "yth/ecseat/estimate": 0.2778,
     "yth/ecseat/z": 0.1689,
-    "com/INDEX": -0.3225,
+    "com/INDEX": -0.1388,
     "eco/INDEX": -1.7481,
     "hel/INDEX": -1.3443,
     "yth/INDEX": 0.4249,
-    "cri/INDEX": -2.2966
+    "cri/INDEX": -2.2366
   },
   {
     "OBJECTID": 68,
@@ -14620,8 +14226,6 @@
     "dem/hispan/estimate": 0.4397,
     "dem/male/estimate": 0.5216,
     "dem/white/estimate": 0.5461,
-    "com/comrec/estimate": 0.148,
-    "com/comrec/z": -0.4003,
     "com/evics/estimate": 45.4412,
     "com/evics/z": 1.696,
     "com/libs/estimate": 0.4441,
@@ -14666,11 +14270,11 @@
     "yth/cccall/z": -0.4242,
     "yth/ecseat/estimate": 0.2624,
     "yth/ecseat/z": 0.0364,
-    "com/INDEX": 1.5843,
+    "com/INDEX": 2.0324,
     "eco/INDEX": 1.4393,
     "hel/INDEX": 1.7504,
     "yth/INDEX": -1.3311,
-    "cri/INDEX": 2.4291
+    "cri/INDEX": 2.4872
   },
   {
     "OBJECTID": 192,
@@ -14694,8 +14298,6 @@
     "dem/hispan/estimate": 0.3301,
     "dem/male/estimate": 0.4969,
     "dem/white/estimate": 0.5187,
-    "com/comrec/estimate": 0.3266,
-    "com/comrec/z": 0.4929,
     "com/evics/estimate": 36.1943,
     "com/evics/z": 2.3394,
     "com/libs/estimate": 0.3266,
@@ -14740,11 +14342,11 @@
     "yth/cccall/z": 1.4072,
     "yth/ecseat/estimate": 0.4415,
     "yth/ecseat/z": 1.401,
-    "com/INDEX": 3.5607,
+    "com/INDEX": 3.5321,
     "eco/INDEX": 1.3078,
     "hel/INDEX": 2.7183,
     "yth/INDEX": 0.8529,
-    "cri/INDEX": 3.7534
+    "cri/INDEX": 3.7725
   },
   {
     "OBJECTID": 19,
@@ -14768,8 +14370,6 @@
     "dem/hispan/estimate": 0.286,
     "dem/male/estimate": 0.491,
     "dem/white/estimate": 0.5531,
-    "com/comrec/estimate": 0.2026,
-    "com/comrec/z": -0.0875,
     "com/evics/estimate": 53.1451,
     "com/evics/z": 1.253,
     "com/libs/estimate": 0.2533,
@@ -14814,11 +14414,11 @@
     "yth/cccall/z": 0.3637,
     "yth/ecseat/estimate": 0.3744,
     "yth/ecseat/z": 0.9291,
-    "com/INDEX": 2.6408,
+    "com/INDEX": 2.6412,
     "eco/INDEX": 1.229,
     "hel/INDEX": 2.9025,
     "yth/INDEX": 0.0329,
-    "cri/INDEX": 3.5402
+    "cri/INDEX": 3.5411
   },
   {
     "OBJECTID": 52,
@@ -14842,8 +14442,6 @@
     "dem/hispan/estimate": 0.2447,
     "dem/male/estimate": 0.5251,
     "dem/white/estimate": 0.6022,
-    "com/comrec/estimate": 0.5134,
-    "com/comrec/z": 1.1865,
     "com/evics/estimate": 69.4187,
     "com/evics/z": 0.4976,
     "com/libs/estimate": 0.44,
@@ -14888,11 +14486,11 @@
     "yth/cccall/z": 1.3393,
     "yth/ecseat/estimate": 0.4712,
     "yth/ecseat/z": 1.5975,
-    "com/INDEX": -0.2739,
+    "com/INDEX": -0.3146,
     "eco/INDEX": 2.8528,
     "hel/INDEX": 3.7984,
     "yth/INDEX": 1.4546,
-    "cri/INDEX": 5.1747
+    "cri/INDEX": 5.128
   },
   {
     "OBJECTID": 59,
@@ -14916,8 +14514,6 @@
     "dem/hispan/estimate": 0.2629,
     "dem/male/estimate": 0.5319,
     "dem/white/estimate": 0.6039,
-    "com/comrec/estimate": 0.3424,
-    "com/comrec/z": 0.5583,
     "com/evics/estimate": 67.3602,
     "com/evics/z": 0.5827,
     "com/libs/estimate": 0.4708,
@@ -14962,11 +14558,11 @@
     "yth/cccall/z": 1.1267,
     "yth/ecseat/estimate": 0.4877,
     "yth/ecseat/z": 1.7044,
-    "com/INDEX": -0.4988,
+    "com/INDEX": 0.01,
     "eco/INDEX": 3.1024,
     "hel/INDEX": 4.5468,
     "yth/INDEX": 1.1302,
-    "cri/INDEX": 5.8293
+    "cri/INDEX": 5.8666
   },
   {
     "OBJECTID": 18,
@@ -14990,8 +14586,6 @@
     "dem/hispan/estimate": 0.4335,
     "dem/male/estimate": 0.4971,
     "dem/white/estimate": 0.4306,
-    "com/comrec/estimate": 0.1595,
-    "com/comrec/z": -0.3302,
     "com/evics/estimate": 83.8791,
     "com/evics/z": -0.0376,
     "com/libs/estimate": 0.2127,
@@ -15036,7 +14630,7 @@
     "yth/cccall/z": -0.8742,
     "yth/ecseat/estimate": 0.2042,
     "yth/ecseat/z": -0.5049,
-    "com/INDEX": -0.0778,
+    "com/INDEX": -0.0627,
     "eco/INDEX": -0.5339,
     "hel/INDEX": -0.6669,
     "yth/INDEX": -0.8945,
@@ -15064,8 +14658,6 @@
     "dem/hispan/estimate": 0.4521,
     "dem/male/estimate": 0.5123,
     "dem/white/estimate": 0.4014,
-    "com/comrec/estimate": 0.5075,
-    "com/comrec/z": 1.1668,
     "com/evics/estimate": 89.8371,
     "com/evics/z": -0.2317,
     "com/libs/estimate": 0.4229,
@@ -15110,11 +14702,11 @@
     "yth/cccall/z": 0.7955,
     "yth/ecseat/estimate": 0.3265,
     "yth/ecseat/z": 0.5668,
-    "com/INDEX": -1.3306,
+    "com/INDEX": -1.3652,
     "eco/INDEX": 0.9079,
     "hel/INDEX": 0.2063,
     "yth/INDEX": 1.1425,
-    "cri/INDEX": 0.8021
+    "cri/INDEX": 0.7842
   },
   {
     "OBJECTID": 174,
@@ -15138,8 +14730,6 @@
     "dem/hispan/estimate": 0.2121,
     "dem/male/estimate": 0.4926,
     "dem/white/estimate": 0.5348,
-    "com/comrec/estimate": 0.0749,
-    "com/comrec/z": -0.9318,
     "com/evics/estimate": 68.4669,
     "com/evics/z": 0.5366,
     "com/libs/estimate": 0.337,
@@ -15184,11 +14774,11 @@
     "yth/cccall/z": -0.2517,
     "yth/ecseat/estimate": 0.3166,
     "yth/ecseat/z": 0.4887,
-    "com/INDEX": 0.7701,
+    "com/INDEX": 1.2925,
     "eco/INDEX": 0.6725,
     "hel/INDEX": 2.374,
     "yth/INDEX": -0.7002,
-    "cri/INDEX": 2.2912
+    "cri/INDEX": 2.3615
   },
   {
     "OBJECTID": 108,
@@ -15212,8 +14802,6 @@
     "dem/hispan/estimate": 0.6982,
     "dem/male/estimate": 0.4864,
     "dem/white/estimate": 0.3902,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 65.731,
     "com/evics/z": 0.6519,
     "com/libs/estimate": 0.3012,
@@ -15258,11 +14846,11 @@
     "yth/cccall/z": -0.9811,
     "yth/ecseat/estimate": 0.1571,
     "yth/ecseat/z": -1.0019,
-    "com/INDEX": 1.1393,
+    "com/INDEX": 2.0887,
     "eco/INDEX": -0.3223,
     "hel/INDEX": -1.3387,
     "yth/INDEX": -1.0178,
-    "cri/INDEX": -1.2224
+    "cri/INDEX": -1.0354
   },
   {
     "OBJECTID": 73,
@@ -15286,8 +14874,6 @@
     "dem/hispan/estimate": 0.4984,
     "dem/male/estimate": 0.5063,
     "dem/white/estimate": 0.3871,
-    "com/comrec/estimate": 0.4193,
-    "com/comrec/z": 0.8567,
     "com/evics/estimate": 92.3641,
     "com/evics/z": -0.3101,
     "com/libs/estimate": 0.3774,
@@ -15332,11 +14918,11 @@
     "yth/cccall/z": 0.5421,
     "yth/ecseat/estimate": 0.2862,
     "yth/ecseat/z": 0.2402,
-    "com/INDEX": -1.4702,
+    "com/INDEX": -1.3849,
     "eco/INDEX": 0.5317,
     "hel/INDEX": -0.2686,
     "yth/INDEX": 0.7712,
-    "cri/INDEX": 0.0795
+    "cri/INDEX": 0.0837
   },
   {
     "OBJECTID": 234,
@@ -15360,8 +14946,6 @@
     "dem/hispan/estimate": 0.3705,
     "dem/male/estimate": 0.5361,
     "dem/white/estimate": 0.5509,
-    "com/comrec/estimate": 0.3103,
-    "com/comrec/z": 0.4237,
     "com/evics/estimate": 55.255,
     "com/evics/z": 1.1429,
     "com/libs/estimate": 0.4137,
@@ -15406,11 +14990,11 @@
     "yth/cccall/z": -0.049,
     "yth/ecseat/estimate": 0.3465,
     "yth/ecseat/z": 0.7211,
-    "com/INDEX": -0.3262,
+    "com/INDEX": 0.1877,
     "eco/INDEX": 2.7859,
     "hel/INDEX": 3.4111,
     "yth/INDEX": -0.2653,
-    "cri/INDEX": 4.5374
+    "cri/INDEX": 4.5717
   },
   {
     "OBJECTID": 25,
@@ -15434,8 +15018,6 @@
     "dem/hispan/estimate": 0.3639,
     "dem/male/estimate": 0.4794,
     "dem/white/estimate": 0.1864,
-    "com/comrec/estimate": 0.481,
-    "com/comrec/z": 1.0765,
     "com/evics/estimate": 198.9156,
     "com/evics/z": -2.4797,
     "com/libs/estimate": 0.7214,
@@ -15480,11 +15062,11 @@
     "yth/cccall/z": -1.2633,
     "yth/ecseat/estimate": 0.1058,
     "yth/ecseat/z": -1.6392,
-    "com/INDEX": 1.5656,
+    "com/INDEX": 0.2047,
     "eco/INDEX": -3.4935,
     "hel/INDEX": -4.0833,
     "yth/INDEX": -2.0902,
-    "cri/INDEX": -5.7572
+    "cri/INDEX": -5.9479
   },
   {
     "OBJECTID": 190,
@@ -15508,8 +15090,6 @@
     "dem/hispan/estimate": 0.6236,
     "dem/male/estimate": 0.4947,
     "dem/white/estimate": 0.2974,
-    "com/comrec/estimate": 0.2714,
-    "com/comrec/z": 0.2511,
     "com/evics/estimate": 94.361,
     "com/evics/z": -0.3706,
     "com/libs/estimate": 0.1628,
@@ -15554,11 +15134,11 @@
     "yth/cccall/z": -0.6243,
     "yth/ecseat/estimate": 0.1613,
     "yth/ecseat/z": -0.955,
-    "com/INDEX": -0.3803,
+    "com/INDEX": -0.9242,
     "eco/INDEX": -1.9282,
     "hel/INDEX": -2.9555,
     "yth/INDEX": -0.9266,
-    "cri/INDEX": -3.8735
+    "cri/INDEX": -3.9487
   },
   {
     "OBJECTID": 193,
@@ -15582,8 +15162,6 @@
     "dem/hispan/estimate": 0.3591,
     "dem/male/estimate": 0.4946,
     "dem/white/estimate": 0.5531,
-    "com/comrec/estimate": 0.2591,
-    "com/comrec/z": 0.194,
     "com/evics/estimate": 49.6247,
     "com/evics/z": 1.4469,
     "com/libs/estimate": 0.3239,
@@ -15628,11 +15206,11 @@
     "yth/cccall/z": 0.2357,
     "yth/ecseat/estimate": 0.3537,
     "yth/ecseat/z": 0.7761,
-    "com/INDEX": 2.6322,
+    "com/INDEX": 2.5867,
     "eco/INDEX": 1.4248,
     "hel/INDEX": 2.3553,
     "yth/INDEX": -0.2447,
-    "cri/INDEX": 3.2292
+    "cri/INDEX": 3.2209
   },
   {
     "OBJECTID": 23,
@@ -15656,8 +15234,6 @@
     "dem/hispan/estimate": 0.6583,
     "dem/male/estimate": 0.5059,
     "dem/white/estimate": 0.3351,
-    "com/comrec/estimate": 0.1626,
-    "com/comrec/z": -0.3119,
     "com/evics/estimate": 115.3953,
     "com/evics/z": -0.9397,
     "com/libs/estimate": 0.4878,
@@ -15702,11 +15278,11 @@
     "yth/cccall/z": -2.1698,
     "yth/ecseat/estimate": 0.0917,
     "yth/ecseat/z": -1.8403,
-    "com/INDEX": 2.0222,
+    "com/INDEX": 1.54,
     "eco/INDEX": -1.8982,
     "hel/INDEX": -3.2493,
     "yth/INDEX": -2.4658,
-    "cri/INDEX": -3.926
+    "cri/INDEX": -3.9766
   },
   {
     "OBJECTID": 219,
@@ -15730,8 +15306,6 @@
     "dem/hispan/estimate": 0.2204,
     "dem/male/estimate": 0.5265,
     "dem/white/estimate": 0.6251,
-    "com/comrec/estimate": 0.3852,
-    "com/comrec/z": 0.7281,
     "com/evics/estimate": 59.7774,
     "com/evics/z": 0.9204,
     "com/libs/estimate": 0.5253,
@@ -15776,11 +15350,11 @@
     "yth/cccall/z": 1.2886,
     "yth/ecseat/estimate": 0.5091,
     "yth/ecseat/z": 1.8403,
-    "com/INDEX": 0.0396,
+    "com/INDEX": 0.2769,
     "eco/INDEX": 2.97,
     "hel/INDEX": 4.1742,
     "yth/INDEX": 1.1555,
-    "cri/INDEX": 5.546
+    "cri/INDEX": 5.5457
   },
   {
     "OBJECTID": 241,
@@ -15804,8 +15378,6 @@
     "dem/hispan/estimate": 0.4726,
     "dem/male/estimate": 0.5098,
     "dem/white/estimate": 0.305,
-    "com/comrec/estimate": 0.7954,
-    "com/comrec/z": 2.0252,
     "com/evics/estimate": 121.1587,
     "com/evics/z": -1.0776,
     "com/libs/estimate": 0.4283,
@@ -15850,11 +15422,11 @@
     "yth/cccall/z": 0.5675,
     "yth/ecseat/estimate": 0.263,
     "yth/ecseat/z": 0.0419,
-    "com/INDEX": -1.3759,
+    "com/INDEX": -2.5047,
     "eco/INDEX": -0.9103,
     "hel/INDEX": -1.8226,
     "yth/INDEX": 0.6665,
-    "cri/INDEX": -2.1639
+    "cri/INDEX": -2.3548
   },
   {
     "OBJECTID": 237,
@@ -15878,8 +15450,6 @@
     "dem/hispan/estimate": 0.5105,
     "dem/male/estimate": 0.5174,
     "dem/white/estimate": 0.3285,
-    "com/comrec/estimate": 0,
-    "com/comrec/z": -2.2407,
     "com/evics/estimate": 197.2077,
     "com/evics/z": -2.4553,
     "com/libs/estimate": 2.4826,
@@ -15924,11 +15494,11 @@
     "yth/cccall/z": -2.3,
     "yth/ecseat/estimate": 0.1717,
     "yth/ecseat/z": -0.8409,
-    "com/INDEX": 1.5787,
+    "com/INDEX": 1.3862,
     "eco/INDEX": -0.9088,
     "hel/INDEX": -1.9765,
     "yth/INDEX": -2.8695,
-    "cri/INDEX": -2.3755
+    "cri/INDEX": -2.4034
   },
   {
     "OBJECTID": 245,
@@ -15952,8 +15522,6 @@
     "dem/hispan/estimate": 0.5109,
     "dem/male/estimate": 0.5255,
     "dem/white/estimate": 0.4972,
-    "com/comrec/estimate": 0.2987,
-    "com/comrec/z": 0.3735,
     "com/evics/estimate": 66.951,
     "com/evics/z": 0.5999,
     "com/libs/estimate": 0.4481,
@@ -15998,11 +15566,11 @@
     "yth/cccall/z": 0.0774,
     "yth/ecseat/estimate": 0.3296,
     "yth/ecseat/z": 0.5913,
-    "com/INDEX": -0.4741,
+    "com/INDEX": 0.035,
     "eco/INDEX": 2.3571,
     "hel/INDEX": 2.1512,
     "yth/INDEX": 0.35,
-    "cri/INDEX": 3.3523
+    "cri/INDEX": 3.4057
   },
   {
     "OBJECTID": 244,
@@ -16019,11 +15587,11 @@
     "point_y": 32.9199,
     "com/urbhe/estimate": 1.2126,
     "com/urbhe/z": 1.2207,
-    "com/INDEX": 1.6894,
+    "com/INDEX": 1.5619,
     "eco/INDEX": 1.5867,
     "hel/INDEX": 2.3096,
     "yth/INDEX": 0.3794,
-    "cri/INDEX": 3.2626
+    "cri/INDEX": 3.2344
   },
   {
     "OBJECTID": 243,
@@ -16047,8 +15615,6 @@
     "dem/hispan/estimate": 0.2206,
     "dem/male/estimate": 0.5267,
     "dem/white/estimate": 0.6443,
-    "com/comrec/estimate": 0.3485,
-    "com/comrec/z": 0.5831,
     "com/evics/estimate": 60.8959,
     "com/evics/z": 0.868,
     "com/libs/estimate": 0.5422,
@@ -16093,11 +15659,11 @@
     "yth/cccall/z": 0.9404,
     "yth/ecseat/estimate": 0.4869,
     "yth/ecseat/z": 1.6996,
-    "com/INDEX": -0.0357,
+    "com/INDEX": 0.4021,
     "eco/INDEX": 3.2563,
     "hel/INDEX": 4.8421,
     "yth/INDEX": 0.6893,
-    "cri/INDEX": 6.1691
+    "cri/INDEX": 6.1902
   },
   {
     "OBJECTID": 151,
@@ -16112,11 +15678,11 @@
     "website": "http://www.dallasisd.org/balchsprings",
     "point_x": -96.6384,
     "point_y": 32.7256,
-    "com/INDEX": 0.5393,
+    "com/INDEX": 0.5287,
     "eco/INDEX": -2.0313,
     "hel/INDEX": -2.112,
     "yth/INDEX": -0.4269,
-    "cri/INDEX": -3.0812
+    "cri/INDEX": -3.0476
   },
   {
     "OBJECTID": 6,
@@ -16140,8 +15706,6 @@
     "dem/hispan/estimate": 0.6109,
     "dem/male/estimate": 0.492,
     "dem/white/estimate": 0.3386,
-    "com/comrec/estimate": 0.0547,
-    "com/comrec/z": -1.1219,
     "com/evics/estimate": 97.4184,
     "com/evics/z": -0.4608,
     "com/libs/estimate": 0.2736,
@@ -16186,11 +15750,11 @@
     "yth/cccall/z": -0.742,
     "yth/ecseat/estimate": 0.1644,
     "yth/ecseat/z": -0.9206,
-    "com/INDEX": -1.726,
+    "com/INDEX": -1.5508,
     "eco/INDEX": -1.6859,
     "hel/INDEX": -1.6756,
     "yth/INDEX": -0.8645,
-    "cri/INDEX": -2.95
+    "cri/INDEX": -2.9244
   },
   {
     "OBJECTID": 3,
@@ -16214,8 +15778,6 @@
     "dem/hispan/estimate": 0.343,
     "dem/male/estimate": 0.4681,
     "dem/white/estimate": 0.1498,
-    "com/comrec/estimate": 0.4038,
-    "com/comrec/z": 0.7987,
     "com/evics/estimate": 152.8328,
     "com/evics/z": -1.7344,
     "com/libs/estimate": 0.4038,
@@ -16260,11 +15822,11 @@
     "yth/cccall/z": 1.1648,
     "yth/ecseat/estimate": 0.2164,
     "yth/ecseat/z": -0.3858,
-    "com/INDEX": 0.0194,
+    "com/INDEX": -1.0118,
     "eco/INDEX": -3.5713,
     "hel/INDEX": -3.5157,
     "yth/INDEX": 1.3842,
-    "cri/INDEX": -5.0669
+    "cri/INDEX": -5.1769
   },
   {
     "OBJECTID": 142,
@@ -16279,11 +15841,11 @@
     "website": "http://www.dallasisd.org/rosemont",
     "point_x": -96.8473,
     "point_y": 32.7517,
-    "com/INDEX": -1.3056,
+    "com/INDEX": -0.6709,
     "eco/INDEX": 0.7672,
     "hel/INDEX": -0.509,
     "yth/INDEX": 0.4988,
-    "cri/INDEX": 0.0577
+    "cri/INDEX": 0.1599
   },
   {
     "OBJECTID": 216,
@@ -16307,8 +15869,6 @@
     "dem/hispan/estimate": 0.2988,
     "dem/male/estimate": 0.4581,
     "dem/white/estimate": 0.1639,
-    "com/comrec/estimate": 0.2339,
-    "com/comrec/z": 0.0728,
     "com/evics/estimate": 150.0949,
     "com/evics/z": -1.6832,
     "com/libs/estimate": 0.3509,
@@ -16353,11 +15913,11 @@
     "yth/cccall/z": 2.5665,
     "yth/ecseat/estimate": 0.4618,
     "yth/ecseat/z": 1.5363,
-    "com/INDEX": -0.4917,
+    "com/INDEX": -0.6181,
     "eco/INDEX": -3.9433,
     "hel/INDEX": -0.1615,
     "yth/INDEX": 4.9664,
-    "cri/INDEX": -2.3201
+    "cri/INDEX": -2.2509
   },
   {
     "OBJECTID": 238,
@@ -16381,8 +15941,6 @@
     "dem/hispan/estimate": 0.3169,
     "dem/male/estimate": 0.5278,
     "dem/white/estimate": 0.537,
-    "com/comrec/estimate": 0.642,
-    "com/comrec/z": 1.592,
     "com/evics/estimate": 75.5866,
     "com/evics/z": 0.2568,
     "com/libs/estimate": 0.4815,
@@ -16427,11 +15985,11 @@
     "yth/cccall/z": 1.3742,
     "yth/ecseat/estimate": 0.4631,
     "yth/ecseat/z": 1.5447,
-    "com/INDEX": -0.3486,
+    "com/INDEX": -0.4468,
     "eco/INDEX": 2.4763,
     "hel/INDEX": 2.7589,
     "yth/INDEX": 1.893,
-    "cri/INDEX": 4.1763
+    "cri/INDEX": 4.1356
   },
   {
     "OBJECTID": 51,
@@ -16455,8 +16013,6 @@
     "dem/hispan/estimate": 0.2524,
     "dem/male/estimate": 0.5262,
     "dem/white/estimate": 0.5935,
-    "com/comrec/estimate": 0.4852,
-    "com/comrec/z": 1.091,
     "com/evics/estimate": 70.0514,
     "com/evics/z": 0.4719,
     "com/libs/estimate": 0.4105,
@@ -16501,11 +16057,11 @@
     "yth/cccall/z": 1.3725,
     "yth/ecseat/estimate": 0.4853,
     "yth/ecseat/z": 1.6893,
-    "com/INDEX": -0.4653,
+    "com/INDEX": -0.3539,
     "eco/INDEX": 2.7592,
     "hel/INDEX": 3.8075,
     "yth/INDEX": 1.6534,
-    "cri/INDEX": 5.1129
+    "cri/INDEX": 5.0944
   },
   {
     "OBJECTID": 184,
@@ -16529,8 +16085,6 @@
     "dem/hispan/estimate": 0.6331,
     "dem/male/estimate": 0.4897,
     "dem/white/estimate": 0.315,
-    "com/comrec/estimate": 0.0661,
-    "com/comrec/z": -1.0113,
     "com/evics/estimate": 89.1281,
     "com/evics/z": -0.2092,
     "com/libs/estimate": 0.3964,
@@ -16575,11 +16129,11 @@
     "yth/cccall/z": -0.8469,
     "yth/ecseat/estimate": 0.1569,
     "yth/ecseat/z": -1.0042,
-    "com/INDEX": -0.2965,
+    "com/INDEX": -0.048,
     "eco/INDEX": -1.9443,
     "hel/INDEX": -2.0764,
     "yth/INDEX": -0.7109,
-    "cri/INDEX": -3.1775
+    "cri/INDEX": -3.1126
   },
   {
     "OBJECTID": 248,
@@ -16596,11 +16150,11 @@
     "point_y": 32.8252,
     "com/urbhe/estimate": 2.2617,
     "com/urbhe/z": -1.0989,
-    "com/INDEX": -0.5994,
+    "com/INDEX": -0.1135,
     "eco/INDEX": 2.7511,
     "hel/INDEX": 2.8189,
     "yth/INDEX": 0.2545,
-    "cri/INDEX": 4.1096
+    "cri/INDEX": 4.1472
   },
   {
     "OBJECTID": 246,
@@ -16624,8 +16178,6 @@
     "dem/hispan/estimate": 0.5907,
     "dem/male/estimate": 0.52,
     "dem/white/estimate": 0.459,
-    "com/comrec/estimate": 0.2805,
-    "com/comrec/z": 0.2928,
     "com/evics/estimate": 68.1201,
     "com/evics/z": 0.551,
     "com/libs/estimate": 0.3928,
@@ -16670,11 +16222,11 @@
     "yth/cccall/z": -0.4953,
     "yth/ecseat/estimate": 0.258,
     "yth/ecseat/z": -0.0023,
-    "com/INDEX": 0.0487,
+    "com/INDEX": 0.5278,
     "eco/INDEX": 1.8713,
     "hel/INDEX": 1.0463,
     "yth/INDEX": -0.2687,
-    "cri/INDEX": 2.1461
+    "cri/INDEX": 2.2059
   },
   {
     "OBJECTID": 115,
@@ -16698,8 +16250,6 @@
     "dem/hispan/estimate": 0.3607,
     "dem/male/estimate": 0.4789,
     "dem/white/estimate": 0.1833,
-    "com/comrec/estimate": 0.4509,
-    "com/comrec/z": 0.971,
     "com/evics/estimate": 190.1034,
     "com/evics/z": -2.3515,
     "com/libs/estimate": 0.6763,
@@ -16744,11 +16294,11 @@
     "yth/cccall/z": -1.0388,
     "yth/ecseat/estimate": 0.095,
     "yth/ecseat/z": -1.7919,
-    "com/INDEX": 1.3811,
+    "com/INDEX": 0.0577,
     "eco/INDEX": -3.59,
     "hel/INDEX": -3.9574,
     "yth/INDEX": -1.977,
-    "cri/INDEX": -5.7471
+    "cri/INDEX": -5.9322
   },
   {
     "OBJECTID": 222,
@@ -16772,8 +16322,6 @@
     "dem/hispan/estimate": 0.4026,
     "dem/male/estimate": 0.4683,
     "dem/white/estimate": 0.1755,
-    "com/comrec/estimate": 0.4391,
-    "com/comrec/z": 0.9289,
     "com/evics/estimate": 135.1273,
     "com/evics/z": -1.3862,
     "com/libs/estimate": 0.1756,
@@ -16818,11 +16366,11 @@
     "yth/cccall/z": 0.1327,
     "yth/ecseat/estimate": 0.1717,
     "yth/ecseat/z": -0.8411,
-    "com/INDEX": -1.2628,
+    "com/INDEX": -2.4766,
     "eco/INDEX": -3.1623,
     "hel/INDEX": -3.9482,
     "yth/INDEX": -0.199,
-    "cri/INDEX": -5.5656
+    "cri/INDEX": -5.7457
   },
   {
     "OBJECTID": 214,
@@ -16846,8 +16394,6 @@
     "dem/hispan/estimate": 0.2372,
     "dem/male/estimate": 0.5242,
     "dem/white/estimate": 0.609,
-    "com/comrec/estimate": 0.4723,
-    "com/comrec/z": 1.0466,
     "com/evics/estimate": 66.9168,
     "com/evics/z": 0.6014,
     "com/libs/estimate": 0.436,
@@ -16892,11 +16438,11 @@
     "yth/cccall/z": 1.2382,
     "yth/ecseat/estimate": 0.4308,
     "yth/ecseat/z": 1.3281,
-    "com/INDEX": -0.2272,
+    "com/INDEX": -0.245,
     "eco/INDEX": 2.932,
     "hel/INDEX": 3.8664,
     "yth/INDEX": 1.2428,
-    "cri/INDEX": 5.2571
+    "cri/INDEX": 5.2112
   },
   {
     "OBJECTID": 232,
@@ -16920,8 +16466,6 @@
     "dem/hispan/estimate": 0.2372,
     "dem/male/estimate": 0.5242,
     "dem/white/estimate": 0.609,
-    "com/comrec/estimate": 0.4723,
-    "com/comrec/z": 1.0466,
     "com/evics/estimate": 66.9168,
     "com/evics/z": 0.6014,
     "com/libs/estimate": 0.436,
@@ -16966,11 +16510,11 @@
     "yth/cccall/z": 1.2382,
     "yth/ecseat/estimate": 0.4308,
     "yth/ecseat/z": 1.3281,
-    "com/INDEX": -0.2272,
+    "com/INDEX": -0.245,
     "eco/INDEX": 2.932,
     "hel/INDEX": 3.8664,
     "yth/INDEX": 1.2428,
-    "cri/INDEX": 5.2571
+    "cri/INDEX": 5.2112
   },
   {
     "OBJECTID": 172,
@@ -16994,8 +16538,6 @@
     "dem/hispan/estimate": 0.2819,
     "dem/male/estimate": 0.5192,
     "dem/white/estimate": 0.6435,
-    "com/comrec/estimate": 0.2335,
-    "com/comrec/z": 0.0705,
     "com/evics/estimate": 37.3768,
     "com/evics/z": 2.2485,
     "com/libs/estimate": 0.4203,
@@ -17040,11 +16582,11 @@
     "yth/cccall/z": -0.0794,
     "yth/ecseat/estimate": 0.328,
     "yth/ecseat/z": 0.5786,
-    "com/INDEX": 1.53,
+    "com/INDEX": 2.0266,
     "eco/INDEX": 2.7111,
     "hel/INDEX": 4.1441,
     "yth/INDEX": -0.8435,
-    "cri/INDEX": 5.2444
+    "cri/INDEX": 5.2868
   },
   {
     "OBJECTID": 54,
@@ -17068,8 +16610,6 @@
     "dem/hispan/estimate": 0.3073,
     "dem/male/estimate": 0.536,
     "dem/white/estimate": 0.5836,
-    "com/comrec/estimate": 0.3058,
-    "com/comrec/z": 0.4045,
     "com/evics/estimate": 61.7163,
     "com/evics/z": 0.8302,
     "com/libs/estimate": 0.568,
@@ -17114,11 +16654,11 @@
     "yth/cccall/z": 0.1773,
     "yth/ecseat/estimate": 0.3705,
     "yth/ecseat/z": 0.9011,
-    "com/INDEX": -0.3861,
+    "com/INDEX": 0.1161,
     "eco/INDEX": 2.8888,
     "hel/INDEX": 4.1397,
     "yth/INDEX": -0.1102,
-    "cri/INDEX": 5.1755
+    "cri/INDEX": 5.2021
   },
   {
     "OBJECTID": 56,
@@ -17142,8 +16682,6 @@
     "dem/hispan/estimate": 0.2267,
     "dem/male/estimate": 0.5242,
     "dem/white/estimate": 0.6202,
-    "com/comrec/estimate": 0.4622,
-    "com/comrec/z": 1.0111,
     "com/evics/estimate": 63.6547,
     "com/evics/z": 0.7427,
     "com/libs/estimate": 0.4266,
@@ -17188,11 +16726,11 @@
     "yth/cccall/z": 1.2639,
     "yth/ecseat/estimate": 0.4528,
     "yth/ecseat/z": 1.4767,
-    "com/INDEX": -0.0827,
+    "com/INDEX": -0.0653,
     "eco/INDEX": 2.972,
     "hel/INDEX": 4.021,
     "yth/INDEX": 1.2915,
-    "cri/INDEX": 5.4352
+    "cri/INDEX": 5.3965
   },
   {
     "OBJECTID": 235,
@@ -17216,8 +16754,6 @@
     "dem/hispan/estimate": 0.4058,
     "dem/male/estimate": 0.5164,
     "dem/white/estimate": 0.3679,
-    "com/comrec/estimate": 1.5881,
-    "com/comrec/z": 3.787,
     "com/evics/estimate": 57.355,
     "com/evics/z": 1.0374,
     "com/libs/estimate": 0.5294,
@@ -17262,11 +16798,11 @@
     "yth/cccall/z": -0.0104,
     "yth/ecseat/estimate": 0.3231,
     "yth/ecseat/z": 0.5396,
-    "com/INDEX": 4.2967,
+    "com/INDEX": 2.7442,
     "eco/INDEX": 2.4393,
     "hel/INDEX": 7.2516,
     "yth/INDEX": 4.8724,
-    "cri/INDEX": 8.7903
+    "cri/INDEX": 8.549
   },
   {
     "OBJECTID": 242,
@@ -17290,8 +16826,6 @@
     "dem/hispan/estimate": 0.3742,
     "dem/male/estimate": 0.471,
     "dem/white/estimate": 0.1533,
-    "com/comrec/estimate": 0.4512,
-    "com/comrec/z": 0.9722,
     "com/evics/estimate": 159.1097,
     "com/evics/z": -1.8482,
     "com/libs/estimate": 0.3384,
@@ -17336,11 +16870,11 @@
     "yth/cccall/z": 0.4314,
     "yth/ecseat/estimate": 0.176,
     "yth/ecseat/z": -0.7943,
-    "com/INDEX": -0.5975,
+    "com/INDEX": -1.9012,
     "eco/INDEX": -3.4191,
     "hel/INDEX": -4.0857,
     "yth/INDEX": 0.2405,
-    "cri/INDEX": -5.6752
+    "cri/INDEX": -5.8539
   },
   {
     "OBJECTID": 239,
@@ -17364,8 +16898,6 @@
     "dem/hispan/estimate": 0.3575,
     "dem/male/estimate": 0.5095,
     "dem/white/estimate": 0.5972,
-    "com/comrec/estimate": 0.2231,
-    "com/comrec/z": 0.0185,
     "com/evics/estimate": 52.555,
     "com/evics/z": 1.2846,
     "com/libs/estimate": 0.3904,
@@ -17410,11 +16942,11 @@
     "yth/cccall/z": -0.2516,
     "yth/ecseat/estimate": 0.3087,
     "yth/ecseat/z": 0.4251,
-    "com/INDEX": 1.792,
+    "com/INDEX": 2.0239,
     "eco/INDEX": 1.1067,
     "hel/INDEX": 2.5012,
     "yth/INDEX": -0.8186,
-    "cri/INDEX": 2.8629
+    "cri/INDEX": 2.8878
   },
   {
     "OBJECTID": 236,
@@ -17431,11 +16963,11 @@
     "point_y": 32.6924,
     "com/urbhe/estimate": 1.9701,
     "com/urbhe/z": -0.4541,
-    "com/INDEX": 0.1789,
+    "com/INDEX": 0.1997,
     "eco/INDEX": -2.1169,
     "hel/INDEX": -2.0255,
     "yth/INDEX": -0.528,
-    "cri/INDEX": -3.158
+    "cri/INDEX": -3.1247
   },
   {
     "OBJECTID": 240,
@@ -17459,8 +16991,6 @@
     "dem/hispan/estimate": 0.441,
     "dem/male/estimate": 0.5157,
     "dem/white/estimate": 0.3625,
-    "com/comrec/estimate": 0.708,
-    "com/comrec/z": 1.7839,
     "com/evics/estimate": 107.9038,
     "com/evics/z": -0.7499,
     "com/libs/estimate": 0.5446,
@@ -17505,11 +17035,11 @@
     "yth/cccall/z": 1.1075,
     "yth/ecseat/estimate": 0.3252,
     "yth/ecseat/z": 0.5564,
-    "com/INDEX": -1.12,
+    "com/INDEX": -2.0066,
     "eco/INDEX": 0.0457,
     "hel/INDEX": -0.7272,
     "yth/INDEX": 1.4422,
-    "cri/INDEX": -0.4558
+    "cri/INDEX": -0.6064
   },
   {
     "OBJECTID": 247,
@@ -17533,8 +17063,6 @@
     "dem/hispan/estimate": 0.2206,
     "dem/male/estimate": 0.5267,
     "dem/white/estimate": 0.6443,
-    "com/comrec/estimate": 0.3485,
-    "com/comrec/z": 0.5831,
     "com/evics/estimate": 60.8959,
     "com/evics/z": 0.868,
     "com/libs/estimate": 0.5422,
@@ -17579,11 +17107,11 @@
     "yth/cccall/z": 0.9404,
     "yth/ecseat/estimate": 0.4869,
     "yth/ecseat/z": 1.6996,
-    "com/INDEX": -0.0357,
+    "com/INDEX": 0.4021,
     "eco/INDEX": 3.2563,
     "hel/INDEX": 4.8421,
     "yth/INDEX": 0.6893,
-    "cri/INDEX": 6.1691
+    "cri/INDEX": 6.1902
   },
   {
     "OBJECTID": 220,
@@ -17607,8 +17135,6 @@
     "dem/hispan/estimate": 0.4723,
     "dem/male/estimate": 0.4895,
     "dem/white/estimate": 0.2652,
-    "com/comrec/estimate": 0.3455,
-    "com/comrec/z": 0.571,
     "com/evics/estimate": 121.9639,
     "com/evics/z": -1.0963,
     "com/libs/estimate": 0.2304,
@@ -17653,11 +17179,11 @@
     "yth/cccall/z": 1.0323,
     "yth/ecseat/estimate": 0.2589,
     "yth/ecseat/z": 0.0056,
-    "com/INDEX": -0.0596,
+    "com/INDEX": -0.5592,
     "eco/INDEX": -1.8026,
     "hel/INDEX": -2.6305,
     "yth/INDEX": 1.4643,
-    "cri/INDEX": -3.0811
+    "cri/INDEX": -3.1167
   },
   {
     "OBJECTID": 143,
@@ -17681,8 +17207,6 @@
     "dem/hispan/estimate": 0.4931,
     "dem/male/estimate": 0.475,
     "dem/white/estimate": 0.2297,
-    "com/comrec/estimate": 0.1075,
-    "com/comrec/z": -0.6721,
     "com/evics/estimate": 112.4886,
     "com/evics/z": -0.8676,
     "com/libs/estimate": 0.1613,
@@ -17727,11 +17251,11 @@
     "yth/cccall/z": 1.0374,
     "yth/ecseat/estimate": 0.3093,
     "yth/ecseat/z": 0.43,
-    "com/INDEX": -1.0781,
+    "com/INDEX": -0.9317,
     "eco/INDEX": -2.7799,
     "hel/INDEX": -2.0661,
     "yth/INDEX": 1.5527,
-    "cri/INDEX": -3.5462
+    "cri/INDEX": -3.4736
   },
   {
     "OBJECTID": 139,
@@ -17755,8 +17279,6 @@
     "dem/hispan/estimate": 0.2327,
     "dem/male/estimate": 0.5247,
     "dem/white/estimate": 0.6139,
-    "com/comrec/estimate": 0.4758,
-    "com/comrec/z": 1.0588,
     "com/evics/estimate": 67.3561,
     "com/evics/z": 0.5829,
     "com/libs/estimate": 0.4758,
@@ -17801,11 +17323,11 @@
     "yth/cccall/z": 1.4811,
     "yth/ecseat/estimate": 0.5113,
     "yth/ecseat/z": 1.8545,
-    "com/INDEX": -0.3841,
+    "com/INDEX": -0.1382,
     "eco/INDEX": 2.9488,
     "hel/INDEX": 4.1839,
     "yth/INDEX": 1.5694,
-    "cri/INDEX": 5.5357
+    "cri/INDEX": 5.537
   },
   {
     "OBJECTID": 141,
@@ -17829,8 +17351,6 @@
     "dem/hispan/estimate": 0.5999,
     "dem/male/estimate": 0.5026,
     "dem/white/estimate": 0.3651,
-    "com/comrec/estimate": 0.1294,
-    "com/comrec/z": -0.5202,
     "com/evics/estimate": 81.97,
     "com/evics/z": 0.0275,
     "com/libs/estimate": 0.3019,
@@ -17875,11 +17395,11 @@
     "yth/cccall/z": -0.2079,
     "yth/ecseat/estimate": 0.2069,
     "yth/ecseat/z": -0.478,
-    "com/INDEX": -0.9762,
+    "com/INDEX": -0.4375,
     "eco/INDEX": -0.1228,
     "hel/INDEX": -1.3195,
     "yth/INDEX": -0.3149,
-    "cri/INDEX": -1.2959
+    "cri/INDEX": -1.2034
   },
   {
     "OBJECTID": 140,
@@ -17896,11 +17416,11 @@
     "point_y": 32.7689,
     "com/urbhe/estimate": 2.527,
     "com/urbhe/z": -1.6853,
-    "com/INDEX": -1.1259,
+    "com/INDEX": -0.5262,
     "eco/INDEX": 2.1028,
     "hel/INDEX": 1.0532,
     "yth/INDEX": 0.2011,
-    "cri/INDEX": 2.2061
+    "cri/INDEX": 2.2766
   },
   {
     "OBJECTID": 138,
@@ -17924,8 +17444,6 @@
     "dem/hispan/estimate": 0.2816,
     "dem/male/estimate": 0.522,
     "dem/white/estimate": 0.6314,
-    "com/comrec/estimate": 0.1764,
-    "com/comrec/z": -0.2317,
     "com/evics/estimate": 41.2738,
     "com/evics/z": 1.968,
     "com/libs/estimate": 0.3969,
@@ -17970,11 +17488,11 @@
     "yth/cccall/z": -0.3305,
     "yth/ecseat/estimate": 0.3094,
     "yth/ecseat/z": 0.4311,
-    "com/INDEX": 0.7934,
+    "com/INDEX": 1.4618,
     "eco/INDEX": 2.9872,
     "hel/INDEX": 4.0752,
     "yth/INDEX": -1.026,
-    "cri/INDEX": 5.2452
+    "cri/INDEX": 5.3049
   },
   {
     "OBJECTID": 221,
@@ -17998,8 +17516,6 @@
     "dem/hispan/estimate": 0.4444,
     "dem/male/estimate": 0.4852,
     "dem/white/estimate": 0.2375,
-    "com/comrec/estimate": 0.5965,
-    "com/comrec/z": 1.4535,
     "com/evics/estimate": 130.2872,
     "com/evics/z": -1.283,
     "com/libs/estimate": 0.2651,
@@ -18044,11 +17560,11 @@
     "yth/cccall/z": 1.0046,
     "yth/ecseat/estimate": 0.277,
     "yth/ecseat/z": 0.1622,
-    "com/INDEX": 0.1245,
+    "com/INDEX": -0.8436,
     "eco/INDEX": -2.3434,
     "hel/INDEX": -3.0176,
     "yth/INDEX": 1.5564,
-    "cri/INDEX": -3.729
+    "cri/INDEX": -3.8381
   },
   {
     "OBJECTID": 137,
@@ -18072,8 +17588,6 @@
     "dem/hispan/estimate": 0.588,
     "dem/male/estimate": 0.4985,
     "dem/white/estimate": 0.3583,
-    "com/comrec/estimate": 0.246,
-    "com/comrec/z": 0.1315,
     "com/evics/estimate": 89.5496,
     "com/evics/z": -0.2226,
     "com/libs/estimate": 0.1968,
@@ -18118,10 +17632,10 @@
     "yth/cccall/z": -0.4622,
     "yth/ecseat/estimate": 0.1802,
     "yth/ecseat/z": -0.7499,
-    "com/INDEX": -1.3978,
+    "com/INDEX": -1.8462,
     "eco/INDEX": -1.2176,
     "hel/INDEX": -1.7413,
     "yth/INDEX": -0.5148,
-    "cri/INDEX": -2.535
+    "cri/INDEX": -2.6167
   }
 ]

@@ -1,7 +1,4 @@
 // Explorer page specific styles to fix map width issue
-// IMPORTANT: Only apply these overrides to the explorer page, not globally
-
-// Scope all overrides to elements that contain the explorer-app class
 .explorer-app,
 .main:has(.explorer-app) {
   // Override Bootstrap container constraints on explorer page only

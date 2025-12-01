@@ -15,12 +15,20 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   })
 
-  if (stage === 'build-html') {
+  if (stage === 'build-html' || stage === 'develop-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /mapbox-gl/,
+            use: loaders.null(),
+          },
+          {
+            test: /echarts/,
+            use: loaders.null(),
+          },
+          {
+            test: /zrender/,
             use: loaders.null(),
           },
         ],
@@ -64,8 +72,6 @@ exports.createPages = async ({ graphql, actions }) => {
             dem_hispan_estimate
             dem_male_estimate
             dem_white_estimate
-            com_comrec_estimate
-            com_comrec_z
             com_evics_estimate
             com_evics_z
             com_libs_estimate
