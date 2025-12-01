@@ -18,3 +18,15 @@ variable "mapbox_user" {
   sensitive   = true
   default     = ""
 }
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+  default     = "us-east-2"
+}
+
+variable "environment" {
+  description = "Environment name (dev, prod)"
+  type        = string
+  default     = "dev"
+}
