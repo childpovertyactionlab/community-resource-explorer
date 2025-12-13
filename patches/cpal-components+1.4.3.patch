@@ -19,10 +19,10 @@ index 5edf3b4..17ac17f 100644
    UI_MAP_METRIC_COMM_BVP: "Overall business vacancies (%)",
    UI_MAP_METRIC_COMM_CCTRCAP: "Community and recreation centers, per 10,000 residents",
 diff --git a/node_modules/cpal-components/es/constants/metrics.js b/node_modules/cpal-components/es/constants/metrics.js
-index c3bd467..c552328 100644
+index c3bd467..69434dd 100644
 --- a/node_modules/cpal-components/es/constants/metrics.js
 +++ b/node_modules/cpal-components/es/constants/metrics.js
-@@ -38,33 +38,30 @@ export var CPAL_FILTER_TABS = [{
+@@ -38,102 +38,105 @@ export var CPAL_FILTER_TABS = [{
  // indices and indicators to save their fucking lives.
  
  export var CPAL_FEEDER_TIP_ITEMS = [{
@@ -68,7 +68,11 @@ index c3bd467..c552328 100644
    tooltip: 1,
    desc: "UI_MAP_METRIC_DESC_CRI",
    decimals: 0,
-@@ -74,7 +71,7 @@ export var CPAL_METRICS = [{
+-  mean: 43.15873016
++  mean: 43.15873016,
++  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX DFPS, USPS HUD (2022-2024)'
+ }, {
+   id: 'eci_weight',
    title: 'UI_MAP_METRIC_TITLE_ECON_INDEX',
    desc: 'UI_MAP_METRIC_DESC_ECON',
    abbrev: 'ECON',
@@ -77,7 +81,13 @@ index c3bd467..c552328 100644
    high_is_good: 1,
    colors: CRI_COLORS,
    tab: 'econ',
-@@ -87,7 +84,7 @@ export var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
++  source: 'Census LODES, ACS 5yr (2022-2023)',
+   mean: 36.93121693
+ }, {
+   id: 'edi_weight',
    title: 'UI_MAP_METRIC_TITLE_EDU_INDEX',
    desc: 'UI_MAP_METRIC_DESC_EDU',
    abbrev: 'EDU',
@@ -86,7 +96,14 @@ index c3bd467..c552328 100644
    high_is_good: 1,
    colors: CRI_COLORS,
    tab: 'edu',
-@@ -100,11 +97,11 @@ export var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 65.00529101
++  mean: 65.00529101,
++  source: 'ACS 5yr, TX DFPS, Dallas Afterschool (2022-2024)'
+ }, {
+   id: 'fi_weight',
    title: 'UI_MAP_METRIC_TITLE_FAM_INDEX',
    desc: 'UI_MAP_METRIC_DESC_FAM',
    abbrev: 'FAM',
@@ -99,8 +116,11 @@ index c3bd467..c552328 100644
 +  tab_level: 1,
    tooltip: 1,
    decimals: 0,
-   mean: 73.20634921
-@@ -113,7 +110,7 @@ export var CPAL_METRICS = [{
+-  mean: 73.20634921
++  mean: 73.20634921,
++  source: 'ACS 5yr, TX DFPS, Dallas Afterschool (2022-2024)'
+ }, {
+   id: 'hi_weight',
    title: 'UI_MAP_METRIC_TITLE_HEAL_INDEX',
    desc: 'UI_MAP_METRIC_DESC_HEAL',
    abbrev: 'HEAL',
@@ -109,7 +129,14 @@ index c3bd467..c552328 100644
    high_is_good: 1,
    colors: CRI_COLORS,
    tab: 'hel',
-@@ -126,7 +123,7 @@ export var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 33.36507937
++  mean: 33.36507937,
++  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy (2023-2024)'
+ }, {
+   id: 'ci_weight',
    title: 'UI_MAP_METRIC_TITLE_COMM_INDEX',
    desc: 'UI_MAP_METRIC_DESC_COMM',
    abbrev: 'COMM',
@@ -118,6 +145,15 @@ index c3bd467..c552328 100644
    high_is_good: 1,
    colors: CRI_COLORS,
    tab: 'comm',
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 58.38624339
++  mean: 58.38624339,
++  source: 'NCTCOG, Dallas County JP, Trust for Public Land, USPS HUD (2024)'
+ }, {
+   id: 'comm_bbp',
+   title: 'UI_MAP_METRIC_TITLE_COMM_BBP',
 diff --git a/node_modules/cpal-components/es/data/schools.js b/node_modules/cpal-components/es/data/schools.js
 index 4ce5859..a06d030 100644
 --- a/node_modules/cpal-components/es/data/schools.js
@@ -19302,6 +19338,52 @@ index 0000000..5432bd2
 +
 +export default FeederSchoolsChart;
 \ No newline at end of file
+diff --git a/node_modules/cpal-components/es/modules/cpal/explorer/Map/components/MapLegend.js b/node_modules/cpal-components/es/modules/cpal/explorer/Map/components/MapLegend.js
+index c13fd75..8cd8b4b 100644
+--- a/node_modules/cpal-components/es/modules/cpal/explorer/Map/components/MapLegend.js
++++ b/node_modules/cpal-components/es/modules/cpal/explorer/Map/components/MapLegend.js
+@@ -15,6 +15,7 @@ import { SCHOOL_ZONE_COLORS } from './../../../../../constants/colors';
+ import NonInteractiveScale from './../../NonInteractiveScale/NonInteractiveScale';
+ import { CensusScale } from './../../CensusScale';
+ import { getRoundedValue, getMetric, getHashLeft, getQuintile } from './../../utils';
++
+ /**
+  * Legend for map
+  */
+@@ -127,9 +128,7 @@ var MapLegend = function MapLegend(_ref) {
+     id: "map_legend_open_filter",
+     className: clsx('map-legend-open-filter-panel', !!slideoutPanel.active && slideoutPanel.panel === 'filters' ? 'disabled' : ''),
+     onClick: toggleFilterPanel
+-  }, i18n.translate('LINK_OPEN_FILTER_PANEL'))), /*#__PURE__*/React.createElement("div", {
+-    className: "map-legend-metric-title"
+-  }, i18n.translate(metricData.title)), /*#__PURE__*/React.createElement("div", {
++  }, i18n.translate('LINK_OPEN_FILTER_PANEL'))), /*#__PURE__*/React.createElement("div", { className: "map-legend-metric-title" }, i18n.translate(metricData.title)), metricData.source && /*#__PURE__*/React.createElement("div", { className: "map-legend-metric-source" }, "Source: ", metricData.source), /*#__PURE__*/React.createElement("div", {
+     className: "map-legend-zone-labels"
+   }, /*#__PURE__*/React.createElement("div", {
+     className: "fewer"
+diff --git a/node_modules/cpal-components/es/styles/MapLegend.scss b/node_modules/cpal-components/es/styles/MapLegend.scss
+index 037922b..e1637dc 100644
+--- a/node_modules/cpal-components/es/styles/MapLegend.scss
++++ b/node_modules/cpal-components/es/styles/MapLegend.scss
+@@ -80,6 +80,18 @@
+       margin: 1rem 0;
+     }
+   }
++  .map-legend-metric-source {
++    font-family: halyard-text;
++    font-weight: 300;
++    color: $turtle-green;
++    font-size: 1.1rem;
++    line-height: 1.4rem;
++    margin-bottom: 0.5rem;
++    @include media-breakpoint-up(md) {
++      font-size: 1.2rem;
++      line-height: 1.6rem;
++    }
++  }
+   .n-i-scale {
+     .n-i-scale-minmax {
+       .n-i-scale-min,
 diff --git a/node_modules/cpal-components/lib/constants/en_US.js b/node_modules/cpal-components/lib/constants/en_US.js
 index 0a1e343..f142027 100644
 --- a/node_modules/cpal-components/lib/constants/en_US.js
@@ -19323,10 +19405,10 @@ index 0a1e343..f142027 100644
    UI_MAP_METRIC_COMM_BVP: "Overall business vacancies (%)",
    UI_MAP_METRIC_COMM_CCTRCAP: "Community and recreation centers, per 10,000 residents",
 diff --git a/node_modules/cpal-components/lib/constants/metrics.js b/node_modules/cpal-components/lib/constants/metrics.js
-index 233b67b..5bbb196 100644
+index 233b67b..ff36831 100644
 --- a/node_modules/cpal-components/lib/constants/metrics.js
 +++ b/node_modules/cpal-components/lib/constants/metrics.js
-@@ -46,34 +46,31 @@ var CPAL_FILTER_TABS = [{
+@@ -46,103 +46,106 @@ var CPAL_FILTER_TABS = [{
  
  exports.CPAL_FILTER_TABS = CPAL_FILTER_TABS;
  var CPAL_FEEDER_TIP_ITEMS = [{
@@ -19373,7 +19455,11 @@ index 233b67b..5bbb196 100644
    tooltip: 1,
    desc: "UI_MAP_METRIC_DESC_CRI",
    decimals: 0,
-@@ -83,7 +80,7 @@ var CPAL_METRICS = [{
+-  mean: 43.15873016
++  mean: 43.15873016,
++  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX DFPS, USPS HUD (2022-2024)'
+ }, {
+   id: 'eci_weight',
    title: 'UI_MAP_METRIC_TITLE_ECON_INDEX',
    desc: 'UI_MAP_METRIC_DESC_ECON',
    abbrev: 'ECON',
@@ -19382,7 +19468,14 @@ index 233b67b..5bbb196 100644
    high_is_good: 1,
    colors: _colors.CRI_COLORS,
    tab: 'econ',
-@@ -96,7 +93,7 @@ var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 36.93121693
++  mean: 36.93121693,
++  source: 'Census LODES, ACS 5yr (2022-2023)'
+ }, {
+   id: 'edi_weight',
    title: 'UI_MAP_METRIC_TITLE_EDU_INDEX',
    desc: 'UI_MAP_METRIC_DESC_EDU',
    abbrev: 'EDU',
@@ -19391,7 +19484,14 @@ index 233b67b..5bbb196 100644
    high_is_good: 1,
    colors: _colors.CRI_COLORS,
    tab: 'edu',
-@@ -109,11 +106,11 @@ var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 65.00529101
++  mean: 65.00529101,
++  source: 'ACS 5yr, TX DFPS, Dallas Afterschool (2022-2024)'
+ }, {
+   id: 'fi_weight',
    title: 'UI_MAP_METRIC_TITLE_FAM_INDEX',
    desc: 'UI_MAP_METRIC_DESC_FAM',
    abbrev: 'FAM',
@@ -19404,8 +19504,11 @@ index 233b67b..5bbb196 100644
 +  tab_level: 1,
    tooltip: 1,
    decimals: 0,
-   mean: 73.20634921
-@@ -122,7 +119,7 @@ var CPAL_METRICS = [{
+-  mean: 73.20634921
++  mean: 73.20634921,
++  source: 'ACS 5yr, TX DFPS, Dallas Afterschool (2022-2024)'
+ }, {
+   id: 'hi_weight',
    title: 'UI_MAP_METRIC_TITLE_HEAL_INDEX',
    desc: 'UI_MAP_METRIC_DESC_HEAL',
    abbrev: 'HEAL',
@@ -19414,7 +19517,14 @@ index 233b67b..5bbb196 100644
    high_is_good: 1,
    colors: _colors.CRI_COLORS,
    tab: 'hel',
-@@ -135,7 +132,7 @@ var CPAL_METRICS = [{
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 33.36507937
++  mean: 33.36507937,
++  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy (2023-2024)'
+ }, {
+   id: 'ci_weight',
    title: 'UI_MAP_METRIC_TITLE_COMM_INDEX',
    desc: 'UI_MAP_METRIC_DESC_COMM',
    abbrev: 'COMM',
@@ -19423,6 +19533,15 @@ index 233b67b..5bbb196 100644
    high_is_good: 1,
    colors: _colors.CRI_COLORS,
    tab: 'comm',
+   tab_level: 0,
+   tooltip: 1,
+   decimals: 0,
+-  mean: 58.38624339
++  mean: 58.38624339,
++  source: 'NCTCOG, Dallas County JP, Trust for Public Land, USPS HUD (2024)'
+ }, {
+   id: 'comm_bbp',
+   title: 'UI_MAP_METRIC_TITLE_COMM_BBP',
 diff --git a/node_modules/cpal-components/lib/data/schools.js b/node_modules/cpal-components/lib/data/schools.js
 index 55ec1ad..b56e32a 100644
 --- a/node_modules/cpal-components/lib/data/schools.js
@@ -38635,3 +38754,41 @@ index 0000000..3a36eaa
 +exports.default = _default;
 +module.exports = exports.default;
 \ No newline at end of file
+diff --git a/node_modules/cpal-components/lib/modules/cpal/explorer/Map/components/MapLegend.js b/node_modules/cpal-components/lib/modules/cpal/explorer/Map/components/MapLegend.js
+index 8595054..8d76f90 100644
+--- a/node_modules/cpal-components/lib/modules/cpal/explorer/Map/components/MapLegend.js
++++ b/node_modules/cpal-components/lib/modules/cpal/explorer/Map/components/MapLegend.js
+@@ -154,7 +154,9 @@ var MapLegend = function MapLegend(_ref) {
+     onClick: toggleFilterPanel
+   }, _simpleI18n.default.translate('LINK_OPEN_FILTER_PANEL'))), /*#__PURE__*/_react.default.createElement("div", {
+     className: "map-legend-metric-title"
+-  }, _simpleI18n.default.translate(metricData.title)), /*#__PURE__*/_react.default.createElement("div", {
++  }, _simpleI18n.default.translate(metricData.title)), metricData.source && /*#__PURE__*/_react.default.createElement("div", {
++    className: "map-legend-metric-source"
++  }, "Source: ", metricData.source), /*#__PURE__*/_react.default.createElement("div", {
+     className: "map-legend-zone-labels"
+   }, /*#__PURE__*/_react.default.createElement("div", {
+     className: "fewer"
+diff --git a/node_modules/cpal-components/lib/styles/MapLegend.scss b/node_modules/cpal-components/lib/styles/MapLegend.scss
+index 037922b..e1637dc 100644
+--- a/node_modules/cpal-components/lib/styles/MapLegend.scss
++++ b/node_modules/cpal-components/lib/styles/MapLegend.scss
+@@ -80,6 +80,18 @@
+       margin: 1rem 0;
+     }
+   }
++  .map-legend-metric-source {
++    font-family: halyard-text;
++    font-weight: 300;
++    color: $turtle-green;
++    font-size: 1.1rem;
++    line-height: 1.4rem;
++    margin-bottom: 0.5rem;
++    @include media-breakpoint-up(md) {
++      font-size: 1.2rem;
++      line-height: 1.6rem;
++    }
++  }
+   .n-i-scale {
+     .n-i-scale-minmax {
+       .n-i-scale-min,
