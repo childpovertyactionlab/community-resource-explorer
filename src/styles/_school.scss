@@ -1,5 +1,4 @@
 .school-page {
-  overflow-x: hidden;
   .btn.print-school-page {
     clear: both;
     border: solid 1px $light-gray;
@@ -65,7 +64,7 @@
           }
           color: $orange-roughy2;
           &:after {
-            content: "";
+            content: '';
             display: block;
             background-color: $orange-roughy2;
             width: 25%;
@@ -218,7 +217,7 @@
       }
 
       .link-mean-info-button {
-        font-family: "Louize Display" !important;
+        font-family: 'Louize Display' !important;
         margin: 4rem 0 2rem;
         padding: 1.3rem 1rem;
         background-color: $another-bg-color-for-just-one-button;
@@ -238,7 +237,7 @@
         }
         .mean-info-button {
           align-self: center;
-          font-family: "Louize Display" !important;
+          font-family: 'Louize Display' !important;
           font-size: 1.8rem;
           line-height: 2.3rem;
           font-weight: 400;
@@ -266,7 +265,7 @@
         color: $orange-roughy2;
         margin-bottom: 3rem;
         &:after {
-          content: "";
+          content: '';
           display: block;
           background-color: $orange-roughy2;
           width: 10%;
@@ -293,7 +292,7 @@
       width: 88px;
       height: 104px;
       display: block;
-      background-image: url("../images/cpal-logo.svg");
+      background-image: url('../images/cpal-logo.svg');
       background-size: 100%;
       background-repeat: no-repeat;
       margin-left: auto;
@@ -312,7 +311,7 @@
         }
       }
       .text {
-        font-family: "Louize Display";
+        font-family: 'Louize Display';
         font-style: italic;
         font-weight: normal;
         // font-size: 14px;
@@ -347,7 +346,7 @@
         font-size: 2.8rem;
         color: $orange-roughy2;
         &:after {
-          content: "";
+          content: '';
           display: block;
           background-color: $orange-roughy2;
           width: 10%;
@@ -430,7 +429,7 @@
           border-bottom: 1px dotted #606b44;
           &:after,
           &:before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             height: 17px;
