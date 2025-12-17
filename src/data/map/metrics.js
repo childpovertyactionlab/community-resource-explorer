@@ -16,49 +16,49 @@ export const CPAL_FILTER_TABS = [
   {
     id: "com",
     title: "UI_MAP_METRIC_TITLE_COM",
-    default_metric: "com/INDEX",
+    default_metric: "com/INDEX/scaled",
   },
   {
     id: "eco",
     title: "UI_MAP_METRIC_TITLE_ECO",
-    default_metric: "eco/INDEX",
+    default_metric: "eco/INDEX/scaled",
   },
   {
     id: "hel",
     title: "UI_MAP_METRIC_TITLE_HEL",
-    default_metric: "hel/INDEX",
+    default_metric: "hel/INDEX/scaled",
   },
   {
     id: "yth",
     title: "UI_MAP_METRIC_TITLE_YTH",
-    default_metric: "yth/INDEX",
+    default_metric: "yth/INDEX/scaled",
   },
   {
     id: "cri",
     title: "UI_MAP_METRIC_TITLE_CRI",
-    default_metric: "cri/INDEX",
+    default_metric: "cri/INDEX/scaled",
   }
 ]
 
 export const CPAL_FEEDER_TIP_ITEMS = [
   {
-    id: "com/INDEX",
+    id: "com/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_COM",
   },
   {
-    id: "eco/INDEX",
+    id: "eco/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_ECO",
   },
   {
-    id: "hel/INDEX",
+    id: "hel/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_HEL",
   },
   {
-    id: "yth/INDEX",
+    id: "yth/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_YTH",
   },
   {
-    id: "cri/INDEX",
+    id: "cri/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_CRI",
   }
 ]
@@ -592,89 +592,89 @@ export const CPAL_METRICS = [
     citation: "Texas Department of Family and Protective Services 2024"
   },
   {
-    id: "com/INDEX",
+    id: "com/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_COM_INDEX",
     abbrev: "",
-    range: [-2.50465961806411, 3.53212132656295],
+    range: [0, 100],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "com",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_INDEX`,
-    description: "Number of quality-rated early childhood education seats per child 9 years or younger",
+    description: "Community Index - composite measure of community resources and stability",
     decimals: 0,
     as_percent: 0,
-    mean: -0.00648550899153548,
-    citation: "Texas Department of Family and Protective Services 2024"
+    mean: 41.38,
+    citation: "NCTCOG, Dallas County JP, Trust for Public Land, USPS HUD (2024)"
   },
   {
-    id: "eco/INDEX",
+    id: "eco/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_ECO_INDEX",
     abbrev: "",
-    range: [-3.94333251135249, 3.55450225241591],
+    range: [0, 100],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "eco",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_INDEX`,
-    description: "Number of quality-rated early childhood education seats per child 9 years or younger",
+    description: "Economic Opportunity Index - composite measure of economic resources and opportunity",
     decimals: 0,
     as_percent: 0,
-    mean: 0.00505660671863056,
-    citation: "Texas Department of Family and Protective Services 2024"
+    mean: 52.66,
+    citation: "Census LODES, ACS 5yr (2022-2023)"
   },
   {
-    id: "hel/INDEX",
+    id: "hel/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_HEL_INDEX",
     abbrev: "",
-    range: [-4.085701107977, 7.25160252660173],
+    range: [0, 100],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "hel",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INDEX`,
-    description: "Number of quality-rated early childhood education seats per child 9 years or younger",
+    description: "Health Index - composite measure of health outcomes and access",
     decimals: 0,
     as_percent: 0,
-    mean: 0.00843739008598326,
-    citation: "Texas Department of Family and Protective Services 2024"
+    mean: 36.11,
+    citation: "CDC PLACES, ACS 5yr, TX Board of Pharmacy (2023-2024)"
   },
   {
-    id: "yth/INDEX",
+    id: "yth/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_YTH_INDEX",
     abbrev: "",
-    range: [-2.87332492399244, 4.96635428272799],
+    range: [0, 100],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "yth",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_INDEX`,
-    description: "Number of quality-rated early childhood education seats per child 9 years or younger",
+    description: "Youth & Family Index - composite measure of youth and family resources",
     decimals: 0,
     as_percent: 0,
-    mean: 0.0149152077192188,
-    citation: "Texas Department of Family and Protective Services 2024"
+    mean: 36.84,
+    citation: "ACS 5yr, TX DFPS, Dallas Afterschool (2022-2024)"
   },
   {
-    id: "cri/INDEX",
+    id: "cri/INDEX/scaled",
     title: "UI_MAP_METRIC_TITLE_CRI_INDEX",
     abbrev: "",
-    range: [-5.94785346489126, 8.5490499622455],
+    range: [0, 100],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "cri",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_CRI_INDEX`,
-    description: "Number of quality-rated early childhood education seats per child 9 years or younger",
+    description: "Community Resource Index - overall composite score across all domains",
     decimals: 0,
     as_percent: 0,
-    mean: 0.0115104109086127,
-    citation: "Texas Department of Family and Protective Services 2024"
+    mean: 41.05,
+    citation: "NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX DFPS, USPS HUD (2022-2024)"
   }
 ]
 

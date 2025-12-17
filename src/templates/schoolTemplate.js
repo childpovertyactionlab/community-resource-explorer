@@ -188,18 +188,21 @@ const SchoolPage = ({ data, ...props }) => {
 
   /**
    * Returns a string list of good or bad metrics for the school.
-   * @param  {[type]} sln [description]
-   * @return {[type]}     [description]
+   * Uses 0-100 scaled values with thresholds: >=75 for top, <=25 for bottom
+   * @param  {String} topOrBottom - "top" or "bottom"
+   * @return {String}
    */
   const getSchoolMetricList = topOrBottom => {
     let metricArray = []
     for (let i = 0; i < CPAL_METRICS.length; i++) {
       if (metricArray.length >= 3) break
       if (CPAL_METRICS[i].tab_level > 0) {
-        const key = CPAL_METRICS[i].id.replace(/\//g, "_") + "_z";
-        const z = school[key];
-        console.log("Checking metric (z):", key, "Value:", z);
-        if ((topOrBottom === "top" && z >= 1.5) || (topOrBottom !== "top" && z <= -1.5)) {
+        // Use scaled values (0-100) 
+        const key = CPAL_METRICS[i].id.replace(/\//g, "_") + "_scaled";
+        const scaledValue = school[key];
+        console.log("Checking metric (scaled):", key, "Value:", scaledValue);
+        // Thresholds: top 25% (>=75) or bottom 25% (<=25)
+        if ((topOrBottom === "top" && scaledValue >= 75) || (topOrBottom !== "top" && scaledValue <= 25)) {
           metricArray.push(i18n.translate(CPAL_METRICS[i].title))
         }
       }
@@ -260,12 +263,12 @@ const SchoolPage = ({ data, ...props }) => {
 
   console.log("CPAL_METRICS", CPAL_METRICS);
   console.log("school", school);
-  console.log("getMetric cri/INDEX", getMetric("cri/INDEX", CPAL_METRICS));
+  console.log("getMetric cri/INDEX/scaled", getMetric("cri/INDEX/scaled", CPAL_METRICS));
 
-  // For CRI index, use the value directly and coerce to number:
-  const criValue = Number(school.cri_INDEX);
-  const criMetric = getMetric("cri/INDEX", CPAL_METRICS);
-  console.log("school.cri_INDEX:", school.cri_INDEX, typeof school.cri_INDEX);
+  // For CRI index, use the scaled 0-100 value:
+  const criValue = Number(school.cri_INDEX_scaled);
+  const criMetric = getMetric("cri/INDEX/scaled", CPAL_METRICS);
+  console.log("school.cri_INDEX_scaled:", school.cri_INDEX_scaled, typeof school.cri_INDEX_scaled);
   console.log("criValue (as number):", criValue, typeof criValue);
   console.log("criMetric.decimals:", criMetric.decimals);
 
@@ -496,7 +499,7 @@ const SchoolPage = ({ data, ...props }) => {
           <div className="metric-group">
             <NonInteractiveScale
               className="metric-group"
-              metric="cri/INDEX"
+              metric="cri/INDEX/scaled"
               quintiles={constructQuintiles(
                 getQuintile(
                   criValue,

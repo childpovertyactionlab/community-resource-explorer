@@ -116,11 +116,38 @@ exports.createPages = async ({ graphql, actions }) => {
             yth_cccall_z
             yth_ecseat_estimate
             yth_ecseat_z
+            yth_ecseat_scaled
+            com_evics_scaled
+            com_libs_scaled
+            com_urbhe_scaled
+            com_vacbus_scaled
+            com_vacltb_scaled
+            com_vacltr_scaled
+            com_vacres_scaled
+            eco_joball_scaled
+            eco_lowjob_scaled
+            eco_midjob_scaled
+            eco_owncb_scaled
+            eco_rentcb_scaled
+            hel_chkups_scaled
+            hel_inscov_scaled
+            hel_insrat_scaled
+            hel_pharma_scaled
+            hel_sleep_scaled
+            yth_broad_scaled
+            yth_aftscl_scaled
+            yth_cccafd_scaled
+            yth_cccall_scaled
             com_INDEX
             eco_INDEX
             hel_INDEX
             yth_INDEX
             cri_INDEX
+            com_INDEX_scaled
+            eco_INDEX_scaled
+            hel_INDEX_scaled
+            yth_INDEX_scaled
+            cri_INDEX_scaled
           }
         }
       }
