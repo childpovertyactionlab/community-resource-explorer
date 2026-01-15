@@ -59,7 +59,7 @@ index c3bd467..06c8263 100644
    decimals: 0,
 -  mean: 43.15873016
 +  mean: 41,
-+  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX DFPS, USPS HUD (2022-2024)'
++  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX HHS, USPS HUD, Dallas Afterschool (2022-2026)'
  }, {
    id: 'eci_weight',
    title: 'UI_MAP_METRIC_TITLE_ECON_INDEX',
@@ -103,7 +103,7 @@ index c3bd467..06c8263 100644
    decimals: 0,
 -  mean: 33.36507937
 +  mean: 36,
-+  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy (2023-2024)'
++  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy, NCTCOG (2023-2026)'
  }, {
    id: 'ci_weight',
    title: 'UI_MAP_METRIC_TITLE_COMM_INDEX',
@@ -113,7 +113,7 @@ index c3bd467..06c8263 100644
    decimals: 0,
 -  mean: 58.38624339
 +  mean: 41,
-+  source: 'NCTCOG, Dallas County JP, Trust for Public Land, USPS HUD (2024)'
++  source: 'NCTCOG, Dallas County JP, USPS HUD (2024-2026)'
  }, {
    id: 'comm_bbp',
    title: 'UI_MAP_METRIC_TITLE_COMM_BBP',
@@ -16733,7 +16733,7 @@ index 233b67b..06c8263 100644
    decimals: 0,
 -  mean: 43.15873016
 +  mean: 41,
-+  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX DFPS, USPS HUD (2022-2024)'
++  source: 'NCTCOG, CDC PLACES, ACS 5yr, Census LODES, TX HHS, USPS HUD, Dallas Afterschool (2022-2026)'
  }, {
    id: 'eci_weight',
    title: 'UI_MAP_METRIC_TITLE_ECON_INDEX',
@@ -16798,7 +16798,7 @@ index 233b67b..06c8263 100644
    decimals: 0,
 -  mean: 33.36507937
 +  mean: 36,
-+  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy (2023-2024)'
++  source: 'CDC PLACES, ACS 5yr, TX Board of Pharmacy, NCTCOG (2023-2026)'
  }, {
    id: 'ci_weight',
    title: 'UI_MAP_METRIC_TITLE_COMM_INDEX',
@@ -16814,7 +16814,7 @@ index 233b67b..06c8263 100644
    decimals: 0,
 -  mean: 58.38624339
 +  mean: 41,
-+  source: 'NCTCOG, Dallas County JP, Trust for Public Land, USPS HUD (2024)'
++  source: 'NCTCOG, Dallas County JP, USPS HUD (2024-2026)'
  }, {
    id: 'comm_bbp',
    title: 'UI_MAP_METRIC_TITLE_COMM_BBP',

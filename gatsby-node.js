@@ -86,22 +86,24 @@ exports.createPages = async ({ graphql, actions }) => {
             com_vacltr_z
             com_vacres_estimate
             com_vacres_z
+            eco_banks_estimate
+            eco_banks_z
             eco_joball_estimate
             eco_joball_z
-            eco_lowjob_estimate
-            eco_lowjob_z
-            eco_midjob_estimate
-            eco_midjob_z
+            eco_hijob_estimate
+            eco_hijob_z
             eco_owncb_estimate
+            eco_payday_estimate
+            eco_payday_z
             eco_owncb_z
             eco_rentcb_estimate
             eco_rentcb_z
             hel_chkups_estimate
             hel_chkups_z
+            hel_clinic_estimate
+            hel_clinic_z
             hel_inscov_estimate
             hel_inscov_z
-            hel_insrat_estimate
-            hel_insrat_z
             hel_pharma_estimate
             hel_pharma_z
             hel_sleep_estimate
@@ -114,9 +116,12 @@ exports.createPages = async ({ graphql, actions }) => {
             yth_cccafd_z
             yth_cccall_estimate
             yth_cccall_z
-            yth_ecseat_estimate
-            yth_ecseat_z
-            yth_ecseat_scaled
+            com_comrec_estimate
+            com_comrec_z
+            com_comrec_scaled
+            com_parks_estimate
+            com_parks_z
+            com_parks_scaled
             com_evics_scaled
             com_libs_scaled
             com_urbhe_scaled
@@ -124,14 +129,15 @@ exports.createPages = async ({ graphql, actions }) => {
             com_vacltb_scaled
             com_vacltr_scaled
             com_vacres_scaled
+            eco_banks_scaled
             eco_joball_scaled
-            eco_lowjob_scaled
-            eco_midjob_scaled
+            eco_hijob_scaled
             eco_owncb_scaled
+            eco_payday_scaled
             eco_rentcb_scaled
             hel_chkups_scaled
+            hel_clinic_scaled
             hel_inscov_scaled
-            hel_insrat_scaled
             hel_pharma_scaled
             hel_sleep_scaled
             yth_broad_scaled

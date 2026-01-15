@@ -250,5 +250,15 @@ const en_US = {
   UI_MAP_METRIC_DESC_YTH_CCCALL: `Licensed childcare centers, per 10,000 children under age 5`,
   UI_MAP_METRIC_TITLE_YTH_ECSEAT: `Early Childhood Education Seats`,
   UI_MAP_METRIC_DESC_YTH_ECSEAT: `High-quality, early childcare seats, per 10,000 children between ages 3 and 4`,
+  UI_MAP_METRIC_TITLE_COM_PARKS: `Parks`,
+  UI_MAP_METRIC_DESC_COM_PARKS: `<p>Park area per 10,000 residents in the school's surrounding community.</p>`,
+  UI_MAP_METRIC_TITLE_ECO_BANKS: `Banks & Credit Unions`,
+  UI_MAP_METRIC_DESC_ECO_BANKS: `<p>Number of banks and credit unions per 10,000 residents.</p>`,
+  UI_MAP_METRIC_TITLE_ECO_HIJOB: `High-wage Jobs`,
+  UI_MAP_METRIC_DESC_ECO_HIJOB: `<p>Percentage of jobs earning above $3,333 per month.</p>`,
+  UI_MAP_METRIC_TITLE_ECO_PAYDAY: `Payday Lenders`,
+  UI_MAP_METRIC_DESC_ECO_PAYDAY: `<p>Number of payday lending businesses per 10,000 residents. Lower is better.</p>`,
+  UI_MAP_METRIC_TITLE_HEL_CLINIC: `Health Clinics`,
+  UI_MAP_METRIC_DESC_HEL_CLINIC: `<p>Number of health clinics per 10,000 residents.</p>`,
 }
 export default en_US

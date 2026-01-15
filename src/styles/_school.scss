@@ -422,6 +422,21 @@
   }
   // General styling for the scale
   .metric-group {
+    .metric-citation {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #606b44;
+      margin: 0 0 0.5rem 0;
+      font-weight: 300;
+      width: 75%;
+      margin-left: 0;
+      margin-right: auto;
+      @include media-breakpoint-up(md) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
     .n-i-scale-parent {
       .n-i-scale-linear {
         margin-top: 3.6rem;

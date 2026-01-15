@@ -78,8 +78,8 @@ const SchoolPage = ({ data, ...props }) => {
 
   // Helper to get metric value and z-score
   const getMetricValue = (metric) => {
-    // INDEX fields don't have _estimate suffix
-    const fieldName = metric.includes('INDEX') 
+    // INDEX and scaled fields don't have _estimate suffix
+    const fieldName = (metric.includes('INDEX') || metric.includes('/scaled'))
       ? metric.replace(/\//g, "_")
       : metric.replace(/\//g, "_") + "_estimate";
     const value = school[fieldName];
@@ -88,6 +88,12 @@ const SchoolPage = ({ data, ...props }) => {
   const getMetricZ = (metric) => {
     const value = school[metric.replace(/\//g, "_") + "_z"];
     return typeof value === "string" ? parseFloat(value) : value;
+  }
+
+  // Format citations for display
+  const formatCitations = (citations) => {
+    if (!citations || citations.length === 0) return null
+    return citations.map(c => `${c.citation}, ${c.date}`).join('; ')
   }
 
   // Helper to get feeder high school name(s)
@@ -147,7 +153,8 @@ const SchoolPage = ({ data, ...props }) => {
 
   const getMetricCollection = (id, level) => {
     return CPAL_METRICS.filter(el => {
-      return el.tab === id && el.tab_level === level
+      // Only show scaled metrics (0-100 range) on school pages
+      return el.tab === id && el.tab_level === level && el.id.includes('/scaled')
     }).sort((a, b) => {
       return a.order - b.order
     })
@@ -632,6 +639,9 @@ const SchoolPage = ({ data, ...props }) => {
                   key={"metric_" + el.id}
                 >
                   <h6>{i18n.translate(el.title)}</h6>
+                  {el.citations && el.citations.length > 0 && (
+                    <p className="metric-citation">{formatCitations(el.citations)}</p>
+                  )}
                   <NonInteractiveScale
                     className={"scale-" + el.id}
                     id={"scale_" + el.id}
@@ -696,6 +706,9 @@ const SchoolPage = ({ data, ...props }) => {
                   )}
                 >
                   <h6>{i18n.translate(el.title)}</h6>
+                  {el.citations && el.citations.length > 0 && (
+                    <p className="metric-citation">{formatCitations(el.citations)}</p>
+                  )}
                   <NonInteractiveScale
                     className={"scale-" + el.id}
                     id={"scale_" + el.id}
