@@ -619,9 +619,9 @@ const SchoolPage = ({ data, ...props }) => {
             </Col>
             {!!getCatDesc(el.default_metric) && (
               <Col
-                xs={{ span: 10, offset: 1 }}
-                md={{ span: 5, offset: 1 }}
-                xl={{ span: 4, offset: 1 }}
+                xs={{ span: 12, offset: 0 }}
+                md={{ span: 10, offset: 1 }}
+                xl={{ span: 10, offset: 1 }}
                 className="metric-group cat-intro"
                 dangerouslySetInnerHTML={{
                   __html: i18n.translate(getCatDesc(el.default_metric)),

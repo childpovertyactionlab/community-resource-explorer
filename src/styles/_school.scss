@@ -390,17 +390,50 @@
         }
       }
       &.cat-intro {
+        max-width: 100%;
+        overflow: visible !important;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 200;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        white-space: normal;
+        text-align: left;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        @include media-breakpoint-up(md) {
+          padding-right: 15px !important;
+          padding-left: 4rem !important;
+        }
+        @include media-breakpoint-up(lg) {
+          padding-left: 5rem !important;
+        }
         p {
           width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           // @include media-breakpoint-up(md) {
           //   width: 80%;
           // }
           font-size: 1.6rem;
           line-height: 2.4rem;
           font-weight: 200;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          word-break: break-word;
+          hyphens: auto;
+          white-space: normal;
           span {
             font-size: 1.8rem;
             font-weight: 500;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
           }
         }
       }
