@@ -689,7 +689,7 @@ export const CPAL_METRICS = [
     desc: `UI_MAP_METRIC_DESC_ECO_BANKS`,
     description: "Excluding ATMs",
     decimals: 1,
-    as_percent: 1,
+    as_percent: 0,
     mean: 3.04916816557053,
     citations: []
   },
@@ -893,7 +893,7 @@ export const CPAL_METRICS = [
     desc: `UI_MAP_METRIC_DESC_HEL_CHKUPS`,
     description: "Index value of population that has regular health checkups",
     decimals: 1,
-    as_percent: 1,
+    as_percent: 0,
     mean: 71.323586326364,
     citations: [{"citation":"CDC PLACES","date":"2024"}]
   },
@@ -927,7 +927,7 @@ export const CPAL_METRICS = [
     desc: `UI_MAP_METRIC_DESC_HEL_CLINIC`,
     description: "",
     decimals: 1,
-    as_percent: 1,
+    as_percent: 0,
     mean: 142.918160987099,
     citations: []
   },
