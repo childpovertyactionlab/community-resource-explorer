@@ -304,3 +304,44 @@ export const getFeederAverage = (metric, schoolSet) => {
 export const getPercent = (percentDecimal, total) => {
   return percentDecimal * 100
 };
+
+/**
+ * Gets the display value for a metric from school data
+ * - Indicators: returns /estimate value (real)
+ * - Indexes: returns /scaled value (0-100)
+ * @param {Object} school - School data object
+ * @param {String} metricId - Metric ID (e.g., "eco/joball", "eco/INDEX/scaled")
+ * @return {Number|null} - The appropriate value to display
+ */
+export const getMetricValue = (school, metricId) => {
+  if (!school || !metricId) return null;
+  
+  // Convert slashes to underscores for school data key lookup (GraphQL requirement)
+  const toSchoolKey = (key) => key.replace(/\//g, '_');
+  
+  // If metricId already includes /scaled or /estimate, use it directly
+  if (metricId.includes('/scaled') || metricId.includes('/estimate')) {
+    return school[toSchoolKey(metricId)];
+  }
+  
+  // Check if this is an INDEX metric (use /scaled)
+  if (metricId.includes('INDEX')) {
+    const scaledKey = toSchoolKey(metricId + '/scaled');
+    const baseKey = toSchoolKey(metricId);
+    return school[scaledKey] !== undefined ? school[scaledKey] : school[baseKey];
+  }
+  
+  // For indicators, prefer /estimate (real value)
+  const estimateKey = toSchoolKey(metricId + '/estimate');
+  if (school[estimateKey] !== undefined) {
+    return school[estimateKey];
+  }
+  
+  // Fallback to /scaled or direct key
+  const scaledKey = toSchoolKey(metricId + '/scaled');
+  if (school[scaledKey] !== undefined) {
+    return school[scaledKey];
+  }
+  
+  return school[toSchoolKey(metricId)];
+};

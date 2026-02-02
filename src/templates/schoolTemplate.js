@@ -20,6 +20,7 @@ import {
   getPercent,
   getMetric,
   getQuintile,
+  getMetricValue,
 } from "./utils/utils"
 import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
@@ -76,15 +77,7 @@ const SchoolPage = ({ data, ...props }) => {
   // Insert into new json object.
   zoneJson.features.push(cir)
 
-  // Helper to get metric value and z-score
-  const getMetricValue = (metric) => {
-    // INDEX and scaled fields don't have _estimate suffix
-    const fieldName = (metric.includes('INDEX') || metric.includes('/scaled'))
-      ? metric.replace(/\//g, "_")
-      : metric.replace(/\//g, "_") + "_estimate";
-    const value = school[fieldName];
-    return typeof value === "string" ? parseFloat(value) : value;
-  }
+  // Helper to get metric z-score
   const getMetricZ = (metric) => {
     const value = school[metric.replace(/\//g, "_") + "_z"];
     return typeof value === "string" ? parseFloat(value) : value;
@@ -153,8 +146,15 @@ const SchoolPage = ({ data, ...props }) => {
 
   const getMetricCollection = (id, level) => {
     return CPAL_METRICS.filter(el => {
-      // Only show scaled metrics (0-100 range) on school pages
-      return el.tab === id && el.tab_level === level && el.id.includes('/scaled')
+      if (level === 0) {
+        // Indexes: must end with /scaled and be an INDEX
+        return el.tab === id && el.tab_level === level &&
+               el.id.includes('INDEX') && el.id.endsWith('/scaled');
+      } else {
+        // Indicators: use base metrics (without /scaled or /estimate suffix)
+        const isBaseMetric = !el.id.includes('/scaled') && !el.id.includes('/estimate');
+        return el.tab === id && el.tab_level === level && isBaseMetric;
+      }
     }).sort((a, b) => {
       return a.order - b.order
     })
@@ -649,7 +649,7 @@ const SchoolPage = ({ data, ...props }) => {
                     metric={el.id}
                     quintiles={constructQuintiles(
                       getQuintile(
-                        getMetricValue(el.id),
+                        getMetricValue(school, el.id),
                         el.range[0],
                         el.range[1],
                         el.high_is_good
@@ -659,13 +659,13 @@ const SchoolPage = ({ data, ...props }) => {
                     colors={el.colors}
                     showHash={true}
                     hashLeft={getHashLeft(
-                      getMetricValue(el.id),
+                      getMetricValue(school, el.id),
                       el.range[0],
                       el.range[1],
                       el.high_is_good
                     )}
                     hashValue={getRoundedValue(
-                      getMetricValue(el.id),
+                      getMetricValue(school, el.id),
                       el.decimals,
                       false,
                       el.is_currency ? el.is_currency : 0,
@@ -716,7 +716,7 @@ const SchoolPage = ({ data, ...props }) => {
                     metric={el.id}
                     quintiles={constructQuintiles(
                       getQuintile(
-                        getMetricValue(el.id),
+                        getMetricValue(school, el.id),
                         el.range[0],
                         el.range[1],
                         el.high_is_good
@@ -726,13 +726,13 @@ const SchoolPage = ({ data, ...props }) => {
                     colors={el.colors}
                     showHash={true}
                     hashLeft={getHashLeft(
-                      getMetricValue(el.id),
+                      getMetricValue(school, el.id),
                       el.range[0],
                       el.range[1],
                       el.high_is_good
                     )}
                     hashValue={getRoundedValue(
-                      getMetricValue(el.id),
+                      getMetricValue(school, el.id),
                       el.decimals,
                       false,
                       el.is_currency ? el.is_currency : 0,
