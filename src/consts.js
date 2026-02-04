@@ -154,7 +154,9 @@ const pages = {
   THANKS,
   ANALYTICS
 }
-const menuPages = [HOME, EXPLORER, ABOUT, ACTION, FAQ, DATA, CONTACT]
+// Commented out: only Home (Explorer) and Schools pages are active
+// const menuPages = [HOME, ABOUT, ACTION, FAQ, DATA, CONTACT]
+const menuPages = [HOME]
 
 // FAQs
 

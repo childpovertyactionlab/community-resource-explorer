@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   frontend:
     build:
@@ -22,7 +24,9 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    command: ["sh", "-c", "npm run clean && npm run develop"]
+      - /app/.cache
+      - /app/public
+    command: ["npm", "run", "develop:docker"]
 
 volumes: {}
 

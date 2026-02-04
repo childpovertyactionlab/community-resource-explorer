@@ -10,12 +10,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy package
+# Copy package files and patches
 COPY package*.json ./
+COPY patches/ ./patches/
 
 # With --legacy-peer-deps for React 18 compatibility
+# patch-package runs automatically via postinstall script
 RUN npm ci --legacy-peer-deps \
-    && npm install @parcel/watcher@2.0.5 --no-save
+    && npm rebuild @parcel/watcher --update-binary \
+    && npm install @parcel/watcher@2.4.1 --no-save --force
 
 # Copy the rest of the application
 COPY . .

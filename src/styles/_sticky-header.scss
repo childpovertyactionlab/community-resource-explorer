@@ -1,6 +1,7 @@
 .sticky-header {
   position: fixed;
-  transform: translate(0, -100%);
+  // Always visible - no longer hidden at top of page
+  transform: none;
   transition: transform ease .4s;
   &.active {
     transform: none;
@@ -11,7 +12,7 @@
   right: 0;
   height: $sticky-header-height;
   z-index: 101;
-  
+
   background: white;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
 

@@ -67,7 +67,6 @@ resource "aws_cloudwatch_metric_alarm" "high_4xx_error_rate" {
   statistic           = "Average"
   threshold           = "5"
   alarm_description   = "This metric monitors 4xx error rate"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
 
   dimensions = {
     DistributionId = var.cloudfront_distribution_id
@@ -88,7 +87,6 @@ resource "aws_cloudwatch_metric_alarm" "high_5xx_error_rate" {
   statistic           = "Average"
   threshold           = "1"
   alarm_description   = "This metric monitors 5xx error rate"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
 
   dimensions = {
     DistributionId = var.cloudfront_distribution_id
@@ -96,15 +94,6 @@ resource "aws_cloudwatch_metric_alarm" "high_5xx_error_rate" {
 
   tags = {
     Name = "${var.project_name}-${var.environment}-5xx-alarm"
-  }
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "${var.project_name}-${var.environment}-alerts"
-
-  tags = {
-    Name = "${var.project_name}-${var.environment}-alerts"
   }
 }
 

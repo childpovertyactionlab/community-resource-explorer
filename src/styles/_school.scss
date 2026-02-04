@@ -1,5 +1,4 @@
 .school-page {
-  overflow-x: hidden;
   .btn.print-school-page {
     clear: both;
     border: solid 1px $light-gray;
@@ -26,7 +25,8 @@
       padding: 5rem 0 6rem;
       width: 100%;
       .map-section {
-        min-height: 300px;
+        min-height: 411px;
+        height: 411px;
         cursor: default;
         padding-right: 0;
         @include media-breakpoint-up(lg) {
@@ -64,7 +64,7 @@
           }
           color: $orange-roughy2;
           &:after {
-            content: "";
+            content: '';
             display: block;
             background-color: $orange-roughy2;
             width: 25%;
@@ -87,7 +87,7 @@
           margin-bottom: 4rem;
         }
         .print-school-page {
-          // margin-bottom: 4rem;
+          margin-bottom: 1rem;
         }
       }
       &.school-metadata,
@@ -122,6 +122,7 @@
       padding: 6rem 0;
       .metric-group {
         margin-bottom: 2.4rem;
+        padding-right: 6rem;
         h4 {
           padding: 2rem 0 1rem;
           width: 100%;
@@ -171,9 +172,13 @@
           font-size: 2rem;
         }
         .n-i-scale {
-          width: 100%;
+          width: 75%;
+          margin-left: 0;
+          margin-right: auto;
           @include media-breakpoint-up(md) {
-            width: 92%;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
       }
@@ -205,15 +210,11 @@
             line-height: 2.9rem;
             font-weight: 500;
           }
-          span {
-            // display: block;
-            // width: 100%;
-          }
         }
       }
 
       .link-mean-info-button {
-        font-family: "Louize Display" !important;
+        font-family: 'Louize Display' !important;
         margin: 4rem 0 2rem;
         padding: 1.3rem 1rem;
         background-color: $another-bg-color-for-just-one-button;
@@ -233,7 +234,7 @@
         }
         .mean-info-button {
           align-self: center;
-          font-family: "Louize Display" !important;
+          font-family: 'Louize Display' !important;
           font-size: 1.8rem;
           line-height: 2.3rem;
           font-weight: 400;
@@ -261,7 +262,7 @@
         color: $orange-roughy2;
         margin-bottom: 3rem;
         &:after {
-          content: "";
+          content: '';
           display: block;
           background-color: $orange-roughy2;
           width: 10%;
@@ -288,7 +289,7 @@
       width: 88px;
       height: 104px;
       display: block;
-      background-image: url("../images/cpal-logo.svg");
+      background-image: url('../images/cpal-logo.svg');
       background-size: 100%;
       background-repeat: no-repeat;
       margin-left: auto;
@@ -307,7 +308,7 @@
         }
       }
       .text {
-        font-family: "Louize Display";
+        font-family: 'Louize Display';
         font-style: italic;
         font-weight: normal;
         // font-size: 14px;
@@ -330,11 +331,37 @@
     &:last-of-type {
       margin-bottom: 6rem;
     }
+    // Make Row a flex container for column layout
+    // Add matching left and right padding to center content and prevent touching edges
+    padding-left: 6rem;
+    padding-right: 6rem;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .metric-collection {
       display: flex;
       flex-wrap: wrap;
+      // Remove Bootstrap's offset-1 margin (8.33333333%) on all breakpoints
+      margin-left: 0 !important;
       // padding-top: 2rem;
       // padding-bottom: 2rem;
+      // Override Bootstrap offset classes at all breakpoints
+      &.offset-1,
+      &.offset-md-1,
+      &.offset-xl-1 {
+        margin-left: 0 !important;
+      }
+      @include media-breakpoint-up(md) {
+        &.offset-md-1 {
+          margin-left: 0 !important;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        &.offset-xl-1 {
+          margin-left: 0 !important;
+        }
+      }
       h5 {
         // padding: 2rem 0 1rem;
         width: 100%;
@@ -342,7 +369,7 @@
         font-size: 2.8rem;
         color: $orange-roughy2;
         &:after {
-          content: "";
+          content: '';
           display: block;
           background-color: $orange-roughy2;
           width: 10%;
@@ -354,6 +381,15 @@
         }
       }
       &.metric-collection-header {
+        // Category title should be full width
+        // Remove Bootstrap's offset-1 margin on mobile
+        margin-left: 0 !important;
+        @include media-breakpoint-up(md) {
+          flex: 0 0 100% !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: 0 !important;
+        }
         h6 {
           font-size: 1.6rem;
           font-weight: 400;
@@ -364,7 +400,13 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       width: 100%;
-      font-size: 1rem !important;
+      font-size: 1.5rem !important;
+      // Remove Bootstrap's offset-1 margin on mobile
+      margin-left: 0 !important;
+      @include media-breakpoint-up(md) {
+        // Allow Bootstrap offset on desktop if needed
+        margin-left: 0;
+      }
       h6 {
         font-size: 1.6rem;
         font-weight: 400;
@@ -377,20 +419,80 @@
           font-size: 2.4rem;
           font-weight: 500;
         }
+        // When there's a cat-intro, level-0 should be in a column (not full width)
+        @include media-breakpoint-up(md) {
+          // When next to cat-intro, use flexbox for 50/50 split
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // When in a column layout (next to cat-intro), style it like level-1
+          padding-right: 15px !important;
+          // No margin-left here - parent Row handles the offset
+          h6 {
+            font-size: 1.6rem;
+            font-weight: 400;
+          }
+          // All scales should be 90% of their container (same as level-1)
+          .n-i-scale {
+            width: 90% !important;
+            max-width: 90% !important;
+            margin-right: auto !important;
+          }
+        }
       }
       &.cat-intro {
+        max-width: 100%;
+        overflow: visible !important;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 200;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        white-space: normal;
+        text-align: left;
+        // Remove Bootstrap's offset-1 margin on mobile
+        margin-left: 0 !important;
+        @include media-breakpoint-up(md) {
+          // Use flexbox to create 50/50 split with level-0
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // Allow text to wrap naturally within the column
+          // Remove Bootstrap's offset-1 margin on desktop
+          margin-left: 0 !important;
+        }
         p {
           width: 100%;
-          // @include media-breakpoint-up(md) {
-          //   width: 80%;
-          // }
+          max-width: 100%;
+          box-sizing: border-box;
           font-size: 1.6rem;
           line-height: 2.4rem;
           font-weight: 200;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          word-break: break-word;
+          hyphens: auto;
+          white-space: normal;
           span {
             font-size: 1.8rem;
             font-weight: 500;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
           }
+        }
+      }
+      &.level-1 {
+        @include media-breakpoint-up(md) {
+          // Level-1 metrics should be 50% width to match cat-intro/level-0
+          // Use flexbox to create 2-column layout
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // No margin-left here - parent Row handles the offset
         }
       }
       // @include media-breakpoint-up(md) {
@@ -407,14 +509,29 @@
   }
   // General styling for the scale
   .metric-group {
+    .metric-citation {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #606b44;
+      margin: 0 0 0.5rem 0;
+      font-weight: 300;
+      width: 75%;
+      margin-left: 0;
+      margin-right: auto;
+      @include media-breakpoint-up(md) {
+        width: 90%;
+        margin-right: auto;
+      }
+    }
     .n-i-scale-parent {
       .n-i-scale-linear {
         margin-top: 3.6rem;
         .n-i-scale-line {
+          position: relative;
           border-bottom: 1px dotted #606b44;
           &:after,
           &:before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             height: 17px;
@@ -437,27 +554,39 @@
               background-color: #2c390b;
             }
             .n-i-scale-mean-value {
-              width: 200px;
+              width: 120px;
               text-align: center;
-              margin-left: -100px;
-              font-size: 1.5rem;
+              margin-left: -60px;
+              font-size: 1.3rem;
               font-weight: 300;
               margin-top: -2px;
+              @include media-breakpoint-up(md) {
+                width: 200px;
+                margin-left: -100px;
+                font-size: 1.5rem;
+              }
             }
           }
           .n-i-scale-hash {
+            position: absolute;
             background-color: transparent !important;
             top: -28px !important;
             z-index: 11; // Set just above z-index for right hash.
             .n-i-scale-hash-value {
-              width: 200px;
+              width: 120px;
               text-align: center;
-              margin-left: -100px;
+              margin-left: -60px;
               height: 2rem;
               font-family: Halyard;
               font-weight: 500;
-              font-size: 1.8rem;
-              line-height: 1.8rem;
+              font-size: 1.5rem;
+              line-height: 1.5rem;
+              @include media-breakpoint-up(md) {
+                width: 200px;
+                margin-left: -100px;
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+              }
             }
             .n-i-scale-hash-dot {
               background-color: #e55934;
@@ -473,9 +602,12 @@
     }
     .n-i-scale .n-i-scale-minmax {
       margin-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 300;
       margin-top: 2.4rem;
+      @include media-breakpoint-up(md) {
+        font-size: 1.5rem;
+      }
     }
     .n-i-scale-hash {
       top: 1px !important;
@@ -565,6 +697,7 @@
     }
 
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
+      display: flex;
       border: 1px solid #ccc;
       height: 12px;
       box-sizing: content-box;
@@ -576,6 +709,7 @@
         height: 100%;
         border-right: 1px solid #ccc;
         width: 16.665%;
+        flex-shrink: 0;
         &:after,
         &:before {
           display: none;
@@ -633,6 +767,7 @@
 @media print {
   * {
     -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+    print-color-adjust: exact !important; /* Standard */
     color-adjust: exact !important; /*Firefox*/
     overflow: visible;
   }

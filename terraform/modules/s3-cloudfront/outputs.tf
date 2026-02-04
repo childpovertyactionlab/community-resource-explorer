@@ -27,3 +27,8 @@ output "acm_certificate_arn" {
   description = "ACM certificate ARN"
   value       = var.domain_name != null ? aws_acm_certificate.website[0].arn : null
 }
+
+output "cloudfront_function_arn" {
+  description = "CloudFront Function ARN for URL rewriting"
+  value       = aws_cloudfront_function.url_rewrite.arn
+}

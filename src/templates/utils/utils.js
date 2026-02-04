@@ -107,36 +107,39 @@ export const getRoundedValue = (
   isCurrency = false,
   isPercent = false
 ) => {
-  const type = typeof value
-  if (!!isPercent) {
-    value = value * 100
+  // Convert to number if it's a string
+  const numValue = typeof value === "string" ? parseFloat(value) : value;
+  
+  // Check if value is null, undefined, or NaN after conversion
+  if (numValue == null || isNaN(numValue)) {
+    console.warn("getRoundedValue: Non-numeric value encountered", { value, decimals, padZeroes, isCurrency, isPercent });
+    return "-";
   }
-  let fixed = null
-  if (type === "string") {
-    if (padZeroes) {
-      fixed = parseFloat(value)
-        .toFixed(decimals)
-        .toLocaleString()
-    } else {
-      fixed = +parseFloat(value)
-        .toFixed(decimals)
-        .toLocaleString()
-    }
+  
+  // Validate decimals parameter - must be between 0 and 100
+  const validDecimals = (decimals == null || isNaN(decimals) || decimals < 0 || decimals > 100) ? 0 : Math.floor(decimals);
+  
+  let workingValue = numValue;
+  
+  if (!!isPercent) {
+    workingValue = workingValue * 100;
+  }
+  
+  let fixed = null;
+  if (padZeroes) {
+    fixed = workingValue.toFixed(validDecimals);
   } else {
-    if (padZeroes) {
-      fixed = Number(value.toFixed(decimals)).toLocaleString()
-    } else {
-      fixed = Number(value.toFixed(decimals)).toLocaleString()
-    }
+    fixed = Number(workingValue.toFixed(validDecimals)).toLocaleString();
   }
+  
   if (!!isCurrency) {
-    fixed = "$" + fixed
+    fixed = "$" + fixed;
   }
   if (!!isPercent) {
-    fixed = fixed + "%"
+    fixed = fixed + "%";
   }
 
-  return fixed
+  return fixed;
 }
 
 /**
@@ -301,7 +304,47 @@ export const getFeederAverage = (metric, schoolSet) => {
   return total / values.length
 }
 
-export const getPercent = (portion, total) => {
-  // console.log("getPercent, ", (portion / total) * 100)
-  return (portion / total) * 100
-}
+export const getPercent = (percentDecimal, total) => {
+  return percentDecimal * 100
+};
+
+/**
+ * Gets the display value for a metric from school data
+ * - Indicators: returns /estimate value (real)
+ * - Indexes: returns /scaled value (0-100)
+ * @param {Object} school - School data object
+ * @param {String} metricId - Metric ID (e.g., "eco/joball", "eco/INDEX/scaled")
+ * @return {Number|null} - The appropriate value to display
+ */
+export const getMetricValue = (school, metricId) => {
+  if (!school || !metricId) return null;
+  
+  // Convert slashes to underscores for school data key lookup (GraphQL requirement)
+  const toSchoolKey = (key) => key.replace(/\//g, '_');
+  
+  // If metricId already includes /scaled or /estimate, use it directly
+  if (metricId.includes('/scaled') || metricId.includes('/estimate')) {
+    return school[toSchoolKey(metricId)];
+  }
+  
+  // Check if this is an INDEX metric (use /scaled)
+  if (metricId.includes('INDEX')) {
+    const scaledKey = toSchoolKey(metricId + '/scaled');
+    const baseKey = toSchoolKey(metricId);
+    return school[scaledKey] !== undefined ? school[scaledKey] : school[baseKey];
+  }
+  
+  // For indicators, prefer /estimate (real value)
+  const estimateKey = toSchoolKey(metricId + '/estimate');
+  if (school[estimateKey] !== undefined) {
+    return school[estimateKey];
+  }
+  
+  // Fallback to /scaled or direct key
+  const scaledKey = toSchoolKey(metricId + '/scaled');
+  if (school[scaledKey] !== undefined) {
+    return school[scaledKey];
+  }
+  
+  return school[toSchoolKey(metricId)];
+};

@@ -32,6 +32,32 @@ resource "aws_cloudfront_origin_access_control" "website" {
   signing_protocol                  = "sigv4"
 }
 
+# CloudFront Function to rewrite directory URLs to index.html
+# Fixes 404 flash when navigating to /schools/1/ by rewriting to /schools/1/index.html
+resource "aws_cloudfront_function" "url_rewrite" {
+  name    = "${var.project_name}-${var.environment}-url-rewrite"
+  runtime = "cloudfront-js-1.0"
+  comment = "Rewrite directory URLs to index.html for Gatsby SPA routing"
+  publish = true
+  code    = <<-EOT
+function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+    
+    // If URI ends with slash, append index.html
+    if (uri.endsWith('/')) {
+        request.uri += 'index.html';
+    }
+    // If no file extension, append /index.html
+    else if (!uri.match(/\.[^/]+$/)) {
+        request.uri += '/index.html';
+    }
+    
+    return request;
+}
+EOT
+}
+
 # ACM Certificate for CloudFront (only when domain is specified)
 resource "aws_acm_certificate" "website" {
   count = var.domain_name != null ? 1 : 0
@@ -69,6 +95,12 @@ resource "aws_cloudfront_distribution" "website" {
     target_origin_id       = "S3-${aws_s3_bucket.website.bucket}"
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
+
+    # Attach URL rewrite function to fix 404 flash on navigation
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.url_rewrite.arn
+    }
 
     forwarded_values {
       query_string = false

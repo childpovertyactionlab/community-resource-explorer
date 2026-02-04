@@ -19,6 +19,8 @@ import {
   getHashLeft,
   getPercent,
   getMetric,
+  getQuintile,
+  getMetricValue,
 } from "./utils/utils"
 import { CRI_COLORS } from "./../data/map/colors"
 import { CPAL_FILTER_TABS, CPAL_METRICS } from "./../data/map/metrics"
@@ -48,12 +50,14 @@ const SchoolPage = ({ data, ...props }) => {
   const defaultMapStyle = MAP_STYLE
   // Shorten reference to school node.
   const school = props.pageContext.schoolNode
+  // Optionally, get all schools for feeder lookup if passed in context
+  const allSchools = props.pageContext.allSchools || []
   // Set up viewport for static map.
   const viewport = {
     width: "100%",
     height: 411,
-    latitude: school.POINT_Y,
-    longitude: school.POINT_X,
+    latitude: school.point_y,
+    longitude: school.point_x,
     zoom: 12,
     preserveDrawingBuffer: true,
   }
@@ -62,20 +66,52 @@ const SchoolPage = ({ data, ...props }) => {
     type: "FeatureCollection",
     features: [],
   }
-  const center = [school.POINT_X, school.POINT_Y]
+  const center = [school.point_x, school.point_y]
   var radius = 2
   var options = {
     steps: 64,
     units: "miles",
   }
   const cir = circle(center, radius, options)
-  cir.id = school.SLN
+  cir.id = school.sln
   // Insert into new json object.
   zoneJson.features.push(cir)
 
-  // Strip first item from tabs for generating categories
+  // Helper to get metric z-score
+  const getMetricZ = (metric) => {
+    const value = school[metric.replace(/\//g, "_") + "_z"];
+    return typeof value === "string" ? parseFloat(value) : value;
+  }
+
+  // Format citations for display
+  const formatCitations = (citations) => {
+    if (!citations || citations.length === 0) return null
+    return citations.map(c => `${c.citation}, ${c.date}`).join('; ')
+  }
+
+  // Helper to get feeder high school name(s)
+  const getFeederHSName = () => {
+    if (!school.hs || school.hs === "NA" || !allSchools.length) return ""
+
+    // Handle multiple feeder schools (comma-separated IDs like "9,32")
+    const hsIds = school.hs.toString().split(',').map(id => id.trim())
+
+    const hsNames = hsIds
+      .map(hsId => {
+        const hsSchool = allSchools.find(s => s.OBJECTID?.toString() === hsId)
+        return hsSchool ? hsSchool.campus : null
+      })
+      .filter(name => name !== null)
+
+    if (hsNames.length === 0) return ""
+    if (hsNames.length === 1) return hsNames[0]
+    if (hsNames.length === 2) return hsNames.join(" & ")
+    return hsNames.slice(0, -1).join(", ") + " & " + hsNames[hsNames.length - 1]
+  }
+
+  // Strip last item (CRI) from tabs for generating categories - show com, eco, hel, yth
   let categories = CPAL_FILTER_TABS.slice()
-  categories.shift()
+  categories.pop()
   // console.log("categories, ", categories)
 
   /**
@@ -110,7 +146,15 @@ const SchoolPage = ({ data, ...props }) => {
 
   const getMetricCollection = (id, level) => {
     return CPAL_METRICS.filter(el => {
-      return el.tab === id && el.tab_level === level
+      if (level === 0) {
+        // Indexes: must end with /scaled and be an INDEX
+        return el.tab === id && el.tab_level === level &&
+               el.id.includes('INDEX') && el.id.endsWith('/scaled');
+      } else {
+        // Indicators: use base metrics (without /scaled or /estimate suffix)
+        const isBaseMetric = !el.id.includes('/scaled') && !el.id.includes('/estimate');
+        return el.tab === id && el.tab_level === level && isBaseMetric;
+      }
     }).sort((a, b) => {
       return a.order - b.order
     })
@@ -151,43 +195,46 @@ const SchoolPage = ({ data, ...props }) => {
 
   /**
    * Returns a string list of good or bad metrics for the school.
-   * @param  {[type]} sln [description]
-   * @return {[type]}     [description]
+   * Uses 0-100 scaled values with thresholds: >=75 for top, <=25 for bottom
+   * @param  {String} topOrBottom - "top" or "bottom"
+   * @return {String}
    */
   const getSchoolMetricList = topOrBottom => {
-    // console.log("getSchoolMetricList")
     let metricArray = []
-    if (topOrBottom === "top") {
-      // console.log("top")
-      for (let i = 0; i < CPAL_METRICS.length; i++) {
-        // console.log("top, ", CPAL_METRICS[i].id)
-        if (metricArray.length >= 3) break
-        if (CPAL_METRICS[i].tab_level > 0) {
-          if (school[CPAL_METRICS[i].id + "_sd"] === 4) {
-            metricArray.push(i18n.translate(CPAL_METRICS[i].title))
-          }
+    for (let i = 0; i < CPAL_METRICS.length; i++) {
+      if (metricArray.length >= 3) break
+      if (CPAL_METRICS[i].tab_level > 0) {
+        // Use scaled values (0-100) 
+        const key = CPAL_METRICS[i].id.replace(/\//g, "_") + "_scaled";
+        const scaledValue = school[key];
+        console.log("Checking metric (scaled):", key, "Value:", scaledValue);
+        // Thresholds: top 25% (>=75) or bottom 25% (<=25)
+        if ((topOrBottom === "top" && scaledValue >= 75) || (topOrBottom !== "top" && scaledValue <= 25)) {
+          metricArray.push(i18n.translate(CPAL_METRICS[i].title))
         }
       }
-      // Stick an "and" before the last entry
-      metricArray[2] = "and " + metricArray[2]
-      return i18n.translate("SCHOOL_PROSE_TOP", {
-        quintiles: metricArray.join("; ").toLowerCase(),
-      })
-    } else {
-      for (let i = 0; i < CPAL_METRICS.length; i++) {
-        if (metricArray.length >= 3) break
-        if (CPAL_METRICS[i].tab_level > 0) {
-          if (school[CPAL_METRICS[i].id + "_sd"] === 0) {
-            metricArray.push(i18n.translate(CPAL_METRICS[i].title))
-          }
-        }
-      }
-      // Stick an "and" before the last entry
-      metricArray[2] = "and " + metricArray[2]
-      return i18n.translate("SCHOOL_PROSE_BOTTOM", {
-        quintiles: metricArray.join("; ").toLowerCase(),
-      })
     }
+
+    // Format the list with "and" before the last item if there are 2 or more
+    let formattedList = "";
+    if (metricArray.length === 1) {
+      formattedList = metricArray[0];
+    } else if (metricArray.length === 2) {
+      formattedList = metricArray.join(" and ");
+    } else if (metricArray.length === 3) {
+      formattedList = `${metricArray[0]}; ${metricArray[1]}; and ${metricArray[2]}`;
+    }
+
+    if (!formattedList) {
+      return topOrBottom === "top"
+        ? "No clear strengths identified for this school community."
+        : "No clear needs identified for this school community.";
+    }
+
+    return i18n.translate(
+      topOrBottom === "top" ? "SCHOOL_PROSE_TOP" : "SCHOOL_PROSE_BOTTOM",
+      { quintiles: formattedList }
+    );
   }
 
   const printPage = () => {
@@ -195,8 +242,8 @@ const SchoolPage = ({ data, ...props }) => {
       const trackingData = {
         event_category: "School View",
         event_action: "Print school view",
-        event_label: school.SCHOOLNAME,
-        value: school.SLN,
+        event_label: school.campus,
+        value: school.sln,
       }
       if (typeof window !== "undefined") {
         window.print()
@@ -206,8 +253,8 @@ const SchoolPage = ({ data, ...props }) => {
   }
 
   const keywords = [
-    school.SCHOOLNAME,
-    i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder }),
+    school.campus,
+    getFeederHSName(),
   ]
 
   const getCatDesc = catID => {
@@ -221,10 +268,21 @@ const SchoolPage = ({ data, ...props }) => {
       : false
   }
 
+  console.log("CPAL_METRICS", CPAL_METRICS);
+  console.log("school", school);
+  console.log("getMetric cri/INDEX/scaled", getMetric("cri/INDEX/scaled", CPAL_METRICS));
+
+  // For CRI index, use the scaled 0-100 value:
+  const criValue = Number(school.cri_INDEX_scaled);
+  const criMetric = getMetric("cri/INDEX/scaled", CPAL_METRICS);
+  console.log("school.cri_INDEX_scaled:", school.cri_INDEX_scaled, typeof school.cri_INDEX_scaled);
+  console.log("criValue (as number):", criValue, typeof criValue);
+  console.log("criMetric.decimals:", criMetric.decimals);
+
   return (
     <Layout
       className="school-page"
-      activePageId={school.SLN}
+      activePageId={school.sln}
       disableFooter={false}
     >
       {/* James, modify the SEO data here. */}
@@ -233,9 +291,8 @@ const SchoolPage = ({ data, ...props }) => {
         title={
           data.site.siteMetadata.title +
           ": " +
-          school.SCHOOLNAME +
-          ", " +
-          i18n.translate("UI_MAP_TOOLTIP_FEEDER", { name: school.Feeder })
+          school.campus +
+          (getFeederHSName() ? ", " + getFeederHSName() : "")
         }
         keywords={keywords}
         image={""}
@@ -250,14 +307,14 @@ const SchoolPage = ({ data, ...props }) => {
             className="school-intro"
           >
             <div className="center-me">
-              <h2>{school.SCHOOLNAME}</h2>
+              <h2>{school.campus}</h2>
               <h4>
-                {school.ADDRESS}
-                <br />
-                {school.CITY}, TX {school.ZIP}
+                {school.address}
+                {/* <br />
+                {school.CITY}, TX {school.ZIP} */}
                 <br />
                 {i18n.translate("UI_MAP_TOOLTIP_FEEDER", {
-                  name: school.Feeder,
+                  name: getFeederHSName() || (school.hs && school.hs !== "NA" ? school.hs : "Various"),
                 })}
               </h4>
               <Button
@@ -287,7 +344,7 @@ const SchoolPage = ({ data, ...props }) => {
             >
               <StaticMap
                 {...viewport}
-                mapboxApiAccessToken={data.site.siteMetadata.mapboxApiKey}
+                mapboxAccessToken={data.site.siteMetadata.mapboxApiKey}
                 mapStyle={defaultMapStyle}
                 aria-describedby="map_descriptor"
               >
@@ -301,7 +358,14 @@ const SchoolPage = ({ data, ...props }) => {
                       height: "10px",
                       borderRadius: "5px",
                       border: "1px solid #fff",
-                      backgroundColor: CRI_COLORS[school.cri_weight_sd],
+                      backgroundColor: CRI_COLORS[
+                        getQuintile(
+                          criValue,
+                          criMetric.range[0],
+                          criMetric.range[1],
+                          criMetric.high_is_good
+                        )
+                      ],
                     }}
                   ></div>
                 </Marker>
@@ -310,7 +374,14 @@ const SchoolPage = ({ data, ...props }) => {
                     id="point"
                     type="fill"
                     paint={{
-                      "fill-color": CRI_COLORS[school.cri_weight_sd],
+                      "fill-color": CRI_COLORS[
+                        getQuintile(
+                          criValue,
+                          criMetric.range[0],
+                          criMetric.range[1],
+                          criMetric.high_is_good
+                        )
+                      ],
                       "fill-opacity": 0.2,
                     }}
                   />
@@ -346,20 +417,20 @@ const SchoolPage = ({ data, ...props }) => {
           <div className="center-me">
             <div className="demo demo-bl">
               <span className="percent">
-                {getRoundedValue(school.dem_totp, 0)}
+                {getRoundedValue(school["dem_poptot_estimate"], 0)}
               </span>
               {i18n.translate("UI_MAP_METRIC_DEM_TOTP")}
             </div>
             <div className="demo demo-bl">
               <span className="percent">
-                {getRoundedValue(school.dem_popch, 0)}
+                {getRoundedValue(school["dem_undr18_estimate"], 0)}
               </span>
               {i18n.translate("UI_MAP_METRIC_DEM_POPCH")}
             </div>
             <div className="demo demo-bl">
               <span className="percent">
                 {getRoundedValue(
-                  getPercent(school.dem_popbl, school.dem_totp),
+                  getPercent(school["dem_black_estimate"], school["dem_poptot_estimate"]),
                   1
                 ) + "%"}
               </span>
@@ -376,7 +447,7 @@ const SchoolPage = ({ data, ...props }) => {
             <div className="demo demo-hi">
               <span className="percent">
                 {getRoundedValue(
-                  getPercent(school.dem_pophi, school.dem_totp),
+                  getPercent(school["dem_hispan_estimate"], school["dem_poptot_estimate"]),
                   1
                 ) + "%"}
               </span>
@@ -385,7 +456,7 @@ const SchoolPage = ({ data, ...props }) => {
             <div className="demo demo-as">
               <span className="percent">
                 {getRoundedValue(
-                  getPercent(school.dem_popas, school.dem_totp),
+                  getPercent(school["dem_asian_estimate"], school["dem_poptot_estimate"]),
                   1
                 ) + "%"}
               </span>
@@ -394,7 +465,7 @@ const SchoolPage = ({ data, ...props }) => {
             <div className="demo demo-wh">
               <span className="percent">
                 {getRoundedValue(
-                  getPercent(school.dem_popwh, school.dem_totp),
+                  getPercent(school["dem_white_estimate"], school["dem_poptot_estimate"]),
                   1
                 ) + "%"}
               </span>
@@ -435,24 +506,44 @@ const SchoolPage = ({ data, ...props }) => {
           <div className="metric-group">
             <NonInteractiveScale
               className="metric-group"
-              metric="cri_weight"
-              quintiles={constructQuintiles(school.cri_weight_sd, 1)}
+              metric="cri/INDEX/scaled"
+              quintiles={constructQuintiles(
+                getQuintile(
+                  criValue,
+                  criMetric.range[0],
+                  criMetric.range[1],
+                  criMetric.high_is_good
+                ),
+                1
+              )}
               colors={CRI_COLORS}
               showHash={true}
-              hashLeft={getRoundedValue(
-                getHashLeft(school.cri_weight, 0, 100),
-                0
+              hashLeft={getHashLeft(
+                criValue,
+                criMetric.range[0],
+                criMetric.range[1],
+                criMetric.high_is_good
               )}
-              hashValue={school.cri_weight}
+              hashValue={getRoundedValue(
+                criValue,
+                criMetric.decimals,
+                false,
+                criMetric.is_currency ? criMetric.is_currency : 0,
+                criMetric.as_percent ? criMetric.as_percent : 0
+              )}
               showMean={true}
               meanLeft={getHashLeft(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0,
-                100
+                criMetric.mean,
+                criMetric.range[0],
+                criMetric.range[1],
+                criMetric.high_is_good
               )}
               meanValue={getRoundedValue(
-                getMetric("cri_weight", CPAL_METRICS).mean,
-                0
+                criMetric.mean,
+                criMetric.decimals,
+                false,
+                criMetric.is_currency ? criMetric.is_currency : 0,
+                criMetric.as_percent ? criMetric.as_percent : 0
               )}
               showMinMax={true}
               showLegend={true}
@@ -477,8 +568,13 @@ const SchoolPage = ({ data, ...props }) => {
             className="quintile-prose"
             dangerouslySetInnerHTML={{
               __html: getQuintileRobotext(
-                school.SCHOOLNAME,
-                school.cri_weight_sd
+                school.campus,
+                getQuintile(
+                  criValue,
+                  criMetric.range[0],
+                  criMetric.range[1],
+                  criMetric.high_is_good
+                )
               ),
             }}
           ></p>
@@ -501,7 +597,7 @@ const SchoolPage = ({ data, ...props }) => {
           xl={{ span: 4, offset: 0 }}
           className={clsx("metric-collection-cri_weight", "metric-collection")}
         >
-          <div dangerouslySetInnerHTML={getCustomFeederProse(school.Feeder)} />
+          <div dangerouslySetInnerHTML={getCustomFeederProse(getFeederHSName())} />
         </Col>
       </Row>
       {/** Iterate through other categories */}
@@ -523,9 +619,9 @@ const SchoolPage = ({ data, ...props }) => {
             </Col>
             {!!getCatDesc(el.default_metric) && (
               <Col
-                xs={{ span: 10, offset: 1 }}
-                md={{ span: 5, offset: 1 }}
-                xl={{ span: 4, offset: 1 }}
+                xs={{ span: 12, offset: 0 }}
+                md={{ span: 10, offset: 1 }}
+                xl={{ span: 10, offset: 1 }}
                 className="metric-group cat-intro"
                 dangerouslySetInnerHTML={{
                   __html: i18n.translate(getCatDesc(el.default_metric)),
@@ -533,43 +629,47 @@ const SchoolPage = ({ data, ...props }) => {
               ></Col>
             )}
             {getMetricCollection(el.id, 0).map(el => {
-              // console.log(
-              //   "in metric collection, element = ",
-              //   el,
-              //   school[el.id]
-              // )
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 5, offset: 0 }}
-                  xl={{ span: 4, offset: 0 }}
+                  md={{ span: 9, offset: 0 }}
+                  xl={{ span: 8, offset: 0 }}
                   className="metric-group level-0"
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
                 >
-                  <h6>{i18n.translate(el.title)}</h6>
+                  <h6>{el.label || i18n.translate(el.title)}</h6>
+                  {el.citations && el.citations.length > 0 && (
+                    <p className="metric-citation">{formatCitations(el.citations)}</p>
+                  )}
                   <NonInteractiveScale
                     className={"scale-" + el.id}
                     id={"scale_" + el.id}
                     key={"scale_" + el.id}
                     metric={el.id}
                     quintiles={constructQuintiles(
-                      school[el.id + "_sd"],
+                      getQuintile(
+                        getMetricValue(school, el.id),
+                        el.range[0],
+                        el.range[1],
+                        el.high_is_good
+                      ),
                       el.high_is_good
                     )}
                     colors={el.colors}
                     showHash={true}
                     hashLeft={getHashLeft(
-                      school[el.id],
+                      getMetricValue(school, el.id),
                       el.range[0],
                       el.range[1],
                       el.high_is_good
                     )}
                     hashValue={getRoundedValue(
-                      school[el.id],
+                      getMetricValue(school, el.id),
                       el.decimals,
                       false,
-                      el.is_currency ? el.is_currency : 0
+                      el.is_currency ? el.is_currency : 0,
+                      el.as_percent ? el.as_percent : 0
                     )}
                     showMean={true}
                     meanLeft={getHashLeft(
@@ -582,7 +682,8 @@ const SchoolPage = ({ data, ...props }) => {
                       el.mean,
                       el.decimals,
                       false,
-                      el.is_currency ? el.is_currency : 0
+                      el.is_currency ? el.is_currency : 0,
+                      el.as_percent ? el.as_percent : 0
                     )}
                     showMinMax={true}
                   />
@@ -590,17 +691,11 @@ const SchoolPage = ({ data, ...props }) => {
               )
             })}
             {getMetricCollection(el.id, 1).map((el, i) => {
-              // Metric collection level 1, sub-metrics
-              // console.log(
-              //   "in secondary metric collection, el = ",
-              //   el,
-              //   school["econ_totjobs"]
-              // )
               return (
                 <Col
                   xs={{ span: 10, offset: 1 }}
-                  md={{ span: 5, offset: i % 2 === 0 ? 1 : 0 }}
-                  xl={{ span: 4, offset: i % 2 === 0 ? 1 : 0 }}
+                  md={{ span: 9, offset: 0 }}
+                  xl={{ span: 8, offset: 0 }}
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
                   className={clsx(
@@ -610,26 +705,34 @@ const SchoolPage = ({ data, ...props }) => {
                     "level-1"
                   )}
                 >
-                  <h6>{i18n.translate(el.title)}</h6>
+                  <h6>{el.label || i18n.translate(el.title)}</h6>
+                  {el.citations && el.citations.length > 0 && (
+                    <p className="metric-citation">{formatCitations(el.citations)}</p>
+                  )}
                   <NonInteractiveScale
                     className={"scale-" + el.id}
                     id={"scale_" + el.id}
                     key={"scale_" + el.id}
                     metric={el.id}
                     quintiles={constructQuintiles(
-                      school[el.id + "_sd"],
+                      getQuintile(
+                        getMetricValue(school, el.id),
+                        el.range[0],
+                        el.range[1],
+                        el.high_is_good
+                      ),
                       el.high_is_good
                     )}
                     colors={el.colors}
                     showHash={true}
                     hashLeft={getHashLeft(
-                      school[el.id],
+                      getMetricValue(school, el.id),
                       el.range[0],
                       el.range[1],
                       el.high_is_good
                     )}
                     hashValue={getRoundedValue(
-                      school[el.id],
+                      getMetricValue(school, el.id),
                       el.decimals,
                       false,
                       el.is_currency ? el.is_currency : 0,
