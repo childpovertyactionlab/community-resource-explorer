@@ -109,9 +109,9 @@ const SchoolPage = ({ data, ...props }) => {
     return hsNames.slice(0, -1).join(", ") + " & " + hsNames[hsNames.length - 1]
   }
 
-  // Strip first item from tabs for generating categories
+  // Strip last item (CRI) from tabs for generating categories - show com, eco, hel, yth
   let categories = CPAL_FILTER_TABS.slice()
-  categories.shift()
+  categories.pop()
   // console.log("categories, ", categories)
 
   /**

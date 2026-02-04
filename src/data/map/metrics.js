@@ -72,18 +72,19 @@ export const CPAL_METRICS = [
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "dem",
-    tab_level: 0,
+    tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_POPTOT`,
-    description: "Estimated total population",
+    label: "Total residents",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 201283.592592593,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2024"}]
   },
   {
     id: "dem/poptot/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_POPTOT",
+    title: "UI_MAP_METRIC_TITLE_DEM_POPTOT_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -91,12 +92,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_POPTOT`,
-    description: "Estimated total population",
+    desc: `UI_MAP_METRIC_DESC_DEM_POPTOT_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 43.830579697117,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/undr18",
@@ -109,15 +111,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_UNDR18`,
-    description: "Estimated population under 18 years",
+    label: "Children under 18",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 47593.3086419753,
-    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2024"}]
   },
   {
     id: "dem/undr18/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_UNDR18",
+    title: "UI_MAP_METRIC_TITLE_DEM_UNDR18_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -125,12 +128,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_UNDR18`,
-    description: "Estimated population under 18 years",
+    desc: `UI_MAP_METRIC_DESC_DEM_UNDR18_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 49.2498240209761,
-    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/65over",
@@ -143,15 +147,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_65OVER`,
-    description: "Estimated population 65 years and older",
+    label: "Residents 65 and older",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 22218.3004115226,
-    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2024"}]
   },
   {
     id: "dem/65over/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_65OVER",
+    title: "UI_MAP_METRIC_TITLE_DEM_65OVER_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -159,12 +164,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_65OVER`,
-    description: "Estimated population 65 years and older",
+    desc: `UI_MAP_METRIC_DESC_DEM_65OVER_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 51.1730807304632,
-    citations: [{"citation":"ACS 5-year Survey Table B09001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/asian",
@@ -177,15 +183,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_ASIAN`,
-    description: "Estimated percent Asian population",
+    label: "Asian, non-Hispanic population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.0271622914273142,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2024"}]
   },
   {
     id: "dem/asian/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_ASIAN",
+    title: "UI_MAP_METRIC_TITLE_DEM_ASIAN_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -193,12 +200,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_ASIAN`,
-    description: "Estimated percent Asian population",
+    desc: `UI_MAP_METRIC_DESC_DEM_ASIAN_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 11.5520515943582,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/black",
@@ -211,15 +219,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_BLACK`,
-    description: "Estimated percent Black population",
+    label: "Black, non-Hispanic population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.234235891370768,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2024"}]
   },
   {
     id: "dem/black/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_BLACK",
+    title: "UI_MAP_METRIC_TITLE_DEM_BLACK_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -227,12 +236,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_BLACK`,
-    description: "Estimated percent Black population",
+    desc: `UI_MAP_METRIC_DESC_DEM_BLACK_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 32.0221781849826,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/female",
@@ -245,15 +255,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_FEMALE`,
-    description: "Estimated percent female population",
+    label: "Female population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.0287585809057006,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2024"}]
   },
   {
     id: "dem/female/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_FEMALE",
+    title: "UI_MAP_METRIC_TITLE_DEM_FEMALE_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -261,12 +272,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_FEMALE`,
-    description: "Estimated percent female population",
+    desc: `UI_MAP_METRIC_DESC_DEM_FEMALE_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 61.7431026938402,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/hispan",
@@ -279,15 +291,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_HISPAN`,
-    description: "Estimated percent Hispanic or Latino population",
+    label: "Hispanic or Latino population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.459147306571634,
-    citations: [{"citation":"ACS 5-year Survey Table B03001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B03001","date":"2024"}]
   },
   {
     id: "dem/hispan/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_HISPAN",
+    title: "UI_MAP_METRIC_TITLE_DEM_HISPAN_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -295,12 +308,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_HISPAN`,
-    description: "Estimated percent Hispanic or Latino population",
+    desc: `UI_MAP_METRIC_DESC_DEM_HISPAN_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 49.3146507714519,
-    citations: [{"citation":"ACS 5-year Survey Table B03001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/male",
@@ -313,15 +327,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_MALE`,
-    description: "Estimated percent male population",
+    label: "Male population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.500587990297842,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2024"}]
   },
   {
     id: "dem/male/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_MALE",
+    title: "UI_MAP_METRIC_TITLE_DEM_MALE_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -329,12 +344,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_MALE`,
-    description: "Estimated percent male population",
+    desc: `UI_MAP_METRIC_DESC_DEM_MALE_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 54.7555029725071,
-    citations: [{"citation":"ACS 5-year Survey Table B01001","date":"2023"}]
+    citations: []
   },
   {
     id: "dem/white",
@@ -347,15 +363,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_DEM_WHITE`,
-    description: "Estimated percent White population",
+    label: "White, non-Hispanic population",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.415156429587444,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2024"}]
   },
   {
     id: "dem/white/scaled",
-    title: "UI_MAP_METRIC_TITLE_DEM_WHITE",
+    title: "UI_MAP_METRIC_TITLE_DEM_WHITE_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -363,12 +380,13 @@ export const CPAL_METRICS = [
     tab: "dem",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_DEM_WHITE`,
-    description: "Estimated percent White population",
+    desc: `UI_MAP_METRIC_DESC_DEM_WHITE_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 52.1938999753205,
-    citations: [{"citation":"ACS 5-year Survey Table B02001","date":"2023"}]
+    citations: []
   },
   {
     id: "com/comrec",
@@ -381,7 +399,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_COMREC`,
-    description: "",
+    label: "Community and recreation centers per 10,000 residents",
+    subtext: "",
     decimals: 1,
     as_percent: 0,
     mean: 0.244106967494831,
@@ -389,7 +408,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/comrec/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_COMREC",
+    title: "UI_MAP_METRIC_TITLE_COM_COMREC_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -397,12 +416,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_COMREC`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_COMREC_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 51.2731930582634,
-    citations: [{"citation":"North Central Texas Council of Governments (NCTCOG)","date":"2026"}]
+    citations: []
   },
   {
     id: "com/evics",
@@ -415,7 +435,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_EVICS`,
-    description: "Evictions per 1,000 renter occupied units",
+    label: "Annual evictions per 1,000 renter-occupied units",
+    subtext: "",
     decimals: 1,
     as_percent: 0,
     mean: 89.1515726791116,
@@ -423,7 +444,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/evics/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_EVICS",
+    title: "UI_MAP_METRIC_TITLE_COM_EVICS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -431,12 +452,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_EVICS`,
-    description: "Evictions per 1,000 renter occupied units",
+    desc: `UI_MAP_METRIC_DESC_COM_EVICS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 50.3364679735589,
-    citations: [{"citation":"Dallas County Justice of the Peace Courts","date":"Dec 2024"},{"citation":"ACS 5-year Survey Table B25003","date":"2026"}]
+    citations: []
   },
   {
     id: "com/libs",
@@ -449,15 +471,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_LIBS`,
-    description: "Number of public libraries per 10,000 residents",
+    label: "Public libraries per 10,000 residents",
+    subtext: "",
     decimals: 1,
     as_percent: 0,
     mean: 0.19248429998164,
-    citations: [{"citation":"City of Dallas","date":"Jan 2026"}]
+    citations: [{"citation":"City of Dallas","date":"Feb 2026"}]
   },
   {
     id: "com/libs/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_LIBS",
+    title: "UI_MAP_METRIC_TITLE_COM_LIBS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -465,12 +488,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_LIBS`,
-    description: "Number of public libraries per 10,000 residents",
+    desc: `UI_MAP_METRIC_DESC_COM_LIBS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 57.1838774528789,
-    citations: [{"citation":"City of Dallas","date":"Jan 2026"}]
+    citations: []
   },
   {
     id: "com/parks",
@@ -483,7 +507,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_PARKS`,
-    description: "",
+    label: "Park area (mi²) per 10,000 residents",
+    subtext: "",
     decimals: 1,
     as_percent: 0,
     mean: 0.220859541475162,
@@ -491,7 +516,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/parks/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_PARKS",
+    title: "UI_MAP_METRIC_TITLE_COM_PARKS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -499,12 +524,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_PARKS`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_PARKS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 36.4424307155111,
-    citations: [{"citation":"North Central Texas Council of Governments (NCTCOG)","date":"2026"}]
+    citations: []
   },
   {
     id: "com/urbhe",
@@ -517,7 +543,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_URBHE`,
-    description: "Measure of urban heat island effect severity",
+    label: "Urban heat island effect (°F)",
+    subtext: "Heat islands have negative impacts on communities. (EPA['https://www.epa.gov/heatislands/what-are-heat-islands')",
     decimals: 1,
     as_percent: 0,
     mean: 0.0829754220842958,
@@ -525,7 +552,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/urbhe/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_URBHE",
+    title: "UI_MAP_METRIC_TITLE_COM_URBHE_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -533,12 +560,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_URBHE`,
-    description: "Measure of urban heat island effect severity",
+    desc: `UI_MAP_METRIC_DESC_COM_URBHE_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 47.1146513089109,
-    citations: [{"citation":"City of Dallas OEQS / CAPA Strategies","date":"Aug 2024"}]
+    citations: []
   },
   {
     id: "com/vacbus",
@@ -551,7 +579,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_VACBUS`,
-    description: "",
+    label: "Business addresses that are vacant (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.121603766055942,
@@ -559,7 +588,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/vacbus/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_VACBUS",
+    title: "UI_MAP_METRIC_TITLE_COM_VACBUS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -567,12 +596,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_VACBUS`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_VACBUS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 47.1920972185419,
-    citations: [{"citation":"HUD / USPS","date":"2024 Q4"}]
+    citations: []
   },
   {
     id: "com/vacltb",
@@ -585,7 +615,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_VACLTB`,
-    description: "",
+    label: "Business addresses vacant for 24+ months (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.100957977522204,
@@ -593,7 +624,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/vacltb/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_VACLTB",
+    title: "UI_MAP_METRIC_TITLE_COM_VACLTB_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -601,12 +632,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_VACLTB`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_VACLTB_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 41.2489901981172,
-    citations: [{"citation":"HUD / USPS","date":"2024 Q4"}]
+    citations: []
   },
   {
     id: "com/vacltr",
@@ -619,7 +651,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_VACLTR`,
-    description: "",
+    label: "Residential addresses vacant for 24+ months (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.187548830494545,
@@ -627,7 +660,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/vacltr/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_VACLTR",
+    title: "UI_MAP_METRIC_TITLE_COM_VACLTR_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -635,12 +668,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_VACLTR`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_VACLTR_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 60.310360202211,
-    citations: [{"citation":"HUD / USPS","date":"2024 Q4"}]
+    citations: []
   },
   {
     id: "com/vacres",
@@ -653,7 +687,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_VACRES`,
-    description: "",
+    label: "Residential addresses that are vacant (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.0267196764747344,
@@ -661,7 +696,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "com/vacres/scaled",
-    title: "UI_MAP_METRIC_TITLE_COM_VACRES",
+    title: "UI_MAP_METRIC_TITLE_COM_VACRES_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -669,12 +704,13 @@ export const CPAL_METRICS = [
     tab: "com",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_COM_VACRES`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_COM_VACRES_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 45.0998896655477,
-    citations: [{"citation":"HUD / USPS","date":"2024 Q4"}]
+    citations: []
   },
   {
     id: "eco/banks",
@@ -687,7 +723,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_BANKS`,
-    description: "Excluding ATMs",
+    label: "Consumer banking locations per 10,000 residents",
+    subtext: "Excluding ATMs",
     decimals: 1,
     as_percent: 0,
     mean: 3.04916816557053,
@@ -695,7 +732,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "eco/banks/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_BANKS",
+    title: "UI_MAP_METRIC_TITLE_ECO_BANKS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -703,8 +740,9 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_BANKS`,
-    description: "Excluding ATMs",
+    desc: `UI_MAP_METRIC_DESC_ECO_BANKS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 54.0158148008967,
@@ -721,15 +759,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_JOBALL`,
-    description: "",
-    decimals: 0,
+    label: "Primary jobs by working location",
+    subtext: "",
+    decimals: -2,
     as_percent: 0,
     mean: 74326.0936221024,
     citations: [{"citation":"U.S. Census Bureau OnTheMap","date":"2023"}]
   },
   {
     id: "eco/joball/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_JOBALL",
+    title: "UI_MAP_METRIC_TITLE_ECO_JOBALL_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -737,12 +776,13 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_JOBALL`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_ECO_JOBALL_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 54.8479210371366,
-    citations: [{"citation":"U.S. Census Bureau OnTheMap","date":"2023"}]
+    citations: []
   },
   {
     id: "eco/hijob",
@@ -755,7 +795,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_HIJOB`,
-    description: "The HUD very low income limit (50%) for a 4-person household in Dallas, TX in 2023 was $51,550",
+    label: "Primary jobs earning more than $40,000 per year (%)",
+    subtext: "The HUD very low income limit (50%) for a 4-person household in Dallas, TX in 2023 was $51,550",
     decimals: 1,
     as_percent: 1,
     mean: 0.603894224426435,
@@ -763,7 +804,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "eco/hijob/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_HIJOB",
+    title: "UI_MAP_METRIC_TITLE_ECO_HIJOB_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -771,12 +812,13 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_HIJOB`,
-    description: "The HUD very low income limit (50%) for a 4-person household in Dallas, TX in 2023 was $51,550",
+    desc: `UI_MAP_METRIC_DESC_ECO_HIJOB_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 46.975884668685,
-    citations: [{"citation":"U.S. Census Bureau OnTheMap","date":"2023"}]
+    citations: []
   },
   {
     id: "eco/owncb",
@@ -789,15 +831,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_OWNCB`,
-    description: "",
+    label: "Owner-occupied households that are cost-burdened (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.258966487081007,
-    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2024"}]
   },
   {
     id: "eco/owncb/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_OWNCB",
+    title: "UI_MAP_METRIC_TITLE_ECO_OWNCB_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -805,12 +848,13 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_OWNCB`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_ECO_OWNCB_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 50.0647032867708,
-    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2023"}]
+    citations: []
   },
   {
     id: "eco/payday",
@@ -823,7 +867,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_PAYDAY`,
-    description: "",
+    label: "Payday loan lenders as share of consumer financial institutions (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.00853627684786263,
@@ -831,7 +876,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "eco/payday/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_PAYDAY",
+    title: "UI_MAP_METRIC_TITLE_ECO_PAYDAY_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -839,8 +884,9 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_PAYDAY`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_ECO_PAYDAY_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 71.257891815942,
@@ -857,15 +903,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_RENTCB`,
-    description: "Renter-occupied households that are cost-burdened (%)",
+    label: "Renter-occupied households that are cost-burdened (%)",
+    subtext: "Renter-occupied households that are cost-burdened (%)",
     decimals: 1,
     as_percent: 1,
     mean: 0.483600177108417,
-    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2024"}]
   },
   {
     id: "eco/rentcb/scaled",
-    title: "UI_MAP_METRIC_TITLE_ECO_RENTCB",
+    title: "UI_MAP_METRIC_TITLE_ECO_RENTCB_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -873,12 +920,13 @@ export const CPAL_METRICS = [
     tab: "eco",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_ECO_RENTCB`,
-    description: "Renter-occupied households that are cost-burdened (%)",
+    desc: `UI_MAP_METRIC_DESC_ECO_RENTCB_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 64.6729642792639,
-    citations: [{"citation":"ACS 5-year Survey Table B25106","date":"2023"}]
+    citations: []
   },
   {
     id: "hel/chkups",
@@ -891,7 +939,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_CHKUPS`,
-    description: "Index value of population that has regular health checkups",
+    label: "Estimated percent of adults who have routine health checkups",
+    subtext: "(CDC methodology['https://www.cdc.gov/places/measure-definitions/prevention.html']",
     decimals: 1,
     as_percent: 0,
     mean: 71.323586326364,
@@ -899,7 +948,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "hel/chkups/scaled",
-    title: "UI_MAP_METRIC_TITLE_HEL_CHKUPS",
+    title: "UI_MAP_METRIC_TITLE_HEL_CHKUPS_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -907,12 +956,13 @@ export const CPAL_METRICS = [
     tab: "hel",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_HEL_CHKUPS`,
-    description: "Index value of population that has regular health checkups",
+    desc: `UI_MAP_METRIC_DESC_HEL_CHKUPS_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 33.7953525486594,
-    citations: [{"citation":"CDC PLACES","date":"2024"}]
+    citations: []
   },
   {
     id: "hel/clinic",
@@ -925,7 +975,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_CLINIC`,
-    description: "",
+    label: "Outpatient healthcare providers per 10,000 residents",
+    subtext: "Including physician offices, dentists, optometrists, mental health practitioners, therapists, and outpatient care centers",
     decimals: 1,
     as_percent: 0,
     mean: 142.918160987099,
@@ -933,7 +984,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "hel/clinic/scaled",
-    title: "UI_MAP_METRIC_TITLE_HEL_CLINIC",
+    title: "UI_MAP_METRIC_TITLE_HEL_CLINIC_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -941,8 +992,9 @@ export const CPAL_METRICS = [
     tab: "hel",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_HEL_CLINIC`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_HEL_CLINIC_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 48.2733129016291,
@@ -959,15 +1011,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INSCOV`,
-    description: "People with any health insurance coverage (%)",
+    label: "Residents with health insurance coverage (%)",
+    subtext: "Including both private and public insurance",
     decimals: 1,
     as_percent: 1,
     mean: 0.763979093898745,
-    citations: [{"citation":"ACS 5-year Survey Table S2701","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table S2701","date":"2024"}]
   },
   {
     id: "hel/inscov/scaled",
-    title: "UI_MAP_METRIC_TITLE_HEL_INSCOV",
+    title: "UI_MAP_METRIC_TITLE_HEL_INSCOV_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -975,12 +1028,13 @@ export const CPAL_METRICS = [
     tab: "hel",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_HEL_INSCOV`,
-    description: "People with any health insurance coverage (%)",
+    desc: `UI_MAP_METRIC_DESC_HEL_INSCOV_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 44.9963322514967,
-    citations: [{"citation":"ACS 5-year Survey Table S2701","date":"2023"}]
+    citations: []
   },
   {
     id: "hel/pharma",
@@ -993,7 +1047,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_PHARMA`,
-    description: "Number of licensed pharmacies per 10,000 residents",
+    label: "Licensed pharmacies per 10,000 residents",
+    subtext: "",
     decimals: 1,
     as_percent: 0,
     mean: 2.44925023651788,
@@ -1001,7 +1056,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "hel/pharma/scaled",
-    title: "UI_MAP_METRIC_TITLE_HEL_PHARMA",
+    title: "UI_MAP_METRIC_TITLE_HEL_PHARMA_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -1009,12 +1064,13 @@ export const CPAL_METRICS = [
     tab: "hel",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_HEL_PHARMA`,
-    description: "Number of licensed pharmacies per 10,000 residents",
+    desc: `UI_MAP_METRIC_DESC_HEL_PHARMA_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 58.5818769882753,
-    citations: [{"citation":"Texas State Board of Pharmacy","date":"Jan 2026"}]
+    citations: []
   },
   {
     id: "hel/sleep",
@@ -1027,7 +1083,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_SLEEP`,
-    description: "Measure of population sleep health and habits",
+    label: "Estimated percent of adults with insufficient sleep",
+    subtext: "CDC methodology['# https://www.cdc.gov/places/measure-definitions/health-risk-behaviors.html']",
     decimals: 1,
     as_percent: 0,
     mean: 36.2061686177077,
@@ -1035,7 +1092,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "hel/sleep/scaled",
-    title: "UI_MAP_METRIC_TITLE_HEL_SLEEP",
+    title: "UI_MAP_METRIC_TITLE_HEL_SLEEP_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -1043,12 +1100,13 @@ export const CPAL_METRICS = [
     tab: "hel",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_HEL_SLEEP`,
-    description: "Measure of population sleep health and habits",
+    desc: `UI_MAP_METRIC_DESC_HEL_SLEEP_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 51.8077071722071,
-    citations: [{"citation":"CDC PLACES","date":"2024"}]
+    citations: []
   },
   {
     id: "yth/broad",
@@ -1061,15 +1119,16 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_BROAD`,
-    description: "Minors without access to broadband (%)",
+    label: "Youth under 18 without access to broadband internet (%)",
+    subtext: "",
     decimals: 1,
     as_percent: 1,
     mean: 0.0962711132594469,
-    citations: [{"citation":"ACS 5-year Survey Table B28005","date":"2023"}]
+    citations: [{"citation":"ACS 5-year Survey Table B28005","date":"2024"}]
   },
   {
     id: "yth/broad/scaled",
-    title: "UI_MAP_METRIC_TITLE_YTH_BROAD",
+    title: "UI_MAP_METRIC_TITLE_YTH_BROAD_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -1077,12 +1136,13 @@ export const CPAL_METRICS = [
     tab: "yth",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_YTH_BROAD`,
-    description: "Minors without access to broadband (%)",
+    desc: `UI_MAP_METRIC_DESC_YTH_BROAD_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 58.6134587605119,
-    citations: [{"citation":"ACS 5-year Survey Table B28005","date":"2023"}]
+    citations: []
   },
   {
     id: "yth/aftscl",
@@ -1095,7 +1155,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_AFTSCL`,
-    description: "",
+    label: "Afterschool program seats per child",
+    subtext: "",
     decimals: 2,
     as_percent: 0,
     mean: 0.119984330279266,
@@ -1103,7 +1164,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "yth/aftscl/scaled",
-    title: "UI_MAP_METRIC_TITLE_YTH_AFTSCL",
+    title: "UI_MAP_METRIC_TITLE_YTH_AFTSCL_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -1111,46 +1172,13 @@ export const CPAL_METRICS = [
     tab: "yth",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_YTH_AFTSCL`,
-    description: "",
+    desc: `UI_MAP_METRIC_DESC_YTH_AFTSCL_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 62.1337520839605,
-    citations: [{"citation":"Dallas Afterschool","date":"Jan 2022"}]
-  },
-  {
-    id: "yth/cccafd",
-    title: "UI_MAP_METRIC_TITLE_YTH_CCCAFD",
-    abbrev: "",
-    range: [0.0365634005763689, 0.387818490657607],
-    high_is_good: 1,
-    colors: CRI_COLORS,
-    tab: "yth",
-    tab_level: 1,
-    tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_YTH_CCCAFD`,
-    description: "",
-    decimals: 2,
-    as_percent: 0,
-    mean: 0.146992775953675,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
-  },
-  {
-    id: "yth/cccafd/scaled",
-    title: "UI_MAP_METRIC_TITLE_YTH_CCCAFD",
-    abbrev: "",
-    range: [0, 100],
-    high_is_good: 1,
-    colors: CRI_COLORS,
-    tab: "yth",
-    tab_level: 1,
-    tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_YTH_CCCAFD`,
-    description: "",
-    decimals: 0,
-    as_percent: 0,
-    mean: 42.580678604572,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "yth/cccall",
@@ -1163,7 +1191,8 @@ export const CPAL_METRICS = [
     tab_level: 1,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_CCCALL`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Early childhood education seats per child 9 years or younger",
+    subtext: "Including daycare",
     decimals: 2,
     as_percent: 0,
     mean: 0.266795021374687,
@@ -1171,7 +1200,7 @@ export const CPAL_METRICS = [
   },
   {
     id: "yth/cccall/scaled",
-    title: "UI_MAP_METRIC_TITLE_YTH_CCCALL",
+    title: "UI_MAP_METRIC_TITLE_YTH_CCCALL_SCALED",
     abbrev: "",
     range: [0, 100],
     high_is_good: 1,
@@ -1179,12 +1208,13 @@ export const CPAL_METRICS = [
     tab: "yth",
     tab_level: 1,
     tooltip: 1,
-    desc: `UI_MAP_METRIC_DESC_YTH_CCCALL`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    desc: `UI_MAP_METRIC_DESC_YTH_CCCALL_SCALED`,
+    label: "",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 57.2414203445932,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "com/INDEX",
@@ -1197,11 +1227,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Community Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 0.00734803990510898,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "com/INDEX/scaled",
@@ -1214,11 +1245,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_COM_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Community Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 52.4637385526462,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "eco/INDEX",
@@ -1231,11 +1263,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Economics Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: -0.00379873241484686,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "eco/INDEX/scaled",
@@ -1248,11 +1281,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_ECO_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Economics Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 55.0249257460906,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "hel/INDEX",
@@ -1265,11 +1299,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Health Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 0.00879675058716093,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "hel/INDEX/scaled",
@@ -1282,28 +1317,30 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_HEL_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Health Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
     mean: 46.8813470682174,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    citations: []
   },
   {
     id: "yth/INDEX",
     title: "UI_MAP_METRIC_TITLE_YTH_INDEX",
     abbrev: "",
-    range: [-3.88615133457661, 4.45475949197902],
+    range: [-3.13205425016174, 2.57442666437469],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "yth",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Youth & Family Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
-    mean: 0.00595707062955249,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    mean: 0.00350070480954648,
+    citations: []
   },
   {
     id: "yth/INDEX/scaled",
@@ -1316,28 +1353,30 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_YTH_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Youth & Family Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
-    mean: 46.6628703524145,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    mean: 54.9472608763821,
+    citations: []
   },
   {
     id: "cri/INDEX",
     title: "UI_MAP_METRIC_TITLE_CRI_INDEX",
     abbrev: "",
-    range: [-6.41868829061567, 6.5732106659133],
+    range: [-8.5918808827965, 8.38926903533469],
     high_is_good: 1,
     colors: CRI_COLORS,
     tab: "cri",
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_CRI_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Community Resource Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
-    mean: 0.00573246613489823,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    mean: 0.00773564304458414,
+    citations: []
   },
   {
     id: "cri/INDEX/scaled",
@@ -1350,11 +1389,12 @@ export const CPAL_METRICS = [
     tab_level: 0,
     tooltip: 1,
     desc: `UI_MAP_METRIC_DESC_CRI_INDEX`,
-    description: "Number of early childhood education programs per 10,000 children 9 years or younger",
+    label: "Community Resource Index",
+    subtext: "",
     decimals: 0,
     as_percent: 0,
-    mean: 49.4494359773482,
-    citations: [{"citation":"Texas Health and Human Services","date":"Nov 2024"}]
+    mean: 50.6421329963,
+    citations: []
   }
 ]
 

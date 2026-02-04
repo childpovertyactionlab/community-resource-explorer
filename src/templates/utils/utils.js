@@ -116,6 +116,9 @@ export const getRoundedValue = (
     return "-";
   }
   
+  // Validate decimals parameter - must be between 0 and 100
+  const validDecimals = (decimals == null || isNaN(decimals) || decimals < 0 || decimals > 100) ? 0 : Math.floor(decimals);
+  
   let workingValue = numValue;
   
   if (!!isPercent) {
@@ -124,9 +127,9 @@ export const getRoundedValue = (
   
   let fixed = null;
   if (padZeroes) {
-    fixed = workingValue.toFixed(decimals);
+    fixed = workingValue.toFixed(validDecimals);
   } else {
-    fixed = Number(workingValue.toFixed(decimals)).toLocaleString();
+    fixed = Number(workingValue.toFixed(validDecimals)).toLocaleString();
   }
   
   if (!!isCurrency) {

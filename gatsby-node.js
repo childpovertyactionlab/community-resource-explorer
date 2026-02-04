@@ -54,6 +54,8 @@ exports.createPages = async ({ graphql, actions }) => {
             OBJECTID
             tea
             level
+            feeder_name
+            feeder_num
             hs
             ms
             sln
@@ -112,8 +114,6 @@ exports.createPages = async ({ graphql, actions }) => {
             yth_broad_z
             yth_aftscl_estimate
             yth_aftscl_z
-            yth_cccafd_estimate
-            yth_cccafd_z
             yth_cccall_estimate
             yth_cccall_z
             com_comrec_estimate
@@ -142,7 +142,6 @@ exports.createPages = async ({ graphql, actions }) => {
             hel_sleep_scaled
             yth_broad_scaled
             yth_aftscl_scaled
-            yth_cccafd_scaled
             yth_cccall_scaled
             com_INDEX
             eco_INDEX
