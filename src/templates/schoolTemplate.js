@@ -638,7 +638,7 @@ const SchoolPage = ({ data, ...props }) => {
                   id={"metric_" + el.id}
                   key={"metric_" + el.id}
                 >
-                  <h6>{i18n.translate(el.title)}</h6>
+                  <h6>{el.label || i18n.translate(el.title)}</h6>
                   {el.citations && el.citations.length > 0 && (
                     <p className="metric-citation">{formatCitations(el.citations)}</p>
                   )}
@@ -705,7 +705,7 @@ const SchoolPage = ({ data, ...props }) => {
                     "level-1"
                   )}
                 >
-                  <h6>{i18n.translate(el.title)}</h6>
+                  <h6>{el.label || i18n.translate(el.title)}</h6>
                   {el.citations && el.citations.length > 0 && (
                     <p className="metric-citation">{formatCitations(el.citations)}</p>
                   )}
