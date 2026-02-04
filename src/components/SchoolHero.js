@@ -1,7 +1,6 @@
 import React from "react"
 
 import { Row, Col } from "react-bootstrap"
-import Menu from "./menu"
 
 const SchoolHero = ({ children, activePageId, wide = false }) => {
   const getHero = () => {
@@ -22,8 +21,6 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
                   </span>
                 </a>
               </div>
-
-              <Menu activePageId={activePageId} />
             </Col>
             {children}
           </Row>
@@ -46,7 +43,6 @@ const SchoolHero = ({ children, activePageId, wide = false }) => {
         <div className="image-section">
           <div className="menu-section">
             <span className="site-logo-mobile svg-base"></span>
-            <Menu activePageId={activePageId} />
           </div>
         </div>
       </Col>
