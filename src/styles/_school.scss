@@ -122,6 +122,7 @@
       padding: 6rem 0;
       .metric-group {
         margin-bottom: 2.4rem;
+        padding-right: 6rem;
         h4 {
           padding: 2rem 0 1rem;
           width: 100%;
@@ -208,10 +209,6 @@
             font-size: 1.9rem;
             line-height: 2.9rem;
             font-weight: 500;
-          }
-          span {
-            // display: block;
-            // width: 100%;
           }
         }
       }
@@ -334,11 +331,37 @@
     &:last-of-type {
       margin-bottom: 6rem;
     }
+    // Make Row a flex container for column layout
+    // Add matching left and right padding to center content and prevent touching edges
+    padding-left: 6rem;
+    padding-right: 6rem;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .metric-collection {
       display: flex;
       flex-wrap: wrap;
+      // Remove Bootstrap's offset-1 margin (8.33333333%) on all breakpoints
+      margin-left: 0 !important;
       // padding-top: 2rem;
       // padding-bottom: 2rem;
+      // Override Bootstrap offset classes at all breakpoints
+      &.offset-1,
+      &.offset-md-1,
+      &.offset-xl-1 {
+        margin-left: 0 !important;
+      }
+      @include media-breakpoint-up(md) {
+        &.offset-md-1 {
+          margin-left: 0 !important;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        &.offset-xl-1 {
+          margin-left: 0 !important;
+        }
+      }
       h5 {
         // padding: 2rem 0 1rem;
         width: 100%;
@@ -358,6 +381,15 @@
         }
       }
       &.metric-collection-header {
+        // Category title should be full width
+        // Remove Bootstrap's offset-1 margin on mobile
+        margin-left: 0 !important;
+        @include media-breakpoint-up(md) {
+          flex: 0 0 100% !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: 0 !important;
+        }
         h6 {
           font-size: 1.6rem;
           font-weight: 400;
@@ -368,25 +400,44 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       width: 100%;
-      font-size: 1rem !important;
+      font-size: 1.5rem !important;
+      // Remove Bootstrap's offset-1 margin on mobile
+      margin-left: 0 !important;
+      @include media-breakpoint-up(md) {
+        // Allow Bootstrap offset on desktop if needed
+        margin-left: 0;
+      }
       h6 {
         font-size: 1.6rem;
         font-weight: 400;
         padding-bottom: 0.6rem;
         line-height: 1.9rem;
-        width: 75%;
-        margin-left: 0;
-        margin-right: auto;
-        @include media-breakpoint-up(md) {
-          width: 90%;
-          margin-left: auto;
-          margin-right: auto;
-        }
+        width: 85%;
       }
       &.level-0 {
         h6 {
           font-size: 2.4rem;
           font-weight: 500;
+        }
+        // When there's a cat-intro, level-0 should be in a column (not full width)
+        @include media-breakpoint-up(md) {
+          // When next to cat-intro, use flexbox for 50/50 split
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // When in a column layout (next to cat-intro), style it like level-1
+          padding-right: 15px !important;
+          // No margin-left here - parent Row handles the offset
+          h6 {
+            font-size: 1.6rem;
+            font-weight: 400;
+          }
+          // All scales should be 90% of their container (same as level-1)
+          .n-i-scale {
+            width: 90% !important;
+            max-width: 90% !important;
+            margin-right: auto !important;
+          }
         }
       }
       &.cat-intro {
@@ -402,24 +453,21 @@
         hyphens: auto;
         white-space: normal;
         text-align: left;
-        padding-right: 1.5rem !important;
-        padding-left: 1.5rem !important;
-        margin-right: 0 !important;
+        // Remove Bootstrap's offset-1 margin on mobile
         margin-left: 0 !important;
         @include media-breakpoint-up(md) {
-          padding-right: 15px !important;
-          padding-left: 4rem !important;
-        }
-        @include media-breakpoint-up(lg) {
-          padding-left: 5rem !important;
+          // Use flexbox to create 50/50 split with level-0
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // Allow text to wrap naturally within the column
+          // Remove Bootstrap's offset-1 margin on desktop
+          margin-left: 0 !important;
         }
         p {
           width: 100%;
           max-width: 100%;
           box-sizing: border-box;
-          // @include media-breakpoint-up(md) {
-          //   width: 80%;
-          // }
           font-size: 1.6rem;
           line-height: 2.4rem;
           font-weight: 200;
@@ -437,18 +485,24 @@
           }
         }
       }
+      &.level-1 {
+        @include media-breakpoint-up(md) {
+          // Level-1 metrics should be 50% width to match cat-intro/level-0
+          // Use flexbox to create 2-column layout
+          flex: 0 0 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          // No margin-left here - parent Row handles the offset
+        }
+      }
       // @include media-breakpoint-up(md) {
       //   width: 49%;
       //   flex: 0 0 49%;
       // }
       .n-i-scale {
-        width: 75%;
-        margin-left: 0;
-        margin-right: auto;
+        width: 100%;
         @include media-breakpoint-up(md) {
-          width: 90%;
-          margin-left: auto;
-          margin-right: auto;
+          width: 95%;
         }
       }
     }
@@ -466,7 +520,6 @@
       margin-right: auto;
       @include media-breakpoint-up(md) {
         width: 90%;
-        margin-left: auto;
         margin-right: auto;
       }
     }
@@ -474,6 +527,7 @@
       .n-i-scale-linear {
         margin-top: 3.6rem;
         .n-i-scale-line {
+          position: relative;
           border-bottom: 1px dotted #606b44;
           &:after,
           &:before {
@@ -514,6 +568,7 @@
             }
           }
           .n-i-scale-hash {
+            position: absolute;
             background-color: transparent !important;
             top: -28px !important;
             z-index: 11; // Set just above z-index for right hash.
@@ -642,6 +697,7 @@
     }
 
     .n-i-scale .n-i-scale-parent .n-i-scale-quintiles {
+      display: flex;
       border: 1px solid #ccc;
       height: 12px;
       box-sizing: content-box;
@@ -653,6 +709,7 @@
         height: 100%;
         border-right: 1px solid #ccc;
         width: 16.665%;
+        flex-shrink: 0;
         &:after,
         &:before {
           display: none;
